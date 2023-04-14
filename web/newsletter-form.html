@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+
+      <title>S&amp;S newsletter</title>
+      <link rel="stylesheet" href="../res/css/newsletter/header.css" type="text/css" />
+      <link rel="stylesheet" href="../res/css/newsletter/body.css" type="text/css" />
+      <link rel="stylesheet" href="../res/css/global/footer.css" type="text/css" />
+
+  </head>
+
+   <body>
+
+     <div id="select-menu"><a href="#hidden-menu">&#x2630;</a></div>
+      <div><span id="back-target"></span></div>
+      <div id="hidden-menu">
+        <ul>
+          <li><a href="../index.html" id="homepage">HOMEPAGE</a></li>
+          <li>LEASING</li>
+          <li>SERVIZI FINANZIARI</li>
+          <li>CHI SIAMO</li>
+          <li>LOGIN</li>
+          <li>IMPOSTAZIONI</li>
+          <li><a href="newsletter-form.html" id="newsletter">NEWSLETTER</a></li>
+          <li>FAQ</li>
+        </ul>
+        <div id="back"><a href="#back-target">&#x2715;</a></div>
+      </div>
+
+      <div class="title">
+        <h1>UNISCITI A NOI</h1>
+        <h3>Compila il form e mantieniti aggiornato</h3>
+      </div>
+
+        <form class="form" method="post" action="http://localhost/cgi-local-bin/cgi-newsletter.exe">
+          <div class=" form-item">
+            <label for="nome">Nome</label><br />
+            <input type="text" name="nome" placeholder="Name" required>
+          </div>
+          <div class="form-item">
+            <label for="cognome">Cognome</label><br />
+            <input type="text" name="cognome" placeholder="Last name" required>
+          </div>
+          <div class="form-item">
+            <label for="email">e-mail</label><br />
+            <input type="text" name="e-mail" placeholder="sands@motors.it" required>
+          </div>
+          <div class="form-item">
+            <button type="submit" id="invia">INVIA</button>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" required>&nbsp;non sono un robot</button>
+          </div>
+        </form>
+
+     <!--FOOTER-->
+      <div class="footer" id="contatti">
+      <div class="grid-item" id="grid-item-1">
+        <h3>SIAMO QUI PER TE</h3>
+        <p>S&amp;S Motors nasce per offrirti le migliori autovetture sul mercato a prezzi imbattibili. <br />
+        Proproniamo anche diversi servizi come noleggio auto o finaziamenti a tasso 0.<br />
+        Non perderti le nostre prossime offerte e iscriviti alla <a href="newsletter-form.html">newsletter</a>.</p>
+        <img src="../img/payment.jpg" alt="payment-methods" class="payment"></img>
+      </div>
+      <div class="grid-item" id="grid-item-2">
+        <h3>CONTATTI</h3>
+        <ul>
+          <li><span class="social">k</span>  sands@motors.it</li>
+          <li><span class="social">L</span>  333.3333333</li>
+          <li><span class="social">m</span>  06.0000000</li>
+          <li><span class="social social-transition">9</span></li>
+        </ul>
+      </div>
+      <div class="grid-item" id="grid-item-3">
+        <h3>SOCIAL</h3>
+        <ul>
+          <li><span class="social social-transition">E</span></li>
+          <li><span class="social social-transition">Q</span></li>
+          <li><span class="social social-transition">)</span>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>
