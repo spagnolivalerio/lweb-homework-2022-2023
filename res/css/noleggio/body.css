@@ -40,11 +40,11 @@
   font-weight: bold;
   color: white;
   font-size: 30px;
-  position: relative;
   padding-inline: 10px;
   border-radius: 15px;
   transition: padding, 0.3s;
   border: none;
+  position: relative;
   top: 250px;
 }
 
@@ -54,6 +54,7 @@
   letter-spacing: 1px;
   background-color: #FF6600;
 }
+
 
 .car-name
 {
@@ -89,5 +90,10 @@
 .second-auto
 {
   background-image: url(../../../img/audicar.jpg);
+}
+
+.third-auto
+{
+  background-image: url(../../../img/ford-pickup.jpg);
 }
 
