@@ -20,12 +20,12 @@
       <div id="hidden-menu">
         <ul>
           <li><a href="../index.html" id="homepage">HOMEPAGE</a></li>
-          <li>LEASING</li>
           <li>SERVIZI FINANZIARI</li>
-          <li>CHI SIAMO</li>
-          <li>LOGIN</li>
+          <li>USATO GARANTITO</li>
+          <li>PRENOTA UN NOLEGGIO</li>
+          <li>ACCOUNT</li>
           <li>IMPOSTAZIONI</li>
-          <li><a href="newsletter-form.html" id="newsletter">NEWSLETTER</a></li>
+          <li><a href="web/newsletter-form.html" id="newsletter">NEWSLETTER</a></li>
           <li>FAQ</li>
         </ul>
         <div id="back"><a href="#back-target">&#x2715;</a></div>
@@ -39,21 +39,21 @@
         <form class="form" method="post" action="http://localhost/cgi-local-bin/cgi-newsletter.exe">
           <div class=" form-item">
             <label for="nome">Nome</label><br />
-            <input type="text" name="nome" placeholder="Name" required>
+            <input type="text" id="nome" name="nome" placeholder="Name" required></input>
           </div>
           <div class="form-item">
             <label for="cognome">Cognome</label><br />
-            <input type="text" name="cognome" placeholder="Last name" required>
+            <input type="text" id="cognome" name="cognome" placeholder="Last name" required></input>
           </div>
           <div class="form-item">
-            <label for="email">e-mail</label><br />
-            <input type="text" name="e-mail" placeholder="sands@motors.it" required>
+            <label for="e-mail">e-mail</label><br />
+            <input type="text" id="e-mail" name="e-mail" placeholder="sands@motors.it" required></input>
           </div>
           <div class="form-item">
             <button type="submit" id="invia">INVIA</button>
           </div>
           <div class="checkbox">
-            <input type="checkbox" required>&nbsp;non sono un robot</button>
+            <input type="checkbox" required></input><span>&nbsp;non sono un robot</span>
           </div>
         </form>
 
@@ -72,7 +72,7 @@
           <li><span class="social">k</span>  sands@motors.it</li>
           <li><span class="social">L</span>  333.3333333</li>
           <li><span class="social">m</span>  06.0000000</li>
-          <li><span class="social social-transition">9</span></li>
+          <li><a href="https://goo.gl/maps/fxjQaQMvub5emHyo9"><span class="social social-transition">9</span></a></li>
         </ul>
       </div>
       <div class="grid-item" id="grid-item-3">
@@ -80,10 +80,9 @@
         <ul>
           <li><span class="social social-transition">E</span></li>
           <li><span class="social social-transition">Q</span></li>
-          <li><span class="social social-transition">)</span>
+          <li><a href="https://github.com/danielesiciliano/repository-linguaggi.git"><span class="social social-transition">)</span></a></li>
         </ul>
       </div>
     </div>
-
   </body>
 </html>

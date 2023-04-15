@@ -18,11 +18,14 @@
 
 .description
 {
+  position: absolute;
+  width: 400px;
   height: fit-content;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   border-radius: 20px;
+  margin-top: -20px;
 }
 
 .flexbox
@@ -40,12 +43,12 @@
   font-weight: bold;
   color: white;
   font-size: 30px;
-  position: relative;
   padding-inline: 10px;
   border-radius: 15px;
   transition: padding, 0.3s;
   border: none;
-  top: 250px;
+  position: relative;
+  top: 400px;
 }
 
 .noleggio-button:hover
@@ -54,6 +57,7 @@
   letter-spacing: 1px;
   background-color: #FF6600;
 }
+
 
 .car-name
 {
@@ -89,5 +93,10 @@
 .second-auto
 {
   background-image: url(../../../img/audicar.jpg);
+}
+
+.third-auto
+{
+  background-image: url(../../../img/ford-pickup.jpg);
 }
 
