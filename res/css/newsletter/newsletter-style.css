@@ -11,7 +11,7 @@
 }
 
 
-html
+/*html
 {
 	--s: 50px;
 	--c: #37555b;
@@ -26,7 +26,18 @@ html
 	  repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
 	  radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
 	background-attachment: fixed;
+}*/
+
+
+html {
+  --s: 150px; 
+  
+  background:
+    linear-gradient(135deg,#0000 18.75%,#37555b 0 31.25%,#0000 0),
+    repeating-linear-gradient(45deg,#37555b -6.25% 6.25%,white 0 18.75%);
+  background-size: var(--s) var(--s); 
 }
+
 
 a{
 	text-decoration: none;
@@ -34,7 +45,7 @@ a{
 
 #title img
 {
-  display: block;
+  display: none;
   width: 200px;
   height: auto;
   margin: 100px auto;
