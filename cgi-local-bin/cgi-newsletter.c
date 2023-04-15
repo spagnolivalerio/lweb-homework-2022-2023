@@ -18,12 +18,7 @@ int main(){
 
     //alloco spazio per contenere la query_string
     query_string = malloc(length + 1);
-
-    if (query_string == NULL) {
-        printf("Location: http://localhost/projects/repository-linguaggi/web/newsletter-form.html\n\n");
-        return 1;
-    }
-
+    
     fgets(query_string, length + 1, stdin);
 
     //divido nome cognome e mail
