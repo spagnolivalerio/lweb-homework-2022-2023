@@ -2,6 +2,8 @@
 # VALERIO SPAGNOLI 1973484
 # DANIELE SICILIANO 1938217 
 
+-- XHTML-CSS HOMEWORK --
+
 Il primo homework riguarda un sito di autonoleggio con principalmente 4 pagine documentative, nelle quali vengono utilizzate le principali regole css per posizionare al meglio gli elementi all'interno del documento xhtml.
 La prima pagina si trova al di fuori della cartella web, con il nome index.html, per un accesso diretto digitando l'indirizzo http://localhost/projects/repository-linguaggi sulla barra di ricerca. 
 
