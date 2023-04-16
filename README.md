@@ -6,6 +6,7 @@
 
 Il primo homework riguarda un sito di autonoleggio con principalmente 4 pagine documentative, nelle quali vengono utilizzate le principali regole css per posizionare al meglio gli elementi all'interno del documento xhtml.
 La prima pagina si trova al di fuori della cartella web, con il nome index.html, per un accesso diretto digitando l'indirizzo http://localhost/projects/repository-linguaggi sulla barra di ricerca.
+
 Il file system è organizzato in modo gerarchico:
 
 	repository-linguaggi--/cgi-local-bin
@@ -41,4 +42,4 @@ I siti di riferimento per la stesura del codice:
 -https://stackoverflow.com
 -https://css-tricks.com
 
-NB: è necessario avere una cartella di nome "projects" all'interno di htdocs. Inoltre abbiamo configurato il server web in modo che i cgi scripts possano essere inseriti all'interno di una cartella di nome "cgi-local-bin", situata all'interno del repository git.
+NB: Non tutte le funzionalità sono state implementate. Inoltre è necessario avere una cartella di nome "projects" all'interno di htdocs. Il server web è stato configurato in modo che i cgi scripts possano essere inseriti all'interno di una cartella di nome "cgi-local-bin", situata all'interno del repository git.
