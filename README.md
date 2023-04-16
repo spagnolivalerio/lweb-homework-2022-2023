@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # lweb-homework-2022-2023
-=======
-# PRIMO HOMEWORK 2022-2023
->>>>>>> c076ea99b10b84b9c69c4cab64936d024874ce32
 # VALERIO SPAGNOLI 1973484
 # DANIELE SICILIANO 1938217 
 
@@ -46,10 +42,6 @@ I siti di riferimento per la stesura del codice:
 -https://stackoverflow.com
 -https://css-tricks.com
 
-<<<<<<< HEAD
 NB: Non tutte le funzionalità sono state implementate. Inoltre è necessario avere una cartella di nome "projects" all'interno di htdocs. Il server web è stato configurato in modo che i cgi scripts possano essere inseriti all'interno di una cartella di nome "cgi-local-bin", situata all'interno del repository git con il seguente ScriptAlias:
 
 ScriptAlias /cgi-local-bin/ "C:/xampp/htdocs/projects/lweb-homework-2022-2023/cgi-local-bin/"
-=======
-NB: Non tutte le funzionalità sono state implementate. Inoltre è necessario avere una cartella di nome "projects" all'interno di htdocs. Il server web è stato configurato in modo che i cgi scripts possano essere inseriti all'interno di una cartella di nome "cgi-local-bin", situata all'interno del repository git.
->>>>>>> c076ea99b10b84b9c69c4cab64936d024874ce32
