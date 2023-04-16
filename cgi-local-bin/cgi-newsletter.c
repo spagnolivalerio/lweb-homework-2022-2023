@@ -19,6 +19,7 @@ int main(){
     //alloco spazio per contenere la query_string
     query_string = malloc(length + 1);
     
+    //usiamo lo standard input per leggere i dati inviati dal form 
     fgets(query_string, length + 1, stdin);
 
     //divido nome cognome e mail
