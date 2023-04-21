@@ -20,7 +20,7 @@
 	$rows = mysqli_query($conn, $query);
 
 	if(!$rows) {
-		die("error: " .$conn->connect_error);
+		die("Impossibile eseguire la query");
 		exit(1);
 	}
 	
