@@ -16,9 +16,8 @@
 
         if($nome==NULL || $cognome==NULL || $username==NULL) {
           die("Compila tutti i campi!");
-        }
-        
-        else{
+          exit(1);
+        } else{
 
           $query = "INSERT INTO utente (nome, cognome, username) VALUES ('$nome','$cognome','$username')";
 
@@ -26,9 +25,10 @@
             die ("Errore nell'inserimento dei dati: " . mysqli_error($conn));
           } 
         }
-      }
-
-      header(Location: '../../web/login.html');
+      } else {
+          header('Location: ../../web/login.html');
+          exit(1);
+        }
       
       $conn->close();
 
