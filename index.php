@@ -4,7 +4,7 @@
 
     require('res/var/db.php');
 
-    $conn = new mysqli($servername, $db_username, $password);
+    $conn = new mysqli($servername, $db_username, $db_password);
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -15,7 +15,7 @@
         die("Errore" . $conn->connect_error);
         exit(1);
     } else {
-        $conn = new mysqli($servername, $db_username, $password, $dbname);
+        $conn = new mysqli($servername, $db_username, $db_password, $db_name);
     }
 
     foreach ($queries as $query) {
@@ -33,5 +33,4 @@
         header('Location: web/homepage.html');
     }
 
-    
 ?>

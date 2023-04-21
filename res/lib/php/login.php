@@ -3,7 +3,7 @@
 	session_start();
 	require('../../var/db.php');
 
-	$conn = new mysqli($servername, $db_username, $password, $dbname);
+	$conn = new mysqli($servername, $db_username, $db_password, $db_name);
 
 	if($conn->connect_error){
 		die("Errore nella connessione con il database: " . $conn->connect_error);
@@ -17,16 +17,19 @@
 			  WHERE username = '$username'
 			  AND password = '$password';";
 
-	if(!mysqli_query($conn, $query)){
+	$rows = mysqli_query($conn, $query);
+
+	if(!$rows) {
 		die("error: " .$conn->connect_error);
+		exit(1);
 	}
 	
-	if(mysqli_num_rows($query) > 0){
+	if(mysqli_num_rows($rows) > 0){
 		$_SESSION['tipo_utente'] = 'cliente';
 		$_SESSION['nome_utente'] = '$username';
-		header('Location: ../../web/homepage');
+		header('Location: ../../../web/homepage.html');
 	} else {
-		header('Location: ../../web/login.html');
+		header('Location: ../../../web/login.html');
 	}
 
 	$conn->close();

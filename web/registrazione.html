@@ -12,17 +12,26 @@
 
   <body>
 
-    <form action="../res/lib/php/registrazione.php" method="POST">
+    <form method="post" action="http://localhost/projects/repository-linguaggi/res/lib/php/registrazione.php">
 
-        <label for="name">NOME</label>
+      <div>
+        <label for="nome">nome</label><br />
         <input type="text" name="nome"></input>
-        <label for="cognome">COGNOME</label>
+      </div>
+      <div>
+        <label for="cognome">cognome</label><br />
         <input type="text" name="cognome"></input>
-        <label for="username">USERNAME</label>
+      </div>
+      <div>
+        <label for="username">username</label><br />
         <input type="text" name="username"></input>
-        <label for="password">PASSWORD</label>
-        <input type="password" name="password"></form><br />
-        <button type="submit" name="submit">INVIA</button>
+      </div>
+      <div>
+        <label for="password">password</label><br />
+        <input type="text" name="password"></input>
+      </div>
+
+      <input type="submit" name="invia"></input>
 
     </form>
 

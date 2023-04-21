@@ -2,10 +2,10 @@
 
     $servername='127.0.0.1';
     $db_username='root';
-    $password='password';
-    $dbname='sands';
+    $db_password='password';
+    $db_name='sands';
 
-    $create_db = "CREATE DATABASE IF NOT EXISTS $dbname;";
+    $create_db = "CREATE DATABASE IF NOT EXISTS $db_name;";
 
     $create_utente = "CREATE TABLE IF NOT EXISTS utente(
                     id INT AUTO_INCREMENT PRIMARY KEY,
