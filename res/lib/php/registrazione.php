@@ -7,21 +7,31 @@
         die("Connection failed: " . $conn->connect_error);
       }
 
-      $nome = mysqli_real_escape_string($conn, $_POST['nome']);
-      $cognome = mysqli_real_escape_string($conn, $_POST['cognome']);
-      $email = mysqli_real_escape_string($conn, $_POST['email']);
+      if(isset($_POST['submit'])) {
 
-      $sql = "INSERT INTO utente (nome, cognome, email) VALUES ('$nome','$cognome','$email')";
+        $nome = mysqli_real_escape_string($conn, $_POST['nome']);
+        $cognome = mysqli_real_escape_string($conn, $_POST['cognome']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
 
-      if(!mysqli_query($conn,$query)) {
-        die ("Errore nell'inserimento dei dati: " . mysqli_error($conn));
-      } 
+        if($nome==NULL || $cognome==NULL || $email==NULL) {
+          die("Compila tutti i campi!");
+
+        }
+
+        else{
+
+          $sql = "INSERT INTO utente (nome, cognome, email) VALUES ('$nome','$cognome','$email')";
+
+          if(!mysqli_query($conn,$query)) {
+            die ("Errore nell'inserimento dei dati: " . mysqli_error($conn));
+          } 
+
+        }
+
+      }
 
       header(Location: '../../web/login.html');
       
-
 $conn->close();
-
-
 
 ?>
