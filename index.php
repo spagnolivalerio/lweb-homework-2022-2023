@@ -7,7 +7,7 @@
     $conn = new mysqli($servername, $db_username, $db_password);
 
     if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+        die("Connessione fallita: " . $conn->connect_error);
         exit(1);
     }
 
@@ -20,7 +20,7 @@
 
     foreach ($queries as $query) {
         if(!$conn->query($query)){
-            die("ERROR: ". $conn->connect_error);
+            die("ERROR: ". $conn->error);
             exit(1);
         }
     }
