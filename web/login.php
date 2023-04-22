@@ -9,35 +9,46 @@
 
   <head>
 
+      <link rel="stylesheet" href="../res/css/login/body.css" type="text/css" />
+
       <title>Login</title>
 
   </head>
 
   <body>
 
-    <form method="post" action="http://localhost/projects/repository-linguaggi/res/lib/php/login.php">
-
        <?php
           if(isset($_SESSION['signup']) && $_SESSION['signup'] === 'valid'){
           $valid_signup = 'Registrazione effettuata con successo! Fai il login con le tue credenziali.';
-          echo "<p style=\"color: green;\">$valid_signup</p>";
+          echo "<p class=\"success-signup\">$valid_signup</p>";
           }
         ?>
 
-      <div>
-        <label for="username">USERNAME</label><br />
+    <form class="form" method="post" action="http://localhost/projects/repository-linguaggi/res/lib/php/login.php">
+
+      <div class="title">
+        <h2>LOGIN</h2>
+      </div>
+
+      <div class="form-item">
+        <label for="username">USERNAME:</label><br />
         <input type="text" name="username"></input>
       </div>
-      <div>
-        <label for="username">PASSWORD</label><br />
+      <div class="form-item">
+        <label for="username">PASSWORD:</label><br />
         <input type="password" name="password"></input>
       </div><br />
 
-      <input type="submit" name="submit"></input>
+      <div class="form-item invia">
+        <input type="submit" name="submit"></input><br />
+      </div>
       
-    </form><br />
+      <div class="form-item non-hai-un-account">
+        <a href="registrazione.php">NON HAI UN ACCOUNT?</a>
+      </div>
 
-    <span><a href="registrazione.php">NON HAI UN ACCOUNT?</a></span>
+    </form>
+
         
   </body>
 
