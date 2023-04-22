@@ -1,7 +1,7 @@
 <?php
 
 	session_start();
-	require('../../var/db.php');
+	require('../../res/var/db.php');
 
 	$conn = new mysqli($servername, $db_username, $db_password, $db_name);
 
@@ -30,9 +30,9 @@
 		session_start();
 		$_SESSION['tipo_utente'] = 'cliente';
 		$_SESSION['nome_utente'] = "$username";
-		header('Location: ../../../web/homepage.php');
+		header('Location: ../../web/homepage.php');
 	} else {
-		header('Location: ../../../web/login.php');
+		header('Location: ../../web/login.php');
 	}
 
 	$conn->close();

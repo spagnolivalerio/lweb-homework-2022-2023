@@ -20,7 +20,7 @@
   <body>
 
     <div id="header">
-      <div id="title"><img src="../img/logoS_S.png" alt=" "></img></div>
+      <div id="title"><img src="http://localhost/projects/repository-linguaggi/img/logoS_S.png" alt=" "></img></div>
     </div>
     <div class ="mainmenu">
         <ul>
