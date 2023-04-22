@@ -7,11 +7,15 @@
 *
 {
   font-family: 'Giorgio';
+  margin: 0;
+  padding: 0;
 }
+
+
 
 .form
 {
-	width: 600px;
+	width: 700px;
 	margin: 100px auto;
 	border: 1px solid black;
 	border-radius: 20px;
@@ -20,12 +24,11 @@
 
 .title
 {
-	position: relative;
-	top: -20px;
 	text-align: center;
-	width: 600px;
+	margin-bottom: 50px;
 	background-color: #FF6600;
 	color: white;
+	padding: 10px 0;
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
 }
@@ -67,7 +70,7 @@
 
 .form-item
 {
-	margin-bottom: 30px !important;
+	margin-bottom: 50px !important;
 	width: 200px;
 	margin: 0 auto;
 }
