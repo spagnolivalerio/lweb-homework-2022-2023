@@ -20,7 +20,7 @@
        <?php
           if(isset($_SESSION['signup']) && $_SESSION['signup'] === 'valid'){
           $valid_signup = 'Registrazione effettuata con successo! Fai il login con le tue credenziali.';
-          echo "<p style=\"color: blue;\">$valid_signup</p>";
+          echo "<p style=\"color: green;\">$valid_signup</p>";
           }
         ?>
 
@@ -33,9 +33,9 @@
         <input type="password" name="password"></input>
       </div><br />
 
-      <input type="submit" name="submit" >INVIA</input>
+      <input type="submit" name="submit"></input>
       
-    </form>
+    </form><br />
 
     <span><a href="registrazione.php">NON HAI UN ACCOUNT?</a></span>
         

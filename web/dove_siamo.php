@@ -36,7 +36,16 @@
           <li>SERVIZI FINANZIARI</li>
           <li>USATO GARANTITO</li>
           <li>PRENOTA UN NOLEGGIO</li>
-          <li>ACCOUNT</li>
+
+          <?php
+            if(isset($_SESSION['tipo_utente'])){
+              $nome_utente = $_SESSION['nome_utente'];
+              echo "<li style=\"color: #FF6600;\">$nome_utente</li>";
+            } else {
+              echo "<a href=\"login.php\" style=\"color: #FF6600;\"><li>ACCEDI</li></a>";
+            }
+          ?>
+          
           <li>IMPOSTAZIONI</li>
           <li>NEWSLETTER</li>
           <li>FAQ</li>
