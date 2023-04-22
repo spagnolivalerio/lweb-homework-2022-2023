@@ -29,8 +29,18 @@
 
     if(!isset($_SESSION['tipo_utente'])) {
         header('Location: web/login.html');
-    } else {
-        header('Location: web/homepage.html');
-    }
+        exit(1);
+    } 
+
+    switch ($_SESSION['tipo_utente']) {
+        case 'cliente':
+          header('Location: web/homepage.php');
+          exit(1);
+
+        /*case 'amministratore':
+          header('');
+          exit(1);*/
+
+      }
 
 ?>

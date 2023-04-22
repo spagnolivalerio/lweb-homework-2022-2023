@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    $nome = $_SESSION['nome_utente'];
+?>
+
+
+
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -16,7 +23,7 @@
   <body>
 
     <div id="header">
-      <div id="title"><img src="img/logoS_S.png" alt=" "></img></div>
+      <div id="title"><img src="http://localhost/projects/repository-linguaggi/img/logoS_S.png" alt=" "></img></div>
     </div>
     <div class ="mainmenu">
         <ul>
@@ -25,6 +32,7 @@
           <li><a href ="#contatti">CONTATTI</a></li>
         </ul>
     </div>
+      
       <div id="select-menu"><a href="#hidden-menu">&#x2630;</a></div>
       <div><span id="back-target"></span></div>
       <div id="hidden-menu">
@@ -55,7 +63,7 @@
         <p>S&amp;S Motors nasce per offrirti le migliori autovetture sul mercato a prezzi imbattibili. <br />
         Proproniamo anche diversi servizi come noleggio auto o finaziamenti a tasso 0.<br />
         Non perderti le nostre prossime offerte e iscriviti alla newsletter.</p>
-        <img src="img/payment.jpg" alt="payment-methods" class="payment"></img>
+        <img src="http://localhost/projects/repository-linguaggi/img/payment.jpg" alt="payment-methods" class="payment"></img>
       </div>
       <div class="grid-item" id="grid-item-2">
         <h3>CONTATTI</h3>

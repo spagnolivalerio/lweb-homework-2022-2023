@@ -15,7 +15,7 @@
 
     if ($nome == NULL || $cognome == NULL || $username == NULL || $password == NULL) {
       die("Compila tutti i campi!");
-      header('Location: ../../web/registrazione.html');
+      header('Location: ../../../web/registrazione.html');
       exit(1);
     } else {
 
@@ -24,7 +24,9 @@
       if(!mysqli_query($conn,$query)) {
         die ("Errore nell'inserimento dei dati: " . mysqli_error($conn));
         exit(1);
-      } 
+      } else{ 
+        header('Location: ../../../web/login.html ');     
+      }
     }
 
   $conn->close();

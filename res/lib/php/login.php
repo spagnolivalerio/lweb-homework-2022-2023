@@ -26,8 +26,8 @@
 	
 	if(mysqli_num_rows($rows) > 0){
 		$_SESSION['tipo_utente'] = 'cliente';
-		$_SESSION['nome_utente'] = '$username';
-		header('Location: ../../../web/homepage.html');
+		$_SESSION['nome_utente'] = "$username";
+		header('Location: ../../../web/homepage.php');
 	} else {
 		header('Location: ../../../web/login.html');
 	}
