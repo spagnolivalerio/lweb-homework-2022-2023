@@ -3,8 +3,6 @@
     $nome = $_SESSION['nome_utente'];
 ?>
 
-
-
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -27,8 +25,8 @@
     </div>
     <div class ="mainmenu">
         <ul>
-          <li><a href ="dove_siamo.html">DOVE SIAMO</a></li>
-          <li><a href ="noleggio.html">NOLEGGIO</a></li>
+          <li><a href ="dove_siamo.php">DOVE SIAMO</a></li>
+          <li><a href ="noleggio.php">NOLEGGIO</a></li>
           <li><a href ="#contatti">CONTATTI</a></li>
         </ul>
     </div>
