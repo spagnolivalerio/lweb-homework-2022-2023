@@ -1,5 +1,5 @@
 <?php 
-
+    session_start();
     require('../../var/db.php');
 
     $conn = new mysqli($servername, $db_username, $db_password, $db_name);
@@ -14,21 +14,26 @@
     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
     if ($nome == NULL || $cognome == NULL || $username == NULL || $password == NULL) {
-      die("Compila tutti i campi!");
-      header('Location: ../../../web/registrazione.html');
+      $_SESSION['fields'] = 'empty'; 
+      header('Location: ../../../web/registrazione.php');
       exit(1);
     } else {
 
       $query = "INSERT INTO utente (username, password, nome, cognome) VALUES ('$username', '$password', '$nome','$cognome')";
 
-      if(!mysqli_query($conn,$query)) {
-        die ("Errore nell'inserimento dei dati: " . mysqli_error($conn));
-        exit(1);
-      } else{ 
-        header('Location: ../../../web/login.html ');     
+      try{
+        if(mysqli_query($conn, $query)){
+          $_SESSION['signup'] = 'valid';
+          header('Location: ../../../web/login.php');
+          exit(1);
+        }
+      } catch (Exception $e){
+          $_SESSION['signup'] = 'invalid';
+          header('Location: ../../../web/registrazione.php');
+          exit(1);
       }
     }
 
-  $conn->close();
+    $conn->close();
 
 ?>

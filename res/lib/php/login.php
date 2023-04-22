@@ -24,12 +24,15 @@
 		exit(1);
 	}
 	
+
 	if(mysqli_num_rows($rows) > 0){
+		session_destroy();
+		session_start();
 		$_SESSION['tipo_utente'] = 'cliente';
 		$_SESSION['nome_utente'] = "$username";
 		header('Location: ../../../web/homepage.php');
 	} else {
-		header('Location: ../../../web/login.html');
+		header('Location: ../../../web/login.php');
 	}
 
 	$conn->close();

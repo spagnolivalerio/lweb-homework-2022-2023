@@ -28,7 +28,7 @@
     $conn->close();
 
     if(!isset($_SESSION['tipo_utente'])) {
-        header('Location: web/login.html');
+        header('Location: web/login.php');
         exit(1);
     } 
 
@@ -39,8 +39,7 @@
 
         /*case 'amministratore':
           header('');
-          exit(1);*/
-
+          break;*/
       }
 
 ?>
