@@ -67,7 +67,7 @@
         $result = mysqli_query($conn, $auto_noleggio);
 
         if(mysqli_num_rows($result) > 0){
-
+  
           print_auto($result);
 
         } else {

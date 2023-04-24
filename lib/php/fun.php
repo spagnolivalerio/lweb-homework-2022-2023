@@ -40,12 +40,12 @@
 
               			</div>
 
-
                     <div class=\"column right-column\">
                       <p class=\"prezzo\">" . $row['prezzo_giornaliero'] . "&euro; <span id=\"g-text\">giornalieri</span></p>
-                      <form action=\"\"> 
+                      <form action=\"form-noleggio.php\" method=\"post\"> 
+                          <input type=\"hidden\" name=\"id_auto\" value=\" " . $row['id'] . " \"></input>
                           <button class=\"noleggio-button\" type=\"submit\">NOLEGGIA ORA</button>
-                        </form>
+                      </form>
                     </div>
                   </div>";
         }
