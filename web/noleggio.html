@@ -1,11 +1,6 @@
 <?php
   session_start();
-  require('../res/var/sql_noleggio.php');
-  require('../res/var/db.php');
-
-  $conn = new mysqli($servername, $db_username, $db_password, $db_name);
 ?>
-
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -59,36 +54,19 @@
 
      <!--BODY-->
 
-      <div class="box">
+     <div class="box">
 
-       <?php
+       <div class="row">
+         <div class="column">
+          <div class="car-name">
+           JEEP RENEGADE
+          </div>
+          <img class="car" src="http://localhost/repository-linguaggi/img/jeep_renegade.jpg" alt="daje"></img></div>
+         <div class="column"></div>
+         <div class="column"></div>
+       </div>
 
-        $result = mysqli_query($conn, $auto_noleggio);
-
-        if(mysqli_num_rows($result) > 0){
-
-          foreach($result as $row){
-
-            echo "<div class=\"row\">
-
-                    <div class=\"column\">
-                      <div class=\"car-name\">" . $row['marca'] . " " . $row['modello'] . "</div>
-                        <img class=\"car\" src=\" " . $row['percorso_img'] . "\" alt=\"img\"></img>
-                      </div>
-                    <div class=\"column\"></div>
-                    <div class=\"column\"></div>
-
-                  </div>";
-        }
-
-        } else {
-          echo "<span>NON CI SONO MACCHINE DISPONIBILI PER IL NOLEGGIO</span>";
-        }
-
-        $conn->close();
-
-       ?>
-      </div>
+     </div>
 
      <div class="footer" id="contatti">
       <div class="grid-item" id="grid-item-1">
