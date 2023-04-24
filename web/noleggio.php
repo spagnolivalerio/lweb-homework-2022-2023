@@ -71,12 +71,12 @@
 
             echo "<div class=\"row\">
 
-                    <div class=\"column\">
+                    <div class=\"column left-column\">
                       <div class=\"car-name\">" . $row['marca'] . " " . $row['modello'] . "</div>
-                        <img class=\"car\" src=\" " . $row['percorso_img'] . "\" alt=\"img\"></img>
+                        <img class=\"car\" src=\"http://localhost/projects/repository-linguaggi/img/" . $row['nome_file_img'] . "\" alt=\"img\"></img>
                       </div>
-                    <div class=\"column\"></div>
-                    <div class=\"column\"></div>
+                    <div class=\"column center-column\"></div>
+                    <div class=\"column right-column\"></div>
 
                   </div>";
         }

@@ -35,3 +35,25 @@
   font-weight: bold;
 }
 
+.flexbox
+{
+  display: flex;
+}
+
+.flexbox img
+{
+  width: 18px;
+}
+
+.features
+{
+  margin-top: 10px;
+  margin-right: 30px;
+}
+
+.features li
+{
+  font-size: 18px;
+  margin-top: 3px;
+}
+

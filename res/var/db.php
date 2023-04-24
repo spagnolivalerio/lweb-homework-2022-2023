@@ -17,13 +17,16 @@
 
     $create_auto = "CREATE TABLE IF NOT EXISTS auto(
                     id INT AUTO_INCREMENT PRIMARY KEY,
-                    modello VARCHAR(32) NOT NULL,
                     marca VARCHAR(32) NOT NULL,
+                    modello VARCHAR(32) NOT NULL,
                     colore VARCHAR(32) NOT NULL,
                     cambio ENUM ('automatico', 'manuale') NOT NULL, 
                     carburante ENUM ('benzina', 'diesel', 'ibrido', 'gpl', 'elettrico') NOT NULL,
+                    categoria ENUM ('utilitaria', 'suv', 'sportiva') NOT NULL,
                     prezzo_giornaliero DECIMAL NOT NULL,
-                    percorso_img VARCHAR(100) NOT NULL
+                    nome_file_img VARCHAR(100) NOT NULL,
+                    num_porte INT NOT NULL, 
+                    num_posti INT NOT NULL
                     );";
 
     $create_noleggio = "CREATE TABLE IF NOT EXISTS noleggio(
