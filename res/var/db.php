@@ -20,11 +20,12 @@
                     marca VARCHAR(32) NOT NULL,
                     modello VARCHAR(32) NOT NULL,
                     colore VARCHAR(32) NOT NULL,
-                    cambio ENUM ('automatico', 'manuale') NOT NULL, 
-                    carburante ENUM ('benzina', 'diesel', 'ibrido', 'gpl', 'elettrico') NOT NULL,
-                    categoria ENUM ('utilitaria', 'suv', 'sportiva') NOT NULL,
+                    cambio ENUM ('Automatico', 'Manuale') NOT NULL, 
+                    carburante ENUM ('Benzina', 'Diesel', 'Ibrido', 'GPL', 'Elettrico') NOT NULL,
+                    categoria ENUM ('Utilitaria', 'Suv', 'Sportiva') NOT NULL,
                     prezzo_giornaliero DECIMAL NOT NULL,
                     nome_file_img VARCHAR(100) NOT NULL,
+                    cavalli INT NOT NULL,
                     num_porte INT NOT NULL, 
                     num_posti INT NOT NULL
                     );";

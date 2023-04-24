@@ -8,14 +8,9 @@
 {
   display: grid;
   grid-template-columns: 30% 40% 30%;
-  border: 1px solid black;
   height: 250px;
   margin-bottom: 30px;
-}
-
-.column
-{
-  border-right: 1px solid black;
+  box-shadow: 0px 0px 15px 1px black;
 }
 
 .car
@@ -33,6 +28,22 @@
   position: absolute;
   text-align: center;
   font-weight: bold;
+}
+
+.car-name span
+{
+  position: relative;
+  left: -10px;
+}
+
+.left-column
+{
+  border-right: 10px solid #37555b;
+}
+
+.container
+{
+  margin-left: 20px;
 }
 
 .flexbox
@@ -54,6 +65,55 @@
 .features li
 {
   font-size: 18px;
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
+.dettagli
+{
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.recensioni
+{
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.recensioni:hover
+{
+  text-decoration: underline;
+}
+
+.prezzo
+{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#g-text
+{
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.noleggio-button
+{
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: 50px auto;
+  background-color: #FF6600;
+  border: none;
+  color: white;
+  border-radius: 18px;
+  font-size: 20px;
+  transition: box-shadow 0.2s ease;
+}
+
+.noleggio-button:hover
+{
+  box-shadow: 0px 0px 10px 0px black;
+}

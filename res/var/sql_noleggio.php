@@ -1,5 +1,6 @@
 <?php
 	
-	$auto_noleggio = "SELECT * FROM auto";
+	$auto_noleggio = "SELECT * 
+					  FROM auto;";
 	
 ?>

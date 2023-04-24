@@ -2,6 +2,7 @@
   session_start();
   require('../res/var/sql_noleggio.php');
   require('../res/var/db.php');
+  require('../lib/php/fun.php');
 
   $conn = new mysqli($servername, $db_username, $db_password, $db_name);
 ?>
@@ -67,19 +68,7 @@
 
         if(mysqli_num_rows($result) > 0){
 
-          foreach($result as $row){
-
-            echo "<div class=\"row\">
-
-                    <div class=\"column left-column\">
-                      <div class=\"car-name\">" . $row['marca'] . " " . $row['modello'] . "</div>
-                        <img class=\"car\" src=\"http://localhost/projects/repository-linguaggi/img/" . $row['nome_file_img'] . "\" alt=\"img\"></img>
-                      </div>
-                    <div class=\"column center-column\"></div>
-                    <div class=\"column right-column\"></div>
-
-                  </div>";
-        }
+          print_auto($result);
 
         } else {
           echo "<span>NON CI SONO MACCHINE DISPONIBILI PER IL NOLEGGIO</span>";
