@@ -8,18 +8,18 @@
 	if(!isset($_SESSION['tipo_utente'])){
 		header('Location: login.php');
 	}
-	//serve per poter tornare indietro dal form di noleggio e poter cambiare macchina da noleggiare.
-	//quando premo NOLEGGIA ORA, l'id auto viene mandato a check-noleggio.php via hidden-field.
-	//successivamente lato "server", lo script setta un cookie con l'id dell'auto, in modo che tornando indietro si possa cambiare auto da noleggiare
+
+	//serve per poter tornare indietro una volta premuto il tasto invia dal form-noleggio, perchè rieseguendo la pagina form-noleggio.php non ha ricevuto $_POST['id_auto'], quindi uso variabile di sessione;
+
 	if(!isset($_POST['id_auto'])){
-		$id_auto = $_COOKIE['id_auto'];
+		$id_auto = $_SESSION['id_auto'];
 	} else {
 		$id_auto = $_POST['id_auto'];
 	}
 
 	$auto_da_noleggiare = "SELECT *
-						   FROM auto
-						   WHERE id = $id_auto;";
+					   FROM auto
+					   WHERE id = $id_auto;";
 
 	$res = mysqli_query($conn, $auto_da_noleggiare);
 
@@ -44,8 +44,6 @@
 
 
 	<body>
-		<?php
-		echo"" .$_COOKIE['id_auto'] . ""?>
 
 			<div class="row">
 				<div class="column">
@@ -66,25 +64,44 @@
 						</div>
 						<!--stampa flexbox con prezzo nel caso di $_SESSION[] settata-->
 					</div>
-					<?php 
-						if(!isset($_SESSION['disponibilita']) || $_SESSION['disponibilita'] === 'no'){
-						echo "<div class=\"btn\"><button type=\"submit\">VERIFICA DISPONIBILIT&Agrave;</button></div>
-							 <input type=\"hidden\" name=\"id_auto\" value=\"$id_auto\"></input";
-						} elseif($_SESSION['disponibilita'] === 'yes'){
-							echo "<div class=\"btn\"><button type=\"submit\">NOLEGGIA;</button></div>
-								 <input type=\"hidden\" name=\"id_auto\" value=\"$id_auto\"></input";
-						}
-						
 
+					<?php 
+						//CONTROLLO ERRORI DATE
 						if(isset($_SESSION['error_days'])){
-							echo"<p id=\"errore\">Errore</p>";
+							if($_SESSION['error_days'] === 'start > end'){
+								echo"<p id=\"errore\">Errore: Giorno di inizio maggiore del giorno di fine</p>";
+							} elseif($_SESSION['error_days'] === '<today'){
+								echo"<p id=\"errore\">Errore: Gorno di inzio minore di oggi</p>";
+							} elseif($_SESSION['error_days'] === 'nulldate'){
+								echo"<p id=\"errore\">Errore: inserisci le date</p>";
+							}	
+						}
+
+						//3 CASI POSSIBILI: disp non è settata (caso inziale)->inserisco le date e verifico, successivamente disp verrà settata necessariamente o a yes o a no.
+						if(!isset($_SESSION['disp'])){
+							echo "<p>qui disp non è settata</p>
+								<div class=\"btn\"><button type=\"submit\">VERIFICA DISPONIBILIT&Agrave;</button></div>
+							 	<input type=\"hidden\" name=\"id_auto\" value=\"$id_auto\"></input";
+					     //disp = 'no': le date non sono disponibili perchè ci sono altri noleggi prenotati-> il bottone rimanda allo script che rieseguirà le query e verificherà la disponibilità.
+						} elseif($_SESSION['disp'] === 'no'){
+							echo "<p class=\"disp\">date non disponibili</p>
+								<div class=\"btn\"><button type=\"submit\">VERIFICA DISPONIBILIT&Agrave;</button></div>
+								<input type=\"hidden\" name=\"id_auto\" value=\"$id_auto\"></input";
+						//CASO IN CUI TORNO INDIETRO DAL CHECKOUT CON LA VARIABILE SETTATA A 'yes' -> qualsiasi data risulterebbe prenotabile, perciò la setto a 'no' e inserisco le date, ripremo il bottone e rieseguo la query.
+						} elseif($_SESSION['disp'] === 'yes'){
+							unset($_SESSION['disp']);
+							echo "<div class=\"btn\"><button type=\"submit\">VERIFICA DISPONIBILIT&Agrave;</button></div>
+								<input type=\"hidden\" name=\"id_auto\" value=\"$id_auto\"></input";
 						}
 					?>
+
 				 </form>
 
 				</div>
 			</div>
+
 	<?php
 		$conn->close();
 	?>
+
 </html>

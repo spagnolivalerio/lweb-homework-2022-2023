@@ -23,11 +23,22 @@
 		die("Impossibile eseguire la query");
 		exit(1);
 	}
+
+	$query = "SELECT id
+			  FROM utente
+			  WHERE username = '$username';";
 	
+	$res = mysqli_query($conn, $query);
+
+	$_user_row = mysqli_fetch_array($res);
+	$IDUSER = $_user_row['id'];
+
+
 
 	if(mysqli_num_rows($rows) > 0){
 		session_destroy();
 		session_start();
+		$_SESSION['id_utente'] = "$IDUSER";
 		$_SESSION['tipo_utente'] = 'cliente';
 		$_SESSION['nome_utente'] = "$username";
 		header('Location: ../../web/homepage.php');

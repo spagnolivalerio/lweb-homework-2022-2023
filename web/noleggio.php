@@ -5,6 +5,9 @@
   require('../lib/php/fun.php');
 
   $conn = new mysqli($servername, $db_username, $db_password, $db_name);
+
+  unset($_SESSION['id_auto']);
+  
 ?>
 
 <?xml version="1.0" encoding="UTF-8" ?>

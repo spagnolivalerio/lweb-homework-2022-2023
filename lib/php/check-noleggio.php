@@ -2,49 +2,57 @@
 	session_start();
 	require('../../res/var/db.php');
 	$conn = new mysqli($servername, $db_username, $db_password, $db_name);
-	setcookie('id_auto', $_POST['id_auto'], time() + 3600, '/');
+
 
 	$start_day = $_POST['giorno_inizio'];
 	$end_day = $_POST['giorno_fine'];
 	$auto = $_POST['id_auto'];
+	$_SESSION['id_auto'] = $auto;
 
-
-	$check_disp ="SELECT *
-               FROM noleggio n, auto a
-               WHERE n.id_auto = a.id
-               AND   a.id = '$auto'
-               AND(
-				    (n.data_inizio >= '$start_day' 
-                          AND n.data_inizio < '$end_day')
-               OR      (n.data_fine > '$start_day '
-                           AND n.data_fine <= '$end_day')
-               OR      (n.data_inizio < '$start_day'
-                           AND n.data_fine > '$end_day')
-				);";
-
-	$insert_noleggio = "INSERT INTO noleggio 
-						(id_auto, id_utente, data_inizio, data_fine, stato)
-	                    VALUES ('$auto', 'devomemorizzarmi id_utente', '$start_day', '$end_day', 'in corso')";"
-
-	$res = mysqli_query($conn, $check_disp);
-
-	if(mysqli_num_rows($res) > 0){
-		echo "errore";
-		$_SESSION['disponibilità']= 'no';
-		header('Location: ../../web/form-noleggio.php');
-		exit(1);
-	}
-
-	if($_SESSION['disponiblità']){
-
-	}
-
-	$_SESSION['disponibilità'] = 'yes';
-	header('Location: ../../web/form-noleggio.php');
-
+	//CONTROLLO ERRORI INSERIMENTO DATE
 	if($start_day > $end_day){
 		$_SESSION['error_days'] = 'start > end';
 		header('Location: ../../web/form-noleggio.php');
 		exit(1);
 	}
+
+	if(empty($_POST['giorno_fine']) || empty($_POST['giorno_inizio'])){
+		$_SESSION['error_days'] = 'nulldate';
+		header('Location: ../../web/form-noleggio.php');
+		exit(1);
+	}
+
+	$today = date('Y-m-d');
+	if($start_day < $today){
+		$_SESSION['error_days'] = '<today';
+		header('Location: ../../web/form-noleggio.php');
+		exit(1);
+	}
+	//FINE_CONTROLLO
+
+	//QUERY PER CERCARE NOLEGGI CON L'AUTO SELEZIONATA CHE SI SOVRAPPONGONO
+	$check_disp =	"SELECT *
+                 	FROM noleggio n
+                 	WHERE n.id_auto = '$auto'
+                 	AND((n.data_inizio < '$start_day' AND '$start_day' < n.data_fine)
+                 	OR  ('$end_day' > n.data_inizio AND '$end_day' < n.data_fine)
+                 	OR  (n.data_inizio = '$start_day' AND n.data_fine = '$end_day'));";
+
+
+   //CONTROLLO SULLA VARIABILE $_SESSION['disp']: SE NON è SETTATA O è 'no' ALLORA FACCIO LA QUERY PER CERCARE DISPONIBILITà: NEL CASO LA TROVA LA SETTA A 'yes' E VA NEL CHECKOUT NOLEGGIO, SE NO TORNA IN FORM-NOLEGGIO CON LA VARIABILE SETTATA A 'no'. IL FORM FARà I RELATIVI CONTROLLI SULLA VARIABILE PER CAPIRE COSA STAMPARE E COME COMPORTARSI.
+   if(!isset($_SESSION['disp']) || $_SESSION['disp'] !== 'yes'){      
+
+   	$res = mysqli_query($conn, $check_disp);
+
+   	if(mysqli_num_rows($res) === 0){
+   		$_SESSION['disp'] = 'yes';
+   		header('Location: ../../web/checkout_noleggio.php');
+   		exit(1);
+  	 	} else {
+  	 		$_SESSION['disp'] = 'no';
+  	 		header('Location: ../../web/form-noleggio.php');
+   		exit(1);
+  	 	}
+  	}
+
 ?>
