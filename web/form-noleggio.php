@@ -74,6 +74,7 @@
 							echo "<div class=\"btn\"><button type=\"submit\">NOLEGGIA;</button></div>
 								 <input type=\"hidden\" name=\"id_auto\" value=\"$id_auto\"></input";
 						}
+						
 
 						if(isset($_SESSION['error_days'])){
 							echo"<p id=\"errore\">Errore</p>";
