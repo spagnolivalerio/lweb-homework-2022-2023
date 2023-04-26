@@ -9,6 +9,11 @@
   font-family: 'Giorgio';
 }
 
+form
+{
+    margin-top: 20px;
+}
+
 .row
 {
   width: 1000px;
@@ -23,6 +28,19 @@
   transform: translate(-50%, -50%);
 }
 
+.left-column
+{
+  border-right: 10px solid #37555b;
+}
+
+.bar
+{
+  position: absolute;
+  background-color: #37555b;
+  width: 700px;
+  height: 42px;
+}
+
 .car
 {
   position: relative;
@@ -34,13 +52,10 @@
 .car-name
 {
   text-align: center;
+  background-color: #37555b;
+  padding: 10px;
+  color: white;
 }
-
-.column
-{
-  border-right: 1px solid black;
-}
-
 
 .flexbox
 {
@@ -64,6 +79,26 @@
   width: fit-content;
   position: relative;
   margin: 0 auto;
-  top: 200px;
+  top: 160px;
+}
+
+.btn button
+{
+  background-color: #FF6600;
+  width: 200px;
+  height: 40px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.error-container
+{
+  position: absolute;
+  width: 700px;
+  text-align: center;
+  margin-top: 50px;
+  color: red;
 }
 
