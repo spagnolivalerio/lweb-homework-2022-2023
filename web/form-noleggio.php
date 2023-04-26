@@ -77,33 +77,50 @@
 						//CONTROLLO ERRORI DATE
 						if(isset($_SESSION['error_days'])){
 							if($_SESSION['error_days'] === 'start > end'){
-								echo"<div class=\"error-container\"><p class=\"errore\">Errore: Giorno di inizio maggiore del giorno di fine</div></p>";
+								echo"<div id=\"error-container\"><p class=\"errore\">Errore: Giorno di inizio maggiore del giorno di fine</div></p>";
 								unset($_SESSION['error_days']);
 							} elseif($_SESSION['error_days'] === '<today'){
-								echo"<div class=\"error-container\"><p class=\"errore\">Errore: Gorno di inzio minore di oggi</div></p>";
+								echo"<div id=\"error-container\"><p class=\"errore\">Errore: Gorno di inzio minore di oggi</div></p>";
 								unset($_SESSION['error_days']);
 							} elseif($_SESSION['error_days'] === 'nulldate'){
-								echo"<div class=\"error-container\"><p class=\"errore\">Errore: inserisci le date</div></p>";
+								echo"<div id=\"error-container\"><p class=\"errore\">Errore: inserisci le date</div></p>";
 								unset($_SESSION['error_days']);
-							}	
-						}
+							}
 
-						//3 CASI POSSIBILI: disp non è settata (caso inziale)->inserisco le date e verifico, successivamente disp verrà settata necessariamente o a yes o a no.
-						if(!isset($_SESSION['disp'])){
-							echo "<div class=\"btn\"><button type=\"submit\">VERIFICA DISPONIBILIT&Agrave;</button></div>
-							 	<input type=\"hidden\" name=\"id_auto\" value=\"$id_auto\"></input";
+						 	echo "<script>
+
+										function go_away(id){
+											var error = document.getElementById(id);
+											error.style.display = \"none\";
+										}
+
+										setTimeout(function() { go_away(\"error-container\"); }, 5000);
+
+							  </script>";
+						}
 					     //disp = 'no': le date non sono disponibili perchè ci sono altri noleggi prenotati-> il bottone rimanda allo script che rieseguirà le query e verificherà la disponibilità.
-						} elseif($_SESSION['disp'] === 'no'){
-							echo "<div class=\"error-container\"><p class=\"error\">date non disponibili</p></div>
-								<div class=\"btn\"><button type=\"submit\">VERIFICA DISPONIBILIT&Agrave;</button></div>
-								<input type=\"hidden\" name=\"id_auto\" value=\"$id_auto\"></input";
-						//CASO IN CUI TORNO INDIETRO DAL CHECKOUT CON LA VARIABILE SETTATA A 'yes' -> qualsiasi data risulterebbe prenotabile, perciò la setto a 'no' e inserisco le date, ripremo il bottone e rieseguo la query.
-						} elseif($_SESSION['disp'] === 'yes'){
+						if(isset($_SESSION['disp']) && $_SESSION['disp'] === 'no'){
 							unset($_SESSION['disp']);
-							echo "<div class=\"btn\"><button type=\"submit\">VERIFICA DISPONIBILIT&Agrave;</button></div>
-								<input type=\"hidden\" name=\"id_auto\" value=\"$id_auto\"></input";
+							echo "<div id=\"date-non-disp\"><p class=\"error\">date non disponibili</p></div>
+
+								<script>
+									function go_away(id){
+										var error = document.getElementById(id);
+										error.style.display = \"none\";
+									}
+
+									setTimeout(function() { go_away(\"date-non-disp\"); }, 5000);
+
+								</script>";
+							
+
+						//CASO IN CUI TORNO INDIETRO DAL CHECKOUT CON LA VARIABILE SETTATA A 'yes' -> qualsiasi data risulterebbe prenotabile, perciò la setto a 'no' e inserisco le date, ripremo il bottone e rieseguo la query.
+						} elseif(isset($_SESSION['disp']) && $_SESSION['disp'] === 'yes'){
+							unset($_SESSION['disp']);
 						}
 
+						echo"<div class=\"btn\"><button type=\"submit\">VERIFICA DISPONIBILIT&Agrave;</button></div>
+								<input type=\"hidden\" name=\"id_auto\" value=\"$id_auto\"></input>";
 					?>
 
 				</form>
