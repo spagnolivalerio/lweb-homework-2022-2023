@@ -1,6 +1,9 @@
 <?php
 	session_start();
 	$tot_costo = ($_SESSION['num_days'] + 1) * $_SESSION['prezzo_giornaliero'];
+    if($_SESSION['disp'] !== 'yes'){
+        header('Location: noleggio.php');
+    }
 ?>
 
 
@@ -22,7 +25,6 @@
         <ul>
 
         <?php echo 
-
                 	"<li>&#128664; Noleggio <span class=\"bold-text\"> " . $_SESSION['marca'] . " " . $_SESSION['modello'] . "</span></li>
                 	<li>&#128197; Dal: " . $_SESSION['giorno_inizio'] . " al: " . $_SESSION['giorno_fine'] . "</li>
                 	<li>&#128181; Costo Totale: <span class=\"bold-text\">" . $tot_costo . "&euro;</span></li>

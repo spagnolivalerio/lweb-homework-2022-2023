@@ -37,7 +37,7 @@
                         data_inizio DATE NOT NULL, 
                         data_fine DATE NOT NULL, 
                         prezzo_tot DECIMAL NOT NULL, 
-                        stato ENUM ('in_corso', 'completato', 'annullato')
+                        stato ENUM ('in_corso', 'completato', 'annullato', 'prenotato')
                         );";
 
     $queries = array($create_utente, $create_auto, $create_noleggio);

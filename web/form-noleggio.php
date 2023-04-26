@@ -50,80 +50,79 @@
 
 
 	<body>
-		<div class="row">
-			<div class="column left-column">		
-				<div class="car-name"><?php echo" " . $row['marca'] . " " . $row['modello'] . " ";?></div> 
-					<img class="car" src="http://localhost/projects/repository-linguaggi/img/<?php echo"".$row['nome_file_img'].""?>"></img>
-			</div>
-			<div class="column">
-				<div class="bar"></div>
-			     <form class="form" method="post" action="../lib/php/check-noleggio.php">
-					<div class="flexbox">
-						<div class="flex-item">
-							<label for="giorno_inizio">Giorno_inizio</label><br /><br />
-							<input type="date" name="giorno_inizio"></input>
-						</div>
-						<div class="flex-item">
-							<label for="giorno_fine">Giorno_fine</label><br /><br />
-							<input type="date" name="giorno_fine"></input>
-						</div>
-					</div>
-
-					<?php 
-
-						//CONTROLLO ERRORI DATE INSERITE
-						if(isset($_SESSION['error_days'])){
-							if($_SESSION['error_days'] === 'start > end'){
-								echo"<div id=\"error-container\"><p>Errore: Giorno di inizio maggiore del giorno di fine</div></p>";
-								unset($_SESSION['error_days']);
-							} elseif($_SESSION['error_days'] === '<today'){
-								echo"<div id=\"error-container\"><p>Errore: Gorno di inzio minore di oggi</div></p>";
-								unset($_SESSION['error_days']);
-							} elseif($_SESSION['error_days'] === 'nulldate'){
-								echo"<div id=\"error-container\"><p>Errore: inserisci le date</div></p>";
-								unset($_SESSION['error_days']);
-							}
-
-						 	echo "<script>
-
-										function go_away(id){
-											var error = document.getElementById(id);
-											error.style.display = \"none\";
-										}
-
-										setTimeout(function() { go_away(\"error-container\"); }, 5000);
-
-							  	</script>";
+		<div class="firstbox">
+		   	<p class="car-name"><?php echo"".$_SESSION['marca']." ".$_SESSION['modello'].""?></p>
+				<div class="secondbox">
+					<img class="car-image" src="../img/<?php echo"".$row['nome_file_img'].""?>" alt="car"></img>
+				</div>
+				<div class="thirdbox">
+				<?php
+				//CONTROLLO ERRORI DATE INSERITE
+					if(isset($_SESSION['error_days'])){
+						if($_SESSION['error_days'] === 'start > end'){
+							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: Giorno di inizio maggiore del giorno di fine</div></p>";
+							unset($_SESSION['error_days']);
+						} elseif($_SESSION['error_days'] === '<today'){
+							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: Gorno di inzio minore di oggi</div></p>";
+							unset($_SESSION['error_days']);
+						} elseif($_SESSION['error_days'] === 'nulldate'){
+							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: inserisci le date</div></p>";
+							unset($_SESSION['error_days']);
 						}
 
-					     //disp = 'no': le date non sono disponibili perchè ci sono altri noleggi prenotati-> il bottone rimanda allo script che rieseguirà le query e verificherà la disponibilità.
-						if(isset($_SESSION['disp']) && $_SESSION['disp'] === 'no'){
-							unset($_SESSION['disp']);
-							echo "<div id=\"date-non-disp\"><p>date non disponibili</p></div>
+							echo "<script>
 
-								<script>
 									function go_away(id){
 										var error = document.getElementById(id);
 										error.style.display = \"none\";
 									}
 
-									setTimeout(function() { go_away(\"date-non-disp\"); }, 5000);
+									setTimeout(function() { go_away(\"error-container\"); }, 5000);
 
-								</script>";
+							  </script>";
+					}
+
+
+					//disp = 'no': le date non sono disponibili perchè ci sono altri noleggi prenotati-> il bottone rimanda allo script che rieseguirà le query e verificherà la disponibilità.
+					if(isset($_SESSION['disp']) && $_SESSION['disp'] === 'no'){
+						unset($_SESSION['disp']);
+
+						echo "<div class=\"error-container\" id=\"date-non-disp\"><p>date non disponibili</p></div>
+
+							<script>
+								function go_away(id){
+									var error = document.getElementById(id);
+									error.style.display = \"none\";
+								}
+
+								setTimeout(function() { go_away(\"date-non-disp\"); }, 5000);
+
+							</script>";
 							
 
-						//CASO IN CUI TORNO INDIETRO DAL CHECKOUT CON LA VARIABILE SETTATA A 'yes' -> qualsiasi data risulterebbe prenotabile, perciò la setto a 'no' e inserisco le date, ripremo il bottone e rieseguo la query.
-						} elseif(isset($_SESSION['disp']) && $_SESSION['disp'] === 'yes'){
-							unset($_SESSION['disp']);
-						}
+					//CASO IN CUI TORNO INDIETRO DAL CHECKOUT CON LA VARIABILE SETTATA A 'yes'-> qualsiasi data risulterebbe prenotabile, perciò la setto a 'no' e inserisco le date, ripremo il bottone e rieseguo la query.
+					} elseif(isset($_SESSION['disp']) && $_SESSION['disp'] === 'yes'){
+						unset($_SESSION['disp']);
+					}
 
-						echo"<div class=\"btn\"><button type=\"submit\">VERIFICA DISPONIBILIT&Agrave;</button></div>
-								<input type=\"hidden\" name=\"id_auto\" value=\"$id_auto\"></input>";
-					?>
+				?>
+
+				<form action="../lib/php/check-noleggio.php" method="post">
+					<label for="giorno_inizio">Giorno inizio noleggio:</label>
+					<input type="date" name="giorno_inizio"></input><br /><br />
+					<label for="giorno_fine">Giorno fine noleggio:</label>
+					<input type="date" name="giorno_fine"></input><br /><br />
+				<?php
+					
+					echo"<div><button class=\"btn\" type=\"submit\">VERIFICA DISPONIBILIT&Agrave;</button></div>
+						<input type=\"hidden\" name=\"id_auto\" value=\"$id_auto\"></input>";
+				?>	
 
 				</form>
 			</div>
 		</div>
+
+					
 	</body>
 
 	<?php
