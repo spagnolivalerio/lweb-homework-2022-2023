@@ -9,6 +9,18 @@
 	$auto = $_POST['id_auto'];
 	$_SESSION['id_auto'] = $auto;
 
+
+	//SALVO giorno_inizio e giorno_fine in delle variabili di sessione pr utilizzarle in checkout_noleggio
+
+	$_SESSION['giorno_inizio'] = $start_day;
+	$_SESSION['giorno_fine'] = $end_day;
+
+
+
+	// CONVERTO LE DATE IN UN FORMATO COMPATIBILE CON PHP
+	$start_date = new DateTime($start_day);
+	$end_date = new DateTime($end_day);
+
 	//CONTROLLO ERRORI INSERIMENTO DATE
 	if($start_day > $end_day){
 		$_SESSION['error_days'] = 'start > end';
@@ -39,13 +51,18 @@
                 	 OR  (n.data_inizio = '$start_day' AND n.data_fine = '$end_day'));";
 
 
-   //CONTROLLO SULLA VARIABILE $_SESSION['disp']: SE NON è SETTATA O è 'no' ALLORA FACCIO LA QUERY PER CERCARE DISPONIBILITà: NEL CASO LA TROVA LA SETTA A 'yes' E VA NEL CHECKOUT NOLEGGIO, SE NO TORNA IN FORM-NOLEGGIO CON LA VARIABILE SETTATA A 'no'. IL FORM FARà I RELATIVI CONTROLLI SULLA VARIABILE PER CAPIRE COSA STAMPARE E COME COMPORTARSI.
+   //CONTROLLO SULLA VARIABILE $_SESSION['disp']: SE NON è SETTATA O è 'no' ALLORA FACCIO LA QUERY PER CERCARE DISPONIBILITà: NEL CASO LA TROVA, LA SETTA A 'yes' E VA NEL CHECKOUT NOLEGGIO, SE NO TORNA IN FORM-NOLEGGIO CON LA VARIABILE SETTATA A 'no'. IL FORM FARà I RELATIVI CONTROLLI SULLA VARIABILE PER CAPIRE COSA STAMPARE E COME COMPORTARSI.
    if(!isset($_SESSION['disp']) || $_SESSION['disp'] !== 'yes'){      
 
    	$res = mysqli_query($conn, $check_disp);
 
    	if(mysqli_num_rows($res) === 0){
    		$_SESSION['disp'] = 'yes';
+		//CALCOLO GIORNI NOLEGGIO
+		$diff = date_diff($start_date, $end_date);
+		$num_days = $diff->days;
+		//SALVO IL NUMERO DI GIORNI IN UNA VARIABILE DI SESSIONE
+		$_SESSION['num_days'] = $num_days;
    		header('Location: ../../web/checkout_noleggio.php');
    		exit(1);
   	 	} else {
