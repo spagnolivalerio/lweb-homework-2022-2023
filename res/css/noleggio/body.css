@@ -10,7 +10,7 @@
   grid-template-columns: 30% 40% 30%;
   height: 250px;
   margin-bottom: 30px;
-  box-shadow: 0px 0px 15px 1px black;
+  box-shadow: 4px 4px 10px 0px black;
 }
 
 .car

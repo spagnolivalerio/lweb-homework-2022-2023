@@ -8,7 +8,7 @@
 
                     <div class=\"column left-column\">
                       <div class=\"car-name\"><span>" . $row['marca'] . " " . $row['modello'] . "</span></div>
-                        <img class=\"car\" src=\"http://localhost/projects/repository-linguaggi/img/" . $row['nome_file_img'] . "\" alt=\"img\"></img>
+                        <img class=\"car\" src=\"http://localhost/projects/repository-linguaggi/img/car-img/" . $row['nome_file_img'] . "\" alt=\"img\"></img>
                     </div>
                     <div class=\"column center-column\">
                       <div class=\"container\">

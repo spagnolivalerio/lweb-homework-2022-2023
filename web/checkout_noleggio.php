@@ -1,6 +1,8 @@
 <?php
 	session_start();
 	$tot_costo = ($_SESSION['num_days'] + 1) * $_SESSION['prezzo_giornaliero'];
+    $_SESSION['prezzo_tot'] = $tot_costo;
+
     if($_SESSION['disp'] !== 'yes'){
         header('Location: noleggio.php');
     }
@@ -24,11 +26,24 @@
         <h1>Resoconto Noleggio</h1>
         <ul>
 
-        <?php echo 
-                	"<li>&#128664; Noleggio <span class=\"bold-text\"> " . $_SESSION['marca'] . " " . $_SESSION['modello'] . "</span></li>
-                	<li>&#128197; Dal: " . $_SESSION['giorno_inizio'] . " al: " . $_SESSION['giorno_fine'] . "</li>
-                	<li>&#128181; Costo Totale: <span class=\"bold-text\">" . $tot_costo . "&euro;</span></li>
-                	<button class=\"noleggio-button\" type=\"submit\">CONFERMA</button>"; 
+        <?php 
+                if(!isset($_SESSION['conferma_noleggio'])){
+                    echo 
+                	       "<li>&#128664; Noleggio <span class=\"bold-text\"> " . $_SESSION['marca'] . " " . $_SESSION['modello'] . "</span></li>
+                	       <li>&#128197; Dal: " . $_SESSION['giorno_inizio'] . " al: " . $_SESSION['giorno_fine'] . "</li>
+                	       <li>&#128181; Costo Totale: <span class=\"bold-text\">" . $tot_costo . "&euro;</span></li>
+                           <form action=\"../lib/php/insert_in_noleggio.php\" method=\"post\">
+                	           <button class=\"noleggio-button\" type=\"submit\">CONFERMA</button>
+                           </form>";
+                } elseif($_SESSION['conferma_noleggio'] === 'true'){
+                    unset($_SESSION['conferma_noleggio']);
+                    echo "<p class=\"conferma\">NOLEGGIO COMPLETATO, PREMI HOME TORNARE INDIETRO</p>
+                          <a class=\"back\" href=\"homepage.php\">&#x2302;</a>";
+                } elseif($_SESSION['conferma_noleggio'] === 'false'){
+                    unset($_SESSION['conferma_noleggio']);
+                    echo "<p class=\"conferma\">NOLEGGIO NON ANDATO A BUON FINE, PREMI HOME PER TORNARE INDIETRO</p>
+                          <a class=\"back\" href=\"homepage.php\">&#x2303;</a>";
+                }
         ?>
 
         </ul>
