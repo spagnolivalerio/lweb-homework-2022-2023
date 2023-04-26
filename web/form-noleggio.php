@@ -29,6 +29,15 @@
 
 	$row = mysqli_fetch_array($res);
 
+	//CATTURO IL COSTO PER GIORNO DELL'AUTO SELEZIONATA (probabilmente devo usettare se torno indietro (no perchè io la catturo ogni volta che seleziono l'auto nuova)) CHE UTILIZZO NEL CHECKOUT
+
+	$_SESSION['prezzo_giornaliero'] = $row['prezzo_giornaliero'];
+
+	$_SESSION['marca'] = $row['marca'];
+	$_SESSION['modello'] = $row['modello'];
+
+
+
 ?>
 
 <?xml version="1.0" encoding="UTF-8" ?>
