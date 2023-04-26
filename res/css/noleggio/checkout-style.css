@@ -5,7 +5,8 @@
 }
 
 
-*{
+*
+{
 	margin:  0;
 	padding: 0;
 }
@@ -15,15 +16,18 @@ html
 	background-color: white;
 }
 
-a{
+a
+{
 	text-decoration: none;
 }
 
 
-.blocco {
+.block
+{
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	width: 600px;
 	transform: translate(-50%, -50%);
 	border: 3px solid #FF6600;
 	font-size: 15px;
@@ -33,7 +37,8 @@ a{
 }
 
   
-h1{
+h1
+{
 	color:#FF6600;
 	margin-top: 0px;
 	margin-bottom: 30px;
@@ -43,11 +48,13 @@ h1{
 }
 
 
-ul{
+ul
+{
 	list-style: none;
 }
 
-li{
+li
+{
 	font-size: 20px;
 	margin-top: 5px;
 	text-align: center;
@@ -55,8 +62,8 @@ li{
 	margin-left: 5px;
 }
 
-  .noleggio-button
-  {
+.noleggio-button
+{
 	display: block;
 	width: 200px;
 	height: 40px;
@@ -65,12 +72,16 @@ li{
 	border: none;
 	color: white;
 	border-radius: 18px;
-	font-size: 15px;
+	font-size: 18px;
 	transition: box-shadow 0.2s ease;
-  }
+}
   
-  .noleggio-button:hover
-  {
+.noleggio-button:hover
+{
 	box-shadow: 0px 0px 10px 0px black;
-  }
-  
+}
+
+.bold-text
+{
+	font-weight: bold;
+}

@@ -32,11 +32,8 @@
 	//CATTURO IL COSTO PER GIORNO DELL'AUTO SELEZIONATA (probabilmente devo usettare se torno indietro (no perchè io la catturo ogni volta che seleziono l'auto nuova)) CHE UTILIZZO NEL CHECKOUT
 
 	$_SESSION['prezzo_giornaliero'] = $row['prezzo_giornaliero'];
-
 	$_SESSION['marca'] = $row['marca'];
 	$_SESSION['modello'] = $row['modello'];
-
-
 
 ?>
 
@@ -74,16 +71,16 @@
 
 					<?php 
 
-						//CONTROLLO ERRORI DATE
+						//CONTROLLO ERRORI DATE INSERITE
 						if(isset($_SESSION['error_days'])){
 							if($_SESSION['error_days'] === 'start > end'){
-								echo"<div id=\"error-container\"><p class=\"errore\">Errore: Giorno di inizio maggiore del giorno di fine</div></p>";
+								echo"<div id=\"error-container\"><p>Errore: Giorno di inizio maggiore del giorno di fine</div></p>";
 								unset($_SESSION['error_days']);
 							} elseif($_SESSION['error_days'] === '<today'){
-								echo"<div id=\"error-container\"><p class=\"errore\">Errore: Gorno di inzio minore di oggi</div></p>";
+								echo"<div id=\"error-container\"><p>Errore: Gorno di inzio minore di oggi</div></p>";
 								unset($_SESSION['error_days']);
 							} elseif($_SESSION['error_days'] === 'nulldate'){
-								echo"<div id=\"error-container\"><p class=\"errore\">Errore: inserisci le date</div></p>";
+								echo"<div id=\"error-container\"><p>Errore: inserisci le date</div></p>";
 								unset($_SESSION['error_days']);
 							}
 
@@ -96,12 +93,13 @@
 
 										setTimeout(function() { go_away(\"error-container\"); }, 5000);
 
-							  </script>";
+							  	</script>";
 						}
+
 					     //disp = 'no': le date non sono disponibili perchè ci sono altri noleggi prenotati-> il bottone rimanda allo script che rieseguirà le query e verificherà la disponibilità.
 						if(isset($_SESSION['disp']) && $_SESSION['disp'] === 'no'){
 							unset($_SESSION['disp']);
-							echo "<div id=\"date-non-disp\"><p class=\"error\">date non disponibili</p></div>
+							echo "<div id=\"date-non-disp\"><p>date non disponibili</p></div>
 
 								<script>
 									function go_away(id){
