@@ -34,6 +34,11 @@
         <ul>
           <li><a href ="dove_siamo.php">DOVE SIAMO</a></li>
           <li><a href ="homepage.php">HOMEPAGE</a></li>
+          <?php
+            if(isset($_SESSION['tipo_utente']) && $_SESSION['tipo_utente'] === 'cliente'){
+              echo "<li><a href=\"i-miei-noleggi.php\">I MIEI NOLEGGI</a></li>";
+            }
+          ?>
           <li><a href ="#contatti">CONTATTI</a></li>
         </ul>
      </div>
@@ -48,7 +53,8 @@
           <?php
             if(isset($_SESSION['tipo_utente'])){
               $nome_utente = $_SESSION['nome_utente'];
-              echo "<li style=\"color: #FF6600;\">$nome_utente</li>";
+              echo "<li style=\"color: #FF6600;\">$nome_utente</li>
+                    <li><a href=\"../lib/php/logout.php\" style=\"color: #FF6600;\">LOGOUT</a></li>";
             } else {
               echo "<a href=\"login.php\" style=\"color: #FF6600;\"><li>ACCEDI</li></a>";
             }
@@ -74,7 +80,7 @@
           print_auto($result);
 
         } else {
-          echo "<span>NON CI SONO MACCHINE DISPONIBILI PER IL NOLEGGIO</span>";
+          echo "<div class=\"non-disp\">NON CI SONO MACCHINE DISPONIBILI PER IL NOLEGGIO</div>";
         }
 
         $conn->close();

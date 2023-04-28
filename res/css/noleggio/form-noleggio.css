@@ -19,9 +19,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
-  border: 10px solid #37555b;
   border-radius: 20px;
+  border: 10px solid #37555b;
 }
 
 .secondbox
@@ -34,6 +33,7 @@
   transform: translateY(-50%);
   box-shadow: -3px -3px 10px 0px black;
   background-color: white;
+  border-radius: 25px;
 }
 
 .car-image
@@ -46,6 +46,7 @@
 
 .thirdbox
 {
+  border-radius: 25px;
   position: absolute;
   width: 400px;
   height: 300px;
@@ -67,7 +68,6 @@
   margin-top: -20px;
   background-color: white;
   padding-inline: 10px;
-
 }
 
 .thirdbox input

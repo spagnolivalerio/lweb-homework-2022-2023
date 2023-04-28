@@ -1,7 +1,7 @@
 @font-face
 {
 	font-family: 'Social';
-	src: url(../../font/Social.otf);
+	src: url('../../font/Social.otf');
 }
 
 .footer

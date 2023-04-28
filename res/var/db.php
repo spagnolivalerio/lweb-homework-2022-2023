@@ -40,6 +40,5 @@
                         );";
 
     $queries = array($create_utente, $create_auto, $create_noleggio);
-
     
 ?>

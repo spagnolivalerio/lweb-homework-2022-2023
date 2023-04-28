@@ -26,9 +26,7 @@
 
     <form class="form" method="post" action="http://localhost/projects/repository-linguaggi/lib/php/login.php">
 
-      <div class="title">
-        <h2>LOGIN</h2>
-      </div>
+      <div class="title">LOGIN</div>
 
       <div class="form-item">
         <label for="username">USERNAME:</label><br />
@@ -40,7 +38,7 @@
       </div><br />
 
       <div class="form-item invia">
-        <input type="submit" name="submit"></input><br />
+        <button type="submit" name="submit">ACCEDI</button><br />
       </div>
       
       <div class="form-item non-hai-un-account">

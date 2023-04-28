@@ -4,6 +4,11 @@
   margin: 0 auto;
 }
 
+html
+{
+  background-color: #EAEAEA;
+}
+
 .row
 {
   display: grid;
@@ -11,6 +16,9 @@
   height: 250px;
   margin-bottom: 30px;
   box-shadow: 4px 4px 10px 0px black;
+  border-radius: 30px;
+  background-color: white;
+  
 }
 
 .car
@@ -117,4 +125,10 @@
 .noleggio-button:hover
 {
   box-shadow: 0px 0px 10px 0px black;
+}
+
+.non-disp
+{
+  width: fit-content;
+  margin: 0 auto;
 }

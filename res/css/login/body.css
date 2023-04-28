@@ -29,8 +29,11 @@
 	background-color: #FF6600;
 	color: white;
 	padding: 10px 0;
+	border: none;
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
+	border-bottom: 1px solid black;
+	font-size: 20px;
 }
 
 .form input
@@ -42,17 +45,20 @@
 	background-color: whitesmoke;
 }
 
-.invia input
+.invia button
 {
 	border: none;
+	width: 200px;
+	height: 40px;
 	background-color: #FF6600;
 	font-size: 20px;
 	text-transform: uppercase;
 	color: white;
 	transition: box-shadow 0.2s ease;
+	border-radius: 20px;
 }
 
-.invia input:hover
+.invia button:hover
 {
 	box-shadow: 0px 0px 10px 0px black;
 }

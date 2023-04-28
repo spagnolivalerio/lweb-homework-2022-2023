@@ -24,13 +24,7 @@
 		exit(1);
 	}
 
-	$query = "SELECT id
-			  FROM utente
-			  WHERE username = '$username';";
-	
-	$res = mysqli_query($conn, $query);
-
-	$_user_row = mysqli_fetch_array($res);
+	$_user_row = mysqli_fetch_array($rows);
 	$IDUSER = $_user_row['id'];
 
 

@@ -10,12 +10,12 @@
   <head>
 
       <title>Registrazione</title>
+      <link rel="stylesheet" href="../res/css/registrazione/body.css" type="text/css">
 
   </head>
 
   <body>
-
-    <form method="post" action="http://localhost/projects/repository-linguaggi/lib/php/registrazione.php">
+    <form method="post" action="http://localhost/projects/repository-linguaggi/lib/php/registrazione.php" class="form">
 
       <?php
         if(isset($_SESSION['fields']) && $_SESSION['fields'] === 'empty'){
@@ -23,38 +23,45 @@
           echo "<p style=\"color: red;\">$missed_field</p>";
         }
       ?>
+      <div class="bar">REGISTRAZIONE</div>
+      <div class="grid">
+        <div class="column">
+          <div class="form-item">
+            <label for="nome">NOME:</label><br />
+            <input type="text" name="nome"></input>
+          </div>
+          <div class="form-item">
+            <label for="cognome">COGNOME:</label><br />
+            <input type="text" name="cognome"></input>
+          </div>
+        </div>
+        <div class="column">
+          <div class="form-item">
+            <label for="username">USERNAME:</label>
+            <br />
+            <input type="text" name="username"></input>
 
-      <div>
-        <label for="nome">nome</label><br />
-        <input type="text" name="nome"></input>
+            <?php
+              if(isset($_SESSION['signup']) && $_SESSION['signup'] === 'invalid'){
+              $error_username = 'username esistente';
+              echo "<p style=\"color: red;\">$error_username</p>";
+              }
+            ?>
+
+          </div>
+          <div class="form-item">
+            <label for="password">PASSWORD:</label><br />
+            <input type="password" name="password"></input>
+          </div><br />
+        </div>
       </div>
-      <div>
-        <label for="cognome">cognome</label><br />
-        <input type="text" name="cognome"></input>
+      <div class="center">
+        <button class="invia" type="submit" name="invia">REGISTRATI</button>
       </div>
-      <div>
-        <label for="username">username</label>
-        <br />
-        <input type="text" name="username"></input>
-
-        <?php
-          if(isset($_SESSION['signup']) && $_SESSION['signup'] === 'invalid'){
-          $error_username = 'username esistente';
-          echo "<p style=\"color: red;\">$error_username</p>";
-          }
-        ?>
-
-      </div>
-      <div>
-        <label for="password">password</label><br />
-        <input type="password" name="password"></input>
-      </div><br />
-
-      <input type="submit" name="invia"></input>
+      <div class="login"><a href="login.php">HAI GIA UN ACCOUNT?</a></div>
 
     </form><br />
 
-    <span><a href="login.php">HAI GIA UN ACCOUNT?</a></span>
         
   </body>
 

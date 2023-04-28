@@ -9,6 +9,7 @@
 {
 	margin:  0;
 	padding: 0;
+	font-family: 'Giorgio';
 }
 
 html
@@ -84,4 +85,35 @@ li
 .bold-text
 {
 	font-weight: bold;
+}
+
+.conferma
+{
+	text-align: center;
+	font-size: 18px;
+}
+
+.conferma .fallito
+{
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.conferma .successo
+{
+	color: green;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.indietro
+{
+	text-align: center;
+	font-size: 50px;
+}
+
+.indietro a
+{
+	color: #FF6600;
 }
