@@ -7,6 +7,7 @@
 
 	if(!isset($_SESSION['tipo_utente'])){
 		header('Location: login.php');
+		exit(1);
 	}
 
 	//serve per poter tornare indietro una volta premuto il tasto invia dal form-noleggio, perchè rieseguendo la pagina form-noleggio.php non ha ricevuto $_POST['id_auto'], quindi uso variabile di sessione;

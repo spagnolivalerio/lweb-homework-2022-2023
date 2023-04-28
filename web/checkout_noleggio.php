@@ -3,8 +3,14 @@
 	$tot_costo = ($_SESSION['num_days'] + 1) * $_SESSION['prezzo_giornaliero'];
     $_SESSION['prezzo_tot'] = $tot_costo;
 
+    if(!isset($_SESSION['tipo_utente'])){
+        header('Location: login.php');
+        exit(1);
+    }
+
     if($_SESSION['disp'] !== 'yes'){
         header('Location: noleggio.php');
+        exit(1);
     }
     
 
