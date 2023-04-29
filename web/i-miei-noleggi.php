@@ -91,7 +91,7 @@
 			 						<td>" . $row['data_inizio'] . "</td>
 			 						<td>" . $row['data_fine'] . "</td>
 			 						<td>" . $row['prezzo_tot'] . " &euro;</td>
-			 					</tr>";
+			 					 </tr>";
 			 			}
 					} else {
 						echo "<p class=\"none-nol\">NON CI SONO NOLEGGI</p>";

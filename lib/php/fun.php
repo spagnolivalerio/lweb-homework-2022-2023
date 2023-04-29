@@ -8,7 +8,7 @@
 
                     <div class=\"column left-column\">
                       <div class=\"car-name\"><span>" . $row['marca'] . " " . $row['modello'] . "</span></div>
-                        <img class=\"car\" src=\"http://localhost/projects/repository-linguaggi/img/car-img/" . $row['nome_file_img'] . "\" alt=\"img\"></img>
+                      <img class=\"car\" src=\"http://localhost/projects/repository-linguaggi/img/car-img/" . $row['nome_file_img'] . "\" alt=\"img\"></img>
                     </div>
                     <div class=\"column center-column\">
                       <div class=\"container\">
@@ -27,11 +27,11 @@
                         </div>
 
                         <ul class=\"dettagli\">
-                          <li><img src=\"http://localhost/projects/repository-linguaggi/img/blink-ball.gif\" alt=\"blink-ball\"></img> Climatizzazione</li>
-                          <li><img src=\"http://localhost/projects/repository-linguaggi/img/blink-ball.gif\" alt=\"blink-ball\"></img> Polizza assicurativa</li>
-                          <li><img src=\"http://localhost/projects/repository-linguaggi/img/blink-ball.gif\" alt=\"blink-ball\"></img> Cancellazione gratuita fino a 72h prima</li>
-                          <li><img src=\"http://localhost/projects/repository-linguaggi/img/blink-ball.gif\" alt=\"blink-ball\"></img> Servizio GPS</li>
-                          <li><img src=\"http://localhost/projects/repository-linguaggi/img/blink-ball.gif\" alt=\"blink-ball\"></img> Chilometraggio illimitato</li>
+                          <li><img class =\"check\" src=\"http://localhost/projects/repository-linguaggi/img/check.png\" alt=\"check\"></img> Climatizzazione</li>
+                          <li><img class =\"check\" src=\"http://localhost/projects/repository-linguaggi/img/check.png\" alt=\"check\"></img> Polizza assicurativa</li>
+                          <li><img class =\"check\" src=\"http://localhost/projects/repository-linguaggi/img/check.png\" alt=\"check\"></img> Cancellazione gratuita fino a 72h prima</li>
+                          <li><img class =\"check\" src=\"http://localhost/projects/repository-linguaggi/img/check.png\" alt=\"check\"></img> Servizio GPS</li>
+                          <li><img class =\"check\" src=\"http://localhost/projects/repository-linguaggi/img/check.png\" alt=\"check\"></img> Chilometraggio illimitato</li>
                         </ul>
 
                         <p class=\"recensioni\">Guarda le recensioni</p>

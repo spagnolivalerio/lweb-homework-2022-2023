@@ -132,3 +132,9 @@ html
   width: fit-content;
   margin: 0 auto;
 }
+
+.check
+{
+  width: 12px;
+  height: auto;
+}

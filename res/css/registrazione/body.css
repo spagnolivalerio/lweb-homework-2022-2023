@@ -9,6 +9,11 @@
 	font-family: 'Giorgio';
 }
 
+html
+{
+	background-color: #EAEAEA;
+}
+
 .form
 {
 	position: absolute;
@@ -19,7 +24,7 @@
 	border-radius: 20px;
 	width: 500px;
 	padding: 100px;
-	background-color: whitesmoke;
+	background-color: white;
 }
 
 .grid
@@ -37,18 +42,13 @@
 {
 	border: none;
 	border-bottom: 1px solid black;
-	background-color: whitesmoke;
 	padding: 10px;
-}
-
-.form input, label
-{
-	margin-inline: 15px;
 }
 
 .form-item
 {
 	margin-bottom: 30px;
+	margin-inline: 15px;
 }
 
 .center
@@ -62,7 +62,7 @@
 .invia
 {
 	width: 180px;
-	border: none !important;
+	border: none;
 	color: white;
 	background-color: #FF6600;
 	text-transform: uppercase;
@@ -118,4 +118,12 @@
 	border-top-right-radius: 20px;
 	background-color: #FF6600;
 	color: white;
+}
+
+#missed-field
+{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 60px;
 }

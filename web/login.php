@@ -20,7 +20,8 @@
        <?php
           if(isset($_SESSION['signup']) && $_SESSION['signup'] === 'valid'){
           $valid_signup = 'Registrazione effettuata con successo! Fai il login con le tue credenziali.';
-          echo "<p class=\"success-signup\">$valid_signup</p>";
+            echo "<p class=\"success-signup\">$valid_signup</p>";
+            unset($_SESSION['signup']);
           }
         ?>
 

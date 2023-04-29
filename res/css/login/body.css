@@ -11,6 +11,11 @@
   padding: 0;
 }
 
+html
+{
+	background-color: #EAEAEA;
+}
+
 
 
 .form
@@ -19,7 +24,7 @@
 	margin: 150px auto;
 	border: 1px solid black;
 	border-radius: 20px;
-	background-color: whitesmoke;
+	background-color: white;
 }
 
 .title
@@ -42,7 +47,6 @@
 	padding: 8px 0;
 	border-bottom: 1px solid black;
 	width: 200px;
-	background-color: whitesmoke;
 }
 
 .invia button
