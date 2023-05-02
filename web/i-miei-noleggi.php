@@ -54,40 +54,38 @@
       	<div id="select-menu"><a href="#hidden-menu">&#x2630;</a></div>
       	<div><span id="back-target"></span></div>
       	<div id="hidden-menu">
-        	<ul>
-          	<li>SERVIZI FINANZIARI</li>
-          	<li>USATO GARANTITO</li>
-          	<li>PRENOTA UN NOLEGGIO</li>
-
-          	<?php
-            	if(isset($_SESSION['tipo_utente'])){
-              	$nome_utente = $_SESSION['nome_utente'];
-              	echo "<li style=\"color: #FF6600;\">$nome_utente</li>
-                     <li><a href=\"../lib/php/logout.php\" style=\"color: #FF6600;\">LOGOUT</a></li>";
-            	} else {
-              	echo "<a href=\"login.php\" style=\"color: #FF6600;\"><li>ACCEDI</li></a>";
-            	}
-          	?>
-          
-          	<li>IMPOSTAZIONI</li>
-          	<li>NEWSLETTER</li>
-          	<li>FAQ</li>
-          	<form method="post" action="../lib/php/dark-mode.php">
-             <li>
-              <input type="hidden" name="page" value="i-miei-noleggi">
-              <input type="submit" name="dark-mode" 
+      	 <ul>
+        	<li>SERVIZI FINANZIARI</li>
+          <li>USATO GARANTITO</li>
+          <li>PRENOTA UN NOLEGGIO</li>
+          <li>IMPOSTAZIONI</li>
+          <li>NEWSLETTER</li>
+          <li>FAQ</li>
+            <?php
+            if(isset($_SESSION['tipo_utente'])){
+              $nome_utente = $_SESSION['nome_utente'];
+              echo "<li style=\"color: #FF6600;\">$nome_utente</li>
+                    <li><a href=\"../lib/php/logout.php\">LOGOUT</a></li>";
+            } else {
+              echo "<a href=\"login.php\" style=\"color: #FF6600;\"><li>ACCEDI</li></a>";
+            }
+            ?>
+           <form method="post" action="../lib/php/dark-mode.php">
+            <li>
+              <input type="hidden" name="page" value="homepage">
+              <input class="dkmd" type="submit" name="dark-mode"
               <?php
 
                 if(!isset($_COOKIE['dark-mode']) || $_COOKIE['dark-mode'] === 'false'){
                   echo "value=\"dark\"";
                 } elseif (isset($_COOKIE['dark-mode']) && $_COOKIE['dark-mode'] === 'true'){
                   echo "value=\"light\"";
-                } 
+                }
 
               ?> >
             
-             </input></li>
-          	</form>
+            </input></li>
+           </form>
         	</ul>
         	<div id="back"><a href="#back-target">&#x2715;</a></div>
       	</div>

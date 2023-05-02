@@ -19,6 +19,11 @@
   scroll-behavior: smooth;
 }
 
+html
+{
+  background-color: #171B23;
+}
+
 a
 {
   text-decoration: none;
@@ -84,7 +89,7 @@ ul
 
 .mainmenu li a
 {
-  color: black !important;
+  color: black;
 }
 
 #title img
@@ -107,6 +112,18 @@ ul
   width: 30px;
   height: 30px;
   background-color: whitesmoke;
+  width: 40px;
+  height: 40px;
+  border-radius: 80px;
+}
+
+#select-menu a
+{
+  color: #171B23;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 /*la proprietà translate non sposta fisicamente l'elelemento, ma lo fa solo apparire spostato. Di conseguenza, per usare la proprietà sticky

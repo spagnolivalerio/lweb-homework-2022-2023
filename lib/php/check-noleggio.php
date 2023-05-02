@@ -35,7 +35,7 @@
 	}
 
 
-	$today = new DateTime();
+	$today = date('Y-m-d');
 	if($start_day < $today){
 		$_SESSION['error_days'] = '<today';
 		header('Location: ../../web/form-noleggio.php');

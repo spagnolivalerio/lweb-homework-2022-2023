@@ -62,23 +62,24 @@
           <li>USATO GARANTITO</li>
           <li>PRENOTA UN NOLEGGIO</li>
 
+          <li>IMPOSTAZIONI</li>
+          <li>NEWSLETTER</li>
+          <li>FAQ</li>
+
           <?php
             if(isset($_SESSION['tipo_utente'])){
               $nome_utente = $_SESSION['nome_utente'];
               echo "<li style=\"color: #FF6600;\">$nome_utente</li>
-                    <li><a href=\"../lib/php/logout.php\" style=\"color: #FF6600;\">LOGOUT</a></li>";
+                    <li><a href=\"../lib/php/logout.php\">LOGOUT</a></li>";
             } else {
               echo "<a href=\"login.php\" style=\"color: #FF6600;\"><li>ACCEDI</li></a>";
             }
           ?>
 
-          <li>IMPOSTAZIONI</li>
-          <li>NEWSLETTER</li>
-          <li>FAQ</li>
           <form method="post" action="../lib/php/dark-mode.php">
              <li>
               <input type="hidden" name="page" value="noleggio">
-              <input type="submit" name="dark-mode" 
+              <input class="dkmd" type="submit" name="dark-mode" 
               <?php
 
                 if(!isset($_COOKIE['dark-mode']) || $_COOKIE['dark-mode'] === 'false'){

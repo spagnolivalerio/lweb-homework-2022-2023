@@ -20,8 +20,12 @@
 
 .flexbox-container div h3
 {
-    color: #185674;
-    
+    color: #185674; 
+}
+
+.img
+{
+    margin-bottom: 30px;
 }
 
 .map-container

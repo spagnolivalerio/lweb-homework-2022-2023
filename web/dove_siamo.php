@@ -52,25 +52,23 @@
         <ul>
           <li>SERVIZI FINANZIARI</li>
           <li>USATO GARANTITO</li>
-          <li>PRENOTA UN NOLEGGIO</li>
-
+          <li>PRENOTA UN NOLEGGIO</li> 
+          <li>IMPOSTAZIONI</li>
+          <li>NEWSLETTER</li>
+          <li>FAQ</li>
           <?php
             if(isset($_SESSION['tipo_utente'])){
               $nome_utente = $_SESSION['nome_utente'];
               echo "<li style=\"color: #FF6600;\">$nome_utente</li>
-                    <li><a href=\"../lib/php/logout.php\" style=\"color: #FF6600;\">LOGOUT</a></li>";
+                    <li><a href=\"../lib/php/logout.php\">LOGOUT</a></li>";
             } else {
               echo "<a href=\"login.php\" style=\"color: #FF6600;\"><li>ACCEDI</li></a>";
             }
           ?>
-          
-          <li>IMPOSTAZIONI</li>
-          <li>NEWSLETTER</li>
-          <li>FAQ</li>
           <form method="post" action="../lib/php/dark-mode.php">
             <li>
               <input type="hidden" name="page" value="dove_siamo">
-              <input type="submit" name="dark-mode"
+              <input class="dkmd" type="submit" name="dark-mode"
               <?php
 
                 if(!isset($_COOKIE['dark-mode']) || $_COOKIE['dark-mode'] === 'false'){
@@ -91,7 +89,7 @@
 
      <div class="flexbox-container">
         <div>
-            <img src="../img/orari.jpg" alt=" "></img><br />
+            <img class="img" src="../img/orari.jpg" alt=" "></img><br />
             <h3>ORARI</h3><br />
             <h5>Luned&iacute; &#x2014; Sabato</h5><br />
             <p>11&#58;00 &#x2014; 15&#58;00</p><br />
@@ -100,13 +98,13 @@
             <p>11&#58;00 &#x2014; 15&#58;00</p>
         </div>
         <div>
-            <img src="../img/icona_indirizzo.jpg" alt=" "></img><br />
+            <img class="img" src="../img/icona_indirizzo.jpg" alt=" "></img><br />
             <h3>INDIRIZZO</h3><br />
             <p>Via Andrea Doria 5</p><br />
             <p>04100 Latina</p><br />
         </div>
         <div>
-            <img src="../img/icona_info.jpg" alt=" "></img><br />
+            <img class="img" src="../img/icona_info.jpg" alt=" "></img><br />
             <h3>COME ARRIVARE</h3><br />
             <p>Autobus Cotral diretto a</p><br />
             <p>Sabaudia e scendi alla</p><br />
