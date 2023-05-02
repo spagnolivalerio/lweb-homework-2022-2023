@@ -23,12 +23,12 @@
 
       try{
         if(mysqli_query($conn, $query)){
-          $_SESSION['signup'] = 'valid';
+          $_SESSION['signup'] = true;
           header('Location: ../../web/login.php');
           exit(1);
         }
       } catch (Exception $e){
-          $_SESSION['signup'] = 'invalid';
+          $_SESSION['signup'] = false;
           header('Location: ../../web/registrazione.php');
           exit(1);
       }
