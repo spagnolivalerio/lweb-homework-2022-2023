@@ -43,14 +43,12 @@
 	}
 	//FINE_CONTROLLO
 
-	//QUERY PER CERCARE NOLEGGI CON L'AUTO SELEZIONATA CHE SI SOVRAPPONGONO
 	$check_disp =	"SELECT *
                 	 FROM noleggio n
                 	 WHERE n.id_auto = '$auto'
-                	 AND((n.data_inizio <= '$start_day' AND '$start_day' <= n.data_fine)
-                	 OR  ('$end_day' >= n.data_inizio AND '$end_day' <= n.data_fine)
+                	 AND((n.data_inizio < '$start_day' AND '$start_day' < n.data_fine)
+                	 OR  ('$end_day' > n.data_inizio AND '$end_day' < n.data_fine)
                 	 OR  (n.data_inizio = '$start_day' AND n.data_fine = '$end_day'));";
-
 
    //CONTROLLO SULLA VARIABILE $_SESSION['disp']: SE NON è SETTATA O è 'false' ALLORA FACCIO LA QUERY PER CERCARE DISPONIBILITà: NEL CASO LA TROVA, LA SETTA A 'true' E VA NEL CHECKOUT NOLEGGIO, SE NO TORNA IN FORM-NOLEGGIO CON LA VARIABILE SETTATA A 'false'. IL FORM FARà I RELATIVI CONTROLLI SULLA VARIABILE PER CAPIRE COSA STAMPARE E COME COMPORTARSI.
    if(!isset($_SESSION['disp']) || $_SESSION['disp'] === false){      

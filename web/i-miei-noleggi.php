@@ -20,9 +20,21 @@
 
 	<head>
 		<title>Noleggio form</title>
-		<link rel="stylesheet" href="../res/css/noleggio/i-miei-noleggi.css" type="text/css" />
-		<link rel="stylesheet" href="../res/css/global/header.css" type="text/css" />
-		<link rel="stylesheet" href="../res/css/global/footer.css" type="text/css" />
+		<?php 
+
+        if(!isset($_COOKIE['dark-mode']) || $_COOKIE['dark-mode'] === 'false'){
+          echo"
+              <link rel=\"stylesheet\" href=\"../res/css/global/header.css\" type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/noleggio/i-miei-noleggi.css\"   type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/global/footer.css\" type=\"text/css\" />";
+        } elseif(isset($_COOKIE['dark-mode']) && $_COOKIE['dark-mode'] === 'true'){
+          echo"
+              <link rel=\"stylesheet\" href=\"../res/css/global/dark-theme/dark-header.css\" type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/noleggio/dark-theme/dark-i-miei-noleggi.css\"   type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/global/footer.css\" type=\"text/css\" />";
+        }
+
+      ?>
 	</head>
 
 	<body>
@@ -60,6 +72,22 @@
           	<li>IMPOSTAZIONI</li>
           	<li>NEWSLETTER</li>
           	<li>FAQ</li>
+          	<form method="post" action="../lib/php/dark-mode.php">
+             <li>
+              <input type="hidden" name="page" value="i-miei-noleggi">
+              <input type="submit" name="dark-mode" 
+              <?php
+
+                if(!isset($_COOKIE['dark-mode']) || $_COOKIE['dark-mode'] === 'false'){
+                  echo "value=\"dark\"";
+                } elseif (isset($_COOKIE['dark-mode']) && $_COOKIE['dark-mode'] === 'true'){
+                  echo "value=\"light\"";
+                } 
+
+              ?> >
+            
+             </input></li>
+          	</form>
         	</ul>
         	<div id="back"><a href="#back-target">&#x2715;</a></div>
       	</div>

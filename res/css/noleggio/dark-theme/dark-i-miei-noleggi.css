@@ -1,0 +1,30 @@
+table, tr, th, td
+{
+	border: 1px solid black;
+	text-align: center;
+}
+
+td, th
+{
+	padding-inline: 10px;
+}
+
+.table
+{
+	width: fit-content;
+	display: block;
+	margin: 100px auto;
+}
+
+h2
+{
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.none-nol
+{
+	width: fit-content;
+	margin: 100px auto;
+	font-size: 30px;
+}

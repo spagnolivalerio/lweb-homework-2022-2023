@@ -1,6 +1,6 @@
 <?php
+
   session_start();
-  require('../res/var/sql_noleggio.php');
   require('../res/var/db.php');
   require('../lib/php/fun.php');
 
@@ -19,9 +19,21 @@
   <head>
 
       <title>S&amp;S noleggio</title>
-      <link rel="stylesheet" href="../res/css/global/header.css" type="text/css" />
-      <link rel="stylesheet" href="../res/css/noleggio/body.css"   type="text/css" />
-      <link rel="stylesheet" href="../res/css/global/footer.css" type="text/css" />
+      <?php 
+
+        if(!isset($_COOKIE['dark-mode']) || $_COOKIE['dark-mode'] === 'false'){
+          echo"
+              <link rel=\"stylesheet\" href=\"../res/css/global/header.css\" type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/noleggio/body.css\"   type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/global/footer.css\" type=\"text/css\" />";
+        } elseif(isset($_COOKIE['dark-mode']) && $_COOKIE['dark-mode'] === 'true'){
+          echo"
+              <link rel=\"stylesheet\" href=\"../res/css/global/dark-theme/dark-header.css\" type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/noleggio/dark-theme/dark-body.css\"   type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/global/footer.css\" type=\"text/css\" />";
+        }
+
+      ?>
 
   </head>
 
@@ -63,6 +75,22 @@
           <li>IMPOSTAZIONI</li>
           <li>NEWSLETTER</li>
           <li>FAQ</li>
+          <form method="post" action="../lib/php/dark-mode.php">
+             <li>
+              <input type="hidden" name="page" value="noleggio">
+              <input type="submit" name="dark-mode" 
+              <?php
+
+                if(!isset($_COOKIE['dark-mode']) || $_COOKIE['dark-mode'] === 'false'){
+                  echo "value=\"dark\"";
+                } elseif (isset($_COOKIE['dark-mode']) && $_COOKIE['dark-mode'] === 'true'){
+                  echo "value=\"light\"";
+                } 
+
+              ?> >
+            
+             </input></li>
+            </form>
         </ul>
         <div id="back"><a href="#back-target">&#x2715;</a></div>
      </div>
@@ -72,6 +100,9 @@
       <div class="box">
 
        <?php
+
+        $auto_noleggio = "SELECT *
+                         FROM auto;";
 
         $result = mysqli_query($conn, $auto_noleggio);
 

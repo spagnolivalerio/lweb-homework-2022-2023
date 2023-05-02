@@ -1,5 +1,7 @@
 <?php
+  require('../res/var/db.php');
 
+  //usata in web/noleggio.php
 	function print_auto($res){
 
 		foreach($res as $row){

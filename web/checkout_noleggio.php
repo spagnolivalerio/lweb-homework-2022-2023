@@ -30,7 +30,15 @@
 
 <head>
     <title>Checkout noleggio</title>
-    <link rel="stylesheet" href="../res/css/noleggio/checkout-style.css" type="text/css" />
+    <?php
+        if(!isset($_COOKIE['dark-mode']) || $_COOKIE['dark-mode'] === 'false'){
+            echo"
+              <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/noleggio/checkout-style.css\" type=\"text/css\" />";
+            } elseif(isset($_COOKIE['dark-mode']) && $_COOKIE['dark-mode'] === 'true'){
+            echo"
+              <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/noleggio/dark-theme/dark-checkout-style.css\" type=\"text/css\" />";
+            }
+    ?>
 </head>
 
 

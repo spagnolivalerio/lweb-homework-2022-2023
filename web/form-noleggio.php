@@ -44,7 +44,15 @@
 
 	<head>
 		<title>Noleggio form</title>
-		<link rel="stylesheet" href="../res/css/noleggio/form-noleggio.css" type="text/css" />
+		<?php
+		if(!isset($_COOKIE['dark-mode']) || $_COOKIE['dark-mode'] === 'false'){
+          echo"
+              <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/noleggio/form-noleggio.css\" type=\"text/css\" />";
+        	} elseif(isset($_COOKIE['dark-mode']) && $_COOKIE['dark-mode'] === 'true'){
+          echo"
+              <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/noleggio/dark-theme/dark-form-noleggio.css\" type=\"text/css\" />";
+        	}
+        	?>
 	</head>
 
 

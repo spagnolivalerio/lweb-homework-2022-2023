@@ -35,8 +35,7 @@
 
 
 	if(mysqli_num_rows($rows) > 0){
-		session_destroy();
-		session_start();
+		session_unset();
 		$_SESSION['id_utente'] = "$IDUSER";
 		$_SESSION['tipo_utente'] = 'cliente';
 		$_SESSION['nome_utente'] = "$username";

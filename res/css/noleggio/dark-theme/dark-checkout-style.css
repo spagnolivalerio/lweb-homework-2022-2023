@@ -1,0 +1,119 @@
+@font-face
+{
+  font-family: 'Giorgio';
+  src: url('../../../font/Giorgio.ttf');
+}
+
+
+*
+{
+	margin:  0;
+	padding: 0;
+	font-family: 'Giorgio';
+}
+
+html
+{
+	background-color: white;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+
+.block
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	transform: translate(-50%, -50%);
+	border: 3px solid #FF6600;
+	font-size: 15px;
+	background-color: white;
+	padding: 40px;	
+	border-radius: 20px;
+}
+
+  
+h1
+{
+	color:#FF6600;
+	margin-top: 0px;
+	margin-bottom: 30px;
+	font-family: 'Giorgio';
+	text-align: center;
+	border-bottom: 1px  solid black;
+}
+
+
+ul
+{
+	list-style: none;
+}
+
+li
+{
+	font-size: 20px;
+	margin-top: 5px;
+	text-align: center;
+	font-family: 'Giorgio';
+	margin-left: 5px;
+}
+
+.noleggio-button
+{
+	display: block;
+	width: 200px;
+	height: 40px;
+	margin: 50px auto;
+	background-color: #FF6600;
+	border: none;
+	color: white;
+	border-radius: 18px;
+	font-size: 18px;
+	transition: box-shadow 0.2s ease;
+}
+  
+.noleggio-button:hover
+{
+	box-shadow: 0px 0px 10px 0px black;
+}
+
+.bold-text
+{
+	font-weight: bold;
+}
+
+.conferma
+{
+	text-align: center;
+	font-size: 18px;
+}
+
+.conferma .fallito
+{
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.conferma .successo
+{
+	color: green;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.indietro
+{
+	text-align: center;
+	font-size: 50px;
+}
+
+.indietro a
+{
+	color: #FF6600;
+}

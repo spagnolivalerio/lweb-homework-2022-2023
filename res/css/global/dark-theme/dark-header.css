@@ -1,13 +1,13 @@
 @font-face
 {
   font-family: 'Abg';
-  src: url('../../font/Abg.otf');
+  src: url('../../../font/Abg.otf');
 }
 
 @font-face
 {
   font-family: 'Giorgio';
-  src: url('../../font/Giorgio.ttf');
+  src: url('../../../font/Giorgio.ttf');
 }
 
 *
@@ -32,10 +32,10 @@ ul
 
 .dkmd
 {
-  color: white;
+  color: #171B23;
   position: absolute;
   border: none;
-  background-color: #171B23;
+  background-color: white;
   border-radius: 100px;
   width: 50px;
   height: 50px;
@@ -48,12 +48,12 @@ ul
 
 .dkmd:hover
 {
-  box-shadow: 0px 0px 15px 0px #171B23;
+  box-shadow: 0px 0px 15px 0px white;
 }
 
 #header
 {
-  background-image: url(../../../img/banner.jpg);
+  background-image: url('../../../../img/banner.jpg');
   background-position: center; /*posiziona al centro dello spazio disponibile rispetto alla posizione inziale. Lo spazio
                                disponibile è dato dallo spazio impiegato dagli elementi dell'header*/
   width: 100%; /*le percentuali sono le stesse di quando zoommi*/
@@ -66,10 +66,12 @@ ul
 {
   text-align: center;
   position: sticky;
-  background-color: /*#035455 #024041 #022e2f #02323c #02272f*/#37555b;
+  background-color: /*#035455 #024041 #022e2f #02323c #02272f*/whitesmoke;
   /*background: rgb(207,183,26);*/
   /*background: linear-gradient(90deg, rgba(207,183,26,1) 0%, rgba(166,91,0,1) 100%);*/
   top: 0;
+  border-bottom: 2px solid #171B23;
+  border-top: 2px solid #171B23;
   z-index: 9;
 }
 
@@ -78,6 +80,11 @@ ul
   display: inline-block;
   padding-inline: 14px;
   padding-block: 14px; 
+}
+
+.mainmenu li a
+{
+  color: black !important;
 }
 
 #title img
@@ -99,6 +106,7 @@ ul
   padding-inline: 5px;
   width: 30px;
   height: 30px;
+  background-color: whitesmoke;
 }
 
 /*la proprietà translate non sposta fisicamente l'elelemento, ma lo fa solo apparire spostato. Di conseguenza, per usare la proprietà sticky
@@ -106,18 +114,18 @@ bisogna dare un valore almeno uguale ed opposto per apparare questa distanza. Il
 l'operazione di translate.*/
 
 .mainmenu li:hover > a{
-  color: black;
+  color: white;
 }
 
 .mainmenu li:hover{
-  background-color: white;
+  background-color: #171B23;
   opacity: 0.6;
 }
 
 #hidden-menu
 {
-  background-color: white;
-  color: black;
+  background-color: #171B23;
+  color: white;
   position: fixed;
   z-index: 10;
   top: 0;
@@ -129,11 +137,6 @@ l'operazione di translate.*/
   transition: opacity 0.5s ease-in-out;
   border-right: 1px solid black;
   box-shadow: 1px 0px 9px black;
-}
-
-#hidden-menu a
-{
-  color: black;
 }
 
 #back
@@ -151,7 +154,7 @@ l'operazione di translate.*/
   width: 20px;
   height: 20px;
   float: right;
-  color: #02272f;
+  color: white;
   margin-right: 6px;
 }
 
