@@ -13,7 +13,7 @@
         exit(1);
     }
 
-    if($_SESSION['disp'] === false){
+    if($_SESSION['disp'] === 'false'){
         header('Location: noleggio.php');
         exit(1);
     }

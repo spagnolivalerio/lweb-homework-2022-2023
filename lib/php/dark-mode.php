@@ -1,6 +1,5 @@
 <?php
 
-
 	if(isset($_POST['dark-mode']) && $_POST['dark-mode'] === 'light' ){
 		setcookie('dark-mode', 'false', time()+3600*24*30, '/');
 	} elseif(isset($_POST['dark-mode']) && $_POST['dark-mode'] === 'dark'){
@@ -12,19 +11,19 @@
 		switch($_POST['page']){
 
 			case 'homepage':
-			header('Location: ../../web/homepage.php');
+			header('Location: ../../web/homepage.php#hidden-menu');
 			break;
 
 			case 'dove_siamo':
-			header('Location: ../../web/dove_siamo.php');
+			header('Location: ../../web/dove_siamo.php#hidden-menu');
 			break;
 
 			case 'noleggio':
-			header('Location: ../../web/noleggio.php');
+			header('Location: ../../web/noleggio.php#hidden-menu');
 			break;
 
 			case 'i-miei-noleggi':
-			header('Location: ../../web/i-miei-noleggi.php');
+			header('Location: ../../web/i-miei-noleggi.php#hidden-menu');
 			break;
 		}	
 

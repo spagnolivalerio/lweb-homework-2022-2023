@@ -58,7 +58,7 @@ ul
 
 #header
 {
-  background-image: url('../../../../img/banner.jpg');
+  background-image: url('../../../../img/night.jpg');
   background-position: center; /*posiziona al centro dello spazio disponibile rispetto alla posizione inziale. Lo spazio
                                disponibile è dato dallo spazio impiegato dagli elementi dell'header*/
   width: 100%; /*le percentuali sono le stesse di quando zoommi*/
@@ -76,7 +76,6 @@ ul
   /*background: linear-gradient(90deg, rgba(207,183,26,1) 0%, rgba(166,91,0,1) 100%);*/
   top: 0;
   border-bottom: 2px solid #171B23;
-  border-top: 2px solid #171B23;
   z-index: 9;
 }
 
@@ -109,8 +108,6 @@ ul
   z-index: 9;
   font-size: 24px;
   padding-inline: 5px;
-  width: 30px;
-  height: 30px;
   background-color: whitesmoke;
   width: 40px;
   height: 40px;

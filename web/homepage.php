@@ -22,7 +22,7 @@
           echo"
               <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/global/dark-theme/dark-header.css\" type=\"text/css\" />
               <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/homepage/dark-theme/dark-body.css\"   type=\"text/css\" />
-              <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/global/footer.css\" type=\"text/css\" />";
+              <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/global/dark-theme/dark-footer.css\" type=\"text/css\" />";
         }
 
       ?>

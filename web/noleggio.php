@@ -30,7 +30,7 @@
           echo"
               <link rel=\"stylesheet\" href=\"../res/css/global/dark-theme/dark-header.css\" type=\"text/css\" />
               <link rel=\"stylesheet\" href=\"../res/css/noleggio/dark-theme/dark-body.css\"   type=\"text/css\" />
-              <link rel=\"stylesheet\" href=\"../res/css/global/footer.css\" type=\"text/css\" />";
+              <link rel=\"stylesheet\" href=\"../res/css/global/dark-theme/dark-footer.css\" type=\"text/css\" />";
         }
 
       ?>

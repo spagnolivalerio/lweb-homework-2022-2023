@@ -12,7 +12,7 @@
 
 ?>
 
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -31,7 +31,7 @@
           echo"
               <link rel=\"stylesheet\" href=\"../res/css/global/dark-theme/dark-header.css\" type=\"text/css\" />
               <link rel=\"stylesheet\" href=\"../res/css/noleggio/dark-theme/dark-i-miei-noleggi.css\"   type=\"text/css\" />
-              <link rel=\"stylesheet\" href=\"../res/css/global/footer.css\" type=\"text/css\" />";
+              <link rel=\"stylesheet\" href=\"../res/css/global/dark-theme/dark-footer.css\" type=\"text/css\" />";
         }
 
       ?>
@@ -72,7 +72,7 @@
             ?>
            <form method="post" action="../lib/php/dark-mode.php">
             <li>
-              <input type="hidden" name="page" value="homepage">
+              <input type="hidden" name="page" value="i-miei-noleggi">
               <input class="dkmd" type="submit" name="dark-mode"
               <?php
 
