@@ -13,7 +13,7 @@
 
 	try{	
 		mysqli_query($conn, $insert);
-		$_SESSION['conferma_noleggio'] = 'true'; 
+		$_SESSION['conferma_noleggio'] = true; 
 		header('Location: ../../web/checkout_noleggio.php');
 		unset($_SESSION['id_auto']);
 		unset($_SESSION['giorno_fine']);
@@ -21,7 +21,7 @@
 		unset($_SESSION['prezzo_tot']);
 		exit(1);
 	} catch(Exception $e) {
-		$_SESSION['conferma_noleggio'] = 'false';
+		$_SESSION['conferma_noleggio'] = false;
 		unset($_SESSION['id_auto']);
 		unset($_SESSION['giorno_fine']);
 		unset($_SESSION['giorno_inizio']);

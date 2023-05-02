@@ -33,13 +33,9 @@
     			<div class ="mainmenu">
         		<ul>
          		 	<li><a href ="dove_siamo.php">DOVE SIAMO</a></li>
-          		<li><a href ="noleggio.php">NOLEGGIO</a></li>
-          	<?php
-            	if(isset($_SESSION['tipo_utente']) && $_SESSION['tipo_utente'] === 'cliente'){
-             		echo "<li><a href=\"i-miei-noleggi.php\">I MIEI NOLEGGI</a></li>";
-            	}
-         		?>
-         			 <li><a href ="#contatti">CONTATTI</a></li>
+          			<li><a href ="noleggio.php">NOLEGGIO</a></li>
+          			<li><a href ="homepage.php">HOMEPAGE</a></li>
+         			<li><a href ="#contatti">CONTATTI</a></li>
         		</ul>
   		</div>
       

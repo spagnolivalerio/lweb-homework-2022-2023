@@ -8,7 +8,12 @@
         exit(1);
     }
 
-    if($_SESSION['disp'] !== 'yes'){
+    if(!isset($_SESSION['disp'])){
+        header('Location: noleggio.php');
+        exit(1);
+    }
+
+    if($_SESSION['disp'] === false){
         header('Location: noleggio.php');
         exit(1);
     }
@@ -43,11 +48,11 @@
                            <form action=\"../lib/php/insert_in_noleggio.php\" method=\"post\">
                 	           <button class=\"noleggio-button\" type=\"submit\">CONFERMA</button>
                            </form>";
-                } elseif($_SESSION['conferma_noleggio'] === 'true'){
+                } elseif($_SESSION['conferma_noleggio'] === true){
                     unset($_SESSION['conferma_noleggio']);
                     echo "<p class=\"conferma\">NOLEGGIO <span class=\"successo\">COMPLETATO</span>, PREMI HOME TORNARE INDIETRO</p>
                           <div class=\"indietro\"><a href=\"homepage.php\">&#x2302;</a></div>";
-                } elseif($_SESSION['conferma_noleggio'] === 'false'){
+                } elseif($_SESSION['conferma_noleggio'] === false){
                     unset($_SESSION['conferma_noleggio']);
                     echo "<p class=\"conferma\">NOLEGGIO <span class=\"fallito\">NON</span> ANDATO A BUON FINE, PREMI HOME PER TORNARE INDIETRO</p>
                           <div class=\"indietro\"><a href=\"homepage.php\">&#x2302;</a></div>";

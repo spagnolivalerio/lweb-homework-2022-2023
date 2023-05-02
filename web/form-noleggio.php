@@ -58,14 +58,14 @@
 				<?php
 				//CONTROLLO ERRORI DATE INSERITE
 					if(isset($_SESSION['error_days'])){
-						if($_SESSION['error_days'] === 'start > end'){
-							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: Giorno di inizio maggiore del giorno di fine</div></p>";
-							unset($_SESSION['error_days']);
-						} elseif($_SESSION['error_days'] === '<today'){
-							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: Gorno di inzio minore di oggi</div></p>";
+						if($_SESSION['error_days'] === '<today'){
+							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: Giorno di inizio minore di oggi</div></p>";
 							unset($_SESSION['error_days']);
 						} elseif($_SESSION['error_days'] === 'nulldate'){
 							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: inserisci le date</div></p>";
+							unset($_SESSION['error_days']);
+						} elseif($_SESSION['error_days'] === 'start > end'){
+							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: inconsistenza nelle date inserite</div></p>";
 							unset($_SESSION['error_days']);
 						}
 
@@ -83,7 +83,7 @@
 
 
 					//disp = 'no': le date non sono disponibili perchè ci sono altri noleggi prenotati-> il bottone rimanda allo script che rieseguirà le query e verificherà la disponibilità.
-					if(isset($_SESSION['disp']) && $_SESSION['disp'] === 'no'){
+					if(isset($_SESSION['disp']) && $_SESSION['disp'] === false){
 						unset($_SESSION['disp']);
 
 						echo "<div class=\"error-container\" id=\"date-non-disp\"><p>date non disponibili</p></div>
@@ -100,7 +100,7 @@
 							
 
 					//CASO IN CUI TORNO INDIETRO DAL CHECKOUT CON LA VARIABILE SETTATA A 'yes'-> qualsiasi data risulterebbe prenotabile, perciò la setto a 'no' e inserisco le date, ripremo il bottone e rieseguo la query.
-					} elseif(isset($_SESSION['disp']) && $_SESSION['disp'] === 'yes'){
+					} elseif(isset($_SESSION['disp']) && $_SESSION['disp'] === true){
 						unset($_SESSION['disp']);
 					}
 

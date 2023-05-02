@@ -9,8 +9,13 @@
 		die("Errore nella connessione con il database: " . $conn->connect_error);
 	}
 
-	$username = mysqli_real_escape_string($conn, $_POST['username']);
-	$password = mysqli_real_escape_string($conn, $_POST['password']);
+	if(isset($_POST['username']) && isset($_POST['password'])){
+		$username = mysqli_real_escape_string($conn, $_POST['username']);
+		$password = mysqli_real_escape_string($conn, $_POST['password']);
+	} else {
+		header('Location: ../../index.php');
+		exit(1);
+	}
 
 	$query = "SELECT *
 			  FROM utente
