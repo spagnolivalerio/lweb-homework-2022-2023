@@ -14,14 +14,6 @@
         exit(1);
     }
 
-
-    //La variabile di sessione not_back serve per poter tornare indietro una volta completato l'ordine, senza la visualizzazione di errori dovuti all'inconsistenza di alcune variabili.
-    if(isset($_SESSION['not_back']) && $_SESSION['not_back'] === true){
-        unset($_SESSION['not_back']);
-        header('Location: noleggio.php');
-        exit(1);
-    }
-
 ?>
 
 
@@ -60,7 +52,6 @@
                 //Se $_SESSION['conferma_noleggio'] = 'false' verrà stampato il resoconto di noleggio fallito.
                 //Se $_SESSION['conferma_noleggio'] is not set -> viene stampata la pagina per completare il noleggio.
                 if(!isset($_SESSION['conferma_noleggio'])){
-                    unset($_SESSION['not_back']);
                     echo 
                 	       "<li>&#128664; Noleggio <span class=\"bold-text\"> " . $_SESSION['marca'] . " " . $_SESSION['modello'] . "</span></li>
                 	       <li>&#128197; Dal: " . $_SESSION['giorno_inizio'] . " al: " . $_SESSION['giorno_fine'] . "</li>
@@ -70,12 +61,10 @@
                            </form>";
                 } elseif($_SESSION['conferma_noleggio'] === true){
                     unset($_SESSION['conferma_noleggio']);
-                    $_SESSION['not_back'] = true;
                     echo "<p class=\"conferma\">NOLEGGIO <span class=\"successo\">COMPLETATO</span>, PREMI HOME TORNARE INDIETRO</p>
                           <div class=\"indietro\"><a href=\"homepage.php\">&#x2302;</a></div>";
                 } elseif($_SESSION['conferma_noleggio'] === false){
                     unset($_SESSION['conferma_noleggio']);
-                    $_SESSION['not_back'] = true;
                     echo "<p class=\"conferma\">NOLEGGIO <span class=\"fallito\">NON</span> ANDATO A BUON FINE, PREMI HOME PER TORNARE INDIETRO</p>
                           <div class=\"indietro\"><a href=\"homepage.php\">&#x2302;</a></div>";
                 }

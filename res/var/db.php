@@ -36,7 +36,8 @@
                         id_utente INT NOT NULL REFERENCES utente(id), 
                         data_inizio DATE NOT NULL, 
                         data_fine DATE NOT NULL, 
-                        prezzo_tot DECIMAL NOT NULL
+                        prezzo_tot DECIMAL NOT NULL,
+                        UNIQUE (id_auto, data_inizio, data_fine)
                         );";
 
     $queries = array($create_utente, $create_auto, $create_noleggio);

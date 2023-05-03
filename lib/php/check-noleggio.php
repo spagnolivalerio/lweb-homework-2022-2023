@@ -3,6 +3,11 @@
 	require('../../res/var/db.php');
 	$conn = new mysqli($servername, $db_username, $db_password, $db_name);
 
+	if(!isset($_SESSION['tipo_utente'])){
+        header('Location: login.php');
+        exit(1);
+    }
+
 	$start_day = $_POST['giorno_inizio'];
 	$end_day = $_POST['giorno_fine'];
 	$auto = $_POST['id_auto'];

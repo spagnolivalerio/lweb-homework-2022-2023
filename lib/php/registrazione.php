@@ -4,10 +4,6 @@
 
     $conn = new mysqli($servername, $db_username, $db_password, $db_name);
 
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
     $nome = mysqli_real_escape_string($conn, $_POST['nome']);
     $cognome = mysqli_real_escape_string($conn, $_POST['cognome']);
     $username = mysqli_real_escape_string($conn, $_POST['username']);
