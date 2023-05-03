@@ -5,7 +5,7 @@
   require('../lib/php/fun.php');
 
   $conn = new mysqli($servername, $db_username, $db_password, $db_name);
-    
+
 ?>
 
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -143,6 +143,5 @@
         </ul>
       </div>
     </div>
-
   </body>
 </html>
