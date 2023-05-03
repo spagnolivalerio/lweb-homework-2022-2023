@@ -4,7 +4,6 @@
   src: url('../../../font/Giorgio.ttf');
 }
 
-
 *
 {
 	margin:  0;
@@ -14,7 +13,7 @@
 
 html
 {
-	background-color: white;
+	background-color: #171B23;
 }
 
 a
@@ -22,22 +21,44 @@ a
 	text-decoration: none;
 }
 
+.larr
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: white;
+  font-size: 40px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  text-align: center;
+}
+
+.larr a
+{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: #171B23;
+}
 
 .block
 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	color: white;
 	width: 600px;
 	transform: translate(-50%, -50%);
 	border: 3px solid #FF6600;
 	font-size: 15px;
-	background-color: white;
+	background-color: #171B23;
 	padding: 40px;	
 	border-radius: 20px;
 }
 
-  
 h1
 {
 	color:#FF6600;
@@ -45,9 +66,8 @@ h1
 	margin-bottom: 30px;
 	font-family: 'Giorgio';
 	text-align: center;
-	border-bottom: 1px  solid black;
+	border-bottom: 1px solid white;
 }
-
 
 ul
 {
@@ -79,7 +99,7 @@ li
   
 .noleggio-button:hover
 {
-	box-shadow: 0px 0px 10px 0px black;
+	box-shadow: 0px 0px 10px 0px white;
 }
 
 .bold-text

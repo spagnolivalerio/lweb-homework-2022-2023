@@ -70,8 +70,6 @@ ul
   /*background: rgb(207,183,26);*/
   /*background: linear-gradient(90deg, rgba(207,183,26,1) 0%, rgba(166,91,0,1) 100%);*/
   top: 0;
-  border-top: 2px solid #37555b;
-  border-bottom: 2px solid #37555b;
   z-index: 9;
 }
 
@@ -94,7 +92,7 @@ ul
 {
   position: sticky;
   transform: translateY(-576px);
-  top: /*585.625px*/583px;
+  top: 580px;
   margin: 20px 0 0 20px;
   z-index: 9;
   font-size: 24px;

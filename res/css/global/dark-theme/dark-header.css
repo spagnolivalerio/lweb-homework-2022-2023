@@ -71,12 +71,10 @@ ul
 {
   text-align: center;
   position: sticky;
-  background-color: /*#035455 #024041 #022e2f #02323c #02272f*/whitesmoke;
-  /*background: rgb(207,183,26);*/
-  /*background: linear-gradient(90deg, rgba(207,183,26,1) 0%, rgba(166,91,0,1) 100%);*/
+  background-color: whitesmoke;
   top: 0;
-  border-bottom: 2px solid #171B23;
   z-index: 9;
+  box-shadow: 0px 0px 2px 0px black;
 }
 
 .mainmenu li
@@ -103,7 +101,7 @@ ul
 {
   position: sticky;
   transform: translateY(-576px);
-  top: /*585.625px*/583px;
+  top: 580px;
   margin: 20px 0 0 20px;
   z-index: 9;
   font-size: 24px;

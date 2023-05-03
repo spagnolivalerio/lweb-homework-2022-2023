@@ -11,6 +11,29 @@
   padding: 0;
 }
 
+.larr
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: #37555b;
+  font-size: 40px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  text-align: center;
+}
+
+.larr a
+{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: white;
+}
+
 .firstbox
 {
   position: absolute;

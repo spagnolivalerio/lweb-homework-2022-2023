@@ -5,13 +5,13 @@
 
 	$conn = new mysqli($servername, $db_username, $db_password, $db_name);
 
+	//Verifichiamo che siamo loggati.
 	if(!isset($_SESSION['tipo_utente'])){
 		header('Location: login.php');
 		exit(1);
 	}
 
-	//serve per poter tornare indietro una volta premuto il tasto invia dal form-noleggio, perchè rieseguendo la pagina form-noleggio.php non ha ricevuto $_POST['id_auto'], quindi uso variabile di sessione;
-
+	//Serve per poter tornare indietro una volta premuto il tasto invia dal form-noleggio, perchè rieseguendo la pagina form-noleggio.php non ha ricevuto $_POST['id_auto'], quindi uso variabile di sessione.
 	if(!isset($_POST['id_auto'])){
 		$id_auto = $_SESSION['id_auto'];
 	} else {
@@ -19,17 +19,19 @@
 	}
 
 	$auto_da_noleggiare = "SELECT *
-					   FROM auto
-					   WHERE id = $id_auto;";
+					   						FROM auto
+					   						WHERE id = $id_auto;";
 
 	$res = mysqli_query($conn, $auto_da_noleggiare);
 
+	//Verifichiamo che la query dia risultati.
 	if(mysqli_num_rows($res) < 0){
-		echo "Errore: " . $res->error;
+		exit(1);
 	}
 
 	$row = mysqli_fetch_array($res);
 
+	//Salviamo in variabili di sessione i vari attributi.
 	$_SESSION['prezzo_giornaliero'] = $row['prezzo_giornaliero'];
 	$_SESSION['marca'] = $row['marca'];
 	$_SESSION['modello'] = $row['modello'];
@@ -52,11 +54,12 @@
           echo"
               <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/noleggio/dark-theme/dark-form-noleggio.css\" type=\"text/css\" />";
         	}
-        	?>
+    ?>
 	</head>
 
 
 	<body>
+		<div class="larr"><a href="noleggio.php">&larr;</a></div>
 		<div class="firstbox">
 		   	<p class="car-name"><?php echo"".$_SESSION['marca']." ".$_SESSION['modello'].""?></p>
 				<div class="secondbox">
@@ -64,7 +67,8 @@
 				</div>
 				<div class="thirdbox">
 				<?php
-				//CONTROLLO ERRORI DATE INSERITE
+
+					//Controllo sugli errori negli inserimenti delle date.
 					if(isset($_SESSION['error_days'])){
 						if($_SESSION['error_days'] === '<today'){
 							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: Giorno di inizio minore di oggi</div></p>";
@@ -77,6 +81,7 @@
 							unset($_SESSION['error_days']);
 						}
 
+							//Script per la scomparsa degli errori.
 							echo "<script>
 
 									function go_away(id){
@@ -90,7 +95,7 @@
 					}
 
 
-					//disp = 'no': le date non sono disponibili perchè ci sono altri noleggi prenotati-> il bottone rimanda allo script che rieseguirà le query e verificherà la disponibilità.
+					//La variabile di sessione 'disp' serve per verificare la disponibilià delle date inserite: se disp = false, le date non sono disponibili e stampo un errore. Si unsetta la variabile per ripetere il procedimento da zero.
 					if(isset($_SESSION['disp']) && $_SESSION['disp'] === false){
 						unset($_SESSION['disp']);
 
@@ -106,8 +111,7 @@
 
 							</script>";
 							
-
-					//CASO IN CUI TORNO INDIETRO DAL CHECKOUT CON LA VARIABILE SETTATA A 'yes'-> qualsiasi data risulterebbe prenotabile, perciò la setto a 'no' e inserisco le date, ripremo il bottone e rieseguo la query.
+					//Se disp = true, teoricamente mi trovo all'interno di checkout-noleggio.php. Nel caso in cui torno indietro per scegliere altre date, devo unsettare la variabile in modo da evitare la scelta di date non disponibili.
 					} elseif(isset($_SESSION['disp']) && $_SESSION['disp'] === true){
 						unset($_SESSION['disp']);
 					}
@@ -119,12 +123,8 @@
 					<input type="date" name="giorno_inizio"></input><br /><br />
 					<label for="giorno_fine">Giorno fine noleggio:</label>
 					<input type="date" name="giorno_fine"></input><br /><br />
-				<?php
-					
-					echo"<div><button class=\"btn\" type=\"submit\">VERIFICA DISPONIBILIT&Agrave;</button></div>
-						<input type=\"hidden\" name=\"id_auto\" value=\"$id_auto\"></input>";
-				?>	
-
+					<div><button class="btn" type="submit">VERIFICA DISPONIBILIT&Agrave;</button></div>
+					<input type="hidden" name="id_auto" value="<?php echo"$id_auto"?>"></input>	
 				</form>
 			</div>
 		</div>

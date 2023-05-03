@@ -28,7 +28,7 @@
 
 .container-1 a
 {
-    color: black white;
+    color: black;
     background-color: #FF6600;
     font-size: 25px;
     padding-inline: 15px;
@@ -149,10 +149,14 @@
 
 .opzioni-veicolo:hover
 {
-    color: black;
     background-color: white;
     padding: 15px;
     border-radius: 30px;
+}
+
+.opzioni-veicolo:hover > a
+{
+    color: black;
 }
 
 .brand-text

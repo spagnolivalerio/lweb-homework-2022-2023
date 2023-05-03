@@ -90,8 +90,7 @@
         <p id="in-evidenza">IN EVIDENZA</p>
         <p class="ads-text">BMW <span class="brand-text">SERIE 3 BERLINA</span></p>
         <p class="text">NOLEGGIO A PARTIRE DA 0.00&euro;</p>
-        <div class="opzioni-veicolo">Configura</div>
-        <div class="opzioni-veicolo">Esplora il veicolo</div>
+        <div class="opzioni-veicolo"><a href="noleggio.php">Noleggia</a></div>
       </div>
 
 
