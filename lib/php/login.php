@@ -1,9 +1,8 @@
 <?php
-
 	session_start();
-	require('../../res/var/db.php');
+	require_once('../../res/var/connection.php');
 
-	$conn = new mysqli($servername, $db_username, $db_password, $db_name);
+	$conn = create_db($servername, $db_username, $db_password, $db_name);
 
 	if($conn->connect_error){
 		die("Errore nella connessione con il database: " . $conn->connect_error);

@@ -1,10 +1,10 @@
 <?php
 
   session_start();
-  require('../res/var/db.php');
-  require('../lib/php/fun.php');
+  require_once('../res/var/connection.php');
+  require_once('../lib/php/car_card.php');
 
-  $conn = new mysqli($servername, $db_username, $db_password, $db_name);
+  $conn = create_db($servername, $db_username, $db_password, $db_name);
 
 ?>
 

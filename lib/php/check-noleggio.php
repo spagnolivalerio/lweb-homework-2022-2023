@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	require('../../res/var/db.php');
-	$conn = new mysqli($servername, $db_username, $db_password, $db_name);
+	require_once('../../res/var/connection.php');
+	$conn = create_db($servername, $db_username, $db_password, $db_name);
 
 	if(!isset($_SESSION['tipo_utente'])){
         header('Location: login.php');

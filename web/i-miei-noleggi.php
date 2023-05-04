@@ -1,7 +1,8 @@
 <?php
     session_start();
-    require('../res/var/db.php');
-    $conn = new mysqli($servername, $db_username, $db_password, $db_name);
+    require_once('../res/var/connection.php');
+    
+    $conn = create_db($servername, $db_username, $db_password, $db_name);
 
     $id_utente = $_SESSION['id_utente'];
 
@@ -9,7 +10,6 @@
     		   FROM noleggio n, auto a
     		   WHERE n.id_utente = '$id_utente'
     		   AND n.id_auto = a.id";
-
 ?>
 
 <?xml version="1.0" encoding="UTF-8"?>

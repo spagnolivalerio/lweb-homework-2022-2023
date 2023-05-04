@@ -149,10 +149,14 @@
 
 .opzioni-veicolo:hover
 {
-    color: black;
     background-color: white;
     padding: 15px;
     border-radius: 30px;
+}
+
+.opzioni-veicolo:hover > a
+{
+    color: black;
 }
 
 .brand-text
