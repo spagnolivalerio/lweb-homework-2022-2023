@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <form method="post" action="http://localhost/projects/repository-linguaggi/lib/php/registrazione.php" class="form">
+    <form method="post" action="../lib/php/registrazione.php" class="form">
 
       <?php
         if(isset($_SESSION['fields']) && $_SESSION['fields'] === 'empty'){

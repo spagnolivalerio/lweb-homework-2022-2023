@@ -53,7 +53,7 @@ ul
 
 #header
 {
-  background-image: url(../../../img/banner.jpg);
+  background-image: url('../../../img/banner.jpg');
   background-position: center; /*posiziona al centro dello spazio disponibile rispetto alla posizione inziale. Lo spazio
                                disponibile è dato dallo spazio impiegato dagli elementi dell'header*/
   width: 100%; /*le percentuali sono le stesse di quando zoommi*/

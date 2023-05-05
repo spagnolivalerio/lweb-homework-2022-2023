@@ -25,7 +25,7 @@
           }
         ?>
 
-    <form class="form" method="post" action="http://localhost/projects/repository-linguaggi/lib/php/login.php">
+    <form class="form" method="post" action="../lib/php/login.php">
 
       <div class="title">LOGIN</div>
 

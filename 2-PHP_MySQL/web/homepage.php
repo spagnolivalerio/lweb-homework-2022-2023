@@ -15,26 +15,26 @@
 
         if(!isset($_COOKIE['dark-mode']) || $_COOKIE['dark-mode'] === 'false'){
           echo"
-              <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/global/header.css\" type=\"text/css\" />
-              <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/homepage/body.css\"   type=\"text/css\" />
-              <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/global/footer.css\" type=\"text/css\" />";
+              <link rel=\"stylesheet\" href=\"../res/css/global/header.css\" type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/homepage/body.css\"   type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/global/footer.css\" type=\"text/css\" />";
         } elseif(isset($_COOKIE['dark-mode']) && $_COOKIE['dark-mode'] === 'true'){
           echo"
-              <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/global/dark-theme/dark-header.css\" type=\"text/css\" />
-              <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/homepage/dark-theme/dark-body.css\"   type=\"text/css\" />
-              <link rel=\"stylesheet\" href=\"http://localhost/projects/repository-linguaggi/res/css/global/dark-theme/dark-footer.css\" type=\"text/css\" />";
+              <link rel=\"stylesheet\" href=\"../res/css/global/dark-theme/dark-header.css\" type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/homepage/dark-theme/dark-body.css\"   type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/global/dark-theme/dark-footer.css\" type=\"text/css\" />";
         }
 
       ?>
-
+..
   </head>
 
   <body>
 
     <div id="header">
-      <div id="title"><img src="http://localhost/projects/repository-linguaggi/img/logoS_S.png" alt=" "></img></div>
+      <div id="title"><img src="../img/logoS_S.png" alt=" "></img></div>
     </div>
-    <div class ="mainmenu">
+    <div class ="mainmenu">..
         <ul>
           <li><a href ="dove_siamo.php">DOVE SIAMO</a></li>
           <li><a href ="noleggio.php">NOLEGGIO</a></li>
@@ -100,7 +100,7 @@
         <p>S&amp;S Motors nasce per offrirti le migliori autovetture sul mercato a prezzi imbattibili. <br />
         Proproniamo anche diversi servizi come noleggio auto o finaziamenti a tasso 0.<br />
         Non perderti le nostre prossime offerte e iscriviti alla newsletter.</p>
-        <img src="http://localhost/projects/repository-linguaggi/img/payment.jpg" alt="payment-methods" class="payment"></img>
+        <img src="../img/payment.jpg" alt="payment-methods" class="payment"></img>
       </div>
       <div class="grid-item" id="grid-item-2">
         <h3>CONTATTI</h3>
