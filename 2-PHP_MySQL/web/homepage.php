@@ -26,7 +26,7 @@
         }
 
       ?>
-..
+
   </head>
 
   <body>
@@ -34,7 +34,7 @@
     <div id="header">
       <div id="title"><img src="../img/logoS_S.png" alt=" "></img></div>
     </div>
-    <div class ="mainmenu">..
+    <div class ="mainmenu">
         <ul>
           <li><a href ="dove_siamo.php">DOVE SIAMO</a></li>
           <li><a href ="noleggio.php">NOLEGGIO</a></li>

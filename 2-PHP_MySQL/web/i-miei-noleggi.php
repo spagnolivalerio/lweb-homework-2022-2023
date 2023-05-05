@@ -92,14 +92,13 @@
       
 		<h2>I MIEI NOLEGGI</h2>
 		<div class="table">
-			<table>
-				<tr>
-					<th>Marca</th>
-					<th>Modello</th>
-					<th>Data inizio</th>
-					<th>Data fine</th>
-					<th>Prezzo totale</th>
-				</tr>
+			<ul class="row first-row">
+				 <li>Marca</li>
+				 <li>Modello</li>
+				 <li>Data inizio</li>
+				 <li>Data fine</li>
+				 <li>Prezzo totale</li>
+			</ul>
 				<?php
 
 					$res = mysqli_query($conn, $view);
@@ -107,20 +106,19 @@
 					if(mysqli_num_rows($res) > 0){
 
 			 			foreach ($res as $row){
-			 				echo "<tr>
-			 						<td>" . $row['marca'] . "</td>
-			 						<td>" . $row['modello'] . "</td>
-			 						<td>" . $row['data_inizio'] . "</td>
-			 						<td>" . $row['data_fine'] . "</td>
-			 						<td>" . $row['prezzo_tot'] . " &euro;</td>
-			 					 </tr>";
+			 				echo "<ul class=\"row\">
+			 						<li>" . $row['marca'] . "</li>
+			 						<li>" . $row['modello'] . "</li>
+			 						<li>" . $row['data_inizio'] . "</li>
+			 						<li>" . $row['data_fine'] . "</li>
+			 						<li>" . $row['prezzo_tot'] . " &euro;</li>
+			 					 </ul>";
 			 			}
 					} else {
 						echo "<p class=\"none-nol\">NON CI SONO NOLEGGI</p>";
 					}
 
 				?>
-			</table>
 		</div>
 
 		<div class="footer" id="contatti">

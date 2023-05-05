@@ -1,22 +1,28 @@
-table, tr, th, td
+.row li
 {
-	border: 1px solid white;
-	text-align: center;
+	flex-basis: 20%;
 }
 
-html
+.first-row
 {
+	background-color: #FF6600 !important;
 	color: white;
 }
 
-td, th
+.row
 {
-	padding-inline: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	list-style: none;
+	display: flex;
+	margin-bottom: 20px;
+	text-align: center;
+	background-color: white;
 }
 
 .table
 {
-	width: fit-content;
+	width: 700px;
 	display: block;
 	margin: 100px auto;
 }
@@ -25,6 +31,7 @@ h2
 {
 	width: fit-content;
 	margin: 0 auto;
+	color: white;
 }
 
 .none-nol

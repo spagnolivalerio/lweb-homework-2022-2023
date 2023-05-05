@@ -13,7 +13,7 @@
 		$password = mysqli_real_escape_string($conn, $_POST['password']);
 	} else {
 		header('Location: ../../index.php');
-		exit(1);
+		exit();
 	}
 
 	$query = "SELECT *
@@ -24,8 +24,7 @@
 	$rows = mysqli_query($conn, $query);
 
 	if(!$rows) {
-		die("Impossibile eseguire la query");
-		exit(1);
+		exit();
 	}
 
 	$_user_row = mysqli_fetch_array($rows);
