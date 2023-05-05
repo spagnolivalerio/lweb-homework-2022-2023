@@ -55,12 +55,12 @@
     if(!mysqli_query($conn, $create_db)){
         exit(1);
     } else {
-        $conn = create_db();
+        $conn = create_db($servername, $db_username, $db_password, $db_name);
     }
 
     foreach ($queries as $query) {
         if(!$conn->query($query)){
-            exit(1);
+            exit();
         }
     }
 
