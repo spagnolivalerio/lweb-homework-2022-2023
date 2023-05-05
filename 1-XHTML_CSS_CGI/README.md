@@ -4,8 +4,11 @@
 
 -- XHTML/CSS HOMEWORK --
 
-Il repository git dove il sito è stato sviluppato è il seguente:
+Repository di Valerio Spagnoli:
 https://github.com/spagnolivalerio/lweb-homework-2022-2023.git
+
+Repository di Daniele Siciliano:
+https://github.com/danielesiciliano/repository-linguaggi.git
 
 Il primo homework riguarda un sito di autonoleggio con principalmente 4 pagine documentative, nelle quali vengono utilizzate le principali regole css per posizionare al meglio gli elementi all'interno del documento xhtml.
 La prima pagina si trova al di fuori della cartella web, con il nome index.html, per un accesso diretto digitando l'indirizzo http://localhost/projects/repository-linguaggi sulla barra di ricerca.
