@@ -27,7 +27,7 @@ int main(){
 
     //controllo eventuali missed fields
     if (strlen(nome) == 0 || strlen(cognome) == 0 || strlen(email) == 0){
-        printf("Location: http://localhost/projects/lweb-homework-2022-2023/web/newsletter-form.html\n\n");
+        printf("Location: ../web/newsletter-form.html\n\n");
         return 1;
     }
 
@@ -42,16 +42,16 @@ int main(){
     printf("<html>\n");
     printf("<head>\n");
     printf("<title>Conferma registrazione</title>\n");
-    printf("<link rel=\"stylesheet\" href=\"http://localhost/projects/lweb-homework-2022-2023/res/css/newsletter/newsletter-style.css\" type=\"text/css\" />\n");
+    printf("<link rel=\"stylesheet\" href=\"../res/css/newsletter/newsletter-style.css\" type=\"text/css\" />\n");
     printf("</head>\n");
-    printf("<div id=\"title\">\n\t<img src=\"http://localhost/projects/lweb-homework-2022-2023/img/logoS_S.png\" alt=" "></img>\n</div>");
+    printf("<div id=\"title\">\n\t<img src=\"../img/logoS_S.png\" alt=" "></img>\n</div>");
     printf("<body>\n");
     printf("<div class=\"blocco\">\n");
     printf("<h1>Registrazione completata</h1>\n");
     printf("<ul>\n");
     printf("\t<li>Grazie per esserti iscritto alla nostra newsletter.</li>\n");
     printf("\t<li>Resta sintonizzato per non perderti le nostre migliori offerte!</li>\n");
-    printf("\t<li class=\"bottone\"><a href=\"http://localhost/projects/lweb-homework-2022-2023\"><span class=\"icon-home\">&#x2302;</span></a></li>");
+    printf("\t<li class=\"bottone\"><a href=\"../index.html\"><span class=\"icon-home\">&#x2302;</span></a></li>");
     printf("</ul>\n");
     printf("</div>\n");
     printf("</body>\n");
