@@ -1,0 +1,102 @@
+.auto-da-noleggiare
+{
+  margin-bottom: 30px;
+  height: 550px;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  background-color: #ccc;
+}
+
+.flexbox-container
+{
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  text-align: center;
+}
+
+.description
+{
+  position: absolute;
+  width: 400px;
+  height: fit-content;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: -20px;
+}
+
+.flexbox
+{
+  flex-basis: 400px;
+  padding: 30px;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+}
+
+.noleggio-button
+{
+  width: fit-content;
+  background-color: transparent;
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  padding-inline: 10px;
+  border-radius: 15px;
+  transition: padding, 0.3s;
+  border: none;
+  position: relative;
+  top: 400px;
+}
+
+.noleggio-button:hover
+{
+  padding-inline: 12px;
+  letter-spacing: 1px;
+  background-color: #FF6600;
+}
+
+
+.car-name
+{
+  color: white;
+  border-bottom: 2px solid white;
+  width: 400px;
+  margin-top: -27px;
+  text-shadow: 1px 1px black;
+}
+
+.bold-text
+{
+  font-weight: bold;
+}
+
+.gallery
+{
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 5px;
+  text-shadow: 1px 1px black;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+}
+
+.first-auto
+{
+  background-image: url(../../../img/bmw_on_sand.jpg);
+}
+
+.second-auto
+{
+  background-image: url(../../../img/audicar.jpg);
+}
+
+.third-auto
+{
+  background-image: url(../../../img/ford-pickup.jpg);
+}
+
