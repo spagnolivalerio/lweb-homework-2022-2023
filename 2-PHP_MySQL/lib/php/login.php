@@ -2,14 +2,14 @@
 	session_start();
 	require_once('../../res/var/connection.php');
 
-	$conn = create_db($servername, $db_username, $db_password, $db_name);
+	$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
 	if(isset($_POST['username']) && isset($_POST['password'])){
 		$username = mysqli_real_escape_string($conn, $_POST['username']);
 		$password = mysqli_real_escape_string($conn, $_POST['password']);
 	} else {
 		header('Location: ../../index.php');
-		exit(1);
+		exit();
 	}
 
 	$password = md5($password);
@@ -22,7 +22,7 @@
 	$rows = mysqli_query($conn, $query);
 
 	if(!$rows) {
-		die("Impossibile eseguire la query");
+		exit();
 	}
 
 	$_user_row = mysqli_fetch_array($rows);

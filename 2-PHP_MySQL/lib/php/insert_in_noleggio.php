@@ -2,11 +2,11 @@
 	session_start();
 	require_once('../../res/var/connection.php');
 	
-	$conn = create_db($servername, $db_username, $db_password, $db_name);
+	$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
 	if(!isset($_SESSION['tipo_utente'])){
         header('Location: login.php');
-        exit(1);
+        exit();
     }
 
 	$id_auto = mysqli_real_escape_string($conn, $_SESSION['id_auto']);
@@ -22,10 +22,10 @@
 		mysqli_query($conn, $insert);
 		$_SESSION['conferma_noleggio'] = true; 
 		header('Location: ../../web/checkout_noleggio.php');
-		exit(1);
+		exit();
 	} catch(Exception $e) {
 		$_SESSION['conferma_noleggio'] = false;
 		header('Location: ../../web/checkout_noleggio.php');
-		exit(1);
+		exit();
 	}
 ?>

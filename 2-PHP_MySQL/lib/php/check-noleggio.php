@@ -2,11 +2,11 @@
 	session_start();
 	require_once('../../res/var/connection.php');
 
-	$conn = create_db($servername, $db_username, $db_password, $db_name);
+	$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
 	if(!isset($_SESSION['tipo_utente'])){
         header('Location: login.php');
-        exit(1);
+        exit();
     }
 
 	$start_day = $_POST['giorno_inizio'];
@@ -27,13 +27,13 @@
 	if(empty($_POST['giorno_fine']) || empty($_POST['giorno_inizio'])){
 		$_SESSION['error_days'] = 'nulldate';
 		header('Location: ../../web/form-noleggio.php');
-		exit(1);
+		exit();
 	}
 
 	if($start_day > $end_day){
 		$_SESSION['error_days'] = 'start > end';
 		header('Location: ../../web/form-noleggio.php');
-		exit(1);
+		exit();
 	}
 
 
@@ -41,7 +41,7 @@
 	if($start_day < $today){
 		$_SESSION['error_days'] = '<today';
 		header('Location: ../../web/form-noleggio.php');
-		exit(1);
+		exit();
 	}
 	//Fine controllo.
 
@@ -67,14 +67,14 @@
 			$num_days = $diff->days;
 			$_SESSION['num_days'] = $num_days;
    			header('Location: ../../web/checkout_noleggio.php');
-   			exit(1);
+   			exit();
    		
    	//Se ci sono delle righe nel risultato della query, allora le date non sono disponibili, quindi setto 'disp' = false e torno nel form-noleggio, dove verrà stampato il relativo errore. 
   		} else {
 
   	 		$_SESSION['disp'] = false;
   	 		header('Location: ../../web/form-noleggio.php');
-   			exit(1);
+   			exit();
 
   		}
    }

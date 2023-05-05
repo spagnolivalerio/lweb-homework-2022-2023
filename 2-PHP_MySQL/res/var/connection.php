@@ -5,12 +5,12 @@
     $db_password='password';
     $db_name='sands';
 
-    function create_db($server, $username, $mypassword, $name_of_db){
+    function connect_to_db($server, $username, $mypassword, $name_of_db){
 
         $myconn = new mysqli($server, $username, $mypassword, $name_of_db);
 
         if($myconn->connect_error){
-            exit(1);
+            exit();
         }
 
         return $myconn;

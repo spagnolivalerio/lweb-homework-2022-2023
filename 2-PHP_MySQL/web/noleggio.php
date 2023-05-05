@@ -4,7 +4,7 @@
   require_once('../res/var/connection.php');
   require_once('../lib/php/car_card.php');
 
-  $conn = create_db($servername, $db_username, $db_password, $db_name);
+  $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
 ?>
 

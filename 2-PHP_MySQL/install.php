@@ -53,9 +53,9 @@
 
 
     if(!mysqli_query($conn, $create_db)){
-        exit(1);
+        exit();
     } else {
-        $conn = create_db($servername, $db_username, $db_password, $db_name);
+        $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
     }
 
     foreach ($queries as $query) {

@@ -2,7 +2,7 @@
     session_start();
     require_once('../res/var/connection.php');
     
-    $conn = create_db($servername, $db_username, $db_password, $db_name);
+    $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
     $id_utente = $_SESSION['id_utente'];
 

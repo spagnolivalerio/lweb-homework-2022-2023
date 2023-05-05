@@ -2,7 +2,7 @@
     session_start();
     require_once('../../res/var/connection.php');
 
-    $conn = create_db($servername, $db_username, $db_password, $db_name);
+    $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
     $nome = mysqli_real_escape_string($conn, $_POST['nome']);
     $cognome = mysqli_real_escape_string($conn, $_POST['cognome']);
@@ -12,7 +12,7 @@
     if ($nome == NULL || $cognome == NULL || $username == NULL || $password == NULL) {
       $_SESSION['fields'] = 'empty'; 
       header('Location: ../../web/registrazione.php');
-      exit(1);
+      exit();
     } else {
 
       $query = "INSERT INTO utente (username, password, nome, cognome) VALUES ('$username', '$password', '$nome','$cognome')";
@@ -21,12 +21,12 @@
         if(mysqli_query($conn, $query)){
           $_SESSION['signup'] = true;
           header('Location: ../../web/login.php');
-          exit(1);
+          exit();
         }
       } catch (Exception $e){
           $_SESSION['signup'] = false;
           header('Location: ../../web/registrazione.php');
-          exit(1);
+          exit();
       }
     }
     $conn->close();
