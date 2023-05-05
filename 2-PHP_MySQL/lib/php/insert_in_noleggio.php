@@ -15,10 +15,9 @@
 	$id_utente = mysqli_real_escape_string($conn, $_SESSION['id_utente']);
 	$prezzo_tot = mysqli_real_escape_string($conn, $_SESSION['prezzo_tot']);
 
-	$insert = "INSERT INTO noleggio (id_auto, id_utente, data_inizio, data_fine, prezzo_tot) 				  VALUES ('$id_auto', '$id_utente', '$start_day', '$end_day', '$prezzo_tot');";
+	$insert = "INSERT INTO noleggio (id_auto, id_utente, data_inizio, data_fine, prezzo_tot) 						  VALUES ('$id_auto', '$id_utente', '$start_day', '$end_day', '$prezzo_tot');";
 
 	//Una volta completato il noleggio, 'conferma_noleggio' viene settata a true o a false, e ritorno in checkout_noleggio dove verranno stampate pagine coerenti alla variabile di sessione.
-
 	try{	
 		mysqli_query($conn, $insert);
 		$_SESSION['conferma_noleggio'] = true; 

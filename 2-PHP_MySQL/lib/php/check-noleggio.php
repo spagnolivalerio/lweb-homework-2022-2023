@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	require_once('../../res/var/connection.php');
+
 	$conn = create_db($servername, $db_username, $db_password, $db_name);
 
 	if(!isset($_SESSION['tipo_utente'])){
@@ -12,12 +13,10 @@
 	$end_day = $_POST['giorno_fine'];
 	$auto = $_POST['id_auto'];
 
-
 	//Salvo le date scelte nel form all'interno di variabili di sessione per trasportarle nelle varie pagine i dati necessari per completare il noleggio.
 	$_SESSION['id_auto'] = $auto;
 	$_SESSION['giorno_inizio'] = $start_day;
 	$_SESSION['giorno_fine'] = $end_day;
-
 
 
 	//Converto le date in un formato accettabile da mysql.
@@ -58,26 +57,26 @@
    //Si fa un controllo sulla variabile di sessione 'disp': se non è settata allora devo eseguire la query perchè siamo nel caso in cui dobbiamo verificare se c'è disponibilità.
    if(!isset($_SESSION['disp'])){      
 
-   	$res = mysqli_query($conn, $check_disp);
+   		$res = mysqli_query($conn, $check_disp);
 
-   	//Se la query da 0 righe, significa che le date sono disponibili, di conseguenza setto 'disp' = true e vado in checkout_noleggio.php per proseguire con l'insert.
-   	if(mysqli_num_rows($res) === 0){
+   		//Se la query da 0 righe, significa che le date sono disponibili, di conseguenza setto 'disp' = true e vado in checkout_noleggio.php per proseguire con l'insert.
+   		if(mysqli_num_rows($res) === 0){
 
-   		$_SESSION['disp'] = true;
-		$diff = date_diff($start_date, $end_date);
-		$num_days = $diff->days;
-		$_SESSION['num_days'] = $num_days;
-   		header('Location: ../../web/checkout_noleggio.php');
-   		exit(1);
+   			$_SESSION['disp'] = true;
+			$diff = date_diff($start_date, $end_date);
+			$num_days = $diff->days;
+			$_SESSION['num_days'] = $num_days;
+   			header('Location: ../../web/checkout_noleggio.php');
+   			exit(1);
    		
    	//Se ci sono delle righe nel risultato della query, allora le date non sono disponibili, quindi setto 'disp' = false e torno nel form-noleggio, dove verrà stampato il relativo errore. 
-  	} else {
+  		} else {
 
-  	 	$_SESSION['disp'] = false;
-  	 	header('Location: ../../web/form-noleggio.php');
-   		exit(1);
+  	 		$_SESSION['disp'] = false;
+  	 		header('Location: ../../web/form-noleggio.php');
+   			exit(1);
 
-  	}
+  		}
    }
 
   	$conn->close();

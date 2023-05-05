@@ -7,7 +7,7 @@
     $nome = mysqli_real_escape_string($conn, $_POST['nome']);
     $cognome = mysqli_real_escape_string($conn, $_POST['cognome']);
     $username = mysqli_real_escape_string($conn, $_POST['username']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $password = mysqli_real_escape_string($conn, md5($_POST['password']));
 
     if ($nome == NULL || $cognome == NULL || $username == NULL || $password == NULL) {
       $_SESSION['fields'] = 'empty'; 
