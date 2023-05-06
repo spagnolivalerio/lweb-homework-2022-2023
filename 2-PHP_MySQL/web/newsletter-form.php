@@ -2,7 +2,6 @@
 
   session_start();
   require_once('../res/var/connection.php');
-  require_once('../lib/php/car_card.php');
 
   $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
@@ -16,18 +15,18 @@
 
   <head>
 
-      <title>S&amp;S noleggio</title>
+      <title>S&amp;S newsletter</title>
       <?php 
 
         if(!isset($_COOKIE['dark-mode']) || $_COOKIE['dark-mode'] === 'false'){
           echo"
               <link rel=\"stylesheet\" href=\"../res/css/global/header.css\" type=\"text/css\" />
-              <link rel=\"stylesheet\" href=\"../res/css/noleggio/body.css\"   type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/newsletter/body.css\"   type=\"text/css\" />
               <link rel=\"stylesheet\" href=\"../res/css/global/footer.css\" type=\"text/css\" />";
         } elseif(isset($_COOKIE['dark-mode']) && $_COOKIE['dark-mode'] === 'true'){
           echo"
               <link rel=\"stylesheet\" href=\"../res/css/global/dark-theme/dark-header.css\" type=\"text/css\" />
-              <link rel=\"stylesheet\" href=\"../res/css/noleggio/dark-theme/dark-body.css\"   type=\"text/css\" />
+              <link rel=\"stylesheet\" href=\"../res/css/newsletter/dark-theme/dark-body.css\"   type=\"text/css\" />
               <link rel=\"stylesheet\" href=\"../res/css/global/dark-theme/dark-footer.css\" type=\"text/css\" />";
         }
 
@@ -35,27 +34,13 @@
 
   </head>
 
-  <body>
+   <body>
 
-    <div id="header">
-      <div id="title"><img src="../img/logoS_S.png" alt=" "></img></div>
-    </div>
-    <div class ="mainmenu">
-        <ul>
-          <li><a href ="dove_siamo.php">DOVE SIAMO</a></li>
-          <li><a href ="homepage.php">HOMEPAGE</a></li>
-          <?php
-            if(isset($_SESSION['tipo_utente']) && $_SESSION['tipo_utente'] === 'cliente'){
-              echo "<li><a href=\"i-miei-noleggi.php\">I MIEI NOLEGGI</a></li>";
-            }
-          ?>
-          <li><a href ="#contatti">CONTATTI</a></li>
-        </ul>
-     </div>
-      <div id="select-menu"><a href="#hidden-menu">&#x2630;</a></div>
+     <div id="select-menu"><a href="#hidden-menu">&#x2630;</a></div>
       <div><span id="back-target"></span></div>
       <div id="hidden-menu">
         <ul>
+          <li><a href="../index.html" id="homepage">HOMEPAGE</a></li>
           <li>SERVIZI FINANZIARI</li>
           <li>USATO GARANTITO</li>
           <li><a href ="noleggio.php">PRENOTA UN NOLEGGIO</a></li>
@@ -75,7 +60,7 @@
 
           <form method="post" action="../lib/php/dark-mode.php">
              <li>
-              <input type="hidden" name="page" value="noleggio">
+              <input type="hidden" name="page" value="newsletter-form">
               <input class="dkmd" type="submit" name="dark-mode" 
               <?php
 
@@ -91,38 +76,83 @@
             </form>
         </ul>
         <div id="back"><a href="#back-target">&#x2715;</a></div>
-     </div>
-
-     <!--BODY-->
-
-      <div class="box">
-
-       <?php
-
-        $auto_noleggio = "SELECT *
-                         FROM auto;";
-
-        $result = mysqli_query($conn, $auto_noleggio);
-
-        if(mysqli_num_rows($result) > 0){
-  
-          print_auto($result);
-
-        } else {
-          echo "<div class=\"non-disp\">NON CI SONO MACCHINE DISPONIBILI PER IL NOLEGGIO</div>";
-        }
-
-        $conn->close();
-
-       ?>
       </div>
 
-     <div class="footer" id="contatti">
+      <?php
+          if(isset($_SESSION['nome'])){
+            //allora significa che già sono iscritto(va gestito)
+          }
+      
+      ?>
+
+      <div class="title">
+        <h1>UNISCITI A NOI</h1>
+        <h3>Compila il form e mantieniti aggiornato</h3>
+      </div>
+
+        <form class="form" method="post" action="../lib/php/newsletter.php">
+
+        <?php
+          if(isset($_SESSION['registrazione']) && $_SESSION['registrazione'] === false){
+          $invalid_signup = 'e-mail già esistente';
+            echo "<p class=\"errors\">$invalid_signup</p>";
+            unset($_SESSION['registrazione']);
+          }
+        ?>
+
+        <?php
+          if(isset($_SESSION['esistenza']) && $_SESSION['esistenza'] === true){
+          $invalid_signup = 'profilo già registrato alla newsletter';
+            echo "<p class=\"errors\">$invalid_signup</p>";
+            unset($_SESSION['esistenza']);
+          }
+        ?>
+
+        <?php
+          if(isset($_SESSION['fields']) && $_SESSION['fields'] === 'empty'){
+            $missed_field = "&#x26A0; compila tutti i campi prima di procedere.";
+            echo "<script>
+
+                  function go_away(id){
+                    var error = document.getElementById(id);
+                    error.style.display = \"none\";
+                  }
+
+                  setTimeout(function() { go_away(\"missed-field\"); }, 5000);
+
+                </script>
+
+                <div class=\"errors\">$missed_field</div>";
+                
+                unset($_SESSION['fields']);
+          }
+        ?>
+
+          <div class=" form-item">
+            <label for="nome">Nome:</label><br />
+            <input type="text" id="nome" name="nome"></input>
+          </div>
+          <div class="form-item">
+            <label for="cognome">Cognome:</label><br />
+            <input type="text" id="cognome" name="cognome"></input>
+          </div>
+          <div class="form-item">
+            <label for="email">e-mail:</label><br />
+            <input type="text" id="email" name="email"></input>
+          </div>
+          <div class="form-item">
+            <button type="submit" id="invia">INVIA</button>
+          </div>
+        </form>
+
+     <!--FOOTER-->
+     
+      <div class="footer" id="contatti">
       <div class="grid-item" id="grid-item-1">
         <h3>SIAMO QUI PER TE</h3>
         <p>S&amp;S Motors nasce per offrirti le migliori autovetture sul mercato a prezzi imbattibili. <br />
         Proproniamo anche diversi servizi come noleggio auto o finaziamenti a tasso 0.<br />
-        Non perderti le nostre prossime offerte e iscriviti alla newsletter.</p>
+        Non perderti le nostre prossime offerte e iscriviti alla <a href="newsletter-form.html">newsletter</a>.</p>
         <img src="../img/payment.jpg" alt="payment-methods" class="payment"></img>
       </div>
       <div class="grid-item" id="grid-item-2">

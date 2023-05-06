@@ -38,6 +38,14 @@
                         UNIQUE (id_auto, data_inizio, data_fine)
                         );";
 
+    $create_newsletter = "CREATE TABLE IF NOT EXISTS newsletter(
+                        id INT AUTO_INCREMENT PRIMARY KEY,
+                        id_utente INT NOT NULL REFERENCES utente(id), 
+                        nome VARCHAR(32) NOT NULL,
+                        cognome VARCHAR(32) NOT NULL,
+                        email VARCHAR(32) NOT NULL
+                        );";
+
    	$insert_auto = "INSERT INTO auto (id, marca, modello, colore, cambio, carburante, categoria,							prezzo_giornaliero, nome_file_img, cavalli, num_porte, num_posti)
    		 			VALUES
 					(1, 'JEEP', 'RENEGADE', 'nero', 'Automatico', 'Diesel', 'Suv', 46, 'jeep_renegade.jpg', 120, 5, 5),
@@ -49,7 +57,7 @@
 					(7, 'CITROEN', 'C3', 'bianco', 'Automatico', 'Benzina', 'Utilitaria', 70, 'citroenC3.jpg', 48, 5, 5),
 					(8, 'BMW', 'SERIE 3 ', 'blu', 'Automatico', 'Diesel', 'Utilitaria', 60, 'bmwSERIE3.jpg', 100, 5, 5);";
 
-    $queries = array($create_utente, $create_auto, $create_noleggio, $insert_auto);
+    $queries = array($create_utente, $create_auto, $create_noleggio, $create_newsletter, $insert_auto);
 
 
     if(!mysqli_query($conn, $create_db)){

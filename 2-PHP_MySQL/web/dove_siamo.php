@@ -54,7 +54,7 @@
           <li>USATO GARANTITO</li>
           <li><a href ="noleggio.php">PRENOTA UN NOLEGGIO</a></li> 
           <li>IMPOSTAZIONI</li>
-          <li>NEWSLETTER</li>
+          <li><a href="newsletter-form.php">NEWSLETTER</a></li>
           <li>FAQ</li>
           <?php
             if(isset($_SESSION['tipo_utente'])){

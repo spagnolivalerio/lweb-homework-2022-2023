@@ -25,6 +25,10 @@
 			case 'i-miei-noleggi':
 			header('Location: ../../web/i-miei-noleggi.php#hidden-menu');
 			break;
+
+			case 'newsletter-form':
+			header('Location: ../../web/newsletter-form.php#hidden-menu');
+			break;
 		}	
 
 	} else {
