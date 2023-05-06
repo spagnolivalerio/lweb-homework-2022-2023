@@ -40,7 +40,7 @@
       <div><span id="back-target"></span></div>
       <div id="hidden-menu">
         <ul>
-          <li><a href="../index.html" id="homepage">HOMEPAGE</a></li>
+          <li><a href="homepage.php" id="homepage">HOMEPAGE</a></li>
           <li>SERVIZI FINANZIARI</li>
           <li>USATO GARANTITO</li>
           <li><a href ="noleggio.php">PRENOTA UN NOLEGGIO</a></li>
@@ -127,15 +127,6 @@
                 unset($_SESSION['fields']);
           }
         ?>
-
-          <div class=" form-item">
-            <label for="nome">Nome:</label><br />
-            <input type="text" id="nome" name="nome"></input>
-          </div>
-          <div class="form-item">
-            <label for="cognome">Cognome:</label><br />
-            <input type="text" id="cognome" name="cognome"></input>
-          </div>
           <div class="form-item">
             <label for="email">e-mail:</label><br />
             <input type="text" id="email" name="email"></input>

@@ -4,12 +4,10 @@
 
 	$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
-
-	$nome = mysqli_real_escape_string($conn, $_POST['nome']);
-	$cognome = mysqli_real_escape_string($conn, $_POST['cognome']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
 
-    if ($nome == NULL || $cognome == NULL || $email == NULL) {
+
+    if ($email == NULL) {
         $_SESSION['fields'] = 'empty'; 
         header('Location: ../../web/newsletter-form.php');
         exit();
@@ -52,6 +50,22 @@
         header('Location: ../../web/newsletter-form.php');
         exit();
     }
+
+
+    $info_utente = "SELECT *
+                    FROM utente
+                    WHERE id = '$id_utente';";
+
+    $result = mysqli_query($conn, $info_utente);
+
+    //Catturo le info dell'utente che si sta iscrivendo alla newsletter per poi utilizzarle nell'inserimento all'interno della tabella newsletter
+
+    if(mysqli_num_rows($result) > 0){
+        $_user_row = mysqli_fetch_array($result);
+        $nome =  $_user_row['nome'];
+	    $cognome = $_user_row['cognome'];
+    }
+
 
 
     $_SESSION['nome'] = "$nome";
