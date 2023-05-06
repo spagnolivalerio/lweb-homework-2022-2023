@@ -53,7 +53,7 @@
         <ul>
           <li>SERVIZI FINANZIARI</li>
           <li>USATO GARANTITO</li>
-          <li>PRENOTA UN NOLEGGIO</li>
+          <li><a href ="noleggio.php">PRENOTA UN NOLEGGIO</a></li>
           <li>IMPOSTAZIONI</li>
           <li>NEWSLETTER</li>
           <li>FAQ</li>
