@@ -45,7 +45,13 @@
           <li>USATO GARANTITO</li>
           <li><a href ="noleggio.php">PRENOTA UN NOLEGGIO</a></li>
           <li>IMPOSTAZIONI</li>
-          <li><a href="newsletter-form.php">NEWSLETTER</a></li>
+          <?php
+              if(isset($_SESSION['newsletter']) && $_SESSION['newsletter'] === true){
+                echo "<li>NEWSLETTER <span style=\"color: green !important;\">&check;<span></li>";
+              } else{
+                echo "<li><a href=\"newsletter-form.php\">NEWSLETTER</a></li>";
+              }
+          ?>
           <li>FAQ</li>
 
           <?php
@@ -91,42 +97,47 @@
       </div>
 
         <form class="form" method="post" action="../lib/php/newsletter.php">
-
+          
         <?php
-          if(isset($_SESSION['registrazione']) && $_SESSION['registrazione'] === false){
-          $invalid_signup = 'e-mail già esistente';
-            echo "<p class=\"errors\">$invalid_signup</p>";
-            unset($_SESSION['registrazione']);
-          }
-        ?>
 
-        <?php
-          if(isset($_SESSION['esistenza']) && $_SESSION['esistenza'] === true){
-          $invalid_signup = 'profilo già registrato alla newsletter';
-            echo "<p class=\"errors\">$invalid_signup</p>";
-            unset($_SESSION['esistenza']);
-          }
-        ?>
-
-        <?php
           if(isset($_SESSION['fields']) && $_SESSION['fields'] === 'empty'){
             $missed_field = "&#x26A0; compila tutti i campi prima di procedere.";
-            echo "<script>
+            echo "<div id=\"errors\">$missed_field</div>
+                  <script>
 
                   function go_away(id){
                     var error = document.getElementById(id);
                     error.style.display = \"none\";
                   }
 
-                  setTimeout(function() { go_away(\"missed-field\"); }, 5000);
+                  setTimeout(function() { go_away(\"errors\"); }, 5000);
 
-                </script>
-
-                <div class=\"errors\">$missed_field</div>";
+                  </script>";
                 
-                unset($_SESSION['fields']);
+                  unset($_SESSION['fields']);
+          }
+
+        ?>
+
+        <?php
+          if(isset($_SESSION['esistenza']) && $_SESSION['esistenza'] === true){
+            $invalid_signup = '&#x26A0; profilo già registrato alla newsletter';
+            echo "<div id=\"errors\">$invalid_signup</div>
+                  <script>
+
+                  function go_away(id){
+                    var error = document.getElementById(id);
+                    error.style.display = \"none\";
+                  }
+
+                  setTimeout(function() { go_away(\"errors\"); }, 5000);
+
+                  </script>";
+
+                  unset($_SESSION['esistenza']);
           }
         ?>
+
           <div class="form-item">
             <label for="email">e-mail:</label><br />
             <input type="text" id="email" name="email"></input>
@@ -143,7 +154,7 @@
         <h3>SIAMO QUI PER TE</h3>
         <p>S&amp;S Motors nasce per offrirti le migliori autovetture sul mercato a prezzi imbattibili. <br />
         Proproniamo anche diversi servizi come noleggio auto o finaziamenti a tasso 0.<br />
-        Non perderti le nostre prossime offerte e iscriviti alla <a href="newsletter-form.html">newsletter</a>.</p>
+        Non perderti le nostre prossime offerte e iscriviti alla newsletter.</p>
         <img src="../img/payment.jpg" alt="payment-methods" class="payment"></img>
       </div>
       <div class="grid-item" id="grid-item-2">

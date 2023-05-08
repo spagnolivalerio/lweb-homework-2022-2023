@@ -16,8 +16,17 @@
   <head>
 
       <title>Conferma Registrazione</title>
-      <link rel="stylesheet" href="../res/css/newsletter/newsletter-style.css" type="text/css" />";
+      <?php 
 
+        if(!isset($_COOKIE['dark-mode']) || $_COOKIE['dark-mode'] === 'false'){
+          echo"
+              <link rel=\"stylesheet\" href=\"../res/css/newsletter/newsletter-style.css\" type=\"text/css\" />";
+        } elseif(isset($_COOKIE['dark-mode']) && $_COOKIE['dark-mode'] === 'true'){
+          echo"
+              <link rel=\"stylesheet\" href=\"../res/css/newsletter/dark-theme/dark-newsletter-style.css\" type=\"text/css\" />";
+        }
+
+      ?>
   </head>
 
   <body>
@@ -27,7 +36,8 @@
         <ul>
             <li>
                 <?php 
-                    echo"". $_SESSION['nome'] . "";
+                    $_SESSION['newsletter'] = true;
+                    echo"". $_SESSION['nome_cliente'] . "";
                 ?>
                 , Grazie per esserti iscritto alla nostra newsletter.
             </li>

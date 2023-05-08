@@ -39,12 +39,10 @@
                         );";
 
     $create_newsletter = "CREATE TABLE IF NOT EXISTS newsletter(
-                        id INT AUTO_INCREMENT PRIMARY KEY,
-                        id_utente INT NOT NULL REFERENCES utente(id), 
-                        nome VARCHAR(32) NOT NULL,
-                        cognome VARCHAR(32) NOT NULL,
-                        email VARCHAR(32) NOT NULL
-                        );";
+                          id INT AUTO_INCREMENT PRIMARY KEY,
+                          id_utente INT NOT NULL REFERENCES utente(id), 
+                          email VARCHAR(32) NOT NULL UNIQUE
+                          );";
 
    	$insert_auto = "INSERT INTO auto (id, marca, modello, colore, cambio, carburante, categoria,							prezzo_giornaliero, nome_file_img, cavalli, num_porte, num_posti)
    		 			VALUES

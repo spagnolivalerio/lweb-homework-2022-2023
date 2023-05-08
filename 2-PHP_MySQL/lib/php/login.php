@@ -27,12 +27,27 @@
 
 	$_user_row = mysqli_fetch_array($rows);
 	$id_user = $_user_row['id'];
+	$name = $_user_row['nome'];
+	$lastname = $_user_row['cognome'];
+
+	$search_in_newsletter = "SELECT *
+                             FROM newsletter
+                             WHERE id_utente = '$id_user'";
 
 	if(mysqli_num_rows($rows) > 0){
 		session_unset();
 		$_SESSION['id_utente'] = "$id_user";
 		$_SESSION['tipo_utente'] = 'cliente';
 		$_SESSION['nome_utente'] = "$username";
+		$_SESSION['nome_cliente'] = "$name";
+		$_SESSION['cognome_cliente'] = "$lastname";
+
+
+    	$res = mysqli_query($conn, $search_in_newsletter);
+    	if($res && mysqli_num_rows($res) > 0){
+      		$_SESSION['newsletter'] = true;
+    	}
+
 		header('Location: ../../web/homepage.php');
 	} else {
 		header('Location: ../../web/login.php');

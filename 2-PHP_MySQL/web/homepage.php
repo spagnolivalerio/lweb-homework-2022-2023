@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    session_start();    
 ?>
 
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -55,7 +55,13 @@
           <li>USATO GARANTITO</li>
           <li><a href ="noleggio.php">PRENOTA UN NOLEGGIO</a></li>
           <li>IMPOSTAZIONI</li>
-          <li><a href="newsletter-form.php">NEWSLETTER</a></li>
+          <?php
+              if(isset($_SESSION['newsletter']) && $_SESSION['newsletter'] === true){
+                echo "<li>NEWSLETTER <span style=\"color: green !important;\">&check;<span></li>";
+              } else{
+                echo "<li><a href=\"newsletter-form.php\">NEWSLETTER</a></li>";
+              }
+          ?>
           <li>FAQ</li>
           <?php
             if(isset($_SESSION['tipo_utente'])){

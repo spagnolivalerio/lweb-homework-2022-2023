@@ -40,21 +40,11 @@
   margin: 100px auto;
 }
 
-.checkbox
-{
-  text-align: center;
-}
-
-.checkbox input
-{
-  width: fit-content;
-}
-
-.errors
+#errors
 {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 	top: 170px;
-    color:red;
+  color: red;
 }
