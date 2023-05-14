@@ -18,7 +18,7 @@
     <form method="post" action="../lib/php/registrazione.php" class="form">
 
       <?php
-        if(isset($_SESSION['fields']) && $_SESSION['fields'] === 'empty'){
+        if(isset($_SESSION['empty'])){
           $missed_field = "&#x26A0; compila tutti i campi prima di procedere.";
           echo "<script>
 
@@ -32,20 +32,25 @@
                 </script>
 
                 <div id=\"missed-field\" style=\"color: red;\">$missed_field</div>";
-                
-                unset($_SESSION['fields']);
         }
+                
       ?>
       <div class="bar">REGISTRAZIONE</div>
       <div class="grid">
         <div class="column">
           <div class="form-item">
             <label for="nome">NOME:</label><br />
-            <input type="text" name="nome"></input>
+            <input type="text" name="nome" 
+            <?php if(isset($_SESSION['empty']) && $_SESSION['empty']['empty-name'] === false){
+              echo " value=\"".$_SESSION['nome']."\"";
+            }?>></input>
           </div>
           <div class="form-item">
             <label for="cognome">COGNOME:</label><br />
-            <input type="text" name="cognome"></input>
+            <input type="text" name="cognome"
+            <?php if(isset($_SESSION['empty']) && $_SESSION['empty']['empty-lastname'] === false){
+              echo " value=\"".$_SESSION['cognome']."\"";
+            }?>></input>
           </div>
         </div>
         <div class="column">
@@ -77,7 +82,10 @@
           </div>
           <div class="form-item">
             <label for="password">PASSWORD:</label><br />
-            <input type="password" name="password"></input>
+            <input type="password" name="password"
+            <?php if(isset($_SESSION['empty']) && $_SESSION['empty']['empty-pwd'] === false){
+              echo " value=\"".$_SESSION['password']."\"";
+            }?>></input>
           </div><br />
         </div>
       </div>

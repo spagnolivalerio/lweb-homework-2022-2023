@@ -117,9 +117,6 @@
                   unset($_SESSION['fields']);
           }
 
-        ?>
-
-        <?php
           if(isset($_SESSION['esistenza']) && $_SESSION['esistenza'] === true){
             $invalid_signup = '&#x26A0; profilo già registrato alla newsletter';
             echo "<div id=\"errors\">$invalid_signup</div>

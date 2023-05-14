@@ -7,12 +7,12 @@
     $conn = new mysqli($servername, $db_username, $db_password);
 
     if ($conn->connect_error) {
-        exit(1);
+        exit();
     }
 
     if(!isset($_SESSION['tipo_utente'])) {
         header('Location: web/login.php');
-        exit(1);
+        exit();
     } 
 
     switch ($_SESSION['tipo_utente']) {
