@@ -24,12 +24,18 @@
 	$end_date = new DateTime($end_day);
 
 	//Controllo gli errori degli inserimenti date.
-	if(empty($_POST['giorno_fine']) || empty($_POST['giorno_inizio'])){
-		$_SESSION['error_days'] = 'nulldate';
+	if(empty($_POST['giorno_inizio'])){
+		$_SESSION['error_days'] = 'start_nulldate';
 		header('Location: ../../web/form-noleggio.php');
 		exit();
 	}
 
+	if(empty($_POST['giorno_fine'])){
+		$_SESSION['error_days'] = 'end_nulldate';
+		header('Location: ../../web/form-noleggio.php');
+		exit();
+	}
+	
 	if($start_day > $end_day){
 		$_SESSION['error_days'] = 'start > end';
 		header('Location: ../../web/form-noleggio.php');
@@ -39,7 +45,13 @@
 
 	$today = date('Y-m-d');
 	if($start_day < $today){
-		$_SESSION['error_days'] = '<today';
+		$_SESSION['error_days'] = 'start < today';
+		header('Location: ../../web/form-noleggio.php');
+		exit();
+	}
+
+	if($end_day < $today){
+		$_SESSION['error_days'] = 'end < today';
 		header('Location: ../../web/form-noleggio.php');
 		exit();
 	}

@@ -14,7 +14,7 @@
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $_POST['password'];
 
-    if(empty($nome) || empty($cognome) || empty($username) || empty($password)){
+    if(empty($nome) || empty($cognome) || empty($username) || empty($password_crypt)){
 
       $_SESSION['empty']['empty-name'] = empty($nome);
       $_SESSION['empty']['empty-lastname'] = empty($cognome);

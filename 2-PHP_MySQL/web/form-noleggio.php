@@ -70,15 +70,16 @@
 
 					//Controllo sugli errori negli inserimenti delle date.
 					if(isset($_SESSION['error_days'])){
-						if($_SESSION['error_days'] === '<today'){
+						if($_SESSION['error_days'] === 'start < today'){
 							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: Giorno di inizio minore di oggi</div></p>";
-							unset($_SESSION['error_days']);
-						} elseif($_SESSION['error_days'] === 'nulldate'){
-							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: inserisci le date</div></p>";
-							unset($_SESSION['error_days']);
+						} elseif($_SESSION['error_days'] === 'end > today'){
+							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: Giorno finale minore di oggi</div></p>";
+						} elseif($_SESSION['error_days'] === 'start_nulldate'){
+							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: inserisci la data iniziale</div></p>";
+						}	elseif($_SESSION['error_days'] === 'end_nulldate'){
+							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: inserisci la data finale</div></p>";
 						} elseif($_SESSION['error_days'] === 'start > end'){
 							echo"<div class=\"error-container\" id=\"error-container\"><p>Errore: inconsistenza nelle date inserite</div></p>";
-							unset($_SESSION['error_days']);
 						}
 
 							//Script per la scomparsa degli errori.
@@ -120,9 +121,23 @@
 
 				<form action="../lib/php/check-noleggio.php" method="post">
 					<label for="giorno_inizio">Giorno inizio noleggio:</label>
-					<input type="date" name="giorno_inizio"></input><br /><br />
+					<input type="date" name="giorno_inizio"
+					<?php
+					if(isset($_SESSION['error_days'])){
+						if(($_SESSION['error_days'] === 'end < today') || ($_SESSION['error_days'] === 'end_nulldate')){
+							echo" value=\"".$_SESSION['giorno_inizio']."\"";
+						}
+					}
+					?>></input><br /><br />
 					<label for="giorno_fine">Giorno fine noleggio:</label>
-					<input type="date" name="giorno_fine"></input><br /><br />
+					<input type="date" name="giorno_fine"
+					<?php
+					if(isset($_SESSION['error_days'])){
+						if($_SESSION['error_days'] === 'start < today' || $_SESSION['error_days'] === 'start_nulldate'){
+							echo" value=\"".$_SESSION['giorno_fine']."\"";
+						}
+					}
+					?>></input><br /><br />
 					<div><button class="btn" type="submit">VERIFICA DISPONIBILIT&Agrave;</button></div>
 					<input type="hidden" name="id_auto" value="<?php echo"$id_auto"?>"></input>	
 				</form>
@@ -133,6 +148,11 @@
 	</body>
 
 	<?php
+	
+		if(isset($_SESSION['error_days'])){
+			unset($_SESSION['error_days']);
+		}
+
 		$conn->close();
 	?>
 
