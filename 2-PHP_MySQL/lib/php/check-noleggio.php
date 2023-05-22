@@ -35,13 +35,12 @@
 		header('Location: ../../web/form-noleggio.php');
 		exit();
 	}
-	
+
 	if($start_day > $end_day){
 		$_SESSION['error_days'] = 'start > end';
 		header('Location: ../../web/form-noleggio.php');
 		exit();
 	}
-
 
 	$today = date('Y-m-d');
 	if($start_day < $today){
