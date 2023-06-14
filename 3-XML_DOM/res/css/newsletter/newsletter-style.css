@@ -1,0 +1,76 @@
+@font-face
+{
+  font-family: 'Giorgio';
+  src: url('../../font/Giorgio.ttf');
+}
+
+
+*{
+	margin:  0;
+	padding: 0;
+}
+
+html
+{
+	background-color: #37555b;
+}
+
+a{
+	text-decoration: none;
+}
+
+#title img
+{
+	display: block;
+  width: 200px;
+  height: auto;
+  margin: 100px auto;
+}
+
+.blocco {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 3px solid #FF6600;
+	font-size: 25px;
+	background-color: white;
+	padding: 40px;	
+	border-radius: 20px;
+}
+
+  
+h1{
+	color:#FF6600;
+	margin-top: 0px;
+	margin-bottom: 30px;
+	font-family: 'Giorgio';
+	text-align: center;
+}
+
+
+ul{
+	list-style: none;
+}
+
+li{
+	font-size: 20px;
+	margin-top: 5px;
+	text-align: center;
+	font-family: 'Giorgio';
+	margin-left: 5px;
+}
+
+.bottone
+{
+	margin-top: 80px;
+	text-align: center;
+	text-decoration: none;
+	color:#FF6600;
+}
+
+
+.icon-home{
+	color:#FF6600;
+	font-size: 70px;
+}

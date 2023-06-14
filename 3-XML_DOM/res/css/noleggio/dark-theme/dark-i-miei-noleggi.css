@@ -1,0 +1,43 @@
+.row li
+{
+	flex-basis: 20%;
+}
+
+.first-row
+{
+	background-color: #FF6600 !important;
+	color: white;
+}
+
+.row
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	list-style: none;
+	display: flex;
+	margin-bottom: 20px;
+	text-align: center;
+	background-color: white;
+}
+
+.table
+{
+	width: 700px;
+	display: block;
+	margin: 100px auto;
+}
+
+h2
+{
+	width: fit-content;
+	margin: 0 auto;
+	color: white;
+}
+
+.none-nol
+{
+	width: fit-content;
+	margin: 100px auto;
+	font-size: 30px;
+	color: white;
+}

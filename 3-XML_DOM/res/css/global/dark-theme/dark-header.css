@@ -1,0 +1,210 @@
+@font-face
+{
+  font-family: 'Abg';
+  src: url('../../../font/Abg.otf');
+}
+
+@font-face
+{
+  font-family: 'Giorgio';
+  src: url('../../../font/Giorgio.ttf');
+}
+
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+  font-family: 'Giorgio';
+  scroll-behavior: smooth;
+}
+
+html
+{
+  background-color: #171B23;
+}
+
+a
+{
+  text-decoration: none;
+  color: white;
+}
+
+ul
+{
+  list-style: none;
+}
+
+.dkmd
+{
+  color: #171B23;
+  position: absolute;
+  border: none;
+  background-color: white;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.dkmd:hover
+{
+  box-shadow: 0px 0px 15px 0px white;
+}
+
+#header
+{
+  background-image: url('../../../../img/night.jpg');
+  background-position: center; /*posiziona al centro dello spazio disponibile rispetto alla posizione inziale. Lo spazio
+                               disponibile è dato dallo spazio impiegato dagli elementi dell'header*/
+  width: 100%; /*le percentuali sono le stesse di quando zoommi*/
+  height: 520px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mainmenu
+{
+  text-align: center;
+  position: sticky;
+  background-color: whitesmoke;
+  top: 0;
+  z-index: 9;
+  box-shadow: 0px 0px 2px 0px black;
+}
+
+.mainmenu li
+{ 
+  display: inline-block;
+  padding-inline: 14px;
+  padding-block: 14px; 
+}
+
+.mainmenu li a
+{
+  color: black;
+}
+
+#title img
+{
+  display: block;
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#select-menu
+{
+  position: sticky;
+  transform: translateY(-576px);
+  top: 580px;
+  margin: 20px 0 0 20px;
+  z-index: 9;
+  font-size: 24px;
+  padding-inline: 5px;
+  background-color: whitesmoke;
+  width: 40px;
+  height: 40px;
+  border-radius: 80px;
+}
+
+#select-menu a
+{
+  color: #171B23;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/*la proprietà translate non sposta fisicamente l'elelemento, ma lo fa solo apparire spostato. Di conseguenza, per usare la proprietà sticky
+bisogna dare un valore almeno uguale ed opposto per apparare questa distanza. Il risultato sarà comunque visibile dalla posizione ottenuta con
+l'operazione di translate.*/
+
+.mainmenu li:hover > a{
+  color: white;
+}
+
+.mainmenu li:hover{
+  background-color: #171B23;
+  opacity: 0.6;
+}
+
+#hidden-menu
+{
+  background-color: #171B23;
+  color: white;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  border-right: 1px solid black;
+  box-shadow: 1px 0px 9px black;
+}
+
+#back
+{
+  position: fixed;
+  z-index: 10;
+  width: 25%;
+  top: 0;
+}
+
+#back a
+{
+  position: relative;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  float: right;
+  color: white;
+  margin-right: 6px;
+}
+
+#back-target
+{
+  position: fixed;
+}
+
+#hidden-menu:target
+{
+  visibility: visible;
+  opacity: 1;
+}
+
+#back-target:target ~ #hidden-menu
+{
+  visibility: hidden;
+  opacity: 0;
+}
+
+#hidden-menu ul
+{
+  margin-top: 60px;
+  text-align: center;
+}
+
+#hidden-menu li
+{
+  margin-top: 10px;
+}
+
+#newsletter
+{
+  color: #FF6600;
+}
+
+
+
+
+
+

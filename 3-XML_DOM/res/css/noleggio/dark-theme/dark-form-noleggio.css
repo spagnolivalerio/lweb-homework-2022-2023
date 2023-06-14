@@ -1,0 +1,165 @@
+@font-face
+{
+  font-family: 'Giorgio';
+  src: url('../../../font/Giorgio.ttf');
+}
+
+*
+{
+  font-family: 'Giorgio';
+  margin: 0;
+  padding: 0;
+}
+
+html
+{
+  background-color: #171B23;
+}
+
+.larr
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: white;
+  font-size: 40px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  text-align: center;
+}
+
+.larr a
+{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: #171B23;
+}
+
+
+.firstbox
+{
+  position: absolute;
+  width: 700px;
+  height: 450px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  border: 10px solid #FF6600;
+}
+
+.secondbox
+{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border-radius: 25px;
+}
+
+.car-image
+{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: auto;
+}
+
+.thirdbox
+{
+  border-radius: 25px;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -5%;
+  background-color: white;
+}
+
+.car-name
+{
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -20px;
+  background-color: #171B23;
+  padding-inline: 10px;
+}
+
+.thirdbox input
+{
+  border: none;
+  border-bottom: 1px solid black;
+  padding-inline: 10px;
+}
+
+.thirdbox form
+{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.thirdbox form input{
+  margin-top: 20px;
+}
+
+.thirdbox button
+{
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.error-container
+{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -50px;
+  width: 300px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+.btn
+{
+  width: 250px;
+  background-color: #FF6600;
+  height: fit-content;
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: box-shadow 0.2s ease;
+}
+
+.btn:hover
+{
+  box-shadow: 0px 0px 5px 0px black;
+}
+
+
+
+
+

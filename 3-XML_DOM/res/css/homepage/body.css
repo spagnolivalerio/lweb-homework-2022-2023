@@ -1,0 +1,184 @@
+.grid
+{
+    display: grid;
+    grid-template-columns: 66.66666666% 33.33333333%;
+}
+
+.container
+{
+    background-color: transparent;
+    border: none;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    color: white;
+    margin-top: 20px;
+}
+
+.container-1
+{
+    border-radius: 25px;
+    margin-inline: 20px;
+    text-align: center;
+    display: grid;
+    color: black;
+    grid-template-rows: 33.3333% 33.3333% 33.3333%;
+}
+
+.container-1 a
+{
+    color: black white;
+    background-color: #FF6600;
+    font-size: 25px;
+    padding-inline: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    transition: box-shadow 0.15s linear;
+    border-radius: 10px;
+}
+
+.container-1 a:hover
+{
+    box-shadow: 0px 0px 20px 0px #FF6600;
+}
+
+.row
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.column
+{
+    color: black !important;
+    margin: auto auto;
+    padding: 10px;
+}
+
+
+.container-3
+{
+    background-image: url('../../../img/car1.jpeg');
+}
+
+
+.container-3
+{
+    padding: 30px;
+}
+
+.slider-container		/*i margini sono in percentuale per adattarsi a tutti gli schermi*/
+{		
+	position: relative;
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+  	margin: 0 auto;   
+}
+
+.image-container
+{
+    width: 1250px; /*non è 1200 perchè ci sono problemi di margine*/
+    height: 600px;
+    transition: left 2s;
+    position: relative;
+}
+
+#slider-image-1, #slider-image-2, #slider-image-3
+{
+    position: fixed;
+}
+
+#slider-image-1:target ~ .image-container
+{
+   left: 0px;
+}
+
+#slider-image-2:target ~ .image-container
+{
+   left: -404px;
+}
+
+#slider-image-3:target ~ .image-container
+{
+   left: -808px;
+}
+
+.button-container
+{
+  position: relative;
+  top: -100px;
+  text-align: center;
+}
+
+.slider-change
+{
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: brown;
+}
+
+.slider-image
+{
+  width: 400px;
+  height: auto;
+  margin-top: 10%;
+}
+
+.car-image
+{
+    width: 100%;
+    height: 100%;
+}
+
+.opzioni-veicolo
+{
+    display: inline-block;
+    position: relative;
+    margin-inline: 20px;
+    top: 80px;
+    left: 50px;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 10px;
+    transition: padding, 0.3s, border-radius, 0.3s;
+}
+
+.opzioni-veicolo:hover
+{
+    background-color: white;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.opzioni-veicolo:hover > a
+{
+    color: black;
+}
+
+.brand-text
+{
+    font-weight: bold;
+}
+
+.ads-text
+{
+    font-size: 50px;
+    width: 600px;
+}
+
+#in-evidenza
+{
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.text
+{
+    width: fit-content;
+}
+
