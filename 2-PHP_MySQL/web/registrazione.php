@@ -41,14 +41,14 @@
           <div class="form-item">
             <label for="nome">NOME:</label><br />
             <input type="text" name="nome" 
-            <?php if((isset($_SESSION['empty']) && $_SESSION['empty']['empty-name'] === false) || (isset($_SESSION['signup']) && $_SESSION['signup'] === false)){
+            <?php if((isset($_SESSION['empty']) && $_SESSION['empty']['empty-name'] === false) ||(isset($_SESSION['signup']) && $_SESSION['signup'] === false)){
               echo " value=\"".$_SESSION['nome']."\"";
             }?>></input>
           </div>
           <div class="form-item">
             <label for="cognome">COGNOME:</label><br />
             <input type="text" name="cognome"
-            <?php if((isset($_SESSION['empty']) && $_SESSION['empty']['empty-lastname'] === false) || (isset($_SESSION['signup']) && $_SESSION['signup'] === false)){
+            <?php if((isset($_SESSION['empty']) && $_SESSION['empty']['empty-lastname'] === false) ||(isset($_SESSION['signup']) && $_SESSION['signup'] === false)){
               echo " value=\"".$_SESSION['cognome']."\"";
             }?>></input>
           </div>
@@ -97,8 +97,7 @@
       }
       if(isset($_SESSION['signup'])){
         unset($_SESSION['signup']);
-      }
-      ?>
+      }?>
 
     </form><br />
 
