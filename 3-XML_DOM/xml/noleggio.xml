@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<noleggi xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       	 xsi:noNamespaceSchemaLocation="../xml/noleggio.xsd">
+
+    <noleggio id="1" id_auto="1" id_utente="1">
+    	<data_noleggio>
+    		<data_inizio>2023-06-20</data_inizio>
+    		<data_fine>2023-07-01</data_fine>
+    	</data_noleggio>
+    	<prezzo_tot>132.5</prezzo_tot>
+    </noleggio>
+
+</noleggi>

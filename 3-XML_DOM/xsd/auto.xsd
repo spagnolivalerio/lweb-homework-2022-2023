@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.w3.org/automobili"
+			xmlns:auto="http://www.w3.org/automobili">
+
+	<xsd:element name="automobili">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="auto" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="auto">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="marca" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="modello" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="prezzo_giornaliero" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="nome_file_img" minOccurs="0" maxOccurs="1" />
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:integer" />
+			<xsd:attribute name="colore" type="xsd:string" />
+			<xsd:attribute name="cavalli" type="xsd:integer" />
+			<xsd:attribute name="num_porte" type="xsd:integer" />
+			<xsd:attribute name="num_posti" type="xsd:integer" />
+			<xsd:attribute name="cambio" type="cambio_auto" use="required" />
+			<xsd:attribute name="carburante" type="carburante_auto" use="required" />
+			<xsd:attribute name="categoria" type="categoria_auto" use="required" />
+		</xsd:complexType>
+		<xsd:key name="id_auto">
+			<selector xpath="." />
+			<field xpath="@id" />
+		</xsd:key>
+	</xsd:element>
+
+	<xsd:element name="marca" type="xsd:string" />
+	<xsd:element name="modello" type="xsd:string" />
+	<xsd:element name="colore" type="xsd:string" />
+	<xsd:element name="prezzo_giornaliero" type="xsd:decimal" />
+	<xsd:element name="nome_file_img" type="xsd:string" />
+
+	<xsd:simpleType name="cambio_auto">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Automatico" />
+			<xsd:enumeration value="Manuale" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="carburante_auto">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Benzina" />
+			<xsd:enumeration value="Diesel" />
+			<xsd:enumeration value="Ibrido" />
+			<xsd:enumeration value="GPL" />
+			<xsd:enumeration value="Elettrico" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="categoria_auto">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Utilitaria" />
+			<xsd:enumeration value="Suv" />
+			<xsd:enumeration value="Sportiva" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>
