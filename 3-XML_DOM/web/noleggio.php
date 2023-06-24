@@ -2,7 +2,7 @@
 
   session_start();
   require_once('../res/var/connection.php');
-  require_once('../lib/php/car_card.php');
+  require_once('stampaAuto.php');
 
   $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
@@ -60,13 +60,6 @@
           <li>USATO GARANTITO</li>
           <li><a href ="noleggio.php">PRENOTA UN NOLEGGIO</a></li>
           <li>IMPOSTAZIONI</li>
-          <?php
-              if(isset($_SESSION['newsletter']) && $_SESSION['newsletter'] === true){
-                echo "<li>NEWSLETTER <span style=\"color: green !important;\">&check;<span></li>";
-              } else{
-                echo "<li><a href=\"newsletter-form.php\">NEWSLETTER</a></li>";
-              }
-          ?>
           <li>FAQ</li>
 
           <?php
@@ -104,19 +97,8 @@
       <div class="box">
 
        <?php
-
-        $auto_noleggio = "SELECT *
-                         FROM auto;";
-
-        $result = mysqli_query($conn, $auto_noleggio);
-
-        if(mysqli_num_rows($result) > 0){
   
-          print_auto($result);
-
-        } else {
-          echo "<div class=\"non-disp\">NON CI SONO MACCHINE DISPONIBILI PER IL NOLEGGIO</div>";
-        }
+          print_auto();
 
         $conn->close();
 

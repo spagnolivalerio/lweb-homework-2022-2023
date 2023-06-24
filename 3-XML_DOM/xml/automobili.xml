@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automobili xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml/auto.xsd">
+    <auto targa="AA000AA" colore="white" cavalli="50" num_porte="5" num_posti="5" cambio="Manuale" carburante="GPL" categoria="Utilitaria">
+    	<marca>BMW</marca>
+    	<modello>X3</modello>
+    	<prezzo_giornaliero>37</prezzo_giornaliero>
+    	<nome_file_img>bmwX3.jpg</nome_file_img>
+    </auto>
+    <auto targa="AA001AA" colore="white" cavalli="56" num_porte="3" num_posti="5" cambio="Automatico" carburante="Benzina" categoria="Utilitaria">
+    	<marca>AUDI</marca>
+    	<modello>A5</modello>
+    	<prezzo_giornaliero>50</prezzo_giornaliero>
+    	<nome_file_img>audiA5.jpg</nome_file_img>
+    </auto>
+</automobili>
