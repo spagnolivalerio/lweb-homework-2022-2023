@@ -1,9 +1,7 @@
 <?php
 
 	session_start();
-	require_once('../res/var/connection.php');
-
-	$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+	require_once('../lib/DOM/cerca_auto.php');
 
 	//Verifichiamo che siamo loggati.
 	if(!isset($_SESSION['tipo_utente'])){
@@ -18,23 +16,8 @@
 		$id_auto = $_POST['id_auto'];
 	}
 
-	$auto_da_noleggiare = "SELECT *
-					   						FROM auto
-					   						WHERE id = $id_auto;";
-
-	$res = mysqli_query($conn, $auto_da_noleggiare);
-
-	//Verifichiamo che la query dia risultati.
-	if(mysqli_num_rows($res) < 0){
-		exit(1);
-	}
-
-	$row = mysqli_fetch_array($res);
-
-	//Salviamo in variabili di sessione i vari attributi.
-	$_SESSION['prezzo_giornaliero'] = $row['prezzo_giornaliero'];
-	$_SESSION['marca'] = $row['marca'];
-	$_SESSION['modello'] = $row['modello'];
+	//definita in DOM/cerca_auto.php
+	cerca_auto($id_auto);
 
 ?>
 
@@ -63,7 +46,7 @@
 		<div class="firstbox">
 		   	<p class="car-name"><?php echo"".$_SESSION['marca']." ".$_SESSION['modello'].""?></p>
 				<div class="secondbox">
-					<img class="car-image" src="../img/car-img/<?php echo"".$row['nome_file_img'].""?>" alt="car"></img>
+					<img class="car-image" src="../img/car-img/<?php echo"".$_SESSION['nome_file_img'].""?>" alt="car"></img>
 				</div>
 				<div class="thirdbox">
 				<?php
@@ -152,8 +135,6 @@
 		if(isset($_SESSION['error_days'])){
 			unset($_SESSION['error_days']);
 		}
-
-		$conn->close();
 	?>
 
 </html>

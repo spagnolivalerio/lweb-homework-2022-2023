@@ -5,6 +5,24 @@
     	<modello>X3</modello>
     	<prezzo_giornaliero>37</prezzo_giornaliero>
     	<nome_file_img>bmwX3.jpg</nome_file_img>
+        <noleggio id_noleggio="a0" id_utente="1">
+            <data_noleggio>
+                <data_inizio>2024-03-11</data_inizio>
+                <data_fine>2024-04-10</data_fine>
+            </data_noleggio>
+        </noleggio>
+        <noleggio id_noleggio="a1" id_utente="1">
+            <data_noleggio>
+                <data_inizio>2025-05-29</data_inizio>
+                <data_fine>2025-06-14</data_fine>
+            </data_noleggio>
+        </noleggio>
+        <noleggio id_noleggio="a2" id_utente="3">
+            <data_noleggio>
+                <data_inizio>2025-06-21</data_inizio>
+                <data_fine>2025-07-21</data_fine>
+            </data_noleggio>
+        </noleggio>
     </auto>
     <auto targa="AA001AA" colore="white" cavalli="56" num_porte="3" num_posti="5" cambio="Automatico" carburante="Benzina" categoria="Utilitaria">
     	<marca>AUDI</marca>
