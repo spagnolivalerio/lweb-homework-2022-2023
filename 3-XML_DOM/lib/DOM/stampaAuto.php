@@ -29,10 +29,7 @@ for ($i=0; $i<$elementi->length; $i++) {
     $carburante = $auto->getAttribute('carburante');
     $cavalli = $auto->getAttribute('cavalli');
 
-
-
-
-  //usata in web/noleggio.php
+    //usata in web/noleggio.php
 
             echo "<div class=\"row\">
 

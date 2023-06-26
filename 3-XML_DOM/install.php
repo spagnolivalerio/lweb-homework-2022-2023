@@ -13,8 +13,15 @@
                     cognome VARCHAR(32) NOT NULL
                     );";
 
+    $password_crypt = md5('password');
+    $password_crypt = mysqli_real_escape_string($conn, $password_crypt);
 
-    $queries = array($create_utente);
+    $insert_utente = "INSERT INTO utente (username, password, nome, cognome)
+                      VALUES ('utente1', '$password_crypt', 'Valerio', 'Spagnoli'),
+                             ('utente2', '$password_crypt', 'Daniele', 'Siciliano');";
+
+
+    $queries = array($create_utente, $insert_utente);
 
 
     if(!mysqli_query($conn, $create_db)){

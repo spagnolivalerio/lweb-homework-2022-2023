@@ -102,7 +102,7 @@
 
 				?>
 
-				<form action="../lib/php/check-noleggio.php" method="post">
+				<form action="../lib/DOM/check-noleggio.php" method="post">
 					<label for="giorno_inizio">Giorno inizio noleggio:</label>
 					<input type="date" name="giorno_inizio"
 					<?php

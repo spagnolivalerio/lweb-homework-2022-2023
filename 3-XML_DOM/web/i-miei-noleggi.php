@@ -1,15 +1,5 @@
 <?php
     session_start();
-    require_once('../res/var/connection.php');
-    
-    $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
-
-    $id_utente = $_SESSION['id_utente'];
-
-    $view = "SELECT *
-    		   FROM noleggio n, auto a
-    		   WHERE n.id_utente = '$id_utente'
-    		   AND n.id_auto = a.id";
 ?>
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -59,13 +49,6 @@
           <li>USATO GARANTITO</li>
           <li><a href ="noleggio.php">PRENOTA UN NOLEGGIO</a></li>
           <li>IMPOSTAZIONI</li>
-          <?php
-              if(isset($_SESSION['newsletter']) && $_SESSION['newsletter'] === true){
-                echo "<li>NEWSLETTER <span style=\"color: green !important;\">&check;<span></li>";
-              } else{
-                echo "<li><a href=\"newsletter-form.php\">NEWSLETTER</a></li>";
-              }
-          ?>
           <li>FAQ</li>
             <?php
             if(isset($_SESSION['tipo_utente'])){
@@ -105,24 +88,76 @@
 				 <li>Data fine</li>
 				 <li>Prezzo totale</li>
 			</ul>
+
 				<?php
 
-					$res = mysqli_query($conn, $view);
+          $xmlstring = "";
+          foreach (file('../xml/automobili.xml') as $node) {
+            $xmlstring .= trim($node);
+          }
 
-					if(mysqli_num_rows($res) > 0){
+          $doc = new DOMDocument();
+          $doc->loadXML($xmlstring);
+          $root = $doc->documentElement;
+          $nodi = $root->childNodes;
 
-			 			foreach ($res as $row){
-			 				echo "<ul class=\"row\">
-			 						<li>" . $row['marca'] . "</li>
-			 						<li>" . $row['modello'] . "</li>
-			 						<li>" . $row['data_inizio'] . "</li>
-			 						<li>" . $row['data_fine'] . "</li>
-			 						<li>" . $row['prezzo_tot'] . " &euro;</li>
-			 					 </ul>";
-			 			}
-					} else {
-						echo "<p class=\"none-nol\">NON CI SONO NOLEGGI</p>";
-					}
+          for ($i = 0; $i < $nodi->length; $i++){
+
+            $auto = $nodi->item($i);
+            $auto_elements = $auto->childNodes;
+
+            $k = 0;
+
+            while(!is_null($auto_elements->item(4+$k))){
+
+              $noleggio = $auto_elements->item(4+$k);
+              $id_utente = $noleggio->getAttribute('id_utente');
+
+              if($id_utente === $_SESSION['id_utente']){
+
+                $marca = $auto->firstChild;
+                $nomeMarca = $marca->textContent;
+                $modello = $marca->nextSibling;
+                $nomeModello = $modello->textContent;
+                $prezzo_giornaliero = $modello->nextSibling;
+                $value_pg = $prezzo_giornaliero->nodeValue;
+                $id_noleggio = $noleggio->getAttribute('id_noleggio');
+                $targa = $auto->getAttribute('targa');
+
+                $data_noleggio = $noleggio->firstChild;
+                $data_inizio = $data_noleggio->firstChild;
+                $data_fine = $data_noleggio->lastChild;
+
+                $value_di = $data_inizio->nodeValue;
+                $value_df = $data_fine->nodeValue;
+
+                $value_di = new DateTime($value_di);
+                $value_df = new DateTime($value_df);
+
+                $diff = date_diff($value_di, $value_df);
+                $num_days = $diff->days;
+
+                $tot = ($num_days + 1) * $value_pg;
+
+                echo "<div class=\"row-box\">
+                        <ul class=\"row\">
+                          <li>$nomeMarca</li>
+                          <li>$nomeModello</li>
+                          <li>" . $value_di->format('Y-m-d') . "</li>
+                          <li>" . $value_df->format('Y-m-d') . "</li>
+                          <li>$tot &euro;</li>
+                        </ul>
+                        <form method=\"post\" action=\"../lib/DOM/remove_noleggio.php\">
+                          <input class=\"remove\" type=\"submit\" value=\"Cancella\"></input>
+                          <input type=\"hidden\" name=\"id_noleggio\" value=\"$id_noleggio\"></input>
+                          <input type=\"hidden\" name=\"targa_auto\" value=\"$targa\"></input>
+                        </form>
+                      </div>";
+              }
+
+              $k++;
+            }
+          }
 
 				?>
 		</div>

@@ -6,9 +6,6 @@ if(!$doc->schemaValidate('../../xsd/auto.xsd')){
 	echo "Il file non è conforme allo schema";
 } else {
 	echo "Il file segue in modo corretto il suo xsd";
-	header('Location:../php/'.$_SESSION['turnBack']);
-	unset($_SESSION['turnBack']);
-	exit();
 }
 
 ?>

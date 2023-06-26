@@ -39,3 +39,24 @@ h2
 	margin: 100px auto;
 	font-size: 30px;
 }
+
+.row-box
+{
+	position: relative;
+}
+
+.remove
+{
+	color: black !important;
+	position: absolute;
+	right: -15%;
+	top: 10px;
+	background-color: transparent;
+	border: none; 
+	font-size: 20px;
+}
+
+.remove:hover
+{
+	text-decoration: underline;
+}

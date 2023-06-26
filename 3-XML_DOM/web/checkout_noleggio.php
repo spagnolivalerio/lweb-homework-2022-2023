@@ -56,7 +56,7 @@
                 	       "<li>&#128664; Noleggio <span class=\"bold-text\"> " . $_SESSION['marca'] . " " . $_SESSION['modello'] . "</span></li>
                 	       <li>&#128197; Dal: " . $_SESSION['giorno_inizio'] . " al: " . $_SESSION['giorno_fine'] . "</li>
                 	       <li>&#128181; Costo Totale: <span class=\"bold-text\">" . $tot_costo . "&euro;</span></li>
-                           <form action=\"../lib/php/insert_in_noleggio.php\" method=\"post\">
+                           <form action=\"../lib/DOM/insert_in_noleggio.php\" method=\"post\">
                 	           <button class=\"noleggio-button\" type=\"submit\">CONFERMA</button>
                            </form>";
                 } elseif($_SESSION['conferma_noleggio'] === true){

@@ -1,8 +1,5 @@
 <?php
 	session_start();
-	require_once('../../res/var/connection.php');
-
-	$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
 	if(!isset($_SESSION['tipo_utente'])){
         header('Location: login.php');
@@ -77,6 +74,7 @@
 			$auto_elements = $auto->childNodes;
 			$k = 0;
 			$counter = 0;
+			
 			while(!is_null($auto_elements->item(4+$k))){
 
 				$noleggio_auto = $auto_elements->item(4+$k);
@@ -90,7 +88,7 @@
 				if(($value_di >= $start_day && $end_day >= $value_di) ||
 				   ($start_day <= $value_df && $end_day >= $value_df) ||
 				   ($value_di <= $start_day && $value_df >= $end_day) ||
-				   ($start_day <= $value_di && $end_day >= $value_df)){
+				   ($start_day <= $value_di && $end_day >= $value_df)   ){
 
 					$counter++;
 				}
@@ -123,7 +121,5 @@
 
   		}
    }
-
-   $conn->close();
 
 ?>

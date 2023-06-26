@@ -13,8 +13,10 @@ function cerca_auto($targa_auto){
 	$nodi = $root->childNodes;
 
 	for($i = 0; $i < $nodi->length; $i++){
+
 		$auto = $nodi->item($i);
 		$targa = $auto->getAttribute('targa');
+		
 		if($targa === $targa_auto){
 
 			$marca = $auto->firstChild;

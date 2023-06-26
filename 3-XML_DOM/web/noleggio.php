@@ -1,10 +1,7 @@
 <?php
 
   session_start();
-  require_once('../res/var/connection.php');
-  require_once('stampaAuto.php');
-
-  $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+  require_once('../lib/DOM/stampaAuto.php');
 
 ?>
 
@@ -99,8 +96,6 @@
        <?php
   
           print_auto();
-
-        $conn->close();
 
        ?>
       </div>
