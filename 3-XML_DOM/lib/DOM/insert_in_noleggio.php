@@ -56,7 +56,7 @@
 				$int = intval($num[0]);
 				$int = $int + 1;
 				$int = strval($int);
-				$newid = "_" . $int;
+				$newid = "" . $targa_auto. "_" . $int;
 
 				$noleggio->setAttribute('id_noleggio', $newid);
 
