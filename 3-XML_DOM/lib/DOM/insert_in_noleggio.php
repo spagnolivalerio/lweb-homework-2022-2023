@@ -62,6 +62,8 @@
 
 				$auto->appendChild($noleggio);
 
+				$doc->formatOutput = true;
+
 				$xml = $doc->saveXML();
 				$xmlfile = "../../xml/automobili.xml";
 

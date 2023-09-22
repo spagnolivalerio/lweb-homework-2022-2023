@@ -33,12 +33,15 @@ for($i = 0; $i < $nodi->length; $i++){
 
 				$auto->removeChild($noleggio);
 
+				$doc->formatOutput = true;
+
 				$xml = $doc->saveXML();
 				$xmlfile = "../../xml/automobili.xml";
 
 				file_put_contents($xmlfile, $xml);
 
 				header('location: ../../web/i-miei-noleggi.php');
+				exit();
 
 			} else {
 				
@@ -49,5 +52,6 @@ for($i = 0; $i < $nodi->length; $i++){
 }
 
 header('location: ../../web/i-miei-noleggi.php');
+
 
 ?>

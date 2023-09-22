@@ -1,2 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<automobili xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml/auto.xsd"><auto targa="AA000AA" colore="bianco" cavalli="100" num_porte="5" num_posti="5" cambio="Manuale" carburante="GPL" categoria="Suv"><marca>BMW</marca><modello>X3</modello><prezzo_giornaliero>73</prezzo_giornaliero><nome_file_img>bmwX3.jpg</nome_file_img><noleggio id_utente="1" id_noleggio="AA000AA_1"><data_noleggio><data_inizio>2023-06-29</data_inizio><data_fine>2023-07-02</data_fine></data_noleggio></noleggio></auto><auto targa="AA001AA" colore="rosso" cavalli="80" num_porte="5" num_posti="5" cambio="Automatico" carburante="Benzina" categoria="Suv"><marca>JEEP</marca><modello>RENEGADE</modello><prezzo_giornaliero>57</prezzo_giornaliero><nome_file_img>jeep_renegade.jpg</nome_file_img><noleggio id_utente="1" id_noleggio="AA001AA_1"><data_noleggio><data_inizio>2023-07-06</data_inizio><data_fine>2023-07-09</data_fine></data_noleggio></noleggio></auto><auto targa="AA002AA" colore="grigio" cavalli="65" num_porte="5" num_posti="5" cambio="Manuale" carburante="Benzina" categoria="Utilitaria"><marca>MERCEDES</marca><modello>CLASSE C</modello><prezzo_giornaliero>56</prezzo_giornaliero><nome_file_img>mercedesclasseC.jpg</nome_file_img></auto><auto targa="AA003AA" colore="blu" cavalli="98" num_porte="5" num_posti="5" cambio="Automatico" carburante="Diesel" categoria="Sportiva"><marca>AUDI</marca><modello>A5</modello><prezzo_giornaliero>78</prezzo_giornaliero><nome_file_img>audiA5.jpg</nome_file_img><noleggio id_utente="2" id_noleggio="AA003AA_1"><data_noleggio><data_inizio>2023-06-27</data_inizio><data_fine>2023-06-28</data_fine></data_noleggio></noleggio></auto><auto targa="AA004AA" colore="bianco" cavalli="49" num_porte="3" num_posti="5" cambio="Automatico" carburante="Benzina" categoria="Utilitaria"><marca>RENAULT</marca><modello>CLIO</modello><prezzo_giornaliero>43</prezzo_giornaliero><nome_file_img>renaultCLIO.jpg</nome_file_img><noleggio id_utente="2" id_noleggio="AA004AA_1"><data_noleggio><data_inizio>2023-06-29</data_inizio><data_fine>2023-06-30</data_fine></data_noleggio></noleggio></auto><auto targa="AA005AA" colore="verde" cavalli="50" num_porte="5" num_posti="5" cambio="Manuale" carburante="GPL" categoria="Utilitaria"><marca>CITROEN</marca><modello>C3</modello><prezzo_giornaliero>56</prezzo_giornaliero><nome_file_img>citroenC3.jpg</nome_file_img><noleggio id_utente="2" id_noleggio="AA005AA_1"><data_noleggio><data_inizio>2023-07-12</data_inizio><data_fine>2023-07-22</data_fine></data_noleggio></noleggio></auto></automobili>
+<automobili xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml/auto.xsd">
+  <auto targa="AA000AA" colore="bianco" cavalli="100" num_porte="5" num_posti="5" cambio="Manuale" carburante="GPL" categoria="Suv">
+    <marca>BMW</marca>
+    <modello>X3</modello>
+    <prezzo_giornaliero>73</prezzo_giornaliero>
+    <nome_file_img>bmwX3.jpg</nome_file_img>
+    <noleggio id_utente="1" id_noleggio="AA000AA_1">
+      <data_noleggio>
+        <data_inizio>2023-09-23</data_inizio>
+        <data_fine>2023-10-29</data_fine>
+      </data_noleggio>
+    </noleggio>
+  </auto>
+  <auto targa="AA001AA" colore="rosso" cavalli="80" num_porte="5" num_posti="5" cambio="Automatico" carburante="Benzina" categoria="Suv">
+    <marca>JEEP</marca>
+    <modello>RENEGADE</modello>
+    <prezzo_giornaliero>57</prezzo_giornaliero>
+    <nome_file_img>jeep_renegade.jpg</nome_file_img>
+  </auto>
+  <auto targa="AA002AA" colore="grigio" cavalli="65" num_porte="5" num_posti="5" cambio="Manuale" carburante="Benzina" categoria="Utilitaria">
+    <marca>MERCEDES</marca>
+    <modello>CLASSE C</modello>
+    <prezzo_giornaliero>56</prezzo_giornaliero>
+    <nome_file_img>mercedesclasseC.jpg</nome_file_img>
+  </auto>
+  <auto targa="AA003AA" colore="blu" cavalli="98" num_porte="5" num_posti="5" cambio="Automatico" carburante="Diesel" categoria="Sportiva">
+    <marca>AUDI</marca>
+    <modello>A5</modello>
+    <prezzo_giornaliero>78</prezzo_giornaliero>
+    <nome_file_img>audiA5.jpg</nome_file_img>
+    <noleggio id_utente="2" id_noleggio="AA003AA_1">
+      <data_noleggio>
+        <data_inizio>2023-06-27</data_inizio>
+        <data_fine>2023-06-28</data_fine>
+      </data_noleggio>
+    </noleggio>
+  </auto>
+  <auto targa="AA004AA" colore="bianco" cavalli="49" num_porte="3" num_posti="5" cambio="Automatico" carburante="Benzina" categoria="Utilitaria">
+    <marca>RENAULT</marca>
+    <modello>CLIO</modello>
+    <prezzo_giornaliero>43</prezzo_giornaliero>
+    <nome_file_img>renaultCLIO.jpg</nome_file_img>
+    <noleggio id_utente="2" id_noleggio="AA004AA_1">
+      <data_noleggio>
+        <data_inizio>2023-06-29</data_inizio>
+        <data_fine>2023-06-30</data_fine>
+      </data_noleggio>
+    </noleggio>
+  </auto>
+  <auto targa="AA005AA" colore="verde" cavalli="50" num_porte="5" num_posti="5" cambio="Manuale" carburante="GPL" categoria="Utilitaria">
+    <marca>CITROEN</marca>
+    <modello>C3</modello>
+    <prezzo_giornaliero>56</prezzo_giornaliero>
+    <nome_file_img>citroenC3.jpg</nome_file_img>
+    <noleggio id_utente="2" id_noleggio="AA005AA_1">
+      <data_noleggio>
+        <data_inizio>2023-07-12</data_inizio>
+        <data_fine>2023-07-22</data_fine>
+      </data_noleggio>
+    </noleggio>
+  </auto>
+</automobili>
