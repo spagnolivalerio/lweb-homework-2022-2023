@@ -1,0 +1,148 @@
+@font-face
+{
+  font-family: 'Poppins';
+  src: url('../font/Poppins.otf');
+}
+
+*
+{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins';
+}
+
+html
+{
+	background-color: black;
+}
+
+.circle
+{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: none;
+	box-shadow: 5px white;
+}
+
+.circle_1
+{
+	background: linear-gradient(#1845ad, #23a2f6);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(120%, -250%);
+}
+
+.circle_2
+{
+	background: linear-gradient(to right, #ff512f,#f09819);
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-190%, 120%);
+}
+
+.circle_3
+{
+	background: rgb(113,255,102);
+	background: linear-gradient(90deg, rgba(113,255,102,1) 13%, rgba(0,199,66,1) 76%);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-140%, -160%);
+	width: 250px;
+	height: 250px;
+}
+
+.container
+{
+	justify-content: center;
+	display: flex;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -80%);
+	flex-wrap: wrap;
+	flex-basis: 50%;
+}
+
+
+.form
+{
+	width: 500px;
+	height: 650px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	backdrop-filter: blur(10px);
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.signup_title
+{
+	position: relative;
+	left: 50%;
+	top: 10%;
+	transform: translateX(-50%);
+	width: fit-content;
+	color: white;
+	font-size: 25px;
+}
+.form-item
+{
+	font-family: 'Poppins';
+	padding: 10px;
+	color: white;
+	width: fit-content;
+}
+
+.form-item input
+{
+	padding: 5px;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.6);
+	font-size: 18px;
+	color: black;
+	font-family: 'Poppins';
+	border-radius: 5px;
+}
+
+.submit button
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 120px);
+  width: 230px;
+  background-color: white;
+  height: fit-content;
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  transition: box-shadow 0.2s ease;
+}
+
+.submit button:hover
+{
+	box-shadow: 0 0 10px white;
+}
+
+.signup
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 150px);
+	margin-top: 24px;
+	text-align: center;
+}
