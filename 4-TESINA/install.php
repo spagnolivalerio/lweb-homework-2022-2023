@@ -25,5 +25,21 @@
 					  VALUES (Valerio, Spagnoli, utente1, $crypt_pwd, $email_1, amministratore),
 					  	     (Daniele, Siciliano, utente2, $crypt_pwd, $email_2, amministratore);";
 	
+	$queries = array($create_db, $create_utente, $insert_utente);
 
+ 	if(!mysqli_query($conn, $create_db)){
+        exit();
+    } else {
+        $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+    }
+
+    foreach ($queries as $query) {
+        if(!$conn->query($query)){
+            exit();
+        }
+    }
+
+	header("Location: web/login.php");
+
+	$conn->close;
 ?>
