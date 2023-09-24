@@ -1,0 +1,100 @@
+@font-face
+{
+	font-family: 'Poppins';
+	src: url('../font/Poppins.otf');
+}
+
+*
+{
+	font-family: 'Poppins';
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html
+{
+	background-color: black;
+}
+
+.box
+{
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%); 
+	width: 1350px;
+	height: 700px;
+	border-radius: 10px;
+}
+
+.boxbox
+{
+	position: fixed;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%); 
+	background-color: rgba(255, 255, 255, 0.1);
+	width: 1350px;
+	height: 700px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+}
+
+.circle
+{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	border: none;
+	box-shadow: 5px white;
+}
+
+#circle1
+{
+	background: rgb(184,102,255);
+	background: linear-gradient(90deg, rgba(184,102,255,1) 5%, rgba(90,10,150,1) 69%, rgba(91,8,111,1) 100%);
+	width: 100px; 
+	height: 100px;
+}
+
+#circle2
+{
+	background: rgb(210,181,13);
+	background: linear-gradient(90deg, rgba(210,181,13,1) 29%, rgba(255,223,10,1) 100%);
+	width: 100px;
+	height: 100px;
+}
+
+#circle3
+{
+	background: linear-gradient(to right, #ff512f,#f09819);
+	width: 120px;
+	height: 120px;
+}
+
+#circle4
+{
+	background: rgb(210,13,83);
+	background: linear-gradient(90deg, rgba(210,13,83,1) 29%, rgba(182,0,0,1) 100%);
+	width: 70px; 
+	height: 70px;
+}
+
+#circle5
+{
+	background: rgb(13,210,168);
+	background: linear-gradient(90deg, rgba(13,210,168,1) 29%, rgba(10,255,67,1) 100%);
+	width: 50px;
+	height: 50px; 
+}
+
+#circle6
+{
+	background: rgb(10,150,141);
+	background: linear-gradient(90deg, rgba(10,150,141,1) 29%, rgba(8,97,111,1) 100%);
+	width: 130px;
+	height: 130px;
+}
+
