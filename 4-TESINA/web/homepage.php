@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
 	<div class="circle" id="circle1"></div>
 	<div class="circle" id="circle2"></div>
 	<div class="circle" id="circle3"></div>
@@ -22,7 +23,7 @@
 	<div class="circle" id="circle6"></div>
 
 	<script>
-		
+
 		const circle1 = document.getElementById('circle1');
 		const circle2 = document.getElementById('circle2');
 		const circle3 = document.getElementById('circle3');
@@ -75,15 +76,39 @@
 
 	<div class="boxbox"></div>
 	<div class="box">
-		<div class="projects"></div>
-		<div class="projects"></div>
-		<div class="projects"></div>
-		<div class="projects"></div>
-		<div class="projects"></div>
-		<div class="projects"></div>
-		<div class="projects"></div>
-		<div class="projects"></div>
-		<div class="projects"></div>
+		<div class="projects">
+			<div class="img"></div>
+			<div class="project-title">Titolo</div>
+			<div class="flex-box">
+				<div class="autore">autore</div>
+				<div class="dettagli">dettagli</div>
+			</div>
+			<div class="time">Tempo stimato: 5h e 30min</div>
+		</div>
+		<div class="projects">
+			<div class="img"></div>
+		</div>
+		<div class="projects">
+			<div class="img"></div>
+		</div>
+		<div class="projects">
+			<div class="img"></div>
+		</div>
+		<div class="projects">
+			<div class="img"></div>
+		</div>
+		<div class="projects">
+			<div class="img"></div>
+		</div>
+		<div class="projects">
+			<div class="img"></div>
+		</div>
+		<div class="projects">
+			<div class="img"></div>
+		</div>
+		<div class="projects">
+			<div class="img"></div>
+		</div>
 	</div>
 </body>
 
