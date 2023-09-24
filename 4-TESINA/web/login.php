@@ -13,9 +13,9 @@
 	</head>
 
 	<body>
-		<div class="circle circle_1"></div>
-		<div class="circle circle_2"></div>
-		<div class="circle circle_3"></div>
+		<div class="circle circle_1" id="circle1"></div>
+		<div class="circle circle_2" id="circle2"></div>
+		<div class="circle circle_3" id="circle3"></div>
         <div class="box">
         	<form class="form" method="post" action="">
         		<div class="login">LOGIN</div>
