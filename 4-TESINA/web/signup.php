@@ -28,7 +28,6 @@
                 let angle = 0;
 
                 function animate() {
-                    // Calcola la posizione verticale basata su una funzione sinusoidale
                     const yPos1 = amplitude * Math.sin(frequency * time);
                     const yPos2 = amplitude * Math.cos(frequency * time + Math.PI * 0.5);
                     const yPos3 = amplitude * Math.cos(frequency * time + Math.PI);
@@ -37,20 +36,16 @@
                     const xPos2 = radius * Math.cos(angle + Math.PI * 0.5);
                     const xPos3 = radius * Math.cos(angle + Math.PI);
 
-                    // Imposta le posizioni dei div
                     circle1.style.transform = `translate(${-50 + xPos1}%, ${yPos1}%)`;
                     circle2.style.transform = `translate(${40 + xPos2}%, ${-40 + yPos2}%)`;
                     circle3.style.transform = `translate(${-120 + xPos3}%, ${-60 + yPos3}%)`;
 
-                    // Aggiorna il tempo
                     time += 1;
                     angle += 0.01; 
 
-                    // Richiedi un nuovo frame di animazione
                     requestAnimationFrame(animate);
                 }
 
-                // Avvia l'animazione
              animate();
         </script>
 

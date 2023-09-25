@@ -17,8 +17,27 @@
 		<div class="circle circle_2" id="circle2"></div>
 		<div class="circle circle_3" id="circle3"></div>
         <div class="box">
-        	<form class="form" method="post" action="">
+        	<form class="form" method="post" action="../lib/login.php">
         		<div class="login">LOGIN</div>
+        		<div id="error">
+        		<?php 
+        			if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] === "false"){
+        				echo "Inserisci le credenziali";
+        				echo "<script>
+
+        						function scomparsa(){
+        							var error = document.getElementById('error');
+        							error.style.display = \"none\";
+        						}
+
+        						setTimeout(scomparsa, 4000);
+
+        					 </script>";
+
+        				unset($_SESSION['credenziali']);
+        			}
+        		?>
+         		</div>
         		<div class="form-item">
         			<label for="username">Nome utente</label></br></br>
         			<input name="username" type="text"></input></br>

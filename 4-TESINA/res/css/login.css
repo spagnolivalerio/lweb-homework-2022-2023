@@ -131,3 +131,12 @@ html
 	margin-top: 24px;
 	text-align: center;
 }
+
+#error
+{
+	position: absolute;
+	color: red;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+}
