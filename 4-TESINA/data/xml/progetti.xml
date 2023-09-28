@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xml/progetti.xsd">
-	<progetto visualizzazioni="10">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml/progetto_schema.xsd">
+	<progetto visualizzazioni="10" difficolta="esperto">
 		<titolo>prova</titolo>
-		<categoria_progetto>
+		<categoria>
 			<enum_value>Elettronica</enum_value>
-		</categoria_progetto>
+			<enum_value>Programmazione</enum_value>
+		</categoria>
 		<creator>1</creator>
-		<descrizione_progetto>bel progetto</descrizione_progetto>
-		<difficolta_progetto>facile</difficolta_progetto>
+		<descrizione>bel progetto</descrizione>
 		<link_immagine>immagine</link_immagine>
-		<tempo_medio_esecuzione>1230</tempo_medio_esecuzione>
+		<tempo_medio>1230</tempo_medio>
 	</progetto>
 </progetti>
