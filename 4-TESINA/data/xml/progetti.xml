@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml/progetto_schema.xsd">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml/schema_progetto.xsd">
 	<progetto visualizzazioni="10" difficolta="esperto">
-		<titolo>prova</titolo>
 		<categoria>
 			<enum_value>Elettronica</enum_value>
 			<enum_value>Programmazione</enum_value>
