@@ -4,6 +4,7 @@
 		<categoria>
 			<enum_value>Elettronica</enum_value>
 			<enum_value>Programmazione</enum_value>
+			<enum_value>Programma</enum_value>
 		</categoria>
 		<creator>1</creator>
 		<descrizione>bel progetto</descrizione>

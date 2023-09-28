@@ -21,7 +21,7 @@
 	function getCategoria($nomefile){ //mi restituisce un array con dentro gli array con le categorie dei progetti
 
 		$nodeList = uploadXml($nomefile);
-		$array_categorie = array();
+		$array_categorie_column = array();
 
 		for($i = 0; $i < $nodeList->length; $i++){
 
@@ -30,56 +30,95 @@
 			$categorie = $progetto->firstChild;
 			$categoria = $categorie->firstChild;
 
-			$array_categoria = array();
+			$array_categorie_row = array();
 			$k = 0;
-			$array_categoria[$k] = $categoria->textContent;
+			$array_categorie_row[$k] = $categoria->textContent;
 
-			if(!is_null($categoria->nextSibling)){
+			while(!is_null($categoria->nextSibling)){
 
 				$categoria = $categoria->nextSibling;
 				$k++;
-				$array_categoria[$k] = $categoria->textContent;
-				$array_categorie[$i] = $array_categoria;
+				$array_categorie_row[$k] = $categoria->textContent;
 
 			}
 
+				$array_categorie_column[$i] = $array_categorie_row;
+
 		}
 
-		return $array_categorie;
+		return $array_categorie_column;
 	}
 
 	function getCommenti($nomefile){
 
 		$nodeList = uploadXml($nomefile);
-		$array_commenti = array();
+		$array_commento_column = array();
 
 		for($i = 0; $i < $nodeList->length; $i++){
 
 			$progetto = $nodeList->item($i);
 
-			$categorie = $progetto->item($i);
-			$commenti = $categorie->nextSibling;
+			$elementi = $progetto->childNodes;
+			$commenti = $elementi->item(1);
 			$commento = $commenti->firstChild;
 
 			if(is_null($commento)){
 				exit();
 			}
 
-			$array_commento = array();
+			$array_commento_row = array();
 			$k = 0;
-			$array_commento[$k] = $commento->textContent;
+			$array_commento_row[$k] = $commento->textContent;
 
-			if(!is_null($commento->nextSibling)){
+			while(!is_null($commento->nextSibling)){
 
 				$commento = $commento->nextSibling;
 				$k++;
-				$array_commento[$k] = $commento->textContent;
-				$array_commenti[$i] = $array_commento;
+				$array_commenti_row[$k] = $commento->textContent;
+
 			}
+
+				$array_commenti_column[$i] = $array_commenti_row;
 
 		}
 
-		return $array_commenti;
+		return $array_commenti_column;
+	}
+
+	function getValutazione($nomefile){
+
+		$nodeList = uploadXml($nomefile);
+		$array_valutazioni_column = array();
+
+		for($i = 0; $i < $nodeList->length; $i++){
+
+			$progetto = $nodeList->item($i);
+
+			$elementi = $progetto->childNodes;
+			$valutazioni = $elementi->item(2);
+			$valutazione = $valutazioni->firstChild;
+
+			if(is_null($valutazione)){
+				exit();
+			}
+
+			$array_valutazioni_row = array();
+			$k = 0; 
+			$array_valutazioni_row[$k] = $valutazione->nodeValue;
+
+			while(!is_null($valutazione->nextSibling)){
+
+				$valutazione = $valutazione->nextSibling;
+				$k++;
+				$array_valutazioni_row[$k] = $valutazione->nodeValue;
+
+			}
+
+				$array_valutazioni_column[$i] = $array_valutazioni_row;
+
+		}
+
+		return $array_valutazioni_column;
 	}
 
 

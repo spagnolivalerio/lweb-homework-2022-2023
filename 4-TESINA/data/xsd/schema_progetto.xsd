@@ -14,11 +14,11 @@
 			<xsd:sequence>
 				<xsd:element ref="categoria" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="commenti" minOccurs="1" maxOccurs="1" />
-				<xsd:element ref="valutazione_progetto" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="valutazione_progetto" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="creator" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="descrizione" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="link_immagine" minOccurs="1" maxOccurs="1" />
-				<xsd:element ref="report" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="reports" minOccurs="0" maxOccurs="1" />
 				<xsd:element ref="tempo_medio" minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="id_progetto" type="xsd:ID" />
@@ -58,13 +58,13 @@
 	<xsd:element name="valutazione_progetto">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="valutazione" type="valutazioneComplexType" />
+				<xsd:element name="valutazione" type="valutazioneComplexType" minOccurs="0" maxOccurs="unbounded" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
 
 	<xsd:complexType name="valutazioneComplexType">
-		<xsd:element name="valutazione" type="valutazioneType" />
+		<xsd:element name="istanza_valutazione" type="valutazioneType" />
 		<xsd:attribute name="id_utente" type="xsd:integer" />
 	</xsd:complexType>
 
@@ -74,6 +74,14 @@
 			<xsd:maxInclusive value="5" />
 		</xsd:restriction>
 	</xsd:simpleType>
+
+	<xsd:element name="reports">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="report" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
 
 	<xsd:element name="report">
 		<xsd:complexType>
