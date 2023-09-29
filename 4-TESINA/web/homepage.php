@@ -2,7 +2,7 @@
 	session_start();
 	require_once('../lib/xsdFunction.php');
 	require_once('../lib/printFunction.php');
-	$path = "progetti.xml";
+	require_once('../data/xml/xmlFile.php');
 ?>
 
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -90,7 +90,7 @@
 
 			<?php
 
-				showProjects($path);
+				showProjects($xmlProgetti);
 
 			?>
 

@@ -35,7 +35,7 @@
 		$_SESSION['Nome'] = $row['nome'];
 		$_SESSION['Cognome'] = $row['cognome'];
 		$_SESSION['Tipo_utente'] = $row['tipo'];
-		$_SESSION['id'] = $row['id'];
+		$_SESSION['id_utente'] = $row['id'];
 
 		header('Location: ../web/homepage.php');
 	} else {

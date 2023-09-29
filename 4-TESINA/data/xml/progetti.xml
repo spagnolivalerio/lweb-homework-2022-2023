@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <progetti xmlns="http://www.tesina/progetti">
 
-    <progetto id="1" id_creator="123" tempo_medio="10" file_img="immagine.jpg" data_pubblicazione="2023-09-29T12:00:00" visualizzazioni="500">
-        <categorie>
-            <categoria id_categoria="ELE" />
-            <categoria id_categoria="SW" />
-        </categorie>
-        <descrizione>Descrizione del progetto...</descrizione>
-        <commenti>
-             <commento id_commento="1" />
-        </commenti>
-        <reports>
-            <report id_report="101" />
-            <report id_report="102" />
-        </reports>
-    </progetto>
     <progetto id="1" id_creator="123" tempo_medio="10" file_img="arduino.jpg" data_pubblicazione="2023-09-29T12:00:00" visualizzazioni="500">
         <categorie>
             <categoria id_categoria="ELE" />
@@ -22,7 +8,8 @@
         </categorie>
         <descrizione>Descrizione del progetto...</descrizione>
         <commenti>
-           
+           <commento id_commento="1" />
+           <commento id_commento="2" />
         </commenti>
         <reports>
             <report id_report="101" />
