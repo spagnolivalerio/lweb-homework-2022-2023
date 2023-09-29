@@ -1,5 +1,7 @@
 <?php 
 	session_start();
+	require_once('../lib/function.php');
+	$path = "progetti.xml";
 ?>
 
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -74,41 +76,25 @@
 
 	</script>
 
-	<div class="boxbox"></div>
-	<div class="box">
-		<div class="projects">
-			<div class="img"></div>
-			<div class="project-title">Titolo</div>
-			<div class="flex-box">
-				<div class="autore">autore</div>
-				<div class="dettagli">dettagli</div>
-			</div>
-			<div class="time">Tempo stimato: 5h e 30min</div>
+	<div class="boxbox">
+		<div class="menu"></div>
+	</div>
+	
+
+	<div class="container">
+
+		<div class="menu_container"></div>
+
+		<div class="box">
+
+			<?php
+
+				showProjects($path);
+
+			?>
+
 		</div>
-		<div class="projects">
-			<div class="img"></div>
-		</div>
-		<div class="projects">
-			<div class="img"></div>
-		</div>
-		<div class="projects">
-			<div class="img"></div>
-		</div>
-		<div class="projects">
-			<div class="img"></div>
-		</div>
-		<div class="projects">
-			<div class="img"></div>
-		</div>
-		<div class="projects">
-			<div class="img"></div>
-		</div>
-		<div class="projects">
-			<div class="img"></div>
-		</div>
-		<div class="projects">
-			<div class="img"></div>
-		</div>
+
 	</div>
 </body>
 

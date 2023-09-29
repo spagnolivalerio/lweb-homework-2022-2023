@@ -1,14 +1,339 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml/schema_progetto.xsd">
-	<progetto visualizzazioni="10" difficolta="esperto">
+	<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="arduino1">
 		<categoria>
 			<enum_value>Elettronica</enum_value>
 			<enum_value>Programmazione</enum_value>
 			<enum_value>Programma</enum_value>
 		</categoria>
-		<creator>1</creator>
+		<commenti>
+			<commento>COMMENTO1</commento>
+			<commento>COMMENTO2</commento>
+			<commento>COMMENTO2bis</commento>
+			<commento>COMMENTO3</commento>
+			<commento>COMMENTO4</commento>
+			<commento>COMMENTO5</commento>
+			<commento>COMMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
 		<descrizione>bel progetto</descrizione>
 		<link_immagine>immagine</link_immagine>
+		<tempo_medio>1230</tempo_medio>
+	</progetto>
+		<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="arduino1">
+		<categoria>
+			<enum_value>Elettronica</enum_value>
+			<enum_value>Programbfdmazione</enum_value>
+			<enum_value>Programma</enum_value>
+		</categoria>
+		<commenti>
+			<commento>COMMENTO1dfs</commento>
+			<commento>CfbOMMENTO2</commento>
+			<commento>COd sMMENdsTO2bis</commento>
+			<commento>COMMENsfbvTO3</commento>
+			<commento>COMMEsfNTO4</commento>
+			<commento>sfb</commento>
+			<commento>COMsfMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
+		<descrizione>bel proge dstto</descrizione>
+		<link_immagine>immag dsine</link_immagine>
+		<tempo_medio>1230</tempo_medio>
+	</progetto>
+	<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="arduino1">
+		<categoria>
+			<enum_value>Elettronica</enum_value>
+			<enum_value>Programbfdmazione</enum_value>
+			<enum_value>Programma</enum_value>
+		</categoria>
+		<commenti>
+			<commento>COMMENTO1dfs</commento>
+			<commento>CfbOMMENTO2</commento>
+			<commento>COd sMMENdsTO2bis</commento>
+			<commento>COMMENsfbvTO3</commento>
+			<commento>COMMEsfNTO4</commento>
+			<commento>sfb</commento>
+			<commento>COMsfMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
+		<descrizione>bel proge dstto</descrizione>
+		<link_immagine>immag dsine</link_immagine>
+		<tempo_medio>1230</tempo_medio>
+	</progetto>
+	<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="arduino1">
+		<categoria>
+			<enum_value>Elettronica</enum_value>
+			<enum_value>Programbfdmazione</enum_value>
+			<enum_value>Programma</enum_value>
+		</categoria>
+		<commenti>
+			<commento>COMMENTO1dfs</commento>
+			<commento>CfbOMMENTO2</commento>
+			<commento>COd sMMENdsTO2bis</commento>
+			<commento>COMMENsfbvTO3</commento>
+			<commento>COMMEsfNTO4</commento>
+			<commento>sfb</commento>
+			<commento>COMsfMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
+		<descrizione>bel proge dstto</descrizione>
+		<link_immagine>immag dsine</link_immagine>
+		<tempo_medio>1230</tempo_medio>
+	</progetto>
+	<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="arduino1">
+		<categoria>
+			<enum_value>Elettronica</enum_value>
+			<enum_value>Programbfdmazione</enum_value>
+			<enum_value>Programma</enum_value>
+		</categoria>
+		<commenti>
+			<commento>COMMENTO1dfs</commento>
+			<commento>CfbOMMENTO2</commento>
+			<commento>COd sMMENdsTO2bis</commento>
+			<commento>COMMENsfbvTO3</commento>
+			<commento>COMMEsfNTO4</commento>
+			<commento>sfb</commento>
+			<commento>COMsfMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
+		<descrizione>bel proge dstto</descrizione>
+		<link_immagine>immag dsine</link_immagine>
+		<tempo_medio>1230</tempo_medio>
+	</progetto>
+	<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="arduino1">
+		<categoria>
+			<enum_value>Elettronica</enum_value>
+			<enum_value>Programbfdmazione</enum_value>
+			<enum_value>Programma</enum_value>
+		</categoria>
+		<commenti>
+			<commento>COMMENTO1dfs</commento>
+			<commento>CfbOMMENTO2</commento>
+			<commento>COd sMMENdsTO2bis</commento>
+			<commento>COMMENsfbvTO3</commento>
+			<commento>COMMEsfNTO4</commento>
+			<commento>sfb</commento>
+			<commento>COMsfMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
+		<descrizione>bel proge dstto</descrizione>
+		<link_immagine>immag dsine</link_immagine>
+		<tempo_medio>1230</tempo_medio>
+	</progetto>
+	<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="arduino1">
+		<categoria>
+			<enum_value>Elettronica</enum_value>
+			<enum_value>Programbfdmazione</enum_value>
+			<enum_value>Programma</enum_value>
+		</categoria>
+		<commenti>
+			<commento>COMMENTO1dfs</commento>
+			<commento>CfbOMMENTO2</commento>
+			<commento>COd sMMENdsTO2bis</commento>
+			<commento>COMMENsfbvTO3</commento>
+			<commento>COMMEsfNTO4</commento>
+			<commento>sfb</commento>
+			<commento>COMsfMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
+		<descrizione>bel proge dstto</descrizione>
+		<link_immagine>immag dsine</link_immagine>
+		<tempo_medio>1230</tempo_medio>
+	</progetto>
+	<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="arduino1">
+		<categoria>
+			<enum_value>Elettronica</enum_value>
+			<enum_value>Programmazione</enum_value>
+			<enum_value>Programma</enum_value>
+		</categoria>
+		<commenti>
+			<commento>COMMENTO1</commento>
+			<commento>COMMENTO2</commento>
+			<commento>COMMENTO2bis</commento>
+			<commento>COMMENTO3</commento>
+			<commento>COMMENTO4</commento>
+			<commento>COMMENTO5</commento>
+			<commento>COMMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
+		<descrizione>bel progetto</descrizione>
+		<link_immagine>immagine</link_immagine>
+		<tempo_medio>1230</tempo_medio>
+	</progetto>
+		<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="arduino1">
+		<categoria>
+			<enum_value>Elettronica</enum_value>
+			<enum_value>Programbfdmazione</enum_value>
+			<enum_value>Programma</enum_value>
+		</categoria>
+		<commenti>
+			<commento>COMMENTO1dfs</commento>
+			<commento>CfbOMMENTO2</commento>
+			<commento>COd sMMENdsTO2bis</commento>
+			<commento>COMMENsfbvTO3</commento>
+			<commento>COMMEsfNTO4</commento>
+			<commento>sfb</commento>
+			<commento>COMsfMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
+		<descrizione>bel proge dstto</descrizione>
+		<link_immagine>immag dsine</link_immagine>
+		<tempo_medio>1230</tempo_medio>
+	</progetto>
+	<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="arduino1">
+		<categoria>
+			<enum_value>Elettronica</enum_value>
+			<enum_value>Programbfdmazione</enum_value>
+			<enum_value>Programma</enum_value>
+		</categoria>
+		<commenti>
+			<commento>COMMENTO1dfs</commento>
+			<commento>CfbOMMENTO2</commento>
+			<commento>COd sMMENdsTO2bis</commento>
+			<commento>COMMENsfbvTO3</commento>
+			<commento>COMMEsfNTO4</commento>
+			<commento>sfb</commento>
+			<commento>COMsfMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
+		<descrizione>bel proge dstto</descrizione>
+		<link_immagine>immag dsine</link_immagine>
+		<tempo_medio>1230</tempo_medio>
+	</progetto>
+	<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="arduino1">
+		<categoria>
+			<enum_value>Elettronica</enum_value>
+			<enum_value>Programbfdmazione</enum_value>
+			<enum_value>Programma</enum_value>
+		</categoria>
+		<commenti>
+			<commento>COMMENTO1dfs</commento>
+			<commento>CfbOMMENTO2</commento>
+			<commento>COd sMMENdsTO2bis</commento>
+			<commento>COMMENsfbvTO3</commento>
+			<commento>COMMEsfNTO4</commento>
+			<commento>sfb</commento>
+			<commento>COMsfMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
+		<descrizione>bel proge dstto</descrizione>
+		<link_immagine>immag dsine</link_immagine>
+		<tempo_medio>1230</tempo_medio>
+	</progetto>
+	<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="arduino1">
+		<categoria>
+			<enum_value>Elettronica</enum_value>
+			<enum_value>Programbfdmazione</enum_value>
+			<enum_value>Programma</enum_value>
+		</categoria>
+		<commenti>
+			<commento>COMMENTO1dfs</commento>
+			<commento>CfbOMMENTO2</commento>
+			<commento>COd sMMENdsTO2bis</commento>
+			<commento>COMMENsfbvTO3</commento>
+			<commento>COMMEsfNTO4</commento>
+			<commento>sfb</commento>
+			<commento>COMsfMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
+		<descrizione>bel proge dstto</descrizione>
+		<link_immagine>immag dsine</link_immagine>
+		<tempo_medio>1230</tempo_medio>
+	</progetto>
+	<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="arduino1">
+		<categoria>
+			<enum_value>Elettronica</enum_value>
+			<enum_value>Programbfdmazione</enum_value>
+			<enum_value>Programma</enum_value>
+		</categoria>
+		<commenti>
+			<commento>COMMENTO1dfs</commento>
+			<commento>CfbOMMENTO2</commento>
+			<commento>COd sMMENdsTO2bis</commento>
+			<commento>COMMENsfbvTO3</commento>
+			<commento>COMMEsfNTO4</commento>
+			<commento>sfb</commento>
+			<commento>COMsfMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
+		<descrizione>bel proge dstto</descrizione>
+		<link_immagine>immag dsine</link_immagine>
+		<tempo_medio>1230</tempo_medio>
+	</progetto>
+	<progetto visualizzazioni="10" difficolta="esperto" id_progetto="AAA" titolo="titolodi prova">
+		<categoria>
+			<enum_value>Elettronica</enum_value>
+			<enum_value>Programbfdmazione</enum_value>
+			<enum_value>Programma</enum_value>
+		</categoria>
+		<commenti>
+			<commento>COMMENTO1dfs</commento>
+			<commento>CfbOMMENTO2</commento>
+			<commento>COd sMMENdsTO2bis</commento>
+			<commento>COMMENsfbvTO3</commento>
+			<commento>COMMEsfNTO4</commento>
+			<commento>sfb</commento>
+			<commento>COMsfMENTO6</commento>
+		</commenti>
+		<valutazione_progetto>
+			<valutazione id_utente="1"></valutazione>
+			<valutazione id_utente="2"></valutazione>
+		</valutazione_progetto>
+		<creator>2</creator>
+		<descrizione>bel proge dstto</descrizione>
+		<link_immagine>immag dsine</link_immagine>
 		<tempo_medio>1230</tempo_medio>
 	</progetto>
 </progetti>

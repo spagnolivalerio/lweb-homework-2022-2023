@@ -18,6 +18,13 @@
 
 	}
 
+	function numProjects($nomefile){
+
+		$nodeList = uploadXml($nomefile);
+
+		return $nodeList->length;
+	}
+
 	function getCategoria($nomefile){ //mi restituisce un array con dentro gli array con le categorie dei progetti
 
 		$nodeList = uploadXml($nomefile);
@@ -63,12 +70,12 @@
 			$commento = $commenti->firstChild;
 
 			if(is_null($commento)){
-				exit();
+				return 0;
 			}
 
-			$array_commento_row = array();
+			$array_commenti_row = array();
 			$k = 0;
-			$array_commento_row[$k] = $commento->textContent;
+			$array_commenti_row[$k] = $commento->textContent;
 
 			while(!is_null($commento->nextSibling)){
 
@@ -99,7 +106,7 @@
 			$valutazione = $valutazioni->firstChild;
 
 			if(is_null($valutazione)){
-				exit();
+				return 0;
 			}
 
 			$array_valutazioni_row = array();
@@ -119,6 +126,119 @@
 		}
 
 		return $array_valutazioni_column;
+	}
+
+	function getCreator($nomefile){
+
+		$nodeList = uploadXml($nomefile);
+		$array_id_progetti = array();
+
+		for($i = 0; $i < $nodeList->length; $i++){
+
+			$progetto = $nodeList->item($i);
+			$array_id_progetti[$i] = $progetto->getAttribute('id_progetto');
+
+		}
+
+		return $array_id_progetti;
+
+	}
+
+	function getDescrizione($nomefile){
+
+		$nodeList = uploadXml($nomefile);
+		$array_descrizioni = array();
+
+		for($i = 0; $i < $nodeList->length; $i++){
+
+			$progetto = $nodeList->item($i);
+			$elementi = $progetto->childNodes;
+			$descrizione = $elementi->item(4);
+
+			$array_descrizioni[$i] = $descrizione->textContent;
+
+		}
+
+		return $array_descrizioni;
+	}
+
+	function getTitolo($nomefile){
+
+		$nodeList = uploadXml($nomefile);
+		$array_titoli = array();
+
+		for($i = 0; $i < $nodeList->length; $i++){
+
+			$progetto = $nodeList->item($i);
+			$titolo = $progetto->getAttribute('titolo');
+			$array_titoli[$i] = $titolo;
+
+		}
+
+		return $array_titoli;
+	}
+
+	function getTempistica($nomefile){
+
+		$nodeList = uploadXml($nomefile);
+		$array_tempistiche = array();
+
+		for($i = 0; $i < $nodeList->length; $i++){
+
+			$progetto = $nodeList->item($i);
+			$elementi = $progetto->childNodes;
+			$tempistica = $elementi->item(6);
+
+			$array_tempistiche[$i] = $tempistica->textContent; 
+
+		}
+
+		return $array_tempistiche;
+
+	}
+
+	function getIDprogetto($nomefile){
+
+		$nodeList = uploadXml($nomefile);
+		$array_id_progetti = array();
+
+		for($i = 0; $i < $nodeList->length; $i++){
+
+			$progetto = $nodeList->item($i);
+			$id = $progetto->getAttribute('id_progetto');
+			$array_id_progetti[$i] = $id;
+
+		}
+
+		return $array_id_progetti;
+
+
+	}
+
+	function showProjects($nomefile){
+
+		$numProjects = numProjects($nomefile);
+
+		$titolo = getTitolo($nomefile);
+		$tempistica = getTempistica($nomefile);
+		$creator = getCreator($nomefile);
+		$id = getIDprogetto($nomefile);
+
+		for($i = 0; $i < $numProjects; $i++){
+	
+			echo "	<div class=\"projects\">
+						<img class=\"img\" src=\"../img/arduino.jpg\"></img>
+						<div class=\"project-title\">$titolo[$i]</div>
+						<div class=\"flex-box\">
+							<div class=\"autore\">autore</div>
+							<form class=\"dettagli\" method=\"post\" action=\"\">
+								<input name=\"id_progetto\" type=\"hidden\" value=\"$id[$i]\"></input>
+								<button class=\"dettagli_bottone\" type=\"submit\">dettagli</button>
+							</form>
+						</div>
+						<div class=\"time\">Tempo stimato: $tempistica[$i]</div>
+					</div>";
+		}
 	}
 
 

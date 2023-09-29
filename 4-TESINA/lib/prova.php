@@ -1,13 +1,33 @@
 <?php
+
 require_once('function.php');
 
-$array = getCategoria('progetti.xml');
+$path = "progetti.xml";
 
-$prova = $array[0][0];
-$prova1 = $array[0][1];
-$prov = $array[0][2];
- 
-echo "$prova, $prova1, $prov";
+$categorie = getCategoria($path);
+$commenti = getCommenti($path);
+$valutazione = getValutazione($path);
+$creator = getCreator($path);
+$descrizione = getDescrizione($path);
+
+$lenght = numProjects($path);
+
+for($i = 0; $i < $lenght; $i++){
+
+	$categorie_istanza = $categorie[$i];
+
+	foreach($categorie_istanza as $categorie_progetto){
+
+			echo "$categorie_progetto \n";
+	}
+
+	$commenti_istanza = $commenti[$i];
+
+	foreach($commenti_istanza as $commento){
+
+		echo "$commento ";
+	}
+	
+}
 
 
-?>
