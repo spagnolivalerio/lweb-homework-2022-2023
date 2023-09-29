@@ -1,6 +1,7 @@
 <?php 
 	session_start();
 	require_once('../lib/xsdFunction.php');
+	require_once('../lib/printFunction.php');
 	$path = "progetti.xml";
 ?>
 

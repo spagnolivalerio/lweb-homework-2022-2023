@@ -8,7 +8,7 @@
         </categorie>
         <descrizione>Descrizione del progetto...</descrizione>
         <commenti>
-            
+             <commento id_commento="1" />
         </commenti>
         <reports>
             <report id_report="101" />
@@ -36,8 +36,8 @@
         </categorie>
         <descrizione>Descrizione del progetto...</descrizione>
         <commenti>
-            <commento id_commento="14" />
-            <commento id_commento="22" />
+            <commento id_commento="1" />
+            <commento id_commento="2" />
         </commenti>
         <reports>
             <report id_report="101" />
@@ -52,7 +52,7 @@
         <descrizione>Descrizione del progetto...</descrizione>
         <commenti>
             <commento id_commento="34" />
-            <commento id_commento="2" />
+            <commento id_commento="1" />
         </commenti>
         <reports>
             <report id_report="101" />

@@ -3,7 +3,7 @@
 require_once('../data/xml/xmlFile.php');
 require_once('xsdFunction.php');
 
-$commenti = getIDCommenti($xmlProgetti);
+$commenti = getIDcommenti_from_progetti($xmlProgetti);
 $lenght = numElements($xmlProgetti);
 
 for($i = 0; $i < $lenght; $i++){
