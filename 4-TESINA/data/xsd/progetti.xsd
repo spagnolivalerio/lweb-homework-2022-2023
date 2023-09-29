@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns:pro="http://www.tesina/progetti"
+			targetNamespace="http://www.tesina/progetti">
+
+	<xsd:element name="progetti">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="1">
+				<xsd:element ref="pro:progetto" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="progetto">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="pro:categorie" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="pro:descrizione" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="pro:commenti" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="pro:reports" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:positiveInteger" />
+			<xsd:attribute name="id_creator" type="xsd:positiveInteger" />
+			<xsd:attribute name="tempo_medio" type="xsd:positiveInteger" />
+			<xsd:attribute name="file_img" type="xsd:string" />
+			<xsd:attribute name="data_pubblicazione" type="xsd:dateTime" />
+			<xsd:attribute name="visualizzazioni" type="xsd:positiveInteger" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="categorie">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="1">
+				<xsd:element ref="pro:categoria" minOccurs="1" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="categoria">
+		<xsd:complexType>
+			<xsd:attribute name="id_categoria" type="xsd:ID" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="descrizione" type="xsd:string" />
+
+	<xsd:element name="commenti">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="1">
+				<xsd:element ref="pro:commento" minOccurs="0" maxOccurs="unbounded" />				
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="commento">
+		<xsd:complexType>
+			<xsd:attribute name="id_commento" type="xsd:positiveInteger" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="reports">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="1">
+				<xsd:element ref="pro:report" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="report">
+		<xsd:complexType>
+			<xsd:attribute name="id_report" type="xsd:positiveInteger"/>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

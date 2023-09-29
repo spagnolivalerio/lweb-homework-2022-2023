@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns:val="http://www.tesina/valutazioni"
+			targetNamespace="http://www.tesina/valutazioni">
+
+	<xsd:element name="valutazioni">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="1">
+				<xsd:element ref="val:valutazione" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="valutazione">
+		<xsd:complexType>
+			<xsd:attribute name="id" type="xsd:positiveInteger" />
+			<xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
+			<xsd:attribute name="value" type="val:valutazioneType" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:simpleType name="valutazioneType">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:minInclusive value="1" />
+			<xsd:maxInclusive value="5" />
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

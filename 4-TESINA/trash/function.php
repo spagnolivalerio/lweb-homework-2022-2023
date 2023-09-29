@@ -1,9 +1,9 @@
 <?php
 
-	function uploadXml($nomefile){
+	function uploadXml($xmlFile){
 
 		$xmlstring = "";
-		foreach (file("../data/xml/$nomefile") as $node){
+		foreach (file("../data/xml/$xmlFile") as $node){
   			$xmlstring .= trim($node);
 		}
 
@@ -18,16 +18,16 @@
 
 	}
 
-	function numProjects($nomefile){
+	function numElements($xmlFile){
 
-		$nodeList = uploadXml($nomefile);
+		$nodeList = uploadXml($xmlFile);
 
 		return $nodeList->length;
 	}
 
-	function getCategoria($nomefile){ //mi restituisce un array con dentro gli array con le categorie dei progetti
+	function getCategoria($xmlCategoria){ //mi restituisce un array con dentro gli array con le categorie dei progetti
 
-		$nodeList = uploadXml($nomefile);
+		$nodeList = uploadXml($xmlCategoria);
 		$array_categorie_column = array();
 
 		for($i = 0; $i < $nodeList->length; $i++){

@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	require_once('../lib/function.php');
+	require_once('../lib/xsdFunction.php');
 	$path = "progetti.xml";
 ?>
 

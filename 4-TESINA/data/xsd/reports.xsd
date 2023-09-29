@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns:rep="http://www.tesina/reports"
+			targetNamespace="http://www.tesina/reports">
+
+	<xsd:element name="reports">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="1">
+				<xsd:element ref="rep:report" minOccurs="0" maxOccurs="unbounded" /> 
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="report">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="rep:tipo" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="rep:testo" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:positiveInteger" />
+			<xsd:attribute name="id_utente" type="xsd:positiveInteger" />
+			<xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="tipo">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="spam" />
+				<xsd:enumeration value="contenuti inappropriati" />
+				<xsd:enumeration value="contenuti inesatti" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+
+	<xsd:element name="testo" type="xsd:string" />
+
+</xsd:schema>

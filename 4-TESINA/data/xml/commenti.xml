@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commenti xmlns="http://www.tesina/commenti">
+
+	<commento id="1" id_commentatore="1">
+		<testo>Commento di prova</testo>
+	</commento>
+
+</commenti>

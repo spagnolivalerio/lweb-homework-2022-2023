@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reports xmlns="http://www.tesina/reports">
+
+	<report id="1" id_utente="1" id_progetto="1">
+		<tipo>spam</tipo>
+		<testo>l'utente ha berardi al fanta</testo>
+	</report>
+</reports>

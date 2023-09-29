@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns:cat="http://www.tesina/categorie"
+			targetNamespace="http://www.tesina/categorie">
+
+	<xsd:element name="categorie">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="cat:categoria" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="categoria">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="cat:nomeCategoria" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:ID" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="nomeCategoria" type="xsd:string" />
+
+</xsd:schema>
