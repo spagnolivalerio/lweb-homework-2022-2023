@@ -12,9 +12,30 @@
 		$id_progetto = $_SESSION['id_progetto'];
 	}
 
-	$num = $_POST['num_progetto'];
+	$_SESSION['id_progetto'] = $id_progetto;
 
-	showComments($xmlCommenti, $xmlProgetti, $num);
+	if(isset($_POST['num_progetto'])){
+
+		$_SESSION['num'] = $_POST['num_progetto'];
+	}
+
+	showComments($xmlCommenti, $xmlProgetti, $_SESSION['num']);
 
 ?>
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<body>
+		
+		<form method="post" action="../lib/commentare.php">
+			<input type="text" name="commento"></input>
+			<button type="subimt">commenta</button>
+		</form>
+	</body>
+</html>
 
