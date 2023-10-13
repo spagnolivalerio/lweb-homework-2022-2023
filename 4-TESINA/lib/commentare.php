@@ -6,7 +6,7 @@
 	$id_utente = $_SESSION['id_utente'];
 	$id_progetto = $_SESSION['id_progetto'];
 
-	if(isset($_POST['commento'])){
+	if(isset($_POST['commento']) && !empty($_POST['commento'])){
 
 		$commento = $_POST['commento'];
 		$doc = getDOMdocument($xmlCommenti);
@@ -38,6 +38,8 @@
 
 		$newcom->setAttribute('id', $id_commento);
 		$newcom->setAttribute('id_commentatore', $id_utente);
+		$newcom->setAttribute('id_progetto', $id_progetto);
+
 		$root->appendChild($newcom);
 
 		$doc->formatOutput = true;
@@ -74,9 +76,8 @@
 
 	} else {
 
-		exit();
 		header('Location: ../web/progetto.php');
-
+		exit();
 	}
 
 

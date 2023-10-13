@@ -92,9 +92,24 @@
 
 				showProjects($xmlProgetti);
 
+				$count = $_SESSION['num'] % 2;
+
+				if($count === 1){
+
+					echo "<div class=\"projects\" style=\"height: 50px; background-color: transparent; backdrop-filter: none\";></div>";
+					echo "<div class=\"projects\" style=\"height: 50px; background-color: transparent; backdrop-filter: none;\"></div>";
+					
+				} else {
+
+					echo "<div class=\"projects\" style=\"height: 50px; background-color: transparent; backdrop-filter: none;\"></div>";
+
+				}
+
 			?>
 
+
 		</div>
+
 
 	</div>
 </body>

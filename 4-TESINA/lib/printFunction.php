@@ -5,6 +5,8 @@
 
 		$numProjects = numElements($xmlprogetti);
 
+		$_SESSION['num'] = $numProjects;
+
 		$titolo = getTitolo($xmlprogetti);
 		$creator = getIDCreator($xmlprogetti);
 		$id = getIDprogetti($xmlprogetti);
@@ -39,7 +41,8 @@
 			foreach($commentList as $com){
 				if($id === $com->getAttribute('id')){
 					$commento = $com->textContent;
-					echo "<div class=\"commento\">$commento</div>";
+					echo "<div class=\"commento\">$commento</div>
+						a";
 				}
 			}
 		}

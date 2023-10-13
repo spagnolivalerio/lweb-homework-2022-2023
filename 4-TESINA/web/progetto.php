@@ -19,8 +19,6 @@
 		$_SESSION['num'] = $_POST['num_progetto'];
 	}
 
-	showComments($xmlCommenti, $xmlProgetti, $_SESSION['num']);
-
 ?>
 
 
@@ -31,6 +29,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 	<body>
+
+		<?php
+
+			showComments($xmlCommenti, $xmlProgetti, $_SESSION['num']);
+
+		?>
 		
 		<form method="post" action="../lib/commentare.php">
 			<input type="text" name="commento"></input>

@@ -17,8 +17,9 @@
 				<xsd:element ref="com:testo" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="com:voto" minOccurs="0" maxOccurs="unbounded" />
 			</xsd:sequence>
-			<xsd:attribute name="id" type="xsd:positiveInteger" />
-			<xsd:attribute name="id_commentatore" type="xsd:positiveInteger" />
+			<xsd:attribute name="id" type="xsd:positiveInteger" use="required" />
+			<xsd:attribute name="id_commentatore" type="xsd:positiveInteger" use="required" />
+			<xsd:attribute name="id_progetto" type="xsd:positiveInteger" use="required" />
 		</xsd:complexType>
 	</xsd:element> 
 
