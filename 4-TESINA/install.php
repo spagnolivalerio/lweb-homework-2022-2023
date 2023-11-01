@@ -16,8 +16,9 @@
 					  username VARCHAR(32) NOT NULL UNIQUE, 
 					  password VARCHAR(128) NOT NULL,
 					  email VARCHAR(128) NOT NULL UNIQUE,
-					  reputazione DECIMAL NOT NULL DEFAULT 0, 
+					  punti_reputazione DECIMAL NOT NULL DEFAULT 0, 
 					  livello INT NOT NULL DEFAULT 0,
+					  clearance INT NOT NULL DEFAULT 1,
 					  tipo ENUM ('standard', 'moderatore', 'amministratore') NOT NULL
 					  );";
 

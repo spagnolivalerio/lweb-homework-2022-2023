@@ -3,11 +3,22 @@
 			xmlns:com="http://www.tesina/commenti"
 			targetNamespace="http://www.tesina/commenti">
 
-	<xsd:element name="commenti">
+	<xsd:element name="discussioni">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="discussione"></xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="discussione">
 		<xsd:complexType>
 			<xsd:sequence minOccurs="0" maxOccurs="1">
 				<xsd:element ref="com:commento"></xsd:element>
 			</xsd:sequence>
+			<xsd:attribute name="titolo" type="xsd:string" />
+			<xsd:attribute name="id_poster" type="xsd:positiveInteger" />
+			<xsd:attribute name="id_discussione" type="xsd:posiitveInteger" />
 		</xsd:complexType>
 	</xsd:element>
 
@@ -27,9 +38,30 @@
 
 	<xsd:element name="voto">
 		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="1">
+				<xsd:element ref="com:utilita" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="com:livello_di_accordo" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
 			<xsd:attribute name="id_votante" type="xsd:positiveInteger" />
-			<xsd:attribute name="value" type="xsd:boolean" />
 		</xsd:complexType>
 	</xsd:element>
+
+	<xsd:element name="utilita" type="com:tipoUtilita" />
+
+	<xsd:simpleType name="tipoUtilita">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:minInclusive value="1" />
+			<xsd:maxInclusive value="5" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:element name="livello_di_accordo" type="com:tipoAccordo" />
+
+	<xsd:simpleType name="tipoAccordo">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:minInclusive value="1" />
+			<xsd:maxInclusive value="3" />
+		</xsd:restriction>
+	</xsd:simpleType>
 
 </xsd:schema>
