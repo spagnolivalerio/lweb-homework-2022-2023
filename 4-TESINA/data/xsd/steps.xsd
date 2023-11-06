@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns:steps="http://www.tesina/steps"
+			targetNamespace="http://www.tesina/steps">
+
+	<xsd:element name="tutorials">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="steps:step" minOccurs="1" maxOccurs="unbounded" />
+			</xsd:sequence>
+			<xsd:attribute name="id_tutorial" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="step">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="steps:descrizione" use="required" />
+				<xsd:element ref="steps:immagine" minOccurs="0" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="descrizione" type="xsd:string" />
+
+</xsd:schema>

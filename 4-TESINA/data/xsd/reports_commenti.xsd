@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns:repcom="http://www.tesina/reports_commenti"
+			targetNamespace="http://www.tesina/reports_commenti">
+
+	<xsd:element name="reports_commenti">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="1">
+				<xsd:element ref="repcom:report_commento" minOccurs="0" maxOccurs="unbounded" /> 
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="report_commento">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="repcom:tipo" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="repcom:testo" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:positiveInteger" />
+			<xsd:attribute name="id_utente" type="xsd:positiveInteger" />
+			<xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="tipo">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="spam" />
+				<xsd:enumeration value="contenuti inappropriati" />
+				<xsd:enumeration value="contenuti inesatti" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+
+	<xsd:element name="testo" type="xsd:string" />
+</xsd:schema>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			xmlns:rep="http://www.tesina/reports"
-			targetNamespace="http://www.tesina/reports">
+			xmlns:reppro="http://www.tesina/reports_progetti"
+			targetNamespace="http://www.tesina/reports_progetti">
 
-	<xsd:element name="reports">
+	<xsd:element name="reports_progetti">
 		<xsd:complexType>
 			<xsd:sequence minOccurs="0" maxOccurs="1">
-				<xsd:element ref="rep:report" minOccurs="0" maxOccurs="unbounded" /> 
+				<xsd:element ref="reppro:report_progetto" minOccurs="0" maxOccurs="unbounded" /> 
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
 
-	<xsd:element name="report">
+	<xsd:element name="report_progetto">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element ref="rep:tipo" minOccurs="1" maxOccurs="1" />
-				<xsd:element ref="rep:testo" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="reppro:tipo" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="reppro:testo" minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
 			<xsd:attribute name="id_utente" type="xsd:positiveInteger" />

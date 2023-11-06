@@ -3,22 +3,11 @@
 			xmlns:com="http://www.tesina/commenti"
 			targetNamespace="http://www.tesina/commenti">
 
-	<xsd:element name="discussioni">
+	<xsd:element name="commenti">
 		<xsd:complexType>
-			<xsd:sequence minOccurs="0" maxOccurs="unbounded">
-				<xsd:element ref="discussione"></xsd:element>
+			<xsd:sequence>
+				<xsd:element ref="com:commento" minOccurs="0" maxOccurs="unbounded" />
 			</xsd:sequence>
-		</xsd:complexType>
-	</xsd:element>
-
-	<xsd:element name="discussione">
-		<xsd:complexType>
-			<xsd:sequence minOccurs="0" maxOccurs="1">
-				<xsd:element ref="com:commento"></xsd:element>
-			</xsd:sequence>
-			<xsd:attribute name="titolo" type="xsd:string" />
-			<xsd:attribute name="id_poster" type="xsd:positiveInteger" />
-			<xsd:attribute name="id_discussione" type="xsd:posiitveInteger" />
 		</xsd:complexType>
 	</xsd:element>
 
@@ -27,8 +16,9 @@
 			<xsd:sequence>
 				<xsd:element ref="com:testo" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="com:voto" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="com:reports_commento" minOccurs="0" maxOccurs="1" />
 			</xsd:sequence>
-			<xsd:attribute name="id" type="xsd:positiveInteger" use="required" />
+			<xsd:attribute name="id_commento" type="xsd:positiveInteger" use="required" />
 			<xsd:attribute name="id_commentatore" type="xsd:positiveInteger" use="required" />
 			<xsd:attribute name="id_progetto" type="xsd:positiveInteger" use="required" />
 		</xsd:complexType>
@@ -64,4 +54,17 @@
 		</xsd:restriction>
 	</xsd:simpleType>
 
+	<xsd:element name="reports_commento">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="com:report_commento" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="report_commento">
+		<xsd:complexType>
+			<xsd:attribute name="id_report" type="xsd:positiveInteger" />
+		</xsd:complexType>
+	</xsd:element>
 </xsd:schema>
