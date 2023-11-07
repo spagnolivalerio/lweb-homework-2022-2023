@@ -13,6 +13,9 @@
 
 	<xsd:element name="valutazione">
 		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="val:testo" use="required" />
+			</xsd:sequence>
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
 			<xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
 			<xsd:attribute name="value" type="val:valutazioneType" />
@@ -25,4 +28,7 @@
 			<xsd:maxInclusive value="5" />
 		</xsd:restriction>
 	</xsd:simpleType>
+
+	<xsd:element name="testo" type="xsd:string" />
+
 </xsd:schema>
