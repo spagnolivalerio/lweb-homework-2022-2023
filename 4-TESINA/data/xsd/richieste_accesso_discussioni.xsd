@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns:ric="http://www.tesina/richieste_accesso_discussioni"
+			targetNamespace="http://www.tesina/richieste_accesso_discussioni">
+
+    <xsd:element name="richieste">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="ric:richiesta" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="richiesta">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="ric:stato" minOccurs="1" maxOccurs="1" />
+                <xsd:element ref="ric:moderatore" minOccurs="0" maxOccurs="1" />
+            </xsd:sequence>
+                <xsd:attribute name="data" type="xsd:date" />
+                <xsd:attribute name="ora" type="xsd:time" />
+                <xsd:attribute name="id" type="xsd:positiveInteger" />
+                <xsd:attribute name="id_utente" type="xsd:positiveInteger" />
+                <xsd:attribute name="id_discussione" type="xsd:positiveInteger" />
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="stato" type="ric:tipoStato" />
+
+    <xsd:simpleType name="tipoStato">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="accettata" />
+            <xsd:enumeration value="rifiutata" />
+            <xsd:enumeration value="in lavorazione" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:element name="moderatore">
+        <xsd:complexType>
+            <xsd:attribute name="username" type="xsd:string" />
+            <xsd:attribute name="id" type="xsd:positiveInteger" />
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

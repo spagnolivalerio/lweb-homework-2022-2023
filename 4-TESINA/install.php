@@ -20,7 +20,8 @@
 					  peso_valutazione DECIMAL NOT NULL,
 					  punti_reputazione DECIMAL NOT NULL DEFAULT 0, 
 					  clearance INT NOT NULL DEFAULT 1,
-					  tipo ENUM ('standard', 'moderatore', 'admin') NOT NULL DEFAULT 'standard'
+					  tipo ENUM ('standard', 'moderatore', 'admin') NOT NULL DEFAULT 'standard',
+					  ban BOOLEAN DEFAULT FALSE
 					  );";
 
 	$insert_utente = "INSERT INTO utente (nome, cognome, username, password, email, livello, tipo)

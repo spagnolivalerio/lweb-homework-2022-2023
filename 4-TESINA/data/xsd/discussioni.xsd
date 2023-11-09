@@ -6,7 +6,7 @@
 	<xsd:element name="discussioni">
 		<xsd:complexType>
 			<xsd:sequence minOccurs="0" maxOccurs="unbounded">
-				<xsd:element ref="discussione"></xsd:element>
+				<xsd:element ref="discussione" minOccurs="0" maxOccurs="unbounded"></xsd:element>
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
@@ -14,12 +14,13 @@
 	<xsd:element name="discussione">
 		<xsd:complexType>
 			<xsd:sequence minOccurs="0" maxOccurs="1">
-				<xsd:element ref="disc:commento"></xsd:element>
-				<xsd:element ref="disc:descrizione"></xsd:element>
+				<xsd:element ref="disc:commento" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+				<xsd:element ref="disc:descrizione" minOccurs="1" maxOccurs="1"></xsd:element>
 			</xsd:sequence>
 			<xsd:attribute name="titolo" type="xsd:string" />
 			<xsd:attribute name="id_poster" type="xsd:positiveInteger" />
 			<xsd:attribute name="id_discussione" type="xsd:posiitveInteger" />
+			<xsd:attribute name="risolta" type="xsd:boolean" />
 		</xsd:complexType>
 	</xsd:element>
 
@@ -30,7 +31,5 @@
 	</xsd:element>
 
 	<xsd:element name="descrizione" type="xsd:string" />
-
-	
 
 </xsd:schema>
