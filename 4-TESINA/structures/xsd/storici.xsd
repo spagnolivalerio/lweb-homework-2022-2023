@@ -15,7 +15,7 @@
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element ref="sto:progetti" minOccurs="1" maxOccurs="1" /> //si fa il display del progetto con sotto i commenti a quel progetto, i reports ecc..
-                <xsd:element ref="sto:richieste" minOccurs="1" maxOccurs="1" /> //si fa il display delle richieste in sospeso
+                <xsd:element ref="sto:richieste" minOccurs="1" maxOccurs="1" /> //si fa il display delle richieste in sospeso, acc, rif.
             </xsd:sequence>
             <xsd:attribute name="id_utente" type="xsd:positiveInteger" />
         </xsd:complexType>
@@ -29,7 +29,7 @@
         </xsd:complexType>
     </xsd:element>
 
-     <xsd:element name="progetto">
+    <xsd:element name="progetto">
         <xsd:complexType>
             <xsd:attribute name="id_progetto" type="xsd:positiveInteger" /> 
         </xsd:complexType>
@@ -43,7 +43,7 @@
         </xsd:complexType>
     </xsd:element>
 
-     <xsd:element name="richiesta">
+    <xsd:element name="richiesta">
         <xsd:complexType>
             <xsd:attribute name="id_richiesta" type="xsd:positiveInteger" /> 
         </xsd:complexType>
