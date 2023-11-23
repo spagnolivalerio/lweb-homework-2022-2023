@@ -3,4 +3,7 @@
   <commento id="1" id_discussione="1" id_commentatore="1">
     <testo>la vita fa schifo</testo>
   </commento>
+  <commento id="2" id_discussione="2" id_commentatore="3">
+    <testo>commento di ruggio</testo>
+  </commento>
 </commenti>

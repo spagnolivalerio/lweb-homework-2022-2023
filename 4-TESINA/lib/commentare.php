@@ -1,6 +1,12 @@
 <?php
 
     session_start();
+
+    if(!isset($_SESSION['Tipo_utente'])){
+        header('Location: ../web/login.php');
+        exit;
+    }
+
     require_once('functions.php');
     $xmlFile = "../data/xml/commenti.xml";
 

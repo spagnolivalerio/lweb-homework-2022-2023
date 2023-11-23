@@ -24,7 +24,7 @@ require_once('../lib/functions.php');
     <label for="id_discussione">2</label>
     <input name="id_discussione" required></input><br>
 
-    <input type="submit" value="Aggiungi Discussione">
+    <input type="submit" value="commenta">
 </form>
 
 </body>

@@ -6,4 +6,10 @@
     </commenti>
     <descrizione>vita</descrizione>
   </discussione>
+  <discussione titolo="Ruggio discussione" id_poster="3" risolta="false" id="2" id_progetto="10">
+    <commenti>
+      <commento id_commento="2"/>
+    </commenti>
+    <descrizione>Quanti come me?</descrizione>
+  </discussione>
 </discussioni>
