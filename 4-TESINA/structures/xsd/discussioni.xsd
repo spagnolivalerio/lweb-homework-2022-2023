@@ -19,8 +19,9 @@
 			</xsd:sequence>
 			<xsd:attribute name="titolo" type="xsd:string" />
 			<xsd:attribute name="id_poster" type="xsd:positiveInteger" />
-			<xsd:attribute name="id_discussione" type="xsd:posiitveInteger" />
+			<xsd:attribute name="id_discussione" type="xsd:positiveInteger" />
 			<xsd:attribute name="risolta" type="xsd:boolean" />
+			<xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
 		</xsd:complexType>
 	</xsd:element>
 

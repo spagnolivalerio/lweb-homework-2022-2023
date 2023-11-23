@@ -17,7 +17,7 @@
 				<xsd:element ref="pro:categorie" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:descrizione" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:reports_progetti" minOccurs="1" maxOccurs="1" />
-				<xsd:element ref="pro:discussione" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="pro:discussioni" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:tutorial_progetto" minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
@@ -60,9 +60,17 @@
 		</xsd:complexType>
 	</xsd:element>
 
+	<xsd:element name="discussioni">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="1">
+				<xsd:element ref="pro:discussione" minOccurs="0" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
 	<xsd:element name="discussione">
 		<xsd:complexType>
-			<xsd:attribute name="id_discussione" type="xsd:positiveInteger" /> 
+			<xsd:attribute name="id_discussione" type="xsd:positiveInteger" />
 		</xsd:complexType>
 	</xsd:element>
 

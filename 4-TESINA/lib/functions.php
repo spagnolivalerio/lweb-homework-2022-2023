@@ -1,9 +1,9 @@
 <?php 
 
-    function getDOMdocument($xmlfile){ 
+    function getDOMdocument($xmlFile){ 
 
         $xmlstring = "";
-        foreach (file("../data/xml/$xmlFile") as $node){ //riscrive il file come un'unica stringa
+        foreach (file($xmlFile) as $node){ //riscrive il file come un'unica stringa
             $xmlstring .= trim($node);
         }
 
@@ -24,6 +24,29 @@
 
         return $elementi; //array di childnodes della root del file xml
 
+    }
+
+    function generate_id($xmlFile){
+
+        $nodes = uploadXML($xmlFile);
+
+        if(empty($nodes)){
+            return 1;
+        }
+
+        foreach($nodes as $node){
+            
+            $maxID = 1; 
+            $currentID = $node->getAttribute('id_discussione');
+
+            if($currentID > $maxID){
+                $maxID = $currentID;
+            }
+        }
+
+        $maxID++;
+
+        return $maxID;
     }
 
     function ban(){};

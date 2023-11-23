@@ -17,16 +17,16 @@
 					  password VARCHAR(128) NOT NULL,
 					  email VARCHAR(128) NOT NULL UNIQUE,
 					  livello INT NOT NULL DEFAULT 1,
-					  peso_valutazione DECIMAL NOT NULL,
+					  peso_valutazione DECIMAL NOT NULL DEFAULT 1,
 					  punti_reputazione DECIMAL NOT NULL DEFAULT 0, 
 					  clearance INT NOT NULL DEFAULT 1,
 					  tipo ENUM ('standard', 'moderatore', 'admin') NOT NULL DEFAULT 'standard',
 					  ban BOOLEAN DEFAULT FALSE
 					  );";
 
-	$insert_utente = "INSERT INTO utente (nome, cognome, username, password, email, livello, tipo)
-					  VALUES ('Valerio', 'Spagnoli', 'utente1', '$crypt_pwd', '$email_1', '100', 'admin'),
-					  	     ('Daniele', 'Siciliano', 'utente2', '$crypt_pwd', '$email_2', '100', 'admin');";
+	$insert_utente = "INSERT INTO utente (nome, cognome, username, password, email, livello, tipo, peso_valutazione)
+					  VALUES ('Valerio', 'Spagnoli', 'utente1', '$crypt_pwd', '$email_1', '100', 'admin', '10'),
+					  	     ('Daniele', 'Siciliano', 'utente2', '$crypt_pwd', '$email_2', '100', 'admin', '10');";
 	
 	$queries = array($create_db, $create_utente, $insert_utente);
 
