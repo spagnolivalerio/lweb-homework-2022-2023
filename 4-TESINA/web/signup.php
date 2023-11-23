@@ -50,7 +50,7 @@
         </script>
 
         <div class="box">
-        	<form class="form" method="post" action="">
+        	<form class="form" method="post" action="../lib/signup.php">
         	 <div class="signup_title">REGISTRATI</div>
                 <div class="container">
                     <div class="form-item">

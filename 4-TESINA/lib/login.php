@@ -6,12 +6,16 @@
 	$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
 	if(!empty($_POST['username']) && !empty($_POST['password'])){ //isset controlla se le variabili sono state settate, e si settano appena invii i dati con POST. Per controllare se i dati sono vuoti si usa empty();
+		
 		$username = mysqli_real_escape_string($conn, $_POST['username']);
 		$password = mysqli_real_escape_string($conn, $_POST['password']);
+
 	} else {
+
 		$_SESSION['credenziali'] = "false";
 		header('Location: ../web/login.php');
 		exit();
+		
 	}
 
 	$password = md5($password);
