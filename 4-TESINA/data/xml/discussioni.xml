@@ -3,4 +3,7 @@
   <discussione titolo="PROVA" id_poster="1" risolta="false" id_discussione="1" id_progetto="10">
     <descrizione>discussione su arduino</descrizione>
   </discussione>
+  <discussione titolo="AOFRA" id_poster="1" risolta="false" id_discussione="2" id_progetto="10">
+    <descrizione>bello bello</descrizione>
+  </discussione>
 </discussioni>

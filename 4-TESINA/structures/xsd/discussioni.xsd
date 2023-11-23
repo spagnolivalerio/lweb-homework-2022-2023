@@ -14,7 +14,7 @@
 	<xsd:element name="discussione">
 		<xsd:complexType>
 			<xsd:sequence minOccurs="0" maxOccurs="1">
-				<xsd:element ref="disc:commento" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+				<xsd:element ref="disc:commenti" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="disc:descrizione" minOccurs="1" maxOccurs="1"></xsd:element>
 			</xsd:sequence>
 			<xsd:attribute name="titolo" type="xsd:string" />
@@ -25,11 +25,20 @@
 		</xsd:complexType>
 	</xsd:element>
 
+	<xsd:element name="commenti">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="1">
+				<xsd:element ref="disc:commento" minOccurs="0" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
 	<xsd:element name="commento">
 		<xsd:complexType>
 			<xsd:attribute name="id_commento" type="xsd:positiveInteger" />
 		</xsd:complexType>
 	</xsd:element>
+
 
 	<xsd:element name="descrizione" type="xsd:string" />
 
