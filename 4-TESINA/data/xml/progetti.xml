@@ -13,6 +13,8 @@
     <discussioni>
       <discussione id_discussione="1"/>
       <discussione id_discussione="2"/>
+      <discussione id_discussione="1"/>
+      <discussione id_discussione="1"/>
     </discussioni>
     <tutorial_progetto id_tutorial="1">
       <step>

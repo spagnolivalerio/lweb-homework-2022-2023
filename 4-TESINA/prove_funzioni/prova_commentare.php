@@ -11,21 +11,18 @@ require_once('../lib/functions.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aggiungi Discussione</title>
+    <title>COMMENTO</title>
 </head>
 <body>
 
-<h1>Aggiungi Discussione</h1>
+<h1>COMMENTA</h1>
 
 <form action="../lib/commentare.php" method="post">
-    <label for="titolo">Titolo:</label>
-    <input type="text" name="titolo" required><br>
+    <label for="testo">testo</label>
+    <input type="text" name="testo" required><br>
 
-    <label for="descrizione">Descrizione:</label>
-    <textarea name="descrizione" required></textarea><br>
-
-    <label for="id_progetto">10</label>
-    <textarea name="id_progetto" required></textarea><br>
+    <label for="id_discussione">2</label>
+    <input name="id_discussione" required></input><br>
 
     <input type="submit" value="Aggiungi Discussione">
 </form>

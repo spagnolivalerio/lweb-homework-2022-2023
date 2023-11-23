@@ -34,11 +34,13 @@
     $newDiscussione->setAttribute('titolo', $newTitolo);
     $newDiscussione->setAttribute('id_poster', $id_poster);
     $newDiscussione->setAttribute('risolta', 'false');
-    $newDiscussione->setAttribute('id_discussione', $id_discussione);
+    $newDiscussione->setAttribute('id', $id_discussione);
     $newDiscussione->setAttribute('id_progetto', $id_progetto);
 
     $newDescrizione = $doc->createElement('descrizione', $newDescrizioneValue);
+    $newCommenti = $doc->createElement('commenti');
 
+    $newDiscussione->appendChild($newCommenti);
     $newDiscussione->appendChild($newDescrizione);
 
     $root->appendChild($newDiscussione);
@@ -60,7 +62,8 @@
 
             $proDiscussione = $doc->createElement('discussione');
             $proDiscussione->setAttribute('id_discussione', $id_discussione);
-            $discussioni = $doc->getElementsByTagName('discussioni')->item(0);
+            $elements = $node->childNodes;
+            $discussioni = $elements->item(3);
             $discussioni->appendChild($proDiscussione);
 
             $doc->formatOutput = true;

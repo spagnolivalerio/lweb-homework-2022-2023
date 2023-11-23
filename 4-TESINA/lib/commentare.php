@@ -1,68 +1,70 @@
 <?php
-session_start();
-require_once('functions.php');
-$xmlFile = "../data/xml/commenti.xml";
 
-if(!isset($_POST['testo']) || empty($_POST['testo'])){
-    exit;
-}else{
-    $newTestoValue = $_POST['testo'];
-}
+    session_start();
+    require_once('functions.php');
+    $xmlFile = "../data/xml/commenti.xml";
 
-if(!isset($_POST['id_discussione']) || empty($_POST['id_discussione'])){
-    exit;
-} else {
-    $id_discussione = $_POST['id_discussione']; 
-}
+    if(!isset($_POST['testo']) || empty($_POST['testo'])){
+        exit;
+    }else{
+        $newTestoValue = $_POST['testo'];
+    }
 
-$id_commentatore = $_SESSION['id_utente'];
-$id_commento = generate_id($xmlFile);
+    if(!isset($_POST['id_discussione']) || empty($_POST['id_discussione'])){
+        exit;
+    } else {
+        $id_discussione = $_POST['id_discussione']; 
+    }
 
-//AGGIUNTA IN COMMENTI.XSD
-$doc = getDOMdocument($xmlFile);
-$root = $doc->documentElement;
+    $id_commentatore = $_SESSION['id_utente'];
+    $id_commento = generate_id($xmlFile);
 
-$newCommento = $doc->createElement('commento');
-$newCommento->setAttribute('id_commento', $id_commento);
-$newCommento->setAttribute('id_discussione', $id_discussione);
-$newCommento->setAttribute('id_commentatore', $id_commentatore);
+    //AGGIUNTA IN COMMENTI.XML
 
-$newTesto = $doc->createElement('testo', $newTestoValue);
+    $doc = getDOMdocument($xmlFile);
+    $root = $doc->documentElement;
 
-$newCommento->appendChild($newTesto);
+    $newCommento = $doc->createElement('commento');
+    $newCommento->setAttribute('id', $id_commento);
+    $newCommento->setAttribute('id_discussione', $id_discussione);
+    $newCommento->setAttribute('id_commentatore', $id_commentatore);
 
-$root->appendChild($newCommento);
+    $newTesto = $doc->createElement('testo', $newTestoValue);
 
+    $newCommento->appendChild($newTesto);
 
-$doc->formatOutput = true;
-$xmlString = $doc->saveXML(); //ottengo il file xml come stringa
-file_put_contents($xmlFile, $xmlString);
+    $root->appendChild($newCommento);
 
+    $doc->formatOutput = true;
+    $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
+    file_put_contents($xmlFile, $xmlString);
 
-//AGGIUNTA IN DiSCUSSIONI.XML
-$xmlFile = "../data/xml/discussioni.xml";
-$doc = getDOMdocument($xmlFile);
-$root = $doc->documentElement;
-$nodes = $root->childNodes;
+    //AGGIUNTA IN DISCUSSIONI.XML
 
-foreach($nodes as $node){
-     
-     if($id_discussione === $node->getAttribute('id')){
+    $xmlFile = "../data/xml/discussioni.xml";
+    $doc = getDOMdocument($xmlFile);
+    $root = $doc->documentElement;
+    $nodes = $root->childNodes;
 
-        $proCommento = $doc->createElement('commento');
-        $proCommento->setAttribute('id_commento', $id_commento);
-        $commenti = $doc->getElementsByTagName('commenti')->item(0);
-        $commenti->appendChild($proCommento);
+    foreach($nodes as $node){
+        
+        if($id_discussione === $node->getAttribute('id')){
 
-        $doc->formatOutput = true;
-        $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
-        file_put_contents($xmlFile, $xmlString);
+            $discCommento = $doc->createElement('commento');
+            $discCommento->setAttribute('id_commento', $id_commento);
+            $elements = $node->childNodes;
+            $commenti = $elements->item(0);
+            $commenti->appendChild($discCommento);
 
-        break; 
-     }
- }
+            $doc->formatOutput = true;
+            $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
+            file_put_contents($xmlFile, $xmlString);
 
-header('Location: ../prove_funzioni/prova_commentare.php');
-exit();
+            break; 
+        }
+    }
+
+    header('Location: ../prove_funzioni/prova_commentare.php');
+    exit();
 
 ?>

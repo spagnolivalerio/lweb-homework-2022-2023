@@ -37,7 +37,7 @@
         foreach($nodes as $node){
             
             $maxID = 1; 
-            $currentID = $node->getAttribute('id_discussione');
+            $currentID = $node->getAttribute('id');
 
             if($currentID > $maxID){
                 $maxID = $currentID;

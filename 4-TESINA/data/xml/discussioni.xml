@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  <discussione titolo="PROVA" id_poster="1" risolta="false" id_discussione="1" id_progetto="10">
-    <descrizione>discussione su arduino</descrizione>
-  </discussione>
-  <discussione titolo="AOFRA" id_poster="1" risolta="false" id_discussione="2" id_progetto="10">
-    <descrizione>bello bello</descrizione>
+  <discussione titolo="Discussione sulla vita" id_poster="1" risolta="false" id="1" id_progetto="10">
+    <commenti>
+      <commento id_commento="1"/>
+    </commenti>
+    <descrizione>vita</descrizione>
   </discussione>
 </discussioni>
