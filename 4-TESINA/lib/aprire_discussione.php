@@ -63,8 +63,8 @@
             $proDiscussione = $doc->createElement('discussione');
             $proDiscussione->setAttribute('id_discussione', $id_discussione);
             $elements = $node->childNodes;
-            $discussioni = $elements->item(3);
-            $discussioni->appendChild($proDiscussione);
+            $proDiscussioni = $elements->item(3);
+            $proDiscussioni->appendChild($proDiscussione);
 
             $doc->formatOutput = true;
             $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
@@ -75,6 +75,6 @@
     }
 
     header('Location: ../prove_funzioni/prova_aggiungi_discussione.php');
-    exit();
+    exit;
 
 ?>

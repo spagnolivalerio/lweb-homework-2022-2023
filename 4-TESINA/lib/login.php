@@ -47,5 +47,6 @@
 	}
 
 	$conn->close();
+	exit;
 
 ?>

@@ -6,4 +6,16 @@
   <commento id="2" id_discussione="2" id_commentatore="3">
     <testo>commento di ruggio</testo>
   </commento>
+  <commento id="3" id_discussione="2" id_commentatore="10">
+    <testo>commento</testo>
+  </commento>
+  <commento id="4" id_discussione="2" id_commentatore="10">
+    <testo>rsg</testo>
+  </commento>
+  <commento id="5" id_discussione="2" id_commentatore="10">
+    <testo>sdg</testo>
+  </commento>
+  <commento id="6" id_discussione="2" id_commentatore="10">
+    <testo>comnento di prova</testo>
+  </commento>
 </commenti>

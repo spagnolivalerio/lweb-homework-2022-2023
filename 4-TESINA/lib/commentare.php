@@ -59,8 +59,8 @@
             $discCommento = $doc->createElement('commento');
             $discCommento->setAttribute('id_commento', $id_commento);
             $elements = $node->childNodes;
-            $commenti = $elements->item(0);
-            $commenti->appendChild($discCommento);
+            $discCommenti = $elements->item(0);
+            $discCommenti->appendChild($discCommento);
 
             $doc->formatOutput = true;
             $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
@@ -70,7 +70,33 @@
         }
     }
 
+    //AGGIUNTA IN STORICI.XML   
+
+    $xmlFile = "../data/xml/storici.xml";
+    $doc = getDOMdocument($xmlFile);
+    $root = $doc->documentElement;
+    $nodes = $root->childNodes;
+
+    foreach($nodes as $node){
+
+        if($_SESSION['id_utente'] === $node->getAttribute('id_utente')){
+
+            $stoCommento = $doc->createElement('commento');
+            $stoCommento->setAttribute('id_commento', $id_commento);
+            $elements = $node->childNodes; 
+            $stoCommenti = $elements->item(2);
+            $stoCommenti->appendChild($stoCommento);
+
+            $doc->formatOutput = true;
+            $xmlString = $doc->saveXML(); 
+            file_put_contents($xmlFile, $xmlString);
+
+            break; 
+
+        }
+    }
+
     header('Location: ../prove_funzioni/prova_commentare.php');
-    exit();
+    exit;
 
 ?>

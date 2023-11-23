@@ -9,6 +9,10 @@
   <discussione titolo="Ruggio discussione" id_poster="3" risolta="false" id="2" id_progetto="10">
     <commenti>
       <commento id_commento="2"/>
+      <commento id_commento="3"/>
+      <commento id_commento="4"/>
+      <commento id_commento="5"/>
+      <commento id_commento="6"/>
     </commenti>
     <descrizione>Quanti come me?</descrizione>
   </discussione>

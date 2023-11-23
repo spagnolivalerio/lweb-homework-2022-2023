@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    require_once('funcitons.php');
+    require_once('functions.php');
     $xmlFile = "../data/xml/storici.xml";
 
     if(!$_SESSION['utente_creato']['per_storico']){
@@ -33,4 +33,6 @@
     $xmlString = $doc->saveXML();
     file_put_contents($xmlFile, $xmlString);
 
+    header('Location: ../web/login.php');
+    exit; 
 ?>
