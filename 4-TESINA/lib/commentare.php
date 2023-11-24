@@ -24,6 +24,8 @@
 
     $id_commentatore = $_SESSION['id_utente'];
     $id_commento = generate_id($xmlFile);
+    $data_ora = new DateTime();
+    $data_ora = $data_ora->format('Y-m-d H:i:s');
 
     //AGGIUNTA IN COMMENTI.XML
 
@@ -34,6 +36,7 @@
     $newCommento->setAttribute('id', $id_commento);
     $newCommento->setAttribute('id_discussione', $id_discussione);
     $newCommento->setAttribute('id_commentatore', $id_commentatore);
+    $newCommento->setAttribute('data_ora', $data_ora);
 
     $newTesto = $doc->createElement('testo', $newTestoValue);
     $newVoti = $doc->createElement('voti');

@@ -1,52 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <storici xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/storici.xsd">
-  <storico id_utente="1">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni/>
-  </storico>
-  <storico id_utente="7">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni/>
-  </storico>
-  <storico id_utente="8">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni/>
-  </storico>
-  <storico id_utente="9">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni/>
-  </storico>
-  <storico id_utente="10">
-    <progetti/>
-    <richieste/>
-    <commenti>
-      <commento id_commento="5"/>
-      <commento id_commento="6"/>
-    </commenti>
-    <valutazioni/>
-  </storico>
   <storico id_utente="3">
     <progetti/>
     <richieste/>
     <commenti>
-      <commento id_commento="7"/>
-      <commento id_commento="8"/>
+      <commento id_commento="1"/>
+      <commento id_commento="2"/>
     </commenti>
     <valutazioni/>
     <reports_progetti>
+      <report_progetto id_report="1"/>
+      <report_progetto id_report="2"/>
       <report_progetto id_report="3"/>
     </reports_progetti>
     <reports_commenti>
-      <report_commento id_report="4"/>
-      <report_commento id_report="5"/>
+      <report_commento id_report="1"/>
     </reports_commenti>
+    <discussioni>
+      <discussione id_discussione="1"/>
+    </discussioni>
   </storico>
 </storici>

@@ -22,6 +22,7 @@
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
 			<xsd:attribute name="risolta" type="xsd:boolean" />
 			<xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
+			<xsd:attribute name="data_ora" type="xsd:string" />
 		</xsd:complexType>
 	</xsd:element>
 

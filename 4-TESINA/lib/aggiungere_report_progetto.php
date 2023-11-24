@@ -35,11 +35,14 @@
 
     $doc = getDOMdocument($xmlFile);
     $root = $doc->documentElement;
+    $data_ora = new DateTime();
+    $data_ora = $data_ora->format('Y-m-d H:i:s');
 
     $newReport = $doc->createElement('report_progetto');
     $newReport->setAttribute('id', $id_segnalazione);
     $newReport->setAttribute('id_progetto', $id_progetto);
     $newReport->setAttribute('id_utente', $id_segnalatore);
+    $newReport->setAttribute('data_ora', $data_ora);
 
     $newTipo = $doc->createElement('tipo', $newTipoValue);
     $newTesto = $doc->createElement('testo', $newTestoValue);

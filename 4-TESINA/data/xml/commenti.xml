@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
-  <commento id="1" id_discussione="1" id_commentatore="1">
-    <testo>la vita fa schifo</testo>
-  </commento>
-  <commento id="2" id_discussione="2" id_commentatore="3">
-    <testo>commento di ruggio</testo>
-  </commento>
-  <commento id="3" id_discussione="2" id_commentatore="10">
-    <testo>commento</testo>
-  </commento>
-  <commento id="4" id_discussione="2" id_commentatore="10">
-    <testo>rsg</testo>
-  </commento>
-  <commento id="5" id_discussione="2" id_commentatore="10">
-    <testo>sdg</testo>
-  </commento>
-  <commento id="6" id_discussione="2" id_commentatore="10">
-    <testo>comnento di prova</testo>
-  </commento>
-  <commento id="7" id_discussione="2" id_commentatore="3">
-    <testo>bellazicomeva</testo>
-    <reports_commento/>
-  </commento>
-  <commento id="8" id_discussione="2" id_commentatore="3">
-    <testo>QUESTO ERES MUY BUENOSSS</testo>
+  <commento id="1" id_discussione="1" id_commentatore="3" data_ora="2023-11-24 11:08:57">
+    <testo>commentoooo</testo>
     <voti/>
     <reports_commento>
-      <report_commento id_report="4"/>
-      <report_commento id_report="5"/>
+      <report_commento id_report="1"/>
     </reports_commento>
+  </commento>
+  <commento id="2" id_discussione="2" id_commentatore="3" data_ora="2023-11-24 11:09:19">
+    <testo>wAFESR</testo>
+    <voti/>
+    <reports_commento/>
   </commento>
 </commenti>

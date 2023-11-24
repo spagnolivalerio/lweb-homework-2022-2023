@@ -30,6 +30,8 @@
 
     $id_segnalatore = $_SESSION['id_utente'];
     $id_segnalazione = generate_id($xmlFile);
+    $data_ora = new DateTime();
+    $data_ora = $data_ora->format('Y-m-d H:i:s');
 
     //AGGIUNTA IN REPORTS_COMMENTI.XML
 
@@ -40,6 +42,7 @@
     $newReport->setAttribute('id', $id_segnalazione);
     $newReport->setAttribute('id_commento', $id_commento);
     $newReport->setAttribute('id_utente', $id_segnalatore);
+    $newReport->setAttribute('data_ora', $data_ora);
 
     $newTipo = $doc->createElement('tipo', $newTipoValue);
     $newTesto = $doc->createElement('testo', $newTestoValue);

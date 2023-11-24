@@ -4,7 +4,7 @@
     require_once('functions.php');
     $xmlFile = "../data/xml/storici.xml";
 
-    if(!$_SESSION['utente_creato']['per_storico']){
+    if(!$_SESSION['utente_creato']){
         header('Location: ../web/signup.php');
         exit; 
     }
@@ -23,6 +23,7 @@
     $stoValutazioni = $doc->createElement('valutazioni');
     $stoReports_progetti = $doc->createElement('reports_progetti');
     $stoReports_commenti = $doc->createElement('reports_commenti');
+    $stoDiscussioni = $doc->createElement('discussioni');
 
     $newStorico->appendChild($stoProgetti);
     $newStorico->appendChild($stoRichieste);
@@ -30,6 +31,7 @@
     $newStorico->appendChild($stoValutazioni);
     $newStorico->appendChild($stoReports_progetti);
     $newStorico->appendChild($stoReports_commenti);
+    $newStorico->appendChild($stoDiscussioni);
     
     $root->appendChild($newStorico);
 
@@ -39,4 +41,5 @@
 
     header('Location: ../web/login.php');
     exit; 
+    
 ?>

@@ -24,6 +24,8 @@
 
     $id_poster = $_SESSION['id_utente'];
     $id_discussione = generate_id($xmlFile);
+    $data_ora = new DateTime();
+    $data_ora = $data_ora->format('Y-m-d H:i:s');
 
     //AGGIUNTA IN DISCUSSIONI.XML
 
@@ -36,6 +38,7 @@
     $newDiscussione->setAttribute('risolta', 'false');
     $newDiscussione->setAttribute('id', $id_discussione);
     $newDiscussione->setAttribute('id_progetto', $id_progetto);
+    $newDiscussione->setAttribute('data_ora', $data_ora);
 
     $newDescrizione = $doc->createElement('descrizione', $newDescrizioneValue);
     $newCommenti = $doc->createElement('commenti');
@@ -65,6 +68,31 @@
             $elements = $node->childNodes;
             $proDiscussioni = $elements->item(3);
             $proDiscussioni->appendChild($proDiscussione);
+
+            $doc->formatOutput = true;
+            $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
+            file_put_contents($xmlFile, $xmlString);
+
+            break; 
+        }
+    }
+
+    //AGGIUNTA IN STORICO.XML
+
+    $xmlFile = "../data/xml/storici.xml";
+    $doc = getDOMdocument($xmlFile);
+    $root = $doc->documentElement;
+    $nodes = $root->childNodes;
+
+    foreach($nodes as $node){
+     
+        if($_SESSION['id_utente'] === $node->getAttribute('id_utente')){
+
+            $stoDiscussione = $doc->createElement('discussione');
+            $stoDiscussione->setAttribute('id_discussione', $id_discussione);
+            $elements = $node->childNodes;
+            $stoDiscussioni = $elements->item(6);
+            $stoDiscussioni->appendChild($stoDiscussione);
 
             $doc->formatOutput = true;
             $xmlString = $doc->saveXML(); //ottengo il file xml come stringa

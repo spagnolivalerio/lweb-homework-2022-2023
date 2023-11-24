@@ -17,11 +17,10 @@
                 <xsd:element ref="ric:stato" minOccurs="1" maxOccurs="1" />
                 <xsd:element ref="ric:moderatore" minOccurs="0" maxOccurs="1" />
             </xsd:sequence>
-                <xsd:attribute name="data" type="xsd:date" />
-                <xsd:attribute name="ora" type="xsd:time" />
                 <xsd:attribute name="id" type="xsd:positiveInteger" />
                 <xsd:attribute name="id_utente" type="xsd:positiveInteger" />
                 <xsd:attribute name="id_discussione" type="xsd:positiveInteger" />
+                <xsd:attribute name="data_ora" type="xsd:string" />
         </xsd:complexType>
     </xsd:element>
 
