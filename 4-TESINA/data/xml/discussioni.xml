@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
   <discussione titolo="Error 404 not found" id_poster="3" risolta="false" id="1" id_progetto="10" data_ora="2023-11-24 11:08:06">
-    <commenti>
-      <commento id_commento="1"/>
-    </commenti>
+    <commenti/>
     <descrizione>non trovo un cazzo</descrizione>
   </discussione>
 </discussioni>
