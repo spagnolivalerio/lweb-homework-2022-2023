@@ -36,8 +36,12 @@
     $newCommento->setAttribute('id_commentatore', $id_commentatore);
 
     $newTesto = $doc->createElement('testo', $newTestoValue);
+    $newVoti = $doc->createElement('voti');
+    $newReport = $doc->createElement('reports_commento');
 
     $newCommento->appendChild($newTesto);
+    $newCommento->appendChild($newVoti);
+    $newCommento->appendChild($newReport);
 
     $root->appendChild($newCommento);
 

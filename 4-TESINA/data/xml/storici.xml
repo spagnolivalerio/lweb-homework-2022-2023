@@ -33,4 +33,20 @@
     </commenti>
     <valutazioni/>
   </storico>
+  <storico id_utente="3">
+    <progetti/>
+    <richieste/>
+    <commenti>
+      <commento id_commento="7"/>
+      <commento id_commento="8"/>
+    </commenti>
+    <valutazioni/>
+    <reports_progetti>
+      <report_progetto id_report="3"/>
+    </reports_progetti>
+    <reports_commenti>
+      <report_commento id_report="4"/>
+      <report_commento id_report="5"/>
+    </reports_commenti>
+  </storico>
 </storici>

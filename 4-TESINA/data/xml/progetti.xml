@@ -9,6 +9,8 @@
     <reports_progetti>
       <report_progetto id_report="1"/>
       <report_progetto id_report="2"/>
+      <report_progetto id_report="2"/>
+      <report_progetto id_report="3"/>
     </reports_progetti>
     <discussioni>
       <discussione id_discussione="1"/>

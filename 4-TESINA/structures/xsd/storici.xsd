@@ -18,6 +18,8 @@
                 <xsd:element ref="sto:richieste" minOccurs="1" maxOccurs="1" /> //si fa il display delle richieste in sospeso, acc, rif.
                 <xsd:element ref="sto:commenti" minOccurs="1" maxOccurs="1" />
                 <xsd:element ref="sto:valutazioni" minOccurs="1" maxOccurs="1" />
+                <xsd:element ref="sto:reports_progetti" minOccurs="1" maxOccurs="1" />
+                <xsd:element ref="sto:reports_commenti" minOccurs="1" maxOccurs="1" />
             </xsd:sequence>
             <xsd:attribute name="id_utente" type="xsd:positiveInteger" />
         </xsd:complexType>
@@ -76,6 +78,34 @@
     <xsd:element name="valutazione">
         <xsd:complexType>
             <xsd:attribute name="id_valutazione" type="xsd:positiveInteger" /> 
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="reports_progetti">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="sto:report_progetto" minOccurs="0" maxOccurs="unbounded">
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="report_progetto">
+        <xsd:complexType>
+            <xsd:attribute name="id_report" type="xsd:positiveInteger" /> 
+        </xsd:complexType>
+    </xsd:element>
+
+        <xsd:element name="reports_commenti">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="sto:report_commento" minOccurs="0" maxOccurs="unbounded">
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="report_commento">
+        <xsd:complexType>
+            <xsd:attribute name="id_report" type="xsd:positiveInteger" /> 
         </xsd:complexType>
     </xsd:element>
 

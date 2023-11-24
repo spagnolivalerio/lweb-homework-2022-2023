@@ -15,7 +15,7 @@
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element ref="com:testo" minOccurs="1" maxOccurs="1" />
-				<xsd:element ref="com:voto" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="com:voti" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="com:reports_commento" minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
@@ -25,6 +25,14 @@
 	</xsd:element> 
 
 	<xsd:element name="testo" type="xsd:string" />
+
+	<xsd:element name="voti">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="com:voto" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
 
 	<xsd:element name="voto">
 		<xsd:complexType>

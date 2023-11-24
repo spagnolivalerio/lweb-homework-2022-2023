@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reports_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <report_commento id="1" id_commento="6" id_utente="3">
+    <tipo>spam</tipo>
+    <testo>NON BUENO</testo>
+  </report_commento>
+  <report_commento id="2" id_commento="7" id_utente="3">
+    <tipo>spam</tipo>
+    <testo>aosmettiladispammare</testo>
+  </report_commento>
+  <report_commento id="3" id_commento="7" id_utente="3">
+    <tipo>spam</tipo>
+    <testo>aosmettiladispammare</testo>
+  </report_commento>
+  <report_commento id="4" id_commento="8" id_utente="3">
+    <tipo>spam</tipo>
+    <testo>MA CHE TE SPAMMI BUENOS</testo>
+  </report_commento>
+  <report_commento id="5" id_commento="8" id_utente="3">
+    <tipo>contenuti inesatti</tipo>
+    <testo>MHH NOT BUENOS</testo>
+  </report_commento>
+</reports_commenti>

@@ -21,11 +21,15 @@
     $stoRichieste = $doc->createElement('richieste');
     $stoCommenti = $doc->createElement('commenti');
     $stoValutazioni = $doc->createElement('valutazioni');
+    $stoReports_progetti = $doc->createElement('reports_progetti');
+    $stoReports_commenti = $doc->createElement('reports_commenti');
 
     $newStorico->appendChild($stoProgetti);
     $newStorico->appendChild($stoRichieste);
     $newStorico->appendChild($stoCommenti);
     $newStorico->appendChild($stoValutazioni);
+    $newStorico->appendChild($stoReports_progetti);
+    $newStorico->appendChild($stoReports_commenti);
     
     $root->appendChild($newStorico);
 

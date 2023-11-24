@@ -8,7 +8,7 @@
     }
 
     require_once('functions.php');
-    $xmlFile = "../data/xml/reports_progetti.xml";
+    $xmlFile = "../data/xml/reports_commenti.xml";
 
     if(!isset($_POST['testo']) || empty($_POST['testo'])){
         exit;
@@ -22,23 +22,23 @@
         $newTipoValue = $_POST['tipo'];
     }
 
-    if(!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])){
+    if(!isset($_POST['id_commento']) || empty($_POST['id_commento'])){
         exit;
     } else {
-        $id_progetto = $_POST['id_progetto']; 
+        $id_commento = $_POST['id_commento']; 
     }
 
     $id_segnalatore = $_SESSION['id_utente'];
     $id_segnalazione = generate_id($xmlFile);
 
-    //AGGIUNTA IN REPORTS_PROGETTI.XML
+    //AGGIUNTA IN REPORTS_COMMENTI.XML
 
     $doc = getDOMdocument($xmlFile);
     $root = $doc->documentElement;
 
-    $newReport = $doc->createElement('report_progetto');
+    $newReport = $doc->createElement('report_commento');
     $newReport->setAttribute('id', $id_segnalazione);
-    $newReport->setAttribute('id_progetto', $id_progetto);
+    $newReport->setAttribute('id_commento', $id_commento);
     $newReport->setAttribute('id_utente', $id_segnalatore);
 
     $newTipo = $doc->createElement('tipo', $newTipoValue);
@@ -53,22 +53,22 @@
     $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
     file_put_contents($xmlFile, $xmlString);
 
-    //AGGIUNTA IN PROGETTI.XML
+    //AGGIUNTA IN COMMENTI.XML
 
-    $xmlFile = "../data/xml/progetti.xml";
+    $xmlFile = "../data/xml/commenti.xml";
     $doc = getDOMdocument($xmlFile);
     $root = $doc->documentElement;
     $nodes = $root->childNodes;
 
     foreach($nodes as $node){
         
-        if($id_progetto === $node->getAttribute('id')){
+        if($id_commento === $node->getAttribute('id')){
 
-            $proReport = $doc->createElement('report_progetto');
-            $proReport->setAttribute('id_report', $id_segnalazione);
+            $comReport = $doc->createElement('report_commento');
+            $comReport->setAttribute('id_report', $id_segnalazione);
             $elements = $node->childNodes;
-            $proReportsProgetti = $elements->item(2);
-            $proReportsProgetti->appendChild($proReport);
+            $comReportsCommenti = $elements->item(2);
+            $comReportsCommenti->appendChild($comReport);
 
             $doc->formatOutput = true;
             $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
@@ -89,10 +89,10 @@
 
         if($_SESSION['id_utente'] === $node->getAttribute('id_utente')){
 
-            $stoReport = $doc->createElement('report_progetto');
+            $stoReport = $doc->createElement('report_commento');
             $stoReport->setAttribute('id_report', $id_segnalazione);
             $elements = $node->childNodes; 
-            $stoReports = $elements->item(4);
+            $stoReports = $elements->item(5);
             $stoReports->appendChild($stoReport);
 
             $doc->formatOutput = true;
@@ -104,7 +104,7 @@
         }
     }
 
-    header('Location: ../prove_funzioni/prova_segnalazione_progetto.php');
+    header('Location: ../prove_funzioni/prova_segnalazione_commento.php');
     exit;
 
 ?>

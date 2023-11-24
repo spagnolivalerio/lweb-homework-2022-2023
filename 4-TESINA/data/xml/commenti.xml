@@ -18,4 +18,16 @@
   <commento id="6" id_discussione="2" id_commentatore="10">
     <testo>comnento di prova</testo>
   </commento>
+  <commento id="7" id_discussione="2" id_commentatore="3">
+    <testo>bellazicomeva</testo>
+    <reports_commento/>
+  </commento>
+  <commento id="8" id_discussione="2" id_commentatore="3">
+    <testo>QUESTO ERES MUY BUENOSSS</testo>
+    <voti/>
+    <reports_commento>
+      <report_commento id_report="4"/>
+      <report_commento id_report="5"/>
+    </reports_commento>
+  </commento>
 </commenti>
