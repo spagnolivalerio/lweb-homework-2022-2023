@@ -19,6 +19,7 @@
 				<xsd:element ref="pro:reports_progetti" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:discussioni" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:tutorial_progetto" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="pro:valutazioni" minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
 			<xsd:attribute name="id_creator" type="xsd:positiveInteger" />
@@ -103,5 +104,19 @@
 			<xsd:enumeration value="difficile" />
 		</xsd:restriction>
 	</xsd:simpleType>
+
+	<xsd:element name="valutazioni">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="pro:valutazione" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="valutazione">
+		<xsd:complexType>
+			<xsd:attribute name="id_valutazione" type="xsd:positiveInteger" />
+		</xsd:complexType>
+	</xsd:element>
 
 </xsd:schema>

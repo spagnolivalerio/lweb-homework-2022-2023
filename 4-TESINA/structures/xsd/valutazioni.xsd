@@ -19,6 +19,8 @@
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
 			<xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
 			<xsd:attribute name="value" type="val:valutazioneType" />
+			<xsd:attribute name="id_votante" type="xsd:positiveInteger" />
+			<xsd:attribute name="data_ora" type="xsd:string" />
 		</xsd:complexType>
 	</xsd:element>
 

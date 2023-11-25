@@ -31,5 +31,10 @@
         <descrizione>Descrizione del secondo passo.</descrizione>
       </step>
     </tutorial_progetto>
+    <valutazioni>
+      <valutazione id_valutazione="1"/>
+      <valutazione id_valutazione="2"/>
+      <valutazione id_valutazione="3"/>
+    </valutazioni>
   </progetto>
 </progetti>

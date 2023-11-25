@@ -17,10 +17,11 @@
                 <xsd:element ref="sto:progetti" minOccurs="1" maxOccurs="1" /> //si fa il display del progetto con sotto i commenti a quel progetto, i reports ecc..
                 <xsd:element ref="sto:richieste" minOccurs="1" maxOccurs="1" /> //si fa il display delle richieste in sospeso, acc, rif.
                 <xsd:element ref="sto:commenti" minOccurs="1" maxOccurs="1" />
-                <xsd:element ref="sto:valutazioni" minOccurs="1" maxOccurs="1" />
+                <xsd:element ref="sto:valutazioni_progetti" minOccurs="1" maxOccurs="1" />
                 <xsd:element ref="sto:reports_progetti" minOccurs="1" maxOccurs="1" />
                 <xsd:element ref="sto:reports_commenti" minOccurs="1" maxOccurs="1" />
                 <xsd:element ref="sto:discussioni" minOccurs="1" maxOccurs="1" />
+                <xsd:element ref="sto:valutazioni_commenti" minOccurs="1" maxOccurs="1" />
             </xsd:sequence>
             <xsd:attribute name="id_utente" type="xsd:positiveInteger" />
         </xsd:complexType>
@@ -68,19 +69,33 @@
         </xsd:complexType>
     </xsd:element>
 
-    <xsd:element name="valutazioni">
+    <xsd:element name="valutazioni_progetti">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="sto:valutazione" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="sto:valutazione_progetto" minOccurs="0" maxOccurs="unbounded">
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 
-    <xsd:element name="valutazione">
+    <xsd:element name="valutazione_progetto">
         <xsd:complexType>
             <xsd:attribute name="id_valutazione" type="xsd:positiveInteger" /> 
         </xsd:complexType>
     </xsd:element>
+
+       <xsd:element name="valutazioni_commenti">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="sto:valutazione_progetto" minOccurs="0" maxOccurs="unbounded">
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="valutazione_commento">
+        <xsd:complexType>
+            <xsd:attribute name="id_valutazione" type="xsd:positiveInteger" /> 
+        </xsd:complexType>
+    </xsd:element> 
 
     <xsd:element name="reports_progetti">
         <xsd:complexType>

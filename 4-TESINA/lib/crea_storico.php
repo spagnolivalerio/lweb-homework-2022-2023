@@ -20,18 +20,20 @@
     $stoProgetti = $doc->createElement('progetti');
     $stoRichieste = $doc->createElement('richieste');
     $stoCommenti = $doc->createElement('commenti');
-    $stoValutazioni = $doc->createElement('valutazioni');
+    $stoValutazioniProgetti = $doc->createElement('valutazioni_progetti');
     $stoReports_progetti = $doc->createElement('reports_progetti');
     $stoReports_commenti = $doc->createElement('reports_commenti');
     $stoDiscussioni = $doc->createElement('discussioni');
+    $stoValutazioniCommenti = $doc->createElement('valutazioni_commenti');
 
     $newStorico->appendChild($stoProgetti);
     $newStorico->appendChild($stoRichieste);
     $newStorico->appendChild($stoCommenti);
-    $newStorico->appendChild($stoValutazioni);
+    $newStorico->appendChild($stoValutazioniProgetti);
     $newStorico->appendChild($stoReports_progetti);
     $newStorico->appendChild($stoReports_commenti);
     $newStorico->appendChild($stoDiscussioni);
+    $newStorico->appendChild($stoValutazioniCommenti);
     
     $root->appendChild($newStorico);
 
