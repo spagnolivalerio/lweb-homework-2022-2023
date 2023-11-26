@@ -1,4 +1,5 @@
 <?php 
+
     session_start();
 
     if(!isset($_SESSION['Tipo_utente'])){
@@ -31,7 +32,9 @@
     $nodes = $root->childNodes;
 
     foreach($nodes as $node){
+
         if($id_commento === $node->getAttribute('id')){
+            
             $root->removeChild($node);
 
             $doc->formatOutput = true;
@@ -42,7 +45,8 @@
         }    
     }
 
-    //RIMUOVI DA DISCUSSIONI.XML
+    //RIMUOVI DA DISCUSSIONI.XM
+
     $xmlFile = "../data/xml/discussioni.xml";
 
     $doc = getDOMdocument($xmlFile);
@@ -50,28 +54,29 @@
     $nodes = $root->childNodes;
 
     foreach($nodes as $node){
+
         if($id_discussione === $node->getAttribute('id')){
+
             $discCommenti = $node->getElementsByTagName('commenti')->item(0);
             $discCommento = $discCommenti->childNodes;
 
             foreach($discCommento as $commento){
-                if($id_commento === $commento->getAttribute('id_commento')){
-                    $discCommenti->removeChild($commento);
 
+                if($id_commento === $commento->getAttribute('id_commento')){
+
+                    $discCommenti->removeChild($commento);
                     $doc->formatOutput = true;
                     $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
                     file_put_contents($xmlFile, $xmlString);
 
-            break; 
-                }
+                    break; 
 
+                }
             }
-            
         }    
     }
 
     header('Location: ../prove_funzioni/rimuovi_commento.php');
     exit;
-
 
 ?>
