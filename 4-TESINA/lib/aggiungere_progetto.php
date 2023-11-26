@@ -3,13 +3,23 @@
     session_start();
     require_once('functions.php');
     $xmlFile = "../data/xml/progetti.xml";
-    $xmlTutorial = "../data/xml/tutorials_progetti.xml";
+    $xmlTutorial = "../data/xml/tutorials.xml";
+
+    /*
+    $lock = "file.lock";
+    $take_lock = fopen($lock, 'w');
+    if(flock($take_lock, LOCK_EX)){
+        //add project
+        flock($take_lock, LOCK_UN);
+    }
+    */
 
     if(!isset($_POST['categorie']) || empty($_POST['categorie'])){
         exit;
     } else {
        $categorie = $_POST['categorie'];
     }
+    
 
     if(!isset($_POST['descrizione']) || empty($_POST['descrizione'])){
         exit;
@@ -35,6 +45,7 @@
         $img = $_POST['img']; 
     }
     
+    
     $id_progetto = generate_id($xmlFile);
     $id_tutorial = generate_id($xmlTutorial);
     $data_ora = new DateTime();
@@ -46,9 +57,9 @@
     $doc = getDOMdocument($xmlFile);
     $root = $doc->documentElement; 
 
-    $newProgetto = $doc->createEelement('progetto');
+    $newProgetto = $doc->createElement('progetto');
 
-    $proCategorie = $doc->createElement('categorie')
+    $proCategorie = $doc->createElement('categorie');
     $proDescrizione = $doc->createElement('descrizione', $descrizione);
     $proReports = $doc->createElement('reports_progetti');
     $proDiscussioni = $doc->createElement('discussioni');
@@ -101,6 +112,8 @@
     $xmlString = $doc->saveXML();
     file_put_contents($xmlTutorial, $xmlString);
 
+    
+
     //AGGIUNTA IN STORICO.XML
 
     $xmlFile = "../data/xml/storici.xml";
@@ -126,7 +139,7 @@
         }
     }
 
-    header('Location: ../prove_funzioni/prova_aggiungere_progetto.php');
+    header('Location: ../prove_funzioni/prova_aggiungi_progetto.php');
     exit;
 
 
