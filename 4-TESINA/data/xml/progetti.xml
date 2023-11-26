@@ -1,40 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="10" id_creator="123" tempo_medio="60" file_img="immagine.jpg" data_pubblicazione="2023-11-23T12:00:00" visualizzazioni="100" difficolta="facile">
-    <categorie>
-      <categoria id_categoria="cat1"/>
-      <categoria id_categoria="cat2"/>
-    </categorie>
-    <descrizione>Descrizione del progetto.</descrizione>
-    <reports_progetti>
-      <report_progetto id_report="1"/>
-      <report_progetto id_report="2"/>
-      <report_progetto id_report="2"/>
-      <report_progetto id_report="3"/>
-      <report_progetto id_report="2"/>
-      <report_progetto id_report="3"/>
-    </reports_progetti>
-    <discussioni>
-      <discussione id_discussione="1"/>
-      <discussione id_discussione="2"/>
-      <discussione id_discussione="1"/>
-      <discussione id_discussione="1"/>
-      <discussione id_discussione="2"/>
-      <discussione id_discussione="1"/>
-    </discussioni>
-    <tutorial_progetto id_tutorial="1">
-      <step>
-        <descrizione>Descrizione del primo passo.</descrizione>
-        <immagine>base64_encoded_image_data</immagine>
-      </step>
-      <step>
-        <descrizione>Descrizione del secondo passo.</descrizione>
-      </step>
-    </tutorial_progetto>
-    <valutazioni>
-      <valutazione id_valutazione="1"/>
-      <valutazione id_valutazione="2"/>
-      <valutazione id_valutazione="3"/>
-    </valutazioni>
-  </progetto>
+
 </progetti>

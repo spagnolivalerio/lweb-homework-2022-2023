@@ -14,6 +14,7 @@
     }
     */
 
+
     if(!isset($_POST['categorie']) || empty($_POST['categorie'])){
         exit;
     } else {
@@ -26,18 +27,21 @@
     } else {
         $descrizione = $_POST['descrizione'];
     }
+    
 
     if(!isset($_POST['tempo_medio']) || empty($_POST['tempo_medio'])){
         exit;
     } else {
         $tempo_medio = $_POST['tempo_medio']; 
     }
+    
 
     if(!isset($_POST['difficolta']) || empty($_POST['difficolta'])){
         exit;
     } else {
         $difficolta = $_POST['difficolta']; 
     }
+    
 
     if(!isset($_POST['img']) || empty($_POST['img'])){
         exit;
@@ -91,6 +95,8 @@
     $newProgetto->appendChild($proTutorial);
     $newProgetto->appendChild($proValutazioni);
 
+    $root->appendChild($newProgetto);
+
     $doc->formatOutput = true; 
     $xmlString = $doc->saveXML();
     file_put_contents($xmlFile, $xmlString);
@@ -104,7 +110,7 @@
     $newTutorial = $doc->createElement('tutorial_progetto');
 
     $newTutorial->setAttribute('id', $id_tutorial);
-    $newTutorial->setAttribute('$id_progetto', $id_progetto); 
+    $newTutorial->setAttribute('id_progetto', $id_progetto); 
 
     $root->appendChild($newTutorial);
 
@@ -128,7 +134,7 @@
             $stoProgetto = $doc->createElement('progetto');
             $stoProgetto->setAttribute('id_progetto', $id_progetto);
             $stoProgetti = $node->getElementsByTagName('progetti')->item(0);
-            $stoProgetti->appendChild($stoProgetti);
+            $stoProgetti->appendChild($stoProgetto);
 
             $doc->formatOutput = true;
             $xmlString = $doc->saveXML(); 

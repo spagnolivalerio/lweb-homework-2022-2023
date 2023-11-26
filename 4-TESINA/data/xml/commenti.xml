@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
-  <commento id="2" id_discussione="2" id_commentatore="3" data_ora="2023-11-24 11:09:19">
-    <testo>wAFESR</testo>
-    <voti/>
-    <reports_commento/>
-  </commento>
+
 </commenti>

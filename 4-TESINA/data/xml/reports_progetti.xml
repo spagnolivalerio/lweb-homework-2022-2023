@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <reports_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  <report_progetto id="1" id_progetto="2" id_utente="3">
-    <tipo>spam</tipo>
-    <testo>EWA</testo>
-  </report_progetto>
-  <report_progetto id="2" id_progetto="10" id_utente="3">
-    <tipo>spam</tipo>
-    <testo>commento di ruggio</testo>
-  </report_progetto>
-  <report_progetto id="3" id_progetto="10" id_utente="3" data_ora="2023-11-24 11:13:50">
-    <tipo>spam</tipo>
-    <testo>WATRE</testo>
-  </report_progetto>
+
 </reports_progetti>

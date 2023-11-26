@@ -1,12 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <valutazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  <valutazione id="1" id_progetto="10" value="1" id_votante="3" data_ora="2023-11-25 10:30:01">
-    <testo>PROGETTO FATTO MOLTO MALEEEEEEEEE</testo>
-  </valutazione>
-  <valutazione id="2" id_progetto="10" value="1" id_votante="3" data_ora="2023-11-25 10:31:26">
-    <testo>PROGETTO FATTO MOLTO MALEEEEEEEEE</testo>
-  </valutazione>
-  <valutazione id="3" id_progetto="10" value="1" id_votante="3" data_ora="2023-11-25 10:32:07">
-    <testo>PROGETTO FATTO MOLTO MALEEEEEEEEE</testo>
-  </valutazione>
+
 </valutazioni>

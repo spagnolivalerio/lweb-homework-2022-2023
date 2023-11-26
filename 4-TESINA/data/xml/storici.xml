@@ -1,38 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <storici xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/storici.xsd">
-  <storico id_utente="3">
-    <progetti/>
-    <richieste/>
-    <commenti>
-      <commento id_commento="1"/>
-      <commento id_commento="2"/>
-      <commento id_commento="3"/>
-      <commento id_commento="4"/>
-    </commenti>
-    <valutazioni>
-      <valutazione_progetto id_valutazione="2"/>
-      <valutazione_progetto id_valutazione="3"/>
-    </valutazioni>
-    <reports_progetti>
-      <report_progetto id_report="1"/>
-      <report_progetto id_report="2"/>
-      <report_progetto id_report="3"/>
-    </reports_progetti>
-    <reports_commenti>
-      <report_commento id_report="1"/>
-    </reports_commenti>
-    <discussioni>
-      <discussione id_discussione="1"/>
-    </discussioni>
-  </storico>
-  <storico id_utente="3">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni_progetti/>
-    <reports_progetti/>
-    <reports_commenti/>
-    <discussioni/>
-    <valutazioni_commenti/>
-  </storico>
+
 </storici>

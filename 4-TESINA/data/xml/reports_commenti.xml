@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <reports_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  <report_commento id="1" id_commento="1" id_utente="3" data_ora="2023-11-24 11:11:01">
-    <tipo>contenuti inappropriati</tipo>
-    <testo>text commento</testo>
-  </report_commento>
+
 </reports_commenti>

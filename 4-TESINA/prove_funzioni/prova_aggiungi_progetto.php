@@ -46,7 +46,7 @@ require_once('../lib/functions.php');
 
   <!-- Immagine -->
   <label for="immagine">URL dell'immagine: </label>
-  <input type="text" name="file_img" required>
+  <input type="text" name="img" required>
   <br>
 
   <!-- Difficoltà -->
