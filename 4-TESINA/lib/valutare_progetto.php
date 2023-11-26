@@ -62,11 +62,12 @@
     $nodes = $root->childNodes;
 
     foreach($nodes as $node){
+
         if($id_progetto === $node->getAttribute('id')){
+
             $proValutazione = $doc->createElement('valutazione');
             $proValutazione->setAttribute('id_valutazione', $id_valutazione);
-            $elements = $node->childNodes;
-            $proValutazioni = $elements->item(5);
+            $proValutazioni = $node->getElementsByTagName('valutazioni')->item(0);
             $proValutazioni->appendChild($proValutazione);
 
             $doc->formatOutput = true;
@@ -85,11 +86,12 @@
         $nodes = $root->childNodes;
     
         foreach($nodes as $node){
+
             if($_SESSION['id_utente'] === $node->getAttribute('id_utente')){
+                
                 $stoValutazione = $doc->createElement('valutazione_progetto');
                 $stoValutazione->setAttribute('id_valutazione', $id_valutazione);
-                $elements = $node->childNodes;
-                $stoValutazioni = $elements->item(3);
+                $stoValutazioni = $node->getElementsByTagName('valutazioni_progetti')->item(0);
                 $stoValutazioni->appendChild($stoValutazione);
     
                 $doc->formatOutput = true;

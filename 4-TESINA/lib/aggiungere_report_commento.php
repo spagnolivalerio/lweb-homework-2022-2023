@@ -12,13 +12,13 @@
 
     if(!isset($_POST['testo']) || empty($_POST['testo'])){
         exit;
-    }else{
+    } else {
         $newTestoValue = $_POST['testo'];
     }
 
     if(!isset($_POST['tipo']) || empty($_POST['tipo'])){
         exit;
-    }else{
+    } else {
         $newTipoValue = $_POST['tipo'];
     }
 
@@ -69,8 +69,7 @@
 
             $comReport = $doc->createElement('report_commento');
             $comReport->setAttribute('id_report', $id_segnalazione);
-            $elements = $node->childNodes;
-            $comReportsCommenti = $elements->item(2);
+            $comReportsCommenti = $node->getElementsByTagName('reports_commenti')->item(0);
             $comReportsCommenti->appendChild($comReport);
 
             $doc->formatOutput = true;
@@ -94,8 +93,7 @@
 
             $stoReport = $doc->createElement('report_commento');
             $stoReport->setAttribute('id_report', $id_segnalazione);
-            $elements = $node->childNodes; 
-            $stoReports = $elements->item(5);
+            $stoReports = $node->getElementsByTagName('reports_commenti')->item(0);
             $stoReports->appendChild($stoReport);
 
             $doc->formatOutput = true;

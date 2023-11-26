@@ -65,8 +65,7 @@
 
             $proDiscussione = $doc->createElement('discussione');
             $proDiscussione->setAttribute('id_discussione', $id_discussione);
-            $elements = $node->childNodes;
-            $proDiscussioni = $elements->item(3);
+            $proDiscussioni = $node->getElementsByTagName('discussioni')->item(0);
             $proDiscussioni->appendChild($proDiscussione);
 
             $doc->formatOutput = true;
@@ -90,8 +89,7 @@
 
             $stoDiscussione = $doc->createElement('discussione');
             $stoDiscussione->setAttribute('id_discussione', $id_discussione);
-            $elements = $node->childNodes;
-            $stoDiscussioni = $elements->item(6);
+            $stoDiscussioni = $node->getElementsByTagName('discussioni')->item(0);
             $stoDiscussioni->appendChild($stoDiscussione);
 
             $doc->formatOutput = true;

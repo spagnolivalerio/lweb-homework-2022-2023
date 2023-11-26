@@ -65,8 +65,7 @@
 
             $discCommento = $doc->createElement('commento');
             $discCommento->setAttribute('id_commento', $id_commento);
-            $elements = $node->childNodes;
-            $discCommenti = $elements->item(0);
+            $discCommenti = $node->getElementsByTagName('commenti')->item(0);
             $discCommenti->appendChild($discCommento);
 
             $doc->formatOutput = true;
@@ -90,8 +89,7 @@
 
             $stoCommento = $doc->createElement('commento');
             $stoCommento->setAttribute('id_commento', $id_commento);
-            $elements = $node->childNodes; 
-            $stoCommenti = $elements->item(2);
+            $stoCommenti = $node->getElementsByTagName('commenti')->item(0);
             $stoCommenti->appendChild($stoCommento);
 
             $doc->formatOutput = true;

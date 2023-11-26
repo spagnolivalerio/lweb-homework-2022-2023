@@ -44,9 +44,7 @@
             }
         }
 
-        $maxID++;
-
-        return $maxID;
+        return $maxID++;
     }
 
     function ban(){};

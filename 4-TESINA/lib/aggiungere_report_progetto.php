@@ -69,8 +69,7 @@
 
             $proReport = $doc->createElement('report_progetto');
             $proReport->setAttribute('id_report', $id_segnalazione);
-            $elements = $node->childNodes;
-            $proReportsProgetti = $elements->item(2);
+            $proReportsProgetti = $node->getElementsByTagName('reports_progetti')->item(0);
             $proReportsProgetti->appendChild($proReport);
 
             $doc->formatOutput = true;
@@ -94,9 +93,8 @@
 
             $stoReport = $doc->createElement('report_progetto');
             $stoReport->setAttribute('id_report', $id_segnalazione);
-            $elements = $node->childNodes; 
-            $stoReports = $elements->item(4);
-            $stoReports->appendChild($stoReport);
+            $stoReportsProgetti = $node->getElementsByTagName('reports_progetti')->item(0);
+            $stoReportsProgetti->appendChild($stoReport);
 
             $doc->formatOutput = true;
             $xmlString = $doc->saveXML(); 

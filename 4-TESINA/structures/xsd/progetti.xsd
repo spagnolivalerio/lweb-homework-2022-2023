@@ -18,7 +18,7 @@
 				<xsd:element ref="pro:descrizione" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:reports_progetti" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:discussioni" minOccurs="1" maxOccurs="1" />
-				<xsd:element ref="pro:tutorial_progetto" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="pro:tutorial_progetto" minOccurs="0" maxOccurs="1" />
 				<xsd:element ref="pro:valutazioni" minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
@@ -28,6 +28,12 @@
 			<xsd:attribute name="data_pubblicazione" type="xsd:dateTime" />
 			<xsd:attribute name="visualizzazioni" type="xsd:positiveInteger" />
 			<xsd:attribute name="difficolta" type="pro:tipiDifficolta" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="tutorial_progetto">
+		<xsd:complexType>
+			<xsd:attribute name="id_tutorial" type="xsd:positveInteger" />
 		</xsd:complexType>
 	</xsd:element>
 
@@ -74,28 +80,6 @@
 			<xsd:attribute name="id_discussione" type="xsd:positiveInteger" />
 		</xsd:complexType>
 	</xsd:element>
-
-	<xsd:element name="tutorial_progetto">
-		<xsd:complexType>
-			<xsd:sequence>
-				<xsd:element ref="pro:step" minOccurs="1" maxOccurs="unbounded" />
-			</xsd:sequence>
-			<xsd:attribute name="id_tutorial" />
-		</xsd:complexType>
-	</xsd:element>
-
-	<xsd:element name="step">
-		<xsd:complexType>
-			<xsd:sequence>
-				<xsd:element ref="pro:descrizione" minOccurs="1" maxOccurs="1" />
-				<xsd:element ref="pro:immagine" minOccurs="0" maxOccurs="1" />
-			</xsd:sequence>
-		</xsd:complexType>
-	</xsd:element>
-
-	<xsd:element name="descrizione" type="xsd:string" />
-
-	<xsd:element name="immagine" type="xsd:base64binary" />
 
 	<xsd:simpleType name="tipoDifficolta">
 		<xsd:restriction base="xsd:string">
