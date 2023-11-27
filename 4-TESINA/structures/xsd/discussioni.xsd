@@ -16,6 +16,7 @@
 			<xsd:sequence minOccurs="0" maxOccurs="1">
 				<xsd:element ref="disc:commenti" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="disc:descrizione" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="disc:partecipanti" minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="titolo" type="xsd:string" />
 			<xsd:attribute name="id_poster" type="xsd:positiveInteger" />
@@ -37,6 +38,20 @@
 	<xsd:element name="commento">
 		<xsd:complexType>
 			<xsd:attribute name="id_commento" type="xsd:positiveInteger" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="partecipanti">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="disc:partecipante" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="partecipante">
+		<xsd:complexType>
+			<xsd:attribute name="id_partecipante" type="xsd:positiveInteger" />
 		</xsd:complexType>
 	</xsd:element>
 

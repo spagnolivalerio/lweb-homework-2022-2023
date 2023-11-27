@@ -1,13 +1,13 @@
 <?php 
 
     session_start();
+    require_once('functions.php');
 
     if(!isset($_SESSION['Tipo_utente'])){
         header('Location:../web/login.php');
         exit();
     }
 
-    require_once('functions.php');
     $xmlFile = "../data/xml/commenti.xml";
 
     //HO BISOGNO DI PORTARMI DIETRO SIA L'IDENTIFICATIVO DEL COMMENTO CHE DELLA DISCUSSIONE
@@ -45,7 +45,7 @@
         }    
     }
 
-    //RIMUOVI DA DISCUSSIONI.XM
+    //RIMUOVI DA DISCUSSIONI.XML
 
     $xmlFile = "../data/xml/discussioni.xml";
 

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorial_progetti.xsd">
- 
+  <tutorial_progetto id="1" id_progetto="1"/>
 </tutorials_progetti>

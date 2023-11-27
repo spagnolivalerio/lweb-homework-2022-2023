@@ -42,9 +42,11 @@
 
     $newDescrizione = $doc->createElement('descrizione', $newDescrizioneValue);
     $newCommenti = $doc->createElement('commenti');
+    $newPartecipanti = $doc->createElement('partecipanti');
 
     $newDiscussione->appendChild($newCommenti);
     $newDiscussione->appendChild($newDescrizione);
+    $newDiscussione->appendChild($newPartecipanti);
 
     $root->appendChild($newDiscussione);
 

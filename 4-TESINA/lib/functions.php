@@ -9,7 +9,7 @@
 
         $doc = new DOMDocument(); //creo un oggetto DOMdocument
         if(!$doc->loadXML($xmlstring)){  //carico il file xml privo di spazi bianchi dentro all'oggetto doc
-            exit();
+            exit;
         }
 
         return $doc;

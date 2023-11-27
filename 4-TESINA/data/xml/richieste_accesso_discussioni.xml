@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<richieste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/richieste_accesso_discussioni.xsd">
+  <richiesta id="1" id_discussione="1" id_utente="1" data_ora="2023-11-27 20:44:22" stato="accettata">
+    <moderatore id_mod="2" username="utente2"/>
+  </richiesta>
+</richieste>

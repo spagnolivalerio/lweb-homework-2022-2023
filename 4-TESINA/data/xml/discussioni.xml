@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  
+  <discussione titolo="Discussione1" id_poster="4" risolta="false" id="1" id_progetto="1" data_ora="2023-11-27 19:48:53">
+    <commenti/>
+    <descrizione>discussione sul progetto 1 dall'utente 4</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="1"/>
+    </partecipanti>
+  </discussione>
 </discussioni>

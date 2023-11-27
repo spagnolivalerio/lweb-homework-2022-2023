@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <storici xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/storici.xsd">
-
+  <storico id_utente="4">
+    <progetti>
+      <progetto id_progetto="1"/>
+    </progetti>
+    <richieste/>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti/>
+    <discussioni>
+      <discussione id_discussione="1"/>
+    </discussioni>
+    <valutazioni_commenti/>
+  </storico>
 </storici>

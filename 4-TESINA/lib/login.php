@@ -40,6 +40,7 @@
 		$_SESSION['Cognome'] = $row['cognome'];
 		$_SESSION['Tipo_utente'] = $row['tipo'];
 		$_SESSION['id_utente'] = $row['id'];
+		$_SESSION['username'] = $row['username'];
 
 		header('Location: ../web/homepage.php');
 	} else {

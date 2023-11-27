@@ -14,17 +14,15 @@
     <xsd:element name="richiesta">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="ric:stato" minOccurs="1" maxOccurs="1" />
                 <xsd:element ref="ric:moderatore" minOccurs="0" maxOccurs="1" />
             </xsd:sequence>
                 <xsd:attribute name="id" type="xsd:positiveInteger" />
                 <xsd:attribute name="id_utente" type="xsd:positiveInteger" />
                 <xsd:attribute name="id_discussione" type="xsd:positiveInteger" />
                 <xsd:attribute name="data_ora" type="xsd:string" />
+                <xsd:attribute name="stato" type="ric:tipoStato" />
         </xsd:complexType>
     </xsd:element>
-
-    <xsd:element name="stato" type="ric:tipoStato" />
 
     <xsd:simpleType name="tipoStato">
         <xsd:restriction base="xsd:string">
@@ -37,7 +35,7 @@
     <xsd:element name="moderatore">
         <xsd:complexType>
             <xsd:attribute name="username" type="xsd:string" />
-            <xsd:attribute name="id" type="xsd:positiveInteger" />
+            <xsd:attribute name="id_mod" type="xsd:positiveInteger" />
         </xsd:complexType>
     </xsd:element>
 
