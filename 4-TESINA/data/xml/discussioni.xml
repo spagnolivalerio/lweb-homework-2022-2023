@@ -7,4 +7,11 @@
       <partecipante id_partecipante="1"/>
     </partecipanti>
   </discussione>
+  <discussione titolo="s" id_poster="4" risolta="false" id="2" id_progetto="1" data_ora="2023-11-27 22:08:47">
+    <commenti/>
+    <descrizione>sdh</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="5"/>
+    </partecipanti>
+  </discussione>
 </discussioni>

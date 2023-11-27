@@ -24,14 +24,24 @@
         $id_richiesta = $_POST['id_richiesta'];
     }
 
+    if(!isset($_POST['esito']) || empty($_POST['esito'])){
+        exit; 
+    } else {
+        $esito = $_POST['esito'];
+    }
+
     $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
     $doc = getDOMdocument($xmlFile);
     $xpath = new DOMXPath($doc);
     $root = $doc->documentElement; 
 
+    $data_ora = new DateTime();
+    $data_ora = $data_ora->format('Y-m-d H:i:s');
+
     $richiesta = $xpath->query("/richieste/richiesta[@id = '$id_richiesta']")->item(0);
 
-    $richiesta->setAttribute('stato', 'accettata');
+    $richiesta->setAttribute('stato', $esito);
+    $richiesta->setAttribute('data_ora', $data_ora);
     $ricModeratore = $doc->createElement('moderatore'); 
     $ricModeratore->setAttribute('id_mod', $_SESSION['id_utente']);
     $ricModeratore->setAttribute('username', $_SESSION['username']);
@@ -43,6 +53,11 @@
 
     //AGGIUNGERE PARTECIPANTE IN DSICUSSIONI.XML
 
+    if($esito === 'rifiutata'){
+        header('Location: ../prove_funzioni/prova_gestisci.php');
+        exit; 
+    }
+    
     $id_discussione = $richiesta->getAttribute('id_discussione');
     $id_partecipante = $richiesta->getAttribute('id_utente');
     $xmlFile = "../data/xml/discussioni.xml";

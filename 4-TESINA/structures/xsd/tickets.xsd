@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns:sto="http://www.tesina/storici"
+			targetNamespace="http://www.tesina/tickets">
+
+<xsd:element name="tickets">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="tic:ticket" minOccurs="0" maxOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="ticket">
+    <xsd:complexType>
+        <xsd:attribute name="" />
+    </xsd:complexType>
+</xsd:element>
+
+</xsd:schema>

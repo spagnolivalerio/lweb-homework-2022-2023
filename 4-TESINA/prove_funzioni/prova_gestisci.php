@@ -17,12 +17,13 @@ require_once('../lib/functions.php');
 
 <h1>accesso alla discussione</h1>
 
-<form action="../lib/ammettere_in_discussione.php" method="post">
+<form action="../lib/gestisci_richiesta.php" method="post">
 
     <label for="id_richiesta">id_richiesta</label>
     <input name="id_richiesta" required></input><br>
 
-    <input type="submit" value="ammetti">
+    <input type="submit" name="esito" value="accettata">
+    <input type="submit" name="esito" value="rifiutata">
 </form>
 
 </body>
