@@ -91,6 +91,7 @@
 
             $stoDiscussione = $doc->createElement('discussione');
             $stoDiscussione->setAttribute('id_discussione', $id_discussione);
+            $stoDiscussione->setAttribute('titolo', $newTitolo);
             $stoDiscussioni = $node->getElementsByTagName('discussioni')->item(0);
             $stoDiscussioni->appendChild($stoDiscussione);
 

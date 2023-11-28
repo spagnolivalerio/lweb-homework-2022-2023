@@ -93,6 +93,7 @@
 
             $stoReport = $doc->createElement('report_progetto');
             $stoReport->setAttribute('id_report', $id_segnalazione);
+            $stoReport->setAttribute('tipo', $newTipoValue);
             $stoReportsProgetti = $node->getElementsByTagName('reports_progetti')->item(0);
             $stoReportsProgetti->appendChild($stoReport);
 

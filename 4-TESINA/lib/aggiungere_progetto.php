@@ -26,6 +26,12 @@
         $descrizione = $_POST['descrizione'];
     }
 
+    if(!isset($_POST['titolo']) || empty($_POST['titolo'])){
+        exit;
+    } else {
+       $titolo = $_POST['titolo'];
+    }
+
     if(!isset($_POST['tempo_medio']) || empty($_POST['tempo_medio'])){
         exit;
     } else {
@@ -45,7 +51,7 @@
     }
     
     $id_progetto = generate_id($xmlFile);
-    $id_tutorial = generate_id($xmlTutorial);
+    $id_tutorial = $id_progetto; 
     $data_ora = new DateTime();
     $data_ora = $data_ora->format('Y-m-d H:i:s');
     $id_creator = $_SESSION['id_utente'];
@@ -57,6 +63,7 @@
 
     $newProgetto = $doc->createElement('progetto');
 
+    $proTitolo = $doc->createElement('titolo', $titolo);
     $proCategorie = $doc->createElement('categorie');
     $proDescrizione = $doc->createElement('descrizione', $descrizione);
     $proReports = $doc->createElement('reports_progetti');
@@ -122,8 +129,9 @@
     foreach($nodes as $node){
 
         if($_SESSION['id_utente'] === $node->getAttribute('id_utente')){
-
+            
             $stoProgetto = $doc->createElement('progetto');
+            $stoProgetto->setAttribute('titolo', $titolo);
             $stoProgetto->setAttribute('id_progetto', $id_progetto);
             $stoProgetti = $node->getElementsByTagName('progetti')->item(0);
             $stoProgetti->appendChild($stoProgetto);

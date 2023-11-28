@@ -91,6 +91,8 @@
 
             $stoCommento = $doc->createElement('commento');
             $stoCommento->setAttribute('id_commento', $id_commento);
+            $stoTesto = $doc->createElement('testo', $newTestoValue);
+            $stoCommento->appendChild($stoTesto); 
             $stoCommenti = $node->getElementsByTagName('commenti')->item(0);
             $stoCommenti->appendChild($stoCommento);
 

@@ -17,7 +17,7 @@ require_once('../lib/functions.php');
 
 <h1>ELIMINA COMMENTO</h1>
 
-<form action="../lib/copy.php" method="post">
+<form action="../lib/rimuovere_progetto.php" method="post">
 
     <label for="id_progetto">id_commento</label>
     <input name="id_progetto" required></input><br>

@@ -34,6 +34,10 @@ require_once('../lib/functions.php');
   <!-- Aggiungi altre categorie secondo necessità -->
   <br>
 
+  <label for="titolo">titolo: </label>
+  <input type="text"  name="titolo" required></input>
+  <br>
+
   <!-- Descrizione -->
   <label for="descrizione">Descrizione: </label>
   <textarea  name="descrizione" rows="4" cols="50" required></textarea>

@@ -43,31 +43,9 @@
     $xmlString = $doc->saveXML();
     file_put_contents($xmlFile, $xmlString);
 
-    //RIMUOVI DA REPORTS_PROGETTI.XML
-    
-    $xmlFile = "../data/xml/reports_progetti.xml"; 
-    $doc = getDOMdocument($xmlFile);
-    $root = $doc->documentElement; 
-    $xpath = new DOMXPath($doc); 
-
-    $reports_progetti = $xpath->query("/reports_progetti/report_progetto[@id_progetto = '$id_progetto']"); 
-
-    foreach($reports_progetti as $report_progetto){
-
-        $root->removeChild($report_progetto);
-    }
-
-    $doc->formatOutput = true; 
-    $xmlString = $doc->saveXML();
-    file_put_contents($xmlFile, $xmlString);
-
     //RIMUOVI DA VALUTAZIONI.XML
     
     //RIMUOVI DA DISCUSSIONI.XML
-    
-    $xmlFile = "../data/xml/discussioni.xml";
-    $query = "/discussioni/discussione[@id_progetto ";
-    $id_discussioni = remove_1_n($xmlFile, $query, $id_progetto); 
     
     $xmlFile = "../data/xml/discussioni.xml"; 
     $doc = getDOMdocument($xmlFile);
@@ -118,10 +96,6 @@
     //RIMUOVI DA COMMENTI.XML
 
     $xmlFile = "../data/xml/commenti.xml"; 
-    $query = "/commenti/commento['@id "; 
-    
-
-    $xmlFile = "../data/xml/commenti.xml"; 
     $doc = getDOMdocument($xmlFile);
     $root = $doc->documentElement; 
     $xpath = new DOMXPath($doc);
@@ -143,33 +117,6 @@
 
         array_push($array_id_commenti, $to_remove_com->getAttribute('id')); 
         $root->removeChild($to_remove_com);
-    }
-
-    $doc->formatOutput = true; 
-    $xmlString = $doc->saveXML();
-    file_put_contents($xmlFile, $xmlString);
-
-    //RIMUOVI DA REPORTS_COMMENTI.XML
-
-    $xmlFile = "../data/xml/reports_commenti.xml"; 
-    $doc = getDOMdocument($xmlFile);
-    $root = $doc->documentElement; 
-    $xpath = new DOMXPath($doc);
-    $array_reports_commenti = array();
-
-    foreach($array_id_commenti as $id_commento){
-
-        $reports_commenti = $xpath->query("/reports_commenti/report_commento[@id_commento = '$id_commento']");
-        
-        foreach($reports_commenti as $report_commento){
-
-            array_push($array_reports_commenti, $report_commento);
-        }
-    }
-
-    foreach($array_reports_commenti as $to_remove_rep){
-
-        $root->removeChild($to_remove_rep);
     }
 
     $doc->formatOutput = true; 

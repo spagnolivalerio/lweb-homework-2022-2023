@@ -28,25 +28,18 @@
 
     function generate_id($xmlFile){
 
-        $nodes = uploadXML($xmlFile);
+        $doc = getDOMdocument($xmlFile); 
+        $root = $doc->documentElement; 
 
-        if(empty($nodes)){
-            return 1;
-        }
+        $id = $root->getAttribute('ultimo_id');
+        $newID = intval($id) + 1; 
+        $root->setAttribute('ultimo_id', $newID); 
 
-        foreach($nodes as $node){
-            
-            $maxID = 1; 
-            $currentID = $node->getAttribute('id');
+        $doc->formatOutput = true; 
+        $xmlString = $doc->saveXML();
+        file_put_contents($xmlFile, $xmlString); 
 
-            if($currentID > $maxID){
-                $maxID = $currentID;
-            }
-        }
-
-        $maxID++;
-
-        return $maxID;
+        return $newID; 
     }
 
     function remove_1_1($xmlFile, $query, $id){
@@ -92,10 +85,13 @@
 
     function remove_1_2n($xmlFile, $query, $array_id){
 
+        if(empty($array_id)){
+            exit; 
+        }
+
         $doc = getDOMdocument($xmlFile);
         $root = $doc->documentElement; 
         $xpath = new DOMXPath($doc);
-        $nodes = array(); 
         $array_id_2 = array();
     
         foreach($array_id as $id){
@@ -103,20 +99,17 @@
             $res = $xpath->query($query . "= '$id']");
     
             foreach($res as $node){
-    
-                array_push($nodes, $node); 
+                
+                $root->removeChild($node); 
+                array_push($array_id_2, $node->getAttribute('id')); 
             }
-        }
-    
-        foreach($nodes as $to_remove){
-    
-            array_push($array_id_2, $to_remove->getAttribute('id')); 
-            $root->removeChild($to_remove);
         }
     
         $doc->formatOutput = true; 
         $xmlString = $doc->saveXML();
         file_put_contents($xmlFile, $xmlString);
+
+        return $array_id_2; 
     }
 
     function ban(){};

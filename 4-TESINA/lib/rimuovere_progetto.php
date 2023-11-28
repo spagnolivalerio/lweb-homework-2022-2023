@@ -2,7 +2,6 @@
 
     session_start();
     require_once('functions.php');
-    $xmlFile = "../data/xml/progetti.xml";
 
     if(!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])){
         exit;
@@ -12,6 +11,7 @@
 
     //RIMUOVI DA PROGETTI.XML
 
+    $xmlFile = "../data/xml/progetti.xml";
     $query = "/progetti/progetto[@id"; 
     remove_1_1($xmlFile, $query, $id_progetto); 
 
@@ -27,7 +27,11 @@
     $query = "/reports_progetti/report_progetto[@id_progetto";
     remove_1_n($xmlFile, $query, $id_progetto); 
 
-    //RIMUOVI DA VALUTAZIONI.XML
+    //RIMUOVI DA VALUTAZIONI_PROGETTI.XML
+
+    $xmlFile = "../data/xml/valutazioni_progetti.xml";
+    $query = "/valutazioni_progetti/valutazione_progetto[@id_progetto";
+    remove_1_n($xmlFile, $query, $id_progetto);
     
     //RIMUOVI DA DISCUSSIONI.XML
     
@@ -43,9 +47,9 @@
 
     //RIMUOVI DA COMMENTI.XML
 
-    $xmlFile = "../data/xml/discussioni.xml";
+    $xmlFile = "../data/xml/commenti.xml";
     $query = "/commenti/commento[@id_discussione";
-    $id_commenti = remove_1_n($xmlFile, $query, $id_discussioni);
+    $id_commenti = remove_1_2n($xmlFile, $query, $id_discussioni);
 
     //RIMUOVI DA REPORTS_COMMENTI.XML
 
@@ -53,7 +57,13 @@
     $query = "/reports_commenti/report_commento[@id_commento";
     remove_1_2n($xmlFile, $query, $id_commenti);
 
-    //header('Location: ../prove_funzioni/prova_rimuovi_progetto.php');
-    //exit; 
+    //RIMUOVI DA VALUTAZIONI_COMMENTO.XML
 
+    $xmlFile = "../data/xml/valutazioni_commenti.xml";
+    $query = "/valutazioni_commenti/valutazione_commento[@id_commenti";
+    remove_1_2n($xmlFile, $query, $id_commenti);
+    
+    header('Location: ../prove_funzioni/prova_rimuovi_progetto.php');
+    exit; 
+   
 ?>

@@ -8,12 +8,14 @@
 			<xsd:sequence minOccurs="0" maxOccurs="1">
 				<xsd:element ref="pro:progetto" minOccurs="0" maxOccurs="unbounded" />
 			</xsd:sequence>
+			<xsd:attribute name="ultimo_id" type="xsd:positiveInteger" />
 		</xsd:complexType>
 	</xsd:element>
 
 	<xsd:element name="progetto">
 		<xsd:complexType>
 			<xsd:sequence>
+				<xsd:element ref="pro:titolo" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:categorie" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:descrizione" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:reports_progetti" minOccurs="1" maxOccurs="1" />
@@ -30,6 +32,8 @@
 			<xsd:attribute name="difficolta" type="pro:tipiDifficolta" />
 		</xsd:complexType>
 	</xsd:element>
+
+	<xsd:element name="titolo" type="xsd:string" />
 
 	<xsd:element name="tutorial_progetto">
 		<xsd:complexType>

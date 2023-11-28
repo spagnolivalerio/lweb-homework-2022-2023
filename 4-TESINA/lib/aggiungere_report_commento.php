@@ -91,8 +91,10 @@
 
         if($_SESSION['id_utente'] === $node->getAttribute('id_utente')){
 
+
             $stoReport = $doc->createElement('report_commento');
             $stoReport->setAttribute('id_report', $id_segnalazione);
+            $stoReport->setAttribute('tipo', $newTipoValue);
             $stoReports = $node->getElementsByTagName('reports_commenti')->item(0);
             $stoReports->appendChild($stoReport);
 

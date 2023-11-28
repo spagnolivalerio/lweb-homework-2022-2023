@@ -1,2 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd"/>
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="5" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <discussione titolo="1" id_poster="5" risolta="false" id="1" id_progetto="3" data_ora="2023-11-28 12:17:35">
+    <commenti>
+      <commento id_commento="9"/>
+      <commento id_commento="10"/>
+    </commenti>
+    <descrizione>1</descrizione>
+    <partecipanti/>
+  </discussione>
+  <discussione titolo="tits prog 5" id_poster="6" risolta="false" id="3" id_progetto="3" data_ora="2023-11-28 12:22:12">
+    <commenti>
+      <commento id_commento="3"/>
+      <commento id_commento="4"/>
+    </commenti>
+    <descrizione>desc prog 5 2</descrizione>
+    <partecipanti/>
+  </discussione>
+</discussioni>

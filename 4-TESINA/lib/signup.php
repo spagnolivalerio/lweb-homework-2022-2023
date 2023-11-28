@@ -56,7 +56,7 @@
 
     if(mysqli_num_rows($rows) > 0){
         $_SESSION['email_esistente'] = true;
-        header('Location: ../web/singup.php');
+        header('Location: ../web/signup.php');
         exit;
     }
 

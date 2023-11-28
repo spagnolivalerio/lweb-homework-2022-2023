@@ -1,2 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd"/>
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="7" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="3" id_creator="5" tempo_medio="1" file_img="1" data_pubblicazione="2023-11-28 12:17:01" visualizzazioni="0" difficolta="facile">
+    <categorie>
+      <categoria id_categoria="1"/>
+    </categorie>
+    <descrizione>2rf3</descrizione>
+    <reports_progetti/>
+    <discussioni>
+      <discussione id_discussione="1"/>
+      <discussione id_discussione="3"/>
+    </discussioni>
+    <tutorial_progetto id_tutorial="3"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="4" id_creator="6" tempo_medio="1" file_img="1" data_pubblicazione="2023-11-28 12:19:50" visualizzazioni="0" difficolta="facile">
+    <categorie>
+      <categoria id_categoria="1"/>
+    </categorie>
+    <descrizione>desc</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="4"/>
+    <valutazioni/>
+  </progetto>
+</progetti>
