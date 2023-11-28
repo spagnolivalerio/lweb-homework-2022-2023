@@ -8,8 +8,6 @@
         exit();
     }
 
-    $xmlFile = "../data/xml/commenti.xml";
-
     //HO BISOGNO DI PORTARMI DIETRO SIA L'IDENTIFICATIVO DEL COMMENTO CHE DELLA DISCUSSIONE
 
     if(!isset($_POST['id_commento']) || empty($_POST['id_commento'])){
@@ -17,7 +15,6 @@
     }else{
         $id_commento = $_POST['id_commento'];
     }
-
 
     if(!isset($_POST['id_discussione']) || empty($_POST['id_discussione'])){
         exit();
@@ -27,24 +24,10 @@
 
     //RIMUOVI DA COMMENTI.XML
 
-    $doc = getDOMdocument($xmlFile);
-    $root = $doc->documentElement;
-    $nodes = $root->childNodes;
-
-    foreach($nodes as $node){
-
-        if($id_commento === $node->getAttribute('id')){
-            
-            $root->removeChild($node);
-
-            $doc->formatOutput = true;
-            $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
-            file_put_contents($xmlFile, $xmlString);
-
-            break; 
-        }    
-    }
-
+    $xmlFile = "../data/xml/commenti.xml";
+    $query = "/commenti/commento[@id"; 
+    remove_1_1($xmlFile, $query, $id_commento); 
+    
     //RIMUOVI DA DISCUSSIONI.XML
 
     $xmlFile = "../data/xml/discussioni.xml";
@@ -61,7 +44,7 @@
             $discCommento = $discCommenti->childNodes;
 
             foreach($discCommento as $commento){
-
+  
                 if($id_commento === $commento->getAttribute('id_commento')){
 
                     $discCommenti->removeChild($commento);
