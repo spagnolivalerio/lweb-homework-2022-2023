@@ -3,15 +3,76 @@
   <storico id_utente="4">
     <progetti>
       <progetto id_progetto="1"/>
+      <progetto id_progetto="2"/>
+      <progetto id_progetto="2"/>
+      <progetto id_progetto="2"/>
+      <progetto id_progetto="2"/>
+      <progetto id_progetto="2"/>
+      <progetto id_progetto="2"/>
+      <progetto id_progetto="1"/>
+      <progetto id_progetto="1"/>
+      <progetto id_progetto="1"/>
+      <progetto id_progetto="2"/>
+      <progetto id_progetto="3"/>
+      <progetto id_progetto="2"/>
+      <progetto id_progetto="1"/>
+      <progetto id_progetto="1"/>
     </progetti>
-    <richieste/>
-    <commenti/>
+    <richieste>
+      <richiesta id_richiesta="6"/>
+      <richiesta id_richiesta="6"/>
+      <richiesta id_richiesta="1"/>
+      <richiesta id_richiesta="2"/>
+      <richiesta id_richiesta="3"/>
+      <richiesta id_richiesta="4"/>
+      <richiesta id_richiesta="5"/>
+    </richieste>
+    <commenti>
+      <commento id_commento="1"/>
+      <commento id_commento="2"/>
+      <commento id_commento="3"/>
+      <commento id_commento="4"/>
+      <commento id_commento="5"/>
+      <commento id_commento="5"/>
+      <commento id_commento="6"/>
+      <commento id_commento="7"/>
+      <commento id_commento="8"/>
+      <commento id_commento="9"/>
+      <commento id_commento="10"/>
+      <commento id_commento="11"/>
+      <commento id_commento="12"/>
+      <commento id_commento="13"/>
+      <commento id_commento="14"/>
+      <commento id_commento="15"/>
+      <commento id_commento="16"/>
+      <commento id_commento="17"/>
+      <commento id_commento="18"/>
+      <commento id_commento="1"/>
+      <commento id_commento="2"/>
+      <commento id_commento="3"/>
+      <commento id_commento="4"/>
+      <commento id_commento="5"/>
+      <commento id_commento="6"/>
+      <commento id_commento="7"/>
+    </commenti>
     <valutazioni_progetti/>
-    <reports_progetti/>
+    <reports_progetti>
+      <report_progetto id_report="1"/>
+    </reports_progetti>
     <reports_commenti/>
     <discussioni>
       <discussione id_discussione="1"/>
       <discussione id_discussione="2"/>
+      <discussione id_discussione="3"/>
+      <discussione id_discussione="3"/>
+      <discussione id_discussione="3"/>
+      <discussione id_discussione="4"/>
+      <discussione id_discussione="1"/>
+      <discussione id_discussione="2"/>
+      <discussione id_discussione="3"/>
+      <discussione id_discussione="2"/>
+      <discussione id_discussione="1"/>
+      <discussione id_discussione="1"/>
     </discussioni>
     <valutazioni_commenti/>
   </storico>

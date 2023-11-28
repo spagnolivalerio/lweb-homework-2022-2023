@@ -76,7 +76,7 @@
         }    
     }
 
-    header('Location: ../prove_funzioni/rimuovi_commento.php');
+    header('Location: ../prove_funzioni/prova_rimuovi_commento.php');
     exit;
 
 ?>

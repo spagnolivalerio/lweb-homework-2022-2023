@@ -1,18 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="1" id_creator="4" tempo_medio="60" file_img="url" data_pubblicazione="2023-11-27 19:47:53" visualizzazioni="0" difficolta="medio">
-    <categorie>
-      <categoria id_categoria="2"/>
-    </categorie>
-    <descrizione>Progetto di prova</descrizione>
-    <reports_progetti/>
-    <discussioni>
-      <discussione id_discussione="1"/>
-      <discussione id_discussione="2"/>
-      <discussione id_discussione="2"/>
-      <discussione id_discussione="2"/>
-    </discussioni>
-    <tutorial_progetto id_tutorial="1"/>
-    <valutazioni/>
-  </progetto>
-</progetti>
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd"/>

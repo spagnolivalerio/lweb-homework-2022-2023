@@ -1,4 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
-
+  <commento id="1" id_discussione="1" id_commentatore="4" data_ora="2023-11-28 02:33:25">
+    <testo>1</testo>
+    <voti/>
+    <reports_commento/>
+  </commento>
+  <commento id="2" id_discussione="1" id_commentatore="4" data_ora="2023-11-28 02:33:27">
+    <testo>2</testo>
+    <voti/>
+    <reports_commento/>
+  </commento>
+  <commento id="3" id_discussione="1" id_commentatore="4" data_ora="2023-11-28 02:33:29">
+    <testo>22</testo>
+    <voti/>
+    <reports_commento/>
+  </commento>
+  <commento id="4" id_discussione="3" id_commentatore="4" data_ora="2023-11-28 02:33:46">
+    <testo>1</testo>
+    <voti/>
+    <reports_commento/>
+  </commento>
+  <commento id="5" id_discussione="1" id_commentatore="4" data_ora="2023-11-28 02:39:20">
+    <testo>1</testo>
+    <voti/>
+    <reports_commento/>
+  </commento>
+  <commento id="6" id_discussione="1" id_commentatore="4" data_ora="2023-11-28 02:39:22">
+    <testo>2</testo>
+    <voti/>
+    <reports_commento/>
+  </commento>
+  <commento id="7" id_discussione="1" id_commentatore="4" data_ora="2023-11-28 02:39:23">
+    <testo>11</testo>
+    <voti/>
+    <reports_commento/>
+  </commento>
 </commenti>

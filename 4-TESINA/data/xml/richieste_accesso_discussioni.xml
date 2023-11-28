@@ -1,14 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<richieste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/richieste_accesso_discussioni.xsd">
-  <richiesta id="1" id_discussione="1" id_utente="1" data_ora="2023-11-27 20:44:22" stato="accettata">
-    <moderatore id_mod="2" username="utente2"/>
-  </richiesta>
-  <richiesta id="2" id_discussione="2" id_utente="5" data_ora="2023-11-27 22:12:52" stato="accettata">
-    <moderatore id_mod="1" username="utente1"/>
-  </richiesta>
-  <richiesta id="3" id_discussione="1" id_utente="1" data_ora="2023-11-27 22:17:49" stato="in lavorazione"/>
-  <richiesta id="4" id_discussione="1" id_utente="1" data_ora="2023-11-27 22:18:18" stato="in lavorazione"/>
-  <richiesta id="5" id_discussione="1" id_utente="5" data_ora="2023-11-27 22:22:48" stato="rifiutata">
-    <moderatore id_mod="1" username="utente1"/>
-  </richiesta>
-</richieste>
+<richieste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/richieste_accesso_discussioni.xsd"/>

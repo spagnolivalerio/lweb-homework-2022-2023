@@ -14,41 +14,35 @@
     }
     */
 
-
     if(!isset($_POST['categorie']) || empty($_POST['categorie'])){
         exit;
     } else {
        $categorie = $_POST['categorie'];
     }
-    
 
     if(!isset($_POST['descrizione']) || empty($_POST['descrizione'])){
         exit;
     } else {
         $descrizione = $_POST['descrizione'];
     }
-    
 
     if(!isset($_POST['tempo_medio']) || empty($_POST['tempo_medio'])){
         exit;
     } else {
         $tempo_medio = $_POST['tempo_medio']; 
     }
-    
 
     if(!isset($_POST['difficolta']) || empty($_POST['difficolta'])){
         exit;
     } else {
         $difficolta = $_POST['difficolta']; 
     }
-    
 
     if(!isset($_POST['img']) || empty($_POST['img'])){
         exit;
     } else {
         $img = $_POST['img']; 
     }
-    
     
     $id_progetto = generate_id($xmlFile);
     $id_tutorial = generate_id($xmlTutorial);
@@ -118,8 +112,6 @@
     $xmlString = $doc->saveXML();
     file_put_contents($xmlTutorial, $xmlString);
 
-    
-
     //AGGIUNTA IN STORICO.XML
 
     $xmlFile = "../data/xml/storici.xml";
@@ -147,7 +139,5 @@
 
     header('Location: ../prove_funzioni/prova_aggiungi_progetto.php');
     exit;
-
-
 
 ?>

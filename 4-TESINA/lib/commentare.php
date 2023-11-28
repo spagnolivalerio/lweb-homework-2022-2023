@@ -1,6 +1,8 @@
 <?php
 
     session_start();
+    require_once('functions.php'); 
+    //bisogna fare il controllo su chi può commentare in base agli accessi alle discussioni
 
     if(!isset($_SESSION['Tipo_utente'])){
         header('Location: ../web/login.php');

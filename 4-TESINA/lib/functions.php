@@ -49,6 +49,76 @@
         return $maxID;
     }
 
+    function remove_1_1($xmlFile, $query, $id){
+
+        $doc = getDOMdocument($xmlFile);
+        $root = $doc->documentElement; 
+        $xpath = new DOMXPath($doc); 
+    
+        $to_remove = $xpath->query($query . " = '$id']")->item(0);
+    
+        if($to_remove !== NULL){
+            $root->removeChild($to_remove);
+        }
+    
+        $doc->formatOutput = true; 
+        $xmlString = $doc->saveXML();
+        file_put_contents($xmlFile, $xmlString);
+
+    }
+
+    function remove_1_n($xmlFile, $query, $id){
+
+        $doc = getDOMdocument($xmlFile); 
+        $root = $doc->documentElement; 
+        $xpath = new DOMXPath($doc); 
+        $array_id = array(); 
+    
+        $to_remove_s = $xpath->query($query . " = '$id']"); 
+    
+        foreach($to_remove_s as $to_remove){
+
+            array_push($array_id, $to_remove->getAttribute('id'));
+            $root->removeChild($to_remove); 
+            
+        }
+    
+        $doc->formatOutput = true; 
+        $xmlString = $doc->saveXML();
+        file_put_contents($xmlFile, $xmlString);
+    
+        return $array_id; 
+    }
+
+    function remove_1_2n($xmlFile, $query, $array_id){
+
+        $doc = getDOMdocument($xmlFile);
+        $root = $doc->documentElement; 
+        $xpath = new DOMXPath($doc);
+        $nodes = array(); 
+        $array_id_2 = array();
+    
+        foreach($array_id as $id){
+    
+            $res = $xpath->query($query . "= '$id']");
+    
+            foreach($res as $node){
+    
+                array_push($nodes, $node); 
+            }
+        }
+    
+        foreach($nodes as $to_remove){
+    
+            array_push($array_id_2, $to_remove->getAttribute('id')); 
+            $root->removeChild($to_remove);
+        }
+    
+        $doc->formatOutput = true; 
+        $xmlString = $doc->saveXML();
+        file_put_contents($xmlFile, $xmlString);
+    }
+
     function ban(){};
 
     function sban(){};

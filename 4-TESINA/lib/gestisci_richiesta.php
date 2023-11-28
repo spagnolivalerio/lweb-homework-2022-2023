@@ -76,7 +76,7 @@
     $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
     file_put_contents($xmlFile, $xmlString);
 
-    header('Location: ../prove_funzioni/prova_ammissione.php');
+    header('Location: ../prove_funzioni/prova_gestisci.php');
     exit; 
             
 ?>
