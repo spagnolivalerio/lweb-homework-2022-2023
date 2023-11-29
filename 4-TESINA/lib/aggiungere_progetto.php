@@ -53,15 +53,16 @@
     
     $id_progetto = generate_id($xmlFile);
     $id_tutorial = $id_progetto; 
+    
+    $ext = pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION);
+    $nome_file_img = $img_dir_path .  "img_progetto_" . $id_progetto . "." . $ext;  
+    $fd = fopen($nome_file_img, 'w'); 
 
-    $nome_file = $img_dir_path .  "img_progetto_" . $id_progetto . ".txt";  
-    $fd = fopen($nome_file, 'w'); 
-
-    $encoded_img_64 = base64_encode(file_get_contents($img_location)); 
+    $img = file_get_contents($img_location); 
 
     if($fd){
 
-        fwrite($fd, $encoded_img_64);
+        fwrite($fd, $img);
         fclose($fd);
 
     } else {
@@ -88,16 +89,13 @@
     $proDiscussioni = $doc->createElement('discussioni');
     $proTutorial = $doc->createElement('tutorial_progetto');
     $proValutazioni = $doc->createElement('valutazioni');
-    $proImmagine = $doc->createElement('immagine'); 
-    
-    $proImmagine->setAttribute('nome_img_file', "img_progetto_" . $id_progetto . ".txt");
-    $proImmagine->setAttribute('type_img_file', $_FILES['img']['type']);
 
     $newProgetto->setAttribute('id', $id_progetto);
     $newProgetto->setAttribute('id_creator', $id_creator);
     $newProgetto->setAttribute('tempo_medio', $tempo_medio);
     $newProgetto->setAttribute('data_pubblicazione', $data_ora);
     $newProgetto->setAttribute('visualizzazioni', 0);
+    $newProgetto->setAttribute('nome_file_img', $nome_file_img);
     $newProgetto->setAttribute('difficolta', $difficolta);
     
     foreach($categorie as $categoria){
@@ -116,7 +114,6 @@
     $newProgetto->appendChild($proDiscussioni);
     $newProgetto->appendChild($proTutorial);
     $newProgetto->appendChild($proValutazioni);
-    $newProgetto->appendChild($proImmagine);
 
     $root->appendChild($newProgetto);
 
