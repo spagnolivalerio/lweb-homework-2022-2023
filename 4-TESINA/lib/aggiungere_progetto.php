@@ -4,6 +4,7 @@
     require_once('functions.php');
     $xmlFile = "../data/xml/progetti.xml";
     $xmlTutorial = "../data/xml/tutorials.xml";
+    $img_dir_path = "../img/"; 
 
     /*
     $lock = "file.lock";
@@ -44,14 +45,31 @@
         $difficolta = $_POST['difficolta']; 
     }
 
-    if(!isset($_POST['img']) || empty($_POST['img'])){
+    if(!isset($_FILES['img']['tmp_name']) || empty($_FILES['img']['tmp_name'])){
         exit;
     } else {
-        $img = $_POST['img']; 
+        $img_location = $_FILES['img']['tmp_name']; 
     }
     
     $id_progetto = generate_id($xmlFile);
     $id_tutorial = $id_progetto; 
+
+    $nome_file = $img_dir_path .  "img_progetto_" . $id_progetto . ".txt";  
+    $fd = fopen($nome_file, 'w'); 
+
+    $encoded_img_64 = base64_encode(file_get_contents($img_location)); 
+
+    if($fd){
+
+        fwrite($fd, $encoded_img_64);
+        fclose($fd);
+
+    } else {
+
+        exit; 
+
+    }
+    
     $data_ora = new DateTime();
     $data_ora = $data_ora->format('Y-m-d H:i:s');
     $id_creator = $_SESSION['id_utente'];
@@ -70,11 +88,14 @@
     $proDiscussioni = $doc->createElement('discussioni');
     $proTutorial = $doc->createElement('tutorial_progetto');
     $proValutazioni = $doc->createElement('valutazioni');
+    $proImmagine = $doc->createElement('immagine'); 
+    
+    $proImmagine->setAttribute('nome_img_file', "img_progetto_" . $id_progetto . ".txt");
+    $proImmagine->setAttribute('type_img_file', $_FILES['img']['type']);
 
     $newProgetto->setAttribute('id', $id_progetto);
     $newProgetto->setAttribute('id_creator', $id_creator);
     $newProgetto->setAttribute('tempo_medio', $tempo_medio);
-    $newProgetto->setAttribute('file_img', $img);
     $newProgetto->setAttribute('data_pubblicazione', $data_ora);
     $newProgetto->setAttribute('visualizzazioni', 0);
     $newProgetto->setAttribute('difficolta', $difficolta);
@@ -95,6 +116,7 @@
     $newProgetto->appendChild($proDiscussioni);
     $newProgetto->appendChild($proTutorial);
     $newProgetto->appendChild($proValutazioni);
+    $newProgetto->appendChild($proImmagine);
 
     $root->appendChild($newProgetto);
 

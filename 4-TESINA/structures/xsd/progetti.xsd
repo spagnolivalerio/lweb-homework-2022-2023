@@ -22,14 +22,21 @@
 				<xsd:element ref="pro:discussioni" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:tutorial_progetto" minOccurs="0" maxOccurs="1" />
 				<xsd:element ref="pro:valutazioni" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="pro:immagine" minOccurs="0" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
 			<xsd:attribute name="id_creator" type="xsd:positiveInteger" />
 			<xsd:attribute name="tempo_medio" type="xsd:positiveInteger" />
-			<xsd:attribute name="file_img" type="xsd:string" />
 			<xsd:attribute name="data_pubblicazione" type="xsd:dateTime" />
 			<xsd:attribute name="visualizzazioni" type="xsd:positiveInteger" />
 			<xsd:attribute name="difficolta" type="pro:tipiDifficolta" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="immagine">
+		<xsd:complexType>
+			<xsd:attribute name="nome_file_img" type="xsd:string" />
+			<xsd:attribute name="type_file_img" type="xsd:string" />
 		</xsd:complexType>
 	</xsd:element>
 

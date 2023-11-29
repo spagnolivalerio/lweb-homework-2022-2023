@@ -17,7 +17,7 @@ require_once('../lib/functions.php');
 
 <h1>Aggiungi progetto</h1>
 
-<form action="../lib/aggiungere_progetto.php" method="post">
+<form action="../lib/aggiungere_progetto.php" method="post" enctype="multipart/form-data">
 <label>Categorie:</label>
   <br>
   <input type="checkbox" id="categoria_1" name="categorie[]" value="1">
@@ -61,6 +61,10 @@ require_once('../lib/functions.php');
     <option value="difficile">Difficile</option>
   </select>
   <br>
+
+  <label for="img">10</label>
+  <input type="file" name="img" accept="image/*" required></input><br>
+
 
   <!-- Pulsante di invio -->
   <input type="submit" value="Pubblica Progetto">
