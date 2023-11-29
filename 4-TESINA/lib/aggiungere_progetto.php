@@ -4,7 +4,7 @@
     require_once('functions.php');
     $xmlFile = "../data/xml/progetti.xml";
     $xmlTutorial = "../data/xml/tutorials.xml";
-    $img_dir_path = "../img/"; 
+    $img_dir_path = "../img/proj/"; 
 
     /*
     $lock = "file.lock";

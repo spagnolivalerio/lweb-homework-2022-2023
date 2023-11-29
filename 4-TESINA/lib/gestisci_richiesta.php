@@ -33,7 +33,6 @@
     $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
     $doc = getDOMdocument($xmlFile);
     $xpath = new DOMXPath($doc);
-    $root = $doc->documentElement; 
 
     $data_ora = new DateTime();
     $data_ora = $data_ora->format('Y-m-d H:i:s');

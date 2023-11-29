@@ -1,13 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="12" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
-  <commento id="9" id_discussione="1" id_commentatore="6" data_ora="2023-11-28 12:28:01">
-    <testo>ew5yh</testo>
-    <voti/>
-    <reports_commento/>
-  </commento>
-  <commento id="10" id_discussione="1" id_commentatore="6" data_ora="2023-11-28 12:28:03">
-    <testo>eh5</testo>
-    <voti/>
-    <reports_commento/>
-  </commento>
+
 </commenti>

@@ -22,8 +22,11 @@ require_once('../lib/functions.php');
     <label for="descrizione">Descrizione:</label>
     <textarea name="descrizione" required></textarea><br>
 
-    <label for="id_progetto">10</label>
+    <label for="id_progetto">id_pro</label>
     <textarea name="id_progetto" required></textarea><br>
+
+    <label for="num_step">step</label>
+    <textarea name="num_step" required></textarea><br>
 
     <label for="img">10</label>
     <input type="file" name="img" accept="image/*" required></input><br>
