@@ -9,9 +9,14 @@
         $id_progetto = $_POST['id_progetto'];
     }
 
+    $xmlFile = "../data/xml/progetti.xml";
+    $doc = getDOMdocument($xmlFile);
+    $xpath = new DOMXPath($doc);
+
+    $img_path = $xpath->query("/progetti/progetto[@id = '$id_progetto']")->item(0)->getAttribute('nome_file_img');
+
     //RIMUOVI DA PROGETTI.XML
 
-    $xmlFile = "../data/xml/progetti.xml";
     $query = "/progetti/progetto[@id"; 
     remove_1_1($xmlFile, $query, $id_progetto); 
 
@@ -62,7 +67,13 @@
     $xmlFile = "../data/xml/valutazioni_commenti.xml";
     $query = "/valutazioni_commenti/valutazione_commento[@id_commenti";
     remove_1_2n($xmlFile, $query, $id_commenti);
-    
+
+    //RIMUOVI IMMAGINE
+
+    if(file_exists($img_path)){
+        unlink($img_path);
+    }
+
     header('Location: ../prove_funzioni/prova_rimuovi_progetto.php');
     exit; 
    

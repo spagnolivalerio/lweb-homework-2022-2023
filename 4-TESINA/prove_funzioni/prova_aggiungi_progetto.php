@@ -48,11 +48,6 @@ require_once('../lib/functions.php');
   <input type="number"  name="tempo_medio" min="1" required>
   <br>
 
-  <!-- Immagine -->
-  <label for="immagine">URL dell'immagine: </label>
-  <input type="text" name="img" required>
-  <br>
-
   <!-- Difficoltà -->
   <label for="difficolta">Difficoltà: </label>
   <select id="difficolta" name="difficolta" required>

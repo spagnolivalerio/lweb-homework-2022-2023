@@ -6,15 +6,6 @@
     $xmlTutorial = "../data/xml/tutorials.xml";
     $img_dir_path = "../img/proj/"; 
 
-    /*
-    $lock = "file.lock";
-    $take_lock = fopen($lock, 'w');
-    if(flock($take_lock, LOCK_EX)){
-        //add project
-        flock($take_lock, LOCK_UN);
-    }
-    */
-
     if(!isset($_POST['categorie']) || empty($_POST['categorie'])){
         exit;
     } else {
@@ -51,25 +42,17 @@
         $img_location = $_FILES['img']['tmp_name']; 
     }
     
+    if(!isset($_FILES['img']['tmp_name']) || empty($_FILES['img']['tmp_name'])){
+        exit;
+    } else {
+        $img_location = $_FILES['img']['tmp_name']; 
+    }
+    
     $id_progetto = generate_id($xmlFile);
     $id_tutorial = $id_progetto; 
     
     $ext = pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION);
-    $nome_file_img = $img_dir_path .  "img_progetto_" . $id_progetto . "." . $ext;  
-    $fd = fopen($nome_file_img, 'w'); 
-
-    $img = file_get_contents($img_location); 
-
-    if($fd){
-
-        fwrite($fd, $img);
-        fclose($fd);
-
-    } else {
-
-        exit; 
-
-    }
+    $nome_file_img = $img_dir_path . uniqid('img_proj_') . "." . $ext;
     
     $data_ora = new DateTime();
     $data_ora = $data_ora->format('Y-m-d H:i:s');
@@ -163,6 +146,8 @@
 
         }
     }
+
+    add_img($img_location, $nome_file_img);
 
     header('Location: ../prove_funzioni/prova_aggiungi_progetto.php');
     exit;

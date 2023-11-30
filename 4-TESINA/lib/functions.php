@@ -86,7 +86,7 @@
     function remove_1_2n($xmlFile, $query, $array_id){
 
         if(empty($array_id)){
-            exit; 
+            return 0; 
         }
 
         $doc = getDOMdocument($xmlFile);

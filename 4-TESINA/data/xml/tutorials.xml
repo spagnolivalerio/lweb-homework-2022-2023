@@ -1,26 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd">
-  <tutorial_progetto id="1" id_progetto="1">
-    <step num_step="1" nome_file_img="../img/steps/img_step_1_proj_1.jpg">
-      <descrizione>1</descrizione>
-    </step>
-    <step nome_file_img="../img/steps/img_step_2_proj_1.png" num_step="2">
-      <descrizione>5.1</descrizione>
-    </step>
-    <step nome_file_img="../img/steps/img_step_3_proj_1.jpg" num_step="3">
-      <descrizione>2.1</descrizione>
-    </step>
-    <step nome_file_img="../img/steps/img_step_4_proj_1.jpg" num_step="4">
-      <descrizione>3.1</descrizione>
-    </step>
-    <step nome_file_img="../img/steps/img_step_5_proj_1.jpg" num_step="5">
-      <descrizione>4.1</descrizione>
-    </step>
-    <step nome_file_img="../img/steps/img_step_6_proj_1.png" num_step="6">
-      <descrizione>5.1</descrizione>
-    </step>
-    <step num_step="7" nome_file_img="../img/steps/img_step_7_proj_1.jpg">
-      <descrizione>2</descrizione>
-    </step>
-  </tutorial_progetto>
-</tutorials_progetti>
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd"/>
