@@ -112,6 +112,23 @@
         return $array_id_2; 
     }
 
+    function add_img($img_location, $nome_file_img){
+
+        $fd = fopen($nome_file_img, 'w'); 
+        $img = file_get_contents($img_location); 
+
+        if($fd){
+
+            fwrite($fd, $img);
+            fclose($fd);
+
+        } else {
+
+            exit; 
+
+        }
+    }
+
     function ban(){};
 
     function sban(){};

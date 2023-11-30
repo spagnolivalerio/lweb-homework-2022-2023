@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd">
   <tutorial_progetto id="1" id_progetto="1">
+    <step num_step="1" nome_file_img="../img/steps/img_step_1_proj_1.jpg">
+      <descrizione>primo</descrizione>
+    </step>
+    <step nome_file_img="../img/steps/img_step_2_proj_1.jpg" num_step="2">
+      <descrizione>sec.1</descrizione>
+    </step>
+    <step num_step="3" nome_file_img="../img/steps/img_step_3_proj_1.jpg">
+      <descrizione>sec</descrizione>
+    </step>
+  </tutorial_progetto>
 </tutorials_progetti>
