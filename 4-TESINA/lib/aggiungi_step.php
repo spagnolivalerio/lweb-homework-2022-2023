@@ -91,26 +91,9 @@
 
                     rename($old_path_file_img, $new_path_file_img);
 
-                } 
+                }
 
                 $step->setAttribute('nome_file_img', $new_path_file_img);
-
-                if($k === $num_step){
-
-                    $fd = fopen($new_path_file_img, 'w'); 
-                    $img = file_get_contents($img_location); 
-
-                    if($fd){
-
-                    fwrite($fd, $img);
-                    fclose($fd);
-
-                    } else {
-
-                    exit; 
-
-                    }
-                }
 
             }
             
@@ -119,6 +102,21 @@
         }
     }
     
+    $file = $img_dir_path .  "img_step_" . $num_step . "_proj_" . $id_progetto . ".jpg";
+    $fd = fopen($file, 'w');
+
+    $img = file_get_contents($img_location); 
+
+        if($fd){
+
+            fwrite($fd, $img);
+            fclose($fd);
+
+        } else {
+
+            exit; 
+
+        }
 
     $doc->formatOutput = true;
     $xmlString = $doc->saveXML();
