@@ -1,65 +1,65 @@
-<?php 
+<?php
 
-    session_start();
-    require_once('functions.php');
+session_start();
+require_once 'functions.php';
 
-    if(!isset($_SESSION['Tipo_utente'])){
-        header('Location:../web/login.php');
-        exit();
-    }
+if (!isset($_SESSION['Tipo_utente'])) {
+    header('Location:../web/login.php');
+    exit();
+}
 
-    //HO BISOGNO DI PORTARMI DIETRO SIA L'IDENTIFICATIVO DEL COMMENTO CHE DELLA DISCUSSIONE
+//HO BISOGNO DI PORTARMI DIETRO SIA L'IDENTIFICATIVO DEL COMMENTO CHE DELLA DISCUSSIONE
 
-    if(!isset($_POST['id_commento']) || empty($_POST['id_commento'])){
-        exit();
-    }else{
-        $id_commento = $_POST['id_commento'];
-    }
+if (!isset($_POST['id_commento']) || empty($_POST['id_commento'])) {
+    exit();
+} else {
+    $id_commento = $_POST['id_commento'];
+}
 
-    if(!isset($_POST['id_discussione']) || empty($_POST['id_discussione'])){
-        exit();
-    }else{
-        $id_discussione = $_POST['id_discussione'];
-    }
+if (!isset($_POST['id_discussione']) || empty($_POST['id_discussione'])) {
+    exit();
+} else {
+    $id_discussione = $_POST['id_discussione'];
+}
 
-    //RIMUOVI DA COMMENTI.XML
+//RIMUOVI DA COMMENTI.XML
 
-    $xmlFile = "../data/xml/commenti.xml";
-    $query = "/commenti/commento[@id"; 
-    remove_1_1($xmlFile, $query, $id_commento); 
-    
-    //RIMUOVI DA DISCUSSIONI.XML
+$xmlFile = "../data/xml/commenti.xml";
+$query = "/commenti/commento[@id";
+remove_1_1($xmlFile, $query, $id_commento);
 
-    $xmlFile = "../data/xml/discussioni.xml";
+//RIMUOVI DA DISCUSSIONI.XML
 
-    $doc = getDOMdocument($xmlFile);
-    $root = $doc->documentElement;
-    $nodes = $root->childNodes;
+$xmlFile = "../data/xml/discussioni.xml";
 
-    foreach($nodes as $node){
+$doc = getDOMdocument($xmlFile);
+$root = $doc->documentElement;
+$nodes = $root->childNodes;
 
-        if($id_discussione === $node->getAttribute('id')){
+foreach ($nodes as $node) {
 
-            $discCommenti = $node->getElementsByTagName('commenti')->item(0);
-            $discCommento = $discCommenti->childNodes;
+    if ($id_discussione === $node->getAttribute('id')) {
 
-            foreach($discCommento as $commento){
-  
-                if($id_commento === $commento->getAttribute('id_commento')){
+        $discCommenti = $node->getElementsByTagName('commenti')->item(0);
+        $discCommento = $discCommenti->childNodes;
 
-                    $discCommenti->removeChild($commento);
-                    $doc->formatOutput = true;
-                    $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
-                    file_put_contents($xmlFile, $xmlString);
+        foreach ($discCommento as $commento) {
 
-                    break; 
+            if ($id_commento === $commento->getAttribute('id_commento')) {
 
-                }
+                $discCommenti->removeChild($commento);
+                $doc->formatOutput = true;
+                $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
+                file_put_contents($xmlFile, $xmlString);
+
+                break;
+
             }
-        }    
+        }
     }
+}
 
-    header('Location: ../prove_funzioni/prova_rimuovi_commento.php');
-    exit;
+header('Location: ../prove_funzioni/prova_rimuovi_commento.php');
+exit;
 
 ?>

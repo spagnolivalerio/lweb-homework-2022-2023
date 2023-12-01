@@ -1,2 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd"/>
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd">
+  <tutorial_progetto id="13" id_progetto="13">
+    <step nome_file_img="../img/steps/img_step_6569e70a09eff.jpg" num_step="1">
+      <descrizione>primo_vero</descrizione>
+    </step>
+    <step nome_file_img="../img/steps/img_step_6569e6c33b9ac.png" num_step="2">
+      <descrizione>primo</descrizione>
+    </step>
+    <step nome_file_img="../img/steps/img_step_6569e6f6216a3.jpg" num_step="3">
+      <descrizione>secondo_vero</descrizione>
+    </step>
+    <step nome_file_img="../img/steps/img_step_6569e6ca07367.png" num_step="4">
+      <descrizione>sec</descrizione>
+    </step>
+    <step nome_file_img="../img/steps/img_step_6569e6cf84971.png" num_step="5">
+      <descrizione>ter</descrizione>
+    </step>
+    <step nome_file_img="../img/steps/img_step_6569e6d7605b0.png" num_step="6">
+      <descrizione>qua</descrizione>
+    </step>
+  </tutorial_progetto>
+</tutorials_progetti>

@@ -1,89 +1,89 @@
 <?php
 
-    session_start();
-    require_once('../conn.php');
-   
-    $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+session_start();
+require_once '../conn.php';
 
-    $campi = [$_POST['nome'], $_POST['cognome'], $_POST['e-mail'], $_POST['indirizzo'], $_POST['username'], $_POST['password']];
+$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
-    $not_empty = array_reduce($campi, function($carry, $campo){return $carry && !empty($campo);}, true); //array_reduce riduce tutti i valori dell'array in un unico valore con l'ausilio di una variabile $carry con cui esegue ad ogni iterazione && con !empty($campo), $campo singolo campo dell'array $campi
+$campi = [$_POST['nome'], $_POST['cognome'], $_POST['e-mail'], $_POST['indirizzo'], $_POST['username'], $_POST['password']];
 
-    if($not_empty){
+$not_empty = array_reduce($campi, function ($carry, $campo) {return $carry && !empty($campo);}, true); //array_reduce riduce tutti i valori dell'array in un unico valore con l'ausilio di una variabile $carry con cui esegue ad ogni iterazione && con !empty($campo), $campo singolo campo dell'array $campi
 
-        $username = mysqli_real_escape_string($conn, $_POST['username']);
-        $nome = mysqli_real_escape_string($conn, $_POST['nome']);
-        $cognome = mysqli_real_escape_string($conn, $_POST['cognome']);
-        $password = mysqli_real_escape_string($conn, md5($_POST['password']));
-        $email = mysqli_real_escape_string($conn, $_POST['e-mail']);
-        $indirizzo = mysqli_real_escape_string($conn, $_POST['indirizzo']);
+if ($not_empty) {
 
-    } else {
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $nome = mysqli_real_escape_string($conn, $_POST['nome']);
+    $cognome = mysqli_real_escape_string($conn, $_POST['cognome']);
+    $password = mysqli_real_escape_string($conn, md5($_POST['password']));
+    $email = mysqli_real_escape_string($conn, $_POST['e-mail']);
+    $indirizzo = mysqli_real_escape_string($conn, $_POST['indirizzo']);
 
-        $_SESSION['credenziali'] = false; 
-        header('Location: ../web/signup.php');
-        exit;
+} else {
 
-    }
+    $_SESSION['credenziali'] = false;
+    header('Location: ../web/signup.php');
+    exit;
 
-    $_QUERY_username_uguale = "SELECT * 
+}
+
+$_QUERY_username_uguale = "SELECT *
                                FROM utente
                                WHERE username = '$username'";
-                               
-    $_QUERY_email_uguale = "SELECT *
+
+$_QUERY_email_uguale = "SELECT *
                             FROM utente
                             WHERE email = '$email'";
 
-    $rows = mysqli_query($conn, $_QUERY_username_uguale);
+$rows = mysqli_query($conn, $_QUERY_username_uguale);
 
-    if(!$rows){
-        header('Location: ../web/signup.php');
-		exit;
-    }
+if (!$rows) {
+    header('Location: ../web/signup.php');
+    exit;
+}
 
-    if(mysqli_num_rows($rows) > 0){
-        $_SESSION['username_esistente'] = true;
-        header('Location: ../web/singup.php');
-        exit;
-    }
+if (mysqli_num_rows($rows) > 0) {
+    $_SESSION['username_esistente'] = true;
+    header('Location: ../web/singup.php');
+    exit;
+}
 
-    $rows = mysqli_query($conn, $_QUERY_email_uguale);
+$rows = mysqli_query($conn, $_QUERY_email_uguale);
 
-    if(!$rows){
-        header('Location: ../web/signup.php');
-		exit;
-    }
+if (!$rows) {
+    header('Location: ../web/signup.php');
+    exit;
+}
 
-    if(mysqli_num_rows($rows) > 0){
-        $_SESSION['email_esistente'] = true;
-        header('Location: ../web/signup.php');
-        exit;
-    }
+if (mysqli_num_rows($rows) > 0) {
+    $_SESSION['email_esistente'] = true;
+    header('Location: ../web/signup.php');
+    exit;
+}
 
-    $_QUERY_inserimento_utente = "INSERT INTO utente (nome, cognome, username, password, email, indirizzo)
+$_QUERY_inserimento_utente = "INSERT INTO utente (nome, cognome, username, password, email, indirizzo)
                                   VALUES ('$nome', '$cognome', '$username', '$password', '$email', '$indirizzo')";
 
-    $_QUERY_cerca_id = "SELECT id 
-                        FROM utente 
+$_QUERY_cerca_id = "SELECT id
+                        FROM utente
                         WHERE username = '$username'";
 
-    if(!mysqli_query($conn, $_QUERY_inserimento_utente)){
+if (!mysqli_query($conn, $_QUERY_inserimento_utente)) {
 
-        $_SESSION['utente_creato'] = false;
-        $conn->close();
-        exit; 
+    $_SESSION['utente_creato'] = false;
+    $conn->close();
+    exit;
 
-    } else {
+} else {
 
-        $_SESSION['utente_creato'] = true;
+    $_SESSION['utente_creato'] = true;
 
-        $result = mysqli_query($conn, $_QUERY_cerca_id);
-        $row = mysqli_fetch_array($result);
-        $_SESSION['id_utente'] = $row['id']; //per la creazione dello storico -> $_SESSION['id_utente'] viene sempre risettata ad ogni login, quindi posso riutilizzarla in questa fase che è subito dopo la creazione di storico, dopodiche unsetto;
+    $result = mysqli_query($conn, $_QUERY_cerca_id);
+    $row = mysqli_fetch_array($result);
+    $_SESSION['id_utente'] = $row['id']; //per la creazione dello storico -> $_SESSION['id_utente'] viene sempre risettata ad ogni login, quindi posso riutilizzarla in questa fase che è subito dopo la creazione di storico, dopodiche unsetto;
 
-        header('Location: crea_storico.php'); 
-        $conn->close();
-        exit;
-    }
+    header('Location: crea_storico.php');
+    $conn->close();
+    exit;
+}
 
 ?>
