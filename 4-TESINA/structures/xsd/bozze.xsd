@@ -22,7 +22,7 @@
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
 			<xsd:attribute name="id_creator" type="xsd:positiveInteger" />
 			<xsd:attribute name="tempo_medio" type="xsd:positiveInteger" />
-			<xsd:attribute name="file_img" type="xsd:string" />
+			<xsd:attribute name="nome_file_img" type="xsd:string" />
 			<xsd:attribute name="data_pubblicazione" type="xsd:dateTime" />
 			<xsd:attribute name="visualizzazioni" type="xsd:positiveInteger" />
 			<xsd:attribute name="difficolta" type="boz:tipoDifficolta" />

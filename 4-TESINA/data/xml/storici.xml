@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <storici xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/storici.xsd">
   <storico id_utente="7">
-    <progetti/>
+    <progetti>
+      <progetto titolo="" id_progetto="14"/>
+      <progetto titolo="eragh" id_progetto="15"/>
+      <progetto titolo="rhd" id_progetto="16"/>
+      <progetto titolo="bozza 2 pubblicata" id_progetto="17"/>
+    </progetti>
     <richieste>
       <richiesta id_richiesta="2"/>
       <richiesta id_richiesta="6"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="13" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="17" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
   <progetto id="13" id_creator="1" tempo_medio="120" data_pubblicazione="2023-12-01 14:50:55" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6569e4bf84824.png" difficolta="facile">
     <categorie>
       <categoria id_categoria="1"/>
@@ -16,5 +16,45 @@
     <valutazioni>
       <valutazione id_valutazione="1"/>
     </valutazioni>
+  </progetto>
+  <progetto id="14" id_creator="7" tempo_medio="" data_pubblicazione="2023-12-04 21:16:40" visualizzazioni="0" nome_file_img="../img/proj/img_proj_656e33a81229b.jpg" difficolta="">
+    <categorie/>
+    <descrizione/>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="14"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="15" id_creator="7" tempo_medio="12" data_pubblicazione="2023-12-04 21:17:43" visualizzazioni="0" nome_file_img="../img/proj/img_proj_656e33e7716d3.png" difficolta="medio">
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+    </categorie>
+    <descrizione>eary</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="15"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="16" id_creator="7" tempo_medio="1" data_pubblicazione="2023-12-04 21:18:45" visualizzazioni="0" nome_file_img="../img/proj/img_proj_656e3425b4509.jpg" difficolta="facile">
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+    </categorie>
+    <descrizione>drhtza</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="16"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="17" id_creator="7" tempo_medio="1" data_pubblicazione="2023-12-04 21:20:57" visualizzazioni="0" nome_file_img="../img/proj/img_proj_656e34a9f09d3.png" difficolta="facile">
+    <categorie>
+      <categoria id_categoria="3"/>
+    </categorie>
+    <descrizione>dscrzione</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="17"/>
+    <valutazioni/>
   </progetto>
 </progetti>

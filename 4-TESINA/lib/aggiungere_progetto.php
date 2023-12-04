@@ -2,6 +2,75 @@
 
 session_start();
 require_once 'functions.php';
+$data_ora = new DateTime();
+$data_ora = $data_ora->format('Y-m-d H:i:s');
+$id_creator = $_SESSION['id_utente'];
+$id_vecchia_bozza = $_POST['id_vecchia_bozza'];
+
+if ((isset($_POST['bozza']) && $_POST['bozza'] === "bozza")) {
+
+    $xmlFile = "../data/xml/bozze.xml";
+    $img_dir_path = "../img/proj/bozze/";
+    $id_bozza = generate_id($xmlFile);
+
+    $categorie = $_POST['categorie'];
+    $descrizione = $_POST['descrizione'];
+    $titolo = $_POST['titolo'];
+    $tempo_medio = $_POST['tempo_medio'];
+    $difficolta = $_POST['difficolta'];
+
+    if (!empty($_FILES['img']['tmp_name'])) {
+        $img_location = $_FILES['img']['tmp_name'];
+        $ext = pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION);
+        $nome_file_img = $img_dir_path . uniqid('img_bozProj_') . "." . $ext;
+        add_img($img_location, $nome_file_img);
+    } else {
+        $nome_file_img = "";
+    }
+
+    $doc = getDOMdocument($xmlFile);
+    $root = $doc->documentElement;
+
+    $newBozza = $doc->createElement('bozza');
+
+    $bozTitolo = $doc->createElement('titolo', $titolo);
+    $bozCategorie = $doc->createElement('categorie');
+    $bozDescrizione = $doc->createElement('descrizione', $descrizione);
+
+    $newBozza->setAttribute('id', $id_bozza);
+    $newBozza->setAttribute('id_creator', $id_creator);
+    $newBozza->setAttribute('tempo_medio', $tempo_medio);
+    $newBozza->setAttribute('data_pubblicazione', $data_ora);
+    $newBozza->setAttribute('difficolta', $difficolta);
+
+    $newBozza->setAttribute('nome_file_img', $nome_file_img);
+
+    foreach ($categorie as $categoria) {
+
+        $bozCategoria = $doc->createElement('categoria');
+        $bozCategoria->setAttribute('id_categoria', $categoria);
+        $bozCategorie->appendChild($bozCategoria);
+
+    }
+
+    $newBozza->appendChild($bozCategorie);
+    $newBozza->appendChild($bozDescrizione);
+
+    $root->appendChild($newBozza);
+
+    $doc->formatOutput = true;
+    $xmlString = $doc->saveXML();
+    file_put_contents($xmlFile, $xmlString);
+
+    if (!empty($id_vecchia_bozza)) {
+        $query = "/bozze/bozza[@id";
+        remove_1_1($xmlFile, $query, $id_vecchia_bozza);
+    }
+
+    header('Location: ../web/homepage.php');
+    exit;
+}
+
 $xmlFile = "../data/xml/progetti.xml";
 $xmlTutorial = "../data/xml/tutorials.xml";
 $img_dir_path = "../img/proj/";
@@ -42,21 +111,17 @@ if (!isset($_FILES['img']['tmp_name']) || empty($_FILES['img']['tmp_name'])) {
     $img_location = $_FILES['img']['tmp_name'];
 }
 
-if (!isset($_FILES['img']['tmp_name']) || empty($_FILES['img']['tmp_name'])) {
-    exit;
-} else {
-    $img_location = $_FILES['img']['tmp_name'];
-}
+
+
+
+
+
 
 $id_progetto = generate_id($xmlFile);
 $id_tutorial = $id_progetto;
 
 $ext = pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION);
 $nome_file_img = $img_dir_path . uniqid('img_proj_') . "." . $ext;
-
-$data_ora = new DateTime();
-$data_ora = $data_ora->format('Y-m-d H:i:s');
-$id_creator = $_SESSION['id_utente'];
 
 //AGGIUNTA IN PROGETTI.XML
 
@@ -91,6 +156,7 @@ foreach ($categorie as $categoria) {
 
 $proTutorial->setAttribute('id_tutorial', $id_tutorial);
 
+$newProgetto->appendChild($proTitolo);
 $newProgetto->appendChild($proCategorie);
 $newProgetto->appendChild($proDescrizione);
 $newProgetto->appendChild($proReports);
@@ -148,6 +214,22 @@ foreach ($nodes as $node) {
 }
 
 add_img($img_location, $nome_file_img);
+
+//ELIMINA DA BOZZE.XML
+
+if (isset($id_vecchia_bozza) && !empty($id_vecchia_bozza)) {
+
+    $xmlFile = "../data/xml/bozze.xml";
+    $doc = getDOMdocument($xmlFile);
+    $xpath = new DOMXPath($doc);
+    $query = "/bozze/bozza[@id";
+
+    $nome_file_img = $xpath->query("$query" . " = '$id_vecchia_bozza']")->item(0)->getAttribute('nome_file_img');
+    remove_1_1($xmlFile, $query, $id_vecchia_bozza);
+
+    unlink($nome_file_img);
+
+}
 
 header('Location: ../prove_funzioni/prova_aggiungi_progetto.php');
 exit;

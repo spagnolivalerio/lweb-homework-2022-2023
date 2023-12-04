@@ -35,17 +35,21 @@ require_once('../lib/functions.php');
   <br>
 
   <label for="titolo">titolo: </label>
-  <input type="text"  name="titolo" required></input>
+  <input type="text"  name="titolo"></input>
   <br>
 
   <!-- Descrizione -->
   <label for="descrizione">Descrizione: </label>
-  <textarea  name="descrizione" rows="4" cols="50" required></textarea>
+  <textarea  name="descrizione" rows="4" cols="50"></textarea>
   <br>
 
   <!-- Tempo Medio -->
   <label for="tempo_medio">Tempo Medio (in minuti): </label>
-  <input type="number"  name="tempo_medio" min="1" required>
+  <input type="number"  name="tempo_medio" min="1">
+  <br>
+
+  <label for="id_vecchia_bozza">id_bozza</label>
+  <input type="text" name="id_vecchia_bozza">
   <br>
 
   <!-- Difficoltà -->
@@ -58,11 +62,12 @@ require_once('../lib/functions.php');
   <br>
 
   <label for="img">10</label>
-  <input type="file" name="img" accept="image/*" required></input><br>
+  <input type="file" name="img" accept="image/*"></input><br>
 
 
   <!-- Pulsante di invio -->
-  <input type="submit" value="Pubblica Progetto">
+  <input type="submit" name="bozza" value="bozza">bozza</input>
+  <input type="submit" name="bozza" value="false">progetto</input>
 </form>
 
 
