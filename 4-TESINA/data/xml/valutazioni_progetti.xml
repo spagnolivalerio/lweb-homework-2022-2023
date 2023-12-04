@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valutazioni_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd"/>
+<valutazioni_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/valutazioni_progetti.xsd">
+  <valutazione id="1" id_progetto="13" value="1" id_votante="7" data_ora="2023-12-04 18:29:21">
+    <testo>earyh</testo>
+  </valutazione>
+</valutazioni_progetti>

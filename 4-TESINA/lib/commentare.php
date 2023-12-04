@@ -42,11 +42,13 @@ $newCommento->setAttribute('data_ora', $data_ora);
 
 $newTesto = $doc->createElement('testo', $newTestoValue);
 $newVoti = $doc->createElement('voti');
-$newReport = $doc->createElement('reports_commento');
+$newReports = $doc->createElement('reports_commento');
+$newValutazioni = $doc->createElement('valutazioni_commento');
 
 $newCommento->appendChild($newTesto);
 $newCommento->appendChild($newVoti);
-$newCommento->appendChild($newReport);
+$newCommento->appendChild($newReports);
+$newCommento->appendChild($newValutazioni);
 
 $root->appendChild($newCommento);
 

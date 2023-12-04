@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="14" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
+<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="15" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
   <commento id="13" id_discussione="6" id_commentatore="7" data_ora="2023-12-01 14:55:07">
     <testo>commento2</testo>
     <voti/>
     <reports_commento>
       <report_commento id_report="2"/>
     </reports_commento>
+  </commento>
+  <commento id="15" id_discussione="7" id_commentatore="7" data_ora="2023-12-04 18:21:37">
+    <testo>esth</testo>
+    <voti/>
+    <reports_commento/>
+    <valutazioni_commento>
+      <valutazione_commento id_valutazione_commento="1"/>
+    </valutazioni_commento>
   </commento>
 </commenti>

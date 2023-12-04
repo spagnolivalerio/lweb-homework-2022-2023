@@ -87,7 +87,6 @@
     <xsd:element name="valutazione_progetto">
         <xsd:complexType>
             <xsd:attribute name="id_valutazione" type="xsd:positiveInteger" /> 
-            <xsd:attribute name="value" type="xsd:positiveInteger" />
         </xsd:complexType>
     </xsd:element>
 
@@ -102,7 +101,6 @@
     <xsd:element name="valutazione_commento">
         <xsd:complexType>
             <xsd:attribute name="id_valutazione" type="xsd:positiveInteger" /> 
-            <xsd:attribute name="value" type="xsd:positiveInteger" /> 
         </xsd:complexType>
     </xsd:element> 
 

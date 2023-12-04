@@ -4,6 +4,7 @@
     <progetti/>
     <richieste>
       <richiesta id_richiesta="2"/>
+      <richiesta id_richiesta="6"/>
     </richieste>
     <commenti>
       <commento id_commento="13">
@@ -15,8 +16,13 @@
       <commento id_commento="14">
         <testo>commento3</testo>
       </commento>
+      <commento id_commento="15">
+        <testo>esth</testo>
+      </commento>
     </commenti>
-    <valutazioni_progetti/>
+    <valutazioni_progetti>
+      <valutazione_progetto id_valutazione="1"/>
+    </valutazioni_progetti>
     <reports_progetti>
       <report_progetto id_report="1" tipo="spam"/>
     </reports_progetti>
@@ -24,6 +30,8 @@
       <report_commento id_report="2" tipo="spam"/>
     </reports_commenti>
     <discussioni/>
-    <valutazioni_commenti/>
+    <valutazioni_commenti>
+      <valutazione_commento id_valutazione="1"/>
+    </valutazioni_commenti>
   </storico>
 </storici>

@@ -8,7 +8,7 @@ if (!isset($_SESSION['Tipo_utente'])) {
 }
 
 require_once 'functions.php';
-$xmlFile = "../data/xml/valutazioni.xml";
+$xmlFile = "../data/xml/valutazioni_progetti.xml";
 
 if (!isset($_POST['testo']) || empty($_POST['testo'])) {
     exit;
@@ -101,7 +101,7 @@ foreach ($nodes as $node) {
     }
 }
 
-header('Location: ../prove_funzioni/prova_segnalazione_commento.php');
+header('Location: ../prove_funzioni/prova_valuta_progetto.php');
 exit;
 
 ?>

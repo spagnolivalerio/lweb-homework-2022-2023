@@ -16,8 +16,8 @@
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element ref="com:testo" minOccurs="1" maxOccurs="1" />
-				<xsd:element ref="com:voti" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="com:reports_commento" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="com:valutazioni_commento" minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
 			<xsd:attribute name="id_commentatore" type="xsd:positiveInteger" />
@@ -28,41 +28,19 @@
 
 	<xsd:element name="testo" type="xsd:string" />
 
-	<xsd:element name="voti">
+	<xsd:element name="valutazioni_commento">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element ref="com:voto" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="com:valutazione_commento" minOccurs="0" maxOccurs="unbounded" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
 
-	<xsd:element name="voto">
+	<xsd:element name="valutazione_commento">
 		<xsd:complexType>
-			<xsd:sequence minOccurs="0" maxOccurs="1">
-				<xsd:element ref="com:utilita" minOccurs="0" maxOccurs="unbounded" />
-				<xsd:element ref="com:livello_di_accordo" minOccurs="0" maxOccurs="unbounded" />
-			</xsd:sequence>
-			<xsd:attribute name="id_votante" type="xsd:positiveInteger" />
+			<xsd:attribute name="id_valutazione_commento" type="xsd:positiveInteger"></xsd:attribute>
 		</xsd:complexType>
 	</xsd:element>
-
-	<xsd:element name="utilita" type="com:tipoUtilita" />
-
-	<xsd:simpleType name="tipoUtilita">
-		<xsd:restriction base="xsd:positiveInteger">
-			<xsd:minInclusive value="1" />
-			<xsd:maxInclusive value="5" />
-		</xsd:restriction>
-	</xsd:simpleType>
-
-	<xsd:element name="livello_di_accordo" type="com:tipoAccordo" />
-
-	<xsd:simpleType name="tipoAccordo">
-		<xsd:restriction base="xsd:positiveInteger">
-			<xsd:minInclusive value="1" />
-			<xsd:maxInclusive value="3" />
-		</xsd:restriction>
-	</xsd:simpleType>
 
 	<xsd:element name="reports_commento">
 		<xsd:complexType>

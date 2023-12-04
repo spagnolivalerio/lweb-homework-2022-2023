@@ -10,3 +10,4 @@
 <a href="../prove_funzioni/prova_rimuovi_progetto.php">rimuovi progetto</a><br/>
 <a href="../prove_funzioni/prova_aggiungi_step.php">aggiungi step</a><br/>
 <a href="../prove_funzioni/prova_rimuovi_step.php">rimuovi step</a><br/>
+<a href="../prove_funzioni/prova_valuta_commento.php">valuta commento</a><br/>

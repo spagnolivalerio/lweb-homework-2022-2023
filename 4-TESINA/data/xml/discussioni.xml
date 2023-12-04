@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="6" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="7" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
   <discussione titolo="titolo 13" id_poster="1" risolta="false" id="6" id_progetto="13" data_ora="2023-12-01 14:51:28">
     <commenti>
       <commento id_commento="13"/>
     </commenti>
     <descrizione>descr</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="7"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="wergf" id_poster="" risolta="false" id="7" id_progetto="13" data_ora="2023-12-04 18:12:47">
+    <commenti>
+      <commento id_commento="15"/>
+    </commenti>
+    <descrizione>w</descrizione>
     <partecipanti>
       <partecipante id_partecipante="7"/>
     </partecipanti>
