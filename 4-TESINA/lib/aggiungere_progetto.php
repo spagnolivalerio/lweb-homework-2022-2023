@@ -111,12 +111,6 @@ if (!isset($_FILES['img']['tmp_name']) || empty($_FILES['img']['tmp_name'])) {
     $img_location = $_FILES['img']['tmp_name'];
 }
 
-
-
-
-
-
-
 $id_progetto = generate_id($xmlFile);
 $id_tutorial = $id_progetto;
 
