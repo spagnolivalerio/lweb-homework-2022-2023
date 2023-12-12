@@ -42,7 +42,7 @@ if (mysqli_num_rows($rows) > 0) {
     $_SESSION['id_utente'] = $row['id'];
     $_SESSION['username'] = $row['username'];
 
-    header('Location: ../web/homepage.php');
+    header('Location: ../web/index.php');
 } else {
     header('Location: ../web/login.php');
 }

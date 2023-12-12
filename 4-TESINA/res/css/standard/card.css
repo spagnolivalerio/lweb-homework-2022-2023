@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+.cards{
+    position: relative;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px;
+}
+    
+.card-container {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 2px -2px;
+    background-color: white;
+}
+
+.flexbox1 {
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+    padding: 10px;
+}
+
+.card-titolo {
+    flex-basis: 70%;
+}
+
+.card-descrizione {
+    flex-basis: 70%;
+}
+
+.card-user {
+    width: fit-content;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    background-color: white;
+    color: black;
+    padding-inline: 2px;
+    border-radius: 5px;
+}
+
+.flexbox2 {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 70%;
+    padding: 10px;
+}
+
+.card-header {
+    border-bottom: 1px solid black;
+    flex-basis: 60%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-footer {
+    flex-basis: 40%;
+}
+
+.card-rating {
+    width: 30%;
+    text-align: center;
+}
+
+.card-commenta{
+    width: 30%;
+}
+
+.submit {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hidden{
+    display: none;
+}

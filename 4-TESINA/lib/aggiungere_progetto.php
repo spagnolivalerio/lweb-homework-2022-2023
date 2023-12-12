@@ -1,7 +1,8 @@
 <?php
 
 session_start();
-require_once 'functions.php';
+require_once('functions.php');
+require_once('../conn.php');
 $data_ora = new DateTime();
 $data_ora = $data_ora->format('Y-m-d H:i:s');
 $id_creator = $_SESSION['id_utente'];
@@ -117,6 +118,16 @@ $id_tutorial = $id_progetto;
 $ext = pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION);
 $nome_file_img = $img_dir_path . uniqid('img_proj_') . "." . $ext;
 
+$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+
+$query_sql = "SELECT *
+              FROM utente
+              WHERE id = '$id_creator'";
+
+$res = mysqli_query($conn, $query_sql);
+$row = mysqli_fetch_array($res);
+$username_creator = $row['username'];
+
 //AGGIUNTA IN PROGETTI.XML
 
 $doc = getDOMdocument($xmlFile);
@@ -133,6 +144,7 @@ $proTutorial = $doc->createElement('tutorial_progetto');
 $proValutazioni = $doc->createElement('valutazioni');
 
 $newProgetto->setAttribute('id', $id_progetto);
+$newProgetto->setAttribute('username_creator', $username_creator);
 $newProgetto->setAttribute('id_creator', $id_creator);
 $newProgetto->setAttribute('tempo_medio', $tempo_medio);
 $newProgetto->setAttribute('data_pubblicazione', $data_ora);

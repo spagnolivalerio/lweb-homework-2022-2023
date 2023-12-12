@@ -30,8 +30,17 @@
 			<xsd:attribute name="visualizzazioni" type="xsd:positiveInteger" />
 			<xsd:attribute name="nome_file_img" type="xsd:string" />
 			<xsd:attribute name="difficolta" type="pro:tipiDifficolta" />
+			<xsd:attribute name="username_creator" type="xsd:string" />
+			<xsd:attribute name="clearence" type="pro:tipoClearence" />
 		</xsd:complexType>
 	</xsd:element>
+
+	<xsd:simpleType name="tipoClearence">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:minInclusive value="1" />
+			<xsd:maxInclusive value="5" />
+		</xsd:restriction>
+	</xsd:simpleType>
 
 	<xsd:element name="titolo" type="xsd:string" />
 

@@ -1,60 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="17" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="13" id_creator="1" tempo_medio="120" data_pubblicazione="2023-12-01 14:50:55" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6569e4bf84824.png" difficolta="facile">
-    <categorie>
-      <categoria id_categoria="1"/>
-    </categorie>
-    <descrizione>descrizione</descrizione>
-    <reports_progetti>
-      <report_progetto id_report="1"/>
-    </reports_progetti>
-    <discussioni>
-      <discussione id_discussione="6"/>
-      <discussione id_discussione="7"/>
-    </discussioni>
-    <tutorial_progetto id_tutorial="13"/>
-    <valutazioni>
-      <valutazione id_valutazione="1"/>
-    </valutazioni>
-  </progetto>
-  <progetto id="14" id_creator="7" tempo_medio="" data_pubblicazione="2023-12-04 21:16:40" visualizzazioni="0" nome_file_img="../img/proj/img_proj_656e33a81229b.jpg" difficolta="">
-    <categorie/>
-    <descrizione/>
-    <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="14"/>
-    <valutazioni/>
-  </progetto>
-  <progetto id="15" id_creator="7" tempo_medio="12" data_pubblicazione="2023-12-04 21:17:43" visualizzazioni="0" nome_file_img="../img/proj/img_proj_656e33e7716d3.png" difficolta="medio">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="19" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="18" username_creator="nuovo" id_creator="7" tempo_medio="120" data_pubblicazione="2023-12-05 16:10:24" visualizzazioni="0" nome_file_img="../img/proj/img_proj_656f3d609ea88.png" difficolta="facile">
+    <titolo>titolo1</titolo>
     <categorie>
       <categoria id_categoria="1"/>
       <categoria id_categoria="2"/>
     </categorie>
-    <descrizione>eary</descrizione>
+    <descrizione>descrizione1</descrizione>
     <reports_progetti/>
     <discussioni/>
-    <tutorial_progetto id_tutorial="15"/>
+    <tutorial_progetto id_tutorial="18"/>
     <valutazioni/>
   </progetto>
-  <progetto id="16" id_creator="7" tempo_medio="1" data_pubblicazione="2023-12-04 21:18:45" visualizzazioni="0" nome_file_img="../img/proj/img_proj_656e3425b4509.jpg" difficolta="facile">
+  <progetto id="19" username_creator="nuovo" id_creator="7" tempo_medio="1000" data_pubblicazione="2023-12-12 16:55:28" visualizzazioni="0" nome_file_img="../img/proj/img_proj_65788270204b4.jpg" difficolta="difficile">
+    <titolo>I PUFFI VIOLA</titolo>
     <categorie>
       <categoria id_categoria="1"/>
       <categoria id_categoria="2"/>
     </categorie>
-    <descrizione>drhtza</descrizione>
+    <descrizione>i puffi viola sono veam,enbbte molto viola, e ioo gioco a fortnuite ij maniera eccelsa, quasi come quanto scrivo bene da tasteira!</descrizione>
     <reports_progetti/>
     <discussioni/>
-    <tutorial_progetto id_tutorial="16"/>
-    <valutazioni/>
-  </progetto>
-  <progetto id="17" id_creator="7" tempo_medio="1" data_pubblicazione="2023-12-04 21:20:57" visualizzazioni="0" nome_file_img="../img/proj/img_proj_656e34a9f09d3.png" difficolta="facile">
-    <categorie>
-      <categoria id_categoria="3"/>
-    </categorie>
-    <descrizione>dscrzione</descrizione>
-    <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="17"/>
+    <tutorial_progetto id_tutorial="19"/>
     <valutazioni/>
   </progetto>
 </progetti>
