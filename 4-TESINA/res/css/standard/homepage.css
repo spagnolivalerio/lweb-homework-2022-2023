@@ -1,3 +1,8 @@
+
+
+*{
+    font-family: -apple-system, system-ui, BlinkMacSystemFont;
+}
 .homepage{
     display: flex;
     min-height: 100vh;
@@ -5,6 +10,7 @@
 }
 
 .homepage-sidebar{ 
+    color: white;
     min-width: 238px;
     position: fixed;
     left: 0; 
@@ -32,13 +38,13 @@
     padding: 8px 20px 8px 70px;
     display: flex;
     align-items: center;
-    letter-spacing: 0.02em;
-    font-size: 19px;
+    letter-spacing: 0.7px;
+    font-size: 16px;
 }
 
 .toolbar{
     min-height: 84px;
-    background-color: #dfdfdf;
+    background-color: #443ea2;
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;

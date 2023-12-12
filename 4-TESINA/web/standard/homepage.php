@@ -28,15 +28,10 @@
           <div class="logo">TPS</div>
         </div>
         <div class="homepage-sidebar-list">
-          <a class="elem">element</a>
-          <a class="elem">element</a>
-          <a class="elem">element</a>
-          <a class="elem">element</a>
-          <a class="elem">element</a>
-          <a class="elem">element</a>
-          <a class="elem">element</a>
-          <a class="elem">element</a>
-          <a class="elem">element</a>
+          <a class="elem">Homepage</a>
+          <a class="elem">Progetti</a>
+          <a class="elem">Bozze</a>
+          <a class="elem">Storico</a>
           <div class="divisore"></div>
           <a class="elem">Logout</a>
         </div>
