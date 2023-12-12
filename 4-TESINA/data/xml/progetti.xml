@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="19" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="24" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
   <progetto id="18" username_creator="nuovo" id_creator="7" tempo_medio="120" data_pubblicazione="2023-12-05 16:10:24" visualizzazioni="0" nome_file_img="../img/proj/img_proj_656f3d609ea88.png" difficolta="facile">
     <titolo>titolo1</titolo>
     <categorie>
@@ -22,6 +22,66 @@
     <reports_progetti/>
     <discussioni/>
     <tutorial_progetto id_tutorial="19"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="20" username_creator="" id_creator="" tempo_medio="12" data_pubblicazione="2023-12-13 00:26:14" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6578ec160ebde.jpg" difficolta="facile">
+    <titolo>titolo2</titolo>
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+    </categorie>
+    <descrizione>decriusaob</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="20"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="21" username_creator="" id_creator="" tempo_medio="12" data_pubblicazione="2023-12-13 00:26:20" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6578ec1c67ada.jpg" difficolta="facile">
+    <titolo>titolo2heta</titolo>
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+    </categorie>
+    <descrizione>decriusaobqe5y</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="21"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="22" username_creator="" id_creator="" tempo_medio="12" data_pubblicazione="2023-12-13 00:26:25" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6578ec21a39e2.jpg" difficolta="facile">
+    <titolo>titolo2hetaaegr</titolo>
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+    </categorie>
+    <descrizione>decriusaobqe5ygear</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="22"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="23" username_creator="" id_creator="" tempo_medio="12" data_pubblicazione="2023-12-13 00:26:29" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6578ec2562a5e.jpg" difficolta="facile">
+    <titolo>titolo2hetaaegrager</titolo>
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+    </categorie>
+    <descrizione>decriusaobqe5yggearear</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="23"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="24" username_creator="" id_creator="" tempo_medio="12" data_pubblicazione="2023-12-13 00:26:33" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6578ec2946463.jpg" difficolta="facile">
+    <titolo>titolo2hetaaegragerage</titolo>
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+    </categorie>
+    <descrizione>decriusaobqe5yggeareargaer</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="24"/>
     <valutazioni/>
   </progetto>
 </progetti>
