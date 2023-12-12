@@ -3,26 +3,21 @@
 }
 
 .cards{
-    position: relative;
-    top: 200px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 30px;
+    margin-top: 124px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
     
 .card-container {
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 700px;
-    height: 400px;
+    box-shadow: 0 2.5rem 3rem -2rem hsl(200 50% 20% / 40%);
+    width: 650px;
+    height: 375px;
     display: flex;
     flex-direction: column;
     border: 1px solid white;
     border-radius: 10px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 2px -2px;
     background-color: white;
 }
 
