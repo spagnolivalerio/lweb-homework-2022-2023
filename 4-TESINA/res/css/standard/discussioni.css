@@ -1,0 +1,142 @@
+*{
+    font-family: -apple-system, system-ui, BlinkMacSystemFont;
+}
+
+button {
+    background-color: rgb(141, 141, 153);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+
+}
+
+.discussion-container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+.discussion-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.discussion-info {
+    color: #777;
+    font-size: 14px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.datetime {
+    font-style: italic;
+}
+
+.discussion-text {
+    margin-top: 20px;
+    color: #333;
+    border-bottom: 1px dashed black;
+    padding: 15px 0;
+}
+
+.comment-container {
+    margin-top: 20px;
+}
+
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #555;
+}
+
+.comment-text {
+    margin-top: 10px;
+    color: #333;
+    overflow: auto;
+    
+}
+
+
+.comment-form input {
+    width: 80%;
+    height: 30px;
+}
+
+
+.comment-info {
+    color: #777;
+    font-size: 14px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-datetime {
+    
+    font-style: italic;
+}
+
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center
+}
+
+.rating input {
+    display: none
+}
+
+.rating label {
+    position: relative;
+    width: 1em;
+    font-size: 30px;
+    font-weight: 300;
+    color: #FFD600;
+    cursor: pointer
+}
+
+.rating label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+}
+
+.rating label:hover:before,
+.rating label:hover~label:before {
+    opacity: 1 !important
+}
+
+.rating input:checked~label:before {
+    opacity: 1
+}
+
+.rating:hover input:checked~label:before {
+    opacity: 0.4
+}
+
+.rating-submit{
+	border-radius: 15px;
+	color: #fff;
+	    height: 49px;
+}
+
+
+.rating-submit:hover{
+	
+	color: #fff;
+}
+
