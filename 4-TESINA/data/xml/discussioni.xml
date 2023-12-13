@@ -6,7 +6,6 @@
     </commenti>
     <descrizione>descrizione</descrizione>
     <partecipanti>
-      <partecipante id_partecipante="3"/>
     </partecipanti>
   </discussione>
   <discussione titolo="2" id_poster="3" risolta="false" id="9" id_progetto="26" data_ora="2023-12-13 18:42:16" autore="nuovo">

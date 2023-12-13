@@ -77,15 +77,16 @@
 
                 if($risolta == "true"){
 
-                  echo "<div class=\"risolta\">Discussione risolta</div>\n";
+                  echo "  <div class=\"risolta\">Discussione risolta</div>\n";
 
                 } elseif(!$flag) {
 
-                  echo "<div class=\"accesso\">\n";
+                  echo "  <div class=\"accesso\">\n";
                   echo "     <form class=\"form-accesso\">\n";
                   echo "            <input type=\"hidden\" name=\"id_discussione\" value=\"$id_discussione\"></input>\n";
                   echo "            <button type=\"submit\">Richiedi Accesso</button>\n";
                   echo "     </form>\n";
+                  echo "  </div>\n";
 
                 } else {
 
@@ -96,12 +97,14 @@
                 echo "        </form>\n";
                 }
 
+                echo "        <span class=\"commenti-span\"><h2>COMMENTI</h2></span>\n";
+
                 foreach($commenti as $commento){
                   $commentatore = $commento->getAttribute('commentatore');
                   $testo = $commento->getElementsByTagName('testo')->item(0)->nodeValue; 
-                  $data_ora = $commento->getAttribute('data_ora'); 
-                
-                echo "        <span class=\"commenti-span\"><h2>COMMENTI</h2></span>\n";
+                  $data_ora = $commento->getAttribute('data_ora');
+                  $id_commento = $commento->getAttribute('id'); 
+
                 echo "        <div class=\"comment\">\n";
                 echo "            <div class=\"comment-info\">\n";
                 echo "                <span class=\"comment-author\">$commentatore</span>\n";
@@ -112,16 +115,16 @@
                 echo "            </div>\n";
                 echo "            <form class=\"form-box\" action= $root . \"valuta_progetto.php\" method=\"post\">\n";
                 echo "                <div class=\"rating\">\n";
-                echo "                    <label for=\"5\">&#9734;</label>\n";
-                echo "                    <input type=\"radio\" name=\"rating\" value=\"5\">\n";
-                echo "                    <label for=\"4\">&#9734;</label>\n";
-                echo "                    <input type=\"radio\" name=\"rating\" value=\"4\">\n";
-                echo "                    <label for=\"3\">&#9734;</label>\n";
-                echo "                    <input type=\"radio\" name=\"rating\" value=\"3\">\n";
-                echo "                    <label for=\"2\">&#9734;</label>\n";
-                echo "                    <input type=\"radio\" name=\"rating\" value=\"2\">\n";
-                echo "                    <label for=\"1\">&#9734;</label>\n";
-                echo "                    <input type=\"radio\" name=\"rating\" value=\"1\">\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"5\" id=\"5_$id_commento\">\n";
+                echo "                    <label for=\"5_$id_commento\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"4_$id_commento\" id=\"4\">\n";
+                echo "                    <label for=\"4_$id_commento\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"3\" id=\"3_$id_commento\">\n";
+                echo "                    <label for=\"3_$id_commento\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"2\" id=\"2_$id_commento\">\n";
+                echo "                    <label for=\"2_$id_commento\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"1\" id=\"1_$id_commento\">\n";
+                echo "                    <label for=\"1_$id_commento\">&#9734;</label>\n";
                 echo "                    <span class=\"type-rating\">Rating</span>\n";
                 echo "                </div>\n";
                 echo "                <div class=\"rr\">\n";
@@ -144,13 +147,12 @@
                 echo "                </select>\n";
                 echo "                <button type=\"submit\" class=\"segnala\">segnala</button>\n";
                 echo "            </form>\n";
-                echo "        </div>\n";
-                echo "    </div>\n";
-                echo "</div>\n";
+                echo "    </div>\n"; 
               }
 
-              echo "    </div>\n"; // Chiusura di comment-container
-              echo "    </div>\n";
+              echo "    </div>\n"; // Chiusura di discussioni
+              echo "    </div>\n"; // Chiusura di comment
+
 
             }
 
