@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="7" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  <discussione titolo="titolo 13" id_poster="1" risolta="false" id="6" id_progetto="13" data_ora="2023-12-01 14:51:28">
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="9" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <discussione titolo="titolo discussione" id_poster="3" risolta="false" id="8" id_progetto="26" data_ora="2023-12-13 17:53:40" autore="nuovo">
     <commenti>
-      <commento id_commento="13"/>
+      <commento id_commento="16"/>
     </commenti>
-    <descrizione>descr</descrizione>
+    <descrizione>descrizione</descrizione>
     <partecipanti>
-      <partecipante id_partecipante="7"/>
+      <partecipante id_partecipante="3"/>
     </partecipanti>
   </discussione>
-  <discussione titolo="wergf" id_poster="" risolta="false" id="7" id_progetto="13" data_ora="2023-12-04 18:12:47">
-    <commenti>
-      <commento id_commento="15"/>
-    </commenti>
-    <descrizione>w</descrizione>
-    <partecipanti>
-      <partecipante id_partecipante="7"/>
-    </partecipanti>
+  <discussione titolo="2" id_poster="3" risolta="false" id="9" id_progetto="26" data_ora="2023-12-13 18:42:16" autore="nuovo">
+    <commenti/>
+    <descrizione>desc</descrizione>
+    <partecipanti/>
   </discussione>
 </discussioni>

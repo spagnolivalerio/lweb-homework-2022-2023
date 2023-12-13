@@ -2,17 +2,21 @@
     font-family: -apple-system, system-ui, BlinkMacSystemFont;
 }
 
+.comment-form button{
+    width: 15%;
+    margin-left: 10px;
+}
+
 button {
     background-color: rgb(141, 141, 153);
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
-
 }
 
 .discussion-container {
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -65,8 +69,7 @@ button {
 .comment-text {
     margin-top: 10px;
     color: #333;
-    overflow: auto;
-    
+    height: fit-content;    
 }
 
 
@@ -85,7 +88,6 @@ button {
 }
 
 .comment-datetime {
-    
     font-style: italic;
 }
 
@@ -93,7 +95,6 @@ button {
 .rating {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center
 }
 
 .rating input {
@@ -131,12 +132,70 @@ button {
 .rating-submit{
 	border-radius: 15px;
 	color: #fff;
-	    height: 49px;
+    height: 49px;
 }
 
 
 .rating-submit:hover{
-	
 	color: #fff;
 }
 
+.rr{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+}
+
+.type-rating{
+    margin-right: 20px;
+    padding: 12px;
+}
+
+#utility{
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.flexbox-comment{
+    display: flexbox;
+}
+
+.comment-box{
+    flex-basis: 50%;
+}
+
+.form-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.valuta{
+    width: 100px;
+    height: fit-content;
+}
+
+.segnala{
+    width: 80px;
+    height: fit-content;
+    margin-inline: 15px;
+}
+
+.form-segnalazione{
+    display: flex;
+    justify-content: center;
+}
+
+.form-segnalazione select{
+    text-align: center;
+}
+
+.content {
+    position: relative;
+    top: 100px;
+}
+
+.commenti-span{
+    display: flex;
+    justify-content: center;
+}

@@ -41,4 +41,23 @@
       <valutazione_commento id_valutazione="1"/>
     </valutazioni_commenti>
   </storico>
+  <storico id_utente="3">
+    <progetti>
+      <progetto titolo="26progetto" id_progetto="26"/>
+    </progetti>
+    <richieste/>
+    <commenti>
+      <commento id_commento="16">
+        <testo>commento</testo>
+      </commento>
+    </commenti>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti/>
+    <discussioni>
+      <discussione id_discussione="8" titolo="titolo discussione"/>
+      <discussione id_discussione="9" titolo="2"/>
+    </discussioni>
+    <valutazioni_commenti/>
+  </storico>
 </storici>

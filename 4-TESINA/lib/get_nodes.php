@@ -15,31 +15,40 @@ function getProgetti($root){
 
 function getDiscussioni($root, $id_progetto){
 
-    $discussioni = [];
     $xmlFile = $root . "data/xml/discussioni.xml";
     $doc = getDOMdocument($xmlFile);
 
-    return $xpath->query("/discussioni/discussione[@id_progetto='$id_progetto']");  
+    $xpath = new DOMXPath($doc);
+
+    return $xpath->query("/discussioni/discussione[@id_progetto = '$id_progetto']");  
     
 }
 /*funzione che prende un DOMNode discussione e stampa tutti i commenti, indicativamente da mettere in un foreach*/ 
 
-function getCommenti($root, $discussioni){
+function getCommenti($root, $id_discussione){
 
     $xmlFile = $root . "data/xml/commenti.xml";
     $doc = getDOMdocument($xmlFile);
 
-    foreach($discussioni as $discussione){
-        $id_discussione = $discussione->getAttribute('id');
-        $nodes = $xpath->query("/commenti/commento[@id_discussione='$id_discussione']");
+    $xpath = new DOMXPath($doc);
 
-        foreach($nodes as $node){
-            
-        }
-    }
+    return $xpath->query("/commenti/commento[@id_discussione = '$id_discussione']");
 
 }
 
+function getPartecipanti($root, $id_discussione){
 
+    $xmlFile = $root . "data/xml/discussioni.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXPath($doc);
+    $discussione = $xpath->query("/discussioni/discussione[@id = '$id_discussione']")->item(0);
+    
+    $partecipanti = $discussione->getElementsByTagName('partecipanti')->item(0);
+    $partecipanti = $partecipanti->childNodes;
+
+    return $partecipanti; 
+
+}
 
 ?>

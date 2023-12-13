@@ -40,6 +40,7 @@
       <div class="dashboard">
         <div class="toolbar"></div>
         <div class="cards">
+
             <?php
  
               $progetti = getProgetti($root);
@@ -52,24 +53,27 @@
                 $img_path = "../" . $progetto->getAttribute('nome_file_img');
                 $id_progetto = $progetto->getAttribute('id');
 
-                echo "<div class=\"card-container\">\n";
-                  echo "<div class=\"card-header\" style=\"background-image: url('$img_path'); background-size: cover; background-position: center;\">\n";
-                    echo "<div class=\"card-user\">&#x1F464; $username</div>\n";
-                  echo "</div>\n";
-                  echo "<div class=\"card-footer\">\n";
-                    echo "<div class=\"flexbox1\">\n";
-                      echo "<div class=\"card-titolo\">$titolo</div>\n";
-                      echo "<div class=\"card-rating\">rating</div>\n";
-                    echo"</div>\n";
-                    echo "<div class=\"flexbox2\">\n";
-                      echo "<div class=\"card-descrizione\">$descrizione</div>\n";
-                      echo "<form class=\"card-commenta\" action=\"view-discussioni.php\" method=\"post\"><input class=\"submit\" type=\"submit\" value=\"DISCUSSIONI\"></input>\n";
-                        echo "<input class=\"hidden\" type=\"hidden\ value=\"$id_progetto\">\n";
-                      echo "</form>\n";
-                    echo "</div>\n";
-                  echo "</div>\n";
-                echo "</div>\n";
+              echo "<div class=\"card-container\">\n";
+              echo "  <div class=\"card-header\" style=\"background-image: url('$img_path'); background-size: cover; background-position: center;\">\n";
+              echo "    <div class=\"card-user\">&#x1F464; $username</div>\n";
+              echo "  </div>\n";
+              echo "  <div class=\"card-footer\">\n";
+              echo "    <div class=\"flexbox1\">\n";
+              echo "      <div class=\"card-titolo\">$titolo</div>\n";
+              echo "      <div class=\"card-rating\">rating</div>\n";
+              echo "    </div>\n";
+              echo "    <div class=\"flexbox2\">\n";
+              echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
+              echo "      <form class=\"card-commenta\" action=\"view-discussioni.php\" method=\"post\">\n";
+              echo "        <input class=\"submit\" type=\"submit\" value=\"DISCUSSIONI\">\n";
+              echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
+              echo "      </form>\n";
+              echo "    </div>\n";
+              echo "  </div>\n";
+              echo "</div>\n";
+
               }
+
            ?>
         </div>
       </div>

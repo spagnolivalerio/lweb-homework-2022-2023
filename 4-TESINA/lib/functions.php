@@ -1,4 +1,5 @@
 <?php
+require_once('get_nodes.php');
 
 function getDOMdocument($xmlFile)
 {
@@ -134,6 +135,20 @@ function add_img($img_location, $nome_file_img)
         exit;
 
     }
+}
+
+function check_partecipante($partecipanti, $id_utente)
+{
+    if(empty($partecipanti)){
+        return 0; 
+    }
+    foreach($partecipanti as $partecipante){
+        if($id_utente === $partecipante->getAttribute('id_partecipante')){
+            return true; 
+        }
+    }
+
+    return false; 
 }
 
 function ban()

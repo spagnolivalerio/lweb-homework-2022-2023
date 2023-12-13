@@ -1,87 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="24" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="18" username_creator="nuovo" id_creator="7" tempo_medio="120" data_pubblicazione="2023-12-05 16:10:24" visualizzazioni="0" nome_file_img="../img/proj/img_proj_656f3d609ea88.png" difficolta="facile">
-    <titolo>titolo1</titolo>
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="26" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="25" username_creator="" id_creator="" tempo_medio="120" data_pubblicazione="2023-12-13 17:50:27" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6579e0d31e195.avif" difficolta="facile">
+    <titolo>PROGETTO</titolo>
     <categorie>
       <categoria id_categoria="1"/>
       <categoria id_categoria="2"/>
     </categorie>
-    <descrizione>descrizione1</descrizione>
+    <descrizione>DESCRIZIONE PROGETTO</descrizione>
     <reports_progetti/>
     <discussioni/>
-    <tutorial_progetto id_tutorial="18"/>
+    <tutorial_progetto id_tutorial="25"/>
     <valutazioni/>
   </progetto>
-  <progetto id="19" username_creator="nuovo" id_creator="7" tempo_medio="1000" data_pubblicazione="2023-12-12 16:55:28" visualizzazioni="0" nome_file_img="../img/proj/img_proj_65788270204b4.jpg" difficolta="difficile">
-    <titolo>I PUFFI VIOLA</titolo>
+  <progetto id="26" username_creator="nuovo" id_creator="3" tempo_medio="3" data_pubblicazione="2023-12-13 17:54:02" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6579e1aabd5da.avif" difficolta="facile">
+    <titolo>26progetto</titolo>
     <categorie>
       <categoria id_categoria="1"/>
       <categoria id_categoria="2"/>
+      <categoria id_categoria="4"/>
     </categorie>
-    <descrizione>i puffi viola sono veam,enbbte molto viola, e ioo gioco a fortnuite ij maniera eccelsa, quasi come quanto scrivo bene da tasteira!</descrizione>
+    <descrizione>dwsrizione</descrizione>
     <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="19"/>
-    <valutazioni/>
-  </progetto>
-  <progetto id="20" username_creator="" id_creator="" tempo_medio="12" data_pubblicazione="2023-12-13 00:26:14" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6578ec160ebde.jpg" difficolta="facile">
-    <titolo>titolo2</titolo>
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-    </categorie>
-    <descrizione>decriusaob</descrizione>
-    <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="20"/>
-    <valutazioni/>
-  </progetto>
-  <progetto id="21" username_creator="" id_creator="" tempo_medio="12" data_pubblicazione="2023-12-13 00:26:20" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6578ec1c67ada.jpg" difficolta="facile">
-    <titolo>titolo2heta</titolo>
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-    </categorie>
-    <descrizione>decriusaobqe5y</descrizione>
-    <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="21"/>
-    <valutazioni/>
-  </progetto>
-  <progetto id="22" username_creator="" id_creator="" tempo_medio="12" data_pubblicazione="2023-12-13 00:26:25" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6578ec21a39e2.jpg" difficolta="facile">
-    <titolo>titolo2hetaaegr</titolo>
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-    </categorie>
-    <descrizione>decriusaobqe5ygear</descrizione>
-    <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="22"/>
-    <valutazioni/>
-  </progetto>
-  <progetto id="23" username_creator="" id_creator="" tempo_medio="12" data_pubblicazione="2023-12-13 00:26:29" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6578ec2562a5e.jpg" difficolta="facile">
-    <titolo>titolo2hetaaegrager</titolo>
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-    </categorie>
-    <descrizione>decriusaobqe5yggearear</descrizione>
-    <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="23"/>
-    <valutazioni/>
-  </progetto>
-  <progetto id="24" username_creator="" id_creator="" tempo_medio="12" data_pubblicazione="2023-12-13 00:26:33" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6578ec2946463.jpg" difficolta="facile">
-    <titolo>titolo2hetaaegragerage</titolo>
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-    </categorie>
-    <descrizione>decriusaobqe5yggeareargaer</descrizione>
-    <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="24"/>
+    <discussioni>
+      <discussione id_discussione="9"/>
+    </discussioni>
+    <tutorial_progetto id_tutorial="26"/>
     <valutazioni/>
   </progetto>
 </progetti>

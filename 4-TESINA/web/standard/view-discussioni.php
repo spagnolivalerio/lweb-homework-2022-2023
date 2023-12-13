@@ -1,11 +1,18 @@
 <?php 
     session_start();
     $root = "../../";
-    require_once($root . "lib/get_nodes.php")
+    require_once($root . "lib/get_nodes.php");
+
+    echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
+
+    $id_progetto = $_POST['id_progetto'];
+    $id_utente = $_SESSION['id_utente'];
+
+    $discussioni = getDiscussioni($root, $id_progetto);
 
 ?>
 
-<?xml version="1.0" encoding="UTF-8" ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -23,28 +30,133 @@
 
   <body>
 
-    <div class="homepage">
-      <div class="homepage-sidebar">
-        <div class="intestazione">
-          <div class="logo">TPS</div>
+        <div class="homepage">
+          <div class="homepage-sidebar">
+            <div class="intestazione">
+              <div class="logo">TPS</div>
+            </div>
+            <div class="homepage-sidebar-list">
+              <a class="elem">Homepage</a>
+              <a class="elem">Bacheca</a>
+              <a class="elem">Progetti</a>
+              <a class="elem">Bozze</a>
+              <a class="elem">Storico</a>
+              <div class="divisore"></div>
+              <a class="elem">Logout</a>
+            </div>
+          </div>
+          <div class="dashboard">
+            <div class="toolbar"></div>
+            <div class="content">
+
+            <?php
+
+              foreach($discussioni as $discussione){
+
+                $id_discussione = $discussione->getAttribute('id');
+                $titolo = $discussione->getAttribute('titolo');
+                $descrizione = $discussione->getElementsByTagName('descrizione')->item(0)->nodeValue;
+                $autore = $discussione->getAttribute('autore');
+                $data_ora = $discussione->getAttribute('data_ora');
+                $risolta = $discussione->getAttribute('risolta');
+                $commenti = getCommenti($root, $id_discussione);
+
+                $partecipanti = getPartecipanti($root, $id_discussione);
+                $flag = check_partecipante($partecipanti, $id_utente);
+
+                echo "<div class=\"discussion-container\">\n";
+                echo "    <div class=\"discussion-header\">\n";
+                echo "        <h1 class=\"discussion-title\">$titolo</h1>\n";
+                echo "        <p class=\"discussion-info\">\n";
+                echo "            <span>$autore</span>\n";
+                echo "            <span class=\"datetime\">$data_ora</span>\n";
+                echo "        </p>\n";
+                echo "        <p class=\"discussion-text\">$descrizione</p>\n";
+                echo "    </div>\n";
+                echo "    <div class=\"comment-container\">\n";
+
+                if($risolta == "true"){
+
+                  echo "<div class=\"risolta\">Discussione risolta</div>\n";
+
+                } elseif(!$flag) {
+
+                  echo "<div class=\"accesso\">\n";
+                  echo "     <form class=\"form-accesso\">\n";
+                  echo "            <input type=\"hidden\" name=\"id_discussione\" value=\"$id_discussione\"></input>\n";
+                  echo "            <button type=\"submit\">Richiedi Accesso</button>\n";
+                  echo "     </form>\n";
+
+                } else {
+
+                echo "        <form class=\"comment-form\">\n";
+                echo "            <input type=\"text\" name=\"comment-text\" placeholder=\"Aggiungi un commento alla discussione\"></input>\n";
+                echo "            <input type=\"hidden\" name=\"id_discussione\" value=\"$id_discussione\"></input>\n";
+                echo "            <button type=\"submit\">Commenta</button>\n";
+                echo "        </form>\n";
+                }
+
+                foreach($commenti as $commento){
+                  $commentatore = $commento->getAttribute('commentatore');
+                  $testo = $commento->getElementsByTagName('testo')->item(0)->nodeValue; 
+                  $data_ora = $commento->getAttribute('data_ora'); 
+                
+                echo "        <span class=\"commenti-span\"><h2>COMMENTI</h2></span>\n";
+                echo "        <div class=\"comment\">\n";
+                echo "            <div class=\"comment-info\">\n";
+                echo "                <span class=\"comment-author\">$commentatore</span>\n";
+                echo "                <span class=\"comment-datetime\">$data_ora</span>\n";
+                echo "            </div>\n";
+                echo "            <div class=\"comment-box\">\n";
+                echo "                <p class=\"comment-text\">$testo</p>\n";
+                echo "            </div>\n";
+                echo "            <form class=\"form-box\" action= $root . \"valuta_progetto.php\" method=\"post\">\n";
+                echo "                <div class=\"rating\">\n";
+                echo "                    <label for=\"5\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"5\">\n";
+                echo "                    <label for=\"4\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"4\">\n";
+                echo "                    <label for=\"3\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"3\">\n";
+                echo "                    <label for=\"2\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"2\">\n";
+                echo "                    <label for=\"1\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"1\">\n";
+                echo "                    <span class=\"type-rating\">Rating</span>\n";
+                echo "                </div>\n";
+                echo "                <div class=\"rr\">\n";
+                echo "                    <label for=\"utility\"></label>\n";
+                echo "                    <select name=\"utility\" id=\"utility\">\n";
+                echo "                        <option value=\"1\">Per niente utile</option>\n";
+                echo "                        <option value=\"2\">Indifferente</option>\n";
+                echo "                        <option value=\"3\">Utile</option>\n";
+                echo "                    </select>\n";
+                echo "                    <span class=\"type-rating\">Utilit&agrave;</span>\n";
+                echo "                </div>\n";
+                echo "                <button type=\"submit\" class=\"valuta\">VALUTA</button>\n";
+                echo "            </form>\n";
+                echo "            <form class=\"form-segnalazione\" action=\"\" method=\"post\">\n";
+                echo "                <label for=\"segnala\"></label>\n";
+                echo "                <select name=\"segnala\">\n";
+                echo "                    <option value=\"spam\">spam</option>\n";
+                echo "                    <option value=\"Contenuti inesatti\">Contenuti inesatti</option>\n";
+                echo "                    <option value=\"Contenuti inappropriati\">Contenuti inappropriati</option>\n";
+                echo "                </select>\n";
+                echo "                <button type=\"submit\" class=\"segnala\">segnala</button>\n";
+                echo "            </form>\n";
+                echo "        </div>\n";
+                echo "    </div>\n";
+                echo "</div>\n";
+              }
+
+              echo "    </div>\n"; // Chiusura di comment-container
+              echo "    </div>\n";
+
+            }
+
+            ?>
+          </div>
         </div>
-        <div class="homepage-sidebar-list">
-          <a class="elem">Homepage</a>
-          <a class="elem">Bacheca</a>
-          <a class="elem">Progetti</a>
-          <a class="elem">Bozze</a>
-          <a class="elem">Storico</a>
-          <div class="divisore"></div>
-          <a class="elem">Logout</a>
-        </div>
-      </div>
-      <div class="dashboard">
-        <div class="toolbar"></div>
-
-
-
-    
-      </div>
     </div>
   </body>
 

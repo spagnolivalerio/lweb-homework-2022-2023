@@ -23,6 +23,7 @@ if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
 }
 
 $id_poster = $_SESSION['id_utente'];
+$autore = $_SESSION['username'];
 $id_discussione = generate_id($xmlFile);
 $data_ora = new DateTime();
 $data_ora = $data_ora->format('Y-m-d H:i:s');
@@ -39,6 +40,7 @@ $newDiscussione->setAttribute('risolta', 'false');
 $newDiscussione->setAttribute('id', $id_discussione);
 $newDiscussione->setAttribute('id_progetto', $id_progetto);
 $newDiscussione->setAttribute('data_ora', $data_ora);
+$newDiscussione->setAttribute('autore', $autore);
 
 $newDescrizione = $doc->createElement('descrizione', $newDescrizioneValue);
 $newCommenti = $doc->createElement('commenti');
