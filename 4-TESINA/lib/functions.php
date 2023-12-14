@@ -151,6 +151,58 @@ function check_partecipante($partecipanti, $id_utente)
     return false; 
 }
 
+function already_voted($valutazioni_commento, $id_utente) {
+
+    if(empty($valutazioni_commento)){
+        return false; 
+    }
+    foreach($valutazioni_commento as $valutazione_commento){
+        if($id_utente == $valutazione_commento->getAttribute('id_votante')){
+            return true; 
+        }
+    }
+
+    return false; 
+}
+
+function already_reported($reports_commento, $id_utente) {
+
+    if(empty($reports_commento)){
+        return false; 
+    }
+    foreach($reports_commento as $report_commento){
+        if($id_utente == $report_commento->getAttribute('id_utente')){
+            return true; 
+        }
+    }
+
+    return false; 
+}
+
+function already_sended($richieste_accesso, $id_utente) {
+
+    if(empty($richieste_accesso)){
+        return false; 
+    }
+    foreach($richieste_accesso as $richiesta_accesso){
+        if($id_utente == $richiesta_accesso->getAttribute('id_utente')){
+            return true; 
+        }
+    }
+
+    return false; 
+}
+
+
+function getState($richieste_accesso, $id_utente){
+    foreach($richieste_accesso as $richiesta_accesso){
+        if($id_utente == $richiesta_accesso->getAttribute('id_utente')){
+            return $richiesta_accesso->getAttribute('stato'); 
+        }
+    }
+}
+
+
 function ban()
 {};
 

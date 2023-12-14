@@ -8,10 +8,10 @@ if (!isset($_SESSION['Tipo_utente'])) {
     exit;
 }
 
-if (!isset($_POST['utilita']) || empty($_POST['utilita'])) {
+if (!isset($_POST['utility']) || empty($_POST['utility'])) {
     exit;
 } else {
-    $utilita = $_POST['utilita'];
+    $utilita = $_POST['utility'];
 }
 
 if (!isset($_POST['id_commento']) || empty($_POST['id_commento'])) {
@@ -20,10 +20,16 @@ if (!isset($_POST['id_commento']) || empty($_POST['id_commento'])) {
     $id_commento = $_POST['id_commento'];
 }
 
-if (!isset($_POST['liv_accordo']) || empty($_POST['liv_accordo'])) {
+if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
     exit;
 } else {
-    $liv_accordo = $_POST['liv_accordo'];
+    $id_progetto = $_POST['id_progetto'];
+}
+
+if (!isset($_POST['rating']) || empty($_POST['rating'])) {
+    exit;
+} else {
+    $liv_accordo = $_POST['rating'];
 }
 
 $id_votante = $_SESSION['id_utente'];
@@ -89,7 +95,8 @@ $doc->formatOutput = true;
 $xmlString = $doc->saveXML();
 file_put_contents($xmlFile, $xmlString);
 
-header('Location: prove_funzioni/prova_valuta_commento.php');
+$url = "../web/" . $_SESSION['Tipo_utente'] . "/view-discussioni.php?id_progetto=" . $id_progetto;
+header("Location: $url");
 exit; 
 
 ?>

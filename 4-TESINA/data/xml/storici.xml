@@ -60,4 +60,55 @@
     </discussioni>
     <valutazioni_commenti/>
   </storico>
+  <storico id_utente="4">
+    <progetti/>
+    <richieste>
+      <richiesta id_richiesta="7"/>
+      <richiesta id_richiesta="8"/>
+      <richiesta id_richiesta="9"/>
+      <richiesta id_richiesta="10"/>
+      <richiesta id_richiesta="11"/>
+      <richiesta id_richiesta="12"/>
+      <richiesta id_richiesta="13"/>
+      <richiesta id_richiesta="14"/>
+    </richieste>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti>
+      <report_commento id_report="3" tipo="spam"/>
+      <report_commento id_report="4" tipo="spam"/>
+      <report_commento id_report="5" tipo="spam"/>
+      <report_commento id_report="6" tipo="spam"/>
+      <report_commento id_report="7" tipo="Contenuti inesatti"/>
+      <report_commento id_report="8" tipo="Contenuti inesatti"/>
+    </reports_commenti>
+    <discussioni/>
+    <valutazioni_commenti>
+      <valutazione_commento id_valutazione="2"/>
+      <valutazione_commento id_valutazione="3"/>
+      <valutazione_commento id_valutazione="4"/>
+      <valutazione_commento id_valutazione="5"/>
+      <valutazione_commento id_valutazione="6"/>
+      <valutazione_commento id_valutazione="7"/>
+      <valutazione_commento id_valutazione="8"/>
+      <valutazione_commento id_valutazione="9"/>
+      <valutazione_commento id_valutazione="10"/>
+      <valutazione_commento id_valutazione="12"/>
+      <valutazione_commento id_valutazione="13"/>
+      <valutazione_commento id_valutazione="14"/>
+    </valutazioni_commenti>
+  </storico>
+  <storico id_utente="5">
+    <progetti/>
+    <richieste/>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti/>
+    <discussioni/>
+    <valutazioni_commenti>
+      <valutazione_commento id_valutazione="11"/>
+    </valutazioni_commenti>
+  </storico>
 </storici>

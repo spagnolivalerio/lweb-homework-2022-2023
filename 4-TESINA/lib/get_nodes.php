@@ -51,4 +51,34 @@ function getPartecipanti($root, $id_discussione){
 
 }
 
+function getValutazioni($root, $id_commento){
+    $xmlFile = $root . "data/xml/valutazioni_commenti.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXPath($doc);
+
+    return $xpath->query("/valutazioni_commenti/valutazione_commento[@id_commento = '$id_commento']");
+
+}
+
+function getSegnalazioni($root, $id_commento){
+    $xmlFile = $root . "data/xml/reports_commenti.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXPath($doc);
+
+    return $xpath->query("/reports_commenti/report_commento[@id_commento = '$id_commento']");
+
+}
+
+function getRichiesteAccesso($root, $id_discussione){
+    $xmlFile = $root . "data/xml/richieste_accesso_discussioni.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXPath($doc);
+
+    return $xpath->query("/richieste/richiesta[@id_discussione = '$id_discussione']");
+
+}
+
 ?>
