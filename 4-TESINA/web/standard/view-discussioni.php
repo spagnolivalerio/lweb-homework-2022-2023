@@ -2,26 +2,42 @@
     session_start();
     $root = "../../";
     require_once($root . "lib/get_nodes.php");
+    require_once($root . "lib/functions.php");
+    $var = $_SESSION['Tipo_utente'];
+    $std = "standard";
+    $path = "index.php";
 
-    echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
-
-    
-    if ( (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) && (isset($_GET['id_progetto']) ) ) {
+    if (empty($_POST['id_progetto']) && (isset($_GET['id_progetto']) ) ) {
       $id_progetto = $_GET['id_progetto'];
-    } elseif(isset($_POST['id_progetto'])) {
+    } elseif(!empty($_POST['id_progetto'])) {
       $id_progetto = $_POST['id_progetto'];
-    }elseif( !isset($_POST['id_progetto']) && !isset($_GET['id_progetto'])){
-      header("Location:index.php" );
+    }elseif(!isset($_POST['id_progetto']) && !isset($_GET['id_progetto'])){
+      header("Location: ../index.php" );
     }
 
     $id_utente = $_SESSION['id_utente'];
 
-  
-
     $discussioni = getDiscussioni($root, $id_progetto);
+    $steps = getSteps($root, $id_progetto);
 
+    if(empty($steps)){
+      exit; 
+    } 
+
+    if(!empty($_GET['num_step'])){
+      $num_step = $_GET['num_step'];
+    } else {
+      $num_step = 0; 
+    }
+
+    $step = $steps->item($num_step);
+    $descrizione_step = $step->getElementsByTagName('descrizione')->item(0)->nodeValue; 
+    $img_path = $step->getAttribute('nome_file_img');
+
+    addressing($var, $std, $path); 
+
+    echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 ?>
-
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -35,6 +51,7 @@
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
 
   </head>
 
@@ -57,6 +74,38 @@
           </div>
           <div class="dashboard">
             <div class="toolbar"></div>
+
+              <?php
+
+              echo "<div class=\"step\">\n";
+              echo "    <div class=\"step-container\">\n";
+              echo "        <div class=\"step-content\">\n";
+              echo "            <div class=\"step-img\" style=\"background-image: url('../../$img_path'); background-size: cover; background-position: center;\"></div>\n";
+              echo "            <div class=\"descrizione\">\n";
+              echo "                <div class=\"fase\">STEP " . $num_step+1 . "</div>\n";
+              echo "                <div class=\"testo\">$descrizione_step</div>\n";
+              echo "            </div>\n";
+              echo "        </div>\n";
+              echo "        <form action=\"" . $root . "lib/forward_numstep.php>\" method=\"post\">\n";
+              echo "        <div class=\"move-button\">\n";
+              if($num_step === 0){
+                  echo "            <div class=\"left\" type=\"submit\"></div>\n";
+              } else{
+                  echo "            <button class=\"left\" type=\"submit\">&#129184; PREV</button>\n";
+              }
+
+              if($step->nextSibling){
+                  echo "            <button class=\"right\" type=\"submit\">NEXT &#129185;</button>\n";
+              } else{
+                  echo "            <div class=\"right\" type=\"submit\"></div>\n";
+              }
+              echo "        </div>\n";
+              echo "        </form>\n";
+              echo "    </div>\n";
+              echo "</div>";
+
+              ?>
+
             <div class="content">
 
             <?php
@@ -188,8 +237,8 @@
                 echo "    </div>\n";
               }
 
-              echo "    </div>\n"; // Chiusura di discussioni
-              echo "    </div>\n"; // Chiusura di comment
+              echo "    </div>\n"; 
+              echo "    </div>\n"; 
 
 
             }

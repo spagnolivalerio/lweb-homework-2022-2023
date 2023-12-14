@@ -1,22 +1,27 @@
 <?php 
     session_start();
-    $root = "../../";
-    require_once($root . "lib/get_nodes.php");
+    require_once("../../lib/get_nodes.php");
+    require_once("../../lib/functions.php");
+    $root="../../";
+    $var = $_SESSION['Tipo_utente'];
+    $mod = "moderatore";
+    $path = "index.php"; 
 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 
-    
-    if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
+    if (empty($_POST['id_progetto']) && (isset($_GET['id_progetto']) ) ) {
       $id_progetto = $_GET['id_progetto'];
-    } else {
+    } elseif(!empty($_POST['id_progetto'])) {
       $id_progetto = $_POST['id_progetto'];
+    }elseif(!isset($_POST['id_progetto']) && !isset($_GET['id_progetto'])){
+      header("Location:index.php" );
     }
 
     $id_utente = $_SESSION['id_utente'];
 
-  
-
     $discussioni = getDiscussioni($root, $id_progetto);
+
+    addressing($var, $mod, $path); 
 
 ?>
 
@@ -69,8 +74,6 @@
                 $risolta = $discussione->getAttribute('risolta');
                 $commenti = getCommenti($root, $id_discussione);
 
-                $partecipanti = getPartecipanti($root, $id_discussione);
-                $flag = check_partecipante($partecipanti, $id_utente);
                 $richieste_accesso = getRichiesteAccesso($root, $id_discussione);
                 $sended = already_sended($richieste_accesso, $id_utente);
 
@@ -89,21 +92,6 @@
                 if($risolta == "true"){
 
                   echo "  <div class=\"risolta\">Discussione risolta</div>\n";
-
-                } elseif(!$flag) {
-
-                  if(!$sended){
-                    echo "  <div class=\"accesso\">\n";
-                    echo "  <form class=\"form-accesso\" action=\"../../lib/richiedere_accesso_discussione.php\" method=\"post\">\n";
-                    echo "            <input type=\"hidden\" name=\"id_discussione\" value=\"$id_discussione\"></input>\n";
-                    echo "            <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
-                    echo "            <button type=\"submit\">Richiedi Accesso</button>\n";
-                    echo "     </form>\n";
-                    echo "  </div>\n";
-                  }else{
-                    $stato = getState($richieste_accesso, $id_utente); 
-                    echo "  <div class=\"accesso\">Richiesta inviata --> Stato della richiesta: " . $stato . "</div>\n";
-                  }
 
                 } else {
 

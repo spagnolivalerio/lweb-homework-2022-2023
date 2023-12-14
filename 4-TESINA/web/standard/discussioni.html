@@ -8,78 +8,27 @@
     <title>THE PROJECT SOCIETY</title>
 
     <link type="text/css" rel="stylesheet" href="../../res/css/standard/homepage.css" />
-    <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css" />
+    <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
 
 </head>
 
 <body>
 
-    <div class="discussion-container">
-        <div class="discussion-header">
-            <h1 class="discussion-title">Titolo della Discussione</h1>
-
-            <p class="discussion-info">
-            <span>Autore Discussione</span>
-            <span class="datetime">Data e Ora di Pubblicazione</span>
-            </p>
-
-            <p class="discussion-text">
-             AFGADG AGF AG A GA GA FGAFGADFG ADFG AFDG ADFG ADF GDF.
-            </p>
-        </div>
-
-        <div class="comment-container"> 
-            <form class="comment-form">
-                <input id="comment-text" type="text" name="comment-text" placeholder="Aggiungi un commento alla discussione"></input>
-                <input type="hidden" value="$id_discussione"></input>
-                <button type="submit">Commenta</button>
-            </form>
-
-            <span class="commenti-span"><h2>COMMENTI</h2></span>
-
-            <div class="comment">
-                <div class="comment-info">
-                    <span class="comment-author">Autore Commento</span>
-                    <span class="comment-datetime">Data e Ora del Commento</span>
+    <div class="step">
+        <div class="step-container">
+            <div class="step-content">
+                <div class="step-img"></div>
+                <div class="descrizione">
+                    <div class="fase"></div>
+                    <div class="testo"></div>
                 </div>
-                <div class="comment-box">
-                    <p class="comment-text"></p>
-                </div>
-
-                <form action= $root . "valuta_progetto.php" method="post">
-                    <div class="rating">
-                        <input type="radio" name="rating" value="5" id="5" required><label for="5">&#9734;</label>
-                        <input type="radio" name="rating" value="4" id="4" required><label for="4">&#9734;</label>
-                        <input type="radio" name="rating" value="3" id="3" required><label for="3">&#9734;</label>
-                        <input type="radio" name="rating" value="2" id="2" required><label for="2">&#9734;</label>
-                        <input type="radio" name="rating" value="1" id="1" required><label for="1">&#9734;</label>
-                        <button type="submit">Valuta utilit&agrave;</button>
-                    </div>
-                </form>
             </div>
-
+            <div class="move-button">
+                <button class="left">&#129184;  PREV</button>
+                <button class="right">NEXT  &#129185;</button>
+            </div>
         </div>
     </div>
-
-
-
-
-    
-   
-  
-
-
-               
-
-              
-
-
-                
-
-
- 
-
-    
 
 </body>
 </html>

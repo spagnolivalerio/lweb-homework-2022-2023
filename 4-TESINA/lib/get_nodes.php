@@ -81,4 +81,14 @@ function getRichiesteAccesso($root, $id_discussione){
 
 }
 
+function getSteps($root, $id_progetto){
+    $xmlFile = $root . "data/xml/tutorials.xml";
+    $doc = getDOMdocument($xmlFile); 
+
+    $xpath = new DOMXPath($doc);
+
+    return $xpath->query("/tutorials_progetti/tutorial_progetto[@id_progetto = '$id_progetto']")->item(0)->childNodes; 
+
+}
+
 ?>

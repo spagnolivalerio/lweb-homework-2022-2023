@@ -3,7 +3,7 @@
 session_start();
 require_once 'functions.php';
 $xmlFile = "../data/xml/tutorials.xml";
-$img_dir_path = "../img/steps/";
+$img_dir_path = "img/steps/";
 
 if (!isset($_POST['descrizione']) || empty($_POST['descrizione'])) {
     exit;
@@ -62,6 +62,7 @@ if ($succ_step === null) {
     }
 }
 
+$nome_file_img = "../" . $nome_file_img; 
 add_img($img_location, $nome_file_img);
 
 $doc->formatOutput = true;

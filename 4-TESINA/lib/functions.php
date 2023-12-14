@@ -142,6 +142,7 @@ function check_partecipante($partecipanti, $id_utente)
     if(empty($partecipanti)){
         return 0; 
     }
+
     foreach($partecipanti as $partecipante){
         if($id_utente === $partecipante->getAttribute('id_partecipante')){
             return true; 
@@ -170,6 +171,7 @@ function already_reported($reports_commento, $id_utente) {
     if(empty($reports_commento)){
         return false; 
     }
+
     foreach($reports_commento as $report_commento){
         if($id_utente == $report_commento->getAttribute('id_utente')){
             return true; 
@@ -202,6 +204,15 @@ function getState($richieste_accesso, $id_utente){
     }
 }
 
+function addressing($var, $perm, $path){ //controlla il valore di var se è uguale a perm: se non è uguale rimanda al path
+    switch ($var) {
+        case "$perm":
+            return 0; 
+        default:
+            header("Location: " . $path);
+            break;
+    }
+}
 
 function ban()
 {};
@@ -212,10 +223,7 @@ function sban()
 function mod_tipo_utente()
 {};
 
-function valutare_commento()
-{};
-
-function chiudi_discussione()
+function chiudi_discussione($root, $id_utente)
 {};
 
 ?>
