@@ -45,7 +45,6 @@
 .toolbar{
     min-height: 84px;
     background-color: #443ea2;
-    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     padding: 8px 27px;

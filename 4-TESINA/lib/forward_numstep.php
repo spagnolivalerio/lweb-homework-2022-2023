@@ -7,6 +7,12 @@ if(isset($_POST['num_step'])){
     exit;
 }
 
+if(isset($_POST['id_progetto'])){
+    $id_progetto = $_POST['id_progetto'];
+} else {
+    exit;
+}
+
 if(!empty($_POST['action'])){
     $action = $_POST['action'];    
 } else {
@@ -23,13 +29,16 @@ if($action === "next"){
 
 switch($_SESSION['Tipo_utente']){
     case "standard": 
-        header("Location: ../web/standard/view-discussioni.php?num_step=$num_step"); 
+        header("Location: ../web/standard/view-discussioni.php?num_step=$num_step&id_progetto=$id_progetto"); 
         break;
     case "moderatore":
-        header("Location: ../web/moderatore/view-discussioni.php?num_step=$num_step"); 
+        header("Location: ../web/moderatore/view-discussioni.php?num_step=$num_step&id_progetto=$id_progetto"); 
         break;
     case "admin":
-        header("Location: ../web/admin/view-discussioni.php?num_step=$num_step");
+        header("Location: ../web/admin/view-discussioni.php?num_step=$num_step&id_progetto=$id_progetto");
+        break;
+    default: 
+        header("Location: ../index.php");
         break;
 }
 

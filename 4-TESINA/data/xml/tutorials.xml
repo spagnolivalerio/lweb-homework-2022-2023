@@ -30,6 +30,9 @@
   <tutorial_progetto id="24" id_progetto="24"/>
   <tutorial_progetto id="25" id_progetto="25"/>
   <tutorial_progetto id="26" id_progetto="26">
+    <step nome_file_img="img/steps/img_step_657b3f5e27200.avif" num_step="1">
+      <descrizione>uno supremo</descrizione>
+    </step>
     <step nome_file_img="img/steps/img_step_657b3097db9a1.avif" num_step="2">
       <descrizione>sdub</descrizione>
     </step>

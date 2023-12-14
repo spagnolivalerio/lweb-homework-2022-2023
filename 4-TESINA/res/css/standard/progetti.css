@@ -10,59 +10,79 @@
 }
 
 .step-container{
-	border: 1px solid black;
+    box-shadow: 0 3rem 3rem -2rem hsl(200 50% 20% / 40%);
 	width: 700px;
 	height: 500px;
+	border-radius: 10px;
 }
 
 .step-content{
 	height: 450px;
-	border: 1px solid black;
 }
 
 .step-img{
-	border: 1px solid black;
 	height: 300px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
 .descrizione{
-	border: 1px solid black;
 	height: 150px;
 }
 
 .move-button{
 	height: 50px;
-	border: 1px solid black;
+	border-radius: 15px;
 	width: 200px;
 	margin: 0 auto;
 	display: flex;
+	background-color: #443ea2;
 	justify-content: space-between;
 }
 
 .right{
 	width: 98px;
-	border: 1px solid black;
+	border: none;
 	font-size: 20px;
-	letter-spacing: 2px;
 	padding: 0 !important;
+	color: white;
+	background-color: transparent !important;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 .left{
 	width: 98px;
-	border: 1px solid black;
+	border: none;
 	font-size: 20px;
-	letter-spacing: 2px;
 	padding: 0 !important;
+	color: white;
+	background-color: transparent !important;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+.l, .r{
+	transition: 0.3s;
+}
+
+.l:hover{
+  	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.r:hover{
+	box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .fase{
-	border: 1px solid black;
 	height: 30px;
+	text-align: center;
+	padding: 5px;
 }
 
 .testo{
-	border: 1px solid black;
 	height: 120px;
+	padding: 5px;
 }
 
 
