@@ -86,16 +86,17 @@
               echo "                <div class=\"testo\">$descrizione_step</div>\n";
               echo "            </div>\n";
               echo "        </div>\n";
-              echo "        <form action=\"" . $root . "lib/forward_numstep.php>\" method=\"post\">\n";
+              echo "        <form action=\"" . $root . "lib/forward_numstep.php\" method=\"post\">\n";
+              echo "        <input type=\"hidden\" value=\"$num_step\" name=\"num_step\"></input>\n";
               echo "        <div class=\"move-button\">\n";
               if($num_step === 0){
                   echo "            <div class=\"left\" type=\"submit\"></div>\n";
               } else{
-                  echo "            <button class=\"left\" type=\"submit\">&#129184; PREV</button>\n";
+                  echo "            <button class=\"left\" name=\"action\" value=\"prev\" type=\"submit\">&#129184; PREV</button>\n";
               }
 
               if($step->nextSibling){
-                  echo "            <button class=\"right\" type=\"submit\">NEXT &#129185;</button>\n";
+                  echo "            <button class=\"right\" name=\"action\" value=\"next\" type=\"submit\">NEXT &#129185;</button>\n";
               } else{
                   echo "            <div class=\"right\" type=\"submit\"></div>\n";
               }
