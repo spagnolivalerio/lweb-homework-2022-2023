@@ -6,12 +6,10 @@
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 
     
-    if ( (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) && (isset($_GET['id_progetto']) ) ) {
+    if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
       $id_progetto = $_GET['id_progetto'];
-    } elseif(isset($_POST['id_progetto'])) {
+    } else {
       $id_progetto = $_POST['id_progetto'];
-    }elseif( !isset($_POST['id_progetto']) && !isset($_GET['id_progetto'])){
-      header("Location:index.php" );
     }
 
     $id_utente = $_SESSION['id_utente'];
