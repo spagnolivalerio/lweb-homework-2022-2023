@@ -16,7 +16,7 @@
 			<xsd:sequence>
 				<xsd:element ref="tut:step" minOccurs="1" maxOccurs="unbounded" />
 			</xsd:sequence>
-            <xsd:attribute name="id_progetto" />
+            <xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
 		</xsd:complexType>
 	</xsd:element>
 
@@ -31,7 +31,5 @@
 	</xsd:element>
 
 	<xsd:element name="descrizione" type="xsd:string" />
-
-	<xsd:element name="immagine" type="xsd:base64binary" />
 
 </xsd:schema>

@@ -19,6 +19,7 @@
 				<xsd:element ref="boz:descrizione" minOccurs="0" maxOccurs="1" />
 				<xsd:element ref="boz:tutorial_bozza" minOccurs="0" maxOccurs="1" />
 			</xsd:sequence>
+			<xsd:attribute name="titolo" type="xsd:string" />
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
 			<xsd:attribute name="id_creator" type="xsd:positiveInteger" />
 			<xsd:attribute name="tempo_medio" type="xsd:positiveInteger" />
@@ -26,7 +27,6 @@
 			<xsd:attribute name="data_pubblicazione" type="xsd:dateTime" />
 			<xsd:attribute name="visualizzazioni" type="xsd:positiveInteger" />
 			<xsd:attribute name="difficolta" type="boz:tipoDifficolta" />
-            <xsd:attribute name="completo" type="xsd:boolean" />
 		</xsd:complexType>
 	</xsd:element>
 
@@ -72,14 +72,13 @@
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element ref="boz:descrizione" minOccurs="1" maxOccurs="1">
-				<xsd:element ref="boz:immagine" minOccurs="0" maxOccurs="1" />
 			</xsd:sequence>
+			<xsd:attribute name="nome_file_img" type="xsd:string"/>
+			<xsd:attribute name="num_step" type="xsd:positiveInteger"/>
 		</xsd:complexType>
 	</xsd:element>
 
 	<xsd:element name="descrizione" type="xsd:string" />
-
-	<xsd:element name="immagine" type="xsd:base64binary" />
 
 	<xsd:simpleType name="tipoDifficolta">
 		<xsd:restriction base="xsd:string">

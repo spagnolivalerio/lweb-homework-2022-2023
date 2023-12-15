@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="22" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
+<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="23" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
   <bozza id="18" id_creator="7" tempo_medio="" data_pubblicazione="2023-12-04 21:11:13" difficolta="facile" nome_file_img="">
     <categorie>
       <categoria id_categoria="1"/>
@@ -10,6 +10,12 @@
   </bozza>
   <bozza id="19" id_creator="7" tempo_medio="" data_pubblicazione="2023-12-04 21:11:35" difficolta="facile" nome_file_img="../img/proj/bozze/img_bozProj_656e3277af2d0.png">
     <categorie/>
+    <descrizione/>
+  </bozza>
+  <bozza id="23" id_creator="3" tempo_medio="" data_pubblicazione="2023-12-15 13:59:35" difficolta="facile" nome_file_img="">
+    <categorie>
+      <categoria id_categoria="3"/>
+    </categorie>
     <descrizione/>
   </bozza>
 </bozze>
