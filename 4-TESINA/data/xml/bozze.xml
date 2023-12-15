@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="23" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
-  <bozza id="18" id_creator="7" tempo_medio="" data_pubblicazione="2023-12-04 21:11:13" difficolta="facile" nome_file_img="">
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-      <categoria id_categoria="4"/>
-    </categorie>
-    <descrizione/>
-  </bozza>
-  <bozza id="19" id_creator="7" tempo_medio="" data_pubblicazione="2023-12-04 21:11:35" difficolta="facile" nome_file_img="../img/proj/bozze/img_bozProj_656e3277af2d0.png">
+<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="31" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
+  <bozza id="31" id_creator="3" tempo_medio="" data_pubblicazione="2023-12-15 16:57:39" difficolta="facile" nome_file_img="">
     <categorie/>
-    <descrizione/>
-  </bozza>
-  <bozza id="23" id_creator="3" tempo_medio="" data_pubblicazione="2023-12-15 13:59:35" difficolta="facile" nome_file_img="">
-    <categorie>
-      <categoria id_categoria="3"/>
-    </categorie>
-    <descrizione/>
+    <descrizione>FE</descrizione>
+    <tutorial_bozza/>
   </bozza>
 </bozze>

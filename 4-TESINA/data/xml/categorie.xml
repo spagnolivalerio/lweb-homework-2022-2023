@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<categorie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="23" xsi:noNamespaceSchemaLocation="../../structures/xsd/categorie.xsd">
+
+    <categoria id="1">
+        <nomeCategoria>Categoria 1</nomeCategoria>
+    </categoria>
+
+    <categoria id="2">
+        <nomeCategoria>Categoria 2</nomeCategoria>
+    </categoria>
+
+    <categoria id="3">
+        <nomeCategoria>Categoria 3</nomeCategoria>
+    </categoria>
+
+    <categoria id="4">
+        <nomeCategoria>Categoria 4</nomeCategoria>
+    </categoria>
+
+    <categoria id="5">
+        <nomeCategoria>Categoria 5</nomeCategoria>
+    </categoria>
+
+</categorie>
