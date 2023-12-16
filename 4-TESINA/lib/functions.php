@@ -214,6 +214,14 @@ function addressing($var, $perm, $path){ //controlla il valore di var se è ugua
     }
 }
 
+function checkFieldsNotNull($fields) {
+    foreach ($fields as $field) {
+        if (is_null($field)) {
+            return false; // Se almeno un campo è nullo, restituisci false
+        }
+    }
+    return true; // Se nessun campo è nullo, restituisci true
+}
 function ban()
 {};
 

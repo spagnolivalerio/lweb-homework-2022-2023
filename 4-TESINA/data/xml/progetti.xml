@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="26" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="25" username_creator="" id_creator="" tempo_medio="120" data_pubblicazione="2023-12-13 17:50:27" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6579e0d31e195.avif" difficolta="facile">
-    <titolo>PROGETTO</titolo>
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="27" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="28" username_creator="daniele" id_creator="4" tempo_medio="4" data_pubblicazione="2023-12-16 09:10:09" visualizzazioni="0" nome_file_img="../img/bozze/img_boz_657d5b51d019f.png" difficolta="medio">
+    <titolo>progetto supremo</titolo>
     <categorie>
       <categoria id_categoria="1"/>
       <categoria id_categoria="2"/>
-    </categorie>
-    <descrizione>DESCRIZIONE PROGETTO</descrizione>
-    <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="25"/>
-    <valutazioni/>
-  </progetto>
-  <progetto id="26" username_creator="nuovo" id_creator="3" tempo_medio="3" data_pubblicazione="2023-12-13 17:54:02" visualizzazioni="0" nome_file_img="../img/proj/img_proj_6579e1aabd5da.avif" difficolta="facile">
-    <titolo>26progetto</titolo>
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
+      <categoria id_categoria="3"/>
       <categoria id_categoria="4"/>
     </categorie>
-    <descrizione>dwsrizione</descrizione>
+    <descrizione>molto supremo</descrizione>
     <reports_progetti/>
-    <discussioni>
-      <discussione id_discussione="9"/>
-    </discussioni>
-    <tutorial_progetto id_tutorial="26"/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="28"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="28" username_creator="daniele" id_creator="4" tempo_medio="4" data_pubblicazione="2023-12-16 09:41:00" visualizzazioni="0" nome_file_img="../img/bozze/img_boz_657d6290e84fb.png" difficolta="medio">
+    <titolo>AOFRA</titolo>
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+      <categoria id_categoria="3"/>
+      <categoria id_categoria="4"/>
+    </categorie>
+    <descrizione>adsad</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="28"/>
     <valutazioni/>
   </progetto>
 </progetti>

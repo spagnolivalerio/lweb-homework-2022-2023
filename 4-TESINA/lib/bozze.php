@@ -46,35 +46,20 @@ if (!empty($_FILES['img']['tmp_name'])) {
     $nome_file_img = "";
 }
 
-if(isset($_POST['id_vecchia_bozza'])){ //lo passa il progetto.php nel caso in cui modifico una bozza
-    $id_vecchia_bozza = $_POST['id_vecchia_bozza'];
-    if (!empty($id_vecchia_bozza)) {
-        $query = "/bozze/bozza[@id";
-        remove_1_1($xmlFile, $query, $id_vecchia_bozza);
-    }
 
-    $steps_vecchia_bozza = $xpath->query("/bozze/bozza[@id = '$id_vecchia_bozza']/tutorial_bozza")->item(0)->childNodes; 
-    foreach($steps_vecchia_bozza as $step_vecchia_bozza){
-        $bozNewStep = $doc->createElement('step'); 
-        $bozNewStep->setAttribute('num_step', $step_vecchia_bozza->getAttribute('num_step')); 
-        $bozNewStep->setAttribute('nome_file_img', $step_vecchia_bozza->getAttribute('nome_file_img')); 
-        $bozStepDescrizione = $doc->createElement('descrzione', $step_vecchia_bozza->getElementsByTagName('descrizione')->item(0)->nodeValue);
-        $bozNewStep->appendChild($bozStepDescrizione); 
-    }
-}
-
-
-$bozTitolo = $doc->createElement('titolo', $titolo);
 $bozCategorie = $doc->createElement('categorie');
 $bozDescrizione = $doc->createElement('descrizione', $descrizione);
 
 $newBozza->setAttribute('id', $id_bozza);
+$newBozza->setAttribute('titolo', $titolo);
 $newBozza->setAttribute('id_creator', $id_creator);
 $newBozza->setAttribute('tempo_medio', $tempo_medio);
 $newBozza->setAttribute('data_pubblicazione', $data_ora);
 $newBozza->setAttribute('difficolta', $difficolta);
 
 $newBozza->setAttribute('nome_file_img', $nome_file_img);
+
+
 
 foreach ($categorie as $categoria) {
 
@@ -94,6 +79,39 @@ $doc->formatOutput = true;
 $xmlString = $doc->saveXML();
 file_put_contents($xmlFile, $xmlString);
 
+if(isset($_POST['id_vecchia_bozza'])){ //lo passa il progetto.php nel caso in cui modifico una bozza
+    $id_vecchia_bozza = $_POST['id_vecchia_bozza'];
+
+    $steps_vecchia_bozza = $xpath->query("/bozze/bozza[@id = '$id_vecchia_bozza']/tutorial_bozza")->item(0)->childNodes; 
+    foreach($steps_vecchia_bozza as $step_vecchia_bozza){
+        $prova = $step_vecchia_bozza->getAttribute('num_step');
+        echo "$prova";
+    }
+
+    
+    foreach($steps_vecchia_bozza as $step_vecchia_bozza){
+        $bozNewStep = $doc->createElement('step'); 
+        $bozNewStep->setAttribute('num_step', $step_vecchia_bozza->getAttribute('num_step')); 
+        $bozNewStep->setAttribute('nome_file_img', $step_vecchia_bozza->getAttribute('nome_file_img')); 
+        $bozStepDescrizione = $doc->createElement('descrizione', $step_vecchia_bozza->getElementsByTagName('descrizione')->item(0)->nodeValue);
+        $bozNewStep->appendChild($bozStepDescrizione); 
+
+        $bozTutorial->appendChild($bozNewStep);
+
+    }
+
+    $doc->formatOutput = true;
+    $xmlString = $doc->saveXML();
+    file_put_contents($xmlFile, $xmlString);
+    
+    if (!empty($id_vecchia_bozza)) {
+        $query = "/bozze/bozza[@id";
+        remove_1_1($xmlFile, $query, $id_vecchia_bozza);
+        echo "$id_vecchia_bozza";
+    } 
+
+    
+}
 
 header('Location: ../web/standard/form_step.php');
 exit;

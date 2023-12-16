@@ -28,10 +28,34 @@ $tempo_medio = $thisBozza->getAttribute('tempo_medio');
 $difficolta = $thisBozza->getAttribute('difficolta'); 
 $nome_file_img = $thisBozza->getAttribute('nome_file_img');
 
-$campi = [$titolo, $descrzione_progetto, $categorie, $tempo_medio, $difficolta, $nome_file_img];
-$empty = array_reduce($campi, function ($carry, $campo) {return $carry || empty($campo);}, false);
 
-if($empty){
+
+$categorieArray = [];
+
+if ($categorie) {
+    foreach ($categorie->getElementsByTagName('categoria') as $cat) {
+        $idCategoria = $cat->getAttribute('id_categoria');
+        $categorieArray[] = $idCategoria;
+    }
+    if(empty($categorieArray)){
+        $null = 1;
+    }else{
+        $null = 0;
+    }
+}
+
+
+if(empty($titolo) || empty($tempo_medio) || empty($difficolta) || empty($descrizione_progetto) || empty($nome_file_img) || $null == 1){
+    $noNullFields = false;
+}else{
+    $noNullFields = true;
+}
+
+
+#$empty = array_reduce($campi, function ($carry, $campo) {return $carry || empty($campo);}, false);
+#$empty = false;
+
+if($noNullFields == false){
     header('Location: ../web/standard/form_progetto.php?modifica=true');
     exit;
 }
@@ -64,15 +88,16 @@ $newProgetto->setAttribute('visualizzazioni', 0);
 $newProgetto->setAttribute('nome_file_img', $nome_file_img);
 $newProgetto->setAttribute('difficolta', $difficolta);
 
-foreach ($categorie as $categoria) {
 
+
+foreach ($categorie->getElementsByTagName('categoria') as $cat) {
+    $idCategoria = $cat->getAttribute('id_categoria');
     $proCategoria = $doc->createElement('categoria');
-    $proCategoria->setAttribute('id_categoria', $categoria);
+    $proCategoria->setAttribute('id_categoria', $idCategoria);
     $proCategorie->appendChild($proCategoria);
-
 }
 
-$proTutorial->setAttribute('id_tutorial', $id_tutorial);
+$proTutorial->setAttribute('id_tutorial', $id_progetto);
 
 $newProgetto->appendChild($proTitolo);
 $newProgetto->appendChild($proCategorie);
@@ -97,14 +122,14 @@ $nodes = $root->childNodes;
 
 $newTutorial = $doc->createElement('tutorial_progetto');
 
-$newTutorial->setAttribute('id', $id_tutorial);
+$newTutorial->setAttribute('id', $id_progetto);
 $newTutorial->setAttribute('id_progetto', $id_progetto);
 
 foreach($bozSteps as $bozStep){
     $newStep = $doc->createElement('step'); 
     $newStep->setAttribute('num_step', $bozStep->getAttribute('num_step')); 
     $newStep->setAttribute('nome_file_img', $bozStep->getAttribute('nome_file_img')); 
-    $newStepDesc = $newStep->createElement('descrizione', $bozStep->getElementsByTagName('descrizione')->item(0)->nodeValue); 
+    $newStepDesc = $doc->createElement('descrizione', $bozStep->getElementsByTagName('descrizione')->item(0)->nodeValue); 
     $newStep->appendChild($newStepDesc); 
 }
 
@@ -112,6 +137,7 @@ $root->appendChild($newTutorial);
 
 $doc->formatOutput = true;
 $xmlString = $doc->saveXML();
+$xmlTutorial = "../data/xml/tutorials.xml";
 file_put_contents($xmlTutorial, $xmlString);
 
 //RIMUOVI BOZZA
@@ -119,5 +145,7 @@ file_put_contents($xmlTutorial, $xmlString);
 $query = "/bozze/bozza[@id"; 
 $xmlFile = $tps_root . "data/xml/bozze.xml"; 
 remove_1_1($xmlFile, $query, $id_bozza); 
+
+header('Location: ../web/standard/bukkin');
 
 ?>
