@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
- 
+<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="2" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
+  <commento id="1" id_discussione="1" id_commentatore="4" data_ora="2023-12-16 11:53:10" commentatore="daniele">
+    <testo>asdadad</testo>
+    <voti/>
+    <reports_commento/>
+    <valutazioni_commento/>
+  </commento>
+  <commento id="2" id_discussione="1" id_commentatore="4" data_ora="2023-12-16 11:54:10" commentatore="daniele">
+    <testo>daswdqadww</testo>
+    <voti/>
+    <reports_commento/>
+    <valutazioni_commento/>
+  </commento>
 </commenti>

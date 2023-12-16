@@ -116,13 +116,14 @@ file_put_contents($xmlFile, $xmlString);
 //AGGIUNTO IN TUTORIALS.XML
 
 $xmlFile = $tps_root . "data/xml/tutorials.xml"; 
+$id_tutorial = generate_id($xmlFile);
 $doc = getDOMdocument($xmlFile);
 $root = $doc->documentElement;
 $nodes = $root->childNodes;
 
 $newTutorial = $doc->createElement('tutorial_progetto');
 
-$newTutorial->setAttribute('id', $id_progetto);
+$newTutorial->setAttribute('id', $id_tutorial);
 $newTutorial->setAttribute('id_progetto', $id_progetto);
 
 foreach($bozSteps as $bozStep){

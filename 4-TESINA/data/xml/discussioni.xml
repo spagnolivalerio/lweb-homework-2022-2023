@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <discussione titolo="DIscussione deginitiva" id_poster="4" risolta="false" id="1" id_progetto="6" data_ora="2023-12-16 11:29:39" autore="daniele">
+    <commenti>
+      <commento id_commento="1"/>
+      <commento id_commento="2"/>
+    </commenti>
+    <descrizione>bella m</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="4"/>
+    </partecipanti>
+  </discussione>
 </discussioni>

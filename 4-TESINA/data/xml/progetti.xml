@@ -1,59 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="1" username_creator="daniele" id_creator="4" tempo_medio="82" data_pubblicazione="2023-12-16 11:07:00" visualizzazioni="0" nome_file_img="../img/bozze/img_boz_657d76b482047.webp" difficolta="difficile">
-    <titolo>Arduino Project</titolo>
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="6" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="5" username_creator="daniele" id_creator="4" tempo_medio="6" data_pubblicazione="2023-12-16 11:22:54" visualizzazioni="0" nome_file_img="../img/bozze/img_boz_657d7a689e477.png" difficolta="medio">
+    <titolo>AOFRA</titolo>
     <categorie>
       <categoria id_categoria="1"/>
       <categoria id_categoria="2"/>
       <categoria id_categoria="3"/>
       <categoria id_categoria="4"/>
     </categorie>
-    <descrizione>In questo ..</descrizione>
+    <descrizione>adadad</descrizione>
     <reports_progetti/>
     <discussioni/>
-    <tutorial_progetto id_tutorial="1"/>
+    <tutorial_progetto id_tutorial="5"/>
     <valutazioni/>
   </progetto>
-  <progetto id="1" username_creator="daniele" id_creator="4" tempo_medio="39" data_pubblicazione="2023-12-16 11:10:38" visualizzazioni="0" nome_file_img="../img/bozze/img_boz_657d778ba55cf.webp" difficolta="difficile">
-    <titolo>JUJUTSU KAISEN 12</titolo>
+  <progetto id="6" username_creator="daniele" id_creator="4" tempo_medio="30" data_pubblicazione="2023-12-16 11:26:08" visualizzazioni="0" nome_file_img="../img/bozze/img_boz_657d7b354756f.png" difficolta="medio">
+    <titolo>DEFINITIBVp</titolo>
     <categorie>
       <categoria id_categoria="1"/>
       <categoria id_categoria="2"/>
       <categoria id_categoria="3"/>
       <categoria id_categoria="4"/>
     </categorie>
-    <descrizione>manga supremo</descrizione>
+    <descrizione>NON LO SO PROPRIO</descrizione>
     <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="1"/>
-    <valutazioni/>
-  </progetto>
-  <progetto id="1" username_creator="daniele" id_creator="4" tempo_medio="9" data_pubblicazione="2023-12-16 11:12:30" visualizzazioni="0" nome_file_img="../img/bozze/img_boz_657d78069151d.png" difficolta="medio">
-    <titolo>JUJUTSU KAISEN 12</titolo>
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-      <categoria id_categoria="3"/>
-      <categoria id_categoria="4"/>
-    </categorie>
-    <descrizione>qdwqd</descrizione>
-    <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="1"/>
-    <valutazioni/>
-  </progetto>
-  <progetto id="1" username_creator="daniele" id_creator="4" tempo_medio="28" data_pubblicazione="2023-12-16 11:15:48" visualizzazioni="0" nome_file_img="../img/bozze/img_boz_657d78ccbe5fe.png" difficolta="facile">
-    <titolo>DAIBRO</titolo>
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-      <categoria id_categoria="3"/>
-      <categoria id_categoria="4"/>
-    </categorie>
-    <descrizione>VAMONOS</descrizione>
-    <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="1"/>
+    <discussioni>
+      <discussione id_discussione="1"/>
+    </discussioni>
+    <tutorial_progetto id_tutorial="6"/>
     <valutazioni/>
   </progetto>
 </progetti>

@@ -71,8 +71,16 @@
       <richiesta id_richiesta="12"/>
       <richiesta id_richiesta="13"/>
       <richiesta id_richiesta="14"/>
+      <richiesta id_richiesta="15"/>
     </richieste>
-    <commenti/>
+    <commenti>
+      <commento id_commento="1">
+        <testo>asdadad</testo>
+      </commento>
+      <commento id_commento="2">
+        <testo>daswdqadww</testo>
+      </commento>
+    </commenti>
     <valutazioni_progetti/>
     <reports_progetti/>
     <reports_commenti>
@@ -83,7 +91,9 @@
       <report_commento id_report="7" tipo="Contenuti inesatti"/>
       <report_commento id_report="8" tipo="Contenuti inesatti"/>
     </reports_commenti>
-    <discussioni/>
+    <discussioni>
+      <discussione id_discussione="1" titolo="DIscussione deginitiva"/>
+    </discussioni>
     <valutazioni_commenti>
       <valutazione_commento id_valutazione="2"/>
       <valutazione_commento id_valutazione="3"/>
