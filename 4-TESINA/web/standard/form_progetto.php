@@ -23,7 +23,6 @@ $categorie_tot = $root->childNodes;
 
 if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
 
-    $callback = $_GET['modifica']; 
     $flag = 0;
     $id_bozza = $_SESSION['id_bozza'];
     unset($_SESSION['id_bozza']);  
@@ -113,16 +112,7 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
   <?php 
       if(isset($_GET['modifica']) && isset($id_bozza)){
           echo "<input type=\"hidden\" value=\"$id_bozza\" name=\"id_vecchia_bozza\"></input>\n";
-        }else{
-          echo '<label for="difficolta">Difficoltàbukkine: </label>';
-          echo '<select id="difficolta" name="difficolta" required>';
-          echo '<option value="facile">Facile</option>';
-          echo '<option value="medio">Medio</option>';
-          echo '<option value="difficile">Difficile</option>';
-          echo '</select>';
-          echo '<br>';
         }
-
   ?>
 
   <!-- Difficoltà -->
