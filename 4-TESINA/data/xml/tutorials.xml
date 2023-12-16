@@ -1,54 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd">
-  <tutorial_progetto id="13" id_progetto="13">
-    <step nome_file_img="../img/steps/img_step_6569e70a09eff.jpg" num_step="1">
-      <descrizione>primo_vero</descrizione>
+  <tutorial_progetto id="1" id_progetto="1"/>
+  <tutorial_progetto id="1" id_progetto="1">
+    <step num_step="1" nome_file_img="img/bozze/img_step_657d77961eb49.png">
+      <descrizione>primo step</descrizione>
     </step>
-    <step nome_file_img="../img/steps/img_step_6569e6c33b9ac.png" num_step="2">
+    <step num_step="2" nome_file_img="img/bozze/img_step_657d779d0f5e8.png">
+      <descrizione>secondo step</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="1" id_progetto="1">
+    <step num_step="1" nome_file_img="img/bozze/img_step_657d780ca041d.png">
       <descrizione>primo</descrizione>
     </step>
-    <step nome_file_img="../img/steps/img_step_6569e6f6216a3.jpg" num_step="3">
-      <descrizione>secondo_vero</descrizione>
-    </step>
-    <step nome_file_img="../img/steps/img_step_6569e6ca07367.png" num_step="4">
-      <descrizione>sec</descrizione>
-    </step>
-    <step nome_file_img="../img/steps/img_step_6569e6d7605b0.png" num_step="5">
-      <descrizione>qua</descrizione>
+  </tutorial_progetto>
+  <tutorial_progetto id="1" id_progetto="1">
+    <step num_step="1" nome_file_img="img/bozze/img_step_657d78d3f0697.png">
+      <descrizione>PRIMO</descrizione>
     </step>
   </tutorial_progetto>
-  <tutorial_progetto id="14" id_progetto="14"/>
-  <tutorial_progetto id="15" id_progetto="15"/>
-  <tutorial_progetto id="16" id_progetto="16"/>
-  <tutorial_progetto id="17" id_progetto="17"/>
-  <tutorial_progetto id="18" id_progetto="18"/>
-  <tutorial_progetto id="19" id_progetto="19"/>
-  <tutorial_progetto id="20" id_progetto="20"/>
-  <tutorial_progetto id="21" id_progetto="21"/>
-  <tutorial_progetto id="22" id_progetto="22"/>
-  <tutorial_progetto id="23" id_progetto="23"/>
-  <tutorial_progetto id="24" id_progetto="24"/>
-  <tutorial_progetto id="25" id_progetto="25"/>
-  <tutorial_progetto id="26" id_progetto="26">
-    <step nome_file_img="img/steps/img_step_657b3f5e27200.avif" num_step="1">
-      <descrizione>uno supremo</descrizione>
-    </step>
-    <step nome_file_img="img/steps/img_step_657b3097db9a1.avif" num_step="2">
-      <descrizione>sdub</descrizione>
-    </step>
-    <step nome_file_img="img/steps/img_step_657b3f5e27200.avif" num_step="3">
-      <descrizione>due</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="27" id_progetto="27"/>
-  <tutorial_progetto id="27" id_progetto="27"/>
-  <tutorial_progetto id="27" id_progetto="27"/>
-  <tutorial_progetto id="27" id_progetto="27"/>
-  <tutorial_progetto id="27" id_progetto="27"/>
-  <tutorial_progetto id="27" id_progetto="27"/>
-  <tutorial_progetto id="27" id_progetto="27"/>
-  <tutorial_progetto id="27" id_progetto="27"/>
-  <tutorial_progetto id="28" id_progetto="28"/>
-  <tutorial_progetto id="28" id_progetto="28"/>
-  <tutorial_progetto id="28" id_progetto="28"/>
 </tutorials_progetti>

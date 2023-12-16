@@ -1,38 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="16" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
-  <commento id="16" id_discussione="8" id_commentatore="3" data_ora="2023-12-13 18:35:43" commentatore="nuovo">
-    <testo>commento</testo>
-    <voti/>
-    <reports_commento>
-      <report_commento id_report="3"/>
-      <report_commento id_report="4"/>
-      <report_commento id_report="5"/>
-      <report_commento id_report="6"/>
-      <report_commento id_report="7"/>
-    </reports_commento>
-    <valutazioni_commento>
-      <valutazione_commento id_valutazione_commento="2"/>
-      <valutazione_commento id_valutazione_commento="3"/>
-      <valutazione_commento id_valutazione_commento="5"/>
-      <valutazione_commento id_valutazione_commento="6"/>
-      <valutazione_commento id_valutazione_commento="7"/>
-      <valutazione_commento id_valutazione_commento="8"/>
-      <valutazione_commento id_valutazione_commento="10"/>
-      <valutazione_commento id_valutazione_commento="11"/>
-      <valutazione_commento id_valutazione_commento="12"/>
-      <valutazione_commento id_valutazione_commento="14"/>
-    </valutazioni_commento>
-  </commento>
-  <commento id="17" id_discussione="8" id_commentatore="3" data_ora="2023-12-13 18:35:43" commentatore="nuovo">
-    <testo>commento</testo>
-    <voti/>
-    <reports_commento>
-      <report_commento id_report="8"/>
-    </reports_commento>
-    <valutazioni_commento>
-      <valutazione_commento id_valutazione_commento="4"/>
-      <valutazione_commento id_valutazione_commento="9"/>
-      <valutazione_commento id_valutazione_commento="13"/>
-    </valutazioni_commento>
-  </commento>
+<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
+ 
 </commenti>

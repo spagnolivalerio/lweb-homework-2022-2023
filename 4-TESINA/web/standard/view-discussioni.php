@@ -160,9 +160,10 @@
 
                 } else {
 
-                echo "        <form class=\"comment-form\">\n";
+                echo "        <form class=\"comment-form\" action =\"../../lib/commentare.php\" method=\"post\" >\n";
                 echo "            <input type=\"text\" name=\"comment-text\" placeholder=\"Aggiungi un commento alla discussione\"></input>\n";
                 echo "            <input type=\"hidden\" name=\"id_discussione\" value=\"$id_discussione\"></input>\n";
+                echo "            <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
                 echo "            <button type=\"submit\">Commenta</button>\n";
                 echo "        </form>\n";
                 }

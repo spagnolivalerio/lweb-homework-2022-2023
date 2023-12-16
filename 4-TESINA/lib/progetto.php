@@ -65,9 +65,9 @@ $bozSteps = $xpath->query("/bozze/bozza[@id = '$id_bozza']/tutorial_bozza")->ite
 //AGGIUNTO IN PROGETTI.XML
 
 $xmlFile = $tps_root . "data/xml/progetti.xml";
+$id_progetto = generate_id($xmlFile);
 $doc = getDOMdocument($xmlFile);
 $root = $doc->documentElement;
-$id_progetto = generate_id($xmlFile);
 
 $newProgetto = $doc->createElement('progetto');
 
@@ -131,6 +131,7 @@ foreach($bozSteps as $bozStep){
     $newStep->setAttribute('nome_file_img', $bozStep->getAttribute('nome_file_img')); 
     $newStepDesc = $doc->createElement('descrizione', $bozStep->getElementsByTagName('descrizione')->item(0)->nodeValue); 
     $newStep->appendChild($newStepDesc); 
+    $newTutorial->appendChild($newStep);
 }
 
 $root->appendChild($newTutorial);
