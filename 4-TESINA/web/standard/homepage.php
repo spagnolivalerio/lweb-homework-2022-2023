@@ -28,8 +28,8 @@
           <div class="logo">TPS</div>
         </div>
         <div class="homepage-sidebar-list">
-          <a class="elem">Homepage</a>
-          <a class="elem">Bacheca</a>
+          <a class="elem" href="homepage.php">Homepage</a>
+          <a class="elem" href="bacheca.php">Bacheca</a>
           <a class="elem">Progetti</a>
           <a class="elem">Bozze</a>
           <a class="elem">Storico</a>

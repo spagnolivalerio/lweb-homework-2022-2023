@@ -2,7 +2,9 @@
 
 *{
     font-family: -apple-system, system-ui, BlinkMacSystemFont;
+    box-sizing: border-box;
 }
+
 .homepage{
     display: flex;
     min-height: 100vh;
@@ -40,7 +42,8 @@
     align-items: center;
     letter-spacing: 0.7px;
     font-size: 16px;
-}
+    color: white;
+    text-decoration: none;}
 
 .toolbar{
     min-height: 84px;

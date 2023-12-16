@@ -28,8 +28,6 @@ $tempo_medio = $thisBozza->getAttribute('tempo_medio');
 $difficolta = $thisBozza->getAttribute('difficolta'); 
 $nome_file_img = $thisBozza->getAttribute('nome_file_img');
 
-
-
 $categorieArray = [];
 
 if ($categorie) {
@@ -44,13 +42,11 @@ if ($categorie) {
     }
 }
 
-
 if(empty($titolo) || empty($tempo_medio) || empty($difficolta) || empty($descrizione_progetto) || empty($nome_file_img) || $null == 1){
     $noNullFields = false;
 }else{
     $noNullFields = true;
 }
-
 
 #$empty = array_reduce($campi, function ($carry, $campo) {return $carry || empty($campo);}, false);
 #$empty = false;
@@ -87,8 +83,6 @@ $newProgetto->setAttribute('data_pubblicazione', $data_ora);
 $newProgetto->setAttribute('visualizzazioni', 0);
 $newProgetto->setAttribute('nome_file_img', $nome_file_img);
 $newProgetto->setAttribute('difficolta', $difficolta);
-
-
 
 foreach ($categorie->getElementsByTagName('categoria') as $cat) {
     $idCategoria = $cat->getAttribute('id_categoria');
