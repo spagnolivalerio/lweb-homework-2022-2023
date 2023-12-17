@@ -105,7 +105,8 @@ foreach ($nodes as $node) {
     }
 }
 
-header('Location: ../prove_funzioni/prova_aggiungi_discussione.php');
+$url = "../web/" . $_SESSION['Tipo_utente'] . "/view-discussioni.php?id_progetto=" . $id_progetto;
+header("Location: $url");
 exit;
 
 ?>

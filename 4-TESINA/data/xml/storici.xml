@@ -81,7 +81,13 @@
         <testo>daswdqadww</testo>
       </commento>
     </commenti>
-    <valutazioni_progetti/>
+    <valutazioni_progetti>
+      <valutazione_progetto id_valutazione="2"/>
+      <valutazione_progetto id_valutazione="3"/>
+      <valutazione_progetto id_valutazione="4"/>
+      <valutazione_progetto id_valutazione="5"/>
+      <valutazione_progetto id_valutazione="6"/>
+    </valutazioni_progetti>
     <reports_progetti/>
     <reports_commenti>
       <report_commento id_report="3" tipo="spam"/>
@@ -93,6 +99,8 @@
     </reports_commenti>
     <discussioni>
       <discussione id_discussione="1" titolo="DIscussione deginitiva"/>
+      <discussione id_discussione="2" titolo="JUJUTSU KAISEN 12"/>
+      <discussione id_discussione="3" titolo="noooo "/>
     </discussioni>
     <valutazioni_commenti>
       <valutazione_commento id_valutazione="2"/>

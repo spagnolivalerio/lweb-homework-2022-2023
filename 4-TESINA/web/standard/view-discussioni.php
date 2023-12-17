@@ -108,6 +108,15 @@
 
               ?>
 
+            <div class = "aprire-discussione">
+              <form class="form-creazione" action="../../lib/aprire_discussione.php" method="post">
+                <input type="text" name="titolo"></input>
+                <textarea type="text" name="descrizione"></textarea>
+                <input type="hidden" name="id_progetto"<?php echo "value=\"$id_progetto\"";?>></input>
+                <button type="submit">Apri Discussione</button>
+              </form>
+            </div>
+
             <div class="content">
 
             <?php
@@ -175,7 +184,7 @@
                   $testo = $commento->getElementsByTagName('testo')->item(0)->nodeValue; 
                   $data_ora = $commento->getAttribute('data_ora');
                   $id_commento = $commento->getAttribute('id'); 
-                  $valutazioni_commento = getValutazioni($root, $id_commento);
+                  $valutazioni_commento = getValutazioniCommenti($root, $id_commento);
                   $voted = already_voted($valutazioni_commento, $id_utente);
                   $reports_commento = getSegnalazioni($root, $id_commento);
                   $reported = already_reported($reports_commento, $id_utente);
@@ -188,9 +197,13 @@
                 echo "            <div class=\"comment-box\">\n";
                 echo "                <p class=\"comment-text\">$testo</p>\n";
                 echo "            </div>\n";
+                
 
+                
                 if($voted){
                   echo "  <div class=\"votato\">Contributo già valutato</div>\n";
+                }elseif(!$flag){
+                  echo "  <div class=\"votato\">Richiedi accesso per valutare i contributi</div>\n";
                 }else{
                   echo "            <form class=\"form-box\" action=\"../../lib/valuta_commento.php\" method=\"post\">\n";
                   echo "                <div class=\"rating\">\n";

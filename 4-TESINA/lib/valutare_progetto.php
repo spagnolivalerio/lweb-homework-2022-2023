@@ -22,10 +22,10 @@ if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
     $id_progetto = $_POST['id_progetto'];
 }
 
-if (!isset($_POST['value']) || empty($_POST['value'])) {
+if (!isset($_POST['rating']) || empty($_POST['rating'])) {
     exit;
 } else {
-    $newValue = $_POST['value'];
+    $newValue = $_POST['rating'];
 }
 
 $id_votante = $_SESSION['id_utente'];
@@ -38,7 +38,7 @@ $data_ora = $data_ora->format('Y-m-d H:i:s');
 $doc = getDOMdocument($xmlFile);
 $root = $doc->documentElement;
 
-$newValutazione = $doc->createElement('valutazione');
+$newValutazione = $doc->createElement('valutazione_progetto');
 $newValutazione->setAttribute('id', $id_valutazione);
 $newValutazione->setAttribute('id_progetto', $id_progetto);
 $newValutazione->setAttribute('value', $newValue);
@@ -101,7 +101,8 @@ foreach ($nodes as $node) {
     }
 }
 
-header('Location: ../prove_funzioni/prova_valuta_progetto.php');
+$url = "../web/" . $_SESSION['Tipo_utente'] . "/homepage.php?id_progetto=" . $id_progetto;
+header("Location: $url");
 exit;
 
 ?>

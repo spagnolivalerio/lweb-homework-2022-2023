@@ -51,7 +51,7 @@ function getPartecipanti($root, $id_discussione){
 
 }
 
-function getValutazioni($root, $id_commento){
+function getValutazioniCommenti($root, $id_commento){
     $xmlFile = $root . "data/xml/valutazioni_commenti.xml";
     $doc = getDOMdocument($xmlFile);
 
@@ -60,6 +60,17 @@ function getValutazioni($root, $id_commento){
     return $xpath->query("/valutazioni_commenti/valutazione_commento[@id_commento = '$id_commento']");
 
 }
+
+function getValutazioniProgetto($root, $id_progetto){
+    $xmlFile = $root . "data/xml/valutazioni_progetti.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXPath($doc);
+
+    return $xpath->query("/valutazioni/valutazione_progetto[@id_progetto = '$id_progetto']");
+
+}
+
 
 function getSegnalazioni($root, $id_commento){
     $xmlFile = $root . "data/xml/reports_commenti.xml";

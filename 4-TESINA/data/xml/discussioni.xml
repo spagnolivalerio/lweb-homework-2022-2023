@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="3" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
   <discussione titolo="DIscussione deginitiva" id_poster="4" risolta="false" id="1" id_progetto="6" data_ora="2023-12-16 11:29:39" autore="daniele">
     <commenti>
       <commento id_commento="1"/>
@@ -9,5 +9,15 @@
     <partecipanti>
       <partecipante id_partecipante="4"/>
     </partecipanti>
+  </discussione>
+  <discussione titolo="JUJUTSU KAISEN 12" id_poster="4" risolta="false" id="2" id_progetto="6" data_ora="2023-12-17 10:40:13" autore="daniele">
+    <commenti/>
+    <descrizione>perche?</descrizione>
+    <partecipanti/>
+  </discussione>
+  <discussione titolo="noooo " id_poster="4" risolta="false" id="3" id_progetto="6" data_ora="2023-12-17 10:40:24" autore="daniele">
+    <commenti/>
+    <descrizione>why?</descrizione>
+    <partecipanti/>
   </discussione>
 </discussioni>

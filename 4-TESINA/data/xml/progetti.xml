@@ -12,7 +12,9 @@
     <reports_progetti/>
     <discussioni/>
     <tutorial_progetto id_tutorial="5"/>
-    <valutazioni/>
+    <valutazioni>
+      <valutazione id_valutazione="5"/>
+    </valutazioni>
   </progetto>
   <progetto id="6" username_creator="daniele" id_creator="4" tempo_medio="30" data_pubblicazione="2023-12-16 11:26:08" visualizzazioni="0" nome_file_img="../img/bozze/img_boz_657d7b354756f.png" difficolta="medio">
     <titolo>DEFINITIBVp</titolo>
@@ -26,9 +28,16 @@
     <reports_progetti/>
     <discussioni>
       <discussione id_discussione="1"/>
+      <discussione id_discussione="2"/>
+      <discussione id_discussione="3"/>
     </discussioni>
     <tutorial_progetto id_tutorial="6"/>
-    <valutazioni/>
+    <valutazioni>
+      <valutazione id_valutazione="2"/>
+      <valutazione id_valutazione="3"/>
+      <valutazione id_valutazione="4"/>
+      <valutazione id_valutazione="6"/>
+    </valutazioni>
   </progetto>
   <progetto id="7" username_creator="nuovo" id_creator="7" tempo_medio="4" data_pubblicazione="2023-12-16 23:38:25" visualizzazioni="0" nome_file_img="../img/bozze/img_boz_657e26d97f7a0.png" difficolta="facile">
     <titolo>titolo</titolo>

@@ -152,19 +152,21 @@ function check_partecipante($partecipanti, $id_utente)
     return false; 
 }
 
-function already_voted($valutazioni_commento, $id_utente) {
+function already_voted($valutazioni, $id_utente) {
 
-    if(empty($valutazioni_commento)){
+    if(empty($valutazioni)){
         return false; 
     }
-    foreach($valutazioni_commento as $valutazione_commento){
-        if($id_utente == $valutazione_commento->getAttribute('id_votante')){
+    foreach($valutazioni as $valutazione){
+        if($id_utente == $valutazione->getAttribute('id_votante')){
             return true; 
         }
     }
 
     return false; 
 }
+
+
 
 function already_reported($reports_commento, $id_utente) {
 
