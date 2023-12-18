@@ -1,0 +1,64 @@
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.user-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+
+.user-list tr {
+   background-color: #eaf4fa;
+}
+
+.user-list th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.user-list th, .user-list td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 7px solid white;
+}
+
+
+.user-list img {
+    position: relative;
+	float: left;
+	margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+}
+.user-link {
+	display: block;
+	font-size: 1.25em;
+	padding-top: 3px;
+	margin-left: 60px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.user-list .user-link:hover {
+    text-decoration: underline;
+}
+.user-type {
+	font-style: italic;
+}
+
+.positiveStatus{
+    color: green;
+}
+
+.negativeStatus{
+    color: red;
+}

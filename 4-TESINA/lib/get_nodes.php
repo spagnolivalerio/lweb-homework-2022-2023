@@ -1,6 +1,8 @@
 <?php
 
 require_once('functions.php');
+include('../conn.php');
+
 
 function getProgetti($root){
 
@@ -72,13 +74,23 @@ function getValutazioniProgetto($root, $id_progetto){
 }
 
 
-function getSegnalazioni($root, $id_commento){
+function getSegnalazioniCommento($root, $id_commento){
     $xmlFile = $root . "data/xml/reports_commenti.xml";
     $doc = getDOMdocument($xmlFile);
 
     $xpath = new DOMXPath($doc);
 
     return $xpath->query("/reports_commenti/report_commento[@id_commento = '$id_commento']");
+
+}
+
+function getSegnalazioniProgetto($root, $id_progetto){
+    $xmlFile = $root . "data/xml/reports_progetti.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXPath($doc);
+
+    return $xpath->query("/reports_progetti/report_progetto[@id_progetto = '$id_progetto']");
 
 }
 
@@ -99,6 +111,14 @@ function getSteps($root, $id_progetto){
     $xpath = new DOMXPath($doc);
 
     return $xpath->query("/tutorials_progetti/tutorial_progetto[@id_progetto = '$id_progetto']")->item(0)->childNodes; 
+
+}
+
+function getUtenti(){
+    $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+
+    $query = "SELECT * FROM utente";
+    return $conn->query($query);
 
 }
 

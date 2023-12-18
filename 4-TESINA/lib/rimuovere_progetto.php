@@ -74,7 +74,8 @@ if (file_exists($img_path)) {
     unlink($img_path);
 }
 
-header('Location: ../prove_funzioni/prova_rimuovi_progetto.php');
+$url = "../web/" . $_SESSION['Tipo_utente'] . "/homepage.php?id_progetto=" . $id_progetto;
+header("Location: $url");
 exit;
 
 ?>

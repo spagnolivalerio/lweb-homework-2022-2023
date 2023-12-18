@@ -80,6 +80,15 @@
       <commento id_commento="2">
         <testo>daswdqadww</testo>
       </commento>
+      <commento id_commento="3">
+        <testo>xvxvxv</testo>
+      </commento>
+      <commento id_commento="4">
+        <testo>PROGETTO FATTO MOLTO BENE</testo>
+      </commento>
+      <commento id_commento="5">
+        <testo>sdada</testo>
+      </commento>
     </commenti>
     <valutazioni_progetti>
       <valutazione_progetto id_valutazione="2"/>
@@ -87,8 +96,11 @@
       <valutazione_progetto id_valutazione="4"/>
       <valutazione_progetto id_valutazione="5"/>
       <valutazione_progetto id_valutazione="6"/>
+      <valutazione_progetto id_valutazione="7"/>
     </valutazioni_progetti>
-    <reports_progetti/>
+    <reports_progetti>
+      <report_progetto id_report="2" tipo="spam"/>
+    </reports_progetti>
     <reports_commenti>
       <report_commento id_report="3" tipo="spam"/>
       <report_commento id_report="4" tipo="spam"/>
@@ -128,5 +140,35 @@
     <valutazioni_commenti>
       <valutazione_commento id_valutazione="11"/>
     </valutazioni_commenti>
+  </storico>
+  <storico id_utente="3">
+    <progetti/>
+    <richieste/>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti/>
+    <discussioni/>
+    <valutazioni_commenti/>
+  </storico>
+  <storico id_utente="3">
+    <progetti/>
+    <richieste/>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti/>
+    <discussioni/>
+    <valutazioni_commenti/>
+  </storico>
+  <storico id_utente="3">
+    <progetti/>
+    <richieste/>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti/>
+    <discussioni/>
+    <valutazioni_commenti/>
   </storico>
 </storici>

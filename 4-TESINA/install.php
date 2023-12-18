@@ -16,7 +16,9 @@
 					  username VARCHAR(32) NOT NULL UNIQUE, 
 					  password VARCHAR(128) NOT NULL,
 					  email VARCHAR(128) NOT NULL UNIQUE,
-					  indirizzo VARCHAR(128) NOT NULL, 
+					  indirizzo VARCHAR(128) NOT NULL,
+					  avatar VARCHAR(32) NOT NULL,
+					  data DATE NOT NULL,
 					  livello INT NOT NULL DEFAULT 1,
 					  peso_valutazione DECIMAL NOT NULL DEFAULT 1,
 					  punti_reputazione DECIMAL NOT NULL DEFAULT 0, 
@@ -25,9 +27,9 @@
 					  ban BOOLEAN DEFAULT FALSE
 					  );";
 
-	$insert_utente = "INSERT INTO utente (nome, cognome, username, password, email, livello, tipo, peso_valutazione, indirizzo)
-					  VALUES ('Valerio', 'Spagnoli', 'utente1', '$crypt_pwd', '$email_1', '100', 'admin', '10', 'via della gaurdia'),
-					  	     ('Daniele', 'Siciliano', 'utente2', '$crypt_pwd', '$email_2', '100', 'admin', '10', 'via saturno');";
+	$insert_utente = "INSERT INTO utente (nome, cognome, username, password, email, livello, tipo, peso_valutazione, indirizzo,avatar,data)
+					  VALUES ('Valerio', 'Spagnoli', 'utente1', '$crypt_pwd', '$email_1', '100', 'admin', '10', 'via della gaurdia','avatar1.png','2023-10-23'),
+					  	     ('Daniele', 'Siciliano', 'utente2', '$crypt_pwd', '$email_2', '100', 'admin', '10', 'via saturno', 'avatar2.png','2023-10-23');";
 	
 	$queries = array($create_db, $create_utente, $insert_utente);
 

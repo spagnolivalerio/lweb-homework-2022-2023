@@ -41,6 +41,7 @@ if (mysqli_num_rows($rows) > 0) {
     $_SESSION['Tipo_utente'] = $row['tipo'];
     $_SESSION['id_utente'] = $row['id'];
     $_SESSION['username'] = $row['username'];
+    $_SESSION['ban'] = $row['ban'];
 
     header('Location: ../web/index.php');
 } else {

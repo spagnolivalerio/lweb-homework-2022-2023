@@ -34,6 +34,11 @@
     $descrizione_step = $step->getElementsByTagName('descrizione')->item(0)->nodeValue; 
     $img_path = $step->getAttribute('nome_file_img');
 
+    $reports_progetto = getSegnalazioniProgetto($root, $id_progetto);
+    $reported_project = already_reported($reports_progetto, $id_utente);
+    $valutazioni_progetto = getValutazioniProgetto($root, $id_progetto);
+    $voted = already_voted($valutazioni_progetto, $id_utente);
+
     addressing($var, $std, $path); 
 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
@@ -106,7 +111,50 @@
               echo "    </div>\n";
               echo "</div>";
 
+              #DA POSIZIONARE
+              if($voted){
+                echo "  <div class=\"votato\">Contributo già valutato</div>\n";
+              }else{
+                echo "            <form class=\"form-box\" action=\"../../lib/valutare_progetto.php\" method=\"post\">\n";
+                echo "                <div class=\"rating\">\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"5\" id=\"5_$id_progetto\">\n";
+                echo "                    <label for=\"5_$id_progetto\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"4\" id=\"4_$id_progetto\">\n";
+                echo "                    <label for=\"4_$id_progetto\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"3\" id=\"3_$id_progetto\">\n";
+                echo "                    <label for=\"3_$id_progetto\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"2\" id=\"2_$id_progetto\">\n";
+                echo "                    <label for=\"2_$id_progetto\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"1\" id=\"1_$id_progetto\">\n";
+                echo "                    <label for=\"1_$id_progetto\">&#9734;</label>\n";
+                echo "                    <span class=\"type-rating\">Rating</span>\n";
+                echo "                </div>\n";
+                echo "                <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
+                echo "                <textarea type=\"text\" name=\"testo\"></textarea>\n";
+                echo "                <button type=\"submit\" class=\"valuta\">VALUTA</button>\n";
+                echo "            </form>\n";
+              }
+
+
+
+                  #DA POSIZIONARE BENE
+              if($reported_project){
+                echo "  <div class=\"reported\">Segnalazione effettuata --> Stato della segnalazione: In attesa di un riscontro</div>\n";
+              }else{
+                echo "            <form class=\"form-segnalazione\" action=\"../../lib/aggiungere_report_progetto.php\" method=\"post\">\n";
+                echo "                <label for=\"segnala\"></label>\n";
+                echo "                <input type=\"text\" name=\"testo\" placeholder=\"Fornisci maggiori dettagli\"></input>\n";
+                echo "                <select name=\"tipo\">\n";
+                echo "                    <option value=\"spam\">spam</option>\n";
+                echo "                    <option value=\"Contenuti inesatti\">Contenuti inesatti</option>\n";
+                echo "                    <option value=\"Contenuti inappropriati\">Contenuti inappropriati</option>\n";
+                echo "                </select>\n";
+                echo "                <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
+                echo "                <button type=\"submit\" class=\"segnala\">segnala</button>\n";
+                echo "            </form>\n"; 
+              }
               ?>
+              
 
             <div class = "aprire-discussione">
               <form class="form-creazione" action="../../lib/aprire_discussione.php" method="post">
@@ -184,14 +232,25 @@
                   $testo = $commento->getElementsByTagName('testo')->item(0)->nodeValue; 
                   $data_ora = $commento->getAttribute('data_ora');
                   $id_commento = $commento->getAttribute('id'); 
+                  $id_commentatore = $commento->getAttribute('id_commentatore'); 
                   $valutazioni_commento = getValutazioniCommenti($root, $id_commento);
                   $voted = already_voted($valutazioni_commento, $id_utente);
-                  $reports_commento = getSegnalazioni($root, $id_commento);
-                  $reported = already_reported($reports_commento, $id_utente);
+                  $reports_commento = getSegnalazioniCommento($root, $id_commento);
+                  $reported_comment = already_reported($reports_commento, $id_utente);
 
                 echo "        <div class=\"comment\">\n";
                 echo "            <div class=\"comment-info\">\n";
                 echo "                <span class=\"comment-author\">$commentatore</span>\n";
+
+                if($id_commentatore === $id_utente){
+                  echo "      <form class=\"card-commenta\" action=\"../../lib/rimuovere_commento.php\" method=\"post\">\n";
+                  echo "        <input class=\"submit\" type=\"submit\" value=\"🗑️\">\n";
+                  echo "        <input class=\"hidden\" name=\"id_commento\" type=\"hidden\" value=\"$id_commento\">\n";
+                  echo "        <input class=\"hidden\" name=\"id_discussione\" type=\"hidden\" value=\"$id_discussione\">\n";
+                  echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
+                  echo "      </form>\n";
+                }
+
                 echo "                <span class=\"comment-datetime\">$data_ora</span>\n";
                 echo "            </div>\n";
                 echo "            <div class=\"comment-box\">\n";
@@ -234,7 +293,7 @@
                   echo "            </form>\n";
                 }
 
-                if($reported){
+                if($reported_comment){
                   echo "  <div class=\"reported\">Segnalazione effettuata --> Stato della segnalazione: In attesa di un riscontro</div>\n";
                 }else{
                   echo "            <form class=\"form-segnalazione\" action=\"../../lib/aggiungere_report_commento.php\" method=\"post\">\n";

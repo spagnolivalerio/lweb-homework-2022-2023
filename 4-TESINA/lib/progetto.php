@@ -142,6 +142,6 @@ $query = "/bozze/bozza[@id";
 $xmlFile = $tps_root . "data/xml/bozze.xml"; 
 remove_1_1($xmlFile, $query, $id_bozza); 
 
-header('Location: ../web/standard/bukkin');
+header('Location: ../web/standard/homepage.php');
 
 ?>

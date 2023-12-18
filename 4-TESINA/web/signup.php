@@ -77,6 +77,31 @@
                         <p class="label">password</p></br>
                         <input type="password" name="password"></input>
                     </div>
+
+                    <div class="avatar-box">
+                        <label for="avatar">Seleziona un avatar:</label>
+
+                        <div class="box">
+                            <div class=avatar-container-radio-img>
+                                <input type="radio" id="avatar1" name="avatar" value="avatar1.png">
+                                <label for="avatar1">
+                                    <div class="avatar-preview">
+                                        <img src="../img/avatar/avatar1.png" alt="Avatar 1">
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class=avatar-container-radio-img>
+                                <input type="radio" id="avatar2" name="avatar" value="avatar2.png">
+                                <label for="avatar2">
+                                    <div class="avatar-preview">
+                                        <img src="../img/avatar/avatar2.png" alt="Avatar 2">
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
         		<div class="form-item submit">
         			<button type="subimt" name="submit">REGISTRATI</button></br>

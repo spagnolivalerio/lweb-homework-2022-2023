@@ -168,14 +168,14 @@ function already_voted($valutazioni, $id_utente) {
 
 
 
-function already_reported($reports_commento, $id_utente) {
+function already_reported($reports, $id_utente) {
 
-    if(empty($reports_commento)){
+    if(empty($reports)){
         return false; 
     }
 
-    foreach($reports_commento as $report_commento){
-        if($id_utente == $report_commento->getAttribute('id_utente')){
+    foreach($reports as $report){
+        if($id_utente == $report->getAttribute('id_utente')){
             return true; 
         }
     }

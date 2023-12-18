@@ -22,6 +22,12 @@ if (!isset($_POST['id_discussione']) || empty($_POST['id_discussione'])) {
     $id_discussione = $_POST['id_discussione'];
 }
 
+if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
+    exit();
+} else {
+    $id_progetto = $_POST['id_progetto'];
+}
+
 //RIMUOVI DA COMMENTI.XML
 
 $xmlFile = "../data/xml/commenti.xml";
@@ -59,7 +65,8 @@ foreach ($nodes as $node) {
     }
 }
 
-header('Location: ../prove_funzioni/prova_rimuovi_commento.php');
+$url = "../web/" . $_SESSION['Tipo_utente'] . "/view-discussioni.php?id_progetto=" . $id_progetto;
+header("Location: $url");
 exit;
 
 ?>

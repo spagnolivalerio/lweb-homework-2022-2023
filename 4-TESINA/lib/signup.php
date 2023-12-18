@@ -3,9 +3,12 @@
 session_start();
 require_once '../conn.php';
 
+$data = new DateTime();
+$data = $data->format('Y-m-d');
+
 $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
-$campi = [$_POST['nome'], $_POST['cognome'], $_POST['e-mail'], $_POST['indirizzo'], $_POST['username'], $_POST['password']];
+$campi = [$_POST['nome'], $_POST['cognome'], $_POST['e-mail'], $_POST['indirizzo'], $_POST['username'], $_POST['password'], $_POST['avatar'], $data];
 
 $not_empty = array_reduce($campi, function ($carry, $campo) {return $carry && !empty($campo);}, true); //array_reduce riduce tutti i valori dell'array in un unico valore con l'ausilio di una variabile $carry con cui esegue ad ogni iterazione && con !empty($campo), $campo singolo campo dell'array $campi
 
@@ -17,6 +20,8 @@ if ($not_empty) {
     $password = mysqli_real_escape_string($conn, md5($_POST['password']));
     $email = mysqli_real_escape_string($conn, $_POST['e-mail']);
     $indirizzo = mysqli_real_escape_string($conn, $_POST['indirizzo']);
+    $avatar = mysqli_real_escape_string($conn, $_POST['avatar']);
+    $data = mysqli_real_escape_string($conn, $data);
 
 } else {
 
@@ -60,8 +65,8 @@ if (mysqli_num_rows($rows) > 0) {
     exit;
 }
 
-$_QUERY_inserimento_utente = "INSERT INTO utente (nome, cognome, username, password, email, indirizzo)
-                                  VALUES ('$nome', '$cognome', '$username', '$password', '$email', '$indirizzo')";
+$_QUERY_inserimento_utente = "INSERT INTO utente (nome, cognome, username, password, email, indirizzo, avatar, data)
+                                  VALUES ('$nome', '$cognome', '$username', '$password', '$email', '$indirizzo', '$avatar', '$data')";
 
 $_QUERY_cerca_id = "SELECT id
                         FROM utente
