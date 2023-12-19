@@ -53,7 +53,7 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/homepage.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
@@ -135,8 +135,6 @@
                 echo "            </form>\n";
               }
 
-
-
                   #DA POSIZIONARE BENE
               if($reported_project){
                 echo "  <div class=\"reported\">Segnalazione effettuata --> Stato della segnalazione: In attesa di un riscontro</div>\n";
@@ -154,8 +152,7 @@
                 echo "            </form>\n"; 
               }
               ?>
-              
-
+            
             <div class = "aprire-discussione">
               <form class="form-creazione" action="../../lib/aprire_discussione.php" method="post">
                 <input type="text" name="titolo"></input>

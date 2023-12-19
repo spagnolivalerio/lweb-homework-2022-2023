@@ -14,8 +14,8 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/listautenti.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/listautenti.css" />
       
 
   </head>
