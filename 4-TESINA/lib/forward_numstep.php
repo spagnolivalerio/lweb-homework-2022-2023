@@ -29,13 +29,13 @@ if($action === "next"){
 
 switch($_SESSION['Tipo_utente']){
     case "standard": 
-        header("Location: ../web/standard/view-discussioni.php?num_step=$num_step&id_progetto=$id_progetto"); 
+        header("Location: ../web/standard/view.php?num_step=$num_step&id_progetto=$id_progetto"); 
         break;
     case "moderatore":
-        header("Location: ../web/moderatore/view-discussioni.php?num_step=$num_step&id_progetto=$id_progetto"); 
+        header("Location: ../web/moderatore/view.php?num_step=$num_step&id_progetto=$id_progetto"); 
         break;
     case "admin":
-        header("Location: ../web/admin/view-discussioni.php?num_step=$num_step&id_progetto=$id_progetto");
+        header("Location: ../web/admin/view.php?num_step=$num_step&id_progetto=$id_progetto");
         break;
     default: 
         header("Location: ../index.php");

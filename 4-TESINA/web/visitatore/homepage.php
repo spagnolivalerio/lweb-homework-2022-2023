@@ -74,7 +74,7 @@
               echo"</div>\n";
               echo "<div class=\"flexbox2\">\n";
                 echo "<div class=\"card-descrizione\">$descrizione</div>\n";
-                echo "<form class=\"card-commenta\" action=\"view-discussioni.php\" method=\"post\"><input class=\"submit\" type=\"submit\" value=\"DISCUSSIONI\"></input>\n";
+                echo "<form class=\"card-commenta\" action=\"view.php\" method=\"post\"><input class=\"submit\" type=\"submit\" value=\"DISCUSSIONI\"></input>\n";
                   echo "<input class=\"hidden\" type=\"hidden\ value=\"$id_progetto\">\n";
                 echo "</form>\n";
               echo "</div>\n";

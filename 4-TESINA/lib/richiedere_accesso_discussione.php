@@ -60,7 +60,7 @@ $doc->formatOutput = true;
 $xmlString = $doc->saveXML();
 file_put_contents($xmlFile, $xmlString);
 
-$url = "../web/" . $_SESSION['Tipo_utente'] . "/view-discussioni.php?id_progetto=" . $id_progetto;
+$url = "../web/" . $_SESSION['Tipo_utente'] . "/view.php?id_progetto=" . $id_progetto;
 header("Location: $url");
 exit;
 

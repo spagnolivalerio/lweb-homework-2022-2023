@@ -106,7 +106,7 @@ foreach ($nodes as $node) {
     }
 }
 
-$url = "../web/" . $_SESSION['Tipo_utente'] . "/view-discussioni.php?id_progetto=" . $id_progetto;
+$url = "../web/" . $_SESSION['Tipo_utente'] . "/view.php?id_progetto=" . $id_progetto;
 header("Location: $url");
 exit;
 
