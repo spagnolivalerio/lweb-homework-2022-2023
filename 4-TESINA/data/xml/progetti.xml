@@ -10,12 +10,60 @@
     </categorie>
     <descrizione>prova</descrizione>
     <reports_progetti/>
-    <discussioni/>
+    <discussioni>
+      <discussione id_discussione="4"/>
+    </discussioni>
     <tutorial_progetto id_tutorial="8"/>
     <valutazioni>
       <valutazione id_valutazione="8"/>
       <valutazione id_valutazione="9"/>
       <valutazione id_valutazione="10"/>
+      <valutazione id_valutazione="11"/>
+      <valutazione id_valutazione="12"/>
+    </valutazioni>
+  </progetto>
+    <progetto id="8" username_creator="daniele" id_creator="3" tempo_medio="5" data_pubblicazione="2023-12-18 09:30:12" visualizzazioni="0" nome_file_img="../img/bozze/img_boz_65800309834e7.png" difficolta="medio">
+    <titolo>JUJUTSU KAISEN 12</titolo>
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+      <categoria id_categoria="3"/>
+      <categoria id_categoria="4"/>
+    </categorie>
+    <descrizione>prova</descrizione>
+    <reports_progetti/>
+    <discussioni>
+      <discussione id_discussione="4"/>
+    </discussioni>
+    <tutorial_progetto id_tutorial="8"/>
+    <valutazioni>
+      <valutazione id_valutazione="8"/>
+      <valutazione id_valutazione="9"/>
+      <valutazione id_valutazione="10"/>
+      <valutazione id_valutazione="11"/>
+      <valutazione id_valutazione="12"/>
+    </valutazioni>
+  </progetto>
+    <progetto id="8" username_creator="daniele" id_creator="3" tempo_medio="5" data_pubblicazione="2023-12-18 09:30:12" visualizzazioni="0" nome_file_img="../img/bozze/img_boz_65800309834e7.png" difficolta="medio">
+    <titolo>JUJUTSU KAISEN 12</titolo>
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+      <categoria id_categoria="3"/>
+      <categoria id_categoria="4"/>
+    </categorie>
+    <descrizione>prova</descrizione>
+    <reports_progetti/>
+    <discussioni>
+      <discussione id_discussione="4"/>
+    </discussioni>
+    <tutorial_progetto id_tutorial="8"/>
+    <valutazioni>
+      <valutazione id_valutazione="8"/>
+      <valutazione id_valutazione="9"/>
+      <valutazione id_valutazione="10"/>
+      <valutazione id_valutazione="11"/>
+      <valutazione id_valutazione="12"/>
     </valutazioni>
   </progetto>
 </progetti>

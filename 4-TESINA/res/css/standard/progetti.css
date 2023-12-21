@@ -4,7 +4,7 @@
 }
 .step{
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	margin-top: 100px; 
 	margin-bottom: -50px;
 }
@@ -14,6 +14,7 @@
 	width: 700px;
 	height: 500px;
 	border-radius: 10px;
+	background-color: white;
 }
 
 .step-content{
@@ -85,6 +86,85 @@
 	padding: 5px;
 }
 
+.options {
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	box-shadow: 0 3rem 3rem -2rem hsl(200 50% 20% / 40%);
+	background-color: white;
+	border-radius: 10px;  
+}
 
+.form-segnalazione-progetto{
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.form-segnalazione-progetto button{
+	width: fit-content;
+	position: relative;
+	margin: auto auto;
+}
+
+.form-segnalazione-progetto textarea{
+	height: 30px;
+	width: 180px;
+}
+
+.form-valutazione-progetto {
+	border: 1px solid black;
+}
+
+.p-rating{
+	display: flex; 
+	justify-content: space-around;
+	text-align: center; 
+}
+
+.p-rating textarea{
+	height: 30px;
+	position: relative;
+	margin: auto auto;
+}
+
+.p-rating button{
+	width: fit-content; 
+	position: relative;
+	margin: auto auto;
+}
+
+.form-aprire-discussione{
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.form-aprire-discussione *{
+	position: relative;
+	margin: auto auto; 
+}
+
+.form-aprire-discussione textarea{
+	height: 30px;
+}
+
+.options-title{
+	display: flex;
+	justify-content: center;
+}
+
+#select{
+	height: fit-content;
+	position: relative;
+	margin: auto auto;
+}
+
+.label-form{
+	position: relative;
+	left: 5px;
+	bottom: 10px;
+}
 
 

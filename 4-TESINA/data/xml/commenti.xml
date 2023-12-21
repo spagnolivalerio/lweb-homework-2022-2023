@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="5" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd"/>
+<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="7" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
+  <commento id="7" id_discussione="4" id_commentatore="4" data_ora="2023-12-21 15:39:34" commentatore="1">
+    <testo>ciao</testo>
+    <voti/>
+    <reports_commento/>
+    <valutazioni_commento/>
+  </commento>
+</commenti>

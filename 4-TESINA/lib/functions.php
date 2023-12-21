@@ -354,8 +354,8 @@ function calcolaReputazione($root, $id_utente, $conn){
         $reputazione = 0;
     }
 
-    $update_reputation_query = "UPDATE utente SET punti_reputazione = $reputazione WHERE id = $id_utente";
-    $update_level_query = "UPDATE utente SET livello = $livello WHERE id = $id_utente";
+    $update_reputation_query = "UPDATE utente SET punti_reputazione = '$reputazione' WHERE id = '$id_utente'";
+    $update_level_query = "UPDATE utente SET livello = '$livello' WHERE id = '$id_utente'";
     $conn->query($update_level_query);
     $conn->query($update_reputation_query);
 

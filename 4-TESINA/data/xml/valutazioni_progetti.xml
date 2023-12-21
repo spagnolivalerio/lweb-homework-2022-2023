@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valutazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="10" xsi:noNamespaceSchemaLocation="../../structures/valutazioni_progetti.xsd">
-  <valutazione_progetto id="10" id_progetto="8" value="5" id_votante="4" data_ora="2023-12-21 14:12:40">
-    <testo>benebene</testo>
+<valutazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="12" xsi:noNamespaceSchemaLocation="../../structures/valutazioni_progetti.xsd">
+  <valutazione_progetto id="11" id_progetto="8" value="5" id_votante="4" data_ora="2023-12-21 16:34:03">
+    <testo>bello</testo>
+  </valutazione_progetto>
+  <valutazione_progetto id="12" id_progetto="8" value="2" id_votante="5" data_ora="2023-12-21 16:34:30">
+    <testo>bello ma brutto</testo>
   </valutazione_progetto>
 </valutazioni>

@@ -74,6 +74,7 @@
       <richiesta id_richiesta="13"/>
       <richiesta id_richiesta="14"/>
       <richiesta id_richiesta="15"/>
+      <richiesta id_richiesta="16"/>
     </richieste>
     <commenti>
       <commento id_commento="1">
@@ -91,6 +92,12 @@
       <commento id_commento="5">
         <testo>sdada</testo>
       </commento>
+      <commento id_commento="6">
+        <testo>ciao</testo>
+      </commento>
+      <commento id_commento="7">
+        <testo>ciao</testo>
+      </commento>
     </commenti>
     <valutazioni_progetti>
       <valutazione_progetto id_valutazione="2"/>
@@ -101,6 +108,7 @@
       <valutazione_progetto id_valutazione="7"/>
       <valutazione_progetto id_valutazione="9"/>
       <valutazione_progetto id_valutazione="10"/>
+      <valutazione_progetto id_valutazione="11"/>
     </valutazioni_progetti>
     <reports_progetti>
       <report_progetto id_report="2" tipo="spam"/>
@@ -117,6 +125,7 @@
       <discussione id_discussione="1" titolo="DIscussione deginitiva"/>
       <discussione id_discussione="2" titolo="JUJUTSU KAISEN 12"/>
       <discussione id_discussione="3" titolo="noooo "/>
+      <discussione id_discussione="4" titolo="titolo"/>
     </discussioni>
     <valutazioni_commenti>
       <valutazione_commento id_valutazione="2"/>
@@ -137,7 +146,9 @@
     <progetti/>
     <richieste/>
     <commenti/>
-    <valutazioni_progetti/>
+    <valutazioni_progetti>
+      <valutazione_progetto id_valutazione="12"/>
+    </valutazioni_progetti>
     <reports_progetti/>
     <reports_commenti/>
     <discussioni/>

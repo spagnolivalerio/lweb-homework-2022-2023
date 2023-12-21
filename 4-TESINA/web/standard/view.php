@@ -1,7 +1,7 @@
 <?php 
     session_start();
     $root = "../../";
-    require_once('../../conn.php');
+    require_once($root . 'conn.php');
     require_once($root . "lib/get_nodes.php");
     require_once($root . "lib/functions.php");
     $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
@@ -41,7 +41,7 @@
     $valutazioni_progetto = getValutazioniProgetto($root, $id_progetto);
     $voted = already_voted($valutazioni_progetto, $id_utente);
 
-    addressing($var, $std, $path); 
+    addressing($var, $std, $path); //redirect
 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 ?>
@@ -81,7 +81,6 @@
           </div>
           <div class="dashboard">
             <div class="toolbar"></div>
-
               <?php
 
               echo "<div class=\"step\">\n";
@@ -111,13 +110,14 @@
               echo "        </div>\n";
               echo "        </form>\n";
               echo "    </div>\n";
-              echo "</div>";
-
-              #DA POSIZIONARE
+              echo "    <div class=\"options\">";
+              echo "    <div class=\"options-title\"><h2>DICCI LA TUA</h2></div>";
               if($voted){
                 echo "  <div class=\"votato\">Contributo già valutato</div>\n";
               }else{
-                echo "            <form class=\"form-box\" action=\"../../lib/valutare_progetto.php\" method=\"post\">\n";
+                echo "          <div class=\"p-rating-content\">\n";
+                echo "            <div class=\"label-form\">Valuta progetto</div>\n";
+                echo "            <form class=\"p-rating\" action=\"../../lib/valutare_progetto.php\" method=\"post\">\n";
                 echo "                <div class=\"rating\">\n";
                 echo "                    <input type=\"radio\" name=\"rating\" value=\"5\" id=\"5_$id_progetto\">\n";
                 echo "                    <label for=\"5_$id_progetto\">&#9734;</label>\n";
@@ -132,38 +132,44 @@
                 echo "                    <span class=\"type-rating\">Rating</span>\n";
                 echo "                </div>\n";
                 echo "                <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
-                echo "                <textarea type=\"text\" name=\"testo\"></textarea>\n";
+                echo "                <textarea type=\"text\" name=\"testo\" placeholder=\"testo\"></textarea>\n";
                 echo "                <button type=\"submit\" class=\"valuta\">VALUTA</button>\n";
                 echo "            </form>\n";
+                echo "          </div>\n";
               }
 
-                  #DA POSIZIONARE BENE
               if($reported_project){
                 echo "  <div class=\"reported\">Segnalazione effettuata --> Stato della segnalazione: In attesa di un riscontro</div>\n";
               }else{
-                echo "            <form class=\"form-segnalazione\" action=\"../../lib/aggiungere_report_progetto.php\" method=\"post\">\n";
-                echo "                <label for=\"segnala\"></label>\n";
-                echo "                <input type=\"text\" name=\"testo\" placeholder=\"Fornisci maggiori dettagli\"></input>\n";
-                echo "                <select name=\"tipo\">\n";
+                echo "          <div class=\"form-seganalazione-content\">\n";
+                echo "            <div class=\"label-form\">Segnala</div>\n";
+                echo "            <form class=\"form-segnalazione-progetto\" action=\"../../lib/aggiungere_report_progetto.php\" method=\"post\">\n";
+                echo "                <select id=\"select\" name=\"tipo\">\n";
                 echo "                    <option value=\"spam\">spam</option>\n";
                 echo "                    <option value=\"Contenuti inesatti\">Contenuti inesatti</option>\n";
                 echo "                    <option value=\"Contenuti inappropriati\">Contenuti inappropriati</option>\n";
                 echo "                </select>\n";
+                echo "                <textarea type=\"text\" name=\"testo\" placeholder=\"Fornisci maggiori dettagli\"></textarea>\n";
                 echo "                <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
                 echo "                <button type=\"submit\" class=\"segnala\">segnala</button>\n";
                 echo "            </form>\n"; 
+                echo "          </div>\n";
+
               }
               ?>
-            
-            <div class = "aprire-discussione">
-              <form class="form-creazione" action="../../lib/aprire_discussione.php" method="post">
-                <input type="text" name="titolo"></input>
-                <textarea type="text" name="descrizione"></textarea>
-                <input type="hidden" name="id_progetto"<?php echo "value=\"$id_progetto\"";?>></input>
-                <button type="submit">Apri Discussione</button>
-              </form>
+                  <div class = "aprire-discussione">
+                    <div class="label-form">Apri discussione</div>
+                    <form class="form-aprire-discussione" action="../../lib/aprire_discussione.php" method="post">
+                      <input type="text" name="titolo" placeholder="Titolo"></input>
+                      <textarea type="text" name="descrizione" placeholder="Descrizione"></textarea>
+                      <input type="hidden" name="id_progetto"<?php echo "value=\"$id_progetto\"";?>></input>
+                      <button type="submit">Apri Discussione</button>
+                    </form>
+                  </div>
+              </div>
             </div>
-
+            <!-- STAMPA DISCUSSIONI -->
+      
             <div class="content">
 
             <?php
@@ -256,8 +262,6 @@
                 echo "                <p class=\"comment-text\">$testo</p>\n";
                 echo "            </div>\n";
                 
-
-                
                 if($voted){
                   echo "  <div class=\"votato\">Contributo già valutato</div>\n";
                 }elseif(!$flag){
@@ -313,7 +317,6 @@
 
               echo "    </div>\n"; 
               echo "    </div>\n"; 
-
 
             }
 
