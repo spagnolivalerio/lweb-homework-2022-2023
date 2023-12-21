@@ -1,8 +1,10 @@
 <?php 
     session_start();
     $root = "../../";
+    require_once('../../conn.php');
     require_once($root . "lib/get_nodes.php");
     require_once($root . "lib/functions.php");
+    $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
     $var = $_SESSION['Tipo_utente'];
     $std = "standard";
     $path = "index.php";
@@ -319,6 +321,13 @@
           </div>
         </div>
     </div>
+    
+    <?php
+
+    calcolaReputazione($root, $_SESSION['id_utente'], $conn);
+    
+
+    ?>
   </body>
 
 </html>

@@ -12,6 +12,10 @@
     <reports_progetti/>
     <discussioni/>
     <tutorial_progetto id_tutorial="8"/>
-    <valutazioni/>
+    <valutazioni>
+      <valutazione id_valutazione="8"/>
+      <valutazione id_valutazione="9"/>
+      <valutazione id_valutazione="10"/>
+    </valutazioni>
   </progetto>
 </progetti>

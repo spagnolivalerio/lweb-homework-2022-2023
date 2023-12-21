@@ -1,7 +1,7 @@
 <?php
 
 require_once('functions.php');
-include('../conn.php');
+
 
 
 function getProgetti($root){
@@ -114,12 +114,6 @@ function getSteps($root, $id_progetto){
 
 }
 
-function getUtenti(){
-    $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
-    $query = "SELECT * FROM utente";
-    return $conn->query($query);
-
-}
 
 ?>

@@ -1,6 +1,7 @@
 <?php
 require_once('get_nodes.php');
 
+
 function getDOMdocument($xmlFile)
 {
 
@@ -224,14 +225,143 @@ function checkFieldsNotNull($fields) {
     }
     return true; // Se nessun campo è nullo, restituisci true
 }
-function ban()
-{};
 
-function sban()
-{};
+function valutazioneProgetto($root, $id_progetto, $conn){
 
-function mod_tipo_utente()
-{};
+    $valutazioni_progetto = getValutazioniProgetto($root, $id_progetto);
+    $pesi_totali = 0;
+    $value = 0;
+
+    foreach($valutazioni_progetto as  $valutazione_progetto){
+
+        $id_votante = $valutazione_progetto->getAttribute('id_votante');
+        $select_peso_query = "SELECT peso_valutazione FROM utente WHERE id = $id_votante";
+        $result = $conn->query($select_peso_query);
+
+        if($result){
+        
+            $row = $result->fetch_assoc();
+            $peso_votante = $row['peso_valutazione'];     
+            $value += $valutazione_progetto->getAttribute('value') * $peso_votante;
+            $pesi_totali += $peso_votante;
+        }
+    }
+
+    if($pesi_totali != 0){
+
+        $value = $value / $pesi_totali;
+    }
+
+    return $value;
+}
+
+
+function calcolaReputazione($root, $id_utente, $conn){
+
+    $livello = 1;
+    $reputazione = 0;
+
+    $progetti = getProgetti($root);
+    
+    foreach($progetti as $progetto) {
+
+        $id_progetto = $progetto->getAttribute('id');
+
+        if($id_utente = $progetto->getAttribute('id_creator')){
+
+            $reputazione += 5;
+
+            if ($reputazione >= 10 * pow(2, $livello) ){
+
+                $reputazione = $reputazione - 10 * pow(2, $livello);
+                $livello += 1;
+            }
+
+            
+            $value = valutazioneProgetto($root, $id_progetto, $conn);
+
+            if($value != 0) {
+
+                $reputazione += (10 * $value) - 20;
+
+                if ($reputazione >= 10 * pow(2, $livello) ){
+
+                    $reputazione = $reputazione - 10 * pow(2, $livello);
+                    $livello += 1;
+                }elseif($reputazione < 0){
+
+                    $livello -= 1;
+                    $reputazione = 10 * pow(2, $livello) + $reputazione;
+                }
+        
+            }
+
+        }
+
+        $discussioni = getDiscussioni($root, $id_progetto);
+
+        foreach($discussioni as $discussione){
+
+            $id_discussione = $discussione->getAttribute('id');
+            $commenti = getCommenti($root, $id_discussione);
+
+            foreach($commenti as $commento){
+
+                if($id_utente = $commento->getAttribute('id_creator')){
+
+                    $valutazioni_commento = getValutazioniProgetto($root, $id_progetto);
+
+                    foreach($valutazioni_commento as $valutazione_commento){
+
+                        $utilità = $valutazione_commento->getElementsByTagName('utilita')->item(0)->nodeValue;
+                        $accordo = $valutazione_commento->getElementsByTagName('livello_di_accordo')->item(0)->nodeValue;
+
+                        if($utilità == 1){
+                            $reputazione -= 2;
+                        }elseif($utilità == 3){
+                            $reputazione += 2;
+                        }elseif($utilità == 4){
+                            $reputazione += 4;
+                        }elseif($utilità == 5){
+                            $reputazione += 6;
+                        }
+
+                        if($accordo == 1){
+                            $reputazione -= 2;
+                        }elseif($accordo == 3){
+                            $reputazione += 2;
+                        }
+
+                        if ($reputazione >= 10 * pow(2, $livello) ){
+
+                            $reputazione = $reputazione - 10 * pow(2, $livello);
+                            $livello += 1;
+                        }elseif($reputazione < 0){
+                            
+                            $livello -= 1;
+                            $reputazione = 10 * pow(2, $livello) + $reputazione;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+
+    if($livello > 10) {
+        $livello = 10;
+        $reputazione = 0;
+    }
+
+    $update_reputation_query = "UPDATE utente SET punti_reputazione = $reputazione WHERE id = $id_utente";
+    $update_level_query = "UPDATE utente SET livello = $livello WHERE id = $id_utente";
+    $conn->query($update_level_query);
+    $conn->query($update_reputation_query);
+
+}
+
+
 
 function chiudi_discussione($root, $id_utente)
 {};

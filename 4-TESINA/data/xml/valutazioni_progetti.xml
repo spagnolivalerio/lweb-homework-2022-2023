@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valutazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="7" xsi:noNamespaceSchemaLocation="../../structures/valutazioni_progetti.xsd">
-  <valutazione_progetto id="5" id_progetto="5" value="5" id_votante="4" data_ora="2023-12-17 11:18:35">
-    <testo>fsfs</testo>
-  </valutazione_progetto>
-  <valutazione_progetto id="6" id_progetto="6" value="4" id_votante="4" data_ora="2023-12-17 11:18:37">
-    <testo>sdfsf</testo>
-  </valutazione_progetto>
-  <valutazione_progetto id="7" id_progetto="7" value="5" id_votante="4" data_ora="2023-12-18 08:54:48">
-    <testo>qwefdfsdf</testo>
+<valutazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="10" xsi:noNamespaceSchemaLocation="../../structures/valutazioni_progetti.xsd">
+  <valutazione_progetto id="10" id_progetto="8" value="5" id_votante="4" data_ora="2023-12-21 14:12:40">
+    <testo>benebene</testo>
   </valutazione_progetto>
 </valutazioni>

@@ -4,6 +4,7 @@
     $root = "../../";
     require_once($root . "lib/get_nodes.php");
     $id_utente = $_SESSION['id_utente'];
+    $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
     if (isset($_GET['id_progetto'])) {
       $id_progetto = $_GET['id_progetto'];
@@ -69,6 +70,7 @@
                 $result = $conn->query($query);
                 $row = $result->fetch_assoc();
                 $ban_value = $row['ban'];
+                $rating = valutazioneProgetto($root, $id_progetto, $conn);
 
               echo "<div class=\"card-container\">\n";
               echo "  <div class=\"card-header\" style=\"background-image: url('$img_path'); background-size: cover; background-position: center;\">\n";
@@ -82,7 +84,7 @@
               echo "  <div class=\"card-footer\">\n";
               echo "    <div class=\"flexbox1\">\n";
               echo "      <div class=\"card-titolo\">$titolo</div>\n";
-              echo "      <div class=\"card-rating\">rating</div>\n";
+              echo "      <div class=\"card-rating\">$rating</div>\n";
               echo "    </div>\n";
               echo "    <div class=\"flexbox2\">\n";
               echo "      <div class=\"card-descrizione\">$descrizione</div>\n";

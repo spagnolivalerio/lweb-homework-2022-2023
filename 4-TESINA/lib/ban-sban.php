@@ -36,7 +36,7 @@ if($ban == 'sospendi'){
 
     else {
         echo "Errore nella query: " . $conn->error;
-        exit(1);
+        exit;
     }
 }
 
@@ -53,7 +53,7 @@ if($ban == 'riabilita'){
 
     else {
         echo "Errore nella query: " . $conn->error;
-        exit(1);
+        exit;
     }
 }
 ?>
