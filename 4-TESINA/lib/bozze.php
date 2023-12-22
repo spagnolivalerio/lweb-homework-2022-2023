@@ -59,8 +59,6 @@ $newBozza->setAttribute('difficolta', $difficolta);
 
 $newBozza->setAttribute('nome_file_img', $nome_file_img);
 
-
-
 foreach ($categorie as $categoria) {
 
     $bozCategoria = $doc->createElement('categoria');
@@ -79,15 +77,10 @@ $doc->formatOutput = true;
 $xmlString = $doc->saveXML();
 file_put_contents($xmlFile, $xmlString);
 
-if(isset($_POST['id_vecchia_bozza'])){ //lo passa il progetto.php nel caso in cui modifico una bozza
+if(isset($_POST['id_vecchia_bozza'])){ //lo passa il form_progetto.php nel caso in cui modifico una bozza
     $id_vecchia_bozza = $_POST['id_vecchia_bozza'];
 
-    $steps_vecchia_bozza = $xpath->query("/bozze/bozza[@id = '$id_vecchia_bozza']/tutorial_bozza")->item(0)->childNodes; 
-    foreach($steps_vecchia_bozza as $step_vecchia_bozza){
-        $prova = $step_vecchia_bozza->getAttribute('num_step');
-        echo "$prova";
-    }
-
+    $steps_vecchia_bozza = $xpath->query("/bozze/bozza[@id = '$id_vecchia_bozza']/tutorial_bozza")->item(0)->childNodes;
     
     foreach($steps_vecchia_bozza as $step_vecchia_bozza){
         $bozNewStep = $doc->createElement('step'); 
@@ -109,7 +102,6 @@ if(isset($_POST['id_vecchia_bozza'])){ //lo passa il progetto.php nel caso in cu
         remove_1_1($xmlFile, $query, $id_vecchia_bozza);
         echo "$id_vecchia_bozza";
     } 
-
     
 }
 

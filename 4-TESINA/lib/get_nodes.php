@@ -114,6 +114,16 @@ function getSteps($root, $id_progetto){
 
 }
 
+function getBozze($root, $id_utente){
+
+    $xmlFile = $root . "data/xml/bozze.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXPath($doc);
+
+    return $xpath->query("/bozze/bozza[@id_creator = '$id_utente']");
+
+}
 
 
 ?>
