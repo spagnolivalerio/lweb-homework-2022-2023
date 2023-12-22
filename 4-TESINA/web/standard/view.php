@@ -5,7 +5,6 @@
     require_once($root . "lib/get_nodes.php");
     require_once($root . "lib/functions.php");
     $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
-    $var = $_SESSION['Tipo_utente'];
     $std = "standard";
     $path = "index.php";
 
@@ -41,7 +40,7 @@
     $valutazioni_progetto = getValutazioniProgetto($root, $id_progetto);
     $voted = already_voted($valutazioni_progetto, $id_utente);
 
-    addressing($var, $std, $path); //redirect
+    addressing($_SESSION['Tipo_utente'], $std, $path); //redirect
 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 ?>
@@ -70,14 +69,13 @@
               <div class="logo">TPS</div>
             </div>
             <div class="homepage-sidebar-list">
-              <a class="elem">Homepage</a>
-              <a class="elem">Bacheca</a>
-              <a class="elem">Progetti</a>
-              <a class="elem">Bozze</a>
-              <a class="elem">Storico</a>
-              <div class="divisore"></div>
-              <a class="elem">Logout</a>
-            </div>
+            <a class="elem" href="homepage.php">Homepage</a>
+            <a class="elem" href="bacheca.php">Bacheca</a>
+            <a class="elem" href="view_bozze.php">Bozze</a>
+            <a class="elem" href="view_storico.php">Storico</a>
+            <div class="divisore"></div>
+            <a class="elem" href="../../lib/logout.php">Logout</a>
+          </div>
           </div>
           <div class="dashboard">
             <div class="toolbar"></div>

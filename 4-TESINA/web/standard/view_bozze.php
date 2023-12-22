@@ -4,6 +4,9 @@
     $root = "../../";
     require_once($root . "lib/get_nodes.php");
     $id_utente = $_SESSION['id_utente'];
+    $path = "index.php"; 
+    $std = "standard";     
+    addressing($_SESSION['Tipo_utente'], $std, $path);
 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 
@@ -33,11 +36,10 @@
         <div class="homepage-sidebar-list">
           <a class="elem" href="homepage.php">Homepage</a>
           <a class="elem" href="bacheca.php">Bacheca</a>
-          <a class="elem">Progetti</a>
-          <a class="elem">Bozze</a>
-          <a class="elem">Storico</a>
+          <a class="elem" href="view_bozze.php">Bozze</a>
+          <a class="elem" href="view_storico.php">Storico</a>
           <div class="divisore"></div>
-          <a class="elem">Logout</a>
+          <a class="elem" href="../../lib/logout.php">Logout</a>
         </div>
       </div>
       <div class="dashboard">

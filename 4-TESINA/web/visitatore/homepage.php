@@ -17,39 +17,47 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/homepage.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/visitatore/homepage.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
+
 
   </head>
 
   <body>
 
-    <div class ="mainmenu">
-        <ul>
-          <li><a href ="dove_siamo.php">DOVE SIAMO</a></li>
-          <li><a href ="noleggio.php">NOLEGGIO</a></li>
-          <li><a href ="#contatti">CONTATTI</a></li>
-        </ul>
-    </div>
+     <div class="homepage">
+      <div class="homepage-sidebar">
+        <div class="intestazione">
+          <div class="logo">TPS</div>
+        </div>
+        <div class="homepage-sidebar-list">
+          <a class="elem blur">Homepage</a>
+          <a class="elem blur">Bacheca</a>
+          <a class="elem blur">Progetti</a>
+          <a class="elem blur">Bozze</a>
+          <a class="elem blur">Storico</a>
+          <div class="divisore"></div>
+        </div>
+      </div>
+      <div class="dashboard">
+        <div class="toolbar">
+          <input type="text" id="searchInput" placeholder="Cerca per titolo...">
 
-    <div class="personal-area">
-        <div class="slot slot2"><a>&#128269;</a></div>
-        <div class="slot slot1"><a>ACCEDI</a></div>
-    </div>
+          <select id="categoriaSelect">
+          <option value="tutte">Tutte le categorie</option>
+          <?php
+            $categorie = getCategorie($root);
 
-    <div id="select-menu"><a href="#hidden-menu">&#x2630;</a></div>
-    <div><span id="back-target"></span></div>
-    <div id="hidden-menu">
-        <ul>
-            <li>SERVIZI FINANZIARI</li>
-            <li>USATO GARANTITO</li>
-            <li><a href ="noleggio.php">PRENOTA UN NOLEGGIO</a></li>
-            <li>IMPOSTAZIONI</li>
-            <li>FAQ</li>
-        </ul>
-        <div id="back"><a href="#back-target">&#x2715;</a></div>
-    </div>
-      
+            foreach($categorie as $categoria){
+              $id_cat = $categoria->getAttribute('id');
+              echo "<option value=\"$id_cat\">Categoria_$id_cat</option>\n";
+
+            }
+          ?>
+          </select>
+        </div>
     <div class="cards">
       <?php
 

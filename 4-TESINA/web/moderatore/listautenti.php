@@ -3,6 +3,10 @@
     include('../../conn.php');
     $root = "../../";
     $id_utente = $_SESSION['id_utente'];
+    $mod = "moderatore";
+    $path = "index.php"; 
+    addressing($_SESSION['Tipo_utente'], $mod, $path); 
+    
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"

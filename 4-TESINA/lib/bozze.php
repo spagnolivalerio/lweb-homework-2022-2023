@@ -14,10 +14,8 @@
 
 session_start(); 
 require_once('functions.php');
-$tps_root = "../"; 
-$img_dir_path = $tps_root . "img/bozze/"; 
+$img_dir_path = "img/proj/"; 
 $xmlFile = "../data/xml/bozze.xml";
-$img_dir_path = "../img/bozze/";
 $data_ora = new DateTime();
 $data_ora = $data_ora->format('Y-m-d H:i:s');
 $id_creator = $_SESSION['id_utente'];
@@ -40,12 +38,11 @@ $bozTutorial = $doc->createElement('tutorial_bozza');
 if (!empty($_FILES['img']['tmp_name'])) {
     $img_location = $_FILES['img']['tmp_name'];
     $ext = pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION);
-    $nome_file_img = $img_dir_path . uniqid('img_boz_') . "." . $ext;
+    $nome_file_img = $img_dir_path . uniqid('img_proj_') . "." . $ext;
     add_img($img_location, $nome_file_img);
 } else {
     $nome_file_img = "";
 }
-
 
 $bozCategorie = $doc->createElement('categorie');
 $bozDescrizione = $doc->createElement('descrizione', $descrizione);

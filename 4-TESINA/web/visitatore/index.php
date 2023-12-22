@@ -2,7 +2,7 @@
 
     session_start();
 
-    if(!isset($_SESSION['Tipo_utente']) || empty($_SESSION['Tipo_utente'])){
+    if(isset($_SESSION['Tipo_utente']) && $_SESSION['Tipo_utente'] === "visitatore"){
         header('Location: homepage.php');
     } else {
         header('Location: ../index.php');

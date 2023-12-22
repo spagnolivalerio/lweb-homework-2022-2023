@@ -5,11 +5,13 @@
     require_once($root . "lib/get_nodes.php");
     $id_utente = $_SESSION['id_utente'];
     $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+    $path = "index.php"; 
+    $std = "standard";     
+    addressing($_SESSION['Tipo_utente'], $std, $path);
 
     if (isset($_GET['id_progetto'])) {
       $id_progetto = $_GET['id_progetto'];
     } 
-
 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 
@@ -41,11 +43,10 @@
         <div class="homepage-sidebar-list">
           <a class="elem" href="homepage.php">Homepage</a>
           <a class="elem" href="bacheca.php">Bacheca</a>
-          <a class="elem">Progetti</a>
-          <a class="elem">Bozze</a>
-          <a class="elem">Storico</a>
+          <a class="elem" href="view_bozze.php">Bozze</a>
+          <a class="elem" href="view_storico.php">Storico</a>
           <div class="divisore"></div>
-          <a class="elem">Logout</a>
+          <a class="elem" href="../../lib/logout.php">Logout</a>
         </div>
       </div>
       <div class="dashboard">
@@ -109,7 +110,7 @@
               echo "    <div class=\"flexbox2\">\n";
               echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
               echo "      <form class=\"card-commenta\" action=\"view.php\" method=\"post\">\n";
-              echo "        <input class=\"submit\" type=\"submit\" value=\"DISCUSSIONI\">\n";
+              echo "        <button class=\"submit\" type=\"submit\">Dettagli</button>\n";
               echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
               echo "      </form>\n";
 

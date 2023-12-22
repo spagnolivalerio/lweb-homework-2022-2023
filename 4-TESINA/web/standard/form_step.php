@@ -2,7 +2,11 @@
 <?php
 
 session_start();
+require_once('../../lib/functions.php');
 
+$path = "index.php"; 
+$std = "standard";     
+addressing($_SESSION['Tipo_utente'], $std, $path);
 require_once('../../lib/functions.php');
 
 

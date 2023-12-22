@@ -2,8 +2,14 @@
     session_start();   
     $root = "../../";
     require_once($root . "lib/get_nodes.php");
+    $path = "index.php"; 
+    $std = "standard"; 
+    
+    addressing($_SESSION['Tipo_utente'], $std, $path); 
 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
+
+    
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -30,11 +36,10 @@
         <div class="homepage-sidebar-list">
           <a class="elem" href="homepage.php">Homepage</a>
           <a class="elem" href="bacheca.php">Bacheca</a>
-          <a class="elem">Progetti</a>
-          <a class="elem">Bozze</a>
-          <a class="elem">Storico</a>
+          <a class="elem" href="view_bozze.php">Bozze</a>
+          <a class="elem" href="view_storico.php">Storico</a>
           <div class="divisore"></div>
-          <a class="elem">Logout</a>
+          <a class="elem" href="../../lib/logout.php">Logout</a>
         </div>
       </div>
       <div class="dashboard">
@@ -45,7 +50,9 @@
             </div>
             <div class="account-type">tipo account</div>
         </div>
-        <div class="feed"></div>
+        <div class="feed">
+          <a href="form_progetto.php">Pubblica progetto</a>
+        </div>
       </div>
     </div>
     

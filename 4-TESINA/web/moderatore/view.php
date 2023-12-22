@@ -3,10 +3,9 @@
     require_once("../../lib/get_nodes.php");
     require_once("../../lib/functions.php");
     $root="../../";
-    $var = $_SESSION['Tipo_utente'];
     $mod = "moderatore";
     $path = "index.php"; 
-
+    addressing($_SESSION['Tipo_utente'], $mod, $path); 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 
     if (empty($_POST['id_progetto']) && (isset($_GET['id_progetto']) ) ) {
@@ -20,8 +19,6 @@
     $id_utente = $_SESSION['id_utente'];
 
     $discussioni = getDiscussioni($root, $id_progetto);
-
-    addressing($var, $mod, $path); 
 
 ?>
 
@@ -174,8 +171,8 @@
                 echo "    </div>\n";
               }
 
-              echo "    </div>\n"; // Chiusura di discussioni
-              echo "    </div>\n"; // Chiusura di comment
+              echo "    </div>\n";
+              echo "    </div>\n"; 
 
 
             }

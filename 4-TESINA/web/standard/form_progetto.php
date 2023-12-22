@@ -12,6 +12,10 @@
 //se il form è completo, viene salvato nelle bozze per poi essere reindirizzati in form-step, dove verranno aggiunti step. Premendo pubblica verrà eseguito lo script
 //per copiare la bozza nel progetto e il tutorial nei tutorial progetti, eliminando definitivamente la bozza da bozze.xml. 
 session_start();
+require_once('../../lib/functions.php');
+$path = "index.php"; 
+$std = "standard";     
+addressing($_SESSION['Tipo_utente'], $std, $path); 
 
 $tps_root = "../../";
 require_once('../../lib/functions.php');

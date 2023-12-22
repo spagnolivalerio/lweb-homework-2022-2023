@@ -4,7 +4,7 @@ session_start();
 require_once('functions.php'); 
 $tps_root = "../"; 
 $id_bozza_corrente = $_SESSION['id_bozza']; 
-$img_dir_path = "img/bozze/";
+$img_dir_path = "img/steps/";
 
 $xmlFile = "../data/xml/bozze.xml";
 
