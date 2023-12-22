@@ -109,6 +109,7 @@
       <valutazione_progetto id_valutazione="9"/>
       <valutazione_progetto id_valutazione="10"/>
       <valutazione_progetto id_valutazione="11"/>
+      <valutazione_progetto id_valutazione="13"/>
     </valutazioni_progetti>
     <reports_progetti>
       <report_progetto id_report="2" tipo="spam"/>
@@ -207,6 +208,16 @@
     <valutazioni_commenti/>
   </storico>
   <storico id_utente="5">
+    <progetti/>
+    <richieste/>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti/>
+    <discussioni/>
+    <valutazioni_commenti/>
+  </storico>
+  <storico id_utente="4">
     <progetti/>
     <richieste/>
     <commenti/>

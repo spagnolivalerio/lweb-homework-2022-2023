@@ -62,15 +62,10 @@ ul
   background-size: cover;
 }
 
-.mainmenu
+.table-ref
 {
-  text-align: center;
-  position: sticky;
-  background-color: /*#035455 #024041 #022e2f #02323c #02272f*/#37555b;
-  /*background: rgb(207,183,26);*/
-  /*background: linear-gradient(90deg, rgba(207,183,26,1) 0%, rgba(166,91,0,1) 100%);*/
-  top: 0;
-  z-index: 9;
+
+
 }
 
 .mainmenu li

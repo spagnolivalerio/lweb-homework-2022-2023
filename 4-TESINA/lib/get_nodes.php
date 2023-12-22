@@ -125,5 +125,14 @@ function getBozze($root, $id_utente){
 
 }
 
+function getCategorie($root){
+
+    $xmlFile = $root . "data/xml/categorie.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    return $doc->documentElement->childNodes;
+
+}
+
 
 ?>

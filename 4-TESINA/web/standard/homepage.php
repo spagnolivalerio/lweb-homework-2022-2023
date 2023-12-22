@@ -49,7 +49,22 @@
         </div>
       </div>
       <div class="dashboard">
-        <div class="toolbar"></div>
+        <div class="toolbar">
+          <input type="text" id="searchInput" placeholder="Cerca per titolo...">
+
+          <select id="categoriaSelect">
+          <option value="tutte">Tutte le categorie</option>
+        <?php
+          $categorie = getCategorie($root);
+
+          foreach($categorie as $categoria){
+            $id_cat = $categoria->getAttribute('id');
+            echo "<option value=\"$id_cat\">Categoria_$id_cat</option>\n";
+
+          }
+        ?>
+          </select>
+        </div>
         <div class="cards">
 
             <?php
@@ -59,6 +74,7 @@
               foreach($progetti as $progetto){
 
                 $titolo = $progetto->getElementsByTagName('titolo')->item(0)->nodeValue;
+                $categorie = $progetto->getElementsByTagName('categorie')->item(0); 
                 $descrizione = $progetto->getElementsByTagName('descrizione')->item(0)->nodeValue;
                 $username = $progetto->getAttribute('username_creator');
                 $img_path = "../" . $progetto->getAttribute('nome_file_img');
@@ -85,6 +101,10 @@
               echo "    <div class=\"flexbox1\">\n";
               echo "      <div class=\"card-titolo\">$titolo</div>\n";
               echo "      <div class=\"card-rating\">$rating</div>\n";
+              foreach($categorie->getElementsByTagName('categoria') as $categoria){
+                $id_categoria = $categoria->getAttribute('id_categoria');
+                echo "      <div class=\"card-categorie\">$id_categoria</div>\n";
+              }
               echo "    </div>\n";
               echo "    <div class=\"flexbox2\">\n";
               echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
@@ -112,6 +132,56 @@
     </div>
   </body>
 
-</html>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+       // Quando il documento è pronto
+        $(document).ready(function() {
+            // Associa un'azione all'evento di input sulla barra di ricerca
+            $('#searchInput').on('input', function() {
+                // Ottieni il testo inserito nella barra di ricerca
+                var searchText = $(this).val().toLowerCase();
+
+                // Per ogni elemento con classe "card-container"
+                $('.card-container').each(function() {
+                    // Ottieni il titolo del progetto
+                    var titolo = $(this).find('.card-titolo').text().toLowerCase();
+
+                    // Controlla se il titolo contiene il testo di ricerca
+                    if (titolo.includes(searchText)) {
+                        $(this).show();  // Mostra l'elemento
+                    } else {
+                        $(this).hide();  // Nascondi l'elemento
+                    }
+                });
+            });
+        });
+
+        $('#categoriaSelect').on('change', function() {
+            var selectedCategoria = $(this).val();
+
+            // Per ogni elemento con classe "card-container"
+            $('.card-container').each(function() {
+                // Ottieni le categorie del progetto
+                var categorie = $(this).find('.card-categorie').map(function() {
+                    return $(this).text().toLowerCase();
+                }).get();
+
+                // Controlla se la categoria selezionata è tra le categorie del progetto
+                if (selectedCategoria === 'tutte' || categorie.includes(selectedCategoria)) {
+                    $(this).show();  // Mostra l'elemento
+                } else {
+                    $(this).hide();  // Nascondi l'elemento
+                }
+            });
+        });
+
+    </script>
+
+  
+
 
 </html>
+
+
+
