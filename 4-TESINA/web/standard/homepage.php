@@ -5,8 +5,10 @@
     require_once($root . "lib/get_nodes.php");
     $id_utente = $_SESSION['id_utente'];
     $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+
     $path = "index.php"; 
     $std = "standard";     
+
     addressing($_SESSION['Tipo_utente'], $std, $path);
 
     if (isset($_GET['id_progetto'])) {
@@ -50,12 +52,15 @@
         </div>
       </div>
       <div class="dashboard">
+        <div class="bar"></div>
         <div class="toolbar">
-          <input type="text" id="searchInput" placeholder="Cerca per titolo...">
-
-          <select id="categoriaSelect">
-          <option value="tutte">Tutte le categorie</option>
+          <div class="login"><a href="../login.php">Accedi</a></div>
+          <div class="searchbar">
+            <input type="text" id="searchInput" placeholder="Cerca per titolo...">
+            <select id="categoriaSelect">
+              <option value="tutte">Tutte le categorie</option>
         <?php
+        
           $categorie = getCategorie($root);
 
           foreach($categorie as $categoria){
@@ -65,6 +70,7 @@
           }
         ?>
           </select>
+        </div>
         </div>
         <div class="cards">
 
@@ -78,9 +84,14 @@
                 $categorie = $progetto->getElementsByTagName('categorie')->item(0); 
                 $descrizione = $progetto->getElementsByTagName('descrizione')->item(0)->nodeValue;
                 $username = $progetto->getAttribute('username_creator');
-                $img_path = "../" . $progetto->getAttribute('nome_file_img');
+                $img_path = $root . $progetto->getAttribute('nome_file_img');
                 $id_progetto = $progetto->getAttribute('id'); 
                 $id_creator = $progetto->getAttribute('id_creator'); 
+
+                $query = "SELECT * FROM utente WHERE id = '$id_creator'"; 
+                $res = mysqli_query($conn, $query);
+                $row = mysqli_fetch_array($res); 
+                $avatar = $row['avatar'];  
 
                 $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
                 $query = "SELECT ban FROM utente WHERE id = $id_creator";
@@ -91,13 +102,16 @@
 
               echo "<div class=\"card-container\">\n";
               echo "  <div class=\"card-header\" style=\"background-image: url('$img_path'); background-size: cover; background-position: center;\">\n";
-              echo "    <div class=\"card-user\">&#x1F464; $username</div>\n";
+              echo "   <div class=\"top-card\">\n";
+              echo "    <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
+              echo "    <div class=\"card-user\">$username</div>\n";
+              echo "   </div>\n";
 
               if($ban_value == 1){
                 echo "    <div class=\"card-user\">Utente Sospeso</div>\n";
               }
 
-              echo "  </div>\n";
+              echo "  </div>\n"; 
               echo "  <div class=\"card-footer\">\n";
               echo "    <div class=\"flexbox1\">\n";
               echo "      <div class=\"card-titolo\">$titolo</div>\n";
@@ -110,17 +124,10 @@
               echo "    <div class=\"flexbox2\">\n";
               echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
               echo "      <form class=\"card-commenta\" action=\"view.php\" method=\"post\">\n";
+              echo "        <div class=\"animation\"></div>\n";
               echo "        <button class=\"submit\" type=\"submit\">Dettagli</button>\n";
               echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
               echo "      </form>\n";
-
-              if($id_creator === $id_utente){
-                echo "      <form class=\"card-commenta\" action=\"../../lib/rimuovere_progetto.php\" method=\"post\">\n";
-                echo "        <input class=\"submit\" type=\"submit\" value=\"🗑️\">\n";
-                echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
-                echo "      </form>\n";
-              }
-
               echo "    </div>\n";
               echo "  </div>\n";
               echo "</div>\n";

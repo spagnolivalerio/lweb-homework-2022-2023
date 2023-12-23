@@ -14,6 +14,7 @@
 
 session_start(); 
 require_once('functions.php');
+$tps_root = "../";
 $img_dir_path = "img/proj/"; 
 $xmlFile = "../data/xml/bozze.xml";
 $data_ora = new DateTime();
@@ -39,7 +40,7 @@ if (!empty($_FILES['img']['tmp_name'])) {
     $img_location = $_FILES['img']['tmp_name'];
     $ext = pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION);
     $nome_file_img = $img_dir_path . uniqid('img_proj_') . "." . $ext;
-    add_img($img_location, $nome_file_img);
+    add_img($img_location, $tps_root . $nome_file_img);
 } else {
     $nome_file_img = "";
 }

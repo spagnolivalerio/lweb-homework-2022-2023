@@ -192,7 +192,9 @@
     <progetti/>
     <richieste/>
     <commenti/>
-    <valutazioni_progetti/>
+    <valutazioni_progetti>
+      <valutazione_progetto id_valutazione="14"/>
+    </valutazioni_progetti>
     <reports_progetti/>
     <reports_commenti/>
     <discussioni/>
