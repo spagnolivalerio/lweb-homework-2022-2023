@@ -1,29 +1,39 @@
 .container{
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
+    
 }
 
 .users-section{
-    flex:40%;
+    flex:20%;
     border: 1px solid black;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    background-color: #eeeeee;
 }
 
 .activities{
-    flex:60%;
+    flex:80%;
     border: 1px solid black;
+    margin-left: 10px;
 }
 
 .user-info {
-    margin-top: 10px;
     border: 1px solid black;
-    height: 100px;
+    width: 90%;
+    height: 120px;
     transition: all 0.3s ease; /* Aggiunto un effetto di transizione */
+    background-color: white;
+    margin-top: 10px;
+
 }
 
 .user-info:hover {
     transform: scale(1.05); /* Ingrandisce del 10% quando ci passi sopra */
-    background-color: #f0f0f0; /* Cambia il colore in hover */
+    background-color: white; /* Cambia il colore in hover */
 }
 
 .details{
@@ -34,8 +44,22 @@
 
 .filtro{
     height: 50px;
+    width: 90%;
     border: 1px solid black;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* Centrare il testo verticalmente */
+    
 }
+
+
+
+.filtro input{
+    background-color: #eeeeee;
+    height: 40px;
+    width: 100%;
+}
+
 
 .activity-type{
     margin-top: 140px;
@@ -57,13 +81,41 @@
 }
 .profile{
     position: fixed;
-    width: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    
 }
 
 .profile-info{
     display: flex;
     border-bottom: 1px solid black;
+    width: 100%;
+    height: 80px;
 }
+
+
+.table-ref {
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.table-ref a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    margin-left: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.table-ref a:hover {
+    background-color: #ddd;
+    color: #0066cc;
+}
+
 
 .profile-info img{
     position: relative;
@@ -116,35 +168,5 @@
 
 .activity-type td a:hover {
     text-decoration: underline;
-}
-
-.table-ref{
-    display: flex;
-    justify-content: space-evenly;
-    border-bottom: 1px solid black;
-}
-
-.table-ref ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.table-ref li {
-    float: left;
-}
-
-.table-ref a {
-    display: block;
-    color: #333;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.table-ref a:hover {
-    background-color: #ddd;
-    color: #0066cc;
 }
 

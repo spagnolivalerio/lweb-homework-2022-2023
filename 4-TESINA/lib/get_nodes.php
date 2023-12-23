@@ -134,5 +134,20 @@ function getCategorie($root){
 
 }
 
+function getStoricoProgetti($root, $id_utente){
+
+    $xmlFile = $root . "data/xml/storici.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXPath($doc);
+
+    $storico = $xpath->query("/storici/storico[@id_utente = '$id_utente']")->item(0);
+
+    $progetti = $storico->getElementsByTagName('progetti')->item(0);
+    $progetti = $progetti->childNodes;
+    return $progetti; 
+
+}
+
 
 ?>

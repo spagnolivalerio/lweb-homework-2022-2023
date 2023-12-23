@@ -60,7 +60,7 @@
     <xsd:element name="commenti">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="sto:comento" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="sto:commento" minOccurs="0" maxOccurs="unbounded">
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
