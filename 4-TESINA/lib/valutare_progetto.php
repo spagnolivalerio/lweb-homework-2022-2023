@@ -90,6 +90,9 @@ foreach ($nodes as $node) {
 
         $stoValutazione = $doc->createElement('valutazione_progetto');
         $stoValutazione->setAttribute('id_valutazione', $id_valutazione);
+        $stoValutazione->setAttribute('id_progetto', $id_progetto);
+        $stoValutazione->setAttribute('data_ora', $data_ora);
+        $stoValutazione->setAttribute('value', $newValue);
         $stoValutazioni = $node->getElementsByTagName('valutazioni_progetti')->item(0);
         $stoValutazioni->appendChild($stoValutazione);
 
@@ -101,7 +104,7 @@ foreach ($nodes as $node) {
     }
 }
 
-$url = "../web/" . $_SESSION['Tipo_utente'] . "/homepage.php?id_progetto=" . $id_progetto;
+$url = "../web/" . $_SESSION['Tipo_utente'] . "/view.php?id_progetto=" . $id_progetto;
 header("Location: $url");
 exit;
 

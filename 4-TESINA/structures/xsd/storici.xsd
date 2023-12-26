@@ -40,6 +40,7 @@
         <xsd:complexType>
             <xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
             <xsd:attribute name="titolo" type="xsd:string" /> 
+            <xsd:attribute name="data_ora" type="xsd:string" />
         </xsd:complexType>
     </xsd:element>
 
@@ -54,6 +55,8 @@
     <xsd:element name="richiesta">
         <xsd:complexType>
             <xsd:attribute name="id_richiesta" type="xsd:positiveInteger" /> 
+            <xsd:attribute name="id_discussione" type="xsd:positiveInteger" /> 
+            <xsd:attribute name="data_ora" type="xsd:string" />
         </xsd:complexType>
     </xsd:element>
 
@@ -70,7 +73,9 @@
             <xsd:sequence>
                 <xsd:element ref="sto:testo" minOccurs="1" maxOccurs="1" />
             </xsd:sequence>
-            <xsd:attribute name="id_commento" type="xsd:positiveInteger" /> 
+            <xsd:attribute name="id_commento" type="xsd:positiveInteger" />
+            <xsd:attribute name="id_discussione" type="xsd:positiveInteger" />
+            <xsd:attribute name="data_ora" type="xsd:string" /> 
         </xsd:complexType>
     </xsd:element>
 
@@ -86,7 +91,10 @@
 
     <xsd:element name="valutazione_progetto">
         <xsd:complexType>
-            <xsd:attribute name="id_valutazione" type="xsd:positiveInteger" /> 
+            <xsd:attribute name="id_valutazione" type="xsd:positiveInteger" />
+            <xsd:attribute name="data_ora" type="xsd:string" />  
+            <xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
+            <xsd:attribute name="value" type="xsd:positiveInteger" />
         </xsd:complexType>
     </xsd:element>
 
@@ -100,9 +108,36 @@
 
     <xsd:element name="valutazione_commento">
         <xsd:complexType>
+            <xsd:sequence minOccurs="0" maxOccurs="1">
+                <xsd:element ref="sto:utilita" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element ref="sto:livello_di_accordo" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
             <xsd:attribute name="id_valutazione" type="xsd:positiveInteger" /> 
+            <xsd:attribute name="data_ora" type="xsd:string" />  
+            <xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
+            <xsd:attribute name="id_commento" type="xsd:positiveInteger" />
         </xsd:complexType>
     </xsd:element> 
+
+    <xsd:element name="utilita" type="sto:tipoUtilita" />
+
+    <xsd:simpleType name="tipoUtilita">
+        <xsd:restriction base="xsd:positiveInteger">
+            <xsd:minInclusive value="1" />
+            <xsd:maxInclusive value="5" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:element name="livello_di_accordo" type="sto:tipoAccordo" />
+
+    <xsd:simpleType name="tipoAccordo">
+        <xsd:restriction base="xsd:positiveInteger">
+            <xsd:minInclusive value="1" />
+            <xsd:maxInclusive value="3" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+ 
 
     <xsd:element name="reports_progetti">
         <xsd:complexType>
@@ -115,6 +150,8 @@
     <xsd:element name="report_progetto">
         <xsd:complexType>
             <xsd:attribute name="id_report" type="xsd:positiveInteger" /> 
+            <xsd:attribute name="id_progetto" type="xsd:positiveInteger" />  
+            <xsd:attribute name="data_ora" type="xsd:string" />
             <xsd:attribute name="tipo" type="xsd:string" /> 
         </xsd:complexType>
     </xsd:element>
@@ -129,7 +166,9 @@
 
     <xsd:element name="report_commento">
         <xsd:complexType>
-            <xsd:attribute name="id_report" type="xsd:positiveInteger" /> 
+            <xsd:attribute name="id_report" type="xsd:positiveInteger" />
+            <xsd:attribute name="id_commento" type="xsd:positiveInteger" />  
+            <xsd:attribute name="data_ora" type="xsd:string" />
             <xsd:attribute name="tipo" type="xsd:string" /> 
         </xsd:complexType>
     </xsd:element>
@@ -145,6 +184,7 @@
     <xsd:element name="discussione">
         <xsd:complexType>
             <xsd:attribute name="id_discussione" type="xsd:positiveInteger" />
+            <xsd:attribute name="data_ora" type="xsd:string" />
             <xsd:attribute name="titolo" type="xsd:string" />
         </xsd:complexType>
     </xsd:element>

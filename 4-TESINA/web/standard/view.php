@@ -189,7 +189,7 @@
 
 
                 echo "<div class=\"discussion-container\">\n";
-                echo "    <div class=\"discussion-header\">\n";
+                echo "    <div class=\"discussion-header\" id=\"" . $id_discussione . "\">\n";
                 echo "        <h1 class=\"discussion-title\">$titolo</h1>\n";
                 echo "        <p class=\"discussion-info\">\n";
                 echo "            <span>$autore</span>\n";
@@ -241,7 +241,7 @@
                   $reports_commento = getSegnalazioniCommento($root, $id_commento);
                   $reported_comment = already_reported($reports_commento, $id_utente);
 
-                echo "        <div class=\"comment\">\n";
+                echo "        <div class=\"comment\" id=\"" . $id_commento . "\">\n";
                 echo "            <div class=\"comment-info\">\n";
                 echo "                <span class=\"comment-author\">$commentatore</span>\n";
 

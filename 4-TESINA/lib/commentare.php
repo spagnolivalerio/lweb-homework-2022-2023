@@ -101,6 +101,8 @@ foreach ($nodes as $node) {
 
         $stoCommento = $doc->createElement('commento');
         $stoCommento->setAttribute('id_commento', $id_commento);
+        $stoCommento->setAttribute('data_ora', $data_ora);
+        $stoCommento->setAttribute('id_discussione', $id_discussione);
         $stoTesto = $doc->createElement('testo', $newTestoValue);
         $stoCommento->appendChild($stoTesto);
         $stoCommenti = $node->getElementsByTagName('commenti')->item(0);

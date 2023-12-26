@@ -100,6 +100,8 @@ foreach ($nodes as $node) {
         $stoReport = $doc->createElement('report_commento');
         $stoReport->setAttribute('id_report', $id_segnalazione);
         $stoReport->setAttribute('tipo', $newTipoValue);
+        $stoReport->setAttribute('data_ora', $data_ora);
+        $stoReport->setAttribute('id_commento', $id_commento);
         $stoReports = $node->getElementsByTagName('reports_commenti')->item(0);
         $stoReports->appendChild($stoReport);
 

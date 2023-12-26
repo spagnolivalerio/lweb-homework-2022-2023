@@ -31,7 +31,7 @@
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/prova.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/storico.css" />
 
   </head>
 
@@ -43,16 +43,16 @@
               <div class="logo">TPS</div>
             </div>
             <div class="homepage-sidebar-list">
-              <a class="elem">Homepage</a>
-              <a class="elem">Bacheca</a>
-              <a class="elem">Progetti</a>
-              <a class="elem">Bozze</a>
-              <a class="elem">Storico</a>
-              <div class="divisore"></div>
-              <a class="elem">Logout</a>
+                <a class="elem" href="homepage.php">Homepage</a>
+                <a class="elem" href="bacheca.php">Bacheca</a>
+                <a class="elem" href="view_bozze.php">Bozze</a>
+                <a class="elem" href="view_storico.php">Storico</a>
+                <div class="divisore"></div>
+                <a class="elem" href="../../lib/logout.php">Logout</a>
             </div>
           </div>
           <div class="dashboard">
+          <div class="bar"></div>
             <div class="toolbar"></div>
 
 
@@ -102,7 +102,8 @@
             $query = "SELECT * FROM utente WHERE id = " . $utente_id;
             $result = $conn->query($query);
             $row = $result->fetch_assoc();
-            $progetti = getStoricoProgetti($root, $utente_id);
+            $storico = getStoricoUtente($root, $id_utente);
+            $progetti = getStoricoProgetti($root, $storico);
 
             echo "                <div class=\"profile\">\n";
             echo "                    <div class=\"profile-info\">\n";
@@ -240,7 +241,5 @@
         </div>
     </div>
   </body>
-
-</html>
 
 </html>

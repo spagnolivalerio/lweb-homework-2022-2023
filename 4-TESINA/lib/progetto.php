@@ -136,6 +136,34 @@ $xmlString = $doc->saveXML();
 $xmlTutorial = "../data/xml/tutorials.xml";
 file_put_contents($xmlTutorial, $xmlString);
 
+
+//AGGIUNTA IN STORICI.XML
+
+$xmlFile = "../data/xml/storici.xml";
+$doc = getDOMdocument($xmlFile);
+$root = $doc->documentElement;
+$nodes = $root->childNodes;
+
+foreach ($nodes as $node) {
+
+    if ($_SESSION['id_utente'] === $node->getAttribute('id_utente')) {
+
+        $stoProgetto = $doc->createElement('progetto');
+        $stoProgetto->setAttribute('titolo', $titolo);
+        $stoProgetto->setAttribute('data_ora', $data_ora);
+        $stoProgetto->setAttribute('id_progetto', $id_progetto);
+        $stoProgetti = $node->getElementsByTagName('progetti')->item(0);
+        $stoProgetti->appendChild($stoProgetto);
+
+        $doc->formatOutput = true;
+        $xmlString = $doc->saveXML();
+        file_put_contents($xmlFile, $xmlString);
+
+        break;
+
+    }
+}
+
 //RIMUOVI BOZZA
 
 $query = "/bozze/bozza[@id"; 

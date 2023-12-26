@@ -87,7 +87,14 @@ $xpath = new DOMXPath($doc);
 $stoValutazioni_commenti = $xpath->query("/storici/storico[@id_utente = '$id_votante']/valutazioni_commenti")->item(0);
 
 $stoValutazione = $doc->createElement('valutazione_commento');
+$stoUtilita = $doc->createElement('utilita', $utilita);
+$stoAccordo = $doc->createElement('livello_di_accordo', $liv_accordo);
+$stoValutazione->appendChild($stoUtilita);
+$stoValutazione->appendChild($stoAccordo);
 $stoValutazione->setAttribute('id_valutazione', $id_valutazione);
+$stoValutazione->setAttribute('data_ora', $data_ora);
+$stoValutazione->setAttribute('id_commento', $id_commento);
+$stoValutazione->setAttribute('id_progetto', $id_progetto);
 
 $stoValutazioni_commenti->appendChild($stoValutazione);
 

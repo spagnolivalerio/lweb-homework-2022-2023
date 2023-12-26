@@ -1,32 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="10" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="9" username_creator="daniele" id_creator="4" tempo_medio="3" data_pubblicazione="2023-12-22 10:08:42" visualizzazioni="0" nome_file_img="../img/bozze/img_boz_658552135b8f3.jpg" difficolta="facile">
-    <titolo>AOFRA</titolo>
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="1" username_creator="dan" id_creator="7" tempo_medio="5" data_pubblicazione="2023-12-26 15:12:32" visualizzazioni="0" nome_file_img="img/proj/img_proj_658adf3d28ade.jpg" difficolta="facile">
+    <titolo>JUJUTSU KAISEN 12</titolo>
     <categorie>
       <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-      <categoria id_categoria="3"/>
     </categorie>
-    <descrizione>uaaa</descrizione>
+    <descrizione>anime bello</descrizione>
     <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="9"/>
+    <discussioni>
+      <discussione id_discussione="1"/>
+      <discussione id_discussione="2"/>
+      <discussione id_discussione="3"/>
+    </discussioni>
+    <tutorial_progetto id_tutorial="1"/>
     <valutazioni>
-      <valutazione id_valutazione="13"/>
-    </valutazioni>
-  </progetto>
-  <progetto id="10" username_creator="1" id_creator="4" tempo_medio="2" data_pubblicazione="2023-12-23 23:01:27" visualizzazioni="0" nome_file_img="img/proj/img_proj_6587589ced6d7.jpg" difficolta="facile">
-    <titolo>titolo</titolo>
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-    </categorie>
-    <descrizione>prova</descrizione>
-    <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="10"/>
-    <valutazioni>
-      <valutazione id_valutazione="14"/>
+      <valutazione id_valutazione="1"/>
     </valutazioni>
   </progetto>
 </progetti>

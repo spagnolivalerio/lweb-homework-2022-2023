@@ -13,6 +13,17 @@ function getProgetti($root){
 
 }
 
+function getProgetto($root, $id_progetto){
+
+    $xmlFile = $root . "data/xml/progetti.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXPath($doc);
+
+    return $xpath->query("/progetti/progetto[@id = '$id_progetto']")->item(0);
+
+}
+
 /*funzione che prende in input l'id progetto e returna una DOMNodeList di discussioni*/
 
 function getDiscussioni($root, $id_progetto){
@@ -27,6 +38,17 @@ function getDiscussioni($root, $id_progetto){
 }
 /*funzione che prende un DOMNode discussione e stampa tutti i commenti, indicativamente da mettere in un foreach*/ 
 
+
+function getDiscussione($root, $id_discussione){
+    
+    $xmlFile = $root . "data/xml/discussioni.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXPath($doc);
+
+    return $xpath->query("/discussioni/discussione[@id = '$id_discussione']")->item(0);  
+}
+
 function getCommenti($root, $id_discussione){
 
     $xmlFile = $root . "data/xml/commenti.xml";
@@ -35,6 +57,17 @@ function getCommenti($root, $id_discussione){
     $xpath = new DOMXPath($doc);
 
     return $xpath->query("/commenti/commento[@id_discussione = '$id_discussione']");
+
+}
+
+function getCommento($root, $id_commento){
+
+    $xmlFile = $root . "data/xml/commenti.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXPath($doc);
+
+    return $xpath->query("/commenti/commento[@id = '$id_commento']")->item(0);
 
 }
 
@@ -84,6 +117,7 @@ function getSegnalazioniCommento($root, $id_commento){
 
 }
 
+
 function getSegnalazioniProgetto($root, $id_progetto){
     $xmlFile = $root . "data/xml/reports_progetti.xml";
     $doc = getDOMdocument($xmlFile);
@@ -94,6 +128,8 @@ function getSegnalazioniProgetto($root, $id_progetto){
 
 }
 
+
+
 function getRichiesteAccesso($root, $id_discussione){
     $xmlFile = $root . "data/xml/richieste_accesso_discussioni.xml";
     $doc = getDOMdocument($xmlFile);
@@ -103,6 +139,7 @@ function getRichiesteAccesso($root, $id_discussione){
     return $xpath->query("/richieste/richiesta[@id_discussione = '$id_discussione']");
 
 }
+
 
 function getSteps($root, $id_progetto){
     $xmlFile = $root . "data/xml/tutorials.xml";
@@ -134,20 +171,92 @@ function getCategorie($root){
 
 }
 
-function getStoricoProgetti($root, $id_utente){
+function getStoricoUtente($root, $id_utente){
 
     $xmlFile = $root . "data/xml/storici.xml";
     $doc = getDOMdocument($xmlFile);
 
     $xpath = new DOMXPath($doc);
 
-    $storico = $xpath->query("/storici/storico[@id_utente = '$id_utente']")->item(0);
+    return $xpath->query("/storici/storico[@id_utente = '$id_utente']")->item(0);
+
+}
+
+function getStoricoProgetti($root, $storico){
 
     $progetti = $storico->getElementsByTagName('progetti')->item(0);
     $progetti = $progetti->childNodes;
+
     return $progetti; 
 
 }
+
+function getStoricoReportsCommenti($root, $storico){
+
+    $reports_commenti = $storico->getElementsByTagName('reports_commenti')->item(0);
+    $reports_commenti = $reports_commenti->childNodes;
+
+    return $reports_commenti; 
+
+}
+
+function getStoricoReportsProgetti($root, $storico){
+
+    $reports_progetti = $storico->getElementsByTagName('reports_progetti')->item(0);
+    $reports_progetti = $reports_progetti->childNodes;
+
+    return $reports_progetti; 
+
+}
+
+function getStoricoRichieste($root, $storico){
+
+    $richieste = $storico->getElementsByTagName('richieste')->item(0);
+    $richieste = $richieste->childNodes;
+
+    return $richieste; 
+
+}
+
+function getStoricoCommenti($root, $storico){
+
+    $commenti = $storico->getElementsByTagName('commenti')->item(0);
+    $commenti = $commenti->childNodes;
+
+    return $commenti; 
+
+}
+
+function getStoricoValutazioniProgetti($root, $storico){
+
+    $valutazioni_progetti = $storico->getElementsByTagName('valutazioni_progetti')->item(0);
+    $valutazioni_progetti = $valutazioni_progetti->childNodes;
+
+    return $valutazioni_progetti; 
+
+}
+
+function getStoricoValutazioniCommenti($root, $storico){
+
+    $valutazioni_commenti = $storico->getElementsByTagName('valutazioni_commenti')->item(0);
+    $valutazioni_commenti = $valutazioni_commenti->childNodes;
+
+    return $valutazioni_commenti; 
+
+}
+
+function getStoricoDiscussioni($root, $storico){
+
+    $discussioni = $storico->getElementsByTagName('discussioni')->item(0);
+    $discussioni = $discussioni->childNodes;
+
+    return $discussioni; 
+
+}
+
+
+
+
 
 
 ?>

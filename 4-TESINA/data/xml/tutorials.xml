@@ -1,39 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="7">
-  <tutorial_progetto id="2" id_progetto="2">
-    <step num_step="1" nome_file_img="img/bozze/img_step_657d7a71ca90d.png">
-      <descrizione>primo</descrizione>
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="1">
+  <tutorial_progetto id="1" id_progetto="1">
+    <step num_step="1" nome_file_img="img/steps/img_step_658adf4561562.png">
+      <descrizione>primo steè</descrizione>
     </step>
-    <step num_step="2" nome_file_img="img/bozze/img_step_657d7a776e08a.png">
-      <descrizione>secondo</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="3" id_progetto="6">
-    <step num_step="1" nome_file_img="img/bozze/img_step_657d7b3d7094f.png">
-      <descrizione>primo stepoeqaudaida</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="4" id_progetto="7">
-    <step num_step="1" nome_file_img="img/bozze/img_step_657e26c4c8bc1.png">
-      <descrizione>step 1</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="5" id_progetto="8">
-    <step num_step="1" nome_file_img="img/bozze/img_step_6580031367972.webp">
-      <descrizione>primo step</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="6" id_progetto="9">
-    <step num_step="1" nome_file_img="img/bozze/img_step_658552192b3ad.jpg">
-      <descrizione>primo</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="7" id_progetto="10">
-    <step num_step="1" nome_file_img="img/steps/img_step_658758ad0b4da.jpg">
-      <descrizione>step</descrizione>
-    </step>
-    <step num_step="2" nome_file_img="img/steps/img_step_658758b742c79.png">
-      <descrizione>step2</descrizione>
+    <step num_step="2" nome_file_img="img/steps/img_step_658adf4f59020.jpg">
+      <descrizione>secondo steè</descrizione>
     </step>
   </tutorial_progetto>
 </tutorials_progetti>

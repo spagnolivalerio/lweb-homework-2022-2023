@@ -35,18 +35,19 @@
         <div class="homepage-sidebar-list">
           <a class="elem blur">Homepage</a>
           <a class="elem blur">Bacheca</a>
-          <a class="elem blur">Progetti</a>
           <a class="elem blur">Bozze</a>
           <a class="elem blur">Storico</a>
           <div class="divisore"></div>
         </div>
       </div>
       <div class="dashboard">
+      <div class="bar"></div>
         <div class="toolbar">
-          <input type="text" id="searchInput" placeholder="Cerca per titolo...">
-
-          <select id="categoriaSelect">
-          <option value="tutte">Tutte le categorie</option>
+          <div class="login"><a href="../login.php">Accedi</a></div>
+          <div class="searchbar">
+            <input type="text" id="searchInput" placeholder="Cerca per titolo...">
+            <select id="categoriaSelect">
+              <option value="tutte">Tutte le categorie</option>
           <?php
             $categorie = getCategorie($root);
 
@@ -58,6 +59,7 @@
           ?>
           </select>
         </div>
+        </div>
     <div class="cards">
       <?php
 
@@ -68,7 +70,7 @@
           $titolo = $progetto->getElementsByTagName('titolo')->item(0)->nodeValue;
           $descrizione = $progetto->getElementsByTagName('descrizione')->item(0)->nodeValue;
           $username = $progetto->getAttribute('username_creator');
-          $img_path = "../" . $progetto->getAttribute('nome_file_img');
+          $img_path = $root . $progetto->getAttribute('nome_file_img');
           $id_progetto = $progetto->getAttribute('id');
 
           echo "<div class=\"card-container\">\n";
@@ -79,15 +81,17 @@
               echo "<div class=\"flexbox1\">\n";
                 echo "<div class=\"card-titolo\">$titolo</div>\n";
                 echo "<div class=\"card-rating\">rating</div>\n";
-              echo"</div>\n";
-              echo "<div class=\"flexbox2\">\n";
-                echo "<div class=\"card-descrizione\">$descrizione</div>\n";
-                echo "<form class=\"card-commenta\" action=\"view.php\" method=\"post\"><input class=\"submit\" type=\"submit\" value=\"DISCUSSIONI\"></input>\n";
-                  echo "<input class=\"hidden\" type=\"hidden\ value=\"$id_progetto\">\n";
-                echo "</form>\n";
-              echo "</div>\n";
+            echo"</div>\n";
+            echo "    <div class=\"flexbox2\">\n";
+              echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
+                echo "      <form class=\"card-commenta\" action=\"view.php\" method=\"post\">\n";
+                  echo "        <div class=\"animation\"></div>\n";
+                  echo "        <button class=\"submit\" type=\"submit\">Dettagli</button>\n";
+                  echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
+                echo "      </form>\n";
+              echo "    </div>\n";
+            echo "  </div>\n";
             echo "</div>\n";
-          echo "</div>\n";
         }
 
       ?>
@@ -97,6 +101,51 @@
 
   </body>
 
-</html>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+       // Quando il documento è pronto
+        $(document).ready(function() {
+            // Associa un'azione all'evento di input sulla barra di ricerca
+            $('#searchInput').on('input', function() {
+                // Ottieni il testo inserito nella barra di ricerca
+                var searchText = $(this).val().toLowerCase();
+
+                // Per ogni elemento con classe "card-container"
+                $('.card-container').each(function() {
+                    // Ottieni il titolo del progetto
+                    var titolo = $(this).find('.card-titolo').text().toLowerCase();
+
+                    // Controlla se il titolo contiene il testo di ricerca
+                    if (titolo.includes(searchText)) {
+                        $(this).show();  // Mostra l'elemento
+                    } else {
+                        $(this).hide();  // Nascondi l'elemento
+                    }
+                });
+            });
+        });
+
+        $('#categoriaSelect').on('change', function() {
+            var selectedCategoria = $(this).val();
+
+            // Per ogni elemento con classe "card-container"
+            $('.card-container').each(function() {
+                // Ottieni le categorie del progetto
+                var categorie = $(this).find('.card-categorie').map(function() {
+                    return $(this).text().toLowerCase();
+                }).get();
+
+                // Controlla se la categoria selezionata è tra le categorie del progetto
+                if (selectedCategoria === 'tutte' || categorie.includes(selectedCategoria)) {
+                    $(this).show();  // Mostra l'elemento
+                } else {
+                    $(this).hide();  // Nascondi l'elemento
+                }
+            });
+        });
+
+    </script>
+
+
 
 </html>

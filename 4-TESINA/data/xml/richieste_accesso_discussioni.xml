@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<richieste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="16" xsi:noNamespaceSchemaLocation="../../structures/richieste_accesso_discussioni.xsd">
-  <richiesta id="2" id_discussione="6" id_utente="7" data_ora="2023-12-01 14:54:08" stato="accettata">
-    <moderatore id_mod="1" username="utente1"/>
+<richieste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/richieste_accesso_discussioni.xsd">
+  <richiesta id="1" id_discussione="1" id_utente="7" data_ora="2023-12-26 15:14:51" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
   </richiesta>
-  <richiesta id="6" id_discussione="7" id_utente="7" data_ora="2023-12-04 18:19:59" stato="rifiutata">
-    <moderatore id_mod="1" username="utente1"/>
-    <moderatore id_mod="1" username="utente1"/>
-  </richiesta>
-  <richiesta id="7" id_discussione="8" id_utente="4" data_ora="2023-12-14 11:05:29" stato="in lavorazione"/>
-  <richiesta id="8" id_discussione="8" id_utente="4" data_ora="2023-12-14 11:07:57" stato="in lavorazione"/>
-  <richiesta id="9" id_discussione="8" id_utente="4" data_ora="2023-12-14 11:07:59" stato="in lavorazione"/>
-  <richiesta id="10" id_discussione="8" id_utente="4" data_ora="2023-12-14 11:08:00" stato="in lavorazione"/>
-  <richiesta id="11" id_discussione="8" id_utente="4" data_ora="2023-12-14 11:08:00" stato="in lavorazione"/>
-  <richiesta id="12" id_discussione="8" id_utente="4" data_ora="2023-12-14 11:08:00" stato="in lavorazione"/>
-  <richiesta id="13" id_discussione="8" id_utente="4" data_ora="2023-12-14 11:08:00" stato="in lavorazione"/>
-  <richiesta id="14" id_discussione="8" id_utente="4" data_ora="2023-12-14 11:08:00" stato="in lavorazione"/>
-  <richiesta id="16" id_discussione="4" id_utente="4" data_ora="2023-12-21 15:37:01" stato="accettata"/>
 </richieste>

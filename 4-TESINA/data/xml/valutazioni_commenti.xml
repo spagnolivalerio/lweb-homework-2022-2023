@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valutazioni_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="14" xsi:noNamespaceSchemaLocation="../../structures/valutazioni_commenti.xsd">
-  <valutazione_commento id="14" data_ora="2023-12-14 11:14:32" id_votante="4" id_commento="16">
+<valutazioni_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="2" xsi:noNamespaceSchemaLocation="../../structures/valutazioni_commenti.xsd">
+  <valutazione_commento id="2" data_ora="2023-12-26 15:38:35" id_votante="7" id_commento="1">
     <utilita>2</utilita>
-    <livello_di_accordo>3</livello_di_accordo>
+    <livello_di_accordo>5</livello_di_accordo>
   </valutazione_commento>
 </valutazioni_commenti>

@@ -94,6 +94,8 @@ foreach ($nodes as $node) {
         $stoReport = $doc->createElement('report_progetto');
         $stoReport->setAttribute('id_report', $id_segnalazione);
         $stoReport->setAttribute('tipo', $newTipoValue);
+        $stoReport->setAttribute('data_ora', $data_ora);
+        $stoReport->setAttribute('id_progetto', $id_progetto);
         $stoReportsProgetti = $node->getElementsByTagName('reports_progetti')->item(0);
         $stoReportsProgetti->appendChild($stoReport);
 

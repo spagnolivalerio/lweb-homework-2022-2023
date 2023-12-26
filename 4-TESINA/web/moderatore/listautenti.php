@@ -2,6 +2,7 @@
     session_start();   
     include('../../conn.php');
     $root = "../../";
+    require_once($root . "lib/get_nodes.php");
     $id_utente = $_SESSION['id_utente'];
     $mod = "moderatore";
     $path = "index.php"; 
@@ -34,14 +35,14 @@
         <div class="homepage-sidebar-list">
           <a class="elem" href="homepage.php">Homepage</a>
           <a class="elem" href="bacheca.php">Bacheca</a>
-          <a class="elem">Progetti</a>
-          <a class="elem">Bozze</a>
-          <a class="elem">Storico</a>
+          <a class="elem" href="view_bozze.php">Bozze</a>
+          <a class="elem" href="view_storico.php">Storico</a>
           <div class="divisore"></div>
-          <a class="elem">Logout</a>
+          <a class="elem" href="../../lib/logout.php">Logout</a>
         </div>
       </div>
       <div class="dashboard">
+      <div class="bar"></div>
         <div class="toolbar"></div>
         <div class="cards">
 

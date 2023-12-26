@@ -309,7 +309,7 @@ function calcolaReputazione($root, $id_utente, $conn){
 
                 if($id_utente = $commento->getAttribute('id_creator')){
 
-                    $valutazioni_commento = getValutazioniProgetto($root, $id_progetto);
+                    $valutazioni_commento = getValutazioniCommenti($root, $id_progetto);
 
                     foreach($valutazioni_commento as $valutazione_commento){
 

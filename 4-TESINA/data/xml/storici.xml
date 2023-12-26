@@ -2,242 +2,33 @@
 <storici xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/storici.xsd">
   <storico id_utente="7">
     <progetti>
-      <progetto titolo="" id_progetto="14"/>
-      <progetto titolo="eragh" id_progetto="15"/>
-      <progetto titolo="rhd" id_progetto="16"/>
-      <progetto titolo="bozza 2 pubblicata" id_progetto="17"/>
-      <progetto titolo="titolo1" id_progetto="18"/>
-      <progetto titolo="I PUFFI VIOLA" id_progetto="19"/>
+      <progetto titolo="JUJUTSU KAISEN 12" data_ora="2023-12-26 15:12:32" id_progetto="1"/>
     </progetti>
     <richieste>
-      <richiesta id_richiesta="2"/>
-      <richiesta id_richiesta="6"/>
+      <richiesta id_richiesta="1" data_ora="2023-12-26 15:12:45" id_discussione="1"/>
     </richieste>
     <commenti>
-      <commento id_commento="13">
-        <testo>commento</testo>
-      </commento>
-      <commento id_commento="13">
-        <testo>commento2</testo>
-      </commento>
-      <commento id_commento="14">
-        <testo>commento3</testo>
-      </commento>
-      <commento id_commento="15">
-        <testo>esth</testo>
+      <commento id_commento="1" data_ora="2023-12-26 15:16:15" id_discussione="1">
+        <testo>bel commento</testo>
       </commento>
     </commenti>
     <valutazioni_progetti>
-      <valutazione_progetto id_valutazione="1"/>
-    </valutazioni_progetti>
-    <reports_progetti>
-      <report_progetto id_report="1" tipo="spam"/>
-    </reports_progetti>
-    <reports_commenti>
-      <report_commento id_report="2" tipo="spam"/>
-    </reports_commenti>
-    <discussioni/>
-    <valutazioni_commenti>
-      <valutazione_commento id_valutazione="1"/>
-    </valutazioni_commenti>
-  </storico>
-  <storico id_utente="1">
-    <progetti>
-      <progetto titolo="26progetto" id_progetto="26"/>
-    </progetti>
-    <richieste/>
-    <commenti>
-      <commento id_commento="16">
-        <testo>commento</testo>
-      </commento>
-    </commenti>
-    <valutazioni_progetti>
-      <valutazione_progetto id_valutazione="8"/>
+      <valutazione_progetto id_valutazione="1" id_progetto="1" data_ora="2023-12-26 15:20:44" value="5"/>
     </valutazioni_progetti>
     <reports_progetti/>
-    <reports_commenti/>
-    <discussioni>
-      <discussione id_discussione="8" titolo="titolo discussione"/>
-      <discussione id_discussione="9" titolo="2"/>
-    </discussioni>
-    <valutazioni_commenti/>
-  </storico>
-  <storico id_utente="2">
-    <progetti/>
-    <richieste>
-      <richiesta id_richiesta="7"/>
-      <richiesta id_richiesta="8"/>
-      <richiesta id_richiesta="9"/>
-      <richiesta id_richiesta="10"/>
-      <richiesta id_richiesta="11"/>
-      <richiesta id_richiesta="12"/>
-      <richiesta id_richiesta="13"/>
-      <richiesta id_richiesta="14"/>
-      <richiesta id_richiesta="15"/>
-      <richiesta id_richiesta="16"/>
-    </richieste>
-    <commenti>
-      <commento id_commento="1">
-        <testo>asdadad</testo>
-      </commento>
-      <commento id_commento="2">
-        <testo>daswdqadww</testo>
-      </commento>
-      <commento id_commento="3">
-        <testo>xvxvxv</testo>
-      </commento>
-      <commento id_commento="4">
-        <testo>PROGETTO FATTO MOLTO BENE</testo>
-      </commento>
-      <commento id_commento="5">
-        <testo>sdada</testo>
-      </commento>
-      <commento id_commento="6">
-        <testo>ciao</testo>
-      </commento>
-      <commento id_commento="7">
-        <testo>ciao</testo>
-      </commento>
-    </commenti>
-    <valutazioni_progetti>
-      <valutazione_progetto id_valutazione="2"/>
-      <valutazione_progetto id_valutazione="3"/>
-      <valutazione_progetto id_valutazione="4"/>
-      <valutazione_progetto id_valutazione="5"/>
-      <valutazione_progetto id_valutazione="6"/>
-      <valutazione_progetto id_valutazione="7"/>
-      <valutazione_progetto id_valutazione="9"/>
-      <valutazione_progetto id_valutazione="10"/>
-      <valutazione_progetto id_valutazione="11"/>
-      <valutazione_progetto id_valutazione="13"/>
-    </valutazioni_progetti>
-    <reports_progetti>
-      <report_progetto id_report="2" tipo="spam"/>
-      <report_progetto id_report="3" tipo="spam"/>
-    </reports_progetti>
     <reports_commenti>
-      <report_commento id_report="3" tipo="spam"/>
-      <report_commento id_report="4" tipo="spam"/>
-      <report_commento id_report="5" tipo="spam"/>
-      <report_commento id_report="6" tipo="spam"/>
-      <report_commento id_report="7" tipo="Contenuti inesatti"/>
-      <report_commento id_report="8" tipo="Contenuti inesatti"/>
+      <report_commento id_report="1" tipo="spam" data_ora="2023-12-26 15:16:29" id_commento="1"/>
     </reports_commenti>
     <discussioni>
-      <discussione id_discussione="1" titolo="DIscussione deginitiva"/>
-      <discussione id_discussione="2" titolo="JUJUTSU KAISEN 12"/>
-      <discussione id_discussione="3" titolo="noooo "/>
-      <discussione id_discussione="4" titolo="titolo"/>
+      <discussione id_discussione="1" data_ora="2023-12-26 15:12:41" titolo="first"/>
+      <discussione id_discussione="2" data_ora="2023-12-26 16:43:44" titolo="zxczcz"/>
+      <discussione id_discussione="3" data_ora="2023-12-26 16:44:36" titolo="asdasd"/>
     </discussioni>
     <valutazioni_commenti>
-      <valutazione_commento id_valutazione="2"/>
-      <valutazione_commento id_valutazione="3"/>
-      <valutazione_commento id_valutazione="4"/>
-      <valutazione_commento id_valutazione="5"/>
-      <valutazione_commento id_valutazione="6"/>
-      <valutazione_commento id_valutazione="7"/>
-      <valutazione_commento id_valutazione="8"/>
-      <valutazione_commento id_valutazione="9"/>
-      <valutazione_commento id_valutazione="10"/>
-      <valutazione_commento id_valutazione="12"/>
-      <valutazione_commento id_valutazione="13"/>
-      <valutazione_commento id_valutazione="14"/>
+      <valutazione_commento id_valutazione="2" data_ora="2023-12-26 15:38:35" id_commento="1" id_progetto="1">
+        <utilita>2</utilita>
+        <livello_di_accordo>5</livello_di_accordo>
+      </valutazione_commento>
     </valutazioni_commenti>
-  </storico>
-  <storico id_utente="5">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni_progetti>
-      <valutazione_progetto id_valutazione="12"/>
-    </valutazioni_progetti>
-    <reports_progetti/>
-    <reports_commenti/>
-    <discussioni/>
-    <valutazioni_commenti>
-      <valutazione_commento id_valutazione="11"/>
-    </valutazioni_commenti>
-  </storico>
-  <storico id_utente="3">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni_progetti/>
-    <reports_progetti/>
-    <reports_commenti/>
-    <discussioni/>
-    <valutazioni_commenti/>
-  </storico>
-  <storico id_utente="3">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni_progetti/>
-    <reports_progetti/>
-    <reports_commenti/>
-    <discussioni/>
-    <valutazioni_commenti/>
-  </storico>
-  <storico id_utente="3">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni_progetti/>
-    <reports_progetti/>
-    <reports_commenti/>
-    <discussioni/>
-    <valutazioni_commenti/>
-  </storico>
-  <storico id_utente="4">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni_progetti>
-      <valutazione_progetto id_valutazione="14"/>
-    </valutazioni_progetti>
-    <reports_progetti/>
-    <reports_commenti/>
-    <discussioni/>
-    <valutazioni_commenti/>
-  </storico>
-  <storico id_utente="4">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni_progetti/>
-    <reports_progetti/>
-    <reports_commenti/>
-    <discussioni/>
-    <valutazioni_commenti/>
-  </storico>
-  <storico id_utente="5">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni_progetti/>
-    <reports_progetti/>
-    <reports_commenti/>
-    <discussioni/>
-    <valutazioni_commenti/>
-  </storico>
-  <storico id_utente="4">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni_progetti/>
-    <reports_progetti/>
-    <reports_commenti/>
-    <discussioni/>
-    <valutazioni_commenti/>
-  </storico>
-  <storico id_utente="4">
-    <progetti/>
-    <richieste/>
-    <commenti/>
-    <valutazioni_progetti/>
-    <reports_progetti/>
-    <reports_commenti/>
-    <discussioni/>
-    <valutazioni_commenti/>
   </storico>
 </storici>

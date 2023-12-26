@@ -80,6 +80,25 @@ foreach ($nodes as $node) {
     }
 }
 
+//AGGIUNGERE PARTECIPANTE IN DSICUSSIONI.XML
+
+$xmlFile = "../data/xml/discussioni.xml";
+$doc = getDOMdocument($xmlFile);
+$xpath = new DOMXPath($doc);
+
+$discussione = $xpath->query("/discussioni/discussione[@id = '$id_discussione']")->item(0);
+$partecipanti = $discussione->getElementsByTagName('partecipanti')->item(0);
+
+$discPartecipante = $doc->createElement('partecipante');
+$discPartecipante->setAttribute('id_partecipante', $id_poster);
+
+$partecipanti->appendChild($discPartecipante);
+
+$doc->formatOutput = true;
+$xmlString = $doc->saveXML(); //ottengo il file xml come stringa
+file_put_contents($xmlFile, $xmlString);
+
+
 //AGGIUNTA IN STORICO.XML
 
 $xmlFile = "../data/xml/storici.xml";
@@ -93,6 +112,7 @@ foreach ($nodes as $node) {
 
         $stoDiscussione = $doc->createElement('discussione');
         $stoDiscussione->setAttribute('id_discussione', $id_discussione);
+        $stoDiscussione->setAttribute('data_ora', $data_ora);
         $stoDiscussione->setAttribute('titolo', $newTitolo);
         $stoDiscussioni = $node->getElementsByTagName('discussioni')->item(0);
         $stoDiscussioni->appendChild($stoDiscussione);
