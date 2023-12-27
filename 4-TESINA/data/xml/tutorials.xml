@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="1">
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="2">
   <tutorial_progetto id="1" id_progetto="1">
     <step num_step="1" nome_file_img="img/steps/img_step_658adf4561562.png">
       <descrizione>primo steè</descrizione>
     </step>
     <step num_step="2" nome_file_img="img/steps/img_step_658adf4f59020.jpg">
       <descrizione>secondo steè</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="2" id_progetto="2">
+    <step num_step="1" nome_file_img="img/steps/img_step_658c078a7b9a1.jpg">
+      <descrizione>qweqweq</descrizione>
     </step>
   </tutorial_progetto>
 </tutorials_progetti>

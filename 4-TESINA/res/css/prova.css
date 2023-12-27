@@ -1,25 +1,37 @@
-.lista {
-    max-width:max-content;
-    margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-  }
 
-  .evento {
-    padding: 16px;
-    color: #333;
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.responsive-table li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+    background-color: #95A5A6;
     font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .data {
-    font-size: 12px;
-    color: #999;
-    margin-left: 100px;
-  }
- 
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    flex-basis: 100%;
+}
 
 
 
+
+/* Aggiungi stili per le colonne su schermi più piccoli se necessario */

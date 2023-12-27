@@ -54,7 +54,6 @@
       <div class="dashboard">
         <div class="bar"></div>
         <div class="toolbar">
-          <div class="login"><a href="../login.php">Accedi</a></div>
           <div class="searchbar">
             <input type="text" id="searchInput" placeholder="Cerca per titolo...">
             <select id="categoriaSelect">

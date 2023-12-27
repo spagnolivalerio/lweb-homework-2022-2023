@@ -45,6 +45,7 @@
             <div class="homepage-sidebar-list">
                 <a class="elem" href="homepage.php">Homepage</a>
                 <a class="elem" href="bacheca.php">Bacheca</a>
+                <a class="elem" href="moderator_dashboard.php">Dashboard</a>
                 <a class="elem" href="view_bozze.php">Bozze</a>
                 <a class="elem" href="view_storico.php">Storico</a>
                 <div class="divisore"></div>
@@ -98,12 +99,11 @@
                 $tabella = $_GET['tipo_tabella'];
             }
 
-            $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
             $query = "SELECT * FROM utente WHERE id = " . $utente_id;
             $result = $conn->query($query);
             $row = $result->fetch_assoc();
-            $storico = getStoricoUtente($root, $id_utente);
-            $progetti = getStoricoProgetti($root, $storico);
+            $storico = getStoricoUtente($root, $utente_id);
+            
 
             echo "                <div class=\"profile\">\n";
             echo "                    <div class=\"profile-info\">\n";
@@ -116,6 +116,10 @@
             echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=3\">DISCUSSIONI APERTE</a>\n";
             echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=4\">VALUTAZIONI PROGETTI</a>\n";
             echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=5\">VALUTAZIONI COMMENTI</a>\n";
+            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=6\">REPORT COMMENTI</a>\n";
+            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=7\">REPORT PROGETTI</a>\n";
+            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=8\">RICHIESTE ACCESSO</a>\n";
+            
             echo "                    </div>\n";
             echo "                </div>\n";
 
@@ -131,16 +135,18 @@
                 echo "                            <th>Data di Pubblicazione</th>\n";
                 echo "                        </tr>\n";
 
+                $progetti = getStoricoProgetti($root, $storico);
             
                 foreach($progetti as $progetto){
 
                     $id_progetto = $progetto->getAttribute('id_progetto');
                     $titolo = $progetto->getAttribute('titolo');
+                    $data = $progetto->getAttribute('data_ora');
 
                     echo "                        <tr>\n";
-                    echo "                            <td>" . $id_progetto . "</td>\n";
+                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_progetto . "</a></td>\n";
                     echo "                            <td>" . $titolo . "</td>\n";
-                    echo "                            <td>2023-01-01</td>\n";
+                    echo "                            <td>" . $data . "</td>\n";
                     echo "                        </tr>\n";
                 }
             }elseif($tabella == 2){
@@ -151,68 +157,175 @@
                 echo "                            <th>Data di Pubblicazione</th>\n";
                 echo "                        </tr>\n";
 
-            
+                $commenti = getStoricoCommenti($root, $storico);
+
                 foreach($commenti as $commento){
 
+                    $id_commento = $commento->getAttribute('id_commento');
+                    $id_discussione = $commento->getAttribute('id_discussione');
+                    $testo = $commento->getElementsByTagName('testo')->item(0)->nodeValue;
+                    $data = $commento->getAttribute('data_ora');
+                    $discussione = getDiscussione($root, $id_discussione);
+                    $id_progetto = $discussione->getAttribute('id_progetto');
 
                     echo "                        <tr>\n";
-                    echo "                            <td></td>\n";
-                    echo "                            <td></td>\n";
-                    echo "                            <td>2023-01-01</td>\n";
+                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#" . $id_discussione . "'>" . $id_commento . "</a></td>\n";
+                    echo "                            <td>" . $testo . "</td>\n";
+                    echo "                            <td>" . $data . "</td>\n";
                     echo "                        </tr>\n";
                 }
             }elseif($tabella == 3){
 
                 echo "                        <tr>\n";
                 echo "                            <th>ID discussione</th>\n";
-                echo "                            <th>Titolo del commento</th>\n";
+                echo "                            <th>Titolo</th>\n";
                 echo "                            <th>Data di Pubblicazione</th>\n";
                 echo "                        </tr>\n";
 
-            
-                foreach($discussioni as $discussioni){
+                
+                $discussioni_aperte = getStoricoDiscussioni($root, $storico);
 
+                foreach($discussioni_aperte as $discussione_aperta){
+                    $data = $discussione_aperta->getAttribute('data_ora');
+                    $id_discussione = $discussione_aperta->getAttribute('id_discussione');
+                    $titolo = $discussione_aperta->getAttribute('titolo');
+                    $discussione = getDiscussione($root, $id_discussione);
+                    $id_progetto = $discussione->getAttribute('id_progetto');
+                    
 
                     echo "                        <tr>\n";
-                    echo "                            <td></td>\n";
-                    echo "                            <td></td>\n";
-                    echo "                            <td>2023-01-01</td>\n";
+                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#" . $id_discussione . "'>" . $id_discussione . "</a></td>\n";
+                    echo "                            <td>" . $titolo . "</td>\n";
+                    echo "                            <td>" . $data . "</td>\n";
                     echo "                        </tr>\n";
                 }
             }elseif($tabella == 4){
 
                 echo "                        <tr>\n";
-                echo "                            <th>ID commento</th>\n";
-                echo "                            <th>Titolo del commento</th>\n";
+                echo "                            <th>ID progetto</th>\n";
+                echo "                            <th>Valutazione in stelle</th>\n";
                 echo "                            <th>Data di Pubblicazione</th>\n";
                 echo "                        </tr>\n";
 
+                $valutazioniProgetti = getStoricoValutazioniProgetti($root, $storico);
             
-                foreach($valprogetti as $valprogetto){
+                foreach($valutazioniProgetti as $valutazioneProgetto){
 
+                    $data = $valutazioneProgetto->getAttribute('data_ora');
+                    $id_progetto = $valutazioneProgetto->getAttribute('id_progetto');
+                    $value = $valutazioneProgetto->getAttribute('value');
 
                     echo "                        <tr>\n";
-                    echo "                            <td></td>\n";
-                    echo "                            <td></td>\n";
-                    echo "                            <td>2023-01-01</td>\n";
+                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_progetto . "</a></td>\n";
+                    echo "                            <td>" . $value . "</td>\n";
+                    echo "                            <td>" . $data . "</td>\n";
                     echo "                        </tr>\n";
                 }
             }elseif($tabella == 5){
 
                 echo "                        <tr>\n";
                 echo "                            <th>ID commento</th>\n";
-                echo "                            <th>Titolo del commento</th>\n";
+                echo "                            <th>Giudizio sull'utilità</th>\n";
+                echo "                            <th>Giudizio sul livello di accordo</th>\n";
                 echo "                            <th>Data di Pubblicazione</th>\n";
                 echo "                        </tr>\n";
 
             
-                foreach($valcommenti as $valcommento){
+                $valutazioniCommenti = getStoricoValutazioniCommenti($root, $storico);
+
+                foreach($valutazioniCommenti as $valutazioneCommento){
+                    $data = $valutazioneCommento->getAttribute('data_ora');
+                    $id_progetto = $valutazioneCommento->getAttribute('id_progetto');
+                    $id_commento = $valutazioneCommento->getAttribute('id_commento');
+                    $utilità = $valutazioneCommento->getElementsByTagName('utilita')->item(0)->nodeValue;
+                    $accordo = $valutazioneCommento->getElementsByTagName('livello_di_accordo')->item(0)->nodeValue;
 
 
                     echo "                        <tr>\n";
-                    echo "                            <td></td>\n";
-                    echo "                            <td></td>\n";
-                    echo "                            <td>2023-01-01</td>\n";
+                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_commento . "</a></td>\n";
+                    echo "                            <td>" . $utilità . "</td>\n";
+                    echo "                            <td>" . $accordo . "</td>\n";
+                    echo "                            <td>" . $data . "</td>\n";
+                    echo "                        </tr>\n";
+                }
+            }elseif($tabella == 6){
+
+                echo "                        <tr>\n";
+                echo "                            <th>ID commento</th>\n";
+                echo "                            <th>Categoria del report</th>\n";
+                echo "                            <th>Creator del commento</th>\n";
+                echo "                            <th>Data di Pubblicazione</th>\n";
+                echo "                        </tr>\n";
+
+            
+                $reports_commenti = getStoricoReportsCommenti($root, $storico);
+
+                foreach ($reports_commenti as $report_commento) {
+
+                    $data = $report_commento->getAttribute('data_ora');
+                    $id_commento = $report_commento->getAttribute('id_commento');
+                    $tipo = $report_commento->getAttribute('tipo');
+                    $commento = getCommento($root, $id_commento);
+                    $commentatore = $commento->getAttribute('commentatore');
+                    $id_discussione = $commento->getAttribute('id_discussione');
+                    $discussione = getDiscussione($root, $id_discussione);
+                    $id_progetto = $discussione->getAttribute('id_progetto');
+
+                    echo "                        <tr>\n";
+                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_commento . "</a></td>\n";
+                    echo "                            <td>" . $tipo . "</td>\n";
+                    echo "                            <td>" . $commentatore . "</td>\n";
+                    echo "                            <td>" . $data . "</td>\n";
+                    echo "                        </tr>\n";
+                }
+            }elseif($tabella == 7){
+
+                echo "                        <tr>\n";
+                echo "                            <th>ID progetto</th>\n";
+                echo "                            <th>Categoria del report</th>\n";
+                echo "                            <th>Creator del progetto</th>\n";
+                echo "                            <th>Data di Pubblicazione</th>\n";
+                echo "                        </tr>\n";
+
+            
+                $reports_progetti = getStoricoReportsProgetti($root, $storico);
+            
+                foreach ($reports_progetti as $report_progetto) {
+                    $data = $report_progetto->getAttribute('data_ora');
+                    $id_progetto = $report_progetto->getAttribute('id_progetto');
+                    $tipo = $report_progetto->getAttribute('tipo');
+                    $progetto = getProgetto($root, $id_progetto);
+                    $publisher = $progetto->getAttribute('username_creator');
+
+                    echo "                        <tr>\n";
+                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_progetto . "</a></td>\n";
+                    echo "                            <td>" . $tipo . "</td>\n";
+                    echo "                            <td>" . $publisher . "</td>\n";
+                    echo "                            <td>" . $data . "</td>\n";
+                    echo "                        </tr>\n";
+                }
+            }elseif($tabella == 8){
+
+                echo "                        <tr>\n";
+                echo "                            <th>ID discussione</th>\n";
+                echo "                            <th>Titolo Discussione</th>\n";
+                echo "                            <th>Data di Pubblicazione</th>\n";
+                echo "                        </tr>\n";
+
+            
+                $richieste = getStoricoRichieste($root, $storico);
+             
+                foreach($richieste as $richiesta){
+                    $data = $richiesta->getAttribute('data_ora');
+                    $id_discussione = $richiesta->getAttribute('id_discussione');
+                    $discussione = getDiscussione($root, $id_discussione);
+                    $titolo = $discussione->getAttribute('titolo');
+                    $id_progetto = $discussione->getAttribute('id_progetto');
+
+                    echo "                        <tr>\n";
+                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_discussione . "</a></td>\n";
+                    echo "                            <td>" . $titolo . "</td>\n";
+                    echo "                            <td>" . $data . "</td>\n";
                     echo "                        </tr>\n";
                 }
             }

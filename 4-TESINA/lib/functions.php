@@ -363,7 +363,6 @@ function calcolaReputazione($root, $id_utente, $conn){
 
 
 
-function chiudi_discussione($root, $id_utente)
-{};
+
 
 ?>

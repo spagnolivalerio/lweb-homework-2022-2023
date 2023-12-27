@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="2" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
   <progetto id="1" username_creator="dan" id_creator="7" tempo_medio="5" data_pubblicazione="2023-12-26 15:12:32" visualizzazioni="0" nome_file_img="img/proj/img_proj_658adf3d28ade.jpg" difficolta="facile">
     <titolo>JUJUTSU KAISEN 12</titolo>
     <categorie>
       <categoria id_categoria="1"/>
     </categorie>
     <descrizione>anime bello</descrizione>
-    <reports_progetti/>
+    <reports_progetti>
+      <report_progetto id_report="1"/>
+    </reports_progetti>
     <discussioni>
       <discussione id_discussione="1"/>
       <discussione id_discussione="2"/>
       <discussione id_discussione="3"/>
+      <discussione id_discussione="4"/>
     </discussioni>
     <tutorial_progetto id_tutorial="1"/>
     <valutazioni>
       <valutazione id_valutazione="1"/>
     </valutazioni>
+  </progetto>
+  <progetto id="2" username_creator="dan" id_creator="7" tempo_medio="3" data_pubblicazione="2023-12-27 12:16:27" visualizzazioni="0" nome_file_img="img/proj/img_proj_658c07838a69d.jpg" difficolta="facile">
+    <titolo>JUJUTSU KAISEN 12</titolo>
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+      <categoria id_categoria="3"/>
+    </categorie>
+    <descrizione>qweqe</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="2"/>
+    <valutazioni/>
   </progetto>
 </progetti>

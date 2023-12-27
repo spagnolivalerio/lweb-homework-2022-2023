@@ -7,9 +7,9 @@
     $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
     $path = "index.php"; 
-    $std = "standard";     
+    $mod = "moderatore";     
 
-    addressing($_SESSION['Tipo_utente'], $std, $path);
+    addressing($_SESSION['Tipo_utente'], $mod, $path);
 
     if (isset($_GET['id_progetto'])) {
       $id_progetto = $_GET['id_progetto'];
@@ -44,6 +44,7 @@
         <div class="homepage-sidebar-list">
           <a class="elem" href="homepage.php">Homepage</a>
           <a class="elem" href="bacheca.php">Bacheca</a>
+          <a class="elem" href="moderator_dashboard.php">Dashboard</a>
           <a class="elem" href="view_bozze.php">Bozze</a>
           <a class="elem" href="view_storico.php">Storico</a>
           <div class="divisore"></div>

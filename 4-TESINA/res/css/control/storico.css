@@ -2,6 +2,7 @@
     margin-top: 100px;
     display: flex;
     flex-direction: row;
+    height: 300px;
     
 }
 
@@ -22,7 +23,7 @@
 }
 
 .user-info {
-    border: 1px solid black;
+    box-shadow: 0 3rem 3rem -2rem hsl(200 50% 20% / 40%);
     width: 90%;
     height: 120px;
     transition: all 0.3s ease; /* Aggiunto un effetto di transizione */

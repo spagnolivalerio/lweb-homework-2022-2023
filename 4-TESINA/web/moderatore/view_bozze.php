@@ -5,8 +5,8 @@
     require_once($root . "lib/get_nodes.php");
     $id_utente = $_SESSION['id_utente'];
     $path = "index.php"; 
-    $std = "standard";     
-    addressing($_SESSION['Tipo_utente'], $std, $path);
+    $mod = "moderatore";     
+    addressing($_SESSION['Tipo_utente'], $mod, $path);
 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 

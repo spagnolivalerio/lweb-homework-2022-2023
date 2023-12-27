@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="3" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  <discussione titolo="first" id_poster="7" risolta="false" id="1" id_progetto="1" data_ora="2023-12-26 15:12:41" autore="dan">
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="4" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <discussione titolo="first" id_poster="7" risolta="true" id="1" id_progetto="1" data_ora="2023-12-26 15:12:41" autore="dan">
     <commenti>
       <commento id_commento="1"/>
     </commenti>
@@ -21,6 +21,13 @@
     <descrizione>asdasd</descrizione>
     <partecipanti>
       <partecipante id_partecipante="7"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="AOFRA" id_poster="3" risolta="true" id="4" id_progetto="1" data_ora="2023-12-27 14:19:16" autore="moderatore1">
+    <commenti/>
+    <descrizione>asdasda</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="3"/>
     </partecipanti>
   </discussione>
 </discussioni>

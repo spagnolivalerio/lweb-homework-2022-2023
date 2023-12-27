@@ -35,6 +35,8 @@
     $descrizione_step = $step->getElementsByTagName('descrizione')->item(0)->nodeValue; 
     $img_path = $step->getAttribute('nome_file_img');
 
+    $progetto = getProgetto($root, $id_progetto);
+    $id_creator = $progetto->getAttribute('id_creator');
     $reports_progetto = getSegnalazioniProgetto($root, $id_progetto);
     $reported_project = already_reported($reports_progetto, $id_utente);
     $valutazioni_progetto = getValutazioniProgetto($root, $id_progetto);
@@ -78,6 +80,7 @@
           </div>
           </div>
           <div class="dashboard">
+          <div class="bar"></div>
             <div class="toolbar"></div>
               <?php
 
@@ -107,6 +110,15 @@
               }
               echo "        </div>\n";
               echo "        </form>\n";
+
+              //DA POSIZIONARE
+              if($id_creator === $id_utente){
+                echo "      <form class=\"\" action=\"../../lib/rimuovere_progetto.php\" method=\"post\">\n";
+                echo "        <input class=\"\" type=\"submit\" value=\"🗑️\">\n";
+                echo "        <input class=\"\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
+                echo "      </form>\n";
+              }
+
               echo "    </div>\n";
               echo "    <div class=\"options\">";
               echo "    <div class=\"options-title\"><h2>DICCI LA TUA</h2></div>";
@@ -178,6 +190,7 @@
                 $titolo = $discussione->getAttribute('titolo');
                 $descrizione = $discussione->getElementsByTagName('descrizione')->item(0)->nodeValue;
                 $autore = $discussione->getAttribute('autore');
+                $id_autore = $discussione->getAttribute('id_poster');
                 $data_ora = $discussione->getAttribute('data_ora');
                 $risolta = $discussione->getAttribute('risolta');
                 $commenti = getCommenti($root, $id_discussione);
@@ -191,6 +204,18 @@
                 echo "<div class=\"discussion-container\">\n";
                 echo "    <div class=\"discussion-header\" id=\"" . $id_discussione . "\">\n";
                 echo "        <h1 class=\"discussion-title\">$titolo</h1>\n";
+
+                //DA POSIZIONARE
+                if($risolta == "false"){
+                  if($id_autore === $id_utente){
+                    echo "      <form class=\"\" action=\"../../lib/chiudi_discussione.php\" method=\"post\">\n";
+                    echo "        <input class=\"\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
+                    echo "        <input class=\"\" name=\"id_discussione\" type=\"hidden\" value=\"$id_discussione\">\n";
+                    echo "        <button type=\"submit\" name=\"risolta\" value=\"true\">Contrassegna come risolta</button>\n";
+                    echo "      </form>\n";
+                  }
+                }
+
                 echo "        <p class=\"discussion-info\">\n";
                 echo "            <span>$autore</span>\n";
                 echo "            <span class=\"datetime\">$data_ora</span>\n";
@@ -333,4 +358,3 @@
 
 </html>
 
-</html>

@@ -1,0 +1,99 @@
+
+.flex-container{
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    justify-content: space-around;
+    height: fit-content;
+    
+}
+
+a{
+    text-decoration: none;
+    color: inherit; 
+}
+
+
+.views-info {
+    border: 1px solid #333; /* Colore del bordo */
+    width: 250px;
+    height: 250px;
+    margin: 30px;
+    background-color: whitesmoke; /* Colore di sfondo */
+    border-radius: 15px; /* Bordo arrotondato */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombra */
+    transition: background-color 0.3s ease-in-out; /* Effetto di transizione */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.icona{
+    font-size: 80px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.testo{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+
+}
+
+
+
+
+.project-info{
+    border: 1px solid #333; /* Colore del bordo */
+    width: 250px;
+    height: 250px;
+    margin: 30px;
+    background-color: whitesmoke; /* Colore di sfondo */
+    border-radius: 15px; /* Bordo arrotondato */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombra */
+    transition: background-color 0.3s ease-in-out; /* Effetto di transizione */
+    display: flex;
+    flex-direction: column;
+}
+
+.richieste-info{
+    border: 1px solid #333; /* Colore del bordo */
+    width: 250px;
+    height: 250px;
+    margin: 30px;
+    background-color: whitesmoke; /* Colore di sfondo */
+    border-radius: 15px; /* Bordo arrotondato */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombra */
+    transition: background-color 0.3s ease-in-out; /* Effetto di transizione */
+    display: flex;
+    flex-direction: column;
+}
+
+.report-info{
+    border: 1px solid #333; /* Colore del bordo */
+    width: 250px;
+    height: 250px;
+    margin: 30px;
+    background-color: whitesmoke; /* Colore di sfondo */
+    border-radius: 15px; /* Bordo arrotondato */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombra */
+    transition: background-color 0.3s ease-in-out; /* Effetto di transizione */
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-utenti{
+    border: 1px solid #333; /* Colore del bordo */
+    width: 250px;
+    height: 250px;
+    margin: 30px;
+    background-color: whitesmoke; /* Colore di sfondo */
+    border-radius: 15px; /* Bordo arrotondato */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombra */
+    transition: background-color 0.3s ease-in-out; /* Effetto di transizione */
+    display: flex;
+    flex-direction: column;
+}
