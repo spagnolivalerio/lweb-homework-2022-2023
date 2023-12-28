@@ -9,6 +9,7 @@ if (!isset($_SESSION['Tipo_utente'])) {
 
 require_once 'functions.php';
 $xmlFile = "../data/xml/reports_commenti.xml";
+$root = "../";
 
 if (!isset($_POST['testo']) || empty($_POST['testo'])) {
     exit;
@@ -38,6 +39,9 @@ $id_segnalatore = $_SESSION['id_utente'];
 $id_segnalazione = generate_id($xmlFile);
 $data_ora = new DateTime();
 $data_ora = $data_ora->format('Y-m-d H:i:s');
+
+$commento = getCommento($root, $id_commento);
+$commentatore = $commento->getAttribute('commentatore');
 
 //AGGIUNTA IN REPORTS_COMMENTI.XML
 
@@ -102,6 +106,7 @@ foreach ($nodes as $node) {
         $stoReport->setAttribute('tipo', $newTipoValue);
         $stoReport->setAttribute('data_ora', $data_ora);
         $stoReport->setAttribute('id_commento', $id_commento);
+        $stoReport->setAttribute('commentatore', $commentatore);
         $stoReports = $node->getElementsByTagName('reports_commenti')->item(0);
         $stoReports->appendChild($stoReport);
 

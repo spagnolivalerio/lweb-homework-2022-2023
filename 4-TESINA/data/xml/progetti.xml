@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="3" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="3" username_creator="dan" id_creator="7" tempo_medio="6" data_pubblicazione="2023-12-28 11:01:12" visualizzazioni="3" nome_file_img="img/proj/img_proj_658d475d12b00.jpg" difficolta="medio">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="4" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="3" username_creator="dan" id_creator="4" tempo_medio="8" data_pubblicazione="2023-12-28 15:54:31" visualizzazioni="32" nome_file_img="img/proj/img_proj_658d8c1a74bbf.jpg" difficolta="medio" clearance="1">
     <titolo>AOFRA</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -8,12 +8,17 @@
       <categoria id_categoria="3"/>
       <categoria id_categoria="4"/>
     </categorie>
-    <descrizione>adadadasd</descrizione>
-    <reports_progetti/>
+    <descrizione>xvxcvx</descrizione>
+    <reports_progetti>
+      <report_progetto id_report="4"/>
+      <report_progetto id_report="5"/>
+    </reports_progetti>
     <discussioni>
-      <discussione id_discussione="6"/>
+      <discussione id_discussione="4"/>
     </discussioni>
     <tutorial_progetto id_tutorial="3"/>
-    <valutazioni/>
+    <valutazioni>
+      <valutazione id_valutazione="3"/>
+    </valutazioni>
   </progetto>
 </progetti>

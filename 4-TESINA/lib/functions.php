@@ -361,6 +361,33 @@ function calcolaReputazione($root, $id_utente, $conn){
 
 }
 
+function updateClearance($root, $id_utente, $conn){
+
+    $query = "SELECT * FROM utente WHERE id = " . $id_utente;
+    $result = $conn->query($query);
+    $row = $result->fetch_assoc();
+
+    $livello_utente = $row['livello'];
+    
+    if($livello_utente <= 2){
+        $clearance_utente = 1;
+    }elseif($livello_utente > 2 && $livello_utente <= 4 ){
+        $clearance_utente = 2;
+    }elseif($livello_utente > 4 && $livello_utente <= 6 ){
+        $clearance_utente = 3;
+    }elseif($livello_utente > 6 && $livello_utente <= 8 ){
+        $clearance_utente = 4;
+    }elseif($livello_utente > 8){
+        $clearance_utente = 5;
+    }
+
+    $update_clearance_query = "UPDATE utente SET clearance = '$clearance_utente' WHERE id = '$id_utente'";
+   
+    $conn->query($update_clearance_query);
+
+    return $clearance_utente;
+}
+
 
 
 function updateViews($root, $id_progetto){

@@ -3,6 +3,7 @@
     include('../../conn.php');
     $root = "../../";
     require_once($root . "lib/get_nodes.php");
+    require_once($root . "lib/functions.php");
     $id_utente = $_SESSION['id_utente'];
     $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
@@ -14,6 +15,11 @@
     if (isset($_GET['id_progetto'])) {
       $id_progetto = $_GET['id_progetto'];
     } 
+
+
+  calcolaReputazione($root, $_SESSION['id_utente'], $conn);
+  $clearance_utente = updateClearance($root, $_SESSION['id_utente'], $conn);
+  
 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 
@@ -86,6 +92,8 @@
                 $img_path = $root . $progetto->getAttribute('nome_file_img');
                 $id_progetto = $progetto->getAttribute('id'); 
                 $id_creator = $progetto->getAttribute('id_creator'); 
+                $clearance_progetto = $progetto->getAttribute('clearance');
+                $livello_richiesto = intval($clearance_progetto) * 2;
 
                 $query = "SELECT * FROM utente WHERE id = '$id_creator'"; 
                 $res = mysqli_query($conn, $query);
@@ -122,11 +130,18 @@
               echo "    </div>\n";
               echo "    <div class=\"flexbox2\">\n";
               echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
-              echo "      <form class=\"card-commenta\" action=\"view.php\" method=\"post\">\n";
-              echo "        <div class=\"animation\"></div>\n";
-              echo "        <button class=\"submit\" type=\"submit\">Dettagli</button>\n";
-              echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
-              echo "      </form>\n";
+
+              if($clearance_utente >= $clearance_progetto){
+                echo "      <form class=\"card-commenta\" action=\"view.php\" method=\"post\">\n";
+                echo "        <div class=\"animation\"></div>\n";
+                echo "        <button class=\"submit\" type=\"submit\">Dettagli</button>\n";
+                echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
+                echo "      </form>\n";
+              }else{
+                echo "    <div class=\"card-user\">Accessibile al Livello ". $livello_richiesto ." </div>\n";
+              }
+
+
               echo "    </div>\n";
               echo "  </div>\n";
               echo "</div>\n";

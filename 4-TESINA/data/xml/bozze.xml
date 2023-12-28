@@ -1,23 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="5" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
-  <bozza id="3" titolo="AOFRA" id_creator="3" tempo_medio="5" data_pubblicazione="2023-12-28 10:59:34" difficolta="medio" nome_file_img="img/proj/img_proj_658d47067a3cc.jpg">
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-      <categoria id_categoria="3"/>
-      <categoria id_categoria="4"/>
-    </categorie>
-    <descrizione>buobb</descrizione>
-    <tutorial_bozza/>
-  </bozza>
-  <bozza id="4" titolo="JUJUTSU KAISEN 12" id_creator="3" tempo_medio="3" data_pubblicazione="2023-12-28 10:59:56" difficolta="facile" nome_file_img="img/proj/img_proj_658d471c94ed2.jpg">
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-      <categoria id_categoria="3"/>
-      <categoria id_categoria="4"/>
-    </categorie>
-    <descrizione>ertertert</descrizione>
-    <tutorial_bozza/>
-  </bozza>
-</bozze>
+<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="8" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd"/>

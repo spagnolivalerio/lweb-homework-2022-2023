@@ -56,12 +56,9 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
 
     $tempo_medio = $thisBozza->getAttribute('tempo_medio'); 
     $difficolta = $thisBozza->getAttribute('difficolta'); 
+    $clearence = $thisBozza->getAttribute('clearence'); 
 
-    echo"$titolo";
-    echo"$tempo_medio";
-    echo"$difficolta";
-    echo"$descrizione_progetto";
-    print_r($categorieArray);
+
     
 
 }
@@ -111,6 +108,10 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
   <!-- Tempo Medio -->
   <label for="tempo_medio">Tempo Medio (in minuti): </label>
   <input type="number"  name="tempo_medio" min="1" <?php if(isset($flag)) {echo "value=\"$tempo_medio\""; }?>></input>
+  <br>
+
+  <label for="clearence">Livello di clearence (da 1 a 5): </label>
+  <input type="number"  name="clearence" min="1" max="5"  <?php if(isset($flag)) {echo "value=\"$clearence\""; }?>></input>
   <br>
 
   <?php 

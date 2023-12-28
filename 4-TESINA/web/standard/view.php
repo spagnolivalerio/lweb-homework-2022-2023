@@ -348,12 +348,7 @@
         </div>
     </div>
     
-    <?php
-
-    calcolaReputazione($root, $_SESSION['id_utente'], $conn);
-    
-
-    ?>
+   
   </body>
 
 </html>

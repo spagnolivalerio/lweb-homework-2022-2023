@@ -23,7 +23,7 @@
       <title>THE PROJECT SOCIETY</title>
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/prova.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
 
   </head>
 
@@ -59,7 +59,7 @@
 
 
         if($numSegnalazioniP > 0 || $numSegnalazioniC > 0 ){
-            echo "      <div class=\"title\">SEGNALAZIONI GESTIRE</div>\n";
+            echo "      <div class=\"title\">SEGNALAZIONI DA GESTIRE</div>\n";
             echo "        <table class=\"tabella\">\n";
             echo "          <thead>\n";
             echo "            <tr>\n";
@@ -107,33 +107,36 @@
                 $data = $segnalazione_commento->getAttribute('data_ora');
 
                 $commento = getCommento($root, $id_commento);
-                $reported_user = $commento->getAttribute('commentatore');
-                $id_discussione = $commento->getAttribute('id_discussione');
-                $discussione = getDiscussione($root, $id_discussione);
-                $id_progetto = $commento->getAttribute('id_progetto');
+
+                if($commento != null){
+                  $reported_user = $commento->getAttribute('commentatore');
+                  $id_discussione = $commento->getAttribute('id_discussione');
+                  $discussione = getDiscussione($root, $id_discussione);
+                  $id_progetto = $commento->getAttribute('id_progetto');
 
             
 
-                echo "            <tr>\n";
-                echo "              <td>". $reported_user ."</td>\n";
-                echo "              <td>Commento</td>\n";
-                echo "              <td>". $data ."</td>\n";
-                echo "              <td>\n";
-                echo "                <form action=\"view.php#$id_commento\" method=\"get\">\n";
-                echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\">\n";
-                echo "                  <button type=\"submit\">&#128269;</button>\n";
-                echo "                </form>\n";
-                echo "                <form action=\"../../lib/rimuovere_commento.php\" method=\"post\">\n";
-                echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\">\n";
-                echo "                  <input type=\"hidden\" name=\"id_discussione\" value=\"" . $id_discussione . "\">\n";
-                echo "                  <input type=\"hidden\" name=\"id_commento\" value=\"" . $id_commento . "\">\n";
-                echo "                  <button type=\"submit\">Rimuovi Contenuto</button>\n";
-                echo "                </form>\n";
-                echo "              </td>\n";
+                  echo "            <tr>\n";
+                  echo "              <td>". $reported_user ."</td>\n";
+                  echo "              <td>Commento</td>\n";
+                  echo "              <td>". $data ."</td>\n";
+                  echo "              <td>\n";
+                  echo "                <form action=\"view.php\" method=\"get\">\n";
+                  echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\">\n";
+                  echo "                  <button type=\"submit\">&#128269;</button>\n";
+                  echo "                </form>\n";
+                  echo "                <form action=\"../../lib/rimuovere_commento.php\" method=\"post\">\n";
+                  echo "                  <input type=\"hidden\" name=\"id_commento\" value=\"" . $id_commento . "\">\n";
+                  echo "                  <input type=\"hidden\" name=\"id_discussione\" value=\"" . $id_discussione . "\">\n";
+                  echo "                  <input type=\"hidden\" name=\"id_progetto\"  value=\" . $id_progetto . \">\n";
+                  echo "                  <button type=\"submit\">Rimuovi Contenuto</button>\n";
+                  echo "                </form>\n";
+                  echo "              </td>\n";
 
 
-                echo "            </tr>\n";
-            }
+                  echo "            </tr>\n";
+                }
+              }
         
         echo "          </tbody>\n";
         echo "        </table>\n";                     

@@ -4,6 +4,7 @@ session_start();
 require_once 'functions.php';
 $xmlFile = "../data/xml/discussioni.xml";
 
+
 if (!isset($_POST['titolo']) || empty($_POST['titolo'])) {
     exit;
 } else {

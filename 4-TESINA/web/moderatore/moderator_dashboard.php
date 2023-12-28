@@ -55,13 +55,26 @@
         $progetti = getProgetti($root);
         $numProgetti = $progetti->length;
 
+        $numSegnalazioni = 0;
         $segnalazioni_progetti = getAllSegnalazioniProgetto($root);
-        $numSegnalazioniP = $segnalazioni_progetti->length;
+        foreach($segnalazioni_progetti as $segnalazione_progetto){
+          $id_progetto = $segnalazione_progetto->getAttribute('id_progetto');
+          $project = getProgetto($root, $id_progetto); #mi serve per fare il controllo sull'eliminazione
+                    
+          if($project !== null){
+            $numSegnalazioni++;
+          }
+        }
 
         $segnalazioni_commenti = getAllSegnalazioniCommento($root);
-        $numSegnalazioniC = $segnalazioni_commenti->length;
-
-        $numSegnalazioni = $numSegnalazioniC + $numSegnalazioniP;
+        foreach($segnalazioni_commenti as $segnalazione_commento){
+          $id_commento = $segnalazione_commento->getAttribute('$id_commento');
+          $project = getCommento($root, $id_commento); #mi serve per fare il controllo sull'eliminazione
+                    
+          if($project !== null){
+            $numSegnalazioni++;
+          }
+        }
 
         $visualizzazioni = getAllViews($progetti);
       ?>  

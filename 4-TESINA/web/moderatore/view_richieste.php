@@ -23,7 +23,7 @@
       <title>THE PROJECT SOCIETY</title>
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/prova.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
 
   </head>
 

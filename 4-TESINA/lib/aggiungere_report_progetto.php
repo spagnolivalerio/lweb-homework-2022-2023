@@ -9,6 +9,7 @@ if (!isset($_SESSION['Tipo_utente'])) {
 
 require_once 'functions.php';
 $xmlFile = "../data/xml/reports_progetti.xml";
+$root = "../";
 
 if (!isset($_POST['testo']) || empty($_POST['testo'])) {
     exit;
@@ -30,6 +31,10 @@ if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
 
 $id_segnalatore = $_SESSION['id_utente'];
 $id_segnalazione = generate_id($xmlFile);
+
+$progetto = getProgetto($root, $id_progetto);
+$publisher = $progetto->getAttribute('username_creator');
+$titolo = $progetto->getElementsByTagName('titolo')->item(0)->nodeValue;
 
 //AGGIUNTA IN REPORTS_PROGETTI.XML
 
@@ -96,6 +101,8 @@ foreach ($nodes as $node) {
         $stoReport->setAttribute('tipo', $newTipoValue);
         $stoReport->setAttribute('data_ora', $data_ora);
         $stoReport->setAttribute('id_progetto', $id_progetto);
+        $stoReport->setAttribute('publisher', $publisher);
+        $stoReport->setAttribute('titolo', $titolo);
         $stoReportsProgetti = $node->getElementsByTagName('reports_progetti')->item(0);
         $stoReportsProgetti->appendChild($stoReport);
 

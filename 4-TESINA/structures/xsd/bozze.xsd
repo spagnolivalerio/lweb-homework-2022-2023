@@ -27,8 +27,16 @@
 			<xsd:attribute name="data_pubblicazione" type="xsd:dateTime" />
 			<xsd:attribute name="visualizzazioni" type="xsd:positiveInteger" />
 			<xsd:attribute name="difficolta" type="boz:tipoDifficolta" />
+			<xsd:attribute name="clearance" type="pro:tipoClearance" />
 		</xsd:complexType>
 	</xsd:element>
+
+	<xsd:simpleType name="tipoClearance">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:minInclusive value="1" />
+			<xsd:maxInclusive value="5" />
+		</xsd:restriction>
+	</xsd:simpleType>
 
 	<xsd:element name="categorie">
 		<xsd:complexType>

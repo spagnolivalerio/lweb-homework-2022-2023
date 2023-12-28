@@ -18,7 +18,7 @@
 
     $id_utente = $_SESSION['id_utente'];
 
-    updateViews($root,$id_progetto);
+    updateViews($root, $id_progetto);
     
 
     $discussioni = getDiscussioni($root, $id_progetto);

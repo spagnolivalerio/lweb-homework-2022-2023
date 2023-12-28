@@ -1,11 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="3" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
-  <commento id="3" id_discussione="6" id_commentatore="3" data_ora="2023-12-28 11:01:36" commentatore="moderatore1">
-    <testo>asdasdasd</testo>
-    <voti/>
-    <reports_commento>
-      <report_commento id_report="3"/>
-    </reports_commento>
-    <valutazioni_commento/>
-  </commento>
-</commenti>
+<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="13" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd"/>

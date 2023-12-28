@@ -70,20 +70,34 @@
                 $data = $report_commento->getAttribute('data_ora');
                 $id_commento = $report_commento->getAttribute('id_commento');
                 $tipo = $report_commento->getAttribute('tipo');
-                $commento = getCommento($root, $id_commento);
-                $commentatore = $commento->getAttribute('commentatore');
-                $id_discussione = $commento->getAttribute('id_discussione');
-                $discussione = getDiscussione($root, $id_discussione);
-                $id_progetto = $discussione->getAttribute('id_progetto');
+                $commentatore = $report_commento->getAttribute('commentatore');
+
                 
-                $eventi[] = [
-                    'tipo_evento' => 'report_commento',
-                    'data' => $data,
-                    'commentatore' => $commentatore,
-                    'id_progetto' => $id_progetto,
-                    'id_commento' => $id_commento,
-                    'tipo' => $tipo
-                ];
+                $commento = getCommento($root, $id_commento);
+
+                if($commento !== null){
+
+                    $id_discussione = $commento->getAttribute('id_discussione');
+                    $discussione = getDiscussione($root, $id_discussione);
+                    $id_progetto = $discussione->getAttribute('id_progetto');
+                    
+                    $eventi[] = [
+                        'tipo_evento' => 'report_commento',
+                        'data' => $data,
+                        'commentatore' => $commentatore,
+                        'id_progetto' => $id_progetto,
+                        'id_commento' => $id_commento,
+                        'tipo' => $tipo
+                    ];
+                }else{
+                    $eventi[] = [
+                        'tipo_evento' => 'report_commento_eliminato',
+                        'data' => $data,
+                        'commentatore' => $commentatore,
+                        'id_commento' => $id_commento,
+                        'tipo' => $tipo
+                    ];
+                }
             }
 
             $reports_progetti = getStoricoReportsProgetti($root, $storico);
@@ -92,17 +106,31 @@
                 $data = $report_progetto->getAttribute('data_ora');
                 $id_progetto = $report_progetto->getAttribute('id_progetto');
                 $tipo = $report_progetto->getAttribute('tipo');
-                $progetto = getProgetto($root, $id_progetto);
-                $publisher = $progetto->getAttribute('id_creator');
-                $titolo = $progetto->getElementsByTagName('titolo')->item(0)->nodeValue;
+                $publisher = $report_progetto->getAttribute('publisher');
+                $titolo = $report_progetto->getAttribute('titolo');
 
-                $eventi[] = [
-                    'tipo_evento' => 'report_progetto',
-                    'data' => $data,
-                    'publisher' => $publisher,
-                    'titolo' => $titolo,
-                    'id_progetto' => $id_progetto
-                ];
+                $progetto = getProgetto($root, $id_progetto);
+
+                if($progetto !== null){
+
+                    $eventi[] = [
+                        'tipo_evento' => 'report_progetto',
+                        'data' => $data,
+                        'publisher' => $publisher,
+                        'titolo' => $titolo,
+                        'id_progetto' => $id_progetto,
+                        'tipo' => $tipo
+                    ];
+                }else{
+                    $eventi[] = [
+                        'tipo_evento' => 'report_progetto_eliminato',
+                        'data' => $data,
+                        'publisher' => $publisher,
+                        'titolo' => $titolo,
+                        'id_progetto' => $id_progetto,
+                        'tipo' => $tipo
+                    ];
+                }
             }
 
             $discussioni_aperte = getStoricoDiscussioni($root, $storico);
@@ -110,17 +138,31 @@
             foreach ($discussioni_aperte as $discussione_aperta) {
                 $data = $discussione_aperta->getAttribute('data_ora');
                 $id_discussione = $discussione_aperta->getAttribute('id_discussione');
-                $discussione = getDiscussione($root, $id_discussione);
-                $id_progetto = $discussione->getAttribute('id_progetto');
-                $titolo = $discussione->getAttribute('titolo');
+                $titolo = $discussione_aperta->getAttribute('titolo');
 
-                $eventi[] = [
-                    'tipo_evento' => 'discussioni_aperte',
-                    'data' => $data,
-                    'id_discussione' => $id_discussione,
-                    'titolo' => $titolo,
-                    'id_progetto' => $id_progetto
-                ];
+                $discussione = getDiscussione($root, $id_discussione);
+                
+                if($discussione !== null){
+
+                    $id_progetto = $discussione->getAttribute('id_progetto');
+                
+
+                    $eventi[] = [
+                        'tipo_evento' => 'discussioni_aperte',
+                        'data' => $data,
+                        'id_discussione' => $id_discussione,
+                        'titolo' => $titolo,
+                        'id_progetto' => $id_progetto
+                    ];
+                }else{
+                    $eventi[] = [
+                        'tipo_evento' => 'discussioni_aperte_eliminato',
+                        'data' => $data,
+                        'id_discussione' => $id_discussione,
+                        'titolo' => $titolo,
+                        'id_progetto' => $id_progetto
+                    ];
+                }
             }
 
             $richieste = getStoricoRichieste($root, $storico);
@@ -128,17 +170,29 @@
             foreach($richieste as $richiesta){
               $data = $richiesta->getAttribute('data_ora');
               $id_discussione = $richiesta->getAttribute('id_discussione');
-              $discussione = getDiscussione($root, $id_discussione);
-              $titolo = $discussione->getAttribute('titolo');
-              $id_progetto = $discussione->getAttribute('id_progetto');
+              $titolo = $richiesta->getAttribute('titolo');
 
-                $eventi[] = [
-                    'tipo_evento' => 'richieste',
-                    'data' => $data,
-                    'id_discussione' => $id_discussione,
-                    'titolo' => $titolo,
-                    'id_progetto' => $id_progetto
-                ];
+              $discussione = getDiscussione($root, $id_discussione);
+
+              if($discussione !== null){
+                
+                $id_progetto = $discussione->getAttribute('id_progetto');
+
+                    $eventi[] = [
+                        'tipo_evento' => 'richieste',
+                        'data' => $data,
+                        'id_discussione' => $id_discussione,
+                        'titolo' => $titolo,
+                        'id_progetto' => $id_progetto
+                    ];
+                }else{
+                    $eventi[] = [
+                        'tipo_evento' => 'richieste_eliminato',
+                        'data' => $data,
+                        'id_discussione' => $id_discussione,
+                        'titolo' => $titolo,
+                    ]; 
+                }
             }
 
             $progetti = getStoricoProgetti($root, $storico);
@@ -148,12 +202,23 @@
                 $id_progetto = $progetto->getAttribute('id_progetto');
                 $titolo = $progetto->getAttribute('titolo');
 
-                $eventi[] = [
-                    'tipo_evento' => 'progetti',
-                    'data' => $data,
-                    'titolo' => $titolo,
-                    'id_progetto' => $id_progetto
-                ];
+                $project = getProgetto($root, $id_progetto); 
+                    
+                if($project !== null){
+
+                    $eventi[] = [
+                        'tipo_evento' => 'progetti',
+                        'id_progetto' => $id_progetto,
+                        'data' => $data,
+                        'titolo' => $titolo,
+                    ];
+                }else{
+                    $eventi[] = [
+                        'tipo_evento' => 'progetti_eliminato',
+                        'data' => $data,
+                        'titolo' => $titolo,
+                    ];
+                }
             }
             
             $commenti = getStoricoCommenti($root, $storico);
@@ -162,15 +227,27 @@
                 $data = $commento->getAttribute('data_ora');
                 $id_commento = $commento->getAttribute('id_commento');
                 $id_discussione =  $commento->getAttribute('id_discussione');
-                $discussione = getDiscussione($root, $id_discussione);
-                $id_progetto = $discussione->getAttribute('id_progetto');
+                
+                $commento = getCommento($root, $id_commento);
+   
+                if($commento !== null){
+                    
 
-                $eventi[] = [
-                    'tipo_evento' => 'commenti',
-                    'data' => $data,
-                    'id_commento' => $id_commento,
-                    'id_progetto' => $id_progetto
-                ];
+                    $discussione = getDiscussione($root, $id_discussione);
+                    $id_progetto = $discussione->getAttribute('id_progetto');
+
+                    $eventi[] = [
+                        'tipo_evento' => 'commenti',
+                        'data' => $data,
+                        'id_commento' => $id_commento,
+                        'id_progetto' => $id_progetto
+                    ];
+                }else{
+                    $eventi[] = [
+                        'tipo_evento' => 'commenti_eliminato',
+                        'data' => $data,
+                    ];
+                }
             }
 
             $valutazioniProgetti = getStoricoValutazioniProgetti($root, $storico);
@@ -180,13 +257,23 @@
                 $id_progetto = $valutazioneProgetto->getAttribute('id_progetto');
                 $value = $valutazioneProgetto->getAttribute('value');
                 
+                $project = getProgetto($root, $id_progetto); #mi serve per fare il controllo sull'eliminazione
+                    
+                if($project !== null){
 
-              $eventi[] = [
-                  'tipo_evento' => 'valprogetti',
-                  'data' => $data,
-                  'value' => $value,
-                  'id_progetto' => $id_progetto
-              ];
+                    $eventi[] = [
+                        'tipo_evento' => 'valprogetti',
+                        'data' => $data,
+                        'value' => $value,
+                        'id_progetto' => $id_progetto
+                    ];
+                }else{
+                    $eventi[] = [
+                        'tipo_evento' => 'valprogetti_eliminato',
+                        'data' => $data,
+                        'value' => $value,
+                    ];
+                }
           }
 
           $valutazioniCommenti = getStoricoValutazioniCommenti($root, $storico);
@@ -197,12 +284,20 @@
                 $id_commento = $valutazioneCommento->getAttribute('id_commento');
                 $utilità = $valutazioneCommento->getElementsByTagName('utilita')->item(0)->nodeValue;
                 
+                $commento = getCommento($root, $id_commento);#mi serve per fare il controllo sull'eliminazione
 
-              $eventi[] = [
-                  'tipo_evento' => 'valcommenti',
-                  'data' => $data,
-                  'id_progetto' => $id_progetto
-              ];
+                if($commento !== null){
+                    $eventi[] = [
+                        'tipo_evento' => 'valcommenti',
+                        'data' => $data,
+                        'id_progetto' => $id_progetto
+                    ];
+                }else{
+                    $eventi[] = [
+                        'tipo_evento' => 'valcommenti_eliminato',
+                        'data' => $data,
+                    ];
+                }
           }
 
           
@@ -220,7 +315,11 @@
                     echo "    <li class='evento report'> Hai effettuato un report per " . $evento['tipo'] . " nei confronti dell'utente: " . $evento['commentatore'] . " in merito al contenuto del seguente <a href='view.php?id_progetto=" . $evento['id_progetto'] . "#" . $evento['id_commento'] . "'>commento</a> \n";
                     echo "      <span class=\"data\">" . $evento['data'] . "</span>\n";
                     echo "    </li>\n";
-                } elseif ($evento['tipo_evento'] === 'report_progetto') {
+                }elseif ($evento['tipo_evento'] === 'report_commento_eliminato') {
+                    echo "    <li class='evento report'> Hai effettuato un report per " . $evento['tipo'] . " nei confronti dell'utente: " . $evento['commentatore'] . " in merito al contenuto di un commento che è stato eliminato \n";
+                    echo "      <span class=\"data\">" . $evento['data'] . "</span>\n";
+                    echo "    </li>\n";
+                }elseif ($evento['tipo_evento'] === 'report_progetto') {
                     echo "    <li class='evento report'> Hai effettuato un report per ". $evento['tipo'] ." nei confronti dell'utente: ". $evento['publisher'] ." in merito al contenuto del <a href='homepage.php?#" . $evento['id_progetto'] . "'>progetto</a> intitolato: " . $evento['titolo'] . " \n";
                     echo "      <span class=\"data\">". $evento['data'] ."</span>\n";
                     echo "    </li>\n";

@@ -28,6 +28,7 @@ $descrizione = $_POST['descrizione'];
 $titolo = $_POST['titolo'];
 $tempo_medio = $_POST['tempo_medio'];
 $difficolta = $_POST['difficolta'];
+$clearance = $_POST['clearance'];
 
 $doc = getDOMdocument($xmlFile); 
 $root = $doc->documentElement;
@@ -54,6 +55,7 @@ $newBozza->setAttribute('id_creator', $id_creator);
 $newBozza->setAttribute('tempo_medio', $tempo_medio);
 $newBozza->setAttribute('data_pubblicazione', $data_ora);
 $newBozza->setAttribute('difficolta', $difficolta);
+$newBozza->setAttribute('clearance', $clearance);
 
 $newBozza->setAttribute('nome_file_img', $nome_file_img);
 

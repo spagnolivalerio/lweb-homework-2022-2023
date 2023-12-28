@@ -31,11 +31,11 @@
 			<xsd:attribute name="nome_file_img" type="xsd:string" />
 			<xsd:attribute name="difficolta" type="pro:tipiDifficolta" />
 			<xsd:attribute name="username_creator" type="xsd:string" />
-			<xsd:attribute name="clearence" type="pro:tipoClearence" />
+			<xsd:attribute name="clearance" type="pro:tipoClearance" />
 		</xsd:complexType>
 	</xsd:element>
 
-	<xsd:simpleType name="tipoClearence">
+	<xsd:simpleType name="tipoClearance">
 		<xsd:restriction base="xsd:positiveInteger">
 			<xsd:minInclusive value="1" />
 			<xsd:maxInclusive value="5" />

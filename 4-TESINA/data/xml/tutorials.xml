@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="3">
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="4">
   <tutorial_progetto id="3" id_progetto="3">
-    <step num_step="1" nome_file_img="img/steps/img_step_658d4767d7605.jpg">
-      <descrizione>primo step</descrizione>
+    <step num_step="1" nome_file_img="img/steps/img_step_658d8c2505a9d.jpg">
+      <descrizione>xcvxc</descrizione>
     </step>
   </tutorial_progetto>
 </tutorials_progetti>

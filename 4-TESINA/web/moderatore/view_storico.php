@@ -143,11 +143,22 @@
                     $titolo = $progetto->getAttribute('titolo');
                     $data = $progetto->getAttribute('data_ora');
 
-                    echo "                        <tr>\n";
-                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_progetto . "</a></td>\n";
-                    echo "                            <td>" . $titolo . "</td>\n";
-                    echo "                            <td>" . $data . "</td>\n";
-                    echo "                        </tr>\n";
+                    $project = getProgetto($root, $id_progetto); #mi serve per fare il controllo sull'eliminazione
+                    
+                    if($project !== null){
+
+                        echo "                        <tr>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_progetto . "</a></td>\n";
+                        echo "                            <td>" . $titolo . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }else{
+                        echo "                        <tr>\n";
+                        echo "                            <td>Contributo eliminato</td>\n";
+                        echo "                            <td>" . $titolo . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n"; 
+                    }
                 }
             }elseif($tabella == 2){
 
@@ -158,21 +169,33 @@
                 echo "                        </tr>\n";
 
                 $commenti = getStoricoCommenti($root, $storico);
-
+                
                 foreach($commenti as $commento){
 
                     $id_commento = $commento->getAttribute('id_commento');
                     $id_discussione = $commento->getAttribute('id_discussione');
                     $testo = $commento->getElementsByTagName('testo')->item(0)->nodeValue;
-                    $data = $commento->getAttribute('data_ora');
+                    $data = $commento->getAttribute('data_ora');                   
                     $discussione = getDiscussione($root, $id_discussione);
-                    $id_progetto = $discussione->getAttribute('id_progetto');
 
-                    echo "                        <tr>\n";
-                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#" . $id_discussione . "'>" . $id_commento . "</a></td>\n";
-                    echo "                            <td>" . $testo . "</td>\n";
-                    echo "                            <td>" . $data . "</td>\n";
-                    echo "                        </tr>\n";
+                    $commento = getCommento($root, $id_commento);
+
+                    
+                    if($commento !== null){
+                        $id_progetto = $discussione->getAttribute('id_progetto');
+
+                        echo "                        <tr>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#" . $id_discussione . "'>" . $id_commento . "</a></td>\n";
+                        echo "                            <td>" . $testo . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }else{
+                        echo "                        <tr>\n";
+                        echo "                            <td>Contributo eliminato</td>\n";
+                        echo "                            <td>" . $testo . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }
                 }
             }elseif($tabella == 3){
 
@@ -190,14 +213,22 @@
                     $id_discussione = $discussione_aperta->getAttribute('id_discussione');
                     $titolo = $discussione_aperta->getAttribute('titolo');
                     $discussione = getDiscussione($root, $id_discussione);
-                    $id_progetto = $discussione->getAttribute('id_progetto');
-                    
 
-                    echo "                        <tr>\n";
-                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#" . $id_discussione . "'>" . $id_discussione . "</a></td>\n";
-                    echo "                            <td>" . $titolo . "</td>\n";
-                    echo "                            <td>" . $data . "</td>\n";
-                    echo "                        </tr>\n";
+                    if($discussione !== null){
+                        $id_progetto = $discussione->getAttribute('id_progetto');                  
+                    
+                        echo "                        <tr>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#" . $id_discussione . "'>" . $id_discussione . "</a></td>\n";
+                        echo "                            <td>" . $titolo . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }else{
+                        echo "                        <tr>\n";
+                        echo "                            <td>Contributo eliminato</td>\n";
+                        echo "                            <td>" . $titolo . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }
                 }
             }elseif($tabella == 4){
 
@@ -215,11 +246,22 @@
                     $id_progetto = $valutazioneProgetto->getAttribute('id_progetto');
                     $value = $valutazioneProgetto->getAttribute('value');
 
-                    echo "                        <tr>\n";
-                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_progetto . "</a></td>\n";
-                    echo "                            <td>" . $value . "</td>\n";
-                    echo "                            <td>" . $data . "</td>\n";
-                    echo "                        </tr>\n";
+                    $project = getProgetto($root, $id_progetto); #mi serve per fare il controllo sull'eliminazione
+                    
+                    if($project !== null){
+
+                        echo "                        <tr>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_progetto . "</a></td>\n";
+                        echo "                            <td>" . $value . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }else{
+                        echo "                        <tr>\n";
+                        echo "                            <td>Contributo Eliminato</td>\n";
+                        echo "                            <td>" . $value . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }
                 }
             }elseif($tabella == 5){
 
@@ -240,13 +282,24 @@
                     $utilità = $valutazioneCommento->getElementsByTagName('utilita')->item(0)->nodeValue;
                     $accordo = $valutazioneCommento->getElementsByTagName('livello_di_accordo')->item(0)->nodeValue;
 
+                    
+                    $commento = getCommento($root, $id_commento);#mi serve per fare il controllo sull'eliminazione
 
-                    echo "                        <tr>\n";
-                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_commento . "</a></td>\n";
-                    echo "                            <td>" . $utilità . "</td>\n";
-                    echo "                            <td>" . $accordo . "</td>\n";
-                    echo "                            <td>" . $data . "</td>\n";
-                    echo "                        </tr>\n";
+                    if($commento !== null){
+                        echo "                        <tr>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_commento . "</a></td>\n";
+                        echo "                            <td>" . $utilità . "</td>\n";
+                        echo "                            <td>" . $accordo . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }else{
+                        echo "                        <tr>\n";
+                        echo "                            <td>Contributo eliminato</td>\n";
+                        echo "                            <td>" . $utilità . "</td>\n";
+                        echo "                            <td>" . $accordo . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }
                 }
             }elseif($tabella == 6){
 
@@ -265,18 +318,31 @@
                     $data = $report_commento->getAttribute('data_ora');
                     $id_commento = $report_commento->getAttribute('id_commento');
                     $tipo = $report_commento->getAttribute('tipo');
+                    $commentatore = $report_commento->getAttribute('commentatore');
                     $commento = getCommento($root, $id_commento);
-                    $commentatore = $commento->getAttribute('commentatore');
-                    $id_discussione = $commento->getAttribute('id_discussione');
-                    $discussione = getDiscussione($root, $id_discussione);
-                    $id_progetto = $discussione->getAttribute('id_progetto');
 
-                    echo "                        <tr>\n";
-                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_commento . "</a></td>\n";
-                    echo "                            <td>" . $tipo . "</td>\n";
-                    echo "                            <td>" . $commentatore . "</td>\n";
-                    echo "                            <td>" . $data . "</td>\n";
-                    echo "                        </tr>\n";
+                    if($commento !== null){
+                    
+                        $id_discussione = $commento->getAttribute('id_discussione');
+                        $discussione = getDiscussione($root, $id_discussione);
+
+                        
+                        $id_progetto = $discussione->getAttribute('id_progetto');
+
+                        echo "                        <tr>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_commento . "</a></td>\n";
+                        echo "                            <td>" . $tipo . "</td>\n";
+                        echo "                            <td>" . $commentatore . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }else{
+                        echo "                        <tr>\n";
+                        echo "                            <td>Contributo eliminato</td>\n";
+                        echo "                            <td>" . $tipo . "</td>\n";
+                        echo "                            <td>" . $commentatore . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }
                 }
             }elseif($tabella == 7){
 
@@ -294,15 +360,27 @@
                     $data = $report_progetto->getAttribute('data_ora');
                     $id_progetto = $report_progetto->getAttribute('id_progetto');
                     $tipo = $report_progetto->getAttribute('tipo');
+                    $publisher = $report_progetto->getAttribute('username_creator');
                     $progetto = getProgetto($root, $id_progetto);
-                    $publisher = $progetto->getAttribute('username_creator');
 
-                    echo "                        <tr>\n";
-                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_progetto . "</a></td>\n";
-                    echo "                            <td>" . $tipo . "</td>\n";
-                    echo "                            <td>" . $publisher . "</td>\n";
-                    echo "                            <td>" . $data . "</td>\n";
-                    echo "                        </tr>\n";
+                    
+                    if($progetto !== null){
+                    
+
+                        echo "                        <tr>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_progetto . "</a></td>\n";
+                        echo "                            <td>" . $tipo . "</td>\n";
+                        echo "                            <td>" . $publisher . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }else{
+                        echo "                        <tr>\n";
+                        echo "                            <td>Contributo eliminato</td>\n";
+                        echo "                            <td>" . $tipo . "</td>\n";
+                        echo "                            <td>" . $publisher . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }
                 }
             }elseif($tabella == 8){
 
@@ -318,15 +396,19 @@
                 foreach($richieste as $richiesta){
                     $data = $richiesta->getAttribute('data_ora');
                     $id_discussione = $richiesta->getAttribute('id_discussione');
-                    $discussione = getDiscussione($root, $id_discussione);
-                    $titolo = $discussione->getAttribute('titolo');
-                    $id_progetto = $discussione->getAttribute('id_progetto');
+                    $titolo = $richiesta->getAttribute('titolo');
 
-                    echo "                        <tr>\n";
-                    echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_discussione . "</a></td>\n";
-                    echo "                            <td>" . $titolo . "</td>\n";
-                    echo "                            <td>" . $data . "</td>\n";
-                    echo "                        </tr>\n";
+                    $discussione = getDiscussione($root, $id_discussione);
+
+                    if($discussione !== null){
+                        $id_progetto = $discussione->getAttribute('id_progetto');
+
+                        echo "                        <tr>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_discussione . "</a></td>\n";
+                        echo "                            <td>" . $titolo . "</td>\n";
+                        echo "                            <td>" . $data . "</td>\n";
+                        echo "                        </tr>\n";
+                    }
                 }
             }
 

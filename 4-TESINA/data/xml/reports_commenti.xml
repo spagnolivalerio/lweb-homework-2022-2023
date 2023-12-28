@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<reports_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="3" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  <report_commento id="3" id_commento="3" id_utente="3" data_ora="2023-12-28 11:01:44">
+<reports_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="6" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <report_commento id="3" id_commento="7" id_utente="3" data_ora="2023-12-28 16:01:35">
+    <tipo>spam</tipo>
+    <testo>qweqe</testo>
+  </report_commento>
+  <report_commento id="4" id_commento="10" id_utente="3" data_ora="2023-12-28 16:10:01">
+    <tipo>spam</tipo>
+    <testo>dfsfsfsd&lt;f&lt;df</testo>
+  </report_commento>
+  <report_commento id="5" id_commento="11" id_utente="3" data_ora="2023-12-28 17:01:55">
+    <tipo>spam</tipo>
+    <testo>asdasd</testo>
+  </report_commento>
+  <report_commento id="6" id_commento="12" id_utente="3" data_ora="2023-12-28 17:13:26">
     <tipo>Contenuti inesatti</tipo>
-    <testo>asdadasd</testo>
+    <testo>sdads</testo>
   </report_commento>
 </reports_commenti>
