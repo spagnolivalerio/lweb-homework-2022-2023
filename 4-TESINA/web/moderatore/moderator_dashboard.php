@@ -1,3 +1,17 @@
+<?php
+    session_start();   
+    include('../../conn.php');
+    $root = "../../";
+    require_once($root . "lib/get_nodes.php");
+    require_once($root . "lib/functions.php");
+    $id_utente = $_SESSION['id_utente'];
+    $path = "index.php"; 
+    $mod = "moderatore";     
+    addressing($_SESSION['Tipo_utente'], $mod, $path);
+
+    echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
+
+?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -34,29 +48,45 @@
       <div class="bar"></div>
         <div class="toolbar"></div>
 
-        
+      <?php
+        $richieste = getAllRichiesteAccesso($root);
+        $numRichieste = getWaitingRequestNumber($root, $richieste);
+
+        $progetti = getProgetti($root);
+        $numProgetti = $progetti->length;
+
+        $segnalazioni_progetti = getAllSegnalazioniProgetto($root);
+        $numSegnalazioniP = $segnalazioni_progetti->length;
+
+        $segnalazioni_commenti = getAllSegnalazioniCommento($root);
+        $numSegnalazioniC = $segnalazioni_commenti->length;
+
+        $numSegnalazioni = $numSegnalazioniC + $numSegnalazioniP;
+
+        $visualizzazioni = getAllViews($progetti);
+      ?>  
       
         <div class="flex-container">
 
           
           <a href="#" class="views-info">
             <span class="icona">&#128200;</span>
-            <span class="testo">Numero di visualizzazioni dall'apertura del sito: 457</span>
+            <span class="testo">Numero di visualizzazioni dall'apertura del sito: <?php echo $visualizzazioni; ?></span>
           </a>
                
           <a href="view_richieste.php" class="richieste-info">
             <span class="icona">&#128236;</span>
-            <span class="testo">Ci sono 7 richieste di accesso in attesa di un riscontro</span>
+            <span class="testo">Ci sono <?php echo $numRichieste; ?> richieste di accesso in attesa di un riscontro</span>
           </a>
 
           <a href="homepage.php" class="project-info">
             <span class="icona">🕹️</span>
-            <span class="testo">Sono presenti 8 progetti all'interno del sito</span>
+            <span class="testo">Sono presenti <?php echo $numProgetti; ?> progetti all'interno del sito</span>
           </a>
 
           <a href="view_segnalazioni.php" class="report-info">
             <span class="icona">🚨</span>
-            <span class="testo">Sono presenti 8 segnalazioni da gestire</span>
+            <span class="testo">Sono presenti <?php echo $numSegnalazioni; ?> segnalazioni da gestire</span>
           </a>
           
           <a href="listautenti.php" class="lista-utenti">

@@ -363,6 +363,38 @@ function calcolaReputazione($root, $id_utente, $conn){
 
 
 
+function updateViews($root, $id_progetto){
+    
+    $xmlFile = $root . "data/xml/progetti.xml";
+
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXPath($doc);
+
+    $progetto = $xpath->query("/progetti/progetto[@id = '$id_progetto']")->item(0);
+
+    $visualizzazioni = $progetto->getAttribute('visualizzazioni');
+    $visualizzazioni = intval($visualizzazioni) + 1;
+    $progetto->setAttribute('visualizzazioni', $visualizzazioni);
+
+
+    $doc->formatOutput = true;
+    $xmlString = $doc->saveXML();
+    file_put_contents($xmlFile, $xmlString);
+
+}
+
+function getAllViews($progetti){
+    $visualizzazioni = 0;
+    
+    foreach($progetti as $progetto){
+
+        $visualizzazioni = $visualizzazioni + $progetto->getAttribute('visualizzazioni');
+    }
+    return $visualizzazioni;
+}
+
+
 
 
 ?>

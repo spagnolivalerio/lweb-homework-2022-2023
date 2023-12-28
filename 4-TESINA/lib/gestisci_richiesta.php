@@ -53,7 +53,7 @@ file_put_contents($xmlFile, $xmlString);
 //AGGIUNGERE PARTECIPANTE IN DSICUSSIONI.XML
 
 if ($esito === 'rifiutata') {
-    header('Location: ../prove_funzioni/prova_gestisci.php');
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/view_richieste.php');
     exit;
 }
 
@@ -75,7 +75,7 @@ $doc->formatOutput = true;
 $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
 file_put_contents($xmlFile, $xmlString);
 
-header('Location: ../prove_funzioni/prova_gestisci.php');
+header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/view_richieste.php');
 exit;
 
 ?>

@@ -111,9 +111,6 @@
           echo "      <input type=\"hidden\" name=\"id_utente\" value=" . $id_utente . "></input>\n";
           echo "      <button class=\"button-stile\" type=\"submit\">Edit</button>\n";
           echo "    </form>\n";
-          echo "      <form class=\"form\" action=\"form_progetto.php\" method=\"post\">\n";
-          echo "        <button class=\"button-stile\" type=\"submit\">Aggiungi un Progetto</button>\n";
-          echo "      </form>\n";
 
           echo "  </div>\n";
 

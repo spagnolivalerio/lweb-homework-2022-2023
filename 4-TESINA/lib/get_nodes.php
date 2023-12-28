@@ -13,6 +13,8 @@ function getProgetti($root){
 
 }
 
+
+
 function getProgetto($root, $id_progetto){
 
     $xmlFile = $root . "data/xml/progetti.xml";
@@ -117,6 +119,14 @@ function getSegnalazioniCommento($root, $id_commento){
 
 }
 
+function getAllSegnalazioniCommento($root){
+    $xmlFile = $root . "data/xml/reports_commenti.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    return $doc->documentElement->childNodes;
+
+}
+
 
 function getSegnalazioniProgetto($root, $id_progetto){
     $xmlFile = $root . "data/xml/reports_progetti.xml";
@@ -125,6 +135,14 @@ function getSegnalazioniProgetto($root, $id_progetto){
     $xpath = new DOMXPath($doc);
 
     return $xpath->query("/reports_progetti/report_progetto[@id_progetto = '$id_progetto']");
+
+}
+
+function getAllSegnalazioniProgetto($root){
+    $xmlFile = $root . "data/xml/reports_progetti.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    return $doc->documentElement->childNodes;
 
 }
 
@@ -138,6 +156,26 @@ function getRichiesteAccesso($root, $id_discussione){
 
     return $xpath->query("/richieste/richiesta[@id_discussione = '$id_discussione']");
 
+}
+
+function getAllRichiesteAccesso($root){
+    $xmlFile = $root . "data/xml/richieste_accesso_discussioni.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    return $doc->documentElement->childNodes;
+
+}
+
+function getWaitingRequestNumber($root, $richieste){
+    $counter = 0;
+
+    foreach($richieste as $richiesta){
+        if($richiesta->getAttribute('stato') === 'in lavorazione'){
+            $counter++;
+        }
+    }
+
+    return $counter;
 }
 
 

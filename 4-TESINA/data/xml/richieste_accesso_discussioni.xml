@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<richieste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/richieste_accesso_discussioni.xsd">
-  <richiesta id="1" id_discussione="1" id_utente="7" data_ora="2023-12-26 15:14:51" stato="accettata">
-    <moderatore id_mod="3" username="moderatore1"/>
-  </richiesta>
-</richieste>
+<richieste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="2" xsi:noNamespaceSchemaLocation="../../structures/richieste_accesso_discussioni.xsd"/>

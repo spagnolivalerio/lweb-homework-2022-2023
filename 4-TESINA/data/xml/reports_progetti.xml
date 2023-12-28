@@ -1,7 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<reports_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  <report_progetto id="1" id_progetto="1" id_utente="3" data_ora="2023-12-27 09:40:11">
-    <tipo>spam</tipo>
-    <testo>spammmmmmm</testo>
-  </report_progetto>
-</reports_progetti>
+<reports_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="2" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd"/>

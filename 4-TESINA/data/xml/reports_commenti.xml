@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<reports_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  <report_commento id="1" id_commento="1" id_utente="7" data_ora="2023-12-26 15:16:29">
-    <tipo>spam</tipo>
-    <testo>aosmettiladispammare</testo>
+<reports_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="3" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <report_commento id="3" id_commento="3" id_utente="3" data_ora="2023-12-28 11:01:44">
+    <tipo>Contenuti inesatti</tipo>
+    <testo>asdadasd</testo>
   </report_commento>
 </reports_commenti>

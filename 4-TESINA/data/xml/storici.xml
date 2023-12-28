@@ -4,6 +4,7 @@
     <progetti>
       <progetto titolo="JUJUTSU KAISEN 12" data_ora="2023-12-26 15:12:32" id_progetto="1"/>
       <progetto titolo="JUJUTSU KAISEN 12" data_ora="2023-12-27 12:16:27" id_progetto="2"/>
+      <progetto titolo="AOFRA" data_ora="2023-12-28 11:01:12" id_progetto="3"/>
     </progetti>
     <richieste>
       <richiesta id_richiesta="1" data_ora="2023-12-26 15:12:45" id_discussione="1"/>
@@ -55,20 +56,35 @@
   <storico id_utente="3">
     <progetti/>
     <richieste/>
-    <commenti/>
+    <commenti>
+      <commento id_commento="2" data_ora="2023-12-28 10:53:15" id_discussione="5">
+        <testo>dadad</testo>
+      </commento>
+      <commento id_commento="3" data_ora="2023-12-28 11:01:36" id_discussione="6">
+        <testo>asdasdasd</testo>
+      </commento>
+    </commenti>
     <valutazioni_progetti/>
     <reports_progetti>
       <report_progetto id_report="1" tipo="spam" data_ora="2023-12-27 09:40:11" id_progetto="1"/>
+      <report_progetto id_report="2" tipo="spam" data_ora="2023-12-28 10:54:18" id_progetto="2"/>
     </reports_progetti>
-    <reports_commenti/>
+    <reports_commenti>
+      <report_commento id_report="2" tipo="spam" data_ora="2023-12-28 10:53:19" id_commento="2"/>
+      <report_commento id_report="3" tipo="Contenuti inesatti" data_ora="2023-12-28 11:01:44" id_commento="3"/>
+    </reports_commenti>
     <discussioni>
       <discussione id_discussione="4" data_ora="2023-12-27 14:19:16" titolo="AOFRA"/>
+      <discussione id_discussione="5" data_ora="2023-12-28 10:53:08" titolo="AOFRA"/>
+      <discussione id_discussione="6" data_ora="2023-12-28 11:01:33" titolo="AOFRA"/>
     </discussioni>
     <valutazioni_commenti/>
   </storico>
   <storico id_utente="4">
     <progetti/>
-    <richieste/>
+    <richieste>
+      <richiesta id_richiesta="2" data_ora="2023-12-28 09:57:30" id_discussione="2"/>
+    </richieste>
     <commenti/>
     <valutazioni_progetti/>
     <reports_progetti/>
