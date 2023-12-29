@@ -11,6 +11,8 @@
 
     addressing($_SESSION['Tipo_utente'], $std, $path);
 
+
+
     if (isset($_GET['id_progetto'])) {
       $id_progetto = $_GET['id_progetto'];
     } 

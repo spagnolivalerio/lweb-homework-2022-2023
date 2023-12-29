@@ -124,7 +124,7 @@
               echo "    <div class=\"options-title\"><h2>DICCI LA TUA</h2></div>";
               if($voted){
                 echo "  <div class=\"votato\">Contributo già valutato</div>\n";
-              }else{
+              }elseif($id_creator !== $id_utente){
                 echo "          <div class=\"p-rating-content\">\n";
                 echo "            <div class=\"label-form\">Valuta progetto</div>\n";
                 echo "            <form class=\"p-rating\" action=\"../../lib/valutare_progetto.php\" method=\"post\">\n";
@@ -150,7 +150,7 @@
 
               if($reported_project){
                 echo "  <div class=\"reported\">Segnalazione effettuata --> Stato della segnalazione: In attesa di un riscontro</div>\n";
-              }else{
+              }elseif($id_creator !== $id_utente){
                 echo "          <div class=\"form-seganalazione-content\">\n";
                 echo "            <div class=\"label-form\">Segnala</div>\n";
                 echo "            <form class=\"form-segnalazione-progetto\" action=\"../../lib/aggiungere_report_progetto.php\" method=\"post\">\n";
@@ -228,9 +228,9 @@
 
                   echo "  <div class=\"risolta\">Discussione risolta</div>\n";
 
-                } elseif(!$flag) {
+                } elseif(!$flag && ($id_autore !== $id_utente)) {
 
-                  if(!$sended){
+                  if(!$sended ){
                     echo "  <div class=\"accesso\">\n";
                     echo "  <form class=\"form-accesso\" action=\"../../lib/richiedere_accesso_discussione.php\" method=\"post\">\n";
                     echo "            <input type=\"hidden\" name=\"id_discussione\" value=\"$id_discussione\"></input>\n";
@@ -287,9 +287,9 @@
                 
                 if($voted){
                   echo "  <div class=\"votato\">Contributo già valutato</div>\n";
-                }elseif(!$flag){
+                }elseif(!$flag && ($id_commentatore !== $id_utente)){
                   echo "  <div class=\"votato\">Richiedi accesso per valutare i contributi</div>\n";
-                }else{
+                }elseif($flag && ($id_commentatore !== $id_utente)){
                   echo "            <form class=\"form-box\" action=\"../../lib/valuta_commento.php\" method=\"post\">\n";
                   echo "                <div class=\"rating\">\n";
                   echo "                    <input type=\"radio\" name=\"rating\" value=\"5\" id=\"5_$id_commento\">\n";
@@ -321,7 +321,7 @@
 
                 if($reported_comment){
                   echo "  <div class=\"reported\">Segnalazione effettuata --> Stato della segnalazione: In attesa di un riscontro</div>\n";
-                }else{
+                }elseif($id_commentatore !== $id_utente){
                   echo "            <form class=\"form-segnalazione\" action=\"../../lib/aggiungere_report_commento.php\" method=\"post\">\n";
                   echo "                <label for=\"segnala\"></label>\n";
                   echo "                <input type=\"text\" name=\"testo\" placeholder=\"Fornisci maggiori dettagli\"></input>\n";

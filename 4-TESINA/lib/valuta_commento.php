@@ -2,6 +2,8 @@
 
 session_start();
 require_once 'functions.php';
+include('../conn.php');
+$radice = "../";
 
 if (!isset($_SESSION['Tipo_utente'])) {
     header('Location: ../web/login.php');
@@ -101,6 +103,9 @@ $stoValutazioni_commenti->appendChild($stoValutazione);
 $doc->formatOutput = true;
 $xmlString = $doc->saveXML();
 file_put_contents($xmlFile, $xmlString);
+
+$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+updateAllUsers($radice, $conn);
 
 $url = "../web/" . $_SESSION['Tipo_utente'] . "/view.php?id_progetto=" . $id_progetto;
 header("Location: $url");

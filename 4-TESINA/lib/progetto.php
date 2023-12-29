@@ -2,6 +2,8 @@
 
 session_start();
 require_once('functions.php');
+include('../conn.php');
+
 $tps_root = "../";
 $id_bozza = $_SESSION['id_bozza'];
 $username_creator = $_SESSION['username'];
@@ -171,6 +173,9 @@ foreach ($nodes as $node) {
 $query = "/bozze/bozza[@id"; 
 $xmlFile = $tps_root . "data/xml/bozze.xml"; 
 remove_1_1($xmlFile, $query, $id_bozza); 
+
+$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+updateAllUsers($tps_root, $conn);
 
 header('Location: ../web/standard/homepage.php');
 

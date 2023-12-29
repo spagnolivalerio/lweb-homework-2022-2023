@@ -60,20 +60,15 @@
         foreach($segnalazioni_progetti as $segnalazione_progetto){
           $id_progetto = $segnalazione_progetto->getAttribute('id_progetto');
           $project = getProgetto($root, $id_progetto); #mi serve per fare il controllo sull'eliminazione
-                    
-          if($project !== null){
-            $numSegnalazioni++;
-          }
+          $numSegnalazioni++;          
         }
 
         $segnalazioni_commenti = getAllSegnalazioniCommento($root);
         foreach($segnalazioni_commenti as $segnalazione_commento){
           $id_commento = $segnalazione_commento->getAttribute('$id_commento');
-          $project = getCommento($root, $id_commento); #mi serve per fare il controllo sull'eliminazione
-                    
-          if($project !== null){
-            $numSegnalazioni++;
-          }
+          $commento = getCommento($root, $id_commento); #mi serve per fare il controllo sull'eliminazione
+          $numSegnalazioni++;
+          
         }
 
         $visualizzazioni = getAllViews($progetti);

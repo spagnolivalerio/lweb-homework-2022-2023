@@ -17,7 +17,7 @@
     } 
 
 
-  calcolaReputazione($root, $_SESSION['id_utente'], $conn);
+
   $clearance_utente = updateClearance($root, $_SESSION['id_utente'], $conn);
   
 
@@ -131,7 +131,7 @@
               echo "    <div class=\"flexbox2\">\n";
               echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
 
-              if($clearance_utente >= $clearance_progetto){
+              if($clearance_utente >= $clearance_progetto || $id_creator === $id_utente ){
                 echo "      <form class=\"card-commenta\" action=\"view.php\" method=\"post\">\n";
                 echo "        <div class=\"animation\"></div>\n";
                 echo "        <button class=\"submit\" type=\"submit\">Dettagli</button>\n";

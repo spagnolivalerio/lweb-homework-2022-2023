@@ -267,7 +267,7 @@ function calcolaReputazione($root, $id_utente, $conn){
 
         $id_progetto = $progetto->getAttribute('id');
 
-        if($id_utente = $progetto->getAttribute('id_creator')){
+        if($id_utente == $progetto->getAttribute('id_creator')){
 
             $reputazione += 5;
 
@@ -307,9 +307,11 @@ function calcolaReputazione($root, $id_utente, $conn){
 
             foreach($commenti as $commento){
 
-                if($id_utente = $commento->getAttribute('id_creator')){
+                $id_commento = $commento->getAttribute('id');
 
-                    $valutazioni_commento = getValutazioniCommenti($root, $id_progetto);
+                if($id_utente == $commento->getAttribute('id_commentatore')){
+
+                    $valutazioni_commento = getValutazioniCommenti($root, $id_commento);
 
                     foreach($valutazioni_commento as $valutazione_commento){
 
@@ -320,16 +322,16 @@ function calcolaReputazione($root, $id_utente, $conn){
                             $reputazione -= 2;
                         }elseif($utilità == 3){
                             $reputazione += 2;
-                        }elseif($utilità == 4){
-                            $reputazione += 4;
-                        }elseif($utilità == 5){
-                            $reputazione += 6;
                         }
 
                         if($accordo == 1){
                             $reputazione -= 2;
                         }elseif($accordo == 3){
                             $reputazione += 2;
+                        }elseif($accordo == 4){
+                            $reputazione += 4;
+                        }elseif($accordo == 5){
+                            $reputazione += 6;
                         }
 
                         if ($reputazione >= 10 * pow(2, $livello) ){
@@ -388,7 +390,41 @@ function updateClearance($root, $id_utente, $conn){
     return $clearance_utente;
 }
 
+function updatePeso($root, $id_utente, $conn){
 
+    $query = "SELECT * FROM utente WHERE id = " . $id_utente;
+    $result = $conn->query($query);
+    $row = $result->fetch_assoc();
+
+    $livello_utente = $row['livello'];
+    
+    if($livello_utente <= 10){
+        $peso = $livello_utente;
+    }else{
+        $peso = 10; 
+    }
+
+    $update_peso_query = "UPDATE utente SET peso_valutazione = '$peso' WHERE id = '$id_utente'";
+   
+    $conn->query($update_peso_query);
+
+}
+
+
+function updateAllUsers($root, $conn){
+
+    $query = "SELECT * FROM utente";
+    $result = $conn->query($query);
+
+    while ($row = mysqli_fetch_assoc($result)){
+        if($row['tipo'] == 'standard'){
+            calcolaReputazione($root, $row['id'], $conn);
+            updateClearance($root, $row['id'], $conn);
+            updatePeso($root, $row['id'], $conn);
+        }
+    }
+
+}
 
 function updateViews($root, $id_progetto){
     

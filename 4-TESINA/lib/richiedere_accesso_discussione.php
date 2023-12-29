@@ -2,7 +2,9 @@
 
 session_start();
 require_once 'functions.php';
+require_once 'get_nodes.php';
 $xmlFile = "../data/xml/richieste_accesso_discussioni.xml";
+$rooot = "../";
 
 if (!isset($_POST['id_discussione']) || empty($_POST['id_discussione'])) {
     exit;
@@ -20,6 +22,9 @@ if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
 $data_ora = new DateTime();
 $data_ora = $data_ora->format('Y-m-d H:i:s');
 $id_richiesta = generate_id($xmlFile);
+
+$discussione = getDiscussione($rooot, $id_discussione);
+$titolo = $discussione->getAttribute('titolo');
 
 //AGGIUNTA IN RICHIESTE_ACCESSO_DISCUSSIONI.XML
 
@@ -52,6 +57,7 @@ $stoRichiesta = $doc->createElement('richiesta');
 $stoRichiesta->setAttribute('id_richiesta', $id_richiesta);
 $stoRichiesta->setAttribute('data_ora', $data_ora);
 $stoRichiesta->setAttribute('id_discussione', $id_discussione);
+$stoRichiesta->setAttribute('testo', $testo);
 
 $storico = $xpath->query("/storici/storico[@id_utente = '$id_utente']")->item(0);
 $stoRichieste = $storico->getElementsByTagName('richieste')->item(0);

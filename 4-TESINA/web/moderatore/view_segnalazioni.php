@@ -94,6 +94,11 @@
                 echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\">\n";
                 echo "                  <button type=\"submit\">Rimuovi Contenuto</button>\n";
                 echo "                </form>\n";
+                echo "                <form action=\"../../lib/rimuovere_report_progetto.php\" method=\"post\">\n";
+                echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\">\n";
+                echo "                  <input type=\"hidden\" name=\"id_report\" value=\"" . $id_segnalazionep . "\">\n";
+                echo "                  <button type=\"submit\">Elimina il report</button>\n";
+                echo "                </form>\n";
                 echo "              </td>\n";
 
 
@@ -130,6 +135,11 @@
                   echo "                  <input type=\"hidden\" name=\"id_discussione\" value=\"" . $id_discussione . "\">\n";
                   echo "                  <input type=\"hidden\" name=\"id_progetto\"  value=\" . $id_progetto . \">\n";
                   echo "                  <button type=\"submit\">Rimuovi Contenuto</button>\n";
+                  echo "                </form>\n";
+                  echo "                <form action=\"../../lib/rimuovere_report_commento.php\" method=\"post\">\n";
+                  echo "                  <input type=\"hidden\" name=\"id_commento\" value=\"" . $id_commento . "\">\n";
+                  echo "                  <input type=\"hidden\" name=\"id_report\" value=\"" . $id_segnalazionec . "\">\n";
+                  echo "                  <button type=\"submit\">Elimina il report</button>\n";
                   echo "                </form>\n";
                   echo "              </td>\n";
 

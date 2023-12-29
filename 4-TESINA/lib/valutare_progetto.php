@@ -10,6 +10,9 @@ if (!isset($_SESSION['Tipo_utente'])) {
 require_once 'functions.php';
 $xmlFile = "../data/xml/valutazioni_progetti.xml";
 
+include('../conn.php');
+$radice = "../";
+
 if (!isset($_POST['testo']) || empty($_POST['testo'])) {
     exit;
 } else {
@@ -103,6 +106,9 @@ foreach ($nodes as $node) {
         break;
     }
 }
+
+$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+updateAllUsers($radice, $conn);
 
 $url = "../web/" . $_SESSION['Tipo_utente'] . "/view.php?id_progetto=" . $id_progetto;
 header("Location: $url");

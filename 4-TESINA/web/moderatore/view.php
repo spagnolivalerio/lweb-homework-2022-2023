@@ -38,6 +38,8 @@
     $descrizione_step = $step->getElementsByTagName('descrizione')->item(0)->nodeValue; 
     $img_path = $step->getAttribute('nome_file_img');
 
+    $progetto = getProgetto($root, $id_progetto);
+    $id_creator = $progetto->getAttribute('id_creator');
     $reports_progetto = getSegnalazioniProgetto($root, $id_progetto);
     $reported_project = already_reported($reports_progetto, $id_utente);
     $valutazioni_progetto = getValutazioniProgetto($root, $id_progetto);
@@ -125,7 +127,7 @@
               echo "    <div class=\"options-title\"><h2>DICCI LA TUA</h2></div>";
               if($voted){
                 echo "  <div class=\"votato\">Contributo già valutato</div>\n";
-              }else{
+              }elseif($id_creator !== $id_utente){
                 echo "          <div class=\"p-rating-content\">\n";
                 echo "            <div class=\"label-form\">Valuta progetto</div>\n";
                 echo "            <form class=\"p-rating\" action=\"../../lib/valutare_progetto.php\" method=\"post\">\n";
@@ -151,7 +153,7 @@
 
               if($reported_project){
                 echo "  <div class=\"reported\">Segnalazione effettuata --> Stato della segnalazione: In attesa di un riscontro</div>\n";
-              }else{
+              }elseif($id_creator !== $id_utente){
                 echo "          <div class=\"form-seganalazione-content\">\n";
                 echo "            <div class=\"label-form\">Segnala</div>\n";
                 echo "            <form class=\"form-segnalazione-progetto\" action=\"../../lib/aggiungere_report_progetto.php\" method=\"post\">\n";
@@ -272,7 +274,7 @@
                 
                 if($voted){
                   echo "  <div class=\"votato\">Contributo già valutato</div>\n";
-                }else{
+                }elseif($id_commentatore !== $id_utente){
                   echo "            <form class=\"form-box\" action=\"../../lib/valuta_commento.php\" method=\"post\">\n";
                   echo "                <div class=\"rating\">\n";
                   echo "                    <input type=\"radio\" name=\"rating\" value=\"5\" id=\"5_$id_commento\">\n";
@@ -304,7 +306,7 @@
 
                 if($reported_comment){
                   echo "  <div class=\"reported\">Segnalazione effettuata --> Stato della segnalazione: In attesa di un riscontro</div>\n";
-                }else{
+                }elseif($id_commentatore !== $id_utente){
                   echo "            <form class=\"form-segnalazione\" action=\"../../lib/aggiungere_report_commento.php\" method=\"post\">\n";
                   echo "                <label for=\"segnala\"></label>\n";
                   echo "                <input type=\"text\" name=\"testo\" placeholder=\"Fornisci maggiori dettagli\"></input>\n";

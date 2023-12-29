@@ -2,6 +2,8 @@
 
 session_start();
 include('../conn.php');
+require_once('get_nodes.php');
+
 $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
 if (!isset($_SESSION['Tipo_utente'])) {
@@ -61,6 +63,9 @@ $query = "UPDATE utente SET
           WHERE id = $id_utente";
 
 $result = $conn->query($query);
+
+#QUI VA FATTA LA FUNZIONE PER RENDERE COERENTE LA MODIFICA
+
 
 
 

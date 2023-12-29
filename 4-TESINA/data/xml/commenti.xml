@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="13" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd"/>
+<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="33" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
+  <commento id="24" id_discussione="9" id_commentatore="3" data_ora="2023-12-29 13:56:43" commentatore="moderatore1">
+    <testo>efssefse</testo>
+    <voti/>
+    <reports_commento/>
+    <valutazioni_commento>
+      <valutazione_commento id_valutazione_commento="10"/>
+    </valutazioni_commento>
+  </commento>
+</commenti>

@@ -2,8 +2,11 @@
 
 session_start();
 
-require_once('conn.php');
+include('../conn.php');
+include('functions.php');
 $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+
+$radice = "../";
 
 if (!isset($_POST['id_profilo']) || empty($_POST['id_profilo'])) {
     exit;
@@ -28,12 +31,16 @@ if (isset($_POST['upgrade'])) {  #L'idea è quella di stampare il bottone upgrad
 
     $result = $conn->query($query);
 
-    if (!$result_u) {
+    if (!$result) {
         echo "Errore nella query: " . $conn->error;
         exit;
     }
 
-    header('Location:');
+    $update_query = "UPDATE utente SET livello = 100, punti_reputazione = 0, peso_valutazione = 10 WHERE id = $id_profilo";
+    $res = $conn->query($update_query);
+
+    $url = "../web/" . $_SESSION['Tipo_utente'] . "/listautenti.php";
+    header("Location: $url");
     exit;
 } 
   
@@ -54,8 +61,11 @@ if (isset($_POST['downgrade'])) { #L'idea è quella di stampare il bottone downg
         exit(1);
     }
 
-    header('Location:');
 
+    updateAllUsers($radice, $conn);
+
+    $url = "../web/" . $_SESSION['Tipo_utente'] . "/listautenti.php";
+    header("Location: $url");
     exit;
 }
 

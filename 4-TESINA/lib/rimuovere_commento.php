@@ -3,6 +3,10 @@
 session_start();
 require_once 'functions.php';
 
+
+include('../conn.php');
+$radice = "../";
+
 if (!isset($_SESSION['Tipo_utente'])) {
     header('Location:../web/login.php');
     exit();
@@ -34,6 +38,14 @@ $xmlFile = "../data/xml/commenti.xml";
 $query = "/commenti/commento[@id";
 remove_1_1($xmlFile, $query, $id_commento);
 
+//RIMUOVI DA REPORTS_COMMENTI.XML
+
+$xmlFile = "../data/xml/reports_commenti.xml";
+$query = "/reports_commenti/report_commento[@id_commento";
+remove_1_n($xmlFile, $query, $id_commento);
+
+
+
 //RIMUOVI DA DISCUSSIONI.XML
 
 $xmlFile = "../data/xml/discussioni.xml";
@@ -64,6 +76,9 @@ foreach ($nodes as $node) {
         }
     }
 }
+
+$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+updateAllUsers($radice, $conn);
 
 $url = "../web/" . $_SESSION['Tipo_utente'] . "/homepage.php?id_progetto=" . $id_progetto;
 header("Location: $url");

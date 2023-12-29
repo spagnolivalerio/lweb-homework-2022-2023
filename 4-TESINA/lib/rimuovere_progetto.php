@@ -3,6 +3,9 @@
 session_start();
 require_once 'functions.php';
 
+include('../conn.php');
+$radice = "../";
+
 if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
     exit;
 } else {
@@ -73,6 +76,9 @@ remove_1_2n($xmlFile, $query, $id_commenti);
 if (file_exists($img_path)) {
     unlink($img_path);
 }
+
+$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+updateAllUsers($radice, $conn);
 
 $url = "../web/" . $_SESSION['Tipo_utente'] . "/homepage.php?id_progetto=" . $id_progetto;
 header("Location: $url");

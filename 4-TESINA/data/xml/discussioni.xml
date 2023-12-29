@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="5" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  <discussione titolo="AOFRA" id_poster="3" risolta="false" id="4" id_progetto="3" data_ora="2023-12-28 15:56:16" autore="moderatore1">
-    <commenti/>
-    <descrizione>sdfsdf</descrizione>
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="9" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <discussione titolo="fs" id_poster="3" risolta="false" id="9" id_progetto="5" data_ora="2023-12-29 13:56:38" autore="moderatore1">
+    <commenti>
+      <commento id_commento="24"/>
+    </commenti>
+    <descrizione>fsef</descrizione>
     <partecipanti>
       <partecipante id_partecipante="3"/>
+      <partecipante id_partecipante="4"/>
     </partecipanti>
   </discussione>
 </discussioni>
