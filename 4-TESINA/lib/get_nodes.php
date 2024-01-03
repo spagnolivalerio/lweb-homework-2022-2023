@@ -13,8 +13,6 @@ function getProgetti($root){
 
 }
 
-
-
 function getProgetto($root, $id_progetto){
 
     $xmlFile = $root . "data/xml/progetti.xml";
@@ -24,6 +22,15 @@ function getProgetto($root, $id_progetto){
 
     return $xpath->query("/progetti/progetto[@id = '$id_progetto']")->item(0);
 
+}
+
+function getAllDiscussioni($root){
+
+    $xmlFile = $root . "data/xml/discussioni.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    return $doc->documentElement->childNodes;
+    
 }
 
 /*funzione che prende in input l'id progetto e returna una DOMNodeList di discussioni*/
@@ -59,6 +66,15 @@ function getCommenti($root, $id_discussione){
     $xpath = new DOMXPath($doc);
 
     return $xpath->query("/commenti/commento[@id_discussione = '$id_discussione']");
+
+}
+
+function getAllCommenti($root){
+
+    $xmlFile = $root . "data/xml/commenti.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    return $doc->documentElement->childNodes;
 
 }
 
@@ -217,6 +233,15 @@ function getStoricoUtente($root, $id_utente){
     $xpath = new DOMXPath($doc);
 
     return $xpath->query("/storici/storico[@id_utente = '$id_utente']")->item(0);
+
+}
+
+function getStorici($root){
+
+    $xmlFile = $root . "data/xml/storici.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    return $doc->documentElement->childNodes;
 
 }
 

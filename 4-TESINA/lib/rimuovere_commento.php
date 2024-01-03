@@ -45,6 +45,12 @@ $query = "/reports_commenti/report_commento[@id_commento";
 remove_1_n($xmlFile, $query, $id_commento);
 
 
+//RIMUOVI DA VALUTAZIONI_COMMENTO.XML
+
+$xmlFile = "../data/xml/valutazioni_commenti.xml";
+$query = "/valutazioni_commenti/valutazione_commento[@id_commenti";
+remove_1_n($xmlFile, $query, $id_commento);
+
 
 //RIMUOVI DA DISCUSSIONI.XML
 

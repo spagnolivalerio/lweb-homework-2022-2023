@@ -72,6 +72,7 @@
           $username = $progetto->getAttribute('username_creator');
           $img_path = $root . $progetto->getAttribute('nome_file_img');
           $id_progetto = $progetto->getAttribute('id');
+          $clearance = $progetto->getAttribute('clearance');
 
           echo "<div class=\"card-container\">\n";
             echo "<div class=\"card-header\" style=\"background-image: url('$img_path'); background-size: cover; background-position: center;\">\n";
@@ -84,11 +85,17 @@
             echo"</div>\n";
             echo "    <div class=\"flexbox2\">\n";
               echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
+
+              if($clearance == 1){
                 echo "      <form class=\"card-commenta\" action=\"view.php\" method=\"post\">\n";
                   echo "        <div class=\"animation\"></div>\n";
                   echo "        <button class=\"submit\" type=\"submit\">Dettagli</button>\n";
                   echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
                 echo "      </form>\n";
+              }else{
+                echo "    <div class=\"card-user\">Effettua l'accesso per i dettagli</div>\n";
+              }
+
               echo "    </div>\n";
             echo "  </div>\n";
             echo "</div>\n";

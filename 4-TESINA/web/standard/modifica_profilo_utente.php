@@ -28,6 +28,7 @@ echo "                   <input type=\"text\" name=\"nome\" value=\"" . $row['no
 echo "                   <input type=\"text\" name=\"cognome\" value=\"" . $row['cognome'] . "\"></input>\n";
 echo "                   <input type=\"text\" name=\"email\" value=\"" . $row['email'] . "\"></input>\n";
 echo "                   <input type=\"text\" name=\"username\" value=\"" . $row['username'] . "\"></input>\n";
+echo "                   <input type=\"hidden\" name=\"old_username\" value=\"" . $row['username'] . "\"></input>\n";
 echo "                   <input type=\"text\" name=\"indirizzo\" value=\"" . $row['indirizzo'] . "\"></input>\n";      
 echo "                   <button type=\"submit\">Modifica</button>\n";
 echo "          </form>\n";

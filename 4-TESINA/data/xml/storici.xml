@@ -100,6 +100,7 @@
       <report_progetto id_report="2" tipo="Contenuti inesatti" data_ora="2023-12-28 14:47:22" id_progetto="1"/>
       <report_progetto id_report="3" tipo="Contenuti inesatti" data_ora="2023-12-28 15:52:43" id_progetto="2"/>
       <report_progetto id_report="4" tipo="spam" data_ora="2023-12-28 17:22:18" id_progetto="3"/>
+      <report_progetto id_report="7" tipo="spam" data_ora="2023-12-30 10:42:05" id_progetto="6" publisher="dan" titolo="JUJUTSU KAISEN 12"/>
     </reports_progetti>
     <reports_commenti>
       <report_commento id_report="2" tipo="Contenuti inesatti" data_ora="2023-12-28 15:44:37" id_commento="5" commentatore="moderatore1"/>
@@ -166,6 +167,9 @@
       <progetto titolo="JUJUTSU KAISEN 12" data_ora="2023-12-29 15:17:26" id_progetto="6"/>
       <progetto titolo="JUJUTSU KAISEN 12" data_ora="2023-12-29 15:22:39" id_progetto="7"/>
       <progetto titolo="JUJUTSU KAISEN 12qwerqd" data_ora="2023-12-29 15:27:05" id_progetto="8"/>
+      <progetto titolo="AOFRA" data_ora="2023-12-30 11:14:29" id_progetto="9"/>
+      <progetto titolo="AOFRA" data_ora="2023-12-31 10:10:29" id_progetto="10"/>
+      <progetto titolo="JUJUTSU KAISEN 12" data_ora="2023-12-31 10:26:33" id_progetto="11"/>
     </progetti>
     <richieste>
       <richiesta id_richiesta="1" data_ora="2023-12-29 09:15:45" id_discussione="4" titolo="AOFRAadadad"/>
@@ -209,6 +213,12 @@
       <commento id_commento="33" data_ora="2023-12-29 14:54:51" id_discussione="7">
         <testo>fhfghgfh</testo>
       </commento>
+      <commento id_commento="34" data_ora="2023-12-30 09:50:26" id_discussione="9">
+        <testo>adsadad</testo>
+      </commento>
+      <commento id_commento="35" data_ora="2023-12-30 09:50:32" id_discussione="9">
+        <testo>adasdadasd</testo>
+      </commento>
     </commenti>
     <valutazioni_progetti>
       <valutazione_progetto id_valutazione="1" id_progetto="1" data_ora="2023-12-28 14:40:39" value="5"/>
@@ -229,6 +239,7 @@
       <discussione id_discussione="5" data_ora="2023-12-28 18:07:31" titolo="qweqe"/>
       <discussione id_discussione="6" data_ora="2023-12-29 09:15:39" titolo="AOFRA"/>
       <discussione id_discussione="7" data_ora="2023-12-29 09:20:42" titolo="asdad"/>
+      <discussione id_discussione="10" data_ora="2023-12-30 09:56:16" titolo="fdfsdf"/>
     </discussioni>
     <valutazioni_commenti>
       <valutazione_commento id_valutazione="1" data_ora="2023-12-28 14:46:07" id_commento="1" id_progetto="1">

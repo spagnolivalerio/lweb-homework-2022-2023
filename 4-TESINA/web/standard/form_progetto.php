@@ -56,7 +56,7 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
 
     $tempo_medio = $thisBozza->getAttribute('tempo_medio'); 
     $difficolta = $thisBozza->getAttribute('difficolta'); 
-    $clearence = $thisBozza->getAttribute('clearence'); 
+    $clearance = $thisBozza->getAttribute('clearance'); 
 
 
     
@@ -77,22 +77,47 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
 <h1>Aggiungi progetto</h1>
 
 <form action="../../lib/bozze.php" method="post" enctype="multipart/form-data">
-
 <label>Categorie:</label>
   <br>
-  <input type="checkbox" id="categoria_1" name="categorie[]" value="1">
-  <label for="categoria_1">Categoria 1</label>
-  <br>
-  <input type="checkbox" id="categoria_2" name="categorie[]" value="2">
-  <label for="categoria_2">Categoria 2</label>
-  <br>
-  <input type="checkbox" id="categoria_3" name="categorie[]" value="3">
-  <label for="categoria_3">Categoria 3</label>
-  <br>
-  <input type="checkbox" id="categoria_4" name="categorie[]" value="4">
-  <label for="categoria_4">Categoria 4</label>
-  <!-- Aggiungi altre categorie secondo necessità -->
-  <br>
+<?php 
+      if(isset($categorie)){
+
+        $checkboxValues = ['1', '2', '3', '4']; // Ipoteticamente, questi sono i valori delle checkbox
+
+        foreach ($checkboxValues as $value) {
+            $checked = in_array($value, $categorieArray) ? 'checked' : ''; // Verifica se l'ID della categoria è presente nell'array
+            $label = 'Categoria ' . $value;
+            
+            echo '<input type="checkbox" id="categoria_' . $value . '" name="categorie[]" value="' . $value . '" ' . $checked . '>';
+            echo '<label for="categoria_' . $value . '">' . $label . '</label>';
+            echo '<br>';
+        }
+      }else{
+
+
+            echo "<input type=\"checkbox\" id=\"categoria_1\" name=\"categorie[]\" value=\"1\">\n";
+            echo "<label for=\"categoria_1\">Categoria 1</label>\n";
+            echo "<br>\n";
+
+            echo "<input type=\"checkbox\" id=\"categoria_2\" name=\"categorie[]\" value=\"2\">\n";
+            echo "<label for=\"categoria_2\">Categoria 2</label>\n";
+            echo "<br>\n";
+
+            echo "<input type=\"checkbox\" id=\"categoria_3\" name=\"categorie[]\" value=\"3\">\n";
+            echo "<label for=\"categoria_3\">Categoria 3</label>\n";
+            echo "<br>\n";
+
+            echo "<input type=\"checkbox\" id=\"categoria_4\" name=\"categorie[]\" value=\"4\">\n";
+            echo "<label for=\"categoria_4\">Categoria 4</label>\n";
+
+            echo "<br>\n";
+            
+      }
+  ?>
+
+
+
+ 
 
   <label for="titolo">titolo: </label>
   <input type="text"  name="titolo" <?php if(isset($flag)) {echo "value=\"$titolo\""; }?>></input>
@@ -111,7 +136,7 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
   <br>
 
   <label for="clearence">Livello di clearence (da 1 a 5): </label>
-  <input type="number"  name="clearence" min="1" max="5"  <?php if(isset($flag)) {echo "value=\"$clearence\""; }?>></input>
+  <input type="number"  name="clearance" min="1" max="5"  <?php if(isset($flag)) {echo "value=\"$clearance\""; }?>></input>
   <br>
 
   <?php 

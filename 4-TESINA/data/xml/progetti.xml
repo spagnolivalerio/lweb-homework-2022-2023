@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="8" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="5" username_creator="moderatore1" id_creator="3" tempo_medio="1" data_pubblicazione="2023-12-29 13:54:19" visualizzazioni="1" nome_file_img="img/proj/img_proj_658ec1755aee9.jpg" difficolta="medio" clearance="">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="11" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="5" username_creator="moderatore10" id_creator="3" tempo_medio="18" data_pubblicazione="2023-12-29 13:54:19" visualizzazioni="49" nome_file_img="img/proj/img_proj_658ec1755aee9.jpg" difficolta="difficile" clearance="5">
     <titolo>JUJUTSU KAISEN 12</titolo>
     <categorie>
       <categoria id_categoria="2"/>
@@ -15,7 +15,7 @@
       <valutazione id_valutazione="5"/>
     </valutazioni>
   </progetto>
-  <progetto id="6" username_creator="dan" id_creator="4" tempo_medio="3" data_pubblicazione="2023-12-29 15:17:26" visualizzazioni="0" nome_file_img="img/proj/img_proj_658ed4f1ad2ad.jpg" difficolta="facile" clearance="">
+  <progetto id="6" username_creator="dan" id_creator="4" tempo_medio="3" data_pubblicazione="2023-12-29 15:17:26" visualizzazioni="3" nome_file_img="img/proj/img_proj_658ed4f1ad2ad.jpg" difficolta="facile" clearance="1">
     <titolo>JUJUTSU KAISEN 12</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -24,12 +24,16 @@
       <categoria id_categoria="4"/>
     </categorie>
     <descrizione>gvxgfv</descrizione>
-    <reports_progetti/>
-    <discussioni/>
+    <reports_progetti>
+      <report_progetto id_report="7"/>
+    </reports_progetti>
+    <discussioni>
+      <discussione id_discussione="10"/>
+    </discussioni>
     <tutorial_progetto id_tutorial="6"/>
     <valutazioni/>
   </progetto>
-  <progetto id="7" username_creator="dan" id_creator="4" tempo_medio="3" data_pubblicazione="2023-12-29 15:22:39" visualizzazioni="0" nome_file_img="img/proj/img_proj_658ed62ad98c8.jpg" difficolta="facile" clearance="">
+  <progetto id="7" username_creator="dan" id_creator="4" tempo_medio="3" data_pubblicazione="2023-12-29 15:22:39" visualizzazioni="0" nome_file_img="img/proj/img_proj_658ed62ad98c8.jpg" difficolta="facile" clearance="5">
     <titolo>JUJUTSU KAISEN 12</titolo>
     <categorie>
       <categoria id_categoria="2"/>
@@ -40,7 +44,7 @@
     <tutorial_progetto id_tutorial="7"/>
     <valutazioni/>
   </progetto>
-  <progetto id="8" username_creator="dan" id_creator="4" tempo_medio="3" data_pubblicazione="2023-12-29 15:27:05" visualizzazioni="0" nome_file_img="img/proj/img_proj_658ed7382cf12.jpg" difficolta="facile" clearance="">
+  <progetto id="8" username_creator="dan" id_creator="4" tempo_medio="3" data_pubblicazione="2023-12-29 15:27:05" visualizzazioni="0" nome_file_img="img/proj/img_proj_658ed7382cf12.jpg" difficolta="facile" clearance="5">
     <titolo>JUJUTSU KAISEN 12qwerqd</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -52,6 +56,41 @@
     <reports_progetti/>
     <discussioni/>
     <tutorial_progetto id_tutorial="8"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="9" username_creator="dan" id_creator="4" tempo_medio="5" data_pubblicazione="2023-12-30 11:14:29" visualizzazioni="0" nome_file_img="img/proj/img_proj_658fed8143d23.jpg" difficolta="medio" clearance="1">
+    <titolo>AOFRA</titolo>
+    <categorie>
+      <categoria id_categoria="2"/>
+      <categoria id_categoria="3"/>
+    </categorie>
+    <descrizione>asdads</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="9"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="10" username_creator="dan" id_creator="4" tempo_medio="4" data_pubblicazione="2023-12-31 10:10:29" visualizzazioni="0" nome_file_img="img/proj/img_proj_659130003b6f9.jpg" difficolta="difficile" clearance="1">
+    <titolo>AOFRA</titolo>
+    <categorie>
+      <categoria id_categoria="2"/>
+    </categorie>
+    <descrizione>dasdasd</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="10"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="11" username_creator="dan" id_creator="4" tempo_medio="3" data_pubblicazione="2023-12-31 10:26:33" visualizzazioni="0" nome_file_img="img/proj/img_proj_659133c8d9e39.jpg" difficolta="facile" clearance="4">
+    <titolo>JUJUTSU KAISEN 12</titolo>
+    <categorie>
+      <categoria id_categoria="2"/>
+      <categoria id_categoria="3"/>
+    </categorie>
+    <descrizione>asdad</descrizione>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="11"/>
     <valutazioni/>
   </progetto>
 </progetti>

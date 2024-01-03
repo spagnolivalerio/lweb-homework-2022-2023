@@ -87,6 +87,9 @@
                 $img_path = $root . $progetto->getAttribute('nome_file_img');
                 $id_progetto = $progetto->getAttribute('id'); 
                 $id_creator = $progetto->getAttribute('id_creator'); 
+                $clearance = $progetto->getAttribute('clearance'); 
+                $difficoltà = $progetto->getAttribute('difficolta'); 
+                $durata = $progetto->getAttribute('tempo_medio'); 
 
                 $query = "SELECT * FROM utente WHERE id = '$id_creator'"; 
                 $res = mysqli_query($conn, $query);
@@ -105,6 +108,13 @@
               echo "   <div class=\"top-card\">\n";
               echo "    <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
               echo "    <div class=\"card-user\">$username</div>\n";
+              echo "    <form class=\"\" action=\"form_modifica_progetto.php\" method=\"post\">\n";
+              echo "      <button class=\"submit\" type=\"submit\">&#x270F;</button>\n";
+              echo "      <input name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
+              echo "      <input name=\"clearance\" type=\"hidden\" value=\"$clearance\">\n";
+              echo "      <input name=\"difficoltà\" type=\"hidden\" value=\"$difficoltà\">\n";
+              echo "      <input name=\"durata\" type=\"hidden\" value=\"$durata\">\n";
+              echo "    </form>\n";
               echo "   </div>\n";
 
               if($ban_value == 1){

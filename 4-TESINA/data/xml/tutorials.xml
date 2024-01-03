@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="8">
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="11">
   <tutorial_progetto id="5" id_progetto="5">
     <step num_step="1" nome_file_img="img/steps/img_step_658ec17a4e059.jpg">
       <descrizione>dgdfg</descrizione>
@@ -18,6 +18,21 @@
   <tutorial_progetto id="8" id_progetto="8">
     <step num_step="1" nome_file_img="img/steps/img_step_658ed71dd8a5f.jpg">
       <descrizione>sdfsdf</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="9" id_progetto="9">
+    <step num_step="1" nome_file_img="img/steps/img_step_658fed8561bfe.jpg">
+      <descrizione>asdasd</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="10" id_progetto="10">
+    <step num_step="1" nome_file_img="img/steps/img_step_65913004a261b.jpg">
+      <descrizione>adadas</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="11" id_progetto="11">
+    <step num_step="1" nome_file_img="img/steps/img_step_6591317903e37.jpg">
+      <descrizione>asdad</descrizione>
     </step>
   </tutorial_progetto>
 </tutorials_progetti>

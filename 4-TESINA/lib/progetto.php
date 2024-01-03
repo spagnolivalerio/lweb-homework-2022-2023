@@ -45,7 +45,7 @@ if ($categorie) {
     }
 }
 
-if(empty($titolo) || empty($tempo_medio) || empty($difficolta) || empty($descrizione_progetto) || empty($nome_file_img)  || $null == 1){
+if(empty($titolo) || empty($tempo_medio) || empty($difficolta) || empty($descrizione_progetto) || empty($nome_file_img) || empty($clearance)  || $null == 1){
     $noNullFields = false;
 }else{
     $noNullFields = true;

@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="9" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  <discussione titolo="fs" id_poster="3" risolta="false" id="9" id_progetto="5" data_ora="2023-12-29 13:56:38" autore="moderatore1">
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="10" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <discussione titolo="fs" id_poster="3" risolta="false" id="9" id_progetto="5" data_ora="2023-12-29 13:56:38" autore="moderatore10">
     <commenti>
       <commento id_commento="24"/>
+      <commento id_commento="34"/>
+      <commento id_commento="35"/>
     </commenti>
     <descrizione>fsef</descrizione>
     <partecipanti>
       <partecipante id_partecipante="3"/>
+      <partecipante id_partecipante="4"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="fdfsdf" id_poster="4" risolta="false" id="10" id_progetto="6" data_ora="2023-12-30 09:56:16" autore="dan">
+    <commenti/>
+    <descrizione>fd</descrizione>
+    <partecipanti>
       <partecipante id_partecipante="4"/>
     </partecipanti>
   </discussione>
