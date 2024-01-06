@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="10" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="15" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
   <discussione titolo="fs" id_poster="3" risolta="false" id="9" id_progetto="5" data_ora="2023-12-29 13:56:38" autore="moderatore10">
     <commenti>
       <commento id_commento="24"/>
@@ -17,6 +17,47 @@
     <descrizione>fd</descrizione>
     <partecipanti>
       <partecipante id_partecipante="4"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="come si fa lampeggiare un led?" id_poster="5" risolta="false" id="11" id_progetto="6" data_ora="2024-01-06 13:44:28" autore="2">
+    <commenti>
+      <commento id_commento="36"/>
+      <commento id_commento="37"/>
+      <commento id_commento="38"/>
+    </commenti>
+    <descrizione>vorrei sapere quale pin arduno utiliozare</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="5"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="edasf" id_poster="5" risolta="false" id="12" id_progetto="6" data_ora="2024-01-06 13:44:56" autore="2">
+    <commenti/>
+    <descrizione>esf</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="5"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="sdv" id_poster="5" risolta="false" id="13" id_progetto="6" data_ora="2024-01-06 13:45:00" autore="2">
+    <commenti/>
+    <descrizione>sdv</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="5"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="srg" id_poster="5" risolta="false" id="14" id_progetto="5" data_ora="2024-01-06 13:46:48" autore="2">
+    <commenti/>
+    <descrizione>eg</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="5"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="sad" id_poster="5" risolta="false" id="15" id_progetto="5" data_ora="2024-01-06 13:48:43" autore="2">
+    <commenti>
+      <commento id_commento="39"/>
+    </commenti>
+    <descrizione>ettttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="5"/>
     </partecipanti>
   </discussione>
 </discussioni>

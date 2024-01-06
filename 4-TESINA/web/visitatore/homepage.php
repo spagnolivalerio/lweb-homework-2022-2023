@@ -3,6 +3,9 @@
     session_start();   
     $root = "../../";
     require_once($root . "lib/get_nodes.php");
+    include('../../conn.php');
+
+    $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 
@@ -19,7 +22,7 @@
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/visitatore/homepage.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/visitatore/visitatore.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
 
 
@@ -68,22 +71,40 @@
         foreach($progetti as $progetto){
 
           $titolo = $progetto->getElementsByTagName('titolo')->item(0)->nodeValue;
+          $categorie = $progetto->getElementsByTagName('categorie')->item(0); 
           $descrizione = $progetto->getElementsByTagName('descrizione')->item(0)->nodeValue;
           $username = $progetto->getAttribute('username_creator');
           $img_path = $root . $progetto->getAttribute('nome_file_img');
-          $id_progetto = $progetto->getAttribute('id');
+          $id_progetto = $progetto->getAttribute('id'); 
+          $id_creator = $progetto->getAttribute('id_creator'); 
           $clearance = $progetto->getAttribute('clearance');
+          $livello_richiesto = intval($clearance) * 2;
 
-          echo "<div class=\"card-container\">\n";
-            echo "<div class=\"card-header\" style=\"background-image: url('$img_path'); background-size: cover; background-position: center;\">\n";
-              echo "<div class=\"card-user\">&#x1F464; $username</div>\n";
-            echo "</div>\n";
-            echo "<div class=\"card-footer\">\n";
+          $query = "SELECT * FROM utente WHERE id = '$id_creator'"; 
+          $res = mysqli_query($conn, $query);
+          $row = mysqli_fetch_array($res); 
+          $avatar = $row['avatar'];  
+
+          $query = "SELECT ban FROM utente WHERE id = $id_creator";
+          $result = $conn->query($query);
+          $row = $result->fetch_assoc();
+          $ban_value = $row['ban'];
+          $rating = valutazioneProgetto($root, $id_progetto, $conn);
+
+
+              echo "<div class=\"card-container\">\n";
+              echo "  <div class=\"card-header\" style=\"background-image: url('$img_path'); background-size: cover; background-position: center;\">\n";
+              echo "   <div class=\"top-card\">\n";
+              echo "    <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
+              echo "    <div class=\"card-user\">$username</div>\n";
+              echo "    </div>\n";
+              echo "   </div>\n";
+              echo "<div class=\"card-footer\">\n";
               echo "<div class=\"flexbox1\">\n";
-                echo "<div class=\"card-titolo\">$titolo</div>\n";
-                echo "<div class=\"card-rating\">rating</div>\n";
-            echo"</div>\n";
-            echo "    <div class=\"flexbox2\">\n";
+              echo "<div class=\"card-titolo\">$titolo</div>\n";
+              echo "<div class=\"card-rating\">rating</div>\n";
+              echo "</div>\n";
+              echo "    <div class=\"flexbox2\">\n";
               echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
 
               if($clearance == 1){

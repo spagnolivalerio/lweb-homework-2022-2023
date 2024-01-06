@@ -18,7 +18,7 @@
 
 
 
-  $clearance_utente = updateClearance($root, $_SESSION['id_utente'], $conn);
+    $clearance_utente = updateClearance($root, $_SESSION['id_utente'], $conn);
   
 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
@@ -100,7 +100,6 @@
                 $row = mysqli_fetch_array($res); 
                 $avatar = $row['avatar'];  
 
-                $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
                 $query = "SELECT ban FROM utente WHERE id = $id_creator";
                 $result = $conn->query($query);
                 $row = $result->fetch_assoc();

@@ -50,9 +50,10 @@
       <title>THE PROJECT SOCIETY</title>
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/visitatore/visitatore.css" />
+
 
   </head>
 
@@ -64,17 +65,18 @@
               <div class="logo">TPS</div>
             </div>
             <div class="homepage-sidebar-list">
-            <a class="elem" href="homepage.php">Homepage</a>
-            <a class="elem" href="bacheca.php">Bacheca</a>
-            <a class="elem" href="view_bozze.php">Bozze</a>
-            <a class="elem" href="view_storico.php">Storico</a>
-            <div class="divisore"></div>
-            <a class="elem" href="../../lib/logout.php">Logout</a>
+              <a class="elem" href="homepage.php">Homepage</a>
+              <a class="elem blur">Bacheca</a>
+              <a class="elem blur">Bozze</a>
+              <a class="elem blur">Storico</a>
+              <div class="divisore"></div>
           </div>
           </div>
           <div class="dashboard">
           <div class="bar"></div>
-            <div class="toolbar"></div>
+            <div class="toolbar">
+              <div class="login"><a href="../login.php">Accedi</a></div>
+            </div>
               <?php
 
               echo "<div class=\"step\">\n";

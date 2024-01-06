@@ -15,7 +15,7 @@
 
 
 .discussion-container {
-    width: 800px;
+    width: 900px;
     margin-bottom: 70px;
     padding: 20px;
     border: 1px solid #ddd;
@@ -178,6 +178,7 @@
 }
 
 .form-segnalazione{
+    margin-top: 15px;
     display: flex;
     justify-content: center;
 }
