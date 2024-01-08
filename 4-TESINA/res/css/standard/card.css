@@ -30,6 +30,8 @@
 
 .card-descrizione {
     flex-basis: 70%;
+    max-height: 100px;
+    overflow-y: scroll;
 }
 
 .card-user {

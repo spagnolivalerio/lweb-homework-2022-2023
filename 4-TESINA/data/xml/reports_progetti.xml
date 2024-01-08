@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<reports_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="7" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  <report_progetto id="7" id_progetto="6" id_utente="3" data_ora="2023-12-30 10:42:05">
-    <tipo>spam</tipo>
-    <testo>njkn</testo>
+<reports_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <report_progetto id="1" id_progetto="1" id_utente="5" data_ora="2024-01-08 11:48:30">
+    <tipo>Contenuti inesatti</tipo>
+    <testo>le immagini associate non sono adeguate</testo>
   </report_progetto>
 </reports_progetti>

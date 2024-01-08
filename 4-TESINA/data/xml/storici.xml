@@ -21,291 +21,39 @@
     <valutazioni_commenti/>
   </storico>
   <storico id_utente="3">
-    <progetti>
-      <progetto titolo="JUJUTSU KAISEN 12" data_ora="2023-12-29 13:54:19" id_progetto="5"/>
-    </progetti>
-    <richieste>
-      <richiesta id_richiesta="8" data_ora="2023-12-29 14:55:10" id_discussione="7" testo=""/>
-    </richieste>
-    <commenti>
-      <commento id_commento="2" data_ora="2023-12-28 14:47:29" id_discussione="1">
-        <testo>dgfdgdg</testo>
-      </commento>
-      <commento id_commento="3" data_ora="2023-12-28 14:47:32" id_discussione="2">
-        <testo>dgdg</testo>
-      </commento>
-      <commento id_commento="4" data_ora="2023-12-28 14:47:39" id_discussione="2">
-        <testo>gdgdg</testo>
-      </commento>
-      <commento id_commento="5" data_ora="2023-12-28 15:44:30" id_discussione="3">
-        <testo>werwr</testo>
-      </commento>
-      <commento id_commento="6" data_ora="2023-12-28 15:56:18" id_discussione="4">
-        <testo>sdfsdfsdf</testo>
-      </commento>
-      <commento id_commento="7" data_ora="2023-12-28 16:01:15" id_discussione="4">
-        <testo>asdad</testo>
-      </commento>
-      <commento id_commento="8" data_ora="2023-12-28 16:05:11" id_discussione="4">
-        <testo>dfsdf</testo>
-      </commento>
-      <commento id_commento="9" data_ora="2023-12-28 16:09:42" id_discussione="4">
-        <testo>asdadas</testo>
-      </commento>
-      <commento id_commento="10" data_ora="2023-12-28 16:09:47" id_discussione="4">
-        <testo>asdasdasd</testo>
-      </commento>
-      <commento id_commento="11" data_ora="2023-12-28 17:01:51" id_discussione="4">
-        <testo>asdasdasd</testo>
-      </commento>
-      <commento id_commento="12" data_ora="2023-12-28 17:13:21" id_discussione="4">
-        <testo>adada</testo>
-      </commento>
-      <commento id_commento="15" data_ora="2023-12-29 09:54:16" id_discussione="8">
-        <testo>dfsdfsaf</testo>
-      </commento>
-      <commento id_commento="16" data_ora="2023-12-29 09:54:19" id_discussione="4">
-        <testo>asdasd</testo>
-      </commento>
-      <commento id_commento="17" data_ora="2023-12-29 10:43:05" id_discussione="7">
-        <testo>sadasd</testo>
-      </commento>
-      <commento id_commento="18" data_ora="2023-12-29 10:43:12" id_discussione="8">
-        <testo>dadada</testo>
-      </commento>
-      <commento id_commento="19" data_ora="2023-12-29 10:43:15" id_discussione="4">
-        <testo>adsasdasd</testo>
-      </commento>
-      <commento id_commento="24" data_ora="2023-12-29 13:56:43" id_discussione="9">
-        <testo>efssefse</testo>
-      </commento>
-      <commento id_commento="25" data_ora="2023-12-29 14:53:18" id_discussione="4">
-        <testo>xbxcbvxc</testo>
-      </commento>
-      <commento id_commento="26" data_ora="2023-12-29 14:53:21" id_discussione="4">
-        <testo>xcvxcvxcv</testo>
-      </commento>
-      <commento id_commento="27" data_ora="2023-12-29 14:53:24" id_discussione="4">
-        <testo>xcvxcvxc</testo>
-      </commento>
-      <commento id_commento="28" data_ora="2023-12-29 14:53:34" id_discussione="4">
-        <testo>vvbvbbvvbvb</testo>
-      </commento>
-    </commenti>
-    <valutazioni_progetti>
-      <valutazione_progetto id_valutazione="2" id_progetto="1" data_ora="2023-12-28 14:47:18" value="5"/>
-      <valutazione_progetto id_valutazione="4" id_progetto="3" data_ora="2023-12-29 13:33:31" value="5"/>
-    </valutazioni_progetti>
-    <reports_progetti>
-      <report_progetto id_report="2" tipo="Contenuti inesatti" data_ora="2023-12-28 14:47:22" id_progetto="1"/>
-      <report_progetto id_report="3" tipo="Contenuti inesatti" data_ora="2023-12-28 15:52:43" id_progetto="2"/>
-      <report_progetto id_report="4" tipo="spam" data_ora="2023-12-28 17:22:18" id_progetto="3"/>
-      <report_progetto id_report="7" tipo="spam" data_ora="2023-12-30 10:42:05" id_progetto="6" publisher="dan" titolo="JUJUTSU KAISEN 12"/>
-    </reports_progetti>
-    <reports_commenti>
-      <report_commento id_report="2" tipo="Contenuti inesatti" data_ora="2023-12-28 15:44:37" id_commento="5" commentatore="moderatore1"/>
-      <report_commento id_report="3" tipo="spam" data_ora="2023-12-28 16:01:35" id_commento="7" commentatore="moderatore1"/>
-      <report_commento id_report="4" tipo="spam" data_ora="2023-12-28 16:10:01" id_commento="10" commentatore="moderatore1"/>
-      <report_commento id_report="5" tipo="spam" data_ora="2023-12-28 17:01:55" id_commento="11" commentatore="moderatore1"/>
-      <report_commento id_report="6" tipo="Contenuti inesatti" data_ora="2023-12-28 17:13:26" id_commento="12" commentatore="moderatore1"/>
-      <report_commento id_report="7" tipo="spam" data_ora="2023-12-29 10:27:02" id_commento="14" commentatore="dan"/>
-      <report_commento id_report="8" tipo="spam" data_ora="2023-12-29 10:28:27" id_commento="14" commentatore="dan"/>
-      <report_commento id_report="9" tipo="spam" data_ora="2023-12-29 10:32:33" id_commento="14" commentatore="dan"/>
-    </reports_commenti>
-    <discussioni>
-      <discussione id_discussione="2" data_ora="2023-12-28 14:47:25" titolo="gdgd"/>
-      <discussione id_discussione="3" data_ora="2023-12-28 15:44:28" titolo="AOFRA"/>
-      <discussione id_discussione="4" data_ora="2023-12-28 15:56:16" titolo="AOFRA"/>
-      <discussione id_discussione="8" data_ora="2023-12-29 09:21:13" titolo="adasdasd"/>
-      <discussione id_discussione="9" data_ora="2023-12-29 13:56:38" titolo="fs"/>
-    </discussioni>
-    <valutazioni_commenti>
-      <valutazione_commento id_valutazione="2" data_ora="2023-12-28 14:47:35" id_commento="1" id_progetto="1">
-        <utilita>1</utilita>
-        <livello_di_accordo>4</livello_di_accordo>
-      </valutazione_commento>
-      <valutazione_commento id_valutazione="4" data_ora="2023-12-29 13:41:42" id_commento="20" id_progetto="3">
-        <utilita>3</utilita>
-        <livello_di_accordo>5</livello_di_accordo>
-      </valutazione_commento>
-      <valutazione_commento id_valutazione="5" data_ora="2023-12-29 13:41:47" id_commento="21" id_progetto="3">
-        <utilita>3</utilita>
-        <livello_di_accordo>5</livello_di_accordo>
-      </valutazione_commento>
-      <valutazione_commento id_valutazione="6" data_ora="2023-12-29 13:41:51" id_commento="22" id_progetto="3">
-        <utilita>3</utilita>
-        <livello_di_accordo>5</livello_di_accordo>
-      </valutazione_commento>
-      <valutazione_commento id_valutazione="7" data_ora="2023-12-29 13:41:55" id_commento="23" id_progetto="3">
-        <utilita>3</utilita>
-        <livello_di_accordo>5</livello_di_accordo>
-      </valutazione_commento>
-      <valutazione_commento id_valutazione="11" data_ora="2023-12-29 14:56:26" id_commento="29" id_progetto="3">
-        <utilita>3</utilita>
-        <livello_di_accordo>5</livello_di_accordo>
-      </valutazione_commento>
-      <valutazione_commento id_valutazione="12" data_ora="2023-12-29 14:57:03" id_commento="29" id_progetto="3">
-        <utilita>3</utilita>
-        <livello_di_accordo>5</livello_di_accordo>
-      </valutazione_commento>
-      <valutazione_commento id_valutazione="13" data_ora="2023-12-29 14:57:20" id_commento="30" id_progetto="3">
-        <utilita>3</utilita>
-        <livello_di_accordo>5</livello_di_accordo>
-      </valutazione_commento>
-      <valutazione_commento id_valutazione="14" data_ora="2023-12-29 14:57:35" id_commento="31" id_progetto="3">
-        <utilita>3</utilita>
-        <livello_di_accordo>5</livello_di_accordo>
-      </valutazione_commento>
-    </valutazioni_commenti>
-  </storico>
-  <storico id_utente="4">
-    <progetti>
-      <progetto titolo="JUJUTSU KAISEN 12" data_ora="2023-12-28 14:39:02" id_progetto="1"/>
-      <progetto titolo="JUJUTSU KAISEN 12" data_ora="2023-12-28 15:44:06" id_progetto="2"/>
-      <progetto titolo="AOFRA" data_ora="2023-12-28 15:54:31" id_progetto="3"/>
-      <progetto titolo="AOFRAadadad" data_ora="2023-12-28 18:04:33" id_progetto="4"/>
-      <progetto titolo="JUJUTSU KAISEN 12" data_ora="2023-12-29 15:17:26" id_progetto="6"/>
-      <progetto titolo="JUJUTSU KAISEN 12" data_ora="2023-12-29 15:22:39" id_progetto="7"/>
-      <progetto titolo="JUJUTSU KAISEN 12qwerqd" data_ora="2023-12-29 15:27:05" id_progetto="8"/>
-      <progetto titolo="AOFRA" data_ora="2023-12-30 11:14:29" id_progetto="9"/>
-      <progetto titolo="AOFRA" data_ora="2023-12-31 10:10:29" id_progetto="10"/>
-      <progetto titolo="JUJUTSU KAISEN 12" data_ora="2023-12-31 10:26:33" id_progetto="11"/>
-    </progetti>
-    <richieste>
-      <richiesta id_richiesta="1" data_ora="2023-12-29 09:15:45" id_discussione="4" titolo="AOFRAadadad"/>
-      <richiesta id_richiesta="2" data_ora="2023-12-29 09:21:25" id_discussione="8"/>
-      <richiesta id_richiesta="7" data_ora="2023-12-29 14:00:31" id_discussione="9" testo=""/>
-    </richieste>
-    <commenti>
-      <commento id_commento="1" data_ora="2023-12-28 14:43:57" id_discussione="1">
-        <testo>asdadadasd</testo>
-      </commento>
-      <commento id_commento="13" data_ora="2023-12-28 18:07:34" id_discussione="5">
-        <testo>fsdfsdf</testo>
-      </commento>
-      <commento id_commento="14" data_ora="2023-12-29 09:47:46" id_discussione="7">
-        <testo>asdad</testo>
-      </commento>
-      <commento id_commento="20" data_ora="2023-12-29 13:40:49" id_discussione="7">
-        <testo>dasda</testo>
-      </commento>
-      <commento id_commento="21" data_ora="2023-12-29 13:40:52" id_discussione="7">
-        <testo>asdasd</testo>
-      </commento>
-      <commento id_commento="22" data_ora="2023-12-29 13:40:54" id_discussione="7">
-        <testo>asdasd</testo>
-      </commento>
-      <commento id_commento="23" data_ora="2023-12-29 13:40:57" id_discussione="7">
-        <testo>sdsdasd</testo>
-      </commento>
-      <commento id_commento="29" data_ora="2023-12-29 14:54:39" id_discussione="7">
-        <testo>fhfhfghfgh</testo>
-      </commento>
-      <commento id_commento="30" data_ora="2023-12-29 14:54:42" id_discussione="7">
-        <testo>hfghfghfg</testo>
-      </commento>
-      <commento id_commento="31" data_ora="2023-12-29 14:54:45" id_discussione="7">
-        <testo>fghfghfgh</testo>
-      </commento>
-      <commento id_commento="32" data_ora="2023-12-29 14:54:48" id_discussione="7">
-        <testo>fghfhgfgh</testo>
-      </commento>
-      <commento id_commento="33" data_ora="2023-12-29 14:54:51" id_discussione="7">
-        <testo>fhfghgfh</testo>
-      </commento>
-      <commento id_commento="34" data_ora="2023-12-30 09:50:26" id_discussione="9">
-        <testo>adsadad</testo>
-      </commento>
-      <commento id_commento="35" data_ora="2023-12-30 09:50:32" id_discussione="9">
-        <testo>adasdadasd</testo>
-      </commento>
-    </commenti>
-    <valutazioni_progetti>
-      <valutazione_progetto id_valutazione="1" id_progetto="1" data_ora="2023-12-28 14:40:39" value="5"/>
-      <valutazione_progetto id_valutazione="3" id_progetto="3" data_ora="2023-12-28 18:02:01" value="4"/>
-      <valutazione_progetto id_valutazione="5" id_progetto="5" data_ora="2023-12-29 13:55:13" value="5"/>
-    </valutazioni_progetti>
-    <reports_progetti>
-      <report_progetto id_report="5" tipo="Contenuti inesatti" data_ora="2023-12-28 18:07:17" id_progetto="3" publisher="dan" titolo="AOFRA"/>
-      <report_progetto id_report="6" tipo="Contenuti inesatti" data_ora="2023-12-28 18:27:49" id_progetto="4" publisher="dan" titolo="AOFRAadadad"/>
-    </reports_progetti>
-    <reports_commenti>
-      <report_commento id_report="1" tipo="Contenuti inesatti" data_ora="2023-12-28 14:44:17" id_commento="1"/>
-      <report_commento id_report="10" tipo="spam" data_ora="2023-12-29 10:43:31" id_commento="16" commentatore="moderatore1"/>
-      <report_commento id_report="11" tipo="spam" data_ora="2023-12-29 10:43:44" id_commento="19" commentatore="moderatore1"/>
-    </reports_commenti>
-    <discussioni>
-      <discussione id_discussione="1" data_ora="2023-12-28 14:43:47" titolo="asdadasd"/>
-      <discussione id_discussione="5" data_ora="2023-12-28 18:07:31" titolo="qweqe"/>
-      <discussione id_discussione="6" data_ora="2023-12-29 09:15:39" titolo="AOFRA"/>
-      <discussione id_discussione="7" data_ora="2023-12-29 09:20:42" titolo="asdad"/>
-      <discussione id_discussione="10" data_ora="2023-12-30 09:56:16" titolo="fdfsdf"/>
-    </discussioni>
-    <valutazioni_commenti>
-      <valutazione_commento id_valutazione="1" data_ora="2023-12-28 14:46:07" id_commento="1" id_progetto="1">
-        <utilita>2</utilita>
-        <livello_di_accordo>5</livello_di_accordo>
-      </valutazione_commento>
-      <valutazione_commento id_valutazione="3" data_ora="2023-12-29 13:31:47" id_commento="17" id_progetto="3">
-        <utilita>1</utilita>
-        <livello_di_accordo>5</livello_di_accordo>
-      </valutazione_commento>
-      <valutazione_commento id_valutazione="8" data_ora="2023-12-29 13:52:36" id_commento="15" id_progetto="3">
-        <utilita>3</utilita>
-        <livello_di_accordo>5</livello_di_accordo>
-      </valutazione_commento>
-      <valutazione_commento id_valutazione="9" data_ora="2023-12-29 13:52:42" id_commento="18" id_progetto="3">
-        <utilita>3</utilita>
-        <livello_di_accordo>5</livello_di_accordo>
-      </valutazione_commento>
-      <valutazione_commento id_valutazione="10" data_ora="2023-12-29 14:03:58" id_commento="24" id_progetto="5">
-        <utilita>3</utilita>
-        <livello_di_accordo>5</livello_di_accordo>
-      </valutazione_commento>
-    </valutazioni_commenti>
-  </storico>
-  <storico id_utente="5">
-    <progetti>
-      <progetto titolo="titolo" data_ora="2024-01-06 13:31:24" id_progetto="12"/>
-      <progetto titolo="er" data_ora="2024-01-06 13:32:50" id_progetto="13"/>
-      <progetto titolo="dsgd" data_ora="2024-01-06 13:43:12" id_progetto="14"/>
-    </progetti>
-    <richieste/>
-    <commenti>
-      <commento id_commento="36" data_ora="2024-01-06 13:45:21" id_discussione="11">
-        <testo>et</testo>
-      </commento>
-      <commento id_commento="37" data_ora="2024-01-06 13:45:23" id_discussione="11">
-        <testo>we</testo>
-      </commento>
-      <commento id_commento="38" data_ora="2024-01-06 13:45:26" id_discussione="11">
-        <testo>wd</testo>
-      </commento>
-      <commento id_commento="39" data_ora="2024-01-06 13:48:58" id_discussione="15">
-        <testo>asdaefa</testo>
-      </commento>
-    </commenti>
-    <valutazioni_progetti>
-      <valutazione_progetto id_valutazione="6" id_progetto="6" data_ora="2024-01-06 13:43:47" value="4"/>
-      <valutazione_progetto id_valutazione="7" id_progetto="5" data_ora="2024-01-06 13:48:17" value="1"/>
-    </valutazioni_progetti>
-    <reports_progetti/>
-    <reports_commenti/>
-    <discussioni>
-      <discussione id_discussione="11" data_ora="2024-01-06 13:44:28" titolo="come si fa lampeggiare un led?"/>
-      <discussione id_discussione="12" data_ora="2024-01-06 13:44:56" titolo="edasf"/>
-      <discussione id_discussione="13" data_ora="2024-01-06 13:45:00" titolo="sdv"/>
-      <discussione id_discussione="14" data_ora="2024-01-06 13:46:48" titolo="srg"/>
-      <discussione id_discussione="15" data_ora="2024-01-06 13:48:43" titolo="sad"/>
-    </discussioni>
-    <valutazioni_commenti/>
-  </storico>
-  <storico id_utente="5">
     <progetti/>
     <richieste/>
     <commenti/>
     <valutazioni_progetti/>
     <reports_progetti/>
+    <reports_commenti/>
+    <discussioni/>
+    <valutazioni_commenti/>
+  </storico>
+  <storico id_utente="4">
+    <progetti>
+      <progetto titolo="Arduino Blink. Fai lampeggiare un led" data_ora="2024-01-08 11:41:06" id_progetto="1"/>
+    </progetti>
+    <richieste/>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti/>
+    <discussioni>
+      <discussione id_discussione="16" data_ora="2024-01-08 11:44:13" titolo="Domanda sull'utilizzo del pin 9"/>
+    </discussioni>
+    <valutazioni_commenti/>
+  </storico>
+  <storico id_utente="5">
+    <progetti/>
+    <richieste>
+      <richiesta id_richiesta="1" data_ora="2024-01-08 11:48:48" id_discussione="16" testo=""/>
+    </richieste>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti>
+      <report_progetto id_report="1" tipo="Contenuti inesatti" data_ora="2024-01-08 11:48:30" id_progetto="1" publisher="utentestd1" titolo="Arduino Blink. Fai lampeggiare un led"/>
+    </reports_progetti>
     <reports_commenti/>
     <discussioni/>
     <valutazioni_commenti/>

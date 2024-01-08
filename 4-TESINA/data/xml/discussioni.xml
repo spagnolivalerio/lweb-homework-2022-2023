@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="15" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="16" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
   <discussione titolo="fs" id_poster="3" risolta="false" id="9" id_progetto="5" data_ora="2023-12-29 13:56:38" autore="moderatore10">
     <commenti>
       <commento id_commento="24"/>
@@ -12,7 +12,7 @@
       <partecipante id_partecipante="4"/>
     </partecipanti>
   </discussione>
-  <discussione titolo="fdfsdf" id_poster="4" risolta="false" id="10" id_progetto="6" data_ora="2023-12-30 09:56:16" autore="dan">
+  <discussione titolo="fdfsdf" id_poster="4" risolta="false" id="10" id_progetto="6" data_ora="2023-12-30 09:56:16" autore="user">
     <commenti/>
     <descrizione>fd</descrizione>
     <partecipanti>
@@ -58,6 +58,13 @@
     <descrizione>ettttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt</descrizione>
     <partecipanti>
       <partecipante id_partecipante="5"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="Domanda sull'utilizzo del pin 9" id_poster="4" risolta="false" id="16" id_progetto="1" data_ora="2024-01-08 11:44:13" autore="user">
+    <commenti/>
+    <descrizione>Perchè utilizzando i pin non analogici non funziona?</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="4"/>
     </partecipanti>
   </discussione>
 </discussioni>

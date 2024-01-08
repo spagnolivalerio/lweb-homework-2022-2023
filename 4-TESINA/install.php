@@ -28,9 +28,10 @@
 					  );";
 
 	$insert_utente = "INSERT INTO utente (nome, cognome, username, password, email, livello, tipo, peso_valutazione, indirizzo,avatar,data)
-					  VALUES ('Valerio', 'Spagnoli', 'utente1', '$crypt_pwd', '$email_1', '100', 'admin', '10', 'via della gaurdia','avatar1.png','2023-10-23'),
-					  	     ('Daniele', 'Siciliano', 'utente2', '$crypt_pwd', '$email_2', '100', 'admin', '10', 'via saturno', 'avatar2.png','2023-10-23'),
-							 ('MODERATORE', 'mod', 'moderatore1', '$crypt_pwd', 'moderatore@gmail.com', '100', 'moderatore', '10', 'via saturno', 'avatar2.png','2023-10-23');";
+					  VALUES ('Valerio', 'Spagnoli', 'adm1', '$crypt_pwd', '$email_1', '100', 'admin', '10', 'via della gaurdia','avatar1.png','2023-10-23'),
+					  	     ('Daniele', 'Siciliano', 'adm2', '$crypt_pwd', '$email_2', '100', 'admin', '10', 'via saturno', 'avatar2.png','2023-10-23'),
+							 ('MODERATORE', 'mod', 'moderatore1', '$crypt_pwd', 'moderatore@gmail.com', '100', 'moderatore', '10', 'via saturno', 'avatar2.png','2023-10-23'),
+							 ('Mario', 'Rossi', 'utentestd1', '$crypt_pwd', 'utente@gmail.com', '1', 'standard', '10', 'via saturno', 'avatar1.png','2023-10-23');";
 	
 	$queries = array($create_db, $create_utente, $insert_utente);
 

@@ -100,22 +100,6 @@
                 echo "                   <button type=\"submit\">Sospendi</button>\n";
                 echo "          </form>\n";
 
-                if($row['tipo'] == 'standard'){
-                  echo "          <form class=\"form-ban\" action=\"../../lib/upgrade-downgrade.php\" method=\"post\">\n";
-                  echo "                   <input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input>\n";
-                  echo "                   <input type=\"hidden\" name=\"Tipo_utente\" value=" . $row['tipo'] . "></input>\n";
-                  echo "                   <input type=\"hidden\" name=\"upgrade\" value=\"upgrade\"></input>\n";
-                  echo "                   <button type=\"submit\">&#9650;</button>\n";
-                  echo "          </form>\n";
-                }elseif($row['tipo'] == 'moderatore'){
-                  echo "          <form class=\"form-ban\" action=\"../../lib/upgrade-downgrade.php\" method=\"post\">\n";
-                  echo "                   <input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input>\n";
-                  echo "                   <input type=\"hidden\" name=\"Tipo_utente\" value=" . $row['tipo'] . "></input>\n";
-                  echo "                   <input type=\"hidden\" name=\"downgrade\" value=\"downgrade\"></input>\n";
-                  echo "                   <button type=\"submit\">&#9660;</button>\n";
-                  echo "          </form>\n";
-                }
-
                 echo "          </td>\n";
             }elseif($row['ban'] == 1){
                 echo "          <td>\n";

@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<richieste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="8" xsi:noNamespaceSchemaLocation="../../structures/richieste_accesso_discussioni.xsd">
-  <richiesta id="7" id_discussione="9" id_utente="4" data_ora="2023-12-29 14:02:20" stato="accettata">
-    <moderatore id_mod="3" username="moderatore10"/>
-  </richiesta>
+<richieste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/richieste_accesso_discussioni.xsd">
+  <richiesta id="1" id_discussione="16" id_utente="5" data_ora="2024-01-08 11:48:48" stato="in lavorazione"/>
 </richieste>

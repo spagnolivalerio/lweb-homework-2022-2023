@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="14">
-  <tutorial_progetto id="5" id_progetto="5">
-    <step num_step="1" nome_file_img="img/steps/img_step_658ec17a4e059.jpg">
-      <descrizione>dgdfg</descrizione>
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="1">
+  <tutorial_progetto id="1" id_progetto="1">
+    <step num_step="1" nome_file_img="img/steps/img_step_659bd05245a40.jpg">
+      <descrizione>Collegare arduino al pc con un cavo usb tipo B - tipo A.</descrizione>
+    </step>
+    <step num_step="2" nome_file_img="img/steps/img_step_659bd097b7901.png">
+      <descrizione>Aprire l'ide di programmazione arduino e caricare lo sketch di default chiamato "blink"</descrizione>
+    </step>
+    <step num_step="3" nome_file_img="img/steps/img_step_659bd141ef448.jpg">
+      <descrizione>Collegare con i jump, il pin 9 analogico di arduino sull'anodo del led, e la massa sul catodo. Infine avviare lo sketch caricandolo su arduino.</descrizione>
     </step>
   </tutorial_progetto>
-  <tutorial_progetto id="6" id_progetto="6">
-    <step num_step="1" nome_file_img="img/steps/img_step_658ed4f5a32c7.jpg">
-      <descrizione>sgfsg</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="10" id_progetto="10">
-    <step num_step="1" nome_file_img="img/steps/img_step_65913004a261b.jpg">
-      <descrizione>adadas</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="11" id_progetto="11">
-    <step num_step="1" nome_file_img="img/steps/img_step_6591317903e37.jpg">
-      <descrizione>asdad</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="12" id_progetto="12"/>
-  <tutorial_progetto id="13" id_progetto="13"/>
-  <tutorial_progetto id="14" id_progetto="14"/>
 </tutorials_progetti>

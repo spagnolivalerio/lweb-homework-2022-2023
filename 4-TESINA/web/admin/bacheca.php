@@ -64,7 +64,7 @@
              
 
           echo "<div class=\"reputazione\">\n";
-          echo "  <p class=\"testo\">Boom! Sei al livello ". $row['livello'] ." con ". $row['punti_reputazione'] ." punti reputazione. Continua così!</p>\n";
+          echo "  <p class=\"testo\">Sei al livello ". $row['livello'] ." con ". $row['punti_reputazione'] ." punti reputazione. Continua così!</p>\n";
           echo "</div>\n";
 
           echo "<div class=\"container\">\n";

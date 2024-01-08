@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="26" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd"/>
+<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="28" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
+  <bozza id="28" titolo="titolo" id_creator="5" tempo_medio="" data_pubblicazione="2024-01-08 11:47:06" difficolta="facile" clearance="" nome_file_img="">
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+      <categoria id_categoria="4"/>
+    </categorie>
+    <descrizione>descrizione</descrizione>
+    <tutorial_bozza/>
+  </bozza>
+</bozze>

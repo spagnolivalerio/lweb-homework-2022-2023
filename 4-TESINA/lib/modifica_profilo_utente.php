@@ -154,31 +154,7 @@ foreach($discussioni as $discussione){
 
 # AGGIORNAMENTO IN RICHIESTE_ACCESSO_DISCUSSIONI.XML  DA RIVEDERE
 
-$xmlFile = "../data/xml/richieste_accesso_discussioni.xml";
-$doc = getDOMdocument($xmlFile);
-$root = $doc->documentElement;
-$xpath = new DOMXPath($doc); 
 
-$richieste = getAllRichiesteAccesso($radice);
-
-foreach($richieste as $richiesta){
-
-    $moderatore = $richiesta->getElementsByTagName('moderatore')->item(0);
-    $id_mod = $moderatore->getAttribute('id_mod');
-
-    if($id_mod === $id_utente){
-
-        $id_richiesta = $richiesta->getAttribute('id');
-
-        $modRichiesta = $xpath->query("/richieste/richiesta[@id = '$id_richiesta']/moderatore[@id_mod = '$id_utente']")->item(0); 
-
-        $modRichiesta->setAttribute('username', $username);
-
-        $doc->formatOutput = true;
-        $xmlString = $doc->saveXML();
-        file_put_contents($xmlFile, $xmlString);
-    }
-}
 
 # AGGIORNAMENTO IN STORICI.XML  
 

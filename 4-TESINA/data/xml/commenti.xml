@@ -1,47 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="39" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
-  <commento id="24" id_discussione="9" id_commentatore="3" data_ora="2023-12-29 13:56:43" commentatore="moderatore10">
-    <testo>efssefse</testo>
-    <voti/>
-    <reports_commento/>
-    <valutazioni_commento>
-      <valutazione_commento id_valutazione_commento="10"/>
-    </valutazioni_commento>
-  </commento>
-  <commento id="34" id_discussione="9" id_commentatore="4" data_ora="2023-12-30 09:50:26" commentatore="dan">
-    <testo>adsadad</testo>
-    <voti/>
-    <reports_commento/>
-    <valutazioni_commento/>
-  </commento>
-  <commento id="35" id_discussione="9" id_commentatore="4" data_ora="2023-12-30 09:50:32" commentatore="dan">
-    <testo>adasdadasd</testo>
-    <voti/>
-    <reports_commento/>
-    <valutazioni_commento/>
-  </commento>
-  <commento id="36" id_discussione="11" id_commentatore="5" data_ora="2024-01-06 13:45:21" commentatore="2">
-    <testo>et</testo>
-    <voti/>
-    <reports_commento/>
-    <valutazioni_commento/>
-  </commento>
-  <commento id="37" id_discussione="11" id_commentatore="5" data_ora="2024-01-06 13:45:23" commentatore="2">
-    <testo>we</testo>
-    <voti/>
-    <reports_commento/>
-    <valutazioni_commento/>
-  </commento>
-  <commento id="38" id_discussione="11" id_commentatore="5" data_ora="2024-01-06 13:45:26" commentatore="2">
-    <testo>wd</testo>
-    <voti/>
-    <reports_commento/>
-    <valutazioni_commento/>
-  </commento>
-  <commento id="39" id_discussione="15" id_commentatore="5" data_ora="2024-01-06 13:48:58" commentatore="2">
-    <testo>asdaefa</testo>
-    <voti/>
-    <reports_commento/>
-    <valutazioni_commento/>
-  </commento>
+<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
+  
 </commenti>
