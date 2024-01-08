@@ -300,4 +300,14 @@
     </discussioni>
     <valutazioni_commenti/>
   </storico>
+  <storico id_utente="5">
+    <progetti/>
+    <richieste/>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti/>
+    <discussioni/>
+    <valutazioni_commenti/>
+  </storico>
 </storici>
