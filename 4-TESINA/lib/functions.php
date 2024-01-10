@@ -266,8 +266,9 @@ function calcolaReputazione($root, $id_utente, $conn){
     foreach($progetti as $progetto) {
 
         $id_progetto = $progetto->getAttribute('id');
+        $sospeso = $progetto->getAttribute('sospeso');
 
-        if($id_utente == $progetto->getAttribute('id_creator')){
+        if($id_utente == $progetto->getAttribute('id_creator') && $sospeso == 'false'){
 
             $reputazione += 5;
 
