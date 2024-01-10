@@ -16,6 +16,7 @@
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element ref="boz:categorie" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="boz:categoriaProposta" minOccurs="0" maxOccurs="1" />
 				<xsd:element ref="boz:descrizione" minOccurs="0" maxOccurs="1" />
 				<xsd:element ref="boz:tutorial_bozza" minOccurs="0" maxOccurs="1" />
 			</xsd:sequence>
@@ -28,6 +29,7 @@
 			<xsd:attribute name="visualizzazioni" type="xsd:positiveInteger" />
 			<xsd:attribute name="difficolta" type="boz:tipoDifficolta" />
 			<xsd:attribute name="clearance" type="pro:tipoClearance" />
+			<xsd:attribute name="sospeso" type="xsd:boolean" default="false"/>
 		</xsd:complexType>
 	</xsd:element>
 
@@ -51,6 +53,8 @@
 			<xsd:attribute name="id_categoria" type="xsd:ID" />
 		</xsd:complexType>
 	</xsd:element>
+
+	<xsd:element name="categoriaProposta" type="xsd:string" />
 
 	<xsd:element name="descrizione" type="xsd:string" />
 

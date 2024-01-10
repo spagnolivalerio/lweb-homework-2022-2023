@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<categorie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="23" xsi:noNamespaceSchemaLocation="../../structures/xsd/categorie.xsd">
-
-    <categoria id="1">
-        <nomeCategoria>Categoria 1</nomeCategoria>
-    </categoria>
-
-    <categoria id="2">
-        <nomeCategoria>Categoria 2</nomeCategoria>
-    </categoria>
-
-    <categoria id="3">
-        <nomeCategoria>Categoria 3</nomeCategoria>
-    </categoria>
-
-    <categoria id="4">
-        <nomeCategoria>Categoria 4</nomeCategoria>
-    </categoria>
-
+<categorie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="6" xsi:noNamespaceSchemaLocation="../../structures/xsd/categorie.xsd">
+  <categoria id="1">
+    <nomeCategoria>Informatica</nomeCategoria>
+  </categoria>
+  <categoria id="2">
+    <nomeCategoria>Elettronica</nomeCategoria>
+  </categoria>
+  <categoria id="3">
+    <nomeCategoria>Robotica</nomeCategoria>
+  </categoria>
+  <categoria id="4">
+    <nomeCategoria>Domotica</nomeCategoria>
+  </categoria>
+  <categoria id="6">
+    <nomeCategoria>manga</nomeCategoria>
+  </categoria>
 </categorie>

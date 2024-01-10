@@ -24,6 +24,7 @@ $id_bozza = generate_id($xmlFile);
 $_SESSION['id_bozza'] = $id_bozza; 
 
 $categorie = $_POST['categorie'];
+$categoriaProposta = $_POST['categoriaProposta'];
 $descrizione = $_POST['descrizione'];
 $titolo = $_POST['titolo'];
 $tempo_medio = $_POST['tempo_medio'];
@@ -48,6 +49,11 @@ if (!empty($_FILES['img']['tmp_name'])) {
 
 $bozCategorie = $doc->createElement('categorie');
 $bozDescrizione = $doc->createElement('descrizione', $descrizione);
+$bozCategoriaProposta = $doc->createElement('categoriaProposta', $categoriaProposta);
+
+if(!empty($categoriaProposta)){
+    $newBozza->setAttribute('sospeso', 'true');
+}
 
 $newBozza->setAttribute('id', $id_bozza);
 $newBozza->setAttribute('titolo', $titolo);
@@ -68,6 +74,7 @@ foreach ($categorie as $categoria) {
 }
 
 $newBozza->appendChild($bozCategorie);
+$newBozza->appendChild($bozCategoriaProposta);
 $newBozza->appendChild($bozDescrizione);
 $newBozza->appendChild($bozTutorial); 
 

@@ -13,6 +13,7 @@
 
 ?>
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -55,6 +56,13 @@
         $progetti = getProgetti($root);
         $numProgetti = $progetti->length;
 
+        $numCategorieProposte = 0;
+        foreach($progetti as $progetto){
+          if($progetto->getAttribute('sospeso') == 'true'){
+              $numCategorieProposte++;
+          }
+      }
+
         $numSegnalazioni = 0;
         $segnalazioni_progetti = getAllSegnalazioniProgetto($root);
         foreach($segnalazioni_progetti as $segnalazione_progetto){
@@ -96,6 +104,11 @@
             <span class="icona">🚨</span>
             <span class="testo">Sono presenti <?php echo $numSegnalazioni; ?> segnalazioni da gestire</span>
           </a>
+
+          <a href="view_categorie_proposte.php" class="report-info">
+            <span class="icona">🏷️</span>
+            <span class="testo">Sono presenti <?php echo $numCategorieProposte; ?> nuove proposte di categoria</span>
+          </a>
           
           <a href="listautenti.php" class="lista-utenti">
             <span class="icona">📋</span>
@@ -105,15 +118,6 @@
         </div>
       
               
-      
-
-
-
-
-
-
-
-
 
         
       </div>

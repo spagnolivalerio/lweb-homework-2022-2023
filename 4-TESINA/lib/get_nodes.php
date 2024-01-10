@@ -225,6 +225,21 @@ function getCategorie($root){
 
 }
 
+function getNomeCategoria($root, $id_categoria){
+
+    $xmlFile = $root . "data/xml/categorie.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $categorie = $doc->documentElement->childNodes;
+
+    foreach($categorie as $categoria){
+        if($categoria->getAttribute('id') === $id_categoria){
+            return $categoria->getElementsByTagName('nomeCategoria')->item(0)->nodeValue;
+        }
+    }
+
+}
+
 function getStoricoUtente($root, $id_utente){
 
     $xmlFile = $root . "data/xml/storici.xml";

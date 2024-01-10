@@ -18,7 +18,7 @@ $std = "standard";
 addressing($_SESSION['Tipo_utente'], $std, $path); 
 
 $tps_root = "../../";
-require_once('../../lib/functions.php');
+require_once('../../lib/get_nodes.php');
 
 $xmlCategorie = $tps_root . "data/xml/categorie.xml";
 $doc = getDOMdocument($xmlCategorie); 
@@ -41,6 +41,13 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
     $descrizione_progetto = "";  
     } else {
       $descrizione_progetto = $descrizione_progetto->nodeValue; 
+    }
+
+    $categoriaProposta = $thisBozza->getElementsByTagName('categoriaProposta')->item(0); 
+    if(empty($categoriaProposta)){
+    $categoriaProposta = "";  
+    } else {
+      $categoriaProposta = $categoriaProposta->nodeValue; 
     }
 
     $categorie = $thisBozza->getElementsByTagName('categorie')->item(0);
@@ -82,11 +89,18 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
 <?php 
       if(isset($categorie)){
 
-        $checkboxValues = ['1', '2', '3', '4']; // Ipoteticamente, questi sono i valori delle checkbox
+        $checkboxValues = [];
+        $categorieEsistenti = getCategorie($tps_root);
+        
+        foreach($categorieEsistenti as $categoria){
+
+          $id_categoria = $categoria->getAttribute('id');
+          $checkboxValues[] = $id_categoria; 
+        }
 
         foreach ($checkboxValues as $value) {
             $checked = in_array($value, $categorieArray) ? 'checked' : ''; // Verifica se l'ID della categoria è presente nell'array
-            $label = 'Categoria ' . $value;
+            $label = getNomeCategoria($tps_root, $value);
             
             echo '<input type="checkbox" id="categoria_' . $value . '" name="categorie[]" value="' . $value . '" ' . $checked . '>';
             echo '<label for="categoria_' . $value . '">' . $label . '</label>';
@@ -94,29 +108,24 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
         }
       }else{
 
+            $categorieEsistenti = getCategorie($tps_root);
 
-            echo "<input type=\"checkbox\" id=\"categoria_1\" name=\"categorie[]\" value=\"1\">\n";
-            echo "<label for=\"categoria_1\">Categoria 1</label>\n";
-            echo "<br>\n";
-
-            echo "<input type=\"checkbox\" id=\"categoria_2\" name=\"categorie[]\" value=\"2\">\n";
-            echo "<label for=\"categoria_2\">Categoria 2</label>\n";
-            echo "<br>\n";
-
-            echo "<input type=\"checkbox\" id=\"categoria_3\" name=\"categorie[]\" value=\"3\">\n";
-            echo "<label for=\"categoria_3\">Categoria 3</label>\n";
-            echo "<br>\n";
-
-            echo "<input type=\"checkbox\" id=\"categoria_4\" name=\"categorie[]\" value=\"4\">\n";
-            echo "<label for=\"categoria_4\">Categoria 4</label>\n";
-
-            echo "<br>\n";
+            foreach ($categorieEsistenti as $categoria) {
+              $id_categoria = $categoria->getAttribute('id');
+              $label = getNomeCategoria($tps_root, $id_categoria);
+              
+              echo '<input type="checkbox" id="categoria_' . $id_categoria . '" name="categorie[]" value="' . $id_categoria . '">';
+              echo '<label for="categoria_' . $id_categoria . '">' . $label . '</label>';
+              echo '<br>';
+          }
             
       }
   ?>
 
 
-
+  <label for="categoriaProposta">Proponi una categoria: </label>
+  <input type="text"  name="categoriaProposta" <?php if(isset($flag)) {echo "value=\"$categoriaProposta\""; }?>></input>
+  <br>
  
 
   <label for="titolo">titolo: </label>

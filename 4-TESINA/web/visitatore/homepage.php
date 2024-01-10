@@ -56,8 +56,9 @@
 
             foreach($categorie as $categoria){
               $id_cat = $categoria->getAttribute('id');
-              echo "<option value=\"$id_cat\">Categoria_$id_cat</option>\n";
-
+              $label = getNomeCategoria($root, $id_cat);
+              echo "<option value=\"$id_cat\">$label</option>\n";
+  
             }
           ?>
           </select>
@@ -78,6 +79,7 @@
           $id_progetto = $progetto->getAttribute('id'); 
           $id_creator = $progetto->getAttribute('id_creator'); 
           $clearance = $progetto->getAttribute('clearance');
+          $sospeso = $progetto->getAttribute('sospeso');
           $livello_richiesto = intval($clearance) * 2;
 
           $query = "SELECT * FROM utente WHERE id = '$id_creator'"; 
@@ -91,6 +93,7 @@
           $ban_value = $row['ban'];
           $rating = valutazioneProgetto($root, $id_progetto, $conn);
 
+          if($sospeso === 'false'){
 
               echo "<div class=\"card-container\">\n";
               echo "  <div class=\"card-header\" style=\"background-image: url('$img_path'); background-size: cover; background-position: center;\">\n";
@@ -120,7 +123,8 @@
               echo "    </div>\n";
             echo "  </div>\n";
             echo "</div>\n";
-        }
+          }
+        } 
 
       ?>
       </div>

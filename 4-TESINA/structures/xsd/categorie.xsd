@@ -8,6 +8,7 @@
 			<xsd:sequence>
 				<xsd:element ref="cat:categoria" minOccurs="0" maxOccurs="unbounded" />
 			</xsd:sequence>
+			<xsd:attribute name="ultimo_id" type="xsd:positiveInteger" />
 		</xsd:complexType>
 	</xsd:element>
 

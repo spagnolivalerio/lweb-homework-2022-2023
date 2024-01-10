@@ -17,6 +17,7 @@
 			<xsd:sequence>
 				<xsd:element ref="pro:titolo" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:categorie" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="boz:categoriaProposta" minOccurs="0" maxOccurs="1" />
 				<xsd:element ref="pro:descrizione" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:reports_progetti" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:discussioni" minOccurs="1" maxOccurs="1" />
@@ -32,6 +33,7 @@
 			<xsd:attribute name="difficolta" type="pro:tipiDifficolta" />
 			<xsd:attribute name="username_creator" type="xsd:string" />
 			<xsd:attribute name="clearance" type="pro:tipoClearance" />
+			<xsd:attribute name="sospeso" type="xsd:boolean" default="false"/>
 		</xsd:complexType>
 	</xsd:element>
 
@@ -63,6 +65,8 @@
 			<xsd:attribute name="id_categoria" type="xsd:ID" />
 		</xsd:complexType>
 	</xsd:element>
+
+	<xsd:element name="categoriaProposta" type="xsd:string" />
 
 	<xsd:element name="descrizione" type="xsd:string" />
 

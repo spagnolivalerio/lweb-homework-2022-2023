@@ -33,14 +33,21 @@
   <storico id_utente="4">
     <progetti>
       <progetto titolo="Arduino Blink. Fai lampeggiare un led" data_ora="2024-01-08 11:41:06" id_progetto="1"/>
+      <progetto titolo="titolo" data_ora="2024-01-08 12:28:39" id_progetto="2"/>
+      <progetto titolo="dadad" data_ora="2024-01-08 12:30:57" id_progetto="3"/>
     </progetti>
     <richieste/>
-    <commenti/>
+    <commenti>
+      <commento id_commento="1" data_ora="2024-01-08 12:37:27" id_discussione="17">
+        <testo>commento</testo>
+      </commento>
+    </commenti>
     <valutazioni_progetti/>
     <reports_progetti/>
     <reports_commenti/>
     <discussioni>
       <discussione id_discussione="16" data_ora="2024-01-08 11:44:13" titolo="Domanda sull'utilizzo del pin 9"/>
+      <discussione id_discussione="17" data_ora="2024-01-08 12:34:16" titolo="titolo"/>
     </discussioni>
     <valutazioni_commenti/>
   </storico>
@@ -50,10 +57,27 @@
       <richiesta id_richiesta="1" data_ora="2024-01-08 11:48:48" id_discussione="16" testo=""/>
     </richieste>
     <commenti/>
-    <valutazioni_progetti/>
+    <valutazioni_progetti>
+      <valutazione_progetto id_valutazione="1" id_progetto="1" data_ora="2024-01-08 12:49:34" value="5"/>
+    </valutazioni_progetti>
     <reports_progetti>
       <report_progetto id_report="1" tipo="Contenuti inesatti" data_ora="2024-01-08 11:48:30" id_progetto="1" publisher="utentestd1" titolo="Arduino Blink. Fai lampeggiare un led"/>
     </reports_progetti>
+    <reports_commenti/>
+    <discussioni/>
+    <valutazioni_commenti/>
+  </storico>
+  <storico id_utente="6">
+    <progetti>
+      <progetto titolo="AOFRA" data_ora="2024-01-10 10:41:31" id_progetto="4"/>
+      <progetto titolo="AOFRA" data_ora="2024-01-10 11:08:18" id_progetto="5"/>
+      <progetto titolo="AOFRA" data_ora="2024-01-10 11:10:57" id_progetto="6"/>
+      <progetto titolo="AOFRA" data_ora="2024-01-10 13:12:51" id_progetto="7"/>
+    </progetti>
+    <richieste/>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
     <reports_commenti/>
     <discussioni/>
     <valutazioni_commenti/>

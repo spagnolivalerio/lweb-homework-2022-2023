@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="1">
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="7">
   <tutorial_progetto id="1" id_progetto="1">
     <step num_step="1" nome_file_img="img/steps/img_step_659bd05245a40.jpg">
       <descrizione>Collegare arduino al pc con un cavo usb tipo B - tipo A.</descrizione>
@@ -9,6 +9,40 @@
     </step>
     <step num_step="3" nome_file_img="img/steps/img_step_659bd141ef448.jpg">
       <descrizione>Collegare con i jump, il pin 9 analogico di arduino sull'anodo del led, e la massa sul catodo. Infine avviare lo sketch caricandolo su arduino.</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="2" id_progetto="2">
+    <step num_step="1" nome_file_img="img/steps/img_step_659bdc116bc50.png">
+      <descrizione>step di mezzo</descrizione>
+    </step>
+    <step num_step="2" nome_file_img="img/steps/img_step_659bdbc94f1ab.png">
+      <descrizione>aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa &#13;&#13;aaaaaa aaaaaa aaaaaa  aaaaaa aaaaaa aaaaaa &#13;&#13;aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa &#13;&#13;&#13;aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa &#13;&#13;</descrizione>
+    </step>
+    <step num_step="3" nome_file_img="img/steps/img_step_659bdbfc9c0f0.png">
+      <descrizione>aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa &#13;&#13;aaaaaa aaaaaa aaaaaa  aaaaaa aaaaaa aaaaaa &#13;&#13;aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa &#13;&#13;&#13;aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa &#13;&#13;</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="3" id_progetto="3">
+    <step num_step="1" nome_file_img="img/steps/img_step_659bdcad9c3e2.png">
+      <descrizione>asdasd</descrizione>
+    </step>
+    <step num_step="2" nome_file_img="img/steps/img_step_659bdce7c1544.png">
+      <descrizione>ultimo</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="4" id_progetto="4">
+    <step num_step="1" nome_file_img="img/steps/img_step_659e6301b9d2c.jpg">
+      <descrizione>sdfsdf</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="6" id_progetto="6">
+    <step num_step="1" nome_file_img="img/steps/img_step_659e6d29f2993.png">
+      <descrizione>dgfgdg</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="7" id_progetto="7">
+    <step num_step="1" nome_file_img="img/steps/img_step_659e89b7e280c.png">
+      <descrizione>dadada</descrizione>
     </step>
   </tutorial_progetto>
 </tutorials_progetti>

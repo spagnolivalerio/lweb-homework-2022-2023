@@ -25,11 +25,21 @@ if(empty($descrizione_progetto)){
 } else {
     $descrizione_progetto = $descrizione_progetto->nodeValue; 
 }
+
+$categoriaProposta = $thisBozza->getElementsByTagName('categoriaProposta')->item(0); 
+if(empty($categoriaProposta)){
+    $categoriaProposta = "";  
+ } else {
+     $categoriaProposta = $categoriaProposta->nodeValue; 
+ }
+
+ 
 $categorie = $thisBozza->getElementsByTagName('categorie')->item(0); 
 $tempo_medio = $thisBozza->getAttribute('tempo_medio'); 
 $difficolta = $thisBozza->getAttribute('difficolta'); 
 $nome_file_img = $thisBozza->getAttribute('nome_file_img');
 $clearance = $thisBozza->getAttribute('clearance');
+$sospeso = $thisBozza->getAttribute('sospeso');
 
 $categorieArray = [];
 
@@ -73,6 +83,7 @@ $newProgetto = $doc->createElement('progetto');
 $proTitolo = $doc->createElement('titolo', $titolo);
 $proCategorie = $doc->createElement('categorie');
 $proDescrizione = $doc->createElement('descrizione', $descrizione_progetto);
+$proCategoriaProposta = $doc->createElement('categoriaProposta', $categoriaProposta);
 $proReports = $doc->createElement('reports_progetti');
 $proDiscussioni = $doc->createElement('discussioni');
 $proTutorial = $doc->createElement('tutorial_progetto');
@@ -87,6 +98,7 @@ $newProgetto->setAttribute('visualizzazioni', 0);
 $newProgetto->setAttribute('nome_file_img', $nome_file_img);
 $newProgetto->setAttribute('difficolta', $difficolta);
 $newProgetto->setAttribute('clearance', $clearance);
+$newProgetto->setAttribute('sospeso', $sospeso);
 
 foreach ($categorie->getElementsByTagName('categoria') as $cat) {
     $idCategoria = $cat->getAttribute('id_categoria');
@@ -100,6 +112,7 @@ $proTutorial->setAttribute('id_tutorial', $id_progetto);
 $newProgetto->appendChild($proTitolo);
 $newProgetto->appendChild($proCategorie);
 $newProgetto->appendChild($proDescrizione);
+$newProgetto->appendChild($proCategoriaProposta);
 $newProgetto->appendChild($proReports);
 $newProgetto->appendChild($proDiscussioni);
 $newProgetto->appendChild($proTutorial);

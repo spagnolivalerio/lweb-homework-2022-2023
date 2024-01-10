@@ -70,7 +70,8 @@
 
           foreach($categorie as $categoria){
             $id_cat = $categoria->getAttribute('id');
-            echo "<option value=\"$id_cat\">Categoria_$id_cat</option>\n";
+            $label = getNomeCategoria($root, $id_cat);
+            echo "<option value=\"$id_cat\">$label</option>\n";
 
           }
         ?>
@@ -93,6 +94,7 @@
                 $id_progetto = $progetto->getAttribute('id'); 
                 $id_creator = $progetto->getAttribute('id_creator'); 
                 $clearance_progetto = $progetto->getAttribute('clearance');
+                $sospeso = $progetto->getAttribute('sospeso');
                 $livello_richiesto = intval($clearance_progetto) * 2;
 
                 $query = "SELECT * FROM utente WHERE id = '$id_creator'"; 
@@ -106,46 +108,48 @@
                 $ban_value = $row['ban'];
                 $rating = valutazioneProgetto($root, $id_progetto, $conn);
 
-              echo "<div class=\"card-container\">\n";
-              echo "  <div class=\"card-header\" style=\"background-image: url('$img_path'); background-size: cover; background-position: center;\">\n";
-              echo "   <div class=\"top-card\">\n";
-              echo "    <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
-              echo "    <div class=\"card-user\">$username</div>\n";
-              echo "   </div>\n";
+                if($sospeso === 'false'){
+                  echo "<div class=\"card-container\">\n";
+                  echo "  <div class=\"card-header\" style=\"background-image: url('$img_path'); background-size: cover; background-position: center;\">\n";
+                  echo "   <div class=\"top-card\">\n";
+                  echo "    <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
+                  echo "    <div class=\"card-user\">$username</div>\n";
+                  echo "   </div>\n";
 
-              if($ban_value == 1){
-                echo "    <div class=\"card-user\">Utente Sospeso</div>\n";
-              }
+                  if($ban_value == 1){
+                    echo "    <div class=\"card-user\">Utente Sospeso</div>\n";
+                  }
 
-              echo "  </div>\n"; 
-              echo "  <div class=\"card-footer\">\n";
-              echo "    <div class=\"flexbox1\">\n";
-              echo "      <div class=\"card-titolo\">$titolo</div>\n";
-              echo "      <div class=\"card-rating\">$rating</div>\n";
-              foreach($categorie->getElementsByTagName('categoria') as $categoria){
-                $id_categoria = $categoria->getAttribute('id_categoria');
-                echo "      <div class=\"card-categorie\">$id_categoria</div>\n";
-              }
-              echo "    </div>\n";
-              echo "    <div class=\"flexbox2\">\n";
-              echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
+                  echo "  </div>\n"; 
+                  echo "  <div class=\"card-footer\">\n";
+                  echo "    <div class=\"flexbox1\">\n";
+                  echo "      <div class=\"card-titolo\">$titolo</div>\n";
+                  echo "      <div class=\"card-rating\">$rating</div>\n";
+                  foreach($categorie->getElementsByTagName('categoria') as $categoria){
+                    $id_categoria = $categoria->getAttribute('id_categoria');
+                    echo "      <div class=\"card-categorie\">$id_categoria</div>\n";
+                  }
+                  echo "    </div>\n";
+                  echo "    <div class=\"flexbox2\">\n";
+                  echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
 
-              if($clearance_utente >= $clearance_progetto || $id_creator === $id_utente ){
-                echo "      <form class=\"card-commenta\" action=\"view.php\" method=\"post\">\n";
-                echo "        <div class=\"animation\"></div>\n";
-                echo "        <button class=\"submit\" type=\"submit\">Dettagli</button>\n";
-                echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
-                echo "      </form>\n";
-              }else{
-                echo "    <div class=\"card-user\">Accessibile al Livello ". $livello_richiesto ." </div>\n";
-              }
+                  if($clearance_utente >= $clearance_progetto || $id_creator === $id_utente ){
+                    echo "      <form class=\"card-commenta\" action=\"view.php\" method=\"post\">\n";
+                    echo "        <div class=\"animation\"></div>\n";
+                    echo "        <button class=\"submit\" type=\"submit\">Dettagli</button>\n";
+                    echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
+                    echo "      </form>\n";
+                  }else{
+                    echo "    <div class=\"card-user\">Accessibile al Livello ". $livello_richiesto ." </div>\n";
+                  }
 
 
-              echo "    </div>\n";
-              echo "  </div>\n";
-              echo "</div>\n";
+                  echo "    </div>\n";
+                  echo "  </div>\n";
+                  echo "</div>\n";
 
-              }
+                  }
+            }
 
            ?>
         </div>
