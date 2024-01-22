@@ -12,7 +12,14 @@ if (!isset($_SESSION['Tipo_utente'])) {
 require_once 'functions.php';
 $xmlFile = "../data/xml/commenti.xml";
 
+if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
+    exit;
+} else {
+    $id_progetto = $_POST['id_progetto'];
+}
+
 if (!isset($_POST['testo']) || empty($_POST['testo'])) {
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/view.php?id_progetto=' . $id_progetto);
     exit;
 } else {
     $newTestoValue = $_POST['testo'];
@@ -22,12 +29,6 @@ if (!isset($_POST['id_discussione']) || empty($_POST['id_discussione'])) {
     exit;
 } else {
     $id_discussione = $_POST['id_discussione'];
-}
-
-if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
-    exit;
-} else {
-    $id_progetto = $_POST['id_progetto'];
 }
 
 $id_commentatore = $_SESSION['id_utente'];

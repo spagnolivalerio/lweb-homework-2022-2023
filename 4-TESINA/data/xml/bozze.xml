@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="43" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
+<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="70" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
   <bozza id="28" titolo="titolo" id_creator="5" tempo_medio="" data_pubblicazione="2024-01-08 11:47:06" difficolta="facile" clearance="" nome_file_img="">
     <categorie>
       <categoria id_categoria="1"/>
@@ -9,10 +9,82 @@
     <descrizione>descrizione</descrizione>
     <tutorial_bozza/>
   </bozza>
-  <bozza id="36" titolo="" id_creator="6" tempo_medio="" data_pubblicazione="2024-01-10 10:40:18" difficolta="facile" clearance="" nome_file_img="">
+  <bozza id="45" titolo="" id_creator="6" tempo_medio="" data_pubblicazione="2024-01-22 09:57:54" difficolta="facile" clearance="" nome_file_img="">
+    <categorie>
+      <categoria id_categoria="3"/>
+      <categoria id_categoria="4"/>
+    </categorie>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza id="48" titolo="AOFRA" id_creator="6" tempo_medio="" data_pubblicazione="2024-01-22 10:10:28" difficolta="facile" clearance="" nome_file_img="">
+    <categorie>
+      <categoria id_categoria="3"/>
+      <categoria id_categoria="4"/>
+    </categorie>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza id="49" titolo="" id_creator="6" tempo_medio="" data_pubblicazione="2024-01-22 10:17:21" difficolta="facile" clearance="" nome_file_img="">
     <categorie>
       <categoria id_categoria="2"/>
     </categorie>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="61" titolo="AOFRA" id_creator="6" tempo_medio="" data_pubblicazione="2024-01-22 10:42:02" difficolta="facile" clearance="" nome_file_img="">
+    <categorie>
+      <categoria id_categoria="3"/>
+      <categoria id_categoria="4"/>
+    </categorie>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="62" titolo="" id_creator="6" tempo_medio="" data_pubblicazione="2024-01-22 10:42:51" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="65" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-01-22 10:58:50" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="66" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-01-22 10:59:05" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="67" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-01-22 10:59:13" difficolta="facile" clearance="" nome_file_img="">
+    <categorie>
+      <categoria id_categoria="4"/>
+    </categorie>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="68" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-01-22 11:00:45" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="69" titolo="" id_creator="6" tempo_medio="" data_pubblicazione="2024-01-22 11:01:30" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="70" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-01-22 11:01:50" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
     <descrizione/>
     <tutorial_bozza/>
   </bozza>

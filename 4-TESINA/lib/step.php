@@ -9,18 +9,24 @@ $img_dir_path = "img/steps/";
 $xmlFile = "../data/xml/bozze.xml";
 
 if (!isset($_POST['descrizione']) || empty($_POST['descrizione'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/form_step.php');
     exit;
 } else {
     $descrizione = $_POST['descrizione'];
 }
 
 if (!isset($_POST['num_step'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/form_step.php');
     exit;
 } elseif (!empty($_POST['num_step']) || $_POST['num_step'] === '0') {
     $num_step = (int) $_POST['num_step'] + 1;
 }
 
 if (!isset($_FILES['img']['tmp_name']) || empty($_FILES['img']['tmp_name'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/form_step.php');
     exit;
 } else {
     $img_location = $_FILES['img']['tmp_name'];

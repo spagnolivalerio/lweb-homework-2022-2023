@@ -71,6 +71,7 @@ if($noNullFields == false){
 
 $bozSteps = $xpath->query("/bozze/bozza[@id = '$id_bozza']/tutorial_bozza")->item(0)->childNodes; 
 
+
 //AGGIUNTO IN PROGETTI.XML
 
 $xmlFile = $tps_root . "data/xml/progetti.xml";

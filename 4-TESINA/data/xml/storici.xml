@@ -23,12 +23,21 @@
   <storico id_utente="3">
     <progetti/>
     <richieste/>
-    <commenti/>
+    <commenti>
+      <commento id_commento="2" data_ora="2024-01-22 09:49:42" id_discussione="16">
+        <testo>adad</testo>
+      </commento>
+    </commenti>
     <valutazioni_progetti/>
     <reports_progetti/>
     <reports_commenti/>
     <discussioni/>
-    <valutazioni_commenti/>
+    <valutazioni_commenti>
+      <valutazione_commento id_valutazione="1" data_ora="2024-01-22 09:52:23" id_commento="1" id_progetto="2">
+        <utilita>1</utilita>
+        <livello_di_accordo>1</livello_di_accordo>
+      </valutazione_commento>
+    </valutazioni_commenti>
   </storico>
   <storico id_utente="4">
     <progetti>
@@ -73,6 +82,13 @@
       <progetto titolo="AOFRA" data_ora="2024-01-10 11:08:18" id_progetto="5"/>
       <progetto titolo="AOFRA" data_ora="2024-01-10 11:10:57" id_progetto="6"/>
       <progetto titolo="AOFRA" data_ora="2024-01-10 13:12:51" id_progetto="7"/>
+      <progetto titolo="JUJUTSU KAISEN 12" data_ora="2024-01-22 10:18:02" id_progetto="8"/>
+      <progetto titolo="AOFRA" data_ora="2024-01-22 10:26:40" id_progetto="9"/>
+      <progetto titolo="JUJUTSU KAISEN 12" data_ora="2024-01-22 10:31:59" id_progetto="10"/>
+      <progetto titolo="dadas" data_ora="2024-01-22 10:32:20" id_progetto="11"/>
+      <progetto titolo="adasd" data_ora="2024-01-22 10:37:56" id_progetto="12"/>
+      <progetto titolo="AOFRA" data_ora="2024-01-22 10:39:35" id_progetto="13"/>
+      <progetto titolo="JUJUTSU KAISEN 12" data_ora="2024-01-22 10:52:49" id_progetto="14"/>
     </progetti>
     <richieste>
       <richiesta id_richiesta="2" data_ora="2024-01-22 09:18:57" id_discussione="16" testo=""/>

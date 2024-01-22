@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="7" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="10" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="2" nome_file_img="img/proj/ardu.png" difficolta="facile" clearance="1" sospeso="false">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="14" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="10" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="8" nome_file_img="img/proj/ardu.png" difficolta="facile" clearance="1" sospeso="false">
     <titolo>Arduino Blink. Fai lampeggiare un led</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -17,7 +17,7 @@
       <valutazione id_valutazione="1"/>
     </valutazioni>
   </progetto>
-  <progetto id="2" username_creator="utentestd1" id_creator="4" tempo_medio="3" data_pubblicazione="2024-01-08 12:28:39" visualizzazioni="10" nome_file_img="img/proj/img_proj_659bdb59248c8.png" difficolta="facile" clearance="5" sospeso="false">
+  <progetto id="2" username_creator="utentestd1" id_creator="4" tempo_medio="21" data_pubblicazione="2024-01-08 12:28:39" visualizzazioni="19" nome_file_img="img/proj/img_proj_659bdb59248c8.png" difficolta="facile" clearance="4" sospeso="false">
     <titolo>titolo</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -30,7 +30,7 @@
     <tutorial_progetto id_tutorial="2"/>
     <valutazioni/>
   </progetto>
-  <progetto id="3" username_creator="utentestd1" id_creator="4" tempo_medio="5" data_pubblicazione="2024-01-08 12:30:57" visualizzazioni="0" nome_file_img="img/proj/img_proj_659bdcef9e74b.png" difficolta="medio" clearance="1" sospeso="false">
+  <progetto id="3" username_creator="utentestd1" id_creator="4" tempo_medio="5" data_pubblicazione="2024-01-08 12:30:57" visualizzazioni="1" nome_file_img="img/proj/img_proj_659bdcef9e74b.png" difficolta="medio" clearance="1" sospeso="false">
     <titolo>dadad</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -42,7 +42,7 @@
     <tutorial_progetto id_tutorial="3"/>
     <valutazioni/>
   </progetto>
-  <progetto id="4" username_creator="dan" id_creator="6" tempo_medio="3" data_pubblicazione="2024-01-10 10:41:31" visualizzazioni="0" nome_file_img="img/proj/img_proj_659e664492dd6.jpg" difficolta="medio" clearance="2" sospeso="false">
+  <progetto id="4" username_creator="dan" id_creator="6" tempo_medio="3" data_pubblicazione="2024-01-10 10:41:31" visualizzazioni="1" nome_file_img="img/proj/img_proj_659e664492dd6.jpg" difficolta="medio" clearance="2" sospeso="false">
     <titolo>AOFRA</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -65,6 +65,97 @@
     <reports_progetti/>
     <discussioni/>
     <tutorial_progetto id_tutorial="7"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="8" username_creator="dan" id_creator="6" tempo_medio="2" data_pubblicazione="2024-01-22 10:18:02" visualizzazioni="0" nome_file_img="img/proj/img_proj_65ae32c9a9c05.jpeg" difficolta="facile" clearance="1" sospeso="true">
+    <titolo>JUJUTSU KAISEN 12</titolo>
+    <categorie>
+      <categoria id_categoria="2"/>
+      <categoria id_categoria="3"/>
+    </categorie>
+    <descrizione>sdfsfd</descrizione>
+    <categoriaProposta>PROVa</categoriaProposta>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="8"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="9" username_creator="dan" id_creator="6" tempo_medio="1" data_pubblicazione="2024-01-22 10:26:40" visualizzazioni="0" nome_file_img="img/proj/img_proj_65ae34cdc0497.jpeg" difficolta="facile" clearance="1" sospeso="">
+    <titolo>AOFRA</titolo>
+    <categorie>
+      <categoria id_categoria="3"/>
+      <categoria id_categoria="4"/>
+    </categorie>
+    <descrizione>dawdas</descrizione>
+    <categoriaProposta/>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="9"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="10" username_creator="dan" id_creator="6" tempo_medio="2" data_pubblicazione="2024-01-22 10:31:59" visualizzazioni="0" nome_file_img="img/proj/img_proj_65ae3608a6d45.jpg" difficolta="medio" clearance="1" sospeso="">
+    <titolo>JUJUTSU KAISEN 12</titolo>
+    <categorie>
+      <categoria id_categoria="2"/>
+      <categoria id_categoria="3"/>
+    </categorie>
+    <descrizione>sdfsfsdf</descrizione>
+    <categoriaProposta/>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="10"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="11" username_creator="dan" id_creator="6" tempo_medio="1" data_pubblicazione="2024-01-22 10:32:20" visualizzazioni="0" nome_file_img="img/proj/img_proj_65ae361f003cc.jpg" difficolta="facile" clearance="3" sospeso="">
+    <titolo>dadas</titolo>
+    <categorie>
+      <categoria id_categoria="2"/>
+      <categoria id_categoria="3"/>
+    </categorie>
+    <descrizione>asdasdasd</descrizione>
+    <categoriaProposta/>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="11"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="12" username_creator="dan" id_creator="6" tempo_medio="2" data_pubblicazione="2024-01-22 10:37:56" visualizzazioni="0" nome_file_img="img/proj/img_proj_65ae3773997b4.jpg" difficolta="medio" clearance="1" sospeso="false">
+    <titolo>adasd</titolo>
+    <categorie>
+      <categoria id_categoria="3"/>
+      <categoria id_categoria="4"/>
+    </categorie>
+    <descrizione>asdasdasd</descrizione>
+    <categoriaProposta/>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="12"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="13" username_creator="dan" id_creator="6" tempo_medio="3" data_pubblicazione="2024-01-22 10:39:35" visualizzazioni="0" nome_file_img="img/proj/img_proj_65ae37d5d80fe.jpg" difficolta="facile" clearance="2" sospeso="false">
+    <titolo>AOFRA</titolo>
+    <categorie>
+      <categoria id_categoria="3"/>
+      <categoria id_categoria="4"/>
+    </categorie>
+    <descrizione>asdad</descrizione>
+    <categoriaProposta/>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="13"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="14" username_creator="dan" id_creator="6" tempo_medio="2" data_pubblicazione="2024-01-22 10:52:49" visualizzazioni="0" nome_file_img="img/proj/img_proj_65ae3aeea219c.jpg" difficolta="facile" clearance="1" sospeso="false">
+    <titolo>JUJUTSU KAISEN 12</titolo>
+    <categorie>
+      <categoria id_categoria="3"/>
+      <categoria id_categoria="4"/>
+    </categorie>
+    <descrizione>wdad</descrizione>
+    <categoriaProposta/>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="14"/>
     <valutazioni/>
   </progetto>
 </progetti>

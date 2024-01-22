@@ -53,6 +53,8 @@ $bozCategoriaProposta = $doc->createElement('categoriaProposta', $categoriaPropo
 
 if(!empty($categoriaProposta)){
     $newBozza->setAttribute('sospeso', 'true');
+}else{
+    $newBozza->setAttribute('sospeso', 'false');
 }
 
 $newBozza->setAttribute('id', $id_bozza);

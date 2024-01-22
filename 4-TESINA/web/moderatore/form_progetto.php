@@ -14,8 +14,8 @@
 session_start();
 require_once('../../lib/functions.php');
 $path = "index.php"; 
-$std = "standard";     
-addressing($_SESSION['Tipo_utente'], $std, $path); 
+$mod = "moderatore";     
+addressing($_SESSION['Tipo_utente'], $mod, $path); 
 
 $tps_root = "../../";
 require_once('../../lib/get_nodes.php');
