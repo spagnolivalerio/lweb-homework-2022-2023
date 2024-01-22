@@ -17,7 +17,7 @@
       <valutazione id_valutazione="1"/>
     </valutazioni>
   </progetto>
-  <progetto id="2" username_creator="utentestd1" id_creator="4" tempo_medio="3" data_pubblicazione="2024-01-08 12:28:39" visualizzazioni="0" nome_file_img="img/proj/img_proj_659bdb59248c8.png" difficolta="facile" clearance="5" sospeso="false">
+  <progetto id="2" username_creator="utentestd1" id_creator="4" tempo_medio="3" data_pubblicazione="2024-01-08 12:28:39" visualizzazioni="10" nome_file_img="img/proj/img_proj_659bdb59248c8.png" difficolta="facile" clearance="5" sospeso="false">
     <titolo>titolo</titolo>
     <categorie>
       <categoria id_categoria="1"/>

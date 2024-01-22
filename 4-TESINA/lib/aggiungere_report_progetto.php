@@ -11,23 +11,28 @@ require_once 'functions.php';
 $xmlFile = "../data/xml/reports_progetti.xml";
 $root = "../";
 
+if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
+    exit;
+} else {
+    $id_progetto = $_POST['id_progetto'];
+}
+
 if (!isset($_POST['testo']) || empty($_POST['testo'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/view.php?id_progetto=' . $id_progetto);
     exit;
 } else {
     $newTestoValue = $_POST['testo'];
 }
 
 if (!isset($_POST['tipo']) || empty($_POST['tipo'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/view.php?id_progetto=' . $id_progetto);
     exit;
 } else {
     $newTipoValue = $_POST['tipo'];
 }
 
-if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
-    exit;
-} else {
-    $id_progetto = $_POST['id_progetto'];
-}
 
 $id_segnalatore = $_SESSION['id_utente'];
 $id_segnalazione = generate_id($xmlFile);

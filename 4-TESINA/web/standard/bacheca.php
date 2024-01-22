@@ -109,7 +109,11 @@
 
           echo "    <form class=\"form\" action=\"modifica_profilo_utente.php\" method=\"post\">\n";
           echo "      <input type=\"hidden\" name=\"id_utente\" value=" . $id_utente . "></input>\n";
-          echo "      <button class=\"button-stile\" type=\"submit\">Edit</button>\n";
+          echo "      <button class=\"button-stile\" type=\"submit\">Edit Generalità</button>\n";
+          echo "    </form>\n";
+          echo "    <form class=\"form\" action=\"modifica_password_utente.php\" method=\"post\">\n";
+          echo "      <input type=\"hidden\" name=\"id_utente\" value=" . $id_utente . "></input>\n";
+          echo "      <button class=\"button-stile\" type=\"submit\">Cambia Password</button>\n";
           echo "    </form>\n";
           echo "      <form class=\"form\" action=\"form_progetto.php\" method=\"post\">\n";
           echo "        <button class=\"button-stile\" type=\"submit\">Aggiungi un Progetto</button>\n";

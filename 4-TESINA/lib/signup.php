@@ -3,6 +3,15 @@
 session_start();
 require_once '../conn.php';
 
+$_SESSION['username'] = $_POST['username'];
+$_SESSION['nome'] = $_POST['nome'];
+$_SESSION['cognome'] = $_POST['cognome'];
+$_SESSION['password'] = $_POST['password'];
+$_SESSION['email'] = $_POST['e-mail'];
+$_SESSION['indirizzo'] = $_POST['indirizzo'];
+$_SESSION['avatar'] = $_POST['avatar'];
+
+
 $data = new DateTime();
 $data = $data->format('Y-m-d');
 
@@ -23,9 +32,13 @@ if ($not_empty) {
     $avatar = mysqli_real_escape_string($conn, $_POST['avatar']);
     $data = mysqli_real_escape_string($conn, $data);
 
+    $password_match = mysqli_real_escape_string($conn, $_POST['password']);
+
+
 } else {
 
-    $_SESSION['credenziali'] = false;
+    $_SESSION['credenziali'] = "false";
+
     header('Location: ../web/signup.php');
     exit;
 
@@ -47,8 +60,9 @@ if (!$rows) {
 }
 
 if (mysqli_num_rows($rows) > 0) {
-    $_SESSION['username_esistente'] = true;
-    header('Location: ../web/singup.php');
+    $_SESSION['username_esistente'] = "true";
+    $_SESSION['credenziali'] = "false";
+    header('Location: ../web/signup.php');
     exit;
 }
 
@@ -60,7 +74,15 @@ if (!$rows) {
 }
 
 if (mysqli_num_rows($rows) > 0) {
-    $_SESSION['email_esistente'] = true;
+    $_SESSION['email_esistente'] = "true";
+    $_SESSION['credenziali'] = "false";
+    header('Location: ../web/signup.php');
+    exit;
+}
+
+if (!preg_match('~^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}$~', $password_match)){
+    $_SESSION['password_unmatch'] = "true";
+    $_SESSION['credenziali'] = "false";
     header('Location: ../web/signup.php');
     exit;
 }

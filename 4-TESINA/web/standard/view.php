@@ -122,6 +122,16 @@
               echo "    </div>\n";
               echo "    <div class=\"options\">";
               echo "    <div class=\"options-title\"><h2>DICCI LA TUA</h2></div>";
+
+              echo "    <div id=\"error\">\n";
+          
+                    if(isset($_SESSION['empty_form']) && $_SESSION['empty_form'] === "true" ){
+                        echo "Compila tutti i campi";
+                        unset($_SESSION['empty_form']);
+                    }
+                             
+              echo "    </div>\n";
+   
               if($voted){
                 echo "  <div class=\"votato\">Contributo già valutato</div>\n";
               }elseif($id_creator !== $id_utente){
@@ -350,6 +360,16 @@
     
    
   </body>
+
+    <script>
+        function scomparsa() {
+            var error = document.getElementById('error');
+            if (error) {
+                error.style.display = "none";
+            }
+        }
+        setTimeout(scomparsa, 4000);
+    </script>
 
 </html>
 

@@ -74,6 +74,18 @@
       <progetto titolo="AOFRA" data_ora="2024-01-10 11:10:57" id_progetto="6"/>
       <progetto titolo="AOFRA" data_ora="2024-01-10 13:12:51" id_progetto="7"/>
     </progetti>
+    <richieste>
+      <richiesta id_richiesta="2" data_ora="2024-01-22 09:18:57" id_discussione="16" testo=""/>
+    </richieste>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti/>
+    <discussioni/>
+    <valutazioni_commenti/>
+  </storico>
+  <storico id_utente="7">
+    <progetti/>
     <richieste/>
     <commenti/>
     <valutazioni_progetti/>

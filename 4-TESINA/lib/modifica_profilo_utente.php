@@ -12,27 +12,40 @@ if (!isset($_SESSION['Tipo_utente'])) {
     exit;
 }
 
+if (!isset($_POST['id_utente']) || empty($_POST['id_utente'])) {
+    exit;
+} else {
+    $id_utente = $_POST['id_utente'];
+}
 
 
 if (!isset($_POST['nome']) || empty($_POST['nome'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/modifica_profilo_utente.php?id_utente=' . $id_utente);
     exit;
 } else {
     $nome = $_POST['nome'];
 }
 
 if (!isset($_POST['cognome']) || empty($_POST['cognome'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/modifica_profilo_utente.php?id_utente=' . $id_utente);
     exit;
 } else {
     $cognome = $_POST['cognome'];
 }
 
 if (!isset($_POST['email']) || empty($_POST['email'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/modifica_profilo_utente.php?id_utente=' . $id_utente);
     exit;
 } else {
     $email = $_POST['email'];
 }
 
 if (!isset($_POST['username']) || empty($_POST['username'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/modifica_profilo_utente.php?id_utente=' . $id_utente);
     exit;
 } else {
     $username = $_POST['username'];
@@ -44,21 +57,58 @@ if (!isset($_POST['old_username']) || empty($_POST['old_username'])) {
     $old_username = $_POST['old_username'];
 }
 
+if (!isset($_POST['old_email']) || empty($_POST['old_email'])) {
+    exit;
+} else {
+    $old_email = $_POST['old_email'];
+}
+
 
 
 if (!isset($_POST['indirizzo']) || empty($_POST['indirizzo'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/modifica_profilo_utente.php?id_utente=' . $id_utente);
     exit;
 } else {
     $indirizzo = $_POST['indirizzo'];
 }
 
 
-if (!isset($_POST['id_utente']) || empty($_POST['id_utente'])) {
+//CONTROLLO DUPLICATI
+
+$_QUERY_username_uguale = "SELECT *
+                               FROM utente
+                               WHERE username = '$username'";
+
+$_QUERY_email_uguale = "SELECT *
+                            FROM utente
+                            WHERE email = '$email'";
+
+$rows = mysqli_query($conn, $_QUERY_username_uguale);
+
+if (!$rows) {
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/modifica_profilo_utente.php?id_utente=' . $id_utente);
     exit;
-} else {
-    $id_utente = $_POST['id_utente'];
 }
 
+if (mysqli_num_rows($rows) > 0 && ($username != $old_username)) {
+    $_SESSION['username_esistente'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/modifica_profilo_utente.php?id_utente=' . $id_utente);
+    exit;
+}
+
+$rows = mysqli_query($conn, $_QUERY_email_uguale);
+
+if (!$rows) {
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/modifica_profilo_utente.php?id_utente=' . $id_utente);
+    exit;
+}
+
+if (mysqli_num_rows($rows) > 0 && ($email != $old_email)) {
+    $_SESSION['email_esistente'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/modifica_profilo_utente.php?id_utente=' . $id_utente);
+    exit;
+}
 
 
 
@@ -211,8 +261,8 @@ $xmlString = $doc->saveXML();
 file_put_contents($xmlFile, $xmlString);
 
 
-
-header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/bacheca.php');
+$_SESSION['esito'] = "true";
+header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/modifica_profilo_utente.php?id_utente=' . $id_utente);
 
 exit;
 

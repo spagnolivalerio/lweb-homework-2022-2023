@@ -38,6 +38,7 @@
     <partecipanti>
       <partecipante id_partecipante="4"/>
       <partecipante id_partecipante="5"/>
+      <partecipante id_partecipante="6"/>
     </partecipanti>
   </discussione>
   <discussione titolo="titolo" id_poster="4" risolta="false" id="17" id_progetto="2" data_ora="2024-01-08 12:34:16" autore="utentestd1">

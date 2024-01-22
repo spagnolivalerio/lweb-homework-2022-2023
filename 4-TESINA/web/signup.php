@@ -1,5 +1,24 @@
 <?php 
 	session_start();
+
+    if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false'){
+
+        $username = $_SESSION['username'];
+        unset($_SESSION['username']);
+        $nome = $_SESSION['nome'];
+        unset($_SESSION['nome']);
+        $cognome = $_SESSION['cognome'];
+        unset($_SESSION['cognome']);
+        $password = $_SESSION['password'];
+        unset($_SESSION['password']);
+        $email = $_SESSION['email'];
+        unset($_SESSION['email']);
+        $indirizzo = $_SESSION['indirizzo'];
+        unset($_SESSION['indirizzo']);
+        $avatar = $_SESSION['avatar'];
+        unset($_SESSION['avatar']); 
+
+    }
 ?>
 
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -52,30 +71,56 @@
         <div class="box">
         	<form class="form" method="post" action="../lib/signup.php">
         	 <div class="signup_title">REGISTRATI</div>
+             <div id="error">
+                <?php 
+                    if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] === "false" && !isset($_SESSION['username_esistente'])  && !isset($_SESSION['email_esistente']) && !isset($_SESSION['password_unmatch'])){
+                        echo "Inserisci le credenziali";
+                    } elseif (isset($_SESSION['username_esistente']) && $_SESSION['username_esistente'] === "true") {
+                        echo "Username esistente";
+                        unset($_SESSION['username_esistente']);
+                    } elseif (isset($_SESSION['email_esistente']) && $_SESSION['email_esistente'] === "true") {
+                        echo "E-mail esistente";
+                        unset($_SESSION['email_esistente']);
+                    } elseif (isset($_SESSION['password_unmatch']) && $_SESSION['password_unmatch'] === "true") {
+                        echo "La password non rispetta i criteri di sicurezza";
+                        unset($_SESSION['password_unmatch']);
+                    }
+                ?>
+            </div>
+            <script>
+                function scomparsa() {
+                    var error = document.getElementById('error');
+                    if (error) {
+                        error.style.display = "none";
+                    }
+                }
+                setTimeout(scomparsa, 4000);
+            </script>
+
                 <div class="container">
                     <div class="form-item">
                         <p class="label">Nome</p></br>
-                        <input name="nome" type="text"></input>
+                        <input name="nome" type="text" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$nome\""; }?>></input>
                     </div>
                     <div class="form-item">
                         <p class="label">Cognome</p></br>
-                        <input name="cognome" type="text"></input>
+                        <input name="cognome" type="text" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$cognome\""; }?>></input>
                     </div>
         		    <div class="form-item">
         			    <p class="label">e-mail</p></br>
-        			    <input name="e-mail" type="text"></input>
+        			    <input name="e-mail" type="text" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$email\""; }?>></input>
         		    </div>
         		    <div class="form-item">
         		        <p class="label">Indirizzo</p></br>
-        			    <input type="text" name="indirizzo"></input>
+        			    <input type="text" name="indirizzo" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$indirizzo\""; }?>></input>
         		    </div>
                     <div class="form-item">
                         <p class="label">Username</p></br>
-                        <input type="text" name="username"></input>
+                        <input type="text" name="username" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$username\""; }?>></input>
                     </div>
                     <div class="form-item">
                         <p class="label">password</p></br>
-                        <input type="password" name="password"></input>
+                        <input type="password" name="password" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$password\""; }?>></input>
                     </div>
 
                     <div class="avatar-box">
@@ -83,7 +128,7 @@
 
                         <div class="box">
                             <div class=avatar-container-radio-img>
-                                <input type="radio" id="avatar1" name="avatar" value="avatar1.png">
+                                <input type="radio" id="avatar1" name="avatar" value="avatar1.png" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false'){ echo ($avatar == 'avatar1.png') ? 'checked' : '';} ?>>
                                 <label for="avatar1">
                                     <div class="avatar-preview">
                                         <img src="../img/avatar/avatar1.png" alt="Avatar 1">
@@ -92,7 +137,7 @@
                             </div>
 
                             <div class=avatar-container-radio-img>
-                                <input type="radio" id="avatar2" name="avatar" value="avatar2.png">
+                                <input type="radio" id="avatar2" name="avatar" value="avatar2.png" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false'){ echo ($avatar == 'avatar2.png') ? 'checked' : '';} ?>>
                                 <label for="avatar2">
                                     <div class="avatar-preview">
                                         <img src="../img/avatar/avatar2.png" alt="Avatar 2">
@@ -110,5 +155,9 @@
         	</form>
 		</div>
 	</body>
+    
+    <?php 
+        unset($_SESSION['credenziali']);
+    ?>
 
 </html>

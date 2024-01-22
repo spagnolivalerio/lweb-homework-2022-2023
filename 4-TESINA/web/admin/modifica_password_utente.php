@@ -3,8 +3,8 @@ session_start();
 include('../../conn.php');
 require_once('../../lib/functions.php');
 $path = "index.php"; 
-$mod = "moderatore";     
-addressing($_SESSION['Tipo_utente'], $mod, $path); 
+$adm = "admin";   
+addressing($_SESSION['Tipo_utente'], $adm, $path); 
 $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
 if (!isset($_SESSION['Tipo_utente'])) {
@@ -21,6 +21,7 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
     header("Location: ../index.php" );
   }
 ?>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -57,19 +58,24 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
       <div class="bar"></div>
         <div class="toolbar"></div>
 
-        <div class="title">MODIFICA DATI PROFILO</div>
+        <div class="title">CAMBIA PASSWORD</div>
              <div id="error">
                 <?php 
-                    if(isset($_SESSION['empty_form']) && $_SESSION['empty_form'] === "true" ){
+                    if(isset($_SESSION['errore_vecchia_password']) && $_SESSION['errore_vecchia_password'] === "true" ){
+                        echo "Vecchia password errata";
+                        unset($_SESSION['errore_vecchia_password']);
+                    } elseif (isset($_SESSION['nuova_password_unmatch']) && $_SESSION['nuova_password_unmatch'] === "true") {
+                        echo "La nuova password non rispetta i requisiti di sicurezza";
+                        unset($_SESSION['nuova_password_unmatch']);
+                    }elseif (isset($_SESSION['empty_form']) && $_SESSION['empty_form'] === "true") {
                         echo "Compila tutti i campi";
                         unset($_SESSION['empty_form']);
-                    }elseif(isset($_SESSION['username_esistente']) && $_SESSION['username_esistente'] === "true"){
-                      echo "Username non utilizzabile!";
-                      unset($_SESSION['username_esistente']);
-                    }elseif(isset($_SESSION['email_esistente']) && $_SESSION['email_esistente'] === "true"){
-                      echo "E-mail non utilizzabile!";
-                      unset($_SESSION['email_esistente']);
+                    }elseif (isset($_SESSION['same_pass']) && $_SESSION['same_pass'] === "true") {
+                        echo "Cerca di apportare delle modifiche alla nuova password!";
+                        unset($_SESSION['same_pass']);
                     }
+
+
                 ?>
             </div>
             <script>
@@ -84,7 +90,7 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
             <div id="success">
                 <?php 
                     if(isset($_SESSION['esito']) && $_SESSION['esito'] === "true" ){
-                        echo "Dati modificati con successo";
+                        echo "Password modificata con successo";
                         unset($_SESSION['esito']);
                     } 
                 ?>
@@ -103,27 +109,30 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
 
         <?php
 
-
-
         $query = "SELECT * FROM utente WHERE id = " . $id_utente;
         $result = $conn->query($query);
         $row = $result->fetch_assoc();
 
-        echo "          <form class=\"\" action=\"../../lib/modifica_profilo_utente.php\" method=\"post\">\n";
+        echo "          <form class=\"\" action=\"../../lib/modifica_password_utente.php\" method=\"post\">\n";
         echo "                   <input type=\"hidden\" name=\"id_utente\" value=\"" . $id_utente . "\"></input>\n";
-        echo "                   <label for=\"nome\">Nome</label>\n"; 
-        echo "                   <input type=\"text\" name=\"nome\" value=\"" . $row['nome'] . "\"></input>\n";
-        echo "                   <label for=\"cognome\">Cognome</label>\n"; 
-        echo "                   <input type=\"text\" name=\"cognome\" value=\"" . $row['cognome'] . "\"></input>\n";
-        echo "                   <label for=\"email\">E-mail</label>\n"; 
-        echo "                   <input type=\"text\" name=\"email\" value=\"" . $row['email'] . "\"></input>\n";
-        echo "                   <input type=\"hidden\" name=\"old_email\" value=\"" . $row['email'] . "\"></input>\n";
-        echo "                   <label for=\"username\">Username</label>\n"; 
-        echo "                   <input type=\"text\" name=\"username\" value=\"" . $row['username'] . "\"></input>\n";
-        echo "                   <input type=\"hidden\" name=\"old_username\" value=\"" . $row['username'] . "\"></input>\n";
-        echo "                   <label for=\"indirizzo\">Indirizzo</label>\n"; 
-        echo "                   <input type=\"text\" name=\"indirizzo\" value=\"" . $row['indirizzo'] . "\"></input>\n";      
+        echo "                   <input type=\"hidden\" name=\"username\" value=\"" . $row['username'] . "\"></input>\n";
+        echo "                   <label for=\"vecchia_password\">Vecchia Password</label>\n"; 
+        echo "                   <input type=\"password\" name=\"vecchia_password\"></input>\n";
+        echo "                   <label for=\"nuova_password\">Nuova Password</label>\n";     
+        echo "                   <input type=\"password\" name=\"nuova_password\"></input>\n";    
         echo "                   <button type=\"submit\">Modifica</button>\n";
         echo "          </form>\n";
 
-?>
+        ?>
+
+       
+    </div>
+    </div>
+    
+  </body>
+
+</html>
+
+
+
+

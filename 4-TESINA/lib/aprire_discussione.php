@@ -4,24 +4,28 @@ session_start();
 require_once 'functions.php';
 $xmlFile = "../data/xml/discussioni.xml";
 
+if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
+    exit;
+} else {
+    $id_progetto = $_POST['id_progetto'];
+}
 
 if (!isset($_POST['titolo']) || empty($_POST['titolo'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/view.php?id_progetto=' . $id_progetto);
     exit;
 } else {
     $newTitolo = $_POST['titolo'];
 }
 
 if (!isset($_POST['descrizione']) || empty($_POST['descrizione'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/view.php?id_progetto=' . $id_progetto);
     exit;
 } else {
     $newDescrizioneValue = $_POST['descrizione'];
 }
 
-if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
-    exit;
-} else {
-    $id_progetto = $_POST['id_progetto'];
-}
 
 $id_poster = $_SESSION['id_utente'];
 $autore = $_SESSION['username'];

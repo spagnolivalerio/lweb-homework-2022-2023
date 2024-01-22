@@ -13,19 +13,24 @@ $xmlFile = "../data/xml/valutazioni_progetti.xml";
 include('../conn.php');
 $radice = "../";
 
-if (!isset($_POST['testo']) || empty($_POST['testo'])) {
-    exit;
-} else {
-    $newTestoValue = $_POST['testo'];
-}
-
 if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
     exit;
 } else {
     $id_progetto = $_POST['id_progetto'];
 }
 
+
+if (!isset($_POST['testo']) || empty($_POST['testo'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/view.php?id_progetto=' . $id_progetto);
+    exit;
+} else {
+    $newTestoValue = $_POST['testo'];
+}
+
 if (!isset($_POST['rating']) || empty($_POST['rating'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/view.php?id_progetto=' . $id_progetto);
     exit;
 } else {
     $newValue = $_POST['rating'];
