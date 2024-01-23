@@ -21,7 +21,9 @@
     <valutazioni_commenti/>
   </storico>
   <storico id_utente="3">
-    <progetti/>
+    <progetti>
+      <progetto titolo="AOFRA" data_ora="2024-01-22 11:14:33" id_progetto="15"/>
+    </progetti>
     <richieste/>
     <commenti>
       <commento id_commento="2" data_ora="2024-01-22 09:49:42" id_discussione="16">
@@ -89,6 +91,7 @@
       <progetto titolo="adasd" data_ora="2024-01-22 10:37:56" id_progetto="12"/>
       <progetto titolo="AOFRA" data_ora="2024-01-22 10:39:35" id_progetto="13"/>
       <progetto titolo="JUJUTSU KAISEN 12" data_ora="2024-01-22 10:52:49" id_progetto="14"/>
+      <progetto titolo="JUJUTSU KAISEN 12" data_ora="2024-01-22 11:47:07" id_progetto="2"/>
     </progetti>
     <richieste>
       <richiesta id_richiesta="2" data_ora="2024-01-22 09:18:57" id_discussione="16" testo=""/>

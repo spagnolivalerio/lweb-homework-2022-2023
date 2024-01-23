@@ -92,15 +92,17 @@
             echo "                </td>\n";
 
             if($row['ban'] == 0){
+              
                 echo "          <td>\n";
-
+              if($row['id'] != $id_utente && $row['tipo'] != 'admin'){
                 echo "          <form class=\"form-ban\" action=\"../../lib/ban-sban.php\" method=\"post\">\n";
                 echo "                   <input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input>\n";
                 echo "                   <input type=\"hidden\" name=\"ban\" value=\"sospendi\"></input>\n";
                 echo "                   <button type=\"submit\">Sospendi</button>\n";
-                echo "          </form>\n";
-
+                echo "          </form>\n";       
+              }                    
                 echo "          </td>\n";
+              
             }elseif($row['ban'] == 1){
                 echo "          <td>\n";
                 echo "          <form class=\"form-ban\" action=\"../../lib/ban-sban.php\" method=\"post\">\n";

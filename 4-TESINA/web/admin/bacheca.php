@@ -45,7 +45,6 @@
           <a class="elem" href="homepage.php">Homepage</a>
           <a class="elem" href="bacheca.php">Bacheca</a>
           <a class="elem" href="moderator_dashboard.php">Dashboard</a>
-          <a class="elem" href="view_bozze.php">Bozze</a>
           <a class="elem" href="view_storico.php">Storico</a>
           <div class="divisore"></div>
           <a class="elem" href="../../lib/logout.php">Logout</a>
@@ -121,73 +120,7 @@
 
           echo "</div>\n";
 
-          echo "    <div class=\"progetti\">\n";
-          echo "      <p class=\"testo\">PROGETTI PUBBLICATI</p>\n";
-          echo "    </div>\n";
-
-         
-          
-          $progetti = getProgetti($root);
-
-          foreach($progetti as $progetto){
-
-            $id_creator = $progetto->getAttribute('id_creator'); 
-            
-            if($id_creator == $id_utente){
-
-              $titolo = $progetto->getElementsByTagName('titolo')->item(0)->nodeValue;
-              $categorie = $progetto->getElementsByTagName('categorie')->item(0); 
-              $descrizione = $progetto->getElementsByTagName('descrizione')->item(0)->nodeValue;
-              $username = $progetto->getAttribute('username_creator');
-              $img_path = $root . $progetto->getAttribute('nome_file_img');
-              $id_progetto = $progetto->getAttribute('id'); 
-              $avatar = $row['avatar'];  
-              $rating = valutazioneProgetto($root, $id_progetto, $conn);
-            
-            echo "<div class=\"cards\">\n";
-            echo "<div class=\"card-container\">\n";
-            echo "  <div class=\"card-header\" style=\"background-image: url('$img_path'); background-size: cover; background-position: center;\">\n";
-            echo "   <div class=\"top-card\">\n";
-            echo "    <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
-            echo "    <div class=\"card-user\">$username</div>\n";
-            echo "   </div>\n";
-
-
-            echo "  </div>\n"; 
-            echo "  <div class=\"card-footer\">\n";
-            echo "    <div class=\"flexbox1\">\n";
-            echo "      <div class=\"card-titolo\">$titolo</div>\n";
-            echo "      <div class=\"card-rating\">$rating</div>\n";
-            
-            echo "    </div>\n";
-            echo "    <div class=\"flexbox2\">\n";
-            echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
-            echo "      <form class=\"card-commenta\" action=\"view.php\" method=\"post\">\n";
-            echo "        <div class=\"animation\"></div>\n";
-            echo "        <button class=\"submit\" type=\"submit\">Dettagli</button>\n";
-            echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
-            echo "      </form>\n";
-            echo "    </div>\n";
-            echo "  </div>\n";
-            echo "</div>\n";
-
-            }
-          }
-
-            ?>
-         
-          
-
-              
-      
-
-
-
-
-
-
-
-
+        ?>
 
          </div>
       </div>

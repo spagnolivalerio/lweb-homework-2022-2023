@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<categorie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="6" xsi:noNamespaceSchemaLocation="../../structures/xsd/categorie.xsd">
+<categorie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="7" xsi:noNamespaceSchemaLocation="../../structures/xsd/categorie.xsd">
   <categoria id="1">
     <nomeCategoria>Informatica</nomeCategoria>
   </categoria>
@@ -14,5 +14,8 @@
   </categoria>
   <categoria id="6">
     <nomeCategoria>manga</nomeCategoria>
+  </categoria>
+  <categoria id="7">
+    <nomeCategoria>PROVa</nomeCategoria>
   </categoria>
 </categorie>

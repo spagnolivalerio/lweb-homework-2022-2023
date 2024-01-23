@@ -72,7 +72,8 @@ $doc->formatOutput = true;
 $xmlString = $doc->saveXML();
 file_put_contents($xmlFile, $xmlString);
 
-header('Location: ../web/standard/form_step.php');
+
+header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/form_step.php');
 exit;
 
 ?>

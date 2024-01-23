@@ -65,7 +65,7 @@ if(empty($titolo) || empty($tempo_medio) || empty($difficolta) || empty($descriz
 #$empty = false;
 
 if($noNullFields == false){
-    header('Location: ../web/standard/form_progetto.php?modifica=true');
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/form_progetto.php?modifica=true');
     exit;
 }
 
@@ -191,6 +191,6 @@ remove_1_1($xmlFile, $query, $id_bozza);
 $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 updateAllUsers($tps_root, $conn);
 
-header('Location: ../web/standard/homepage.php');
 
+header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/homepage.php');
 ?>

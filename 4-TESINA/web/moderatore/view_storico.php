@@ -72,7 +72,7 @@
                 echo "          <div class=\"user-info\" onclick=\"redirectToUserPage('view_storico.php?id_utente=" . $row['id'] . "')\">\n";
                 echo "              <div class=\"details\">\n";
                 echo "                  <img src=\"../../img/avatar/" . $row['avatar'] . "\" alt=\"\">\n";
-                echo "                  <p>" . $row['username'] . "</p>\n";
+                echo "                  <p class=\"card-titolo\">" . $row['username'] . "</p>\n";
                 echo "              </div>\n";
                 echo "              <p class=\"user-type\">" . $row['tipo'] . "</p>\n";
                 echo "          </div>\n";                   
@@ -431,10 +431,36 @@
             }
         </script>
 
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+            <script>
+            // Quando il documento è pronto
+                $(document).ready(function() {
+                    // Associa un'azione all'evento di input sulla barra di ricerca
+                    $('#searchInput').on('input', function() {
+                        // Ottieni il testo inserito nella barra di ricerca
+                        var searchText = $(this).val().toLowerCase();
+
+                        // Per ogni elemento con classe "user-info"
+                        $('.user-info').each(function() {
+                            // Ottieni il titolo del progetto
+                            var titolo = $(this).find('.card-titolo').text().toLowerCase();
+
+                            // Controlla se il titolo contiene il testo di ricerca
+                            if (titolo.includes(searchText)) {
+                                $(this).show();  // Mostra l'elemento
+                            } else {
+                                $(this).hide();  // Nascondi l'elemento
+                            }
+                        });
+                    });
+                });
+            </script>
+
         
           </div>
         </div>
     </div>
   </body>
+  
 
 </html>
