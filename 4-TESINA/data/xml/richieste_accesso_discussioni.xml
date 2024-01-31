@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <richieste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="4" xsi:noNamespaceSchemaLocation="../../structures/richieste_accesso_discussioni.xsd">
-  <richiesta id="1" id_discussione="16" id_utente="5" data_ora="2024-01-08 12:50:39" stato="accettata">
-    <moderatore id_mod="3" username="moderatore1"/>
-  </richiesta>
-  <richiesta id="2" id_discussione="16" id_utente="6" data_ora="2024-01-22 09:19:27" stato="accettata">
-    <moderatore id_mod="3" username="moderatore1"/>
-  </richiesta>
-  <richiesta id="3" id_discussione="16" id_utente="8" data_ora="2024-01-24 11:01:39" stato="in lavorazione"/>
-  <richiesta id="4" id_discussione="17" id_utente="8" data_ora="2024-01-24 11:01:49" stato="in lavorazione"/>
+
 </richieste>

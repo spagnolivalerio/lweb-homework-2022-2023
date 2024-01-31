@@ -61,9 +61,6 @@ if(empty($titolo) || empty($tempo_medio) || empty($difficolta) || empty($descriz
     $noNullFields = true;
 }
 
-#$empty = array_reduce($campi, function ($carry, $campo) {return $carry || empty($campo);}, false);
-#$empty = false;
-
 if($noNullFields == false){
     header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/form_progetto.php?modifica=true');
     exit;
@@ -76,6 +73,7 @@ $bozSteps = $xpath->query("/bozze/bozza[@id = '$id_bozza']/tutorial_bozza")->ite
 
 $xmlFile = $tps_root . "data/xml/progetti.xml";
 $id_progetto = generate_id($xmlFile);
+$_SESSION['id_progetto'] = $id_progetto;
 $doc = getDOMdocument($xmlFile);
 $root = $doc->documentElement;
 
@@ -191,6 +189,12 @@ remove_1_1($xmlFile, $query, $id_bozza);
 $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 updateAllUsers($tps_root, $conn);
 
+if($_SESSION['Tipo_utente'] === "moderatore" && $sospeso === "true"){
+    header('Location: modifica_sospensione_progetto.php?nomeCategoria=' . $categoriaProposta . '&id_progetto=' . $id_progetto);
+    exit;
+}
 
 header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/homepage.php');
+exit;
+
 ?>

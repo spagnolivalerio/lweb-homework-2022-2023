@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valutazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/valutazioni_progetti.xsd">
-  <valutazione_progetto id="1" id_progetto="1" value="5" id_votante="5" data_ora="2024-01-08 12:49:34">
-    <testo>buon oprogetto</testo>
-  </valutazione_progetto>
-</valutazioni>
+<valutazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/valutazioni_progetti.xsd"/>

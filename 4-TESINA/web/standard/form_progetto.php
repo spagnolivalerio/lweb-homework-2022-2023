@@ -84,6 +84,8 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/form-aggiungi-progetto.css" />
+
 
   </head>
 
@@ -107,127 +109,105 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
       <div class="bar"></div>
         <div class="toolbar"></div>
 
-        <div class="title">AGGIUGNI PROGETTO</div>
+        <div class="title">AGGIUNGI PROGETTO</div>
 
-<form action="../../lib/bozze.php" method="post" enctype="multipart/form-data">
-<label>Categorie:</label>
-  <br>
-<?php 
-      if(isset($categorie)){
-
+<form action="../../lib/bozze.php" method="post" enctype="multipart/form-data" class="container">
+  <div class="p-cat">Categorie:</div>
+  <div class="form-group cat-group">
+    <?php 
+      if (isset($categorie)) {
         $checkboxValues = [];
         $categorieEsistenti = getCategorie($tps_root);
         
-        foreach($categorieEsistenti as $categoria){
-
+        foreach ($categorieEsistenti as $categoria) {
           $id_categoria = $categoria->getAttribute('id');
           $checkboxValues[] = $id_categoria; 
         }
 
         foreach ($checkboxValues as $value) {
-            $checked = in_array($value, $categorieArray) ? 'checked' : ''; // Verifica se l'ID della categoria è presente nell'array
+            $checked = in_array($value, $categorieArray) ? 'checked' : '';
             $label = getNomeCategoria($tps_root, $value);
             
-            echo '<input type="checkbox" id="categoria_' . $value . '" name="categorie[]" value="' . $value . '" ' . $checked . '>';
+            echo '<div class="checkbox-group">';
+            echo '<input type="checkbox" id="categoria_' . $value . '" name="categorie[]" value="' . $value . '" ' . $checked . '></input>';
             echo '<label for="categoria_' . $value . '">' . $label . '</label>';
-            echo '<br>';
+            echo '</div>';
         }
-      }else{
+      } else {
+        $categorieEsistenti = getCategorie($tps_root);
 
-            $categorieEsistenti = getCategorie($tps_root);
-
-            foreach ($categorieEsistenti as $categoria) {
-              $id_categoria = $categoria->getAttribute('id');
-              $label = getNomeCategoria($tps_root, $id_categoria);
-              
-              echo '<input type="checkbox" id="categoria_' . $id_categoria . '" name="categorie[]" value="' . $id_categoria . '">';
-              echo '<label for="categoria_' . $id_categoria . '">' . $label . '</label>';
-              echo '<br>';
-          }
-            
+        foreach ($categorieEsistenti as $categoria) {
+          $id_categoria = $categoria->getAttribute('id');
+          $label = getNomeCategoria($tps_root, $id_categoria);
+          
+          echo '<div class="checkbox-group">';
+          echo '<input type="checkbox" id="categoria_' . $id_categoria . '" name="categorie[]" value="' . $id_categoria . '"></input>';
+          echo '<label for="categoria_' . $id_categoria . '">' . $label . '</label>';
+          echo '</div>';
+        }
       }
-  ?>
+    ?>
+  </div>
 
+  <div class="form-group">
+    <label for="categoriaProposta">Proponi una categoria:</label>
+    <input type="text" name="categoriaProposta" <?php if (isset($flag)) { echo "value=\"$categoriaProposta\""; } ?>>
+  </div>
 
-  <label for="categoriaProposta">Proponi una categoria: </label>
-  <input type="text"  name="categoriaProposta" <?php if(isset($flag)) {echo "value=\"$categoriaProposta\""; }?>></input>
-  <br>
- 
+  <div class="form-group">
+    <label for="titolo">Titolo:</label>
+    <input type="text" name="titolo" <?php if (isset($flag)) { echo "value=\"$titolo\""; } ?>>
+  </div>
 
-  <label for="titolo">titolo: </label>
-  <input type="text"  name="titolo" <?php if(isset($flag)) {echo "value=\"$titolo\""; }?>></input>
-  <br>
+  <div class="form-group">
+    <label for="descrizione">Descrizione:</label>
+    <textarea name="descrizione" rows="4" cols="50"><?php if (isset($flag)) { echo $descrizione_progetto; } ?></textarea>
+  </div>
 
-  <!-- Descrizione -->
+  <div class="form-group">
+    <label for="tempo_medio">Tempo Medio (in minuti):</label>
+    <input type="number" name="tempo_medio" min="1" <?php if (isset($flag)) { echo "value=\"$tempo_medio\""; } ?>>
+  </div>
 
-  <label for="descrizione">Descrizione: </label>
-  <textarea name="descrizione" rows="4" cols="50"><?php if(isset($flag)) {echo $descrizione_progetto; }?></textarea>
-  <br>
-
-
-  <!-- Tempo Medio -->
-  <label for="tempo_medio">Tempo Medio (in minuti): </label>
-  <input type="number"  name="tempo_medio" min="1" <?php if(isset($flag)) {echo "value=\"$tempo_medio\""; }?>></input>
-  <br>
-
-  <label for="clearence">Livello di clearence (da 1 a 5): </label>
-  <input type="number"  name="clearance" min="1" max="5"  <?php if(isset($flag)) {echo "value=\"$clearance\""; }?>></input>
-  <br>
+  <div class="form-group">
+    <label for="clearance">Livello di clearance (da 1 a 5):</label>
+    <input type="number" name="clearance" min="1" max="5" <?php if (isset($flag)) { echo "value=\"$clearance\""; } ?>>
+  </div>
 
   <?php 
-      if(isset($_GET['modifica']) && isset($id_bozza)){
-          echo "<input type=\"hidden\" value=\"$id_bozza\" name=\"id_vecchia_bozza\"></input>\n";
-        }
+    if (isset($_GET['modifica']) && isset($id_bozza)) {
+      echo "<input type=\"hidden\" value=\"$id_bozza\" name=\"id_vecchia_bozza\">";
+    }
   ?>
 
-  <!-- Difficoltà -->
-  <?php
-  if(isset($difficolta)){
-    if($difficolta == 'facile') {
-        echo '<label for="difficolta">Difficoltà: </label>';
+  <div class="form-group">
+    <?php
+      if (isset($difficolta)) {
+        echo '<label for="difficolta">Difficoltà:</label>';
+        echo '<select id="difficolta" name="difficolta" required>';
+        echo '<option value="facile">' . ($difficolta == 'facile' ? 'Facile' : '') . '</option>';
+        echo '<option value="medio">' . ($difficolta == 'medio' ? 'Medio' : '') . '</option>';
+        echo '<option value="difficile">' . ($difficolta == 'difficile' ? 'Difficile' : '') . '</option>';
+        echo '</select>';
+      } else {
+        echo '<label for="difficolta">Difficoltà:</label>';
         echo '<select id="difficolta" name="difficolta" required>';
         echo '<option value="facile">Facile</option>';
         echo '<option value="medio">Medio</option>';
         echo '<option value="difficile">Difficile</option>';
         echo '</select>';
-        echo '<br>';
-    } elseif($difficolta == 'medio') {
-        echo '<label for="difficolta">Difficoltà: </label>';
-        echo '<select id="difficolta" name="difficolta" required>';
-        echo '<option value="facile">Medio</option>';
-        echo '<option value="medio">Facile</option>';
-        echo '<option value="difficile">Difficile</option>';
-        echo '</select>';
-        echo '<br>';
-    } elseif($difficolta == 'difficile') {
-        echo '<label for="difficolta">Difficoltà: </label>';
-        echo '<select id="difficolta" name="difficolta" required>';
-        echo '<option value="facile">Difficile</option>';
-        echo '<option value="medio">Facile</option>';
-        echo '<option value="difficile">Medio</option>';
-        echo '</select>';
-        echo '<br>';
-    }
-  }else{
-        echo '<label for="difficolta">Difficoltà: </label>';
-        echo '<select id="difficolta" name="difficolta" required>';
-        echo '<option value="facile">Facile</option>';
-        echo '<option value="medio">Medio</option>';
-        echo '<option value="difficile">Difficile</option>';
-        echo '</select>';
-        echo '<br>';
-  }
-?>
+      }
+    ?>
+  </div>
 
-  
+  <div class="form-group">
+    <label for="img">Immagine:</label>
+    <input type="file" name="img" accept="image/*">
+  </div>
 
-
-  <label for="img">10</label>
-  <input type="file" name="img" accept="image/*"></input><br>
-
-
-  <!-- Pulsante di invio -->
-  <input type="submit" name="bottone">CONTINUA</input>
+  <div class="form-group">
+    <input type="submit" name="bottone" value="CONTINUA">
+  </div>
 </form>
 
 

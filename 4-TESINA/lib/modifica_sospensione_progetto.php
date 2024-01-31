@@ -12,18 +12,21 @@ if (!isset($_SESSION['Tipo_utente'])) {
     exit;
 }
 
-if (!isset($_POST['id_progetto']) || empty($_POST['id_progetto'])) {
-    exit;
-} else {
+if (!isset($_POST['id_progetto']) && (isset($_GET['id_progetto']) ) ) {
+    $id_progetto = $_GET['id_progetto'];
+} elseif(!empty($_POST['id_progetto'])) {
     $id_progetto = $_POST['id_progetto'];
-}
-
-if (!isset($_POST['nomeCategoria']) || empty($_POST['nomeCategoria'])) {
+}elseif(!isset($_POST['id_progetto']) && !isset($_GET['id_progetto'])){
     exit;
-} else {
-    $nomeCategoria = $_POST['nomeCategoria'];
 }
 
+if (!isset($_POST['nomeCategoria']) && (isset($_GET['nomeCategoria']) ) ) {
+    $nomeCategoria = $_GET['nomeCategoria'];
+} elseif(!empty($_POST['nomeCategoria'])) {
+    $nomeCategoria = $_POST['nomeCategoria'];
+}elseif(!isset($_POST['nomeCategoria']) && !isset($_GET['nomeCategoria'])){
+    exit;
+}
 
 # AGGIUNTA IN CATEGORIE.XML
 
@@ -70,7 +73,11 @@ $categorie->appendChild($nuovaCategoria);
 $doc->formatOutput = true;
 $xmlString = $doc->saveXML();
 file_put_contents($xmlFile, $xmlString);
-    
+
+if(isset($_GET['nomeCategoria'])){
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/homepage.php');
+    exit;
+}
 
 header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/view_categorie_proposte.php');
 
