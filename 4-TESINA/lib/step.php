@@ -13,7 +13,7 @@ if (!isset($_POST['descrizione']) || empty($_POST['descrizione'])) {
     header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/form_step.php');
     exit;
 } else {
-    $descrizione = $_POST['descrizione'];
+    $descrizione = nl2br($_POST['descrizione']);
 }
 
 if (!isset($_POST['num_step'])) {
@@ -43,8 +43,8 @@ $succ_step = $xpath->query("/bozze/bozza[@id = '$id_bozza_corrente']/tutorial_bo
 $nome_file_img = $img_dir_path . uniqid('img_step_') . "." . $ext;
 
 $newStep = $doc->createElement('step');
-$descrizione = $doc->createElement('descrizione', $descrizione);
-$newStep->appendChild($descrizione);
+$newDescrizione = $doc->createElement('descrizione', $descrizione);
+$newStep->appendChild($newDescrizione);
 $newStep->setAttribute('nome_file_img', $nome_file_img);
 $newStep->setAttribute('num_step', $num_step);
 
@@ -72,8 +72,7 @@ $doc->formatOutput = true;
 $xmlString = $doc->saveXML();
 file_put_contents($xmlFile, $xmlString);
 
-
-header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/form_step.php');
+header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/anteprima_tutorial.php');
 exit;
 
 ?>

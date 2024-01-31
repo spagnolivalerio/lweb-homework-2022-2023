@@ -196,6 +196,7 @@ function getWaitingRequestNumber($root, $richieste){
 
 
 function getSteps($root, $id_progetto){
+
     $xmlFile = $root . "data/xml/tutorials.xml";
     $doc = getDOMdocument($xmlFile); 
 
@@ -213,6 +214,17 @@ function getBozze($root, $id_utente){
     $xpath = new DOMXPath($doc);
 
     return $xpath->query("/bozze/bozza[@id_creator = '$id_utente']");
+
+}
+
+function getBozza($root, $id_bozza){
+
+    $xmlFile = $root . "data/xml/bozze.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXpath($doc);
+
+    return $xpath->query("/bozze/bozza[@id_bozza = '$id_bozza']")->item(0);
 
 }
 
@@ -248,6 +260,17 @@ function getStoricoUtente($root, $id_utente){
     $xpath = new DOMXPath($doc);
 
     return $xpath->query("/storici/storico[@id_utente = '$id_utente']")->item(0);
+
+}
+
+function getTutorialBozza($root, $id_bozza){
+
+    $xmlFile = $root . "data/xml/bozze.xml";
+    $doc = getDOMdocument($xmlFile);
+
+    $xpath = new DOMXPath($doc);
+
+    return $xpath->query("/bozze/bozza[@id = '$id_bozza']/tutorial_bozza")->item(0);
 
 }
 

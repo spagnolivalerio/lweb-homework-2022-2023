@@ -114,7 +114,7 @@ if(isset($_POST['id_vecchia_bozza'])){ //lo passa il form_progetto.php nel caso 
     
 }
 
-header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/form_step.php');
+header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/anteprima_tutorial.php');
 exit;
 
 ?>

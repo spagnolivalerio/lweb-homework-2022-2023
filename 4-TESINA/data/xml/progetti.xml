@@ -31,7 +31,7 @@
     <tutorial_progetto id_tutorial="2"/>
     <valutazioni/>
   </progetto>
-  <progetto id="4" username_creator="moderatore1" id_creator="3" tempo_medio="1" data_pubblicazione="2024-01-31 12:29:14" visualizzazioni="0" nome_file_img="img/proj/img_proj_65ba2eec7b201.jpg" difficolta="facile" clearance="1" sospeso="false">
+  <progetto id="4" username_creator="moderatore1" id_creator="3" tempo_medio="1" data_pubblicazione="2024-01-31 12:29:14" visualizzazioni="1" nome_file_img="img/proj/img_proj_65ba2eec7b201.jpg" difficolta="facile" clearance="1" sospeso="false">
     <titolo>1</titolo>
     <categorie>
       <categoria id_categoria="1"/>

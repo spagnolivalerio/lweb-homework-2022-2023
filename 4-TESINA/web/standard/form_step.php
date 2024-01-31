@@ -1,4 +1,3 @@
-
 <?php
 
 session_start();
@@ -7,7 +6,10 @@ require_once('../../lib/functions.php');
 $path = "index.php"; 
 $std = "standard";     
 addressing($_SESSION['Tipo_utente'], $std, $path);
-require_once('../../lib/functions.php');
+
+if(isset($_POST['num_step'])){
+    $num_step = $_POST['num_step'];
+}
 
 
 ?>
@@ -23,6 +25,7 @@ require_once('../../lib/functions.php');
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/form_step.css" />
 
   </head>
 
@@ -69,54 +72,17 @@ require_once('../../lib/functions.php');
                 setTimeout(scomparsa, 4000);
             </script>
 
-<form action="../../lib/step.php" method="post" enctype="multipart/form-data">
+<form action="../../lib/step.php" method="post" enctype="multipart/form-data" class="form-container">
 
-    <label for="descrizione">Descrizione:</label>
-    <textarea name="descrizione" ></textarea><br>
+    <label for="descrizione" class="form-label">Descrizione:</label>
+    <textarea name="descrizione" class="form-textarea"></textarea><br>
 
-    <label for="num_step">step</label>
-    <textarea name="num_step" ></textarea><br>
+    <input name="num_step" type="hidden" value="<?php echo"$num_step"; ?>"></input><br>
 
-    <label for="img">10</label>
-    <input type="file" name="img" accept="image/*" ></input><br>
+    <label for="img" class="form-label">Immagine</label>
+    <input type="file" name="img" accept="image/*" class="form-file-input"></input><br>
 
-    <input type="submit" value="Aggiungi step">
+    <input type="submit" value="Aggiungi step" class="form-submit">
 
 </form>
-
-
-
-<?php
-
-$id_bozza = $_SESSION['id_bozza'];
-$xmlFile = "../../data/xml/bozze.xml";
-$doc = getDOMdocument($xmlFile);
-$root = $doc->documentElement;
-$xpath = new DOMXPath($doc); 
-
-
-$bozSteps = $xpath->query("/bozze/bozza[@id = '$id_bozza']/tutorial_bozza")->item(0)->childNodes; 
-
-$numero_step = 0;
-
-foreach($bozSteps as $bozzaStep){
-    $numero_step++;
-}
-
-if($numero_step !== 0){
-  echo "<form action=\"../../lib/progetto.php\" method=\"post\">\n";
-  echo "    <button type=\"submit\">PUBBLICA</button>\n";
-  echo "</form>\n";
-  
-}
-
-?>
-</body>
-</html>
-
-
-
-
-
-
 

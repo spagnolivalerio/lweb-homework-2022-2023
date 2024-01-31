@@ -20,7 +20,6 @@
 
     updateViews($root, $id_progetto);
     
-
     $discussioni = getDiscussioni($root, $id_progetto);
     $steps = getSteps($root, $id_progetto);
 
@@ -100,7 +99,7 @@
               echo "        <input type=\"hidden\" value=\"$num_step\" name=\"num_step\"></input>\n";
               echo "        <input type=\"hidden\" value=\"$id_progetto\" name=\"id_progetto\"></input>\n";
               echo "        <div class=\"move-button\">\n";
-              if($num_step === 0){
+              if($num_step == 0){
                   echo "            <div class=\"left\" type=\"submit\"></div>\n";
               } else{
                   echo "            <button class=\"left l\" name=\"action\" value=\"prev\" type=\"submit\">&#129184; Prev</button>\n";

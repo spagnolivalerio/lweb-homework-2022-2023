@@ -84,6 +84,9 @@
 .testo{
 	height: 120px;
 	padding: 5px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	overflow-y: scroll;
 }
 
 .options {

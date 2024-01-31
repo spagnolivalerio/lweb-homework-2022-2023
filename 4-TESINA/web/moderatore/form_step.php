@@ -1,4 +1,3 @@
-
 <?php
 
 session_start();
@@ -7,8 +6,10 @@ require_once('../../lib/functions.php');
 $path = "index.php"; 
 $mod = "moderatore";     
 addressing($_SESSION['Tipo_utente'], $mod, $path);
-require_once('../../lib/functions.php');
 
+if(isset($_POST['num_step'])){
+    $num_step = $_POST['num_step'];
+}
 
 ?>
 
@@ -36,7 +37,6 @@ require_once('../../lib/functions.php');
         <div class="homepage-sidebar-list">
           <a class="elem" href="homepage.php">Homepage</a>
           <a class="elem" href="bacheca.php">Bacheca</a>
-          <a class="elem" href="moderator_dashboard.php">Dashboard</a>
           <a class="elem" href="view_bozze.php">Bozze</a>
           <a class="elem" href="view_storico.php">Storico</a>
           <div class="divisore"></div>
@@ -75,8 +75,7 @@ require_once('../../lib/functions.php');
     <label for="descrizione">Descrizione:</label>
     <textarea name="descrizione" ></textarea><br>
 
-    <label for="num_step">step</label>
-    <textarea name="num_step" ></textarea><br>
+    <input name="num_step" type="hidden" value="<?php echo"$num_step"; ?>"></input><br>
 
     <label for="img">10</label>
     <input type="file" name="img" accept="image/*" ></input><br>
@@ -84,40 +83,3 @@ require_once('../../lib/functions.php');
     <input type="submit" value="Aggiungi step">
 
 </form>
-
-
-
-<?php
-
-$id_bozza = $_SESSION['id_bozza'];
-$xmlFile = "../../data/xml/bozze.xml";
-$doc = getDOMdocument($xmlFile);
-$root = $doc->documentElement;
-$xpath = new DOMXPath($doc); 
-
-
-$bozSteps = $xpath->query("/bozze/bozza[@id = '$id_bozza']/tutorial_bozza")->item(0)->childNodes; 
-
-$numero_step = 0;
-
-foreach($bozSteps as $bozzaStep){
-    $numero_step++;
-}
-
-if($numero_step !== 0){
-  echo "<form action=\"../../lib/progetto.php\" method=\"post\">\n";
-  echo "    <button type=\"submit\">PUBBLICA</button>\n";
-  echo "</form>\n";
-  
-}
-
-?>
-</body>
-</html>
-
-
-
-
-
-
-

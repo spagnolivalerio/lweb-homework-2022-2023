@@ -8,8 +8,6 @@ if (!isset($_SESSION['Tipo_utente'])) {
     exit();
 }
 
-
-
 if (!isset($_POST['id_report']) || empty($_POST['id_report'])) {
     exit();
 } else {
