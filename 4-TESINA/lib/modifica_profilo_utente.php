@@ -73,6 +73,12 @@ if (!isset($_POST['indirizzo']) || empty($_POST['indirizzo'])) {
     $indirizzo = $_POST['indirizzo'];
 }
 
+if (!preg_match('~^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$~', $email)) {
+    $_SESSION['email_invalid'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/modifica_profilo_utente.php?id_utente=' . $id_utente);
+    exit;
+}
+
 
 //CONTROLLO DUPLICATI
 

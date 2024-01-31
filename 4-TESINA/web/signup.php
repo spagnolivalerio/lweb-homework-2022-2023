@@ -73,7 +73,7 @@
         	 <div class="signup_title">REGISTRATI</div>
              <div id="error">
                 <?php 
-                    if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] === "false" && !isset($_SESSION['username_esistente'])  && !isset($_SESSION['email_esistente']) && !isset($_SESSION['password_unmatch'])){
+                    if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] === "false" && !isset($_SESSION['username_esistente'])  && !isset($_SESSION['email_esistente']) && !isset($_SESSION['password_unmatch']) && !isset($_SESSION['email_invalid'])){
                         echo "Inserisci le credenziali";
                     } elseif (isset($_SESSION['username_esistente']) && $_SESSION['username_esistente'] === "true") {
                         echo "Username esistente";
@@ -84,6 +84,9 @@
                     } elseif (isset($_SESSION['password_unmatch']) && $_SESSION['password_unmatch'] === "true") {
                         echo "La password non rispetta i criteri di sicurezza";
                         unset($_SESSION['password_unmatch']);
+                    } elseif (isset($_SESSION['email_invalid']) && $_SESSION['email_invalid'] === "true") {
+                        echo "L'e-mail scelta non rispetta la struttura richiesta ";
+                        unset($_SESSION['email_invalid']);
                     }
                 ?>
             </div>

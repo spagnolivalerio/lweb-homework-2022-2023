@@ -38,7 +38,7 @@ switch($_SESSION['Tipo_utente']){
         header("Location: ../web/admin/view.php?num_step=$num_step&id_progetto=$id_progetto");
         break;
     default: 
-        header("Location: ../index.php");
+        header("Location: ../web/visitatore/view.php?num_step=$num_step&id_progetto=$id_progetto");
         break;
 }
 

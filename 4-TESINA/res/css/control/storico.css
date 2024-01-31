@@ -18,14 +18,15 @@
 
 .activities{
     flex:80%;
-    border: 1px solid black;
+    border-top: 1px solid black;
     margin-left: 10px;
+
 }
 
 .user-info {
     box-shadow: 0 3rem 3rem -2rem hsl(200 50% 20% / 40%);
     width: 90%;
-    height: 120px;
+    height: 100px;
     transition: all 0.3s ease; /* Aggiunto un effetto di transizione */
     background-color: white;
     margin-top: 10px;
@@ -46,13 +47,11 @@
 .filtro{
     height: 50px;
     width: 90%;
-    border: 1px solid black;
     margin-bottom: 10px;
     display: flex;
     align-items: center; /* Centrare il testo verticalmente */
     
 }
-
 
 
 .filtro input{
@@ -61,10 +60,6 @@
     width: 100%;
 }
 
-
-.activity-type{
-    border: 1px solid black;
-}
 
 .user-info img {
     position: relative;

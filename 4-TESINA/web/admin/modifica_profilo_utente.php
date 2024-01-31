@@ -62,12 +62,15 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
                         echo "Compila tutti i campi";
                         unset($_SESSION['empty_form']);
                     }elseif(isset($_SESSION['username_esistente']) && $_SESSION['username_esistente'] === "true"){
-                        echo "Username non utilizzabile!";
+                        echo "Username già utilizzato!";
                         unset($_SESSION['username_esistente']);
                     }elseif(isset($_SESSION['email_esistente']) && $_SESSION['email_esistente'] === "true"){
                       echo "E-mail non utilizzabile!";
                       unset($_SESSION['email_esistente']);
-                    }
+                    }elseif(isset($_SESSION['email_invalid']) && $_SESSION['email_invalid'] === "true"){
+                      echo "E-mail non rispetta il formato richiesto!";
+                      unset($_SESSION['email_invalid']);
+                    } 
                 ?>
             </div>
             <script>

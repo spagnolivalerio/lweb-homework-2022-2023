@@ -124,7 +124,6 @@
             echo "                </div>\n";
 
             echo "                <div class=\"activity-type\">\n";
-            echo "                    <h2>Pubblicazione Progetti</h2>\n";
             echo "                    <table class=\"activity-list\">\n";
 
             if($tabella == 1){

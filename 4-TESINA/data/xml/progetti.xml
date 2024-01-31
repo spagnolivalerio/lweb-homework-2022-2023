@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="2" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="11" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="10" nome_file_img="img/proj/ardu.png" difficolta="facile" clearance="1" sospeso="false">
+  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="11" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="30" nome_file_img="img/proj/ardu.png" difficolta="facile" clearance="1" sospeso="false">
     <titolo>Arduino Blink. Fai lampeggiare un led</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -17,7 +17,7 @@
       <valutazione id_valutazione="1"/>
     </valutazioni>
   </progetto>
-  <progetto id="2" username_creator="dan" id_creator="6" tempo_medio="1" data_pubblicazione="2024-01-22 11:47:07" visualizzazioni="0" nome_file_img="img/proj/img_proj_65ae47a2ec2ed.jpg" difficolta="facile" clearance="1" sospeso="false">
+  <progetto id="2" username_creator="dan" id_creator="6" tempo_medio="1" data_pubblicazione="2024-01-22 11:47:07" visualizzazioni="1" nome_file_img="img/proj/img_proj_65ae47a2ec2ed.jpg" difficolta="facile" clearance="1" sospeso="false">
     <titolo>JUJUTSU KAISEN 12</titolo>
     <categorie>
       <categoria id_categoria="2"/>

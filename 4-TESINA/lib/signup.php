@@ -80,6 +80,13 @@ if (mysqli_num_rows($rows) > 0) {
     exit;
 }
 
+if (!preg_match('~^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$~', $email)) {
+    $_SESSION['email_invalid'] = "true";
+    $_SESSION['credenziali'] = "false";
+    header('Location: ../web/signup.php');
+    exit;
+}
+
 if (!preg_match('~^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}$~', $password_match)){
     $_SESSION['password_unmatch'] = "true";
     $_SESSION['credenziali'] = "false";

@@ -298,7 +298,7 @@
                 if($voted){
                   echo "  <div class=\"votato\">Contributo già valutato</div>\n";
                 }elseif(!$flag && ($id_commentatore !== $id_utente)){
-                  echo "  <div class=\"votato\">Richiedi accesso per valutare i contributi</div>\n";
+                  echo "  <div class=\"votato\">Richiedi accesso/Attendi che ti venga dato accesso per valutare i contributi</div>\n";
                 }elseif($flag && ($id_commentatore !== $id_utente)){
                   echo "            <form class=\"form-box\" action=\"../../lib/valuta_commento.php\" method=\"post\">\n";
                   echo "                <div class=\"rating\">\n";

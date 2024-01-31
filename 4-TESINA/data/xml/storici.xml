@@ -29,6 +29,9 @@
       <commento id_commento="2" data_ora="2024-01-22 09:49:42" id_discussione="16">
         <testo>adad</testo>
       </commento>
+      <commento id_commento="3" data_ora="2024-01-24 09:11:57" id_discussione="16">
+        <testo>ma che bel catsello</testo>
+      </commento>
     </commenti>
     <valutazioni_progetti/>
     <reports_progetti/>
@@ -104,6 +107,29 @@
     <valutazioni_commenti/>
   </storico>
   <storico id_utente="7">
+    <progetti/>
+    <richieste/>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti/>
+    <discussioni/>
+    <valutazioni_commenti/>
+  </storico>
+  <storico id_utente="8">
+    <progetti/>
+    <richieste>
+      <richiesta id_richiesta="3" data_ora="2024-01-24 11:01:39" id_discussione="16" testo=""/>
+      <richiesta id_richiesta="4" data_ora="2024-01-24 11:01:49" id_discussione="17" testo=""/>
+    </richieste>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti/>
+    <discussioni/>
+    <valutazioni_commenti/>
+  </storico>
+  <storico id_utente="9">
     <progetti/>
     <richieste/>
     <commenti/>
