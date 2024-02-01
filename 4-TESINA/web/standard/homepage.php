@@ -16,8 +16,6 @@
       $id_progetto = $_GET['id_progetto'];
     } 
 
-
-
     $clearance_utente = updateClearance($root, $_SESSION['id_utente'], $conn);
   
 

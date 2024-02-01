@@ -24,6 +24,7 @@
     <progetti>
       <progetto titolo="titlte" data_ora="2024-01-31 12:27:22" id_progetto="3"/>
       <progetto titolo="1" data_ora="2024-01-31 12:29:14" id_progetto="4"/>
+      <progetto titolo="Titolo del progetto" data_ora="2024-02-01 12:00:17" id_progetto="6"/>
     </progetti>
     <richieste/>
     <commenti>

@@ -80,7 +80,7 @@ if (file_exists($img_path)) {
 $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 updateAllUsers($radice, $conn);
 
-$url = "../web/" . $_SESSION['Tipo_utente'] . "/homepage.php?id_progetto=" . $id_progetto;
+$url = "../web/" . $_SESSION['Tipo_utente'] . "/bacheca.php";
 header("Location: $url");
 exit;
 

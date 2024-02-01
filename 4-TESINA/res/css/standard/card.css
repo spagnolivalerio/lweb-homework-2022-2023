@@ -42,6 +42,7 @@
     padding-inline: 2px;
     border-radius: 5px;
     left: 20px;
+    height: fit-content;
 }
 
 .flexbox2 {
@@ -133,9 +134,17 @@
     display: flex;
 }
 
-.modify-button{
+.modify-button, .cestino{
     position: relative;
     right: 20px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+
 }
 
 .details{

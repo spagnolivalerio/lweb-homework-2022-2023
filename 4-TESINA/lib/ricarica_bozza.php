@@ -13,7 +13,7 @@
         $_SESSION['id_bozza'] = $_POST['id_bozza'];
     }
 
-    header('Location: ../web/standard/form_progetto.php?modifica=true');
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/form_progetto.php?modifica=true');
     exit;
 
 ?>

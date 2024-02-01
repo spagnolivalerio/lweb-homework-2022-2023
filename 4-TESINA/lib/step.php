@@ -8,6 +8,14 @@ $img_dir_path = "img/steps/";
 
 $xmlFile = "../data/xml/bozze.xml";
 
+if (!isset($_POST['titolo']) || empty($_POST['titolo'])) {
+    $_SESSION['empty_form'] = "true";
+    header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/form_step.php');
+    exit;
+} else {
+    $titolo = $_POST['titolo'];
+}
+
 if (!isset($_POST['descrizione']) || empty($_POST['descrizione'])) {
     $_SESSION['empty_form'] = "true";
     header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/form_step.php');
@@ -45,6 +53,7 @@ $nome_file_img = $img_dir_path . uniqid('img_step_') . "." . $ext;
 $newStep = $doc->createElement('step');
 $newDescrizione = $doc->createElement('descrizione', $descrizione);
 $newStep->appendChild($newDescrizione);
+$newStep->setAttribute('titolo_step', $titolo);
 $newStep->setAttribute('nome_file_img', $nome_file_img);
 $newStep->setAttribute('num_step', $num_step);
 

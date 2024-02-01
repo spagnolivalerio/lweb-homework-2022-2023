@@ -157,7 +157,11 @@
             echo "      <div class=\"intestazione-card\">\n";
             echo "        <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
             echo "        <div class=\"card-user\">$username</div>\n";
-            echo "    </div>\n";
+            echo "      </div>\n";
+            echo "     <form class=\"elimina-progetto\" action=\"../../lib/rimuovere_progetto.php\" method=\"post\">\n";
+            echo "       <input class=\"cestino\" type=\"submit\" value=\"&#10005;\">\n";
+            echo "       <input class=\"\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
+            echo "     </form>\n";
             echo "   </div>\n";
             echo "    <div class=\"details\">\n";
             echo "      <div class=\"time\">&#128337;: $durata min</div>\n";

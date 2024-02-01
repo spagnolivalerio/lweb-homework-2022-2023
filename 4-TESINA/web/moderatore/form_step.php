@@ -24,6 +24,7 @@ if(isset($_POST['num_step'])){
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/form_step.css" />
 
   </head>
 
@@ -70,16 +71,19 @@ if(isset($_POST['num_step'])){
                 setTimeout(scomparsa, 4000);
             </script>
 
-<form action="../../lib/step.php" method="post" enctype="multipart/form-data">
+<form action="../../lib/step.php" method="post" enctype="multipart/form-data" class="form-container">
 
-    <label for="descrizione">Descrizione:</label>
-    <textarea name="descrizione" ></textarea><br>
+    <label for="titolo" class="form-label">Titolo:</label>
+    <input name="titolo" class="form-text"></input><br>
+
+    <label for="descrizione" class="form-label">Descrizione:</label>
+    <textarea name="descrizione" class="form-textarea"></textarea><br>
 
     <input name="num_step" type="hidden" value="<?php echo"$num_step"; ?>"></input><br>
 
-    <label for="img">10</label>
-    <input type="file" name="img" accept="image/*" ></input><br>
+    <label for="img" class="form-label">Immagine</label>
+    <input type="file" name="img" accept="image/*" class="form-file-input"></input><br>
 
-    <input type="submit" value="Aggiungi step">
+    <input type="submit" value="Aggiungi step" class="form-submit">
 
 </form>

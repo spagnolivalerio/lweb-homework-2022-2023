@@ -87,6 +87,8 @@ $step = $steps->item($num_step);
 <?php
                 $img_path = $step->getAttribute('nome_file_img');
                 $descrizione_step = $step->getElementsByTagName('descrizione')->item(0)->nodeValue;
+                $titolo_step = $step->getAttribute('titolo_step');
+
                 echo "<div class=\"anteprima_box\">";
           
                   echo"<div class=\"insert_before\">";
@@ -106,7 +108,7 @@ $step = $steps->item($num_step);
                   echo "        <div class=\"step-content\">\n";
                   echo "            <div class=\"step-img\" style=\"background-image: url('../../$img_path'); background-size: cover; background-position: center;\"></div>\n";
                   echo "            <div class=\"descrizione\">\n";
-                  echo "                <div class=\"fase\"><h4>STEP " . $num_step+1 . "</h4></div>\n";
+                  echo "                <div class=\"fase\"><h4>".$titolo_step." - STEP " . $num_step+1 . "</h4></div>\n";
                   echo "                <div class=\"testo\">$descrizione_step</div>\n";
                   echo "            </div>\n";
                   echo "        </div>\n";

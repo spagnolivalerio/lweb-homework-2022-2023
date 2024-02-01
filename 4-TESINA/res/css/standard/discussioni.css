@@ -211,10 +211,3 @@
     cursor: pointer;
     color: red;
 }
-
-
-
-echo "     <form class=\"elimina-progetto\" action=\"../../lib/rimuovere_progetto.php\" method=\"post\">\n";
-echo "       <input class=\"cestino\" type=\"submit\" value=\"&#10005;\">\n";
-echo "       <input class=\"\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
-echo "     </form>\n";

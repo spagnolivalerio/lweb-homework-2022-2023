@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="19" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
+<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="22" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
   <bozza sospeso="false" id="6" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-01-31 16:51:31" difficolta="facile" clearance="" nome_file_img="">
     <categorie/>
     <categoriaProposta/>
@@ -27,18 +27,6 @@
         <descrizione>ftsh</descrizione>
       </step>
     </tutorial_bozza>
-  </bozza>
-  <bozza sospeso="false" id="7" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-01-31 17:08:28" difficolta="facile" clearance="" nome_file_img="">
-    <categorie/>
-    <categoriaProposta/>
-    <descrizione/>
-    <tutorial_bozza/>
-  </bozza>
-  <bozza sospeso="false" id="8" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-01-31 17:15:54" difficolta="facile" clearance="" nome_file_img="">
-    <categorie/>
-    <categoriaProposta/>
-    <descrizione/>
-    <tutorial_bozza/>
   </bozza>
   <bozza sospeso="false" id="9" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-01-31 17:16:09" difficolta="facile" clearance="" nome_file_img="">
     <categorie/>
@@ -110,5 +98,17 @@
         <descrizione>ooo</descrizione>
       </step>
     </tutorial_bozza>
+  </bozza>
+  <bozza sospeso="false" id="20" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-01 11:43:39" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="21" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-01 11:47:00" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
   </bozza>
 </bozze>

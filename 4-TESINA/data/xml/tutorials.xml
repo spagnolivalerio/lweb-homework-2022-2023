@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="6">
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="7">
   <tutorial_progetto id="1" id_progetto="1">
     <step num_step="1" nome_file_img="img/steps/img_step_659bd05245a40.jpg">
       <descrizione>Collegare arduino al pc con un cavo usb tipo B - tipo A.</descrizione>
@@ -16,14 +16,14 @@
       <descrizione>desc</descrizione>
     </step>
   </tutorial_progetto>
-  <tutorial_progetto id="4" id_progetto="3">
-    <step num_step="1" nome_file_img="img/steps/img_step_65ba2e9943e56.png">
-      <descrizione>DE</descrizione>
-    </step>
-  </tutorial_progetto>
   <tutorial_progetto id="6" id_progetto="5">
     <step num_step="1" nome_file_img="img/steps/img_step_65ba2f8d8a2cc.jpg">
       <descrizione>dew</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="7" id_progetto="6">
+    <step titolo_step="LET'S GO PAGURI" num_step="1" nome_file_img="img/steps/img_step_65bb792fdf260.png">
+      <descrizione>primo step</descrizione>
     </step>
   </tutorial_progetto>
 </tutorials_progetti>

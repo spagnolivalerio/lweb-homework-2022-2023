@@ -138,6 +138,7 @@ $newTutorial->setAttribute('id_progetto', $id_progetto);
 
 foreach($bozSteps as $bozStep){
     $newStep = $doc->createElement('step'); 
+    $newStep->setAttribute('titolo_step', $bozStep->getAttribute('titolo_step'));
     $newStep->setAttribute('num_step', $bozStep->getAttribute('num_step')); 
     $newStep->setAttribute('nome_file_img', $bozStep->getAttribute('nome_file_img')); 
     $newStepDesc = $doc->createElement('descrizione', $bozStep->getElementsByTagName('descrizione')->item(0)->nodeValue); 
