@@ -34,6 +34,7 @@
     $step = $steps->item($num_step);
     $descrizione_step = $step->getElementsByTagName('descrizione')->item(0)->nodeValue; 
     $img_path = $step->getAttribute('nome_file_img');
+    $titolo_step = $step->getAttribute('titolo_step');
 
     $progetto = getProgetto($root, $id_progetto);
     $id_creator = $progetto->getAttribute('id_creator');

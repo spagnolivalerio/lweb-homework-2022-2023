@@ -81,6 +81,8 @@
           $clearance = $progetto->getAttribute('clearance');
           $sospeso = $progetto->getAttribute('sospeso');
           $livello_richiesto = intval($clearance) * 2;
+          $difficoltà = $progetto->getAttribute('difficolta');
+          $durata = $progetto->getAttribute('tempo_medio'); 
 
           $query = "SELECT * FROM utente WHERE id = '$id_creator'"; 
           $res = mysqli_query($conn, $query);
@@ -98,8 +100,14 @@
               echo "<div class=\"card-container\">\n";
               echo "  <div class=\"card-header\" style=\"background-image: url('$img_path'); background-size: cover; background-position: center;\">\n";
               echo "   <div class=\"top-card\">\n";
+              echo "   <div class=\"intestazione-card\">\n";
               echo "    <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
               echo "    <div class=\"card-user\">$username</div>\n";
+              echo "    </div>\n";
+              echo "    </div>\n";
+              echo "    <div class=\"details\">\n";
+              echo "      <div class=\"time\">&#128337;: $durata min</div>\n";
+              echo "      <div class=\"difficulty\">Difficolt&agrave;: $difficoltà</div>\n";
               echo "    </div>\n";
               echo "   </div>\n";
               echo "<div class=\"card-footer\">\n";
