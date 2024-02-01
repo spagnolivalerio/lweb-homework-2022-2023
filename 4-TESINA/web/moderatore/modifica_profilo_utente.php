@@ -33,6 +33,8 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/edit-info.css" />
+
 
   </head>
 
@@ -112,21 +114,21 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
         $result = $conn->query($query);
         $row = $result->fetch_assoc();
 
-        echo "          <form class=\"\" action=\"../../lib/modifica_profilo_utente.php\" method=\"post\">\n";
-        echo "                   <input type=\"hidden\" name=\"id_utente\" value=\"" . $id_utente . "\"></input>\n";
-        echo "                   <label for=\"nome\">Nome</label>\n"; 
-        echo "                   <input type=\"text\" name=\"nome\" value=\"" . $row['nome'] . "\"></input>\n";
-        echo "                   <label for=\"cognome\">Cognome</label>\n"; 
-        echo "                   <input type=\"text\" name=\"cognome\" value=\"" . $row['cognome'] . "\"></input>\n";
-        echo "                   <label for=\"email\">E-mail</label>\n"; 
-        echo "                   <input type=\"text\" name=\"email\" value=\"" . $row['email'] . "\"></input>\n";
-        echo "                   <input type=\"hidden\" name=\"old_email\" value=\"" . $row['email'] . "\"></input>\n";
-        echo "                   <label for=\"username\">Username</label>\n"; 
-        echo "                   <input type=\"text\" name=\"username\" value=\"" . $row['username'] . "\"></input>\n";
-        echo "                   <input type=\"hidden\" name=\"old_username\" value=\"" . $row['username'] . "\"></input>\n";
-        echo "                   <label for=\"indirizzo\">Indirizzo</label>\n"; 
-        echo "                   <input type=\"text\" name=\"indirizzo\" value=\"" . $row['indirizzo'] . "\"></input>\n";      
-        echo "                   <button type=\"submit\">Modifica</button>\n";
-        echo "          </form>\n";
+        echo " <form class=\"form-container\" action=\"../../lib/modifica_profilo_utente.php\" method=\"post\">\n";
+        echo "    <input type=\"hidden\" name=\"id_utente\" value=\"" . $id_utente . "\"></input>\n";
+        echo "    <label class=\"form-label\" for=\"nome\">Nome</label>\n";
+        echo "    <input class=\"form-input\" type=\"text\" name=\"nome\" value=\"" . $row['nome'] . "\"></input>\n";
+        echo "    <label class=\"form-label\" for=\"cognome\">Cognome</label>\n";
+        echo "    <input class=\"form-input\" type=\"text\" name=\"cognome\" value=\"" . $row['cognome'] . "\"></input>\n";
+        echo "    <label class=\"form-label\" for=\"email\">E-mail</label>\n";
+        echo "    <input class=\"form-input\" type=\"text\" name=\"email\" value=\"" . $row['email'] . "\"></input>\n";
+        echo "    <input type=\"hidden\" name=\"old_email\" value=\"" . $row['email'] . "\"></input>\n";
+        echo "    <label class=\"form-label\" for=\"username\">Username</label>\n";
+        echo "    <input class=\"form-input\" type=\"text\" name=\"username\" value=\"" . $row['username'] . "\"></input>\n";
+        echo "    <input type=\"hidden\" name=\"old_username\" value=\"" . $row['username'] . "\"></input>\n";
+        echo "    <label class=\"form-label\" for=\"indirizzo\">Indirizzo</label>\n";
+        echo "    <input class=\"form-input\" type=\"text\" name=\"indirizzo\" value=\"" . $row['indirizzo'] . "\"></input>\n";
+        echo "    <button class=\"form-button\" type=\"submit\">Modifica</button>\n";
+        echo " </form>\n";
 
 ?>

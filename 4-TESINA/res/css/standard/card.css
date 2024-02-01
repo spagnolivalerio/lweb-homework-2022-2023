@@ -31,7 +31,8 @@
 .card-descrizione {
     flex-basis: 70%;
     max-height: 100px;
-    overflow-y: scroll;
+    overflow-y: hidden;
+    word-wrap: break-word;
 }
 
 .card-user {

@@ -40,6 +40,8 @@ $durata = $progetto->getAttribute('tempo_medio');
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/edit-info.css" />
+
 
   </head>
 
@@ -103,40 +105,22 @@ $durata = $progetto->getAttribute('tempo_medio');
 <?php
 
 
-echo "          <form class=\"\" action=\"../../lib/modifica_specifiche_progetto.php\" method=\"post\">\n";
-echo "               <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\"></input>\n";
-echo "               <label for=\"clearance\">Clearance</label>\n"; 
-echo "               <input type=\"number\" name=\"clearance\" min=\"1\" max=\"5\" value=\"" . $clearance . "\"></input>\n";
-echo "               <label for=\"durata\">Durata</label>\n"; 
-echo "               <input type=\"number\" name=\"durata\"  value=\"" . $durata . "\"></input>\n";
+echo "<form class=\"form-container\" action=\"../../lib/modifica_specifiche_progetto.php\" method=\"post\">\n";
+echo "    <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\">\n";
+echo "    <label class=\"form-label\" for=\"clearance\">Clearance</label>\n"; 
+echo "    <input class=\"form-input\" type=\"number\" name=\"clearance\" min=\"1\" max=\"5\" value=\"" . $clearance . "\">\n";
+echo "    <label class=\"form-label\" for=\"durata\">Durata (min)</label>\n"; 
+echo "    <input class=\"form-input\" type=\"number\" name=\"durata\" value=\"" . $durata . "\">\n";
 
-if($difficoltà == 'facile') {
-    echo            '<label for="difficoltà">Difficoltà: </label>';
-    echo            '<select id="difficoltà" name="difficoltà" required>';
-    echo            '<option value="facile">Facile</option>';
-    echo            '<option value="medio">Medio</option>';
-    echo            '<option value="difficile">Difficile</option>';
-    echo            '</select>';
-    echo            '<br>';
-} elseif($difficoltà == 'medio') {
-    echo            '<label for="difficoltà">Difficoltà: </label>';
-    echo            '<select id="difficoltà" name="difficoltà" required>';
-    echo            '<option value="facile">Medio</option>';
-    echo            '<option value="medio">Facile</option>';
-    echo            '<option value="difficile">Difficile</option>';
-    echo            '</select>';
-    echo            '<br>';
-} elseif($difficoltà == 'difficile') {
-    echo            '<label for="difficoltà">Difficoltà: </label>';
-    echo            '<select id="difficoltà" name="difficoltà" required>';
-    echo            '<option value="facile">Difficile</option>';
-    echo            '<option value="medio">Facile</option>';
-    echo            '<option value="difficile">Medio</option>';
-    echo            '</select>';
-    echo            '<br>';
-}
-echo "          <button type=\"submit\">Modifica</button>\n";
-echo "          </form>\n";
+echo "    <label class=\"form-label\" for=\"difficoltà\">Difficoltà: </label>\n";
+echo "    <select class=\"form-input\" id=\"difficoltà\" name=\"difficoltà\" required>\n";
+echo "        <option value=\"facile\"" . ($difficoltà == 'facile' ? ' selected' : '') . ">Facile</option>\n";
+echo "        <option value=\"medio\"" . ($difficoltà == 'medio' ? ' selected' : '') . ">Medio</option>\n";
+echo "        <option value=\"difficile\"" . ($difficoltà == 'difficile' ? ' selected' : '') . ">Difficile</option>\n";
+echo "    </select>\n";
+echo "    <br>\n";
+echo "    <button class=\"form-button\" type=\"submit\">Modifica</button>\n";
+echo "</form>\n";
 
 ?>
 

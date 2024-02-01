@@ -7,6 +7,7 @@
     $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
     $adm = "admin";
     $path = "index.php";
+    addressing($_SESSION['Tipo_utente'], $adm, $path); //redirect
 
     if (!isset($_POST['id_progetto']) && (isset($_GET['id_progetto']) ) ) {
       $id_progetto = $_GET['id_progetto'];
@@ -20,7 +21,6 @@
 
     updateViews($root, $id_progetto);
     
-
     $discussioni = getDiscussioni($root, $id_progetto);
     $steps = getSteps($root, $id_progetto);
 
@@ -35,6 +35,7 @@
     }
 
     $step = $steps->item($num_step);
+    $titolo_step = $step->getAttribute('titolo_step');
     $descrizione_step = $step->getElementsByTagName('descrizione')->item(0)->nodeValue; 
     $img_path = $step->getAttribute('nome_file_img');
 
@@ -44,8 +45,6 @@
     $reported_project = already_reported($reports_progetto, $id_utente);
     $valutazioni_progetto = getValutazioniProgetto($root, $id_progetto);
     $voted = already_voted($valutazioni_progetto, $id_utente);
-
-    addressing($_SESSION['Tipo_utente'], $adm, $path); //redirect
 
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 ?>
@@ -77,6 +76,7 @@
             <a class="elem" href="homepage.php">Homepage</a>
             <a class="elem" href="bacheca.php">Bacheca</a>
             <a class="elem" href="moderator_dashboard.php">Dashboard</a>
+            <a class="elem" href="view_bozze.php">Bozze</a>
             <a class="elem" href="view_storico.php">Storico</a>
             <div class="divisore"></div>
             <a class="elem" href="../../lib/logout.php">Logout</a>
@@ -91,7 +91,7 @@
               echo "        <div class=\"step-content\">\n";
               echo "            <div class=\"step-img\" style=\"background-image: url('../../$img_path'); background-size: cover; background-position: center;\"></div>\n";
               echo "            <div class=\"descrizione\">\n";
-              echo "                <div class=\"fase\"><h4>STEP " . $num_step+1 . "</h4></div>\n";
+              echo "                <div class=\"fase\"><h4>".$titolo_step." - STEP " . $num_step+1 . "</h4></div>\n";
               echo "                <div class=\"testo\">$descrizione_step</div>\n";
               echo "            </div>\n";
               echo "        </div>\n";
@@ -99,7 +99,7 @@
               echo "        <input type=\"hidden\" value=\"$num_step\" name=\"num_step\"></input>\n";
               echo "        <input type=\"hidden\" value=\"$id_progetto\" name=\"id_progetto\"></input>\n";
               echo "        <div class=\"move-button\">\n";
-              if($num_step === 0){
+              if($num_step == 0){
                   echo "            <div class=\"left\" type=\"submit\"></div>\n";
               } else{
                   echo "            <button class=\"left l\" name=\"action\" value=\"prev\" type=\"submit\">&#129184; Prev</button>\n";
@@ -112,12 +112,6 @@
               }
               echo "        </div>\n";
               echo "        </form>\n";
-              
-              //DA POSIZIONARE
-              echo "      <form class=\"\" action=\"../../lib/rimuovere_progetto.php\" method=\"post\">\n";
-              echo "        <input class=\"\" type=\"submit\" value=\"🗑️\">\n";
-              echo "        <input class=\"\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
-              echo "      </form>\n";
               
 
 

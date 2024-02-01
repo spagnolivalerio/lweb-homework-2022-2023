@@ -74,6 +74,9 @@ if(isset($_POST['num_step'])){
 
 <form action="../../lib/step.php" method="post" enctype="multipart/form-data" class="form-container">
 
+    <label for="titolo" class="form-label">Titolo:</label>
+    <input name="titolo" class="form-text"></input><br>
+
     <label for="descrizione" class="form-label">Descrizione:</label>
     <textarea name="descrizione" class="form-textarea"></textarea><br>
 

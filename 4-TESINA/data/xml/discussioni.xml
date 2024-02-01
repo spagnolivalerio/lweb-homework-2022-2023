@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="18" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="20" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
   <discussione titolo="titolo" id_poster="3" risolta="false" id="18" id_progetto="1" data_ora="2024-02-01 09:54:49" autore="moderatore1">
     <commenti/>
     <descrizione>descr</descrizione>
     <partecipanti>
       <partecipante id_partecipante="3"/>
+      <partecipante id_partecipante="4"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="apriamo una discussione" id_poster="4" risolta="true" id="19" id_progetto="6" data_ora="2024-02-01 17:03:07" autore="utentestd1">
+    <commenti>
+      <commento id_commento="5"/>
+      <commento id_commento="6"/>
+      <commento id_commento="7"/>
+    </commenti>
+    <descrizione>voglio vedere s ei commetni funzionano</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="4"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="titolo" id_poster="4" risolta="false" id="20" id_progetto="6" data_ora="2024-02-01 17:05:55" autore="utentestd1">
+    <commenti/>
+    <descrizione>awf</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="4"/>
     </partecipanti>
   </discussione>
 </discussioni>

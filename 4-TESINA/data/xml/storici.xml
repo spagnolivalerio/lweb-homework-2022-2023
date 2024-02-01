@@ -31,26 +31,49 @@
       <commento id_commento="4" data_ora="2024-02-01 09:54:58" id_discussione="18">
         <testo>commmento</testo>
       </commento>
+      <commento id_commento="7" data_ora="2024-02-01 17:04:39" id_discussione="19">
+        <testo>wtf, why are you chatting there, this is a important website</testo>
+      </commento>
     </commenti>
     <valutazioni_progetti/>
-    <reports_progetti/>
+    <reports_progetti>
+      <report_progetto id_report="2" tipo="spam" data_ora="2024-02-01 17:01:35" id_progetto="1" publisher="user" titolo="Arduino Blink. Fai lampeggiare un led"/>
+    </reports_progetti>
     <reports_commenti/>
     <discussioni>
       <discussione id_discussione="18" data_ora="2024-02-01 09:54:49" titolo="titolo"/>
     </discussioni>
-    <valutazioni_commenti/>
+    <valutazioni_commenti>
+      <valutazione_commento id_valutazione="2" data_ora="2024-02-01 17:05:08" id_commento="5" id_progetto="6">
+        <utilita>3</utilita>
+        <livello_di_accordo>5</livello_di_accordo>
+      </valutazione_commento>
+    </valutazioni_commenti>
   </storico>
   <storico id_utente="4">
     <progetti>
       <progetto titolo="el titulo mas grande de o mundo" data_ora="2024-01-31 11:20:02" id_progetto="2"/>
       <progetto titolo="sf" data_ora="2024-01-31 12:31:26" id_progetto="5"/>
+      <progetto titolo="Titolo" data_ora="2024-02-01 15:58:09" id_progetto="7"/>
     </progetti>
-    <richieste/>
-    <commenti/>
+    <richieste>
+      <richiesta id_richiesta="5" data_ora="2024-02-01 16:54:30" id_discussione="18" testo=""/>
+    </richieste>
+    <commenti>
+      <commento id_commento="5" data_ora="2024-02-01 17:03:38" id_discussione="19">
+        <testo>commento number one, trust him</testo>
+      </commento>
+      <commento id_commento="6" data_ora="2024-02-01 17:03:49" id_discussione="19">
+        <testo>commento number 2, trust her</testo>
+      </commento>
+    </commenti>
     <valutazioni_progetti/>
     <reports_progetti/>
     <reports_commenti/>
-    <discussioni/>
+    <discussioni>
+      <discussione id_discussione="19" data_ora="2024-02-01 17:03:07" titolo="apriamo una discussione"/>
+      <discussione id_discussione="20" data_ora="2024-02-01 17:05:55" titolo="titolo"/>
+    </discussioni>
     <valutazioni_commenti/>
   </storico>
 </storici>

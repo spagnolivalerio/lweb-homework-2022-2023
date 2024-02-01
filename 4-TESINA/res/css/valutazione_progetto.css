@@ -1,0 +1,73 @@
+.options{
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.options-title h2 {
+    text-align: center;
+    color: #333;
+}
+
+.votato,
+.reported {
+    background-color: #E8E8E8;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.p-rating-content,
+.form-seganalazione-content {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+.label-form {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.p-rating textarea,
+.form-segnalazione-progetto textarea,
+.form-segnalazione-progetto select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+.p-rating button,
+.form-segnalazione-progetto button {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.p-rating button:hover,
+.form-segnalazione-progetto button:hover {
+    background-color: #357ABD;
+}
+
+.form-segnalazione-progetto select {
+    display: block;
+}
+
+.stars{
+    float: right;
+}

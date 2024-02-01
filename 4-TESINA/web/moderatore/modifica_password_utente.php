@@ -34,6 +34,8 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/edit-info.css" />
+
 
   </head>
 
@@ -113,15 +115,15 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
         $result = $conn->query($query);
         $row = $result->fetch_assoc();
 
-        echo "          <form class=\"\" action=\"../../lib/modifica_password_utente.php\" method=\"post\">\n";
-        echo "                   <input type=\"hidden\" name=\"id_utente\" value=\"" . $id_utente . "\"></input>\n";
-        echo "                   <input type=\"hidden\" name=\"username\" value=\"" . $row['username'] . "\"></input>\n";
-        echo "                   <label for=\"vecchia_password\">Vecchia Password</label>\n"; 
-        echo "                   <input type=\"password\" name=\"vecchia_password\"></input>\n";
-        echo "                   <label for=\"nuova_password\">Nuova Password</label>\n";     
-        echo "                   <input type=\"password\" name=\"nuova_password\"></input>\n";    
-        echo "                   <button type=\"submit\">Modifica</button>\n";
-        echo "          </form>\n";
+        echo " <form class=\"form-container\" action=\"../../lib/modifica_password_utente.php\" method=\"post\">\n";
+        echo "    <input type=\"hidden\" name=\"id_utente\" value=\"" . $id_utente . "\"></input>\n";
+        echo "    <input type=\"hidden\" name=\"username\" value=\"" . $row['username'] . "\"></input>\n";
+        echo "    <label class=\"form-label\" for=\"vecchia_password\">Vecchia Password</label>\n";
+        echo "    <input class=\"form-input\" type=\"password\" name=\"vecchia_password\"></input>\n";
+        echo "    <label class=\"form-label\" for=\"nuova_password\">Nuova Password</label>\n";
+        echo "    <input class=\"form-input\" type=\"password\" name=\"nuova_password\"></input>\n";
+        echo "    <button class=\"form-button\" type=\"submit\">Modifica</button>\n";
+        echo " </form>\n";
 
         ?>
 
