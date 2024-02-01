@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="6" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="11" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="58" nome_file_img="img/proj/ardu.png" difficolta="facile" clearance="1" sospeso="false">
+  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="11" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="59" nome_file_img="img/proj/ardu.png" difficolta="facile" clearance="1" sospeso="false">
     <titolo>Arduino Blink. Fai lampeggiare un led</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -18,21 +18,7 @@
       <valutazione id_valutazione="1"/>
     </valutazioni>
   </progetto>
-  <progetto id="2" username_creator="utentestd1" id_creator="4" tempo_medio="120" data_pubblicazione="2024-01-31 11:20:02" visualizzazioni="1" nome_file_img="img/proj/img_proj_65ba1ed0bb64e.jpg" difficolta="facile" clearance="1" sospeso="false">
-    <titolo>el titulo mas grande de o mundo</titolo>
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-      <categoria id_categoria="5"/>
-    </categorie>
-    <descrizione>descrizione mundial</descrizione>
-    <categoriaProposta>prova</categoriaProposta>
-    <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="2"/>
-    <valutazioni/>
-  </progetto>
-  <progetto id="6" username_creator="moderatore1" id_creator="3" tempo_medio="1200" data_pubblicazione="2024-02-01 12:00:17" visualizzazioni="22" nome_file_img="img/proj/img_proj_65bb7913c5b6f.jpg" difficolta="facile" clearance="1" sospeso="false">
+  <progetto id="6" username_creator="moderatore1" id_creator="3" tempo_medio="1200" data_pubblicazione="2024-02-01 12:00:17" visualizzazioni="23" nome_file_img="img/proj/img_proj_65bb7913c5b6f.jpg" difficolta="facile" clearance="1" sospeso="false">
     <titolo>Titolo del progetto</titolo>
     <categorie>
       <categoria id_categoria="1"/>

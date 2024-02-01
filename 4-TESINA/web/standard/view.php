@@ -81,7 +81,6 @@
           </div>
           </div>
           <div class="dashboard">
-          <div class="bar"></div>
             <div class="toolbar"></div>
               <?php
 
@@ -111,14 +110,6 @@
               }
               echo "        </div>\n";
               echo "        </form>\n";
-
-              //DA POSIZIONARE
-              if($id_creator === $id_utente){
-                echo "      <form class=\"\" action=\"../../lib/rimuovere_progetto.php\" method=\"post\">\n";
-                echo "        <input class=\"\" type=\"submit\" value=\"🗑️\">\n";
-                echo "        <input class=\"\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
-                echo "      </form>\n";
-              }
 
               echo "    </div>\n";
               echo "    <div class=\"options\">";
