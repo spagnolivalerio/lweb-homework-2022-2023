@@ -25,7 +25,7 @@ $_SESSION['id_bozza'] = $id_bozza;
 
 $categorie = $_POST['categorie'];
 $categoriaProposta = $_POST['categoriaProposta'];
-$descrizione = $_POST['descrizione'];
+$descrizione = nl2br($_POST['descrizione']);
 $titolo = $_POST['titolo'];
 $tempo_medio = $_POST['tempo_medio'];
 $difficolta = $_POST['difficolta'];

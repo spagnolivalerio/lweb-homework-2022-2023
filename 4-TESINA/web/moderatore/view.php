@@ -113,12 +113,6 @@
               echo "        </div>\n";
               echo "        </form>\n";
               
-              //DA POSIZIONARE
-              echo "      <form class=\"\" action=\"../../lib/rimuovere_progetto.php\" method=\"post\">\n";
-              echo "        <input class=\"\" type=\"submit\" value=\"🗑️\">\n";
-              echo "        <input class=\"\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
-              echo "      </form>\n";
-              
 
 
               echo "    </div>\n";

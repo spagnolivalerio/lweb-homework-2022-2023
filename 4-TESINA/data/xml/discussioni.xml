@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="17" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd"/>
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="18" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <discussione titolo="titolo" id_poster="3" risolta="false" id="18" id_progetto="1" data_ora="2024-02-01 09:54:49" autore="moderatore1">
+    <commenti/>
+    <descrizione>descr</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="3"/>
+    </partecipanti>
+  </discussione>
+</discussioni>
