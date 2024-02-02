@@ -20,6 +20,9 @@ addressing($_SESSION['Tipo_utente'], $std, $path);
 $tps_root = "../../";
 require_once('../../lib/get_nodes.php');
 
+$logout = $tps_root . "lib/logout.php?ban=true";
+addressing($_SESSION['ban'], 0, $logout);
+
 $xmlCategorie = $tps_root . "data/xml/categorie.xml";
 $doc = getDOMdocument($xmlCategorie); 
 $root = $doc->documentElement; 

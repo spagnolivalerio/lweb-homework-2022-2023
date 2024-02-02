@@ -3,9 +3,13 @@ session_start();
 include('../../conn.php');
 require_once('../../lib/functions.php');
 $path = "index.php"; 
-$std = "standard";     
+$std = "standard";    
+$tps_root = "../../"; 
 addressing($_SESSION['Tipo_utente'], $std, $path); 
 $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+
+$logout = $tps_root . "lib/logout.php?ban=true";
+addressing($_SESSION['ban'], 0, $logout);
 
 if (!isset($_SESSION['Tipo_utente'])) {
     header('Location: ../web/login.php');

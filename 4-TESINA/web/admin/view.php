@@ -366,7 +366,8 @@
 
 ?>
 <?php
-          echo "    <div class=\"options-title\"><h2>RECENSIONI</h2></div>";
+          echo "    <div class=\"review-box\">\n";
+          echo "    <div class=\"review-title\"><h2>RECENSIONI</h2></div>";
           foreach($valutazioni_progetto as $valutazione_progetto){
             $testo = $valutazione_progetto->getElementsByTagName('testo')->item(0)->nodeValue; 
             $value = $valutazione_progetto->getAttribute('value');
@@ -443,22 +444,11 @@
                   }
                   echo "\n    </div>\n";
                   echo "</div>\n";
-
-
-
-                  
                 }
-
           }
+          echo "          </div>\n";
         }
-      
-
-
 ?>
-
-
-
-
         </div>
     </div>
   </body>

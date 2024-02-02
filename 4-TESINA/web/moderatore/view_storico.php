@@ -7,7 +7,9 @@
     $mod = "moderatore";
     $path = "index.php"; 
     addressing($_SESSION['Tipo_utente'], $mod, $path); 
-    echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
+
+    $logout = $root . "lib/logout.php?ban=true";
+    addressing($_SESSION['ban'], 0, $logout);
 
     $id_utente = $_SESSION['id_utente'];
 
@@ -15,7 +17,7 @@
     $query = "SELECT * FROM utente";
     $result = $conn->query($query);
 
-
+    echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 ?>
 
 

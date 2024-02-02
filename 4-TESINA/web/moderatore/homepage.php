@@ -6,6 +6,9 @@
     $id_utente = $_SESSION['id_utente'];
     $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
+    $logout = $root . "lib/logout.php?ban=true";
+    addressing($_SESSION['ban'], 0, $logout);
+
     $path = "index.php"; 
     $mod = "moderatore";     
 

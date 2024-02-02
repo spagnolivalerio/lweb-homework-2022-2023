@@ -7,6 +7,9 @@
     $mod = "moderatore";
     $path = "index.php"; 
     addressing($_SESSION['Tipo_utente'], $mod, $path); 
+
+    $logout = $root . "lib/logout.php?ban=true";
+    addressing($_SESSION['ban'], 0, $logout);
     
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 ?>

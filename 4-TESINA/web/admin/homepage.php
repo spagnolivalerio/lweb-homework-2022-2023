@@ -1,15 +1,15 @@
 <?php
     session_start();   
-    include('../../conn.php');
     $root = "../../";
+    include('../../conn.php');
     require_once($root . "lib/get_nodes.php");
     $id_utente = $_SESSION['id_utente'];
     $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
     $path = "index.php"; 
     $adm = "admin";     
-
     addressing($_SESSION['Tipo_utente'], $adm, $path);
+
 
     if (isset($_GET['id_progetto'])) {
       $id_progetto = $_GET['id_progetto'];

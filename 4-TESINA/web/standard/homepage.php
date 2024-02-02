@@ -9,8 +9,10 @@
 
     $path = "index.php"; 
     $std = "standard";     
-
     addressing($_SESSION['Tipo_utente'], $std, $path);
+
+    $logout = $root . "lib/logout.php?ban=true";
+    addressing($_SESSION['ban'], 0, $logout);
 
     if (isset($_GET['id_progetto'])) {
       $id_progetto = $_GET['id_progetto'];

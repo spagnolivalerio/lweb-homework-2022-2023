@@ -12,6 +12,10 @@ $path = "index.php";
 $mod = "moderatore";     
 addressing($_SESSION['Tipo_utente'], $mod, $path);
 $steps = $tutorial_bozza->childNodes;
+
+$logout = $root . "lib/logout.php?ban=true";
+addressing($_SESSION['ban'], 0, $logout);
+
 if($steps->length < 1){
   header('Location: form_step.php');
   exit;

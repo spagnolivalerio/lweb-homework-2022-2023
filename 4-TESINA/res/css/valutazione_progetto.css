@@ -1,9 +1,8 @@
 .options{
     margin: 0 auto;
     width: 900px;
-    height: 600px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    height: fit-content;
+    margin-top: 200px;
 }
 
 

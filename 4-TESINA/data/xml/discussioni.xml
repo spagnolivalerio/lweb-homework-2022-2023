@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="20" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="21" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
   <discussione titolo="titolo" id_poster="3" risolta="false" id="18" id_progetto="1" data_ora="2024-02-01 09:54:49" autore="moderatore1">
     <commenti>
       <commento id_commento="8"/>
@@ -27,6 +27,13 @@
     <descrizione>awf</descrizione>
     <partecipanti>
       <partecipante id_partecipante="4"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="titolo" id_poster="3" risolta="false" id="21" id_progetto="7" data_ora="2024-02-02 12:00:22" autore="moderatore1">
+    <commenti/>
+    <descrizione>descrixzione</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="3"/>
     </partecipanti>
   </discussione>
 </discussioni>

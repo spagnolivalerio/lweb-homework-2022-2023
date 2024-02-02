@@ -8,6 +8,9 @@
     $std = "standard";
     $path = "index.php";
 
+    $logout = $root . "lib/logout.php?ban=true";
+    addressing($_SESSION['ban'], 0, $logout);
+
     if (!isset($_POST['id_progetto']) && (isset($_GET['id_progetto']) ) ) {
       $id_progetto = $_GET['id_progetto'];
     } elseif(!empty($_POST['id_progetto'])) {
@@ -363,7 +366,6 @@
                 echo "            </form>\n";
                 echo "          </div>\n";
                 }
-              }
 
               if($reported_project){
                 echo "  <div class=\"votato\">Contributo segnalato</div>\n";
@@ -381,13 +383,19 @@
                 echo "                <button type=\"submit\">SEGNALA</button>\n";
                 echo "            </form>\n"; 
                 echo "          </div>\n";
-
               }
+                echo "          </div>\n";
+
+            }
+
+
+
 
 ?>
-
+          
 <?php
-          echo "    <div class=\"options-title\"><h2>RECENSIONI</h2></div>";
+          echo "    <div class=\"review-box\">\n";
+          echo "    <div class=\"review-title\"><h2>RECENSIONI</h2></div>\n";
           foreach($valutazioni_progetto as $valutazione_progetto){
             $testo = $valutazione_progetto->getElementsByTagName('testo')->item(0)->nodeValue; 
             $value = $valutazione_progetto->getAttribute('value');
@@ -414,6 +422,7 @@
             echo "    </div>\n";
             echo "</div>\n";
           }
+
 
             foreach($discussioni as $discussione){
 
@@ -464,17 +473,10 @@
                   }
                   echo "\n    </div>\n";
                   echo "</div>\n";
-
-
-
-                  
                 }
-
           }
+          echo "          </div>\n";
         }
-      
-
-
 ?>
             </div>
           </div>

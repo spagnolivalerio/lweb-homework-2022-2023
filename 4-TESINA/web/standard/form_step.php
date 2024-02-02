@@ -4,8 +4,12 @@ session_start();
 require_once('../../lib/functions.php');
 
 $path = "index.php"; 
-$std = "standard";     
+$std = "standard";  
+$tps_root = "../../";   
 addressing($_SESSION['Tipo_utente'], $std, $path);
+
+$logout = $tps_root . "lib/logout.php?ban=true";
+addressing($_SESSION['ban'], 0, $logout);
 
 if(isset($_POST['num_step'])){
     $num_step = $_POST['num_step'];

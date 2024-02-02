@@ -16,12 +16,12 @@
 
 .discussion-container {
     width: 900px;
-    margin-bottom: 70px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
 }
 
 .discussion-title {
@@ -224,4 +224,5 @@
 .top-info img{
     margin-right: 5px;
     position: relative;
+    border-radius: 10px;
 }

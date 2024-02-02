@@ -24,6 +24,10 @@ if(isset($_GET['num_step'])){
 
 $step = $steps->item($num_step);
 addressing($_SESSION['Tipo_utente'], $std, $path);
+
+$logout = $tps_root . "lib/logout.php?ban=true";
+addressing($_SESSION['ban'], 0, $logout);
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"

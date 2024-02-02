@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="8" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="11" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="190" nome_file_img="img/proj/ardu.png" difficolta="difficile" clearance="1" sospeso="false">
+  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="11" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="221" nome_file_img="img/proj/ardu.png" difficolta="difficile" clearance="1" sospeso="false">
     <titolo>Arduino Blink. Fai lampeggiare un led</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -23,7 +23,7 @@
       <valutazione id_valutazione="5"/>
     </valutazioni>
   </progetto>
-  <progetto id="6" username_creator="moderatore1" id_creator="3" tempo_medio="1200" data_pubblicazione="2024-02-01 12:00:17" visualizzazioni="37" nome_file_img="img/proj/img_proj_65bb7913c5b6f.jpg" difficolta="facile" clearance="1" sospeso="false">
+  <progetto id="6" username_creator="moderatore1" id_creator="3" tempo_medio="1200" data_pubblicazione="2024-02-01 12:00:17" visualizzazioni="43" nome_file_img="img/proj/img_proj_65bb7913c5b6f.jpg" difficolta="facile" clearance="1" sospeso="false">
     <titolo>Titolo del progetto</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -43,7 +43,7 @@
       <valutazione id_valutazione="2"/>
     </valutazioni>
   </progetto>
-  <progetto id="7" username_creator="utentestd1" id_creator="4" tempo_medio="12" data_pubblicazione="2024-02-01 15:58:09" visualizzazioni="2" nome_file_img="img/proj/img_proj_65bbb0f6232ee.png" difficolta="facile" clearance="1" sospeso="false">
+  <progetto id="7" username_creator="utentestd1" id_creator="4" tempo_medio="12" data_pubblicazione="2024-02-01 15:58:09" visualizzazioni="9" nome_file_img="img/proj/img_proj_65bbb0f6232ee.png" difficolta="facile" clearance="1" sospeso="false">
     <titolo>Titolo</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -52,7 +52,9 @@
     <descrizione>aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa&lt;br /&gt;&#13;aaaaaaaaaaaaaaaaaaa. &lt;br /&gt;&#13;aaaaaaaaaaaaaa bbb aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&lt;br /&gt;&#13;a&lt;br /&gt;&#13;a&lt;br /&gt;&#13;a&lt;br /&gt;&#13;a&lt;br /&gt;&#13;a</descrizione>
     <categoriaProposta/>
     <reports_progetti/>
-    <discussioni/>
+    <discussioni>
+      <discussione id_discussione="21"/>
+    </discussioni>
     <tutorial_progetto id_tutorial="7"/>
     <valutazioni/>
   </progetto>

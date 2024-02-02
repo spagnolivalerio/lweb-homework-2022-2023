@@ -22,7 +22,22 @@
         		<div class="login">LOGIN</div>
         		<div id="error">
         		<?php 
-        			if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] === "false"){
+
+					if(isset($_SESSION['error_ban']) && $_SESSION['error_ban'] == "true"){
+						echo "Account sospeso";
+        				echo "<script>
+
+        						function scomparsa(){
+        							var error = document.getElementById('error');
+        							error.style.display = \"none\";
+        						}
+
+        						setTimeout(scomparsa, 4000);
+
+        					 </script>";
+							 unset($_SESSION['error_ban']);
+					}
+        			elseif(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] === "false"){
         				echo "Inserisci le credenziali";
         				echo "<script>
 

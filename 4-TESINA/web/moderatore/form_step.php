@@ -2,10 +2,13 @@
 
 session_start();
 require_once('../../lib/functions.php');
-
+$tps_root = "../../";
 $path = "index.php"; 
 $mod = "moderatore";     
 addressing($_SESSION['Tipo_utente'], $mod, $path);
+
+$logout = $tps_root . "lib/logout.php?ban=true";
+addressing($_SESSION['ban'], 0, $logout);
 
 if(isset($_POST['num_step'])){
     $num_step = $_POST['num_step'];

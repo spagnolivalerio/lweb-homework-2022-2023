@@ -48,6 +48,9 @@
 
     addressing($_SESSION['Tipo_utente'], $mod, $path); //redirect
 
+    $logout = $root . "lib/logout.php?ban=true";
+    addressing($_SESSION['ban'], 0, $logout);
+
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 ?>
 
@@ -312,6 +315,7 @@
                 echo "    <div class=\"options\" id=\"recensioni\">";
                 echo "    <div class=\"options-title\"><h2>DICCI LA TUA</h2></div>";
                 echo "    <div id=\"error\">\n";
+              
           
                 if(isset($_SESSION['empty_form']) && $_SESSION['empty_form'] === "true" ){
                   echo "Compila tutti i campi";
@@ -362,13 +366,11 @@
                 echo "                <button type=\"submit\">SEGNALA</button>\n";
                 echo "            </form>\n"; 
                 echo "          </div>\n";
-
               }
-
 ?>
 <?php
-        
-          echo "    <div class=\"options-title\"><h2>RECENSIONI</h2></div>";
+          echo "    <div class=\"review-box\">\n";
+          echo "    <div class=\"review-title\"><h2>RECENSIONI</h2></div>";
           
           foreach($valutazioni_progetto as $valutazione_progetto){
             $testo = $valutazione_progetto->getElementsByTagName('testo')->item(0)->nodeValue; 
@@ -397,8 +399,6 @@
             echo "</div>\n";
           }
 
-
-         
             foreach($discussioni as $discussione){
 
               $id_discussione = $discussione->getAttribute('id');
@@ -448,13 +448,9 @@
                   }
                   echo "\n    </div>\n";
                   echo "</div>\n";
-
-
-
-                  
                 }
-
           }
+          echo "          </div>\n";
         }
       
 

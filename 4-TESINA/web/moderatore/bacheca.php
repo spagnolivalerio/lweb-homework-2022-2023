@@ -8,8 +8,10 @@
 
     $path = "index.php"; 
     $mod = "moderatore";     
-
     addressing($_SESSION['Tipo_utente'], $mod, $path);
+
+    $logout = $root . "lib/logout.php?ban=true";
+    addressing($_SESSION['ban'], 0, $logout);
 
     if (isset($_GET['id_progetto'])) {
       $id_progetto = $_GET['id_progetto'];
