@@ -38,10 +38,11 @@
     <tutorial_progetto id_tutorial="7"/>
     <valutazioni/>
   </progetto>
-  <progetto id="8" username_creator="utentestd1" id_creator="4" tempo_medio="17" data_pubblicazione="2024-02-02 10:32:28" visualizzazioni="0" nome_file_img="img/proj/img_proj_65bcb6441c276.png" difficolta="facile" clearance="1" sospeso="true">
+  <progetto id="8" username_creator="utentestd1" id_creator="4" tempo_medio="17" data_pubblicazione="2024-02-02 10:32:28" visualizzazioni="0" nome_file_img="img/proj/img_proj_65bcb6441c276.png" difficolta="facile" clearance="1" sospeso="false">
     <titolo>TITOLO NUVO VUOVSDFD</titolo>
     <categorie>
       <categoria id_categoria="2"/>
+      <categoria id_categoria="7"/>
     </categorie>
     <descrizione>Ua che beò proecta sda sdasdfa&lt;br /&gt;&#13;ADSFSADFSD</descrizione>
     <categoriaProposta>Supermacchine</categoriaProposta>

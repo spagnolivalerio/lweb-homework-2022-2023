@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="59" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
+<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="60" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
   <bozza sospeso="false" id="15" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-01-31 17:35:09" difficolta="facile" clearance="" nome_file_img="">
     <categorie/>
     <categoriaProposta/>
@@ -126,5 +126,11 @@
         <descrizione>ooo</descrizione>
       </step>
     </tutorial_bozza>
+  </bozza>
+  <bozza sospeso="false" id="60" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-03 00:42:56" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
   </bozza>
 </bozze>
