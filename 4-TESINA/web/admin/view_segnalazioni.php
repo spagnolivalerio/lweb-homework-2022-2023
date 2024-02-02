@@ -64,6 +64,8 @@
             echo "            <tr>\n";
             echo "              <th>UTENTE SEGANALATO</th>\n";
             echo "              <th>CONTRIBUTO</th>\n";
+            echo "              <th>TESTO DELLA SEGNALAZIONE</th>\n";
+            echo "              <th>TIPOLOGIA</th>\n";
             echo "              <th>SEGNALATO IN DATA</th>\n";
             echo "              <th>GESTISCI</th>\n";
             echo "            </tr>\n";
@@ -72,6 +74,8 @@
 
             foreach($segnalazioni_progetti as $segnalazione_progetto){
 
+                $testo = $segnalazione_progetto->getElementsByTagName('testo')->item(0)->nodeValue;
+                $tipo  = $segnalazione_progetto->getElementsByTagName('tipo')->item(0)->nodeValue;
                 $id_segnalazionep = $segnalazione_progetto->getAttribute('id');
                 $id_progetto = $segnalazione_progetto->getAttribute('id_progetto');
                 $data = $segnalazione_progetto->getAttribute('data_ora');
@@ -82,18 +86,20 @@
 
                 echo "            <tr>\n";
                 echo "              <td>". $reported_user ."</td>\n";
-                echo "              <td>". $data ."</td>\n";
                 echo "              <td>Progetto</td>\n";
-                echo "              <td>\n";
-                echo "                <form action=\"view.php\" method=\"get\">\n";
+                echo "              <td>". $testo ."</td>\n";
+                echo "              <td>". $tipo ."</td>\n";
+                echo "              <td>". $data ."</td>\n";
+                echo "              <td class=\"tools\">\n";
+                echo "                <form class=\"search\" action=\"view.php\" method=\"get\">\n";
                 echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\">\n";
                 echo "                  <button type=\"submit\">&#128269;</button>\n";
                 echo "                </form>\n";
-                echo "                <form action=\"../../lib/rimuovere_progetto.php\" method=\"post\">\n";
+                echo "                <form class=\"r-contenuto\" action=\"../../lib/rimuovere_progetto.php\" method=\"post\">\n";
                 echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\">\n";
                 echo "                  <button type=\"submit\">Rimuovi Contenuto</button>\n";
                 echo "                </form>\n";
-                echo "                <form action=\"../../lib/rimuovere_report_progetto.php\" method=\"post\">\n";
+                echo "                <form class=\"r-report\" action=\"../../lib/rimuovere_report_progetto.php\" method=\"post\">\n";
                 echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\">\n";
                 echo "                  <input type=\"hidden\" name=\"id_report\" value=\"" . $id_segnalazionep . "\">\n";
                 echo "                  <button type=\"submit\">Elimina il report</button>\n";
@@ -106,6 +112,8 @@
 
             foreach($segnalazioni_commenti as $segnalazione_commento){
 
+                $testo = $segnalazione_commento->getElementsByTagName('testo')->item(0)->nodeValue;
+                $tipo  = $segnalazione_commento->getElementsByTagName('tipo')->item(0)->nodeValue;
                 $id_segnalazionec = $segnalazione_commento->getAttribute('id');
                 $id_commento = $segnalazione_commento->getAttribute('id_commento');
                 $data = $segnalazione_commento->getAttribute('data_ora');
@@ -123,19 +131,21 @@
                   echo "            <tr>\n";
                   echo "              <td>". $reported_user ."</td>\n";
                   echo "              <td>Commento</td>\n";
+                  echo "              <td>". $testo ."</td>\n";
+                  echo "              <td>". $tipo ."</td>\n";
                   echo "              <td>". $data ."</td>\n";
-                  echo "              <td>\n";
-                  echo "                <form action=\"view.php\" method=\"get\">\n";
+                  echo "              <td class=\"tools\">\n";
+                  echo "                <form class=\"search\" action=\"view.php\" method=\"get\">\n";
                   echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\">\n";
                   echo "                  <button type=\"submit\">&#128269;</button>\n";
                   echo "                </form>\n";
-                  echo "                <form action=\"../../lib/rimuovere_commento.php\" method=\"post\">\n";
+                  echo "                <form class=\"r-contenuto\" action=\"../../lib/rimuovere_commento.php\" method=\"post\">\n";
                   echo "                  <input type=\"hidden\" name=\"id_commento\" value=\"" . $id_commento . "\">\n";
                   echo "                  <input type=\"hidden\" name=\"id_discussione\" value=\"" . $id_discussione . "\">\n";
                   echo "                  <input type=\"hidden\" name=\"id_progetto\"  value=\" . $id_progetto . \">\n";
                   echo "                  <button type=\"submit\">Rimuovi Contenuto</button>\n";
                   echo "                </form>\n";
-                  echo "                <form action=\"../../lib/rimuovere_report_commento.php\" method=\"post\">\n";
+                  echo "                <form class=\"r-report\" action=\"../../lib/rimuovere_report_commento.php\" method=\"post\">\n";
                   echo "                  <input type=\"hidden\" name=\"id_commento\" value=\"" . $id_commento . "\">\n";
                   echo "                  <input type=\"hidden\" name=\"id_report\" value=\"" . $id_segnalazionec . "\">\n";
                   echo "                  <button type=\"submit\">Elimina il report</button>\n";

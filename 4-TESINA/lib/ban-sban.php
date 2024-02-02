@@ -31,7 +31,8 @@ if($ban == 'sospendi'){
 
 
     if ($conn->query($sql)) {
-        header('Location:../web/moderatore/listautenti.php');
+        $url = "../web/" . $_SESSION['Tipo_utente'] . "/listautenti.php?";
+        header("Location: $url");
     } 
 
     else {
@@ -48,7 +49,8 @@ if($ban == 'riabilita'){
 
 
     if ($conn->query($sql)) {
-        header('Location: ../web/moderatore/listautenti.php');
+        $url = "../web/" . $_SESSION['Tipo_utente'] . "/listautenti.php?";
+        header("Location: $url");
     } 
 
     else {

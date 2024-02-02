@@ -1,0 +1,70 @@
+.review-container {
+    background-color: #f8f8f8;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.review-username {
+    font-weight: bold;
+    color: #4A90E2;
+}
+
+.review-date {
+    color: #999;
+    font-size: 0.9em;
+}
+
+.review-rating {
+    font-size: 24px;
+    color: #FFD700; /* Colore giallo delle stelle */
+    margin-bottom: 15px;
+}
+
+.review-rating p {
+    color: black;
+    font-size: 16px;
+}
+
+.review-text {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.comment-review-container {
+    background-color: #f8f8f8;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-text{
+    display: flex; 
+    align-items: center; 
+}
+
+.comment-text-label{
+    font-weight: bold;
+    margin-right: 5px;
+    color:black;
+    word-wrap: break-word;
+}
+
+.utilita-label, .accordo-label, .accordo-value{
+    margin-right: 5px;
+    color:black;
+    font-size: 15px;
+    
+}

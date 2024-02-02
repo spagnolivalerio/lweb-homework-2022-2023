@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valutazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/valutazioni_progetti.xsd"/>
+<valutazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="5" xsi:noNamespaceSchemaLocation="../../structures/valutazioni_progetti.xsd">
+  <valutazione_progetto id="2" id_progetto="6" value="5" id_votante="4" data_ora="2024-02-02 08:35:06">
+    <testo>progetto strutturato in maniera impeccabile.L'ho replicato e ne sono veramnete soddisfatto. Grazie mille, continua cosi!</testo>
+  </valutazione_progetto>
+  <valutazione_progetto id="3" id_progetto="1" value="5" id_votante="3" data_ora="2024-02-02 09:22:47">
+    <testo>bello bello AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#13;&#13;&#13;&#13;AAAAAAAAAAAAAAAA</testo>
+  </valutazione_progetto>
+  <valutazione_progetto id="4" id_progetto="1" value="4" id_votante="1" data_ora="2024-02-02 09:40:38">
+    <testo>asdffffffffffffffffffffffff asffffffffffffffffffffffffff afssdfasfasfasf</testo>
+  </valutazione_progetto>
+  <valutazione_progetto id="5" id_progetto="1" value="5" id_votante="2" data_ora="2024-02-02 10:18:49">
+    <testo>stupednwdfksfd  FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF&#13;
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</testo>
+  </valutazione_progetto>
+</valutazioni>

@@ -3,9 +3,17 @@
   <storico id_utente="1">
     <progetti/>
     <richieste/>
-    <commenti/>
-    <valutazioni_progetti/>
-    <reports_progetti/>
+    <commenti>
+      <commento id_commento="10" data_ora="2024-02-02 10:17:46" id_discussione="18">
+        <testo>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</testo>
+      </commento>
+    </commenti>
+    <valutazioni_progetti>
+      <valutazione_progetto id_valutazione="4" id_progetto="1" data_ora="2024-02-02 09:40:38" value="4"/>
+    </valutazioni_progetti>
+    <reports_progetti>
+      <report_progetto id_report="4" tipo="spam" data_ora="2024-02-02 09:41:23" id_progetto="1" publisher="user" titolo="Arduino Blink. Fai lampeggiare un led"/>
+    </reports_progetti>
     <reports_commenti/>
     <discussioni/>
     <valutazioni_commenti/>
@@ -14,7 +22,9 @@
     <progetti/>
     <richieste/>
     <commenti/>
-    <valutazioni_progetti/>
+    <valutazioni_progetti>
+      <valutazione_progetto id_valutazione="5" id_progetto="1" data_ora="2024-02-02 10:18:49" value="5"/>
+    </valutazioni_progetti>
     <reports_progetti/>
     <reports_commenti/>
     <discussioni/>
@@ -35,11 +45,15 @@
         <testo>wtf, why are you chatting there, this is a important website</testo>
       </commento>
     </commenti>
-    <valutazioni_progetti/>
+    <valutazioni_progetti>
+      <valutazione_progetto id_valutazione="3" id_progetto="1" data_ora="2024-02-02 09:22:47" value="5"/>
+    </valutazioni_progetti>
     <reports_progetti>
       <report_progetto id_report="2" tipo="spam" data_ora="2024-02-01 17:01:35" id_progetto="1" publisher="user" titolo="Arduino Blink. Fai lampeggiare un led"/>
     </reports_progetti>
-    <reports_commenti/>
+    <reports_commenti>
+      <report_commento id_report="12" tipo="spam" data_ora="2024-02-02 09:45:51" id_commento="8" commentatore="utentestd1"/>
+    </reports_commenti>
     <discussioni>
       <discussione id_discussione="18" data_ora="2024-02-01 09:54:49" titolo="titolo"/>
     </discussioni>
@@ -48,6 +62,14 @@
         <utilita>3</utilita>
         <livello_di_accordo>5</livello_di_accordo>
       </valutazione_commento>
+      <valutazione_commento id_valutazione="3" data_ora="2024-02-02 09:27:18" id_commento="9" id_progetto="1">
+        <utilita>1</utilita>
+        <livello_di_accordo>3</livello_di_accordo>
+      </valutazione_commento>
+      <valutazione_commento id_valutazione="4" data_ora="2024-02-02 09:27:28" id_commento="8" id_progetto="1">
+        <utilita>1</utilita>
+        <livello_di_accordo>2</livello_di_accordo>
+      </valutazione_commento>
     </valutazioni_commenti>
   </storico>
   <storico id_utente="4">
@@ -55,6 +77,7 @@
       <progetto titolo="el titulo mas grande de o mundo" data_ora="2024-01-31 11:20:02" id_progetto="2"/>
       <progetto titolo="sf" data_ora="2024-01-31 12:31:26" id_progetto="5"/>
       <progetto titolo="Titolo" data_ora="2024-02-01 15:58:09" id_progetto="7"/>
+      <progetto titolo="TITOLO NUVO VUOVSDFD" data_ora="2024-02-02 10:32:28" id_progetto="8"/>
     </progetti>
     <richieste>
       <richiesta id_richiesta="5" data_ora="2024-02-01 16:54:30" id_discussione="18" testo=""/>
@@ -73,13 +96,30 @@
         <testo>sdasdasdadasd</testo>
       </commento>
     </commenti>
-    <valutazioni_progetti/>
-    <reports_progetti/>
+    <valutazioni_progetti>
+      <valutazione_progetto id_valutazione="2" id_progetto="6" data_ora="2024-02-02 08:35:06" value="5"/>
+    </valutazioni_progetti>
+    <reports_progetti>
+      <report_progetto id_report="3" tipo="Contenuti inesatti" data_ora="2024-02-02 08:39:19" id_progetto="6" publisher="moderatore1" titolo="Titolo del progetto"/>
+    </reports_progetti>
     <reports_commenti/>
     <discussioni>
       <discussione id_discussione="19" data_ora="2024-02-01 17:03:07" titolo="apriamo una discussione"/>
       <discussione id_discussione="20" data_ora="2024-02-01 17:05:55" titolo="titolo"/>
     </discussioni>
+    <valutazioni_commenti/>
+  </storico>
+  <storico id_utente="10">
+    <progetti/>
+    <richieste>
+      <richiesta id_richiesta="6" data_ora="2024-02-02 10:23:30" id_discussione="18" testo=""/>
+      <richiesta id_richiesta="7" data_ora="2024-02-02 10:23:51" id_discussione="20" testo=""/>
+    </richieste>
+    <commenti/>
+    <valutazioni_progetti/>
+    <reports_progetti/>
+    <reports_commenti/>
+    <discussioni/>
     <valutazioni_commenti/>
   </storico>
 </storici>

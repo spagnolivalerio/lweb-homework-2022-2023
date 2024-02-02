@@ -36,7 +36,6 @@ $step = $steps->item($num_step);
       <title>THE PROJECT SOCIETY</title>
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
 
   </head>

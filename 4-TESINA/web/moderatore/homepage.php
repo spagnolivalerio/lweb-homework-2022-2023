@@ -104,6 +104,7 @@
                 $row = $result->fetch_assoc();
                 $ban_value = $row['ban'];
                 $rating = valutazioneProgetto($root, $id_progetto, $conn);
+                $rating = round($rating, 1);
 
                 if($sospeso === 'false'){
 

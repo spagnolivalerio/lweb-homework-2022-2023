@@ -358,7 +358,7 @@
                     $data = $report_progetto->getAttribute('data_ora');
                     $id_progetto = $report_progetto->getAttribute('id_progetto');
                     $tipo = $report_progetto->getAttribute('tipo');
-                    $publisher = $report_progetto->getAttribute('username_creator');
+                    $publisher = $report_progetto->getAttribute('publisher');
                     $progetto = getProgetto($root, $id_progetto);
 
                     

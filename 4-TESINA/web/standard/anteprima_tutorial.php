@@ -36,7 +36,6 @@ addressing($_SESSION['Tipo_utente'], $std, $path);
       <title>THE PROJECT SOCIETY</title>
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
 
   </head>

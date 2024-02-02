@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="9" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
+<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="10" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
   <commento id="5" id_discussione="19" id_commentatore="4" data_ora="2024-02-01 17:03:38" commentatore="utentestd1">
     <testo>commento number one, trust him</testo>
     <voti/>
@@ -17,11 +17,23 @@
   <commento id="8" id_discussione="18" id_commentatore="4" data_ora="2024-02-01 17:53:51" commentatore="utentestd1">
     <testo>PROGETTO FATTO MOLTO MALEEEEEEEEE</testo>
     <voti/>
-    <reports_commento/>
-    <valutazioni_commento/>
+    <reports_commento>
+      <report_commento id_report="12"/>
+    </reports_commento>
+    <valutazioni_commento>
+      <valutazione_commento id_valutazione_commento="4"/>
+    </valutazioni_commento>
   </commento>
   <commento id="9" id_discussione="18" id_commentatore="4" data_ora="2024-02-01 17:54:12" commentatore="utentestd1">
     <testo>sdasdasdadasd</testo>
+    <voti/>
+    <reports_commento/>
+    <valutazioni_commento>
+      <valutazione_commento id_valutazione_commento="3"/>
+    </valutazioni_commento>
+  </commento>
+  <commento id="10" id_discussione="18" id_commentatore="1" data_ora="2024-02-02 10:17:46" commentatore="adm1">
+    <testo>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</testo>
     <voti/>
     <reports_commento/>
     <valutazioni_commento/>

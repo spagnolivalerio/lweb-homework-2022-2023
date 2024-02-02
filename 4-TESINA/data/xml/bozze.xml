@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="26" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
+<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="29" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
   <bozza sospeso="false" id="6" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-01-31 16:51:31" difficolta="facile" clearance="" nome_file_img="">
     <categorie/>
     <categoriaProposta/>
@@ -124,6 +124,18 @@
     <tutorial_bozza/>
   </bozza>
   <bozza sospeso="false" id="25" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-02-01 14:35:14" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="27" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-02 10:00:07" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="28" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-02-02 10:00:41" difficolta="facile" clearance="" nome_file_img="">
     <categorie/>
     <categoriaProposta/>
     <descrizione/>

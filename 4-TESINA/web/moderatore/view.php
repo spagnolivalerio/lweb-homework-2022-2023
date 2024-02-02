@@ -65,6 +65,7 @@
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/valutazione_progetto.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/recensioni_progetto.css" />
 
   </head>
 
@@ -319,7 +320,7 @@
 
                 echo " </div>";
                 if($voted){
-                //stampa di controllo
+                  echo "  <div class=\"votato\">Contributo già valutato</div>\n";
                 }else{
                 echo "          <div class=\"p-rating-content\">\n";
                 echo "            <div class=\"label-form\">Valuta progetto</div>\n";
@@ -346,7 +347,7 @@
               }
 
               if($reported_project){
-                //stampa di controllo
+                echo "  <div class=\"votato\">Contributo segnalato</div>\n";
               }elseif($id_creator !== $id_utente){
                 echo "          <div class=\"form-seganalazione-content\">\n";
                 echo "            <div class=\"label-form\">Segnala</div>\n";
@@ -365,7 +366,100 @@
               }
 
 ?>
+<?php
+        
+          echo "    <div class=\"options-title\"><h2>RECENSIONI</h2></div>";
+          
+          foreach($valutazioni_progetto as $valutazione_progetto){
+            $testo = $valutazione_progetto->getElementsByTagName('testo')->item(0)->nodeValue; 
+            $value = $valutazione_progetto->getAttribute('value');
+            $id_votante = $valutazione_progetto->getAttribute('id_votante');
+            $data_ora = $valutazione_progetto->getAttribute('data_ora');
 
+            $query = "SELECT * FROM utente WHERE id = '$id_votante'"; 
+            $res = mysqli_query($conn, $query);
+            $row = mysqli_fetch_array($res); 
+            $username = $row['username'];
+
+            echo "<div class=\"review-container\">\n";
+            echo "    <div class=\"review-header\">\n";
+            echo "        <span class=\"review-username\">@" . $username . "</span>\n";
+            echo "        <span class=\"review-date\">" . $data_ora . "</span>\n";
+            echo "    </div>\n";
+            echo "    <div class=\"review-rating\">\n";
+            for ($i = 0; $i < 5; $i++) {
+                echo "        " . ($i < $value ? "&#9733;" : "&#9734;"); // Stampa stelle piene o vuote
+            }
+            echo "\n    </div>\n";
+            echo "    <div class=\"review-text\">\n";
+            echo "        " . $testo . "\n";
+            echo "    </div>\n";
+            echo "</div>\n";
+          }
+
+
+         
+            foreach($discussioni as $discussione){
+
+              $id_discussione = $discussione->getAttribute('id');
+              $commenti = getCommenti($root, $id_discussione);
+
+              foreach($commenti as $commento){
+                $testo = $commento->getElementsByTagName('testo')->item(0)->nodeValue; 
+                $id_commento = $commento->getAttribute('id'); 
+                $valutazioni_commento = getValutazioniCommenti($root, $id_commento);
+
+                foreach($valutazioni_commento as $valutazione_commento){
+                  $utilità = $valutazione_commento->getElementsByTagName('utilita')->item(0)->nodeValue;
+                  $accordo = $valutazione_commento->getElementsByTagName('livello_di_accordo')->item(0)->nodeValue;
+                  $data_ora = $valutazione_commento->getAttribute('data_ora');
+                  $id_votante = $valutazione_commento->getAttribute('id_votante');
+
+                  $query = "SELECT * FROM utente WHERE id = '$id_votante'"; 
+                  $res = mysqli_query($conn, $query);
+                  $row = mysqli_fetch_array($res); 
+                  $username = $row['username'];
+
+                  echo "<div class=\"comment-review-container\">\n";
+                  echo "    <div class=\"review-header\">\n";
+                  echo "        <span class=\"review-username\">@" . $username . "</span>\n";
+                  echo "        <span class=\"review-date\">" . $data_ora . "</span>\n";
+                  echo "    </div>\n";
+                  echo "    <div class=\"comment-text\">\n";
+                  echo "        <span class=\"comment-text-label\">Testo del commento recensito:</span> <span class=\"comment-text-content\">" . $testo . "</span>\n";
+                  echo "    </div>\n";
+                  echo "    <div class=\"review-rating\">\n";
+                  echo "        <span class=\"utilita-label\">Valutazione dell'utilità:</span> <span class=\"rating-stars\">";
+                  for ($i = 0; $i < 5; $i++) {
+                      echo "<span class=\"star\">" . ($i < $utilità ? "&#9733;" : "&#9734;") . "</span>"; // Stampa stelle piene o vuote per l'utilità
+                  }
+                  echo "</span>\n";
+                  echo "        <br><span class=\"accordo-label\">Livello di accordo:</span> ";
+                  switch ($accordo) {
+                      case 1:
+                          echo "<span class=\"accordo-value\">Per nulla d'accordo</span>";
+                          break;
+                      case 2:
+                          echo "<span class=\"accordo-value\">Indifferente</span>";
+                          break;
+                      case 3:
+                          echo "<span class=\"accordo-value\">Completamente d'accordo</span>";
+                          break;
+                  }
+                  echo "\n    </div>\n";
+                  echo "</div>\n";
+
+
+
+                  
+                }
+
+          }
+        }
+      
+
+
+?>
 
 
 

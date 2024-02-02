@@ -60,7 +60,7 @@
 
         <?php
             $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
-            $query = "SELECT * FROM utente";
+            $query = "SELECT * FROM utente WHERE tipo != 'admin'";
             $result = $conn->query($query);
 
             while ($row = mysqli_fetch_assoc($result)){
@@ -96,7 +96,7 @@
                   echo "          <form class=\"form-ban\" action=\"../../lib/ban-sban.php\" method=\"post\">\n";
                   echo "                   <input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input>\n";
                   echo "                   <input type=\"hidden\" name=\"ban\" value=\"sospendi\"></input>\n";
-                  echo "                   <button type=\"submit\">Sospendi</button>\n";
+                  echo "                   <button class=\"sospendi\" type=\"submit\">Sospendi</button>\n";
                   echo "          </form>\n";
                 }
 
@@ -105,14 +105,14 @@
                   echo "                   <input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input>\n";
                   echo "                   <input type=\"hidden\" name=\"Tipo_utente\" value=" . $row['tipo'] . "></input>\n";
                   echo "                   <input type=\"hidden\" name=\"upgrade\" value=\"upgrade\"></input>\n";
-                  echo "                   <button type=\"submit\">&#9650;</button>\n";
+                  echo "                   <button class=\"up\" type=\"submit\">&#9650;</button>\n";
                   echo "          </form>\n";
                 }elseif($row['tipo'] == 'moderatore'){
                   echo "          <form class=\"form-ban\" action=\"../../lib/upgrade-downgrade.php\" method=\"post\">\n";
                   echo "                   <input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input>\n";
                   echo "                   <input type=\"hidden\" name=\"Tipo_utente\" value=" . $row['tipo'] . "></input>\n";
                   echo "                   <input type=\"hidden\" name=\"downgrade\" value=\"downgrade\"></input>\n";
-                  echo "                   <button type=\"submit\">&#9660;</button>\n";
+                  echo "                   <button class=\"down\" type=\"submit\">&#9660;</button>\n";
                   echo "          </form>\n";
                 }
 
@@ -122,7 +122,7 @@
                 echo "          <form class=\"form-ban\" action=\"../../lib/ban-sban.php\" method=\"post\">\n";
                 echo "                   <input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input>\n";
                 echo "                  <input type=\"hidden\" name=\"ban\" value=\"riabilita\"></input>\n";
-                echo "                   <button type=\"submit\">Riabilita</button>\n";
+                echo "                   <button class=\"riabilita\" type=\"submit\">Riabilita</button>\n";
                 echo "          </form>\n";
                 echo "          </td>\n";
             }

@@ -46,7 +46,6 @@
           <a class="elem" href="homepage.php">Homepage</a>
           <a class="elem" href="bacheca.php">Bacheca</a>
           <a class="elem" href="moderator_dashboard.php">Dashboard</a>
-          <a class="elem" href="view_bozze.php">Bozze</a>
           <a class="elem" href="view_storico.php">Storico</a>
           <div class="divisore"></div>
           <a class="elem" href="../../lib/logout.php">Logout</a>
@@ -104,6 +103,7 @@
                 $row = $result->fetch_assoc();
                 $ban_value = $row['ban'];
                 $rating = valutazioneProgetto($root, $id_progetto, $conn);
+                $rating = round($rating, 1);
 
                 if($sospeso === 'false'){
 

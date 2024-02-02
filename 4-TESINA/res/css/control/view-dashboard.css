@@ -24,3 +24,64 @@
   tr:hover {
     background-color: #f5f5f5;
   }
+
+
+
+  .tools{
+    display: flex;
+  }
+
+button {
+  color: white; 
+  border: none; 
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+.green{
+  color: lightgreen;
+  background-color: white;
+  font-size: 20px;
+  margin-right: 4px;
+}
+
+.red{
+  color: red;
+  background-color: white;
+  font-size: 20px;
+}
+
+.search button {
+  font-size: 16px;
+  padding: 5px; 
+  background-color: #fff; 
+  color: #333; 
+  border: 1px solid #ccc;
+  margin-top:3px;
+  margin-right: 4px;
+}
+
+.search button:hover {
+  background-color: #f8f8f8; 
+}
+
+
+.r-contenuto button, .r-report button {
+  background-color: #E53E3E; 
+  margin-right: 4px;
+
+}
+
+.r-contenuto button:hover, .r-report button:hover {
+  background-color: #C53030; 
+}
+
+.interagisci{
+  display: flex;
+  justify-content: center;
+  
+}

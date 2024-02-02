@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<reports_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="11" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd"/>
+<reports_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="12" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <report_commento id="12" id_commento="8" id_utente="3" data_ora="2024-02-02 09:45:51">
+    <tipo>spam</tipo>
+    <testo>dfsdfsdf</testo>
+  </report_commento>
+</reports_commenti>

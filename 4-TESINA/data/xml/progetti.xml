@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="7" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="11" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="152" nome_file_img="img/proj/ardu.png" difficolta="difficile" clearance="1" sospeso="false">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="8" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="11" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="190" nome_file_img="img/proj/ardu.png" difficolta="difficile" clearance="1" sospeso="false">
     <titolo>Arduino Blink. Fai lampeggiare un led</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -9,6 +9,7 @@
     <reports_progetti>
       <report_progetto id_report="1"/>
       <report_progetto id_report="2"/>
+      <report_progetto id_report="4"/>
     </reports_progetti>
     <discussioni>
       <discussione id_discussione="16"/>
@@ -17,9 +18,12 @@
     <tutorial_progetto id_tutorial="1"/>
     <valutazioni>
       <valutazione id_valutazione="1"/>
+      <valutazione id_valutazione="3"/>
+      <valutazione id_valutazione="4"/>
+      <valutazione id_valutazione="5"/>
     </valutazioni>
   </progetto>
-  <progetto id="6" username_creator="moderatore1" id_creator="3" tempo_medio="1200" data_pubblicazione="2024-02-01 12:00:17" visualizzazioni="33" nome_file_img="img/proj/img_proj_65bb7913c5b6f.jpg" difficolta="facile" clearance="1" sospeso="false">
+  <progetto id="6" username_creator="moderatore1" id_creator="3" tempo_medio="1200" data_pubblicazione="2024-02-01 12:00:17" visualizzazioni="37" nome_file_img="img/proj/img_proj_65bb7913c5b6f.jpg" difficolta="facile" clearance="1" sospeso="false">
     <titolo>Titolo del progetto</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -27,15 +31,19 @@
     </categorie>
     <descrizione>paragrafo1: ppppppp&lt;br /&gt;&#13;paragrafo2: cccccccc</descrizione>
     <categoriaProposta/>
-    <reports_progetti/>
+    <reports_progetti>
+      <report_progetto id_report="3"/>
+    </reports_progetti>
     <discussioni>
       <discussione id_discussione="19"/>
       <discussione id_discussione="20"/>
     </discussioni>
     <tutorial_progetto id_tutorial="6"/>
-    <valutazioni/>
+    <valutazioni>
+      <valutazione id_valutazione="2"/>
+    </valutazioni>
   </progetto>
-  <progetto id="7" username_creator="utentestd1" id_creator="4" tempo_medio="12" data_pubblicazione="2024-02-01 15:58:09" visualizzazioni="1" nome_file_img="img/proj/img_proj_65bbb0f6232ee.png" difficolta="facile" clearance="1" sospeso="false">
+  <progetto id="7" username_creator="utentestd1" id_creator="4" tempo_medio="12" data_pubblicazione="2024-02-01 15:58:09" visualizzazioni="2" nome_file_img="img/proj/img_proj_65bbb0f6232ee.png" difficolta="facile" clearance="1" sospeso="false">
     <titolo>Titolo</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -46,6 +54,18 @@
     <reports_progetti/>
     <discussioni/>
     <tutorial_progetto id_tutorial="7"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="8" username_creator="utentestd1" id_creator="4" tempo_medio="17" data_pubblicazione="2024-02-02 10:32:28" visualizzazioni="0" nome_file_img="img/proj/img_proj_65bcb6441c276.png" difficolta="facile" clearance="1" sospeso="true">
+    <titolo>TITOLO NUVO VUOVSDFD</titolo>
+    <categorie>
+      <categoria id_categoria="2"/>
+    </categorie>
+    <descrizione>Ua che beò proecta sda sdasdfa&lt;br /&gt;&#13;ADSFSADFSD</descrizione>
+    <categoriaProposta>Supermacchine</categoriaProposta>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="8"/>
     <valutazioni/>
   </progetto>
 </progetti>
