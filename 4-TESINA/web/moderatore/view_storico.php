@@ -30,7 +30,6 @@
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/control/storico.css" />
 
   </head>
@@ -70,7 +69,7 @@
                 while ($row = mysqli_fetch_assoc($result)){
                     
                 echo "          <div class=\"user-info\" onclick=\"redirectToUserPage('view_storico.php?id_utente=" . $row['id'] . "')\">\n";
-                echo "              <div class=\"details\">\n";
+                echo "              <div class=\"details-storico\">\n";
                 echo "                  <img src=\"../../img/avatar/" . $row['avatar'] . "\" alt=\"\">\n";
                 echo "                  <p class=\"card-titolo\">" . $row['username'] . "</p>\n";
                 echo "              </div>\n";

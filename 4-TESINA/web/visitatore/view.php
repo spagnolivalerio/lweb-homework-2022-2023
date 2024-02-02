@@ -4,6 +4,7 @@
     require_once($root . 'conn.php');
     require_once($root . "lib/get_nodes.php");
     require_once($root . "lib/functions.php");
+    $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 
 
     if (!isset($_POST['id_progetto']) && (isset($_GET['id_progetto']) ) ) {
@@ -34,6 +35,7 @@
     $titolo_step = $step->getAttribute('titolo_step');
 
     $progetto = getProgetto($root, $id_progetto);
+    $descrizione_progetto = $progetto->getElementsByTagName('descrizione')->item(0)->nodeValue;
     $id_creator = $progetto->getAttribute('id_creator');
 
 
@@ -74,7 +76,6 @@
           </div>
           </div>
           <div class="dashboard">
-          <div class="bar"></div>
             <div class="toolbar">
               <div class="login"><a href="../login.php">Accedi</a></div>
             </div>
@@ -108,12 +109,15 @@
               echo "        </form>\n";
 
               echo "    </div>\n";
-              echo "    <div class=\"options\">";
-              echo "    <div class=\"options-title\"><h2>DICCI LA TUA</h2></div>";
-              
-              echo "  <div class=\"votato\">Accedi per interagire</div>\n";
+
               
               ?>
+
+            <div class="descrizione_progetto">
+                <h2>DESCRIZIONE</h2>
+                <p><?php echo "$descrizione_progetto";?></p>
+              </div>
+            </div> <!--chiusura div class="step"-->
   
             <!-- STAMPA DISCUSSIONI -->
       
@@ -132,6 +136,12 @@
                 $risolta = $discussione->getAttribute('risolta');
                 $commenti = getCommenti($root, $id_discussione);
 
+                $query = "SELECT * FROM utente WHERE id = '$id_autore'"; 
+                $res = mysqli_query($conn, $query);
+                $row = mysqli_fetch_array($res); 
+                $avatar = $row['avatar']; 
+
+
 
 
 
@@ -140,10 +150,13 @@
                 echo "        <h1 class=\"discussion-title\">$titolo</h1>\n";
 
                 
-                echo "        <p class=\"discussion-info\">\n";
-                echo "            <span>$autore</span>\n";
+                echo "        <div class=\"discussion-info\">\n";
+                echo "            <div class=\"top-info\">\n";
+                echo "              <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
+                echo "              <span>$autore</span>\n";
+                echo "            </div>\n";
                 echo "            <span class=\"datetime\">$data_ora</span>\n";
-                echo "        </p>\n";
+                echo "        </div>\n";
                 echo "        <p class=\"discussion-text\">$descrizione</p>\n";
                 echo "    </div>\n";
                 echo "    <div class=\"comment-container\">\n";
@@ -163,10 +176,17 @@
                   $id_commento = $commento->getAttribute('id'); 
                   $id_commentatore = $commento->getAttribute('id_commentatore'); 
                  
+                  $query = "SELECT * FROM utente WHERE id = '$id_commentatore'"; 
+                  $res = mysqli_query($conn, $query);
+                  $row = mysqli_fetch_array($res); 
+                  $avatar = $row['avatar']; 
 
                 echo "        <div class=\"comment\" id=\"" . $id_commento . "\">\n";
                 echo "            <div class=\"comment-info\">\n";
+                echo "              <div class=\"top-info\">\n";
+                echo "                <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
                 echo "                <span class=\"comment-author\">$commentatore</span>\n";
+                echo "              </div>\n";
 
                 echo "                <span class=\"comment-datetime\">$data_ora</span>\n";
                 echo "            </div>\n";

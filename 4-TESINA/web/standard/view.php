@@ -158,6 +158,12 @@
                 $richieste_accesso = getRichiesteAccesso($root, $id_discussione);
                 $sended = already_sended($richieste_accesso, $id_utente);
 
+                $query = "SELECT * FROM utente WHERE id = '$id_autore'"; 
+                $res = mysqli_query($conn, $query);
+                $row = mysqli_fetch_array($res); 
+                $avatar = $row['avatar']; 
+
+
 
                 echo "<div class=\"discussion-container\">\n";
                 echo "    <div class=\"discussion-header\" id=\"" . $id_discussione . "\">\n";
@@ -174,17 +180,20 @@
                   }
                 }
 
-                echo "        <p class=\"discussion-info\">\n";
-                echo "            <span>$autore</span>\n";
+                echo "        <div class=\"discussion-info\">\n";
+                echo "            <div class=\"top-info\">\n";
+                echo "              <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
+                echo "              <span>$autore</span>\n";
+                echo "            </div>\n";
                 echo "            <span class=\"datetime\">$data_ora</span>\n";
-                echo "        </p>\n";
+                echo "        </div>\n";
                 echo "        <p class=\"discussion-text\">$descrizione</p>\n";
                 echo "    </div>\n";
                 echo "    <div class=\"comment-container\">\n";
 
                 if($risolta == "true"){
 
-                  echo "  <div class=\"risolta\">Discussione risolta</div>\n";
+                  //stampa di controllo
 
                 } elseif(!$flag && ($id_autore !== $id_utente)) {
 
@@ -198,7 +207,7 @@
                     echo "  </div>\n";
                   }else{
                     $stato = getState($richieste_accesso, $id_utente); 
-                    echo "  <div class=\"accesso\">Richiesta inviata --> Stato della richiesta: " . $stato . "</div>\n";
+                    //stampa di controllo
                   }
 
                 } else {
@@ -224,13 +233,21 @@
                   $reports_commento = getSegnalazioniCommento($root, $id_commento);
                   $reported_comment = already_reported($reports_commento, $id_utente);
 
+                  $query = "SELECT * FROM utente WHERE id = '$id_commentatore'"; 
+                  $res = mysqli_query($conn, $query);
+                  $row = mysqli_fetch_array($res); 
+                  $avatar = $row['avatar']; 
+
                 echo "        <div class=\"comment\" id=\"" . $id_commento . "\">\n";
                 echo "            <div class=\"comment-info\">\n";
+                echo "              <div class=\"top-info\">\n";
+                echo "                <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
                 echo "                <span class=\"comment-author\">$commentatore</span>\n";
+                echo "              </div>\n";
 
                 if($id_commentatore === $id_utente){
-                  echo "      <form class=\"card-commenta\" action=\"../../lib/rimuovere_commento.php\" method=\"post\">\n";
-                  echo "        <input class=\"submit\" type=\"submit\" value=\"🗑️\">\n";
+                  echo "      <form  action=\"../../lib/rimuovere_commento.php\" method=\"post\">\n";
+                  echo "        <input class=\"submit-delete\" type=\"submit\" value=\"🗑️\">\n";
                   echo "        <input class=\"hidden\" name=\"id_commento\" type=\"hidden\" value=\"$id_commento\">\n";
                   echo "        <input class=\"hidden\" name=\"id_discussione\" type=\"hidden\" value=\"$id_discussione\">\n";
                   echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
@@ -238,13 +255,16 @@
                 }
 
                 echo "                <span class=\"comment-datetime\">$data_ora</span>\n";
+                
                 echo "            </div>\n";
+                
+                
                 echo "            <div class=\"comment-box\">\n";
                 echo "                <p class=\"comment-text\">$testo</p>\n";
                 echo "            </div>\n";
                 
                 if($voted){
-                  echo "  <div class=\"votato\">Contributo già valutato</div>\n";
+                  //stampa di controllo
                 }elseif(!$flag && ($id_commentatore !== $id_utente)){
                   echo "  <div class=\"votato\">Richiedi accesso/Attendi che ti venga dato accesso per valutare i contributi</div>\n";
                 }elseif($flag && ($id_commentatore !== $id_utente)){
@@ -278,7 +298,7 @@
                 }
 
                 if($reported_comment){
-                  echo "  <div class=\"reported\">Segnalazione effettuata --> Stato della segnalazione: In attesa di un riscontro</div>\n";
+                  //stampa di controllo
                 }elseif($id_commentatore !== $id_utente){
                   echo "            <form class=\"form-segnalazione\" action=\"../../lib/aggiungere_report_commento.php\" method=\"post\">\n";
                   echo "                <label for=\"segnala\"></label>\n";
@@ -345,7 +365,7 @@
               }
 
               if($reported_project){
-                echo "  <div class=\"reported\">Segnalazione effettuata --> Stato della segnalazione: In attesa di un riscontro</div>\n";
+                //stampa di controllo
               }elseif($id_creator !== $id_utente){
                 echo "          <div class=\"form-seganalazione-content\">\n";
                 echo "            <div class=\"label-form\">Segnala</div>\n";

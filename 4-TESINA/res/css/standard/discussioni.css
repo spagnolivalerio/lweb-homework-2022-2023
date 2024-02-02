@@ -86,6 +86,7 @@
 
 .comment-datetime {
     font-style: italic;
+    
 }
 
 .rating {
@@ -204,10 +205,23 @@
     position: absolute;
 }
 
-.cestino{
+
+.submit-delete{
+    position: relative;
+    left: 50%;
+    top: 50%;
     border: none;
+    text-align: center;
     background-color: transparent;
-    font-size: 30px;
-    cursor: pointer;
-    color: red;
+   
+}
+
+.top-info{
+    display: flex;
+    position: relative;
+}
+
+.top-info img{
+    margin-right: 5px;
+    position: relative;
 }

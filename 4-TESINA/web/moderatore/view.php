@@ -39,6 +39,7 @@
     $img_path = $step->getAttribute('nome_file_img');
 
     $progetto = getProgetto($root, $id_progetto);
+    $descrizione_progetto = $progetto->getElementsByTagName('descrizione')->item(0)->nodeValue;
     $id_creator = $progetto->getAttribute('id_creator');
     $reports_progetto = getSegnalazioniProgetto($root, $id_progetto);
     $reported_project = already_reported($reports_progetto, $id_utente);
@@ -63,6 +64,7 @@
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/valutazione_progetto.css" />
 
   </head>
 
@@ -113,76 +115,30 @@
               }
               echo "        </div>\n";
               echo "        </form>\n";
-              
-
-
+ 
               echo "    </div>\n";
-              echo "    <div class=\"options\">";
-              echo "    <div class=\"options-title\"><h2>DICCI LA TUA</h2></div>";
-              echo "    <div id=\"error\">\n";
-          
-              if(isset($_SESSION['empty_form']) && $_SESSION['empty_form'] === "true" ){
-                  echo "Compila tutti i campi";
-                  unset($_SESSION['empty_form']);
-              }
-                       
-              echo "    </div>\n";
-              if($voted){
-                echo "  <div class=\"votato\">Contributo già valutato</div>\n";
-              }elseif($id_creator !== $id_utente){
-                echo "          <div class=\"p-rating-content\">\n";
-                echo "            <div class=\"label-form\">Valuta progetto</div>\n";
-                echo "            <form class=\"p-rating\" action=\"../../lib/valutare_progetto.php\" method=\"post\">\n";
-                echo "                <div class=\"rating\">\n";
-                echo "                    <input type=\"radio\" name=\"rating\" value=\"5\" id=\"5_$id_progetto\">\n";
-                echo "                    <label for=\"5_$id_progetto\">&#9734;</label>\n";
-                echo "                    <input type=\"radio\" name=\"rating\" value=\"4\" id=\"4_$id_progetto\">\n";
-                echo "                    <label for=\"4_$id_progetto\">&#9734;</label>\n";
-                echo "                    <input type=\"radio\" name=\"rating\" value=\"3\" id=\"3_$id_progetto\">\n";
-                echo "                    <label for=\"3_$id_progetto\">&#9734;</label>\n";
-                echo "                    <input type=\"radio\" name=\"rating\" value=\"2\" id=\"2_$id_progetto\">\n";
-                echo "                    <label for=\"2_$id_progetto\">&#9734;</label>\n";
-                echo "                    <input type=\"radio\" name=\"rating\" value=\"1\" id=\"1_$id_progetto\">\n";
-                echo "                    <label for=\"1_$id_progetto\">&#9734;</label>\n";
-                echo "                    <span class=\"type-rating\">Rating</span>\n";
-                echo "                </div>\n";
-                echo "                <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
-                echo "                <textarea type=\"text\" name=\"testo\" placeholder=\"testo\"></textarea>\n";
-                echo "                <button type=\"submit\" class=\"valuta\">VALUTA</button>\n";
-                echo "            </form>\n";
-                echo "          </div>\n";
-              }
-
-              if($reported_project){
-                echo "  <div class=\"reported\">Segnalazione effettuata --> Stato della segnalazione: In attesa di un riscontro</div>\n";
-              }elseif($id_creator !== $id_utente){
-                echo "          <div class=\"form-seganalazione-content\">\n";
-                echo "            <div class=\"label-form\">Segnala</div>\n";
-                echo "            <form class=\"form-segnalazione-progetto\" action=\"../../lib/aggiungere_report_progetto.php\" method=\"post\">\n";
-                echo "                <select id=\"select\" name=\"tipo\">\n";
-                echo "                    <option value=\"spam\">spam</option>\n";
-                echo "                    <option value=\"Contenuti inesatti\">Contenuti inesatti</option>\n";
-                echo "                    <option value=\"Contenuti inappropriati\">Contenuti inappropriati</option>\n";
-                echo "                </select>\n";
-                echo "                <textarea type=\"text\" name=\"testo\" placeholder=\"Fornisci maggiori dettagli\"></textarea>\n";
-                echo "                <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
-                echo "                <button type=\"submit\" class=\"segnala\">segnala</button>\n";
-                echo "            </form>\n"; 
-                echo "          </div>\n";
-
-              }
               ?>
-                  <div class = "aprire-discussione">
-                    <div class="label-form">Apri discussione</div>
-                    <form class="form-aprire-discussione" action="../../lib/aprire_discussione.php" method="post">
-                      <input type="text" name="titolo" placeholder="Titolo"></input>
-                      <textarea type="text" name="descrizione" placeholder="Descrizione"></textarea>
-                      <input type="hidden" name="id_progetto"<?php echo "value=\"$id_progetto\"";?>></input>
-                      <button type="submit">Apri Discussione</button>
-                    </form>
-                  </div>
+
+             <div class="descrizione_progetto">
+                <h2>DESCRIZIONE</h2>
+                <p><?php echo "$descrizione_progetto";?></p>
+                <span><a href="#recensioni">Valuta o segnala</a></span>
               </div>
+            </div> 
+
+              
+            <div class = "aprire-discussione">
+              <div class="label-form">Apri discussione</div>
+                <form class="form-aprire-discussione" action="../../lib/aprire_discussione.php" method="post">
+                  <label for="titolo">Titolo</label></br>
+                  <input type="text" name="titolo" id="titolo"></input>
+                  <label for="descrizione">Descrizione</label></br>
+                  <textarea type="text" name="descrizione" id="descrizione"></textarea>
+                  <input type="hidden" name="id_progetto"<?php echo "value=\"$id_progetto\"";?>></input>
+                  <button type="submit">Apri Discussione</button>
+                </form>
             </div>
+              
             <!-- STAMPA DISCUSSIONI -->
       
             <div class="content">
@@ -204,6 +160,11 @@
                 $richieste_accesso = getRichiesteAccesso($root, $id_discussione);
                 $sended = already_sended($richieste_accesso, $id_utente);
 
+                $query = "SELECT * FROM utente WHERE id = '$id_autore'"; 
+                $res = mysqli_query($conn, $query);
+                $row = mysqli_fetch_array($res); 
+                $avatar = $row['avatar']; 
+
 
                 echo "<div class=\"discussion-container\">\n";
                 echo "    <div class=\"discussion-header\" id=\"" . $id_discussione . "\">\n";
@@ -220,17 +181,20 @@
                   }
                 }
 
-                echo "        <p class=\"discussion-info\">\n";
-                echo "            <span>$autore</span>\n";
+                echo "        <div class=\"discussion-info\">\n";
+                echo "            <div class=\"top-info\">\n";
+                echo "              <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
+                echo "              <span>$autore</span>\n";
+                echo "            </div>\n";
                 echo "            <span class=\"datetime\">$data_ora</span>\n";
-                echo "        </p>\n";
+                echo "        </div>\n";
                 echo "        <p class=\"discussion-text\">$descrizione</p>\n";
                 echo "    </div>\n";
                 echo "    <div class=\"comment-container\">\n";
 
                 if($risolta == "true"){
 
-                  echo "  <div class=\"risolta\">Discussione risolta</div>\n";
+                  //stampa di controllo
 
                 }else {
 
@@ -255,13 +219,21 @@
                   $reports_commento = getSegnalazioniCommento($root, $id_commento);
                   $reported_comment = already_reported($reports_commento, $id_utente);
 
-                echo "        <div class=\"comment\" id=\"" . $id_commento . "\">\n";
-                echo "            <div class=\"comment-info\">\n";
-                echo "                <span class=\"comment-author\">$commentatore</span>\n";
+                  $query = "SELECT * FROM utente WHERE id = '$id_commentatore'"; 
+                  $res = mysqli_query($conn, $query);
+                  $row = mysqli_fetch_array($res); 
+                  $avatar = $row['avatar']; 
+
+                  echo "        <div class=\"comment\" id=\"" . $id_commento . "\">\n";
+                  echo "            <div class=\"comment-info\">\n";
+                  echo "              <div class=\"top-info\">\n";
+                  echo "                <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
+                  echo "                <span class=\"comment-author\">$commentatore</span>\n";
+                  echo "              </div>\n";
 
                 
-                echo "      <form class=\"card-commenta\" action=\"../../lib/rimuovere_commento.php\" method=\"post\">\n";
-                echo "        <input class=\"submit\" type=\"submit\" value=\"🗑️\">\n";
+                echo "      <form action=\"../../lib/rimuovere_commento.php\" method=\"post\">\n";
+                echo "        <input class=\"submit-delete\" type=\"submit\" value=\"🗑️\">\n";
                 echo "        <input class=\"hidden\" name=\"id_commento\" type=\"hidden\" value=\"$id_commento\">\n";
                 echo "        <input class=\"hidden\" name=\"id_discussione\" type=\"hidden\" value=\"$id_discussione\">\n";
                 echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
@@ -275,7 +247,7 @@
                 echo "            </div>\n";
                 
                 if($voted){
-                  echo "  <div class=\"votato\">Contributo già valutato</div>\n";
+                      //stampa di controllo
                 }elseif($id_commentatore !== $id_utente){
                   echo "            <form class=\"form-box\" action=\"../../lib/valuta_commento.php\" method=\"post\">\n";
                   echo "                <div class=\"rating\">\n";
@@ -307,7 +279,7 @@
                 }
 
                 if($reported_comment){
-                  echo "  <div class=\"reported\">Segnalazione effettuata --> Stato della segnalazione: In attesa di un riscontro</div>\n";
+                      //stampa di controllo
                 }elseif($id_commentatore !== $id_utente){
                   echo "            <form class=\"form-segnalazione\" action=\"../../lib/aggiungere_report_commento.php\" method=\"post\">\n";
                   echo "                <label for=\"segnala\"></label>\n";
@@ -332,6 +304,72 @@
 
             ?>
           </div>
+
+          <?php
+   
+              if($id_creator !== $id_utente){
+                echo "    <div class=\"options\" id=\"recensioni\">";
+                echo "    <div class=\"options-title\"><h2>DICCI LA TUA</h2></div>";
+                echo "    <div id=\"error\">\n";
+          
+                if(isset($_SESSION['empty_form']) && $_SESSION['empty_form'] === "true" ){
+                  echo "Compila tutti i campi";
+                  unset($_SESSION['empty_form']);
+                }
+
+                echo " </div>";
+                if($voted){
+                //stampa di controllo
+                }else{
+                echo "          <div class=\"p-rating-content\">\n";
+                echo "            <div class=\"label-form\">Valuta progetto</div>\n";
+                echo "            <form class=\"p-rating\" action=\"../../lib/valutare_progetto.php\" method=\"post\">\n";
+                echo "                <label for=\"testo\">Descrivi la tua esperienza!</label>";
+                echo "                <textarea type=\"text\" name=\"testo\" placeholder=\"testo\"></textarea>\n";
+                echo "                <div class=\"rating stars\">\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"5\" id=\"5_$id_progetto\">\n";
+                echo "                    <label for=\"5_$id_progetto\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"4\" id=\"4_$id_progetto\">\n";
+                echo "                    <label for=\"4_$id_progetto\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"3\" id=\"3_$id_progetto\">\n";
+                echo "                    <label for=\"3_$id_progetto\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"2\" id=\"2_$id_progetto\">\n";
+                echo "                    <label for=\"2_$id_progetto\">&#9734;</label>\n";
+                echo "                    <input type=\"radio\" name=\"rating\" value=\"1\" id=\"1_$id_progetto\">\n";
+                echo "                    <label for=\"1_$id_progetto\">&#9734;</label>\n";
+                echo "                </div>\n";
+                echo "                <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
+                echo "                <button type=\"submit\">VALUTA</button>\n";
+                echo "            </form>\n";
+                echo "          </div>\n";
+                }
+              }
+
+              if($reported_project){
+                //stampa di controllo
+              }elseif($id_creator !== $id_utente){
+                echo "          <div class=\"form-seganalazione-content\">\n";
+                echo "            <div class=\"label-form\">Segnala</div>\n";
+                echo "            <form class=\"form-segnalazione-progetto\" action=\"../../lib/aggiungere_report_progetto.php\" method=\"post\">\n";
+                echo "                <select id=\"select\" name=\"tipo\">\n";
+                echo "                    <option value=\"spam\">spam</option>\n";
+                echo "                    <option value=\"Contenuti inesatti\">Contenuti inesatti</option>\n";
+                echo "                    <option value=\"Contenuti inappropriati\">Contenuti inappropriati</option>\n";
+                echo "                </select>\n";
+                echo "                <textarea type=\"text\" name=\"testo\" placeholder=\"Fornisci maggiori dettagli\"></textarea>\n";
+                echo "                <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
+                echo "                <button type=\"submit\">SEGNALA</button>\n";
+                echo "            </form>\n"; 
+                echo "          </div>\n";
+
+              }
+
+?>
+
+
+
+
+
         </div>
     </div>
   </body>

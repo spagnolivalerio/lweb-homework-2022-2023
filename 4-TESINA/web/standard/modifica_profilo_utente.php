@@ -32,7 +32,7 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/edit-profilo.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/edit-info.css" />
 
 
   </head>

@@ -66,6 +66,12 @@
       <commento id_commento="6" data_ora="2024-02-01 17:03:49" id_discussione="19">
         <testo>commento number 2, trust her</testo>
       </commento>
+      <commento id_commento="8" data_ora="2024-02-01 17:53:51" id_discussione="18">
+        <testo>PROGETTO FATTO MOLTO MALEEEEEEEEE</testo>
+      </commento>
+      <commento id_commento="9" data_ora="2024-02-01 17:54:12" id_discussione="18">
+        <testo>sdasdasdadasd</testo>
+      </commento>
     </commenti>
     <valutazioni_progetti/>
     <reports_progetti/>

@@ -38,7 +38,7 @@
     background-color: white; /* Cambia il colore in hover */
 }
 
-.details{
+.details-storico{
     display: flex;
     border-bottom: 1px solid black;
 }
