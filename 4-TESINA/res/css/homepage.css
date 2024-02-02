@@ -26,11 +26,17 @@ body{
 }
 
 .intestazione{ 
-    height: 84px;
-    padding: 8px 27px;
+    height: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 75px;
+    border-radius: 100%;
+    background-image: url(../../img/logo.png);
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .homepage-sidebar-list{

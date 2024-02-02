@@ -1,33 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="29" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
-  <bozza sospeso="false" id="6" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-01-31 16:51:31" difficolta="facile" clearance="" nome_file_img="">
-    <categorie/>
-    <categoriaProposta/>
-    <descrizione/>
-    <tutorial_bozza>
-      <step num_step="1" nome_file_img="img/steps/img_step_65ba668790c79.png">
-        <descrizione>QWF</descrizione>
-      </step>
-      <step num_step="2" nome_file_img="img/steps/img_step_65ba66681a9b2.png">
-        <descrizione>QWF</descrizione>
-      </step>
-      <step num_step="3" nome_file_img="img/steps/img_step_65ba65cf97e63.png">
-        <descrizione>QWF</descrizione>
-      </step>
-      <step num_step="4" nome_file_img="img/steps/img_step_65ba652059f84.png">
-        <descrizione>QWF</descrizione>
-      </step>
-      <step nome_file_img="img/steps/img_step_65ba6e6faf9b6.jpg" num_step="5">
-        <descrizione>step really 5</descrizione>
-      </step>
-      <step num_step="6" nome_file_img="img/steps/img_step_65ba65087aca4.jpg">
-        <descrizione>qEF</descrizione>
-      </step>
-      <step num_step="7" nome_file_img="img/steps/img_step_65ba64d26d3c6.jpg">
-        <descrizione>ftsh</descrizione>
-      </step>
-    </tutorial_bozza>
-  </bozza>
+<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="32" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
   <bozza sospeso="false" id="9" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-01-31 17:16:09" difficolta="facile" clearance="" nome_file_img="">
     <categorie/>
     <categoriaProposta/>
@@ -41,12 +13,6 @@
     <tutorial_bozza/>
   </bozza>
   <bozza sospeso="false" id="11" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-01-31 17:21:30" difficolta="facile" clearance="" nome_file_img="">
-    <categorie/>
-    <categoriaProposta/>
-    <descrizione/>
-    <tutorial_bozza/>
-  </bozza>
-  <bozza sospeso="false" id="12" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-01-31 17:22:35" difficolta="facile" clearance="" nome_file_img="">
     <categorie/>
     <categoriaProposta/>
     <descrizione/>
@@ -140,5 +106,56 @@
     <categoriaProposta/>
     <descrizione/>
     <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="30" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-02 14:33:48" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza>
+      <step titolo_step="Steropjkqbefoiuhrn" nome_file_img="img/steps/img_step_65bcef4c3ad04.png" num_step="1">
+        <descrizione>wgpoihnjb0porijhbpr</descrizione>
+      </step>
+      <step titolo_step="titolo" nome_file_img="img/steps/img_step_65bcf53da5ac5.jpg" num_step="2">
+        <descrizione>d</descrizione>
+      </step>
+    </tutorial_bozza>
+  </bozza>
+  <bozza sospeso="false" id="31" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-02-02 15:44:39" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza>
+      <step titolo_step="dq" nome_file_img="img/steps/img_step_65bcffe3dd2f6.jpg" num_step="1">
+        <descrizione>lih</descrizione>
+      </step>
+    </tutorial_bozza>
+  </bozza>
+  <bozza sospeso="false" id="32" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-02-02 15:45:12" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza>
+      <step num_step="1" nome_file_img="img/steps/img_step_65ba668790c79.png">
+        <descrizione>QWF</descrizione>
+      </step>
+      <step num_step="2" nome_file_img="img/steps/img_step_65ba66681a9b2.png">
+        <descrizione>QWF</descrizione>
+      </step>
+      <step num_step="3" nome_file_img="img/steps/img_step_65ba65cf97e63.png">
+        <descrizione>QWF</descrizione>
+      </step>
+      <step num_step="4" nome_file_img="img/steps/img_step_65ba652059f84.png">
+        <descrizione>QWF</descrizione>
+      </step>
+      <step num_step="5" nome_file_img="img/steps/img_step_65ba6e6faf9b6.jpg">
+        <descrizione>step really 5</descrizione>
+      </step>
+      <step num_step="6" nome_file_img="img/steps/img_step_65ba65087aca4.jpg">
+        <descrizione>qEF</descrizione>
+      </step>
+      <step num_step="7" nome_file_img="img/steps/img_step_65ba64d26d3c6.jpg">
+        <descrizione>ftsh</descrizione>
+      </step>
+    </tutorial_bozza>
   </bozza>
 </bozze>

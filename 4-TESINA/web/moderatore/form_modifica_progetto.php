@@ -53,7 +53,7 @@ $durata = $progetto->getAttribute('tempo_medio');
     <div class="homepage">
       <div class="homepage-sidebar">
         <div class="intestazione">
-          <div class="logo">TPS</div>
+          
         </div>
         <div class="homepage-sidebar-list">
           <a class="elem" href="homepage.php">Homepage</a>

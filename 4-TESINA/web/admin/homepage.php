@@ -39,9 +39,7 @@
 
     <div class="homepage">
       <div class="homepage-sidebar">
-        <div class="intestazione">
-          <div class="logo">TPS</div>
-        </div>
+        <div class="intestazione"></div>
         <div class="homepage-sidebar-list">
           <a class="elem" href="homepage.php">Homepage</a>
           <a class="elem" href="bacheca.php">Bacheca</a>

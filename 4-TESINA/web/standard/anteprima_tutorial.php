@@ -41,6 +41,8 @@ addressing($_SESSION['ban'], 0, $logout);
 
       <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/anteprima_tutorial.css" />
+
 
   </head>
 
@@ -49,7 +51,7 @@ addressing($_SESSION['ban'], 0, $logout);
     <div class="homepage">
       <div class="homepage-sidebar">
         <div class="intestazione">
-          <div class="logo">TPS</div>
+          
         </div>
         <div class="homepage-sidebar-list">
           <a class="elem" href="homepage.php">Homepage</a>
@@ -64,7 +66,7 @@ addressing($_SESSION['ban'], 0, $logout);
       <div class="bar"></div>
         <div class="toolbar"></div>
 
-        <div class="title">AGGIUNGI TUTORIAL</div>
+        <div class="title-add-tutorial"><h2>AGGIUNGI TUTORIAL<h2></div>
         <div id="error">
                 <?php 
                     if(isset($_SESSION['empty_form']) && $_SESSION['empty_form'] === "true" ){
@@ -102,11 +104,11 @@ addressing($_SESSION['ban'], 0, $logout);
                           $before = $num_step - 1;
                         }
                         echo "<input type=\"hidden\" name=\"num_step\" value=\"$before\"></input>";
-                        echo "<button type=\"submit\">&#x2B;</button>";
+                        echo "<button type=\"submit\">AGGIUNGI PRIMA</button>";
                       echo "</form>";
                   echo"</div>"; //chiusura insert_before
 
-                  echo "<div class=\"step\">\n";
+                  echo "<div class=\"step step-anteprima\">\n";
                   echo "    <div class=\"step-container\">\n";
                   echo "        <div class=\"step-content\">\n";
                   echo "            <div class=\"step-img\" style=\"background-image: url('../../$img_path'); background-size: cover; background-position: center;\"></div>\n";
@@ -133,16 +135,19 @@ addressing($_SESSION['ban'], 0, $logout);
 
                   echo "        </div>\n";
                   echo "        </form>\n";
+                  echo " </div>";
+                  echo " </div>";
 
                   echo"<div class=\"insert_after\">";
                     echo "<form class=\"insert_form\" method=\"post\" action=\"form_step.php\">";
                         echo "<input type=\"hidden\" name=\"num_step\" value=\"". $num_step+1 ."\"></input>";
-                        echo "<button type=\"submit\">&#x2B;</button>";
+                        echo "<button type=\"submit\">AGGIUNGI DOPO</button>";
                     echo "</form>";
                   echo"</div>"; //chiisura insert_after
 
                 echo "</div>"; //chiusura anteprima_box
     ?>
+
 
 <?php
 
@@ -150,7 +155,7 @@ $numero_step = $steps->length;
 
 if($numero_step !== 0){
 
-  echo "<form action=\"../../lib/progetto.php\" method=\"post\">\n";
+  echo "<form action=\"../../lib/progetto.php\" method=\"post\" class=\"pubblica-form\">\n";
   echo "    <button type=\"submit\">PUBBLICA</button>\n";
   echo "</form>\n";
   

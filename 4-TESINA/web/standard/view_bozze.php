@@ -34,7 +34,7 @@
     <div class="homepage">
       <div class="homepage-sidebar">
         <div class="intestazione">
-          <div class="logo">TPS</div>
+          
         </div>
         <div class="homepage-sidebar-list">
           <a class="elem" href="homepage.php">Homepage</a>
@@ -85,7 +85,7 @@
 
 
                 echo "          <td>\n";
-                echo "          <form class=\"form-ban\" action=\"../../lib/ricarica_bozza.php\" method=\"post\">\n";
+                echo "          <form class=\"ricarica-bozza\" action=\"../../lib/ricarica_bozza.php\" method=\"post\">\n";
                 echo "                   <input type=\"hidden\" name=\"id_bozza\" value=" . $id_bozza . "></input>\n";
                 echo "                   <button type=\"submit\">Ricarica</button>\n";
                 echo "          </form>\n";

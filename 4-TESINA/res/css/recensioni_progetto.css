@@ -1,5 +1,5 @@
 .review-container {
-    background-color: #f8f8f8;
+    background-color: white;
     border: 1px solid #eaeaea;
     border-radius: 8px;
     padding: 20px;
@@ -7,6 +7,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 900px;
     margin: 0px auto;
+    margin-bottom: 10px;
 }
 
 .review-header {
@@ -44,7 +45,7 @@
 }
 
 .comment-review-container {
-    background-color: #f8f8f8;
+    background-color: white;
     border: 1px solid #eaeaea;
     border-radius: 8px;
     padding: 20px;
@@ -52,6 +53,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 0px auto;
     width: 900px;
+    margin-bottom: 10px;
 }
 
 .comment-text{

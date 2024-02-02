@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="8" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="11" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="221" nome_file_img="img/proj/ardu.png" difficolta="difficile" clearance="1" sospeso="false">
+  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="11" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="246" nome_file_img="img/proj/ardu.png" difficolta="difficile" clearance="1" sospeso="false">
     <titolo>Arduino Blink. Fai lampeggiare un led</titolo>
     <categorie>
       <categoria id_categoria="1"/>
