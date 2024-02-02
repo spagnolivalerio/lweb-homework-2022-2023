@@ -70,3 +70,11 @@
 .stars{
     float: right;
 }
+
+#error
+{
+	position: relative;
+	color: red;
+	text-align: center;
+    font-size: 20px;
+}

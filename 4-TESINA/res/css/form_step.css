@@ -54,3 +54,11 @@
 .form-submit:hover {
     background-color: #45a049;
 }
+
+#error
+{
+	position: relative;
+	color: red;
+	text-align: center;
+    font-size: 20px;
+}

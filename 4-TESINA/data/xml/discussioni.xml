@@ -12,23 +12,6 @@
       <partecipante id_partecipante="4"/>
     </partecipanti>
   </discussione>
-  <discussione titolo="apriamo una discussione" id_poster="4" risolta="true" id="19" id_progetto="6" data_ora="2024-02-01 17:03:07" autore="utentestd1">
-    <commenti>
-      <commento id_commento="5"/>
-      <commento id_commento="7"/>
-    </commenti>
-    <descrizione>voglio vedere s ei commetni funzionano</descrizione>
-    <partecipanti>
-      <partecipante id_partecipante="4"/>
-    </partecipanti>
-  </discussione>
-  <discussione titolo="titolo" id_poster="4" risolta="false" id="20" id_progetto="6" data_ora="2024-02-01 17:05:55" autore="utentestd1">
-    <commenti/>
-    <descrizione>awf</descrizione>
-    <partecipanti>
-      <partecipante id_partecipante="4"/>
-    </partecipanti>
-  </discussione>
   <discussione titolo="titolo" id_poster="3" risolta="false" id="21" id_progetto="7" data_ora="2024-02-02 12:00:22" autore="moderatore1">
     <commenti/>
     <descrizione>descrixzione</descrizione>

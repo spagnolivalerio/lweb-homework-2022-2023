@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="9">
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="11">
   <tutorial_progetto id="1" id_progetto="1">
     <step num_step="1" nome_file_img="img/steps/img_step_659bd05245a40.jpg">
       <descrizione>Collegare arduino al pc con un cavo usb tipo B - tipo A.</descrizione>
@@ -14,11 +14,6 @@
   <tutorial_progetto id="3" id_progetto="2">
     <step num_step="1" nome_file_img="img/steps/img_step_65ba1ec4014a3.jpg">
       <descrizione>desc</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="6" id_progetto="5">
-    <step num_step="1" nome_file_img="img/steps/img_step_65ba2f8d8a2cc.jpg">
-      <descrizione>dew</descrizione>
     </step>
   </tutorial_progetto>
   <tutorial_progetto id="7" id_progetto="6">
@@ -40,6 +35,19 @@
     </step>
     <step titolo_step="titolo" num_step="2" nome_file_img="img/steps/img_step_65bcb65e24962.png">
       <descrizione>step1:sdfsdfsdfdfdsdsffffffffffffffffff&lt;br /&gt;&#13;step1:sdfsdfsdfdfdsdsffffffffffffffffff&lt;br /&gt;&#13;step1:sdfsdfsdfdfdsdsffffffffffffffffff&lt;br /&gt;&#13;step1:sdfsdfsdfdfdsdsffffffffffffffffff&lt;br /&gt;&#13;</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="10" id_progetto="9">
+    <step titolo_step="JUJUTSU KAISEN 12" num_step="1" nome_file_img="img/steps/img_step_65bd2d3e832d3.jpeg">
+      <descrizione>sdfsdfsdf</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="11" id_progetto="10">
+    <step titolo_step="" num_step="1" nome_file_img="img/steps/img_step_65bcef4c3ad04.png">
+      <descrizione>wgpoihnjb0porijhbpr</descrizione>
+    </step>
+    <step titolo_step="" num_step="2" nome_file_img="img/steps/img_step_65bcf53da5ac5.jpg">
+      <descrizione>d</descrizione>
     </step>
   </tutorial_progetto>
 </tutorials_progetti>

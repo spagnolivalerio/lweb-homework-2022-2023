@@ -6,7 +6,4 @@
   <richiesta id="6" id_discussione="18" id_utente="10" data_ora="2024-02-02 12:12:54" stato="rifiutata">
     <moderatore id_mod="1" username="adm1"/>
   </richiesta>
-  <richiesta id="7" id_discussione="20" id_utente="10" data_ora="2024-02-02 12:12:55" stato="rifiutata">
-    <moderatore id_mod="1" username="adm1"/>
-  </richiesta>
 </richieste>

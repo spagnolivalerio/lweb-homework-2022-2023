@@ -62,6 +62,7 @@ if(empty($titolo) || empty($tempo_medio) || empty($difficolta) || empty($descriz
 }
 
 if($noNullFields == false){
+    $_SESSION['error_null_fields'] = "true";
     header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/form_progetto.php?modifica=true');
     exit;
 }

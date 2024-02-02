@@ -135,6 +135,8 @@
           
           $progetti = getProgetti($root);
 
+          echo "<div class=\"cards\">\n";
+
           foreach($progetti as $progetto){
 
             $id_creator = $progetto->getAttribute('id_creator'); 
@@ -152,7 +154,6 @@
               $durata = $progetto->getAttribute('tempo_medio');
               $difficoltà = $progetto->getAttribute('difficolta');
             
-            echo "<div class=\"cards\">\n";
             echo "<div class=\"card-container\">\n";
             echo "  <div class=\"card-header\" style=\"background-image: url('$img_path'); background-size: cover; background-position: center;\">\n";
             echo "   <div class=\"top-card\">\n";
@@ -189,6 +190,7 @@
 
             }
           }
+          echo "</div>\n";
 
             ?>
          

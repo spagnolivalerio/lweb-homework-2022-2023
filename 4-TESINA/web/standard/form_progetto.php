@@ -113,6 +113,18 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
 
         <div class="title">AGGIUNGI PROGETTO</div>
 
+        <?php
+        echo "    <div id=\"error\">\n";
+          
+                if(isset($_SESSION['error_null_fields']) && $_SESSION['error_null_fields'] === "true" ){
+                  echo "Compila tutti i campi per procedere alla pubblicazione";
+                  unset($_SESSION['error_null_fields']);
+                }
+
+                echo " </div>";
+
+?>
+
 <form action="../../lib/bozze.php" method="post" enctype="multipart/form-data" class="container">
   <div class="p-cat">Categorie:</div>
   <div class="form-group cat-group">
@@ -214,4 +226,16 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
 
 
 </body>
+
+<script>
+        function scomparsa() {
+            var error = document.getElementById('error');
+            if (error) {
+                error.style.display = "none";
+            }
+        }
+        setTimeout(scomparsa, 4000);
+    </script>
+</html>
+
 </html>

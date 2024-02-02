@@ -77,7 +77,6 @@ $durata = $progetto->getAttribute('tempo_medio');
                         unset($_SESSION['empty_form']);
                     } 
                 ?>
-            </div>
             <script>
                 function scomparsa() {
                     var error = document.getElementById('error');
@@ -87,6 +86,7 @@ $durata = $progetto->getAttribute('tempo_medio');
                 }
                 setTimeout(scomparsa, 4000);
             </script>
+            </div>
             <div id="success">
                 <?php 
                     if(isset($_SESSION['esito']) && $_SESSION['esito'] === "true" ){
@@ -94,7 +94,6 @@ $durata = $progetto->getAttribute('tempo_medio');
                         unset($_SESSION['esito']);
                     } 
                 ?>
-            </div>
             <script>
                 function scomparsa() {
                     var error = document.getElementById('success');
@@ -104,6 +103,7 @@ $durata = $progetto->getAttribute('tempo_medio');
                 }
                 setTimeout(scomparsa, 4000);
             </script>
+            </div>
 
 <?php
 

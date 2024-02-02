@@ -84,10 +84,14 @@
 
 
 
-                echo "          <td>\n";
+                echo "          <td class=\"tools\">\n";
                 echo "          <form class=\"ricarica-bozza\" action=\"../../lib/ricarica_bozza.php\" method=\"post\">\n";
                 echo "                   <input type=\"hidden\" name=\"id_bozza\" value=" . $id_bozza . "></input>\n";
                 echo "                   <button type=\"submit\">Ricarica</button>\n";
+                echo "          </form>\n";
+                echo "          <form class=\"ricarica-bozza\" action=\"../../lib/rimuovere_bozza.php\" method=\"post\">\n";
+                echo "                   <input type=\"hidden\" name=\"id_bozza\" value=" . $id_bozza . "></input>\n";
+                echo "                   <button type=\"submit\">&#10008;</button>\n";
                 echo "          </form>\n";
                 echo "          </td>\n";
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="8" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="11" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="246" nome_file_img="img/proj/ardu.png" difficolta="difficile" clearance="1" sospeso="false">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="10" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="1" username_creator="user" id_creator="4" tempo_medio="11" data_pubblicazione="2024-01-08 11:41:06" visualizzazioni="254" nome_file_img="img/proj/ardu.png" difficolta="facile" clearance="1" sospeso="false">
     <titolo>Arduino Blink. Fai lampeggiare un led</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -21,26 +21,6 @@
       <valutazione id_valutazione="3"/>
       <valutazione id_valutazione="4"/>
       <valutazione id_valutazione="5"/>
-    </valutazioni>
-  </progetto>
-  <progetto id="6" username_creator="moderatore1" id_creator="3" tempo_medio="1200" data_pubblicazione="2024-02-01 12:00:17" visualizzazioni="43" nome_file_img="img/proj/img_proj_65bb7913c5b6f.jpg" difficolta="facile" clearance="1" sospeso="false">
-    <titolo>Titolo del progetto</titolo>
-    <categorie>
-      <categoria id_categoria="1"/>
-      <categoria id_categoria="2"/>
-    </categorie>
-    <descrizione>paragrafo1: ppppppp&lt;br /&gt;&#13;paragrafo2: cccccccc</descrizione>
-    <categoriaProposta/>
-    <reports_progetti>
-      <report_progetto id_report="3"/>
-    </reports_progetti>
-    <discussioni>
-      <discussione id_discussione="19"/>
-      <discussione id_discussione="20"/>
-    </discussioni>
-    <tutorial_progetto id_tutorial="6"/>
-    <valutazioni>
-      <valutazione id_valutazione="2"/>
     </valutazioni>
   </progetto>
   <progetto id="7" username_creator="utentestd1" id_creator="4" tempo_medio="12" data_pubblicazione="2024-02-01 15:58:09" visualizzazioni="9" nome_file_img="img/proj/img_proj_65bbb0f6232ee.png" difficolta="facile" clearance="1" sospeso="false">
@@ -68,6 +48,30 @@
     <reports_progetti/>
     <discussioni/>
     <tutorial_progetto id_tutorial="8"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="9" username_creator="moderatore1" id_creator="3" tempo_medio="5" data_pubblicazione="2024-02-02 18:58:25" visualizzazioni="1" nome_file_img="img/proj/img_proj_65bd2d35dca96.jpeg" difficolta="facile" clearance="1" sospeso="false">
+    <titolo>AOFRA</titolo>
+    <categorie>
+      <categoria id_categoria="2"/>
+    </categorie>
+    <descrizione>asdasdasdasdasdsadsad</descrizione>
+    <categoriaProposta/>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="9"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="10" username_creator="moderatore1" id_creator="3" tempo_medio="2" data_pubblicazione="2024-02-02 18:59:01" visualizzazioni="0" nome_file_img="img/proj/img_proj_65bd2d6049e0a.jpeg" difficolta="facile" clearance="2" sospeso="false">
+    <titolo>AOFRA</titolo>
+    <categorie>
+      <categoria id_categoria="2"/>
+    </categorie>
+    <descrizione>srfsfsdfsdf</descrizione>
+    <categoriaProposta/>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="10"/>
     <valutazioni/>
   </progetto>
 </progetti>

@@ -122,7 +122,11 @@
              <div class="descrizione_progetto">
                 <h2>DESCRIZIONE</h2>
                 <p><?php echo "$descrizione_progetto";?></p>
-                <span><a href="#recensioni">Valuta o segnala</a></span>
+                <?php
+                if($id_creator !== $id_utente){
+                  echo "<span><a href=\"#recensioni\">Valuta o segnala</a></span>\n";
+                }             
+                ?>
               </div>
             </div> 
 

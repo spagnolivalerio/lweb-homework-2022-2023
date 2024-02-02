@@ -78,3 +78,11 @@ input[type="checkbox"] {
 .form-group input[type="submit"]:hover {
     background-color: #4cae4c;
 }
+
+#error
+{
+	position: relative;
+	color: red;
+	text-align: center;
+    font-size: 20px;
+}

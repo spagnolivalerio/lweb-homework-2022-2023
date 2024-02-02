@@ -42,3 +42,18 @@
 .form-button:hover {
     background-color: #357ABD;
 }
+
+#error
+{
+	position: relative;
+	color: red;
+	text-align: center;
+    font-size: 20px;
+}
+#success
+{
+	position: relative;
+	color: green;
+	text-align: center;
+    font-size: 20px;
+}
