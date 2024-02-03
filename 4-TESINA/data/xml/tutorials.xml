@@ -1,53 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="11">
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="1">
   <tutorial_progetto id="1" id_progetto="1">
-    <step num_step="1" nome_file_img="img/steps/img_step_659bd05245a40.jpg">
-      <descrizione>Collegare arduino al pc con un cavo usb tipo B - tipo A.</descrizione>
+    <step titolo_step="Raccolta dei materiali" num_step="1" nome_file_img="img/steps/img_step_65be059dc86f4.webp">
+      <descrizione>Vecchie bottiglie di vetro, un kit per cablaggio elettrico per lampade, una lampadina a LED, carta vetrata, e vernice spray.</descrizione>
     </step>
-    <step num_step="2" nome_file_img="img/steps/img_step_659bd097b7901.png">
-      <descrizione>Aprire l'ide di programmazione arduino e caricare lo sketch di default chiamato "blink"</descrizione>
+    <step titolo_step="Preparazione della Bottiglia" num_step="2" nome_file_img="img/steps/img_step_65be05c75019d.webp">
+      <descrizione>Tagliare la base della bottiglia di vetro con un tagliavetro e levigare i bordi con la carta vetrata per evitare spigoli vivi.</descrizione>
     </step>
-    <step num_step="3" nome_file_img="img/steps/img_step_659bd141ef448.jpg">
-      <descrizione>Collegare con i jump, il pin 9 analogico di arduino sull'anodo del led, e la massa sul catodo. Infine avviare lo sketch caricandolo su arduino.</descrizione>
+    <step titolo_step="Verniciatura della Bottiglia" num_step="3" nome_file_img="img/steps/img_step_65be05e9a0537.webp">
+      <descrizione>Utilizzare la vernice spray per colorare la bottiglia nel colore desiderato. Lasciare asciugare completamente.</descrizione>
     </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="3" id_progetto="2">
-    <step num_step="1" nome_file_img="img/steps/img_step_65ba1ec4014a3.jpg">
-      <descrizione>desc</descrizione>
+    <step titolo_step="Installazione del Kit Elettrico" num_step="4" nome_file_img="img/steps/img_step_65be0651aa03e.webp">
+      <descrizione>Assemblare il kit elettrico per lampade seguendo le istruzioni del produttore e inserirlo nella bottiglia preparata.</descrizione>
     </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="7" id_progetto="6">
-    <step titolo_step="LET'S GO PAGURI" num_step="1" nome_file_img="img/steps/img_step_65bb792fdf260.png">
-      <descrizione>primo step</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="8" id_progetto="7">
-    <step titolo_step="titolo 1" num_step="1" nome_file_img="img/steps/img_step_65bbb163d24b3.jpg">
-      <descrizione>belle pe te pippo</descrizione>
-    </step>
-    <step titolo_step="titolo 2" num_step="2" nome_file_img="img/steps/img_step_65bbb1797bed6.jpg">
-      <descrizione>descrizione suproema</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="9" id_progetto="8">
-    <step titolo_step="step 0" num_step="1" nome_file_img="img/steps/img_step_65bcb6a98be4b.png">
-      <descrizione>sadasdads</descrizione>
-    </step>
-    <step titolo_step="titolo" num_step="2" nome_file_img="img/steps/img_step_65bcb65e24962.png">
-      <descrizione>step1:sdfsdfsdfdfdsdsffffffffffffffffff&lt;br /&gt;&#13;step1:sdfsdfsdfdfdsdsffffffffffffffffff&lt;br /&gt;&#13;step1:sdfsdfsdfdfdsdsffffffffffffffffff&lt;br /&gt;&#13;step1:sdfsdfsdfdfdsdsffffffffffffffffff&lt;br /&gt;&#13;</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="10" id_progetto="9">
-    <step titolo_step="JUJUTSU KAISEN 12" num_step="1" nome_file_img="img/steps/img_step_65bd2d3e832d3.jpeg">
-      <descrizione>sdfsdfsdf</descrizione>
-    </step>
-  </tutorial_progetto>
-  <tutorial_progetto id="11" id_progetto="10">
-    <step titolo_step="" num_step="1" nome_file_img="img/steps/img_step_65bcef4c3ad04.png">
-      <descrizione>wgpoihnjb0porijhbpr</descrizione>
-    </step>
-    <step titolo_step="" num_step="2" nome_file_img="img/steps/img_step_65bcf53da5ac5.jpg">
-      <descrizione>d</descrizione>
+    <step titolo_step="Aggiunta della Lampadina e del Paralume" num_step="5" nome_file_img="img/steps/img_step_65be067e36065.webp">
+      <descrizione>Avvitare una lampadina a LED nel supporto e aggiungere un paralume di stile corrispondente.</descrizione>
     </step>
   </tutorial_progetto>
 </tutorials_progetti>

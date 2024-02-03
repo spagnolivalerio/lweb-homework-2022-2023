@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valutazioni_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="4" xsi:noNamespaceSchemaLocation="../../structures/valutazioni_commenti.xsd">
-  <valutazione_commento id="2" data_ora="2024-02-01 17:05:08" id_votante="3" id_commento="5">
-    <utilita>3</utilita>
-    <livello_di_accordo>3</livello_di_accordo>
-  </valutazione_commento>
-  <valutazione_commento id="3" data_ora="2024-02-02 09:27:18" id_votante="3" id_commento="9">
-    <utilita>1</utilita>
-    <livello_di_accordo>3</livello_di_accordo>
-  </valutazione_commento>
-  <valutazione_commento id="4" data_ora="2024-02-02 09:27:28" id_votante="3" id_commento="8">
-    <utilita>1</utilita>
-    <livello_di_accordo>2</livello_di_accordo>
-  </valutazione_commento>
+<valutazioni_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/valutazioni_commenti.xsd">
+  
 </valutazioni_commenti>

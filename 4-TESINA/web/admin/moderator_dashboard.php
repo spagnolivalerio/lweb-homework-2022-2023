@@ -61,6 +61,8 @@
               $numCategorieProposte++;
           }
       }
+        $numProgetti = $numProgetti - $numCategorieProposte;
+
 
         $numSegnalazioni = 0;
         $segnalazioni_progetti = getAllSegnalazioniProgetto($root);

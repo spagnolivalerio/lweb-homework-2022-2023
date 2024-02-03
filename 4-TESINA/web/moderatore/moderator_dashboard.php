@@ -65,6 +65,8 @@
           }
       }
 
+         $numProgetti = $numProgetti - $numCategorieProposte;
+
         $numSegnalazioni = 0;
         $segnalazioni_progetti = getAllSegnalazioniProgetto($root);
         foreach($segnalazioni_progetti as $segnalazione_progetto){

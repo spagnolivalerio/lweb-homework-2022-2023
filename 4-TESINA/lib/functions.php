@@ -319,19 +319,19 @@ function calcolaReputazione($root, $id_utente, $conn){
                         $utilità = $valutazione_commento->getElementsByTagName('utilita')->item(0)->nodeValue;
                         $accordo = $valutazione_commento->getElementsByTagName('livello_di_accordo')->item(0)->nodeValue;
 
-                        if($utilità == 1){
-                            $reputazione -= 2;
-                        }elseif($utilità == 3){
-                            $reputazione += 2;
-                        }
-
                         if($accordo == 1){
                             $reputazione -= 2;
                         }elseif($accordo == 3){
                             $reputazione += 2;
-                        }elseif($accordo == 4){
+                        }
+
+                        if($utilità == 1){
+                            $reputazione -= 2;
+                        }elseif($utilità == 3){
+                            $reputazione += 2;
+                        }elseif($utilità == 4){
                             $reputazione += 4;
-                        }elseif($accordo == 5){
+                        }elseif($utilità == 5){
                             $reputazione += 6;
                         }
 

@@ -278,26 +278,26 @@
                 }elseif($flag && ($id_commentatore !== $id_utente)){
                   echo "            <form class=\"form-box\" action=\"../../lib/valuta_commento.php\" method=\"post\">\n";
                   echo "                <div class=\"rating\">\n";
-                  echo "                    <input type=\"radio\" name=\"rating\" value=\"5\" id=\"5_$id_commento\">\n";
+                  echo "                    <input type=\"radio\" name=\"utility\" value=\"5\" id=\"5_$id_commento\">\n";
                   echo "                    <label for=\"5_$id_commento\">&#9734;</label>\n";
-                  echo "                    <input type=\"radio\" name=\"rating\" value=\"4\" id=\"4_$id_commento\">\n";
+                  echo "                    <input type=\"radio\" name=\"utility\" value=\"4\" id=\"4_$id_commento\">\n";
                   echo "                    <label for=\"4_$id_commento\">&#9734;</label>\n";
-                  echo "                    <input type=\"radio\" name=\"rating\" value=\"3\" id=\"3_$id_commento\">\n";
+                  echo "                    <input type=\"radio\" name=\"utility\" value=\"3\" id=\"3_$id_commento\">\n";
                   echo "                    <label for=\"3_$id_commento\">&#9734;</label>\n";
-                  echo "                    <input type=\"radio\" name=\"rating\" value=\"2\" id=\"2_$id_commento\">\n";
+                  echo "                    <input type=\"radio\" name=\"utility\" value=\"2\" id=\"2_$id_commento\">\n";
                   echo "                    <label for=\"2_$id_commento\">&#9734;</label>\n";
-                  echo "                    <input type=\"radio\" name=\"rating\" value=\"1\" id=\"1_$id_commento\">\n";
+                  echo "                    <input type=\"radio\" name=\"utility\" value=\"1\" id=\"1_$id_commento\">\n";
                   echo "                    <label for=\"1_$id_commento\">&#9734;</label>\n";
-                  echo "                    <span class=\"type-rating\">Rating</span>\n";
+                  echo "                    <span class=\"type-rating\">Utilit&agrave;</span>\n";
                   echo "                </div>\n";
                   echo "                <div class=\"rr\">\n";
-                  echo "                    <label for=\"utility\"></label>\n";
-                  echo "                    <select name=\"utility\" id=\"utility\">\n";
-                  echo "                        <option value=\"1\">Per niente utile</option>\n";
+                  echo "                    <label for=\"rating\"></label>\n";
+                  echo "                    <select name=\"rating\" id=\"Rating\">\n";
+                  echo "                        <option value=\"1\">Per niente d'accordo</option>\n";
                   echo "                        <option value=\"2\">Indifferente</option>\n";
-                  echo "                        <option value=\"3\">Utile</option>\n";
+                  echo "                        <option value=\"3\">Completamente d'accordo</option>\n";
                   echo "                    </select>\n";
-                  echo "                    <span class=\"type-rating\">Utilit&agrave;</span>\n";
+                  echo "                    <span class=\"type-rating\">Accordo</span>\n";
                   echo "                </div>\n";
                   echo "                <input type=\"hidden\" name=\"id_commento\" value=\"$id_commento\"></input>\n";
                   echo "                <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
@@ -397,9 +397,9 @@
 
 ?>
           
-<?php
+          <?php
           echo "    <div class=\"review-box\">\n";
-          echo "    <div class=\"review-title\"><h2>RECENSIONI</h2></div>\n";
+          echo "    <div class=\"review-title\"><h2>RECENSIONI</h2></div>";
           foreach($valutazioni_progetto as $valutazione_progetto){
             $testo = $valutazione_progetto->getElementsByTagName('testo')->item(0)->nodeValue; 
             $value = $valutazione_progetto->getAttribute('value');
@@ -426,7 +426,6 @@
             echo "    </div>\n";
             echo "</div>\n";
           }
-
 
             foreach($discussioni as $discussione){
 

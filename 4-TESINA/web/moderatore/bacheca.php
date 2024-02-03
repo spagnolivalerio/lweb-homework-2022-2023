@@ -139,9 +139,11 @@
 
           foreach($progetti as $progetto){
 
+            $sospeso = $progetto->getAttribute('sospeso');
+
             $id_creator = $progetto->getAttribute('id_creator'); 
             
-            if($id_creator == $id_utente){
+            if($id_creator == $id_utente && $sospeso == "false"){
 
               $titolo = $progetto->getElementsByTagName('titolo')->item(0)->nodeValue;
               $categorie = $progetto->getElementsByTagName('categorie')->item(0); 

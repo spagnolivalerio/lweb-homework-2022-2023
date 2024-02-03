@@ -93,6 +93,7 @@ if(isset($_POST['id_vecchia_bozza'])){ //lo passa il form_progetto.php nel caso 
     
     foreach($steps_vecchia_bozza as $step_vecchia_bozza){
         $bozNewStep = $doc->createElement('step'); 
+        $bozNewStep->setAttribute('titolo_step', $step_vecchia_bozza->getAttribute('titolo_step')); 
         $bozNewStep->setAttribute('num_step', $step_vecchia_bozza->getAttribute('num_step')); 
         $bozNewStep->setAttribute('nome_file_img', $step_vecchia_bozza->getAttribute('nome_file_img')); 
         $bozStepDescrizione = $doc->createElement('descrizione', $step_vecchia_bozza->getElementsByTagName('descrizione')->item(0)->nodeValue);
