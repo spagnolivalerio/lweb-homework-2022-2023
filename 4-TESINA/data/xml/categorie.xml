@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<categorie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="5" xsi:noNamespaceSchemaLocation="../../structures/xsd/categorie.xsd">
-=======
-<categorie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="7" xsi:noNamespaceSchemaLocation="../../structures/xsd/categorie.xsd">
->>>>>>> 2f788540b7e4e840b21ebd2c342675ca74163540
+<categorie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="4" xsi:noNamespaceSchemaLocation="../../structures/xsd/categorie.xsd">
   <categoria id="1">
     <nomeCategoria>Informatica</nomeCategoria>
   </categoria>
@@ -15,11 +11,5 @@
   </categoria>
   <categoria id="4">
     <nomeCategoria>Domotica</nomeCategoria>
-  </categoria>
-  <categoria id="5">
-    <nomeCategoria>Riciclo Creativo</nomeCategoria>
-  </categoria>
-  <categoria id="7">
-    <nomeCategoria>Supermacchine</nomeCategoria>
   </categoria>
 </categorie>

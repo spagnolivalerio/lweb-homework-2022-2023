@@ -150,7 +150,7 @@
                     echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
                     echo "      </form>\n";
                   }else{
-                    echo "    <div class=\"card-user\">Accessibile al Livello ". $livello_richiesto ." </div>\n";
+                    echo "    <div>Accessibile al Livello ". $livello_richiesto ." </div>\n";
                   }
 
 

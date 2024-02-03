@@ -126,7 +126,7 @@
                   echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
                 echo "      </form>\n";
               }else{
-                echo "    <div class=\"card-user\">Effettua l'accesso per i dettagli</div>\n";
+                echo "    <div>Effettua l'accesso per i dettagli</div>\n";
               }
 
               echo "    </div>\n";
