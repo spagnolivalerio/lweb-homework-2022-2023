@@ -3,9 +3,19 @@
   <storico id_utente="1">
     <progetti/>
     <richieste/>
-    <commenti/>
+    <commenti>
+      <commento id_commento="3" data_ora="2024-02-03 16:53:46" id_discussione="1">
+        <testo>rsg</testo>
+      </commento>
+      <commento id_commento="4" data_ora="2024-02-03 16:55:55" id_discussione="1">
+        <testo>5e</testo>
+      </commento>
+    </commenti>
     <valutazioni_progetti/>
-    <reports_progetti/>
+    <reports_progetti>
+      <report_progetto id_report="1" tipo="spam" data_ora="2024-02-03 16:40:18" id_progetto="1" publisher="daniele" titolo="Lampada da Tavolo Riciclata"/>
+      <report_progetto id_report="4" tipo="spam" data_ora="2024-02-03 16:52:00" id_progetto="4" publisher="moderatore1" titolo="d"/>
+    </reports_progetti>
     <reports_commenti/>
     <discussioni/>
     <valutazioni_commenti/>
@@ -21,16 +31,57 @@
     <valutazioni_commenti/>
   </storico>
   <storico id_utente="3">
-    <progetti/>
+    <progetti>
+      <progetto titolo="d" data_ora="2024-02-03 16:51:42" id_progetto="4"/>
+      <progetto titolo="tr" data_ora="2024-02-03 17:03:42" id_progetto="5"/>
+      <progetto titolo="gf" data_ora="2024-02-03 17:10:23" id_progetto="6"/>
+      <progetto titolo="fe" data_ora="2024-02-03 17:11:07" id_progetto="7"/>
+      <progetto titolo="sw" data_ora="2024-02-03 17:25:21" id_progetto="8"/>
+      <progetto titolo="ws" data_ora="2024-02-03 17:26:17" id_progetto="9"/>
+      <progetto titolo="w" data_ora="2024-02-03 17:31:53" id_progetto="10"/>
+      <progetto titolo="dwa" data_ora="2024-02-03 17:34:29" id_progetto="11"/>
+    </progetti>
     <richieste/>
-    <commenti/>
+    <commenti>
+      <commento id_commento="2" data_ora="2024-02-03 16:27:11" id_discussione="1">
+        <testo>Bro, la nastro azzurro molto meglio, mo ti segnalo</testo>
+      </commento>
+    </commenti>
+    <valutazioni_progetti/>
+    <reports_progetti>
+      <report_progetto id_report="2" tipo="spam" data_ora="2024-02-03 16:44:50" id_progetto="2" publisher="utentestd1" titolo="dfs"/>
+      <report_progetto id_report="3" tipo="spam" data_ora="2024-02-03 16:50:13" id_progetto="3" publisher="utentestd1" titolo="w"/>
+    </reports_progetti>
+    <reports_commenti>
+      <report_commento id_report="1" tipo="Contenuti inappropriati" data_ora="2024-02-03 16:27:28" id_commento="1" commentatore="utentestd1"/>
+      <report_commento id_report="2" tipo="spam" data_ora="2024-02-03 16:56:47" id_commento="5" commentatore="utentestd1"/>
+    </reports_commenti>
+    <discussioni/>
+    <valutazioni_commenti/>
+  </storico>
+  <storico id_utente="4">
+    <progetti>
+      <progetto titolo="dfs" data_ora="2024-02-03 16:44:29" id_progetto="2"/>
+      <progetto titolo="w" data_ora="2024-02-03 16:49:57" id_progetto="3"/>
+    </progetti>
+    <richieste>
+      <richiesta id_richiesta="1" data_ora="2024-02-03 16:25:28" id_discussione="1" testo=""/>
+    </richieste>
+    <commenti>
+      <commento id_commento="1" data_ora="2024-02-03 16:26:28" id_discussione="1">
+        <testo>Secondo me la bottiglia vabene quella della peroni, la birra degli mbriaconi</testo>
+      </commento>
+      <commento id_commento="5" data_ora="2024-02-03 16:56:24" id_discussione="1">
+        <testo>rdatg</testo>
+      </commento>
+    </commenti>
     <valutazioni_progetti/>
     <reports_progetti/>
     <reports_commenti/>
     <discussioni/>
     <valutazioni_commenti/>
   </storico>
-  <storico id_utente="4">
+  <storico id_utente="6">
     <progetti/>
     <richieste/>
     <commenti/>
@@ -41,19 +92,21 @@
     <valutazioni_commenti/>
   </storico>
   <storico id_utente="5">
-    <progetti/>
+    <progetti>
+      <progetto titolo="Lampada da Tavolo Riciclata" data_ora="2024-02-03 11:05:07" id_progetto="1"/>
+    </progetti>
     <richieste/>
     <commenti/>
     <valutazioni_progetti/>
     <reports_progetti/>
     <reports_commenti/>
-    <discussioni/>
+    <discussioni>
+      <discussione id_discussione="1" data_ora="2024-02-03 16:25:03" titolo="Bottiglia"/>
+    </discussioni>
     <valutazioni_commenti/>
   </storico>
-  <storico id_utente="6">
-    <progetti>
-      <progetto titolo="Lampada da Tavolo Riciclata" data_ora="2024-02-03 11:05:07" id_progetto="1"/>
-    </progetti>
+  <storico id_utente="5">
+    <progetti/>
     <richieste/>
     <commenti/>
     <valutazioni_progetti/>

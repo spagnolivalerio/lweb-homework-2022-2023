@@ -105,13 +105,13 @@ if (!isset($_POST['id_progetto']) && (isset($_GET['id_progetto']) ) ) {
 
 
 
-echo "<form class=\"form-container\" action=\"../../lib/modifica_specifiche_progetto.php\" method=\"post\">\n";
+echo "<div class=\"form-container\">";
+echo "<form action=\"../../lib/modifica_specifiche_progetto.php\" method=\"post\">\n";
 echo "    <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\">\n";
 echo "    <label class=\"form-label\" for=\"clearance\">Clearance</label>\n"; 
 echo "    <input class=\"form-input\" type=\"number\" name=\"clearance\" min=\"1\" max=\"5\" value=\"" . $clearance . "\">\n";
 echo "    <label class=\"form-label\" for=\"durata\">Durata (min)</label>\n"; 
 echo "    <input class=\"form-input\" type=\"number\" name=\"durata\" value=\"" . $durata . "\">\n";
-
 echo "    <label class=\"form-label\" for=\"difficoltà\">Difficoltà: </label>\n";
 echo "    <select class=\"form-input\" id=\"difficoltà\" name=\"difficoltà\" required>\n";
 echo "        <option value=\"facile\"" . ($difficoltà == 'facile' ? ' selected' : '') . ">Facile</option>\n";
@@ -120,7 +120,13 @@ echo "        <option value=\"difficile\"" . ($difficoltà == 'difficile' ? ' se
 echo "    </select>\n";
 echo "    <br>\n";
 echo "    <button class=\"form-button\" type=\"submit\">Modifica</button>\n";
-echo "</form>\n";
+echo " </form>\n";
+echo " <form  action=\"../../lib/rimuovere_progetto.php?goto=homepage\" method=\"post\">\n";
+echo "    <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>";
+echo "    <button class=\"form-button bg-red\" type=\"submit\">Elimina</button>\n";
+echo " </form>\n";
+echo " </div>\n";
+
 
 
 ?>

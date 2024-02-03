@@ -66,7 +66,7 @@
             echo "        <table class=\"tabella\">\n";
             echo "          <thead>\n";
             echo "            <tr>\n";
-            echo "              <th>UTENTE SEGANALATO</th>\n";
+            echo "              <th>UTENTE SEGNALATO</th>\n";
             echo "              <th>CONTRIBUTO</th>\n";
             echo "              <th>TESTO DELLA SEGNALAZIONE</th>\n";
             echo "              <th>TIPOLOGIA</th>\n";
@@ -96,10 +96,10 @@
                 echo "              <td>". $data ."</td>\n";
                 echo "              <td class=\"tools\">\n";
                 echo "                <form class=\"search\" action=\"view.php\" method=\"get\">\n";
-                echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\">\n";
+                echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto ."\">\n";
                 echo "                  <button type=\"submit\">&#128269;</button>\n";
                 echo "                </form>\n";
-                echo "                <form class=\"r-contenuto\" action=\"../../lib/rimuovere_progetto.php\" method=\"post\">\n";
+                echo "                <form class=\"r-contenuto\" action=\"../../lib/rimuovere_progetto.php?goto=view_segnalazioni\" method=\"post\">\n";
                 echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\">\n";
                 echo "                  <button type=\"submit\">Rimuovi Contenuto</button>\n";
                 echo "                </form>\n";
@@ -128,9 +128,7 @@
                   $reported_user = $commento->getAttribute('commentatore');
                   $id_discussione = $commento->getAttribute('id_discussione');
                   $discussione = getDiscussione($root, $id_discussione);
-                  $id_progetto = $commento->getAttribute('id_progetto');
-
-            
+                  $id_progetto = $discussione->getAttribute('id_progetto');
 
                   echo "            <tr>\n";
                   echo "              <td>". $reported_user ."</td>\n";
@@ -143,7 +141,7 @@
                   echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\">\n";
                   echo "                  <button type=\"submit\">&#128269;</button>\n";
                   echo "                </form>\n";
-                  echo "                <form class=\"r-contenuto\" action=\"../../lib/rimuovere_commento.php\" method=\"post\">\n";
+                  echo "                <form class=\"r-contenuto\" action=\"../../lib/rimuovere_commento.php?goto=view_segnalazioni\" method=\"post\">\n";
                   echo "                  <input type=\"hidden\" name=\"id_commento\" value=\"" . $id_commento . "\">\n";
                   echo "                  <input type=\"hidden\" name=\"id_discussione\" value=\"" . $id_discussione . "\">\n";
                   echo "                  <input type=\"hidden\" name=\"id_progetto\"  value=\" . $id_progetto . \">\n";

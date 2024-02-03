@@ -86,7 +86,11 @@ foreach ($nodes as $node) {
 $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 updateAllUsers($radice, $conn);
 
-$url = "../web/" . $_SESSION['Tipo_utente'] . "/homepage.php?id_progetto=" . $id_progetto;
+if(isset($_GET['goto']) && $_GET['goto'] == "view_segnalazioni"){
+    $url = "../web/" . $_SESSION['Tipo_utente'] . "/view_segnalazioni.php";
+}else{
+    $url = "../web/" . $_SESSION['Tipo_utente'] . "/view.php?id_progetto=" . $id_progetto;
+}
 header("Location: $url");
 exit;
 

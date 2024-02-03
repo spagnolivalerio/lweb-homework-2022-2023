@@ -16,7 +16,13 @@ $xmlFile = "../data/xml/progetti.xml";
 $doc = getDOMdocument($xmlFile);
 $xpath = new DOMXPath($doc);
 
-$img_path = $xpath->query("/progetti/progetto[@id = '$id_progetto']")->item(0)->getAttribute('nome_file_img');
+$img_path = $radice .  $xpath->query("/progetti/progetto[@id = '$id_progetto']")->item(0)->getAttribute('nome_file_img');
+
+//RIMUOVI IMMAGINE
+
+if (file_exists($img_path)) {
+    unlink($img_path);
+}
 
 //RIMUOVI DA PROGETTI.XML
 
@@ -27,6 +33,18 @@ remove_1_1($xmlFile, $query, $id_progetto);
 
 $xmlFile = "../data/xml/tutorials.xml";
 $query = "/tutorials_progetti/tutorial_progetto[@id";
+
+$doc = getDOMdocument($xmlFile);
+$xpath = new DOMXPath($doc);
+
+$steps = $xpath->query("/tutorials_progetti/tutorial_progetto[@id=" . $id_progetto ."]")->item(0)->getElementsByTagName('step');
+foreach($steps as $step){
+    $img_path = $radice . $step->getAttribute('nome_file_img');
+    if (file_exists($img_path)) {
+    unlink($img_path);
+    }
+}
+
 remove_1_1($xmlFile, $query, $id_progetto);
 
 //RIMUOVI DA REPORTS_PROGETTI.XML
@@ -71,16 +89,14 @@ $xmlFile = "../data/xml/valutazioni_commenti.xml";
 $query = "/valutazioni_commenti/valutazione_commento[@id_commenti";
 remove_1_2n($xmlFile, $query, $id_commenti);
 
-//RIMUOVI IMMAGINE
-
-if (file_exists($img_path)) {
-    unlink($img_path);
-}
-
 $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 updateAllUsers($radice, $conn);
 
-$url = "../web/" . $_SESSION['Tipo_utente'] . "/bacheca.php";
+if(isset($_GET['goto']) && !empty($_GET['goto'])){
+    $url = "../web/" . $_SESSION['Tipo_utente'] . "/" . $_GET['goto'] . ".php";
+}else{
+    $url = "../web/" . $_SESSION['Tipo_utente'] . "/bacheca.php";
+}
 header("Location: $url");
 exit;
 
