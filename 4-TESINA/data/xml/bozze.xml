@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="19" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
-  <bozza sospeso="false" id="18" titolo="bxdf" id_creator="4" tempo_medio="1" data_pubblicazione="2024-02-03 17:39:12" difficolta="facile" clearance="1" nome_file_img="img/proj/img_proj_65be6c30a7db5.jpg">
+<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="31" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
+  <bozza sospeso="false" id="28" titolo="ef" id_creator="3" tempo_medio="1" data_pubblicazione="2024-02-03 18:12:37" difficolta="facile" clearance="1" nome_file_img="">
     <categorie>
       <categoria id_categoria="1"/>
     </categorie>
     <categoriaProposta/>
-    <descrizione>bxf</descrizione>
+    <descrizione>esf</descrizione>
     <tutorial_bozza>
-      <step titolo_step="1" nome_file_img="img/steps/img_step_65be6c34b78e1.jpg" num_step="1">
-        <descrizione>1</descrizione>
+      <step titolo_step="wrewe" num_step="1" nome_file_img="img/steps/img_step_65be7358de113.webp">
+        <descrizione>werwe</descrizione>
+      </step>
+      <step titolo_step="asd" num_step="3" nome_file_img="img/steps/img_step_65be73488789b.webp">
+        <descrizione>asdsd</descrizione>
+      </step>
+      <step titolo_step="w" num_step="4" nome_file_img="img/steps/img_step_65be6cf8c7767.jpg">
+        <descrizione>wd</descrizione>
+      </step>
+      <step titolo_step="s" num_step="5" nome_file_img="img/steps/img_step_65be6d156760e.jpg">
+        <descrizione>s</descrizione>
       </step>
     </tutorial_bozza>
   </bozza>
-  <bozza sospeso="false" id="19" titolo="ef" id_creator="3" tempo_medio="1" data_pubblicazione="2024-02-03 17:39:52" difficolta="facile" clearance="1" nome_file_img="">
+  <bozza sospeso="false" id="31" titolo="ef" id_creator="3" tempo_medio="1" data_pubblicazione="2024-02-03 18:17:02" difficolta="facile" clearance="1" nome_file_img="">
     <categorie>
       <categoria id_categoria="1"/>
     </categorie>
@@ -22,11 +31,8 @@
       <step titolo_step="es" num_step="1" nome_file_img="img/steps/img_step_65be6ba89b388.jpg">
         <descrizione>s&lt;g</descrizione>
       </step>
-      <step titolo_step="w" nome_file_img="img/steps/img_step_65be6cf8c7767.jpg" num_step="2">
-        <descrizione>wd</descrizione>
-      </step>
-      <step titolo_step="s" nome_file_img="img/steps/img_step_65be6d156760e.jpg" num_step="3">
-        <descrizione>s</descrizione>
+      <step titolo_step="asd" nome_file_img="img/steps/img_step_65be751958ad6.webp" num_step="2">
+        <descrizione>&gt;</descrizione>
       </step>
     </tutorial_bozza>
   </bozza>
