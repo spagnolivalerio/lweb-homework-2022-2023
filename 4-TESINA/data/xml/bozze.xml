@@ -1,2 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="5" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd"/>
+=======
+<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="60" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
+  <bozza sospeso="false" id="15" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-01-31 17:35:09" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="17" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-01-31 17:48:54" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza>
+      <step num_step="1" nome_file_img="img/steps/img_step_65ba79055d1d5.jpg">
+        <descrizione>descrizione con paragrafi.&lt;br /&gt;&#13;prova aaa aaaa  aaaa-aabn, ciaoi&lt;br /&gt;&#13;lol bro aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ekuasbfiosueb&lt;br /&gt;&#13;kek</descrizione>
+      </step>
+      <step num_step="2" nome_file_img="img/steps/img_step_65ba79481c30e.png">
+        <descrizione>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</descrizione>
+      </step>
+    </tutorial_bozza>
+  </bozza>
+  <bozza sospeso="false" id="18" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-01-31 17:54:05" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="23" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-02-01 12:28:16" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="25" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-02-01 14:35:14" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="28" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-02-02 10:00:41" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="31" titolo="" id_creator="4" tempo_medio="" data_pubblicazione="2024-02-02 15:44:39" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza>
+      <step titolo_step="dq" nome_file_img="img/steps/img_step_65bcffe3dd2f6.jpg" num_step="1">
+        <descrizione>lih</descrizione>
+      </step>
+    </tutorial_bozza>
+  </bozza>
+  <bozza sospeso="false" id="40" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-02 19:04:09" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="42" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-02 19:05:18" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="44" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-02 19:05:35" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza>
+      <step num_step="1" nome_file_img="img/steps/img_step_65bd2eebba52a.jpg">
+        <descrizione>asdasdads</descrizione>
+      </step>
+    </tutorial_bozza>
+  </bozza>
+  <bozza sospeso="false" id="47" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-02 19:06:41" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza>
+      <step num_step="1" nome_file_img="img/steps/img_step_65bd2f27e93f6.jpg">
+        <descrizione>dhdfhdf</descrizione>
+      </step>
+    </tutorial_bozza>
+  </bozza>
+  <bozza sospeso="false" id="48" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-02 19:06:52" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="49" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-02 19:07:03" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="54" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-02 19:08:03" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza>
+      <step titolo_step="AOFRA" nome_file_img="img/steps/img_step_65bd2f89dfc12.jpg" num_step="1">
+        <descrizione>asdasdasd</descrizione>
+      </step>
+    </tutorial_bozza>
+  </bozza>
+  <bozza sospeso="false" id="57" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-02 19:09:25" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza>
+      <step num_step="1" nome_file_img="img/steps/img_step_65bd2ea89d937.jpg">
+        <descrizione>sdfsdfsdf</descrizione>
+      </step>
+    </tutorial_bozza>
+  </bozza>
+  <bozza sospeso="false" id="59" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-02 19:14:56" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza>
+      <step num_step="1" nome_file_img="img/steps/img_step_65bb6782b5a7f.jpg">
+        <descrizione>ooo</descrizione>
+      </step>
+    </tutorial_bozza>
+  </bozza>
+  <bozza sospeso="false" id="60" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-03 00:42:56" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+</bozze>
+>>>>>>> 2f788540b7e4e840b21ebd2c342675ca74163540
