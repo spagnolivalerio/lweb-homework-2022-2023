@@ -98,9 +98,7 @@ if(isset($_POST['id_vecchia_bozza'])){ //lo passa il form_progetto.php nel caso 
         $bozNewStep->setAttribute('nome_file_img', $step_vecchia_bozza->getAttribute('nome_file_img')); 
         $bozStepDescrizione = $doc->createElement('descrizione', $step_vecchia_bozza->getElementsByTagName('descrizione')->item(0)->nodeValue);
         $bozNewStep->appendChild($bozStepDescrizione); 
-
         $bozTutorial->appendChild($bozNewStep);
-
     }
 
     $doc->formatOutput = true;

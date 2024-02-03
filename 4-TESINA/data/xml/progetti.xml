@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="1" username_creator="daniele" id_creator="6" tempo_medio="120" data_pubblicazione="2024-02-03 11:05:07" visualizzazioni="9" nome_file_img="img/proj/img_proj_65be0fd03fc95.webp" difficolta="facile" clearance="1" sospeso="false">
+    <titolo>Lampada da Tavolo Riciclata</titolo>
+    <categorie>
+      <categoria id_categoria="5"/>
+    </categorie>
+    <descrizione>Il progetto della lampada da tavolo riciclata trasforma una semplice bottiglia di vetro in un elegante oggetto d'arredo. Inizia con la raccolta di materiali quali una bottiglia di vetro, un kit per cablaggio elettrico, una lampadina a LED, carta vetrata e vernice spray. Il processo include il taglio della base della bottiglia per inserirvi il kit elettrico, la verniciatura della bottiglia per un tocco di personalizzazione, e l'assemblaggio finale che culmina con l'aggiunta di una lampadina a LED e un paralume. Questo progetto fai da te non solo promuove il riciclo creativo, ma offre anche l'opportunità di creare un'illuminazione accogliente e personalizzata per qualsiasi ambiente.</descrizione>
+    <categoriaProposta>Riciclo Creativo</categoriaProposta>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="1"/>
+    <valutazioni/>
+  </progetto>
 </progetti>

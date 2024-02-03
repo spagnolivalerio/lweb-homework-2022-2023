@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="0">
-  
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="1">
+  <tutorial_progetto id="1" id_progetto="1">
+    <step titolo_step="Raccolta dei Materiali" num_step="1" nome_file_img="img/steps/img_step_65be0f218af77.webp">
+      <descrizione>Vecchie bottiglie di vetro, un kit per cablaggio elettrico per lampade, una lampadina a LED, carta vetrata, e vernice spray.</descrizione>
+    </step>
+    <step titolo_step="Preparazione della Bottiglia" num_step="2" nome_file_img="img/steps/img_step_65be0f3244f21.webp">
+      <descrizione>Tagliare la base della bottiglia di vetro con un tagliavetro e levigare i bordi con la carta vetrata per evitare spigoli vivi.</descrizione>
+    </step>
+    <step titolo_step="Verniciatura della Bottiglia" num_step="3" nome_file_img="img/steps/img_step_65be0f46da9cc.webp">
+      <descrizione>Utilizzare la vernice spray per colorare la bottiglia nel colore desiderato. Lasciare asciugare completamente.</descrizione>
+    </step>
+    <step titolo_step="Installazione del Kit Elettrico" num_step="4" nome_file_img="img/steps/img_step_65be0f66ca52c.webp">
+      <descrizione>Assemblare il kit elettrico per lampade seguendo le istruzioni del produttore e inserirlo nella bottiglia preparata.</descrizione>
+    </step>
+    <step titolo_step="Aggiunta della Lampadina e del Paralume" num_step="5" nome_file_img="img/steps/img_step_65be0f804437b.webp">
+      <descrizione>Avvitare una lampadina a LED nel supporto e aggiungere un paralume di stile corrispondente.</descrizione>
+    </step>
+  </tutorial_progetto>
 </tutorials_progetti>
