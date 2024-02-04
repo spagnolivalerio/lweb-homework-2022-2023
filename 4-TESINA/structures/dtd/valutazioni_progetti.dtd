@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT valutazioni (valutazione_progetto*)>
+<!ATTLIST valutazioni ultimo_id CDATA #REQUIRED>
+
+<!ELEMENT valutazione_progetto (testo)>
+<!ATTLIST valutazione_progetto
+          id ID #REQUIRED
+          id_progetto ID #REQUIRED
+          value CDATA #REQUIRED
+          id_votante ID #REQUIRED
+          data_ora CDATA #REQUIRED>
+
+<!ELEMENT testo (#PCDATA)>

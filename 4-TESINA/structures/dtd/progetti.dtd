@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT progetti (progetto*)>
+<!ATTLIST progetti ultimo_id CDATA #REQUIRED>
+
+<!ELEMENT progetto (titolo, categorie, categoriaProposta?, descrizione, reports_progetti, discussioni, tutorial_progetto?, valutazioni)>
+<!ATTLIST progetto 
+          id CDATA #REQUIRED
+          id_creator CDATA #REQUIRED
+          tempo_medio CDATA #REQUIRED
+          data_pubblicazione CDATA #REQUIRED
+          visualizzazioni CDATA #REQUIRED
+          nome_file_img CDATA #REQUIRED
+          difficolta (facile|medio|difficile) #REQUIRED
+          username_creator CDATA #REQUIRED
+          clearance CDATA #REQUIRED
+          sospeso (true|false) "false">
+
+<!ELEMENT titolo (#PCDATA)>
+<!ELEMENT descrizione (#PCDATA)>
+<!ELEMENT categoriaProposta (#PCDATA)>
+<!ELEMENT tutorial_progetto EMPTY>
+<!ATTLIST tutorial_progetto id_tutorial CDATA #REQUIRED>
+
+<!ELEMENT categorie (categoria+)>
+<!ELEMENT categoria EMPTY>
+<!ATTLIST categoria id_categoria ID #REQUIRED>
+
+<!ELEMENT reports_progetti (report_progetto*)>
+<!ELEMENT report_progetto EMPTY>
+<!ATTLIST report_progetto id_report CDATA #REQUIRED>
+
+<!ELEMENT discussioni (discussione?)>
+<!ELEMENT discussione EMPTY>
+<!ATTLIST discussione id_discussione CDATA #REQUIRED>
+
+<!ELEMENT valutazioni (valutazione*)>
+<!ELEMENT valutazione EMPTY>
+<!ATTLIST valutazione id_valutazione CDATA #REQUIRED>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT commenti (commento*)>
+<!ATTLIST commenti ultimo_id CDATA #REQUIRED>
+
+<!ELEMENT commento (testo, reports_commento, valutazioni_commento)>
+<!ATTLIST commento 
+          id ID #REQUIRED
+          id_commentatore ID #REQUIRED
+          commentatore CDATA #REQUIRED
+          id_discussione ID #REQUIRED
+          data_ora CDATA #REQUIRED>
+
+<!ELEMENT testo (#PCDATA)>
+
+<!ELEMENT reports_commento (report_commento*)>
+<!ELEMENT report_commento EMPTY>
+<!ATTLIST report_commento id_report ID #REQUIRED>
+
+<!ELEMENT valutazioni_commento (valutazione_commento*)>
+<!ELEMENT valutazione_commento EMPTY>
+<!ATTLIST valutazione_commento id_valutazione_commento ID #REQUIRED>

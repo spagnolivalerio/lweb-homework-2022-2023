@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT reports_commenti (report_commento*)>
+<!ATTLIST reports_commenti ultimo_id CDATA #REQUIRED>
+
+<!ELEMENT report_commento (tipo, testo)>
+<!ATTLIST report_commento
+          id ID #REQUIRED
+          id_utente ID #REQUIRED
+          id_commento ID #REQUIRED
+          data_ora CDATA #REQUIRED>
+
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT testo (#PCDATA)>

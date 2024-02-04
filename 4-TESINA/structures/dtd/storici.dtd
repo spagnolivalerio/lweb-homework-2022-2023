@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT storici (storico*)>
+<!ATTLIST storici ultimo_id CDATA #REQUIRED>
+
+<!ELEMENT storico (progetti, richieste, commenti, valutazioni_progetti, reports_progetti, reports_commenti, discussioni, valutazioni_commenti)>
+<!ATTLIST storico id_utente ID #REQUIRED>
+
+<!ELEMENT progetti (progetto*)>
+
+<!ELEMENT progetto EMPTY>
+<!ATTLIST progetto 
+          id_progetto ID #REQUIRED
+          titolo CDATA #REQUIRED
+          data_ora CDATA #REQUIRED>
+
+<!ELEMENT richieste (richiesta*)>
+
+<!ELEMENT richiesta EMPTY>
+<!ATTLIST richiesta 
+          id_richiesta ID #REQUIRED
+          id_discussione ID #REQUIRED
+          data_ora CDATA #REQUIRED
+          titolo CDATA #REQUIRED>
+
+<!ELEMENT commenti (commento*)>
+
+<!ELEMENT commento EMPTY>
+<!ATTLIST commento 
+          id_commento ID #REQUIRED
+          id_discussione ID #REQUIRED
+          data_ora CDATA #REQUIRED>
+
+<!ELEMENT valutazioni_progetti (valutazione_progetto*)>
+
+<!ELEMENT valutazione_progetto EMPTY>
+<!ATTLIST valutazione_progetto 
+          id_valutazione ID #REQUIRED
+          data_ora CDATA #REQUIRED
+          id_progetto ID #REQUIRED
+          value CDATA #REQUIRED>
+
+<!ELEMENT valutazioni_commenti (valutazione_commento*)>
+
+<!ELEMENT valutazione_commento (utilita?, livello_di_accordo?)>
+<!ATTLIST valutazione_commento 
+          id_valutazione ID #REQUIRED
+          data_ora CDATA #REQUIRED
+          id_progetto ID #REQUIRED
+          id_commento ID #REQUIRED>
+
+<!ELEMENT utilita (#PCDATA)>
+<!ELEMENT livello_di_accordo (#PCDATA)>
+
+<!ELEMENT reports_progetti (report_progetto*)>
+
+<!ELEMENT report_progetto EMPTY>
+<!ATTLIST report_progetto 
+          id_report ID #REQUIRED
+          id_progetto ID #REQUIRED
+          data_ora CDATA #REQUIRED
+          tipo CDATA #REQUIRED
+          publisher CDATA #REQUIRED
+          titolo CDATA #REQUIRED>
+
+<!ELEMENT reports_commenti (report_commento*)>
+
+<!ELEMENT report_commento EMPTY>
+<!ATTLIST report_commento 
+          id_report ID #REQUIRED
+          id_commento ID #REQUIRED
+          data_ora CDATA #REQUIRED
+          tipo CDATA #REQUIRED
+          commentatore CDATA #REQUIRED>
+
+<!ELEMENT discussioni (discussione*)>
+
+<!ELEMENT discussione EMPTY>
+<!ATTLIST discussione 
+          id_discussione ID #REQUIRED
+          data_ora CDATA #REQUIRED
+          titolo CDATA #REQUIRED>

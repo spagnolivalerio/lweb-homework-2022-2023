@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT reports_progetti (report_progetto*)>
+<!ATTLIST reports_progetti ultimo_id CDATA #REQUIRED>
+
+<!ELEMENT report_progetto (tipo, testo)>
+<!ATTLIST report_progetto
+          id ID #REQUIRED
+          id_utente ID #REQUIRED
+          id_progetto ID #REQUIRED
+          data_ora CDATA #REQUIRED>
+
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT testo (#PCDATA)>

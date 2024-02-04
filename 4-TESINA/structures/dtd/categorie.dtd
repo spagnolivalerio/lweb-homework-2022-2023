@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT categorie (categoria*)>
+<!ATTLIST categorie ultimo_id CDATA #REQUIRED>
+
+<!ELEMENT categoria (nomeCategoria)>
+<!ATTLIST categoria id ID #REQUIRED>
+
+<!ELEMENT nomeCategoria (#PCDATA)>

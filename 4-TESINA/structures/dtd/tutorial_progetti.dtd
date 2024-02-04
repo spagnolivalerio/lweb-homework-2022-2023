@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT tutorials_progetti (tutorial_progetto)>
+<!ELEMENT tutorial_progetto (step+)>
+<!ATTLIST tutorial_progetto id_progetto ID #REQUIRED>
+
+<!ELEMENT step (descrizione)>
+<!ATTLIST step 
+          titolo_step CDATA #REQUIRED
+          num_step ID #REQUIRED
+          nome_file_img CDATA #REQUIRED>
+
+<!ELEMENT descrizione (#PCDATA)>

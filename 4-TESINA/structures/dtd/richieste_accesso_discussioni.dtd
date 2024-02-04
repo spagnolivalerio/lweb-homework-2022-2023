@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT richieste (richiesta*)>
+<!ATTLIST richieste ultimo_id CDATA #REQUIRED>
+
+<!ELEMENT richiesta (moderatore?)>
+<!ATTLIST richiesta
+          id ID #REQUIRED
+          id_utente ID #REQUIRED
+          id_discussione ID #REQUIRED
+          data_ora CDATA #REQUIRED
+          stato (accettata|rifiutata|in lavorazione) #REQUIRED>
+
+<!ELEMENT moderatore EMPTY>
+<!ATTLIST moderatore
+          username CDATA #REQUIRED
+          id_mod ID #REQUIRED>
