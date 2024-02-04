@@ -81,7 +81,8 @@ $doc->formatOutput = true;
 $xmlString = $doc->saveXML();
 file_put_contents($xmlFile, $xmlString);
 
-header('Location: ../web/' . $_SESSION['Tipo_utente'] . '/anteprima_tutorial.php');
+$url = "../web/" . $_SESSION['Tipo_utente'] . "/anteprima_tutorial.php";
+header("Location: $url");
 exit;
 
 ?>

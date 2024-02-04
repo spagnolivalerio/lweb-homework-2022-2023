@@ -5,10 +5,10 @@
     <richieste/>
     <commenti>
       <commento id_commento="3" data_ora="2024-02-03 16:53:46" id_discussione="1">
-        <testo>rsg</testo>
+        <testo>testo</testo>
       </commento>
       <commento id_commento="4" data_ora="2024-02-03 16:55:55" id_discussione="1">
-        <testo>5e</testo>
+        <testo>testo</testo>
       </commento>
     </commenti>
     <valutazioni_progetti/>
@@ -45,10 +45,15 @@
     <richieste/>
     <commenti>
       <commento id_commento="2" data_ora="2024-02-03 16:27:11" id_discussione="1">
-        <testo>Bro, la nastro azzurro molto meglio, mo ti segnalo</testo>
+        <testo>testo</testo>
+      </commento>
+      <commento id_commento="6" data_ora="2024-02-04 09:37:18" id_discussione="1">
+        <testo>No assolutamente, va bene qualsiasi</testo>
       </commento>
     </commenti>
-    <valutazioni_progetti/>
+    <valutazioni_progetti>
+      <valutazione_progetto id_valutazione="1" id_progetto="1" data_ora="2024-02-04 09:35:27" value="5"/>
+    </valutazioni_progetti>
     <reports_progetti>
       <report_progetto id_report="2" tipo="spam" data_ora="2024-02-03 16:44:50" id_progetto="2" publisher="utentestd1" titolo="dfs"/>
       <report_progetto id_report="3" tipo="spam" data_ora="2024-02-03 16:50:13" id_progetto="3" publisher="utentestd1" titolo="w"/>
@@ -76,12 +81,24 @@
       <commento id_commento="5" data_ora="2024-02-03 16:56:24" id_discussione="1">
         <testo>rdatg</testo>
       </commento>
+      <commento id_commento="7" data_ora="2024-02-04 10:25:44" id_discussione="1">
+        <testo>grazie mille</testo>
+      </commento>
     </commenti>
     <valutazioni_progetti/>
-    <reports_progetti/>
-    <reports_commenti/>
+    <reports_progetti>
+      <report_progetto id_report="5" tipo="Contenuti inappropriati" data_ora="2024-02-04 09:40:49" id_progetto="1" publisher="daniele" titolo="Lampada da Tavolo Riciclata"/>
+    </reports_progetti>
+    <reports_commenti>
+      <report_commento id_report="3" tipo="Contenuti inesatti" data_ora="2024-02-04 09:39:37" id_commento="6" commentatore="moderatore1"/>
+    </reports_commenti>
     <discussioni/>
-    <valutazioni_commenti/>
+    <valutazioni_commenti>
+      <valutazione_commento id_valutazione="1" data_ora="2024-02-04 09:37:40" id_commento="6" id_progetto="1">
+        <utilita>5</utilita>
+        <livello_di_accordo>2</livello_di_accordo>
+      </valutazione_commento>
+    </valutazioni_commenti>
   </storico>
   <storico id_utente="6">
     <progetti/>

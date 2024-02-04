@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="31" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
-  <bozza sospeso="false" id="28" titolo="ef" id_creator="3" tempo_medio="1" data_pubblicazione="2024-02-03 18:12:37" difficolta="facile" clearance="1" nome_file_img="">
+<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="34" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
+  <bozza sospeso="false" id="33" titolo="ef" id_creator="3" tempo_medio="1" data_pubblicazione="2024-02-04 10:49:27" difficolta="facile" clearance="1" nome_file_img="">
     <categorie>
       <categoria id_categoria="1"/>
     </categorie>
@@ -10,18 +10,21 @@
       <step titolo_step="wrewe" num_step="1" nome_file_img="img/steps/img_step_65be7358de113.webp">
         <descrizione>werwe</descrizione>
       </step>
-      <step titolo_step="asd" num_step="3" nome_file_img="img/steps/img_step_65be73488789b.webp">
+      <step titolo_step="asd" num_step="2" nome_file_img="img/steps/img_step_65be73488789b.webp">
         <descrizione>asdsd</descrizione>
       </step>
-      <step titolo_step="w" num_step="4" nome_file_img="img/steps/img_step_65be6cf8c7767.jpg">
+      <step titolo_step="w" num_step="3" nome_file_img="img/steps/img_step_65be6cf8c7767.jpg">
         <descrizione>wd</descrizione>
+      </step>
+      <step titolo_step="sd" nome_file_img="img/steps/img_step_65bf5db3ab82c.webp" num_step="4">
+        <descrizione>asdas</descrizione>
       </step>
       <step titolo_step="s" num_step="5" nome_file_img="img/steps/img_step_65be6d156760e.jpg">
         <descrizione>s</descrizione>
       </step>
     </tutorial_bozza>
   </bozza>
-  <bozza sospeso="false" id="31" titolo="ef" id_creator="3" tempo_medio="1" data_pubblicazione="2024-02-03 18:17:02" difficolta="facile" clearance="1" nome_file_img="">
+  <bozza sospeso="false" id="34" titolo="ef" id_creator="3" tempo_medio="1" data_pubblicazione="2024-02-04 10:50:36" difficolta="facile" clearance="1" nome_file_img="">
     <categorie>
       <categoria id_categoria="1"/>
     </categorie>
@@ -31,8 +34,14 @@
       <step titolo_step="es" num_step="1" nome_file_img="img/steps/img_step_65be6ba89b388.jpg">
         <descrizione>s&lt;g</descrizione>
       </step>
-      <step titolo_step="asd" nome_file_img="img/steps/img_step_65be751958ad6.webp" num_step="2">
+      <step titolo_step="sdsa" num_step="2" nome_file_img="img/steps/img_step_65be78ef7c40e.webp">
+        <descrizione>&lt;/div&gt;</descrizione>
+      </step>
+      <step titolo_step="asd" num_step="3" nome_file_img="img/steps/img_step_65be751958ad6.webp">
         <descrizione>&gt;</descrizione>
+      </step>
+      <step titolo_step="sadas" nome_file_img="img/steps/img_step_65bf5df524ba0.webp" num_step="4">
+        <descrizione>sadsad</descrizione>
       </step>
     </tutorial_bozza>
   </bozza>

@@ -59,12 +59,7 @@
 
           $query = "SELECT * FROM utente WHERE id = " . $id_utente;
           $result = $conn->query($query);
-          $row = $result->fetch_assoc();
-             
-
-          echo "<div class=\"reputazione\">\n";
-          echo "  <p class=\"testo\">Sei al livello ". $row['livello'] ." con ". $row['punti_reputazione'] ." punti reputazione. Continua così!</p>\n";
-          echo "</div>\n";
+          $row = $result->fetch_assoc();         
 
           echo "<div class=\"container\">\n";
 

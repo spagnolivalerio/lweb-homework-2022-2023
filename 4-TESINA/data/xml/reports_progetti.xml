@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<reports_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="4" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd"/>
+<reports_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="5" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <report_progetto id="5" id_progetto="1" id_utente="4" data_ora="2024-02-04 09:40:49">
+    <tipo>Contenuti inappropriati</tipo>
+    <testo>lavorare con il vetro risulta molto pericoloso e andava specificato!</testo>
+  </report_progetto>
+</reports_progetti>

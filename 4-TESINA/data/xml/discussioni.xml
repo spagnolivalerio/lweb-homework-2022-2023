@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
   <discussione titolo="Bottiglia" id_poster="5" risolta="false" id="1" id_progetto="1" data_ora="2024-02-03 16:25:03" autore="daniele">
-    <commenti/>
+    <commenti>
+      <commento id_commento="6"/>
+      <commento id_commento="7"/>
+    </commenti>
     <descrizione>La bottiglia deve avere uno spessore particolare?</descrizione>
     <partecipanti>
       <partecipante id_partecipante="5"/>
