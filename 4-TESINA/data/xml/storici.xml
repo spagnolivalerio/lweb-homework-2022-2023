@@ -57,6 +57,7 @@
     <reports_progetti>
       <report_progetto id_report="2" tipo="spam" data_ora="2024-02-03 16:44:50" id_progetto="2" publisher="utentestd1" titolo="dfs"/>
       <report_progetto id_report="3" tipo="spam" data_ora="2024-02-03 16:50:13" id_progetto="3" publisher="utentestd1" titolo="w"/>
+      <report_progetto id_report="6" tipo="Contenuti inesatti" data_ora="2024-02-05 11:35:58" id_progetto="1" publisher="daniele" titolo="Lampada da Tavolo Riciclata"/>
     </reports_progetti>
     <reports_commenti>
       <report_commento id_report="1" tipo="Contenuti inappropriati" data_ora="2024-02-03 16:27:28" id_commento="1" commentatore="utentestd1"/>
