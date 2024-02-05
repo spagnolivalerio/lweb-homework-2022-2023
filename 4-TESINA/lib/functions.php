@@ -399,10 +399,14 @@ function updatePeso($root, $id_utente, $conn){
 
     $livello_utente = $row['livello'];
     
-    if($livello_utente <= 10){
-        $peso = $livello_utente;
-    }else{
-        $peso = 10; 
+    if($livello_utente <= 3){
+        $peso = 1;
+    }elseif($livello_utente > 3 && $livello_utente <= 7){
+        $peso = 2; 
+    }elseif($livello_utente > 7 && $livello_utente <= 9){
+        $peso = 2.5; 
+    }elseif($livello_utente > 9 && $livello_utente <= 10){
+        $peso = 3; 
     }
 
     $update_peso_query = "UPDATE utente SET peso_valutazione = '$peso' WHERE id = '$id_utente'";
