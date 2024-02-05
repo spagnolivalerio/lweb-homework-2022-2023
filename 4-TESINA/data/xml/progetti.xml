@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="13" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="1" username_creator="daniele" id_creator="5" tempo_medio="120" data_pubblicazione="2024-02-03 11:05:07" visualizzazioni="92" nome_file_img="img/proj/img_proj_65be0fd03fc95.webp" difficolta="facile" clearance="1" sospeso="false">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="3" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="1" username_creator="utentestd3" id_creator="6" tempo_medio="120" data_pubblicazione="2024-02-05 17:46:04" visualizzazioni="5" nome_file_img="img/proj/img_proj_65c1103dbadd7.webp" difficolta="facile" clearance="1" sospeso="false">
     <titolo>Lampada da Tavolo Riciclata</titolo>
     <categorie>
       <categoria id_categoria="5"/>
     </categorie>
     <descrizione>Il progetto della lampada da tavolo riciclata trasforma una semplice bottiglia di vetro in un elegante oggetto d'arredo. Inizia con la raccolta di materiali quali una bottiglia di vetro, un kit per cablaggio elettrico, una lampadina a LED, carta vetrata e vernice spray. Il processo include il taglio della base della bottiglia per inserirvi il kit elettrico, la verniciatura della bottiglia per un tocco di personalizzazione, e l'assemblaggio finale che culmina con l'aggiunta di una lampadina a LED e un paralume. Questo progetto fai da te non solo promuove il riciclo creativo, ma offre anche l'opportunità di creare un'illuminazione accogliente e personalizzata per qualsiasi ambiente.</descrizione>
-    <categoriaProposta>Riciclo Creativo</categoriaProposta>
-    <reports_progetti>
-      <report_progetto id_report="5"/>
-      <report_progetto id_report="6"/>
-    </reports_progetti>
-    <discussioni>
-      <discussione id_discussione="1"/>
-    </discussioni>
+    <categoriaProposta>Sostenibilità e Ambiente</categoriaProposta>
+    <reports_progetti/>
+    <discussioni/>
     <tutorial_progetto id_tutorial="1"/>
-    <valutazioni>
-      <valutazione id_valutazione="1"/>
-    </valutazioni>
+    <valutazioni/>
+  </progetto>
+  <progetto id="2" username_creator="moderatore1" id_creator="3" tempo_medio="180" data_pubblicazione="2024-02-05 17:52:52" visualizzazioni="7" nome_file_img="img/proj/img_proj_65c112628ed70.webp" difficolta="medio" clearance="2" sospeso="false">
+    <titolo>Raspberry Pi per Emulazione di Giochi Retro</titolo>
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+    </categorie>
+    <descrizione>Il progetto di mini computer Raspberry Pi per emulazione di giochi retro combina la nostalgia dei videogiochi classici con la tecnologia moderna in un unico dispositivo compatto e personalizzabile. Utilizzando un Raspberry Pi, una microSD card flashata con software di emulazione come RetroPie o Recalbox, e controller USB in stile retrò, questo progetto permette di rivivere i classici giochi arcade e console direttamente dalla comodità di casa. L'assemblaggio coinvolge l'installazione del sistema operativo sulla microSD, il montaggio del Raspberry Pi nella sua custodia, e la configurazione dei controller per una perfetta esperienza di gioco. Il risultato finale è un sistema di emulazione versatile e interattivo, capace di eseguire migliaia di giochi retro, che rende omaggio alla storia dei videogiochi mantenendo al contempo un occhio al futuro grazie alla sua smart integrabilità e personalizzazione.</descrizione>
+    <categoriaProposta/>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="2"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="3" username_creator="utentestd1" id_creator="4" tempo_medio="360" data_pubblicazione="2024-02-05 18:08:49" visualizzazioni="0" nome_file_img="img/proj/img_proj_65c1155ef10c8.webp" difficolta="facile" clearance="1" sospeso="false">
+    <titolo>Ventilatore Smart Fai Da Te</titolo>
+    <categorie>
+      <categoria id_categoria="2"/>
+      <categoria id_categoria="4"/>
+    </categorie>
+    <descrizione>Il progetto del ventilatore smart fai da te è una perfetta fusione di tecnologia e artigianato, ideale per gli appassionati di elettronica e di fai da te che desiderano aggiungere un tocco di innovazione alla loro casa. Partendo dalla raccolta dei materiali come il motorino del ventilatore, pale, una scheda Arduino o Raspberry Pi e un modulo Bluetooth, il progetto attraversa diverse fasi: l'assemblaggio fisico del ventilatore, l'integrazione dei componenti elettronici per il controllo wireless e la programmazione del microcontrollore. Il risultato è un ventilatore elegante e funzionale, controllabile tramite smartphone, che non solo offre refrigerio nelle giornate calde ma diventa anche un punto focale di conversazione per la sua innovativa combinazione di tecnologia e design fai da te.</descrizione>
+    <categoriaProposta/>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="3"/>
+    <valutazioni/>
   </progetto>
 </progetti>

@@ -3,9 +3,8 @@
 
 	$conn = new mysqli($servername, $db_username, $db_password);
 
-	$crypt_pwd = md5('password');
-	$email_1 = "spagnolivalerio";
-	$email_2 = "sicilianodaniele";
+	$crypt_pwd = md5('Password123!');
+
 
 	$create_db = "CREATE DATABASE IF NOT EXISTS $db_name;";
 
@@ -27,27 +26,31 @@
 					  ban BOOLEAN DEFAULT FALSE
 					  );";
 
-	$insert_utente = "INSERT INTO utente (nome, cognome, username, password, email, livello, tipo, peso_valutazione, indirizzo,avatar,data)
-					  VALUES ('Valerio', 'Spagnoli', 'adm1', '$crypt_pwd', '$email_1', '100', 'admin', '10', 'via della gaurdia','avatar1.png','2023-10-23'),
-					  	     ('Daniele', 'Siciliano', 'adm2', '$crypt_pwd', '$email_2', '100', 'admin', '10', 'via saturno', 'avatar2.png','2023-10-23'),
-							 ('MODERATORE', 'mod', 'moderatore1', '$crypt_pwd', 'moderatore@gmail.com', '100', 'moderatore', '10', 'via saturno', 'avatar2.png','2023-10-23'),
-							 ('Mario', 'Rossi', 'utentestd1', '$crypt_pwd', 'utente@gmail.com', '1', 'standard', '10', 'via saturno', 'avatar1.png','2023-10-23');";
-	
-	$queries = array($create_db, $create_utente, $insert_utente);
+			$insert_utente = "INSERT INTO utente (nome, cognome, username, password, email, livello, tipo, peso_valutazione, indirizzo,avatar,data)
+			VALUES ('Valerio', 'Spagnoli', 'adm1', '$crypt_pwd', 'spagnolivalerio@gmail.com', '10', 'admin', '3', 'via della gaurdia','avatar2.png','2023-10-23'),
+					('Daniele', 'Siciliano', 'adm2', '$crypt_pwd', 'sicilianodaniele@gmail.com', '10', 'admin', '3', 'via saturno', 'avatar2.png','2023-10-23'),
+				('Franco', 'Grigi', 'moderatore1', '$crypt_pwd', 'franco@gmail.com', '10', 'moderatore', '3', 'via saturno', 'avatar1.png','2023-10-23'),
+				('Mario', 'Rossi', 'utentestd1', '$crypt_pwd', 'utente@gmail.com', '1', 'standard', '1', 'via saturno', 'avatar2.png','2023-10-23'),
+				('Luca', 'Bianchi', 'utentestd2', '$crypt_pwd', 'luca@example.com', '1', 'standard', '1', 'via dei fiori', 'avatar2.png', '2023-10-23'),
+				('Giorgia', 'Verdi', 'utentestd3', '$crypt_pwd', 'giorgia@example.com', '1', 'standard', '1', 'via delle rose', 'avatar1.png', '2023-10-23'),
+				('Francesca', 'Neri', 'utentestd4', '$crypt_pwd', 'francesca@example.com', '1', 'standard', '1', 'via del mare', 'avatar1.png', '2023-10-23'),
+				('Luigi', 'Gialli', 'moderatore2', '$crypt_pwd', 'luigi_moderatore@example.com', '10', 'moderatore', '3', 'via delle montagne', 'avatar2.png', '2023-10-23');";
 
- 	if(!mysqli_query($conn, $create_db)){
-        exit();
-    } else {
-        $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
-    }
+			$queries = array($create_db, $create_utente, $insert_utente);
 
-    foreach ($queries as $query) {
-        if(!$conn->query($query)){
-            exit();
-        }
-    }
+			if(!mysqli_query($conn, $create_db)){
+			exit();
+			} else {
+			$conn = connect_to_db($servername, $db_username, $db_password, $db_name);
+			}
 
-	header("Location: web/visitatore.php");
+			foreach ($queries as $query) {
+			if(!$conn->query($query)){
+			exit();
+			}
+			}
+
+			header("Location: web/");
 
 	$conn->close;
 ?>

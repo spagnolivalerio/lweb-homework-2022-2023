@@ -1,45 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="13">
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="3">
   <tutorial_progetto id="1" id_progetto="1">
-    <step titolo_step="Raccolta dei Materiali" num_step="1" nome_file_img="img/steps/img_step_65be0f218af77.webp">
+    <step titolo_step="Raccolta dei Materiali" num_step="1" nome_file_img="img/steps/img_step_65c110512fc3c.webp">
       <descrizione>Vecchie bottiglie di vetro, un kit per cablaggio elettrico per lampade, una lampadina a LED, carta vetrata, e vernice spray.</descrizione>
     </step>
-    <step titolo_step="Preparazione della Bottiglia" num_step="2" nome_file_img="img/steps/img_step_65be0f3244f21.webp">
+    <step titolo_step="Preparazione della Bottiglia" num_step="2" nome_file_img="img/steps/img_step_65c1106ada0fa.webp">
       <descrizione>Tagliare la base della bottiglia di vetro con un tagliavetro e levigare i bordi con la carta vetrata per evitare spigoli vivi.</descrizione>
     </step>
-    <step titolo_step="Verniciatura della Bottiglia" num_step="3" nome_file_img="img/steps/img_step_65be0f46da9cc.webp">
+    <step titolo_step="Verniciatura della Bottiglia" num_step="3" nome_file_img="img/steps/img_step_65c11090b2686.webp">
       <descrizione>Utilizzare la vernice spray per colorare la bottiglia nel colore desiderato. Lasciare asciugare completamente.</descrizione>
     </step>
-    <step titolo_step="Installazione del Kit Elettrico" num_step="4" nome_file_img="img/steps/img_step_65be0f66ca52c.webp">
+    <step titolo_step="Installazione del Kit Elettrico" num_step="4" nome_file_img="img/steps/img_step_65c110ab30ac2.webp">
       <descrizione>Assemblare il kit elettrico per lampade seguendo le istruzioni del produttore e inserirlo nella bottiglia preparata.</descrizione>
     </step>
-    <step titolo_step="Aggiunta della Lampadina e del Paralume" num_step="5" nome_file_img="img/steps/img_step_65be0f804437b.webp">
+    <step titolo_step=" Aggiunta della Lampadina e del Paralume" num_step="5" nome_file_img="img/steps/img_step_65c110c69e535.webp">
       <descrizione>Avvitare una lampadina a LED nel supporto e aggiungere un paralume di stile corrispondente.</descrizione>
     </step>
   </tutorial_progetto>
-  <tutorial_progetto id="10" id_progetto="10">
-    <step titolo_step="wef" num_step="1" nome_file_img="img/steps/img_step_65be6a691dc26.jpg">
-      <descrizione>efwq</descrizione>
+  <tutorial_progetto id="2" id_progetto="2">
+    <step titolo_step="Raccolta dei Materiali" num_step="1" nome_file_img="img/steps/img_step_65c1119f87ae0.webp">
+      <descrizione>Raspberry Pi, microSD card, alimentatore, cavo HDMI, custodia per Raspberry Pi, controller USB stile retrò.</descrizione>
     </step>
-    <step titolo_step="qwer" num_step="2" nome_file_img="img/steps/img_step_65be6a6f9564a.jpg">
-      <descrizione>qef</descrizione>
+    <step titolo_step="Installazione del Sistema Operativo" num_step="2" nome_file_img="img/steps/img_step_65c111d277cac.webp">
+      <descrizione>Flashare una microSD card con il software di emulazione come RetroPie o Recalbox usando un computer.</descrizione>
     </step>
-    <step titolo_step="qwd" num_step="3" nome_file_img="img/steps/img_step_65be6a77a8d6b.jpg">
-      <descrizione>qwd</descrizione>
+    <step titolo_step="Assemblaggio del Raspberry Pi" num_step="3" nome_file_img="img/steps/img_step_65c111f9d9253.webp">
+      <descrizione>Inserire il Raspberry Pi nella custodia e collegare tutte le periferiche necessarie (microSD, alimentatore, HDMI).</descrizione>
+    </step>
+    <step titolo_step="Configurazione del Controller" num_step="4" nome_file_img="img/steps/img_step_65c1122136a5c.webp">
+      <descrizione>Collegare i controller USB al Raspberry Pi e configurarli attraverso l'interfaccia del software di emulazione.</descrizione>
     </step>
   </tutorial_progetto>
-  <tutorial_progetto id="11" id_progetto="11">
-    <step titolo_step="sef" num_step="1" nome_file_img="img/steps/img_step_65be6af9baa3d.jpg">
-      <descrizione>sdg</descrizione>
+  <tutorial_progetto id="3" id_progetto="3">
+    <step titolo_step="Raccolta dei Materiali" num_step="1" nome_file_img="img/steps/img_step_65c114fc8e5af.webp">
+      <descrizione>Motorino per ventilatore, pale del ventilatore, Arduino o Raspberry Pi, modulo Bluetooth, cavi, alimentatore, strumenti per il montaggio.</descrizione>
     </step>
-    <step titolo_step="w4er4yt" num_step="2" nome_file_img="img/steps/img_step_65be6b03d6f51.jpg">
-      <descrizione>esrh</descrizione>
+    <step titolo_step="Assemblaggio del Ventilatore" num_step="2" nome_file_img="img/steps/img_step_65c1158079935.webp">
+      <descrizione>Montare il motorino e le pale del ventilatore, assicurandosi che siano ben fissati e bilanciati per un funzionamento ottimale.</descrizione>
     </step>
-    <step titolo_step="eya " num_step="3" nome_file_img="img/steps/img_step_65be6b0cbd7e8.jpg">
-      <descrizione>arethj</descrizione>
+    <step titolo_step="Installazione del microcontrollore e Modulo Bluetooth" num_step="3" nome_file_img="img/steps/img_step_65c115ad3f112.webp">
+      <descrizione>Collegare Arduino o Raspberry Pi al motorino del ventilatore e installare il modulo Bluetooth per permettere la comunicazione wireless.</descrizione>
     </step>
-    <step titolo_step="edrsath" num_step="4" nome_file_img="img/steps/img_step_65be6b144ef8f.jpg">
-      <descrizione>zdrh</descrizione>
+    <step titolo_step="Programmazione del Controller" num_step="4" nome_file_img="img/steps/img_step_65c115dd3ed95.webp">
+      <descrizione>Programmare il microcontrollore con il codice necessario per controllare il ventilatore tramite Bluetooth.</descrizione>
+    </step>
+    <step titolo_step="Test" num_step="5" nome_file_img="img/steps/img_step_65c1161d7a2d6.webp">
+      <descrizione>Testare il ventilatore smart per assicurarsi che possa essere controllato correttamente tramite l'applicazione smartphone.</descrizione>
     </step>
   </tutorial_progetto>
 </tutorials_progetti>
