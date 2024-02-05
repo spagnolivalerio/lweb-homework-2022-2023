@@ -44,7 +44,7 @@
     $reports_progetto = getSegnalazioniProgetto($root, $id_progetto);
     $reported_project = already_reported($reports_progetto, $id_utente);
     $valutazioni_progetto = getValutazioniProgetto($root, $id_progetto);
-    $voted = already_voted($valutazioni_progetto, $id_utente);
+    $p_voted = already_voted($valutazioni_progetto, $id_utente);
 
     addressing($_SESSION['Tipo_utente'], $mod, $path); //redirect
 
@@ -317,7 +317,6 @@
    
               if($id_creator !== $id_utente){
                 echo "    <div class=\"options\" id=\"recensioni\">";
-                echo "    <div class=\"options-title\"><h2>DICCI LA TUA</h2></div>";
                 echo "    <div id=\"error\">\n";
               
           
@@ -327,7 +326,7 @@
                 }
 
                 echo " </div>";
-                if($voted){
+                if($p_voted){
                   echo "  <div class=\"votato\">Contributo già valutato</div>\n";
                 }else{
                 echo "          <div class=\"p-rating-content\">\n";

@@ -336,7 +336,6 @@
    
               if($id_creator !== $id_utente){
                 echo "    <div class=\"options\" id=\"recensioni\">";
-                echo "    <div class=\"options-title\"><h2>DICCI LA TUA</h2></div>";
                 echo "    <div id=\"error\">\n";
           
                 if(isset($_SESSION['empty_form']) && $_SESSION['empty_form'] === "true" ){

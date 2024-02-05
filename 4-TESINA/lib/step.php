@@ -81,7 +81,8 @@ $doc->formatOutput = true;
 $xmlString = $doc->saveXML();
 file_put_contents($xmlFile, $xmlString);
 
-$url = "../web/" . $_SESSION['Tipo_utente'] . "/anteprima_tutorial.php";
+$where = $num_step-1;
+$url = "../web/" . $_SESSION['Tipo_utente'] . "/anteprima_tutorial.php?num_step=$where";
 header("Location: $url");
 exit;
 

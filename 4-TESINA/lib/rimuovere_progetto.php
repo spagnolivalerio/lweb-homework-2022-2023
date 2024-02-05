@@ -16,12 +16,12 @@ $xmlFile = "../data/xml/progetti.xml";
 $doc = getDOMdocument($xmlFile);
 $xpath = new DOMXPath($doc);
 
-$img_path = $radice .  $xpath->query("/progetti/progetto[@id = '$id_progetto']")->item(0)->getAttribute('nome_file_img');
+$img_path_proj = $radice .  $xpath->query("/progetti/progetto[@id = '$id_progetto']")->item(0)->getAttribute('nome_file_img');
 
 //RIMUOVI IMMAGINE
 
-if (file_exists($img_path)) {
-    unlink($img_path);
+if (file_exists($img_path_proj)) {
+    unlink($img_path_proj);
 }
 
 //RIMUOVI DA PROGETTI.XML
@@ -39,9 +39,9 @@ $xpath = new DOMXPath($doc);
 
 $steps = $xpath->query("/tutorials_progetti/tutorial_progetto[@id=" . $id_progetto ."]")->item(0)->getElementsByTagName('step');
 foreach($steps as $step){
-    $img_path = $radice . $step->getAttribute('nome_file_img');
-    if (file_exists($img_path)) {
-    unlink($img_path);
+    $img_path_step = $radice . $step->getAttribute('nome_file_img');
+    if (file_exists($img_path_step)) {
+    unlink($img_path_step);
     }
 }
 
