@@ -69,25 +69,25 @@ $id_discussioni = remove_1_n($xmlFile, $query, $id_progetto);
 
 $xmlFile = "../data/xml/richieste_accesso_discussioni.xml";
 $query = "/richieste/richiesta[@id_discussione";
-remove_1_2n($xmlFile, $query, $id_discussioni);
+remove_n_m($xmlFile, $query, $id_discussioni);
 
 //RIMUOVI DA COMMENTI.XML
 
 $xmlFile = "../data/xml/commenti.xml";
 $query = "/commenti/commento[@id_discussione";
-$id_commenti = remove_1_2n($xmlFile, $query, $id_discussioni);
+$id_commenti = remove_n_m($xmlFile, $query, $id_discussioni);
 
 //RIMUOVI DA REPORTS_COMMENTI.XML
 
 $xmlFile = "../data/xml/reports_commenti.xml";
 $query = "/reports_commenti/report_commento[@id_commento";
-remove_1_2n($xmlFile, $query, $id_commenti);
+remove_n_m($xmlFile, $query, $id_commenti);
 
 //RIMUOVI DA VALUTAZIONI_COMMENTO.XML
 
 $xmlFile = "../data/xml/valutazioni_commenti.xml";
 $query = "/valutazioni_commenti/valutazione_commento[@id_commenti";
-remove_1_2n($xmlFile, $query, $id_commenti);
+remove_n_m($xmlFile, $query, $id_commenti);
 
 $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 updateAllUsers($radice, $conn);

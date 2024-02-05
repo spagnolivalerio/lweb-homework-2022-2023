@@ -55,33 +55,8 @@ remove_1_n($xmlFile, $query, $id_commento);
 //RIMUOVI DA DISCUSSIONI.XML
 
 $xmlFile = "../data/xml/discussioni.xml";
-
-$doc = getDOMdocument($xmlFile);
-$root = $doc->documentElement;
-$nodes = $root->childNodes;
-
-foreach ($nodes as $node) {
-
-    if ($id_discussione === $node->getAttribute('id')) {
-
-        $discCommenti = $node->getElementsByTagName('commenti')->item(0);
-        $discCommento = $discCommenti->childNodes;
-
-        foreach ($discCommento as $commento) {
-
-            if ($id_commento === $commento->getAttribute('id_commento')) {
-
-                $discCommenti->removeChild($commento);
-                $doc->formatOutput = true;
-                $xmlString = $doc->saveXML(); //ottengo il file xml come stringa
-                file_put_contents($xmlFile, $xmlString);
-
-                break;
-
-            }
-        }
-    }
-}
+$query = "/discussioni/discussione[@id = '$id_discussione']/commenti/commento[@id_commento";
+remove_1_1($xmlFile, $query, $id_commento);
 
 $conn = connect_to_db($servername, $db_username, $db_password, $db_name);
 updateAllUsers($radice, $conn);

@@ -57,7 +57,7 @@ function remove_1_1($xmlFile, $query, $id)
     $to_remove = $xpath->query($query . " = '$id']")->item(0);
 
     if ($to_remove !== null) {
-        $root->removeChild($to_remove);
+        $to_remove->parentNode->removeChild($to_remove);
     }
 
     $doc->formatOutput = true;
@@ -79,7 +79,7 @@ function remove_1_n($xmlFile, $query, $id)
     foreach ($to_remove_s as $to_remove) {
 
         array_push($array_id, $to_remove->getAttribute('id'));
-        $root->removeChild($to_remove);
+        $to_remove->parentNode->removeChild($to_remove);
 
     }
 
@@ -90,7 +90,7 @@ function remove_1_n($xmlFile, $query, $id)
     return $array_id;
 }
 
-function remove_1_2n($xmlFile, $query, $array_id)
+function remove_n_m($xmlFile, $query, $array_id)
 {
 
     if (empty($array_id)) {
@@ -108,12 +108,12 @@ function remove_1_2n($xmlFile, $query, $array_id)
 
         foreach ($res as $node) {
 
-            $root->removeChild($node);
+            $node->parentNode->removeChild($node);
             array_push($array_id_2, $node->getAttribute('id'));
         }
     }
 
-    $doc->formatOutput = true;
+    $doc->formatOutput = true; 
     $xmlString = $doc->saveXML();
     file_put_contents($xmlFile, $xmlString);
 

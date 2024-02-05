@@ -47,7 +47,7 @@
         }
     }
 
-	header("Location: web/login.php");
+	header("Location: web/visitatore.php");
 
 	$conn->close;
 ?>
