@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="3">
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="5">
   <tutorial_progetto id="1" id_progetto="1">
     <step titolo_step="Raccolta dei Materiali" num_step="1" nome_file_img="img/steps/img_step_65c110512fc3c.webp">
       <descrizione>Vecchie bottiglie di vetro, un kit per cablaggio elettrico per lampade, una lampadina a LED, carta vetrata, e vernice spray.</descrizione>
@@ -46,6 +46,40 @@
     </step>
     <step titolo_step="Test" num_step="5" nome_file_img="img/steps/img_step_65c1161d7a2d6.webp">
       <descrizione>Testare il ventilatore smart per assicurarsi che possa essere controllato correttamente tramite l'applicazione smartphone.</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="4" id_progetto="4">
+    <step titolo_step="Raccolta dei Materiali" num_step="1" nome_file_img="img/steps/img_step_65c11a8d0a530.webp">
+      <descrizione>Un pezzo di legno massello, corde spesse, trapano, viti a gancio, livella, carta vetrata, vernice o impregnante per legno.</descrizione>
+    </step>
+    <step titolo_step="Preparazione e Taglio del Legno" num_step="2" nome_file_img="img/steps/img_step_65c11ac57650d.webp">
+      <descrizione>Segnare e tagliare il legno nelle dimensioni desiderate, quindi levigare i bordi con la carta vetrata per una finitura liscia.</descrizione>
+    </step>
+    <step titolo_step=" Foratura del Legno" num_step="3" nome_file_img="img/steps/img_step_65c11af115f2e.webp">
+      <descrizione>Forare i fori agli angoli del pezzo di legno per le corde, assicurandosi che siano della dimensione giusta per consentire un passaggio facile ma sicuro delle corde.</descrizione>
+    </step>
+    <step titolo_step=" Verniciatura o Impregnazione" num_step="4" nome_file_img="img/steps/img_step_65c11b1af13a5.webp">
+      <descrizione>Applicare una mano di vernice o impregnante per proteggere il legno e dare il colore o la finitura desiderata.</descrizione>
+    </step>
+    <step titolo_step="Installazione delle Corde e Montaggio" num_step="5" nome_file_img="img/steps/img_step_65c11b4ccb732.webp">
+      <descrizione>Inserire le corde nei fori, annodarle con sicurezza e fissare i ganci al soffitto per appenderle. Usare la livella per assicurarsi che la mensola sia perfettamente orizzontale.</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="5" id_progetto="5">
+    <step titolo_step=" Raccolta dei Materiali" num_step="1" nome_file_img="img/steps/img_step_65c11c33e7d04.webp">
+      <descrizione>Kit robot seguilinea (include motori DC, ruote, scheda Arduino, sensori di linea infrarossi, batterie), cacciavite, e nastro adesivo per tracciare il percorso.</descrizione>
+    </step>
+    <step titolo_step="Assemblaggio della Struttura" num_step="2" nome_file_img="img/steps/img_step_65c11db71de5b.webp">
+      <descrizione>Montare la struttura del robot seguendo le istruzioni, fissando motori, ruote, e la piattaforma di base.</descrizione>
+    </step>
+    <step titolo_step="Installazione della Scheda Arduino e dei Sensori" num_step="3" nome_file_img="img/steps/img_step_65c11ddf83d38.webp">
+      <descrizione>Collegare la scheda Arduino al robot e installare i sensori di linea infrarossi, configurando il cablaggio necessario.</descrizione>
+    </step>
+    <step titolo_step="Programmazione del Robot" num_step="4" nome_file_img="img/steps/img_step_65c11e017c9cd.webp">
+      <descrizione>Programmare la scheda Arduino con il codice per il riconoscimento e il seguimento della linea.</descrizione>
+    </step>
+    <step titolo_step="Test del Robot" num_step="5" nome_file_img="img/steps/img_step_65c11e1e925c9.webp">
+      <descrizione>Testare il robot su un percorso preparato con nastro adesivo, regolando i sensori e il codice se necessario.</descrizione>
     </step>
   </tutorial_progetto>
 </tutorials_progetti>

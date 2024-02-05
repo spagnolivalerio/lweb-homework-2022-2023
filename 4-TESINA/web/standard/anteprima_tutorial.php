@@ -63,7 +63,6 @@ addressing($_SESSION['ban'], 0, $logout);
         </div>
       </div>
       <div class="dashboard">
-      <div class="bar"></div>
         <div class="toolbar"></div>
 
         <div class="title-add-tutorial"><h2>AGGIUNGI TUTORIAL<h2></div>
@@ -98,12 +97,7 @@ addressing($_SESSION['ban'], 0, $logout);
           
                   echo"<div class=\"insert_before\">";
                       echo "<form class=\"insert_form\" method=\"post\" action=\"form_step.php\">";
-                        if($num_step-1 < 0){
-                          $before = 0;
-                        } else {
-                          $before = $num_step - 1;
-                        }
-                        echo "<input type=\"hidden\" name=\"num_step\" value=\"$before\"></input>";
+                        echo "<input type=\"hidden\" name=\"num_step\" value=\"$num_step\"></input>";
                         echo "<button type=\"submit\">AGGIUNGI PRIMA</button>";
                       echo "</form>";
                   echo"</div>"; //chiusura insert_before
@@ -156,8 +150,12 @@ $numero_step = $steps->length;
 if($numero_step !== 0){
 
   echo "<form action=\"../../lib/progetto.php\" method=\"post\" class=\"pubblica-form\">\n";
-  echo "    <button type=\"submit\">PUBBLICA</button>\n";
+  echo "    <button type=\"submit\">PUBBLICA PROGETTO</button>\n";
   echo "</form>\n";
+  echo " <form class=\"pubblica-form\" action=\"../../lib/elimina_step.php\" method=\"post\">\n";
+  echo "    <input type=\"hidden\" name=\"num_step\" value=\"$num_step\"></input>";
+  echo "    <button class=\"elimina-step\" type=\"submit\">ELIMINA STEP</button>\n";
+  echo " </form>\n";
   
 }
 

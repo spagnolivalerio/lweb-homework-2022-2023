@@ -35,6 +35,7 @@
   <storico id_utente="4">
     <progetti>
       <progetto titolo="Ventilatore Smart Fai Da Te" data_ora="2024-02-05 18:08:49" id_progetto="3"/>
+      <progetto titolo="Mensola Sospesa Fai Da Te" data_ora="2024-02-05 18:31:03" id_progetto="4"/>
     </progetti>
     <richieste/>
     <commenti/>
@@ -57,6 +58,7 @@
   <storico id_utente="6">
     <progetti>
       <progetto titolo="Lampada da Tavolo Riciclata" data_ora="2024-02-05 17:46:04" id_progetto="1"/>
+      <progetto titolo="Robot Seguilinea" data_ora="2024-02-05 18:42:57" id_progetto="5"/>
     </progetti>
     <richieste/>
     <commenti/>

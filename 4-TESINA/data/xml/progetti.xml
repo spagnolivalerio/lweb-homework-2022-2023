@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="3" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="5" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
   <progetto id="1" username_creator="utentestd3" id_creator="6" tempo_medio="120" data_pubblicazione="2024-02-05 17:46:04" visualizzazioni="5" nome_file_img="img/proj/img_proj_65c1103dbadd7.webp" difficolta="facile" clearance="1" sospeso="false">
     <titolo>Lampada da Tavolo Riciclata</titolo>
     <categorie>
@@ -12,7 +12,7 @@
     <tutorial_progetto id_tutorial="1"/>
     <valutazioni/>
   </progetto>
-  <progetto id="2" username_creator="moderatore1" id_creator="3" tempo_medio="180" data_pubblicazione="2024-02-05 17:52:52" visualizzazioni="7" nome_file_img="img/proj/img_proj_65c112628ed70.webp" difficolta="medio" clearance="2" sospeso="false">
+  <progetto id="2" username_creator="moderatore1" id_creator="3" tempo_medio="180" data_pubblicazione="2024-02-05 17:52:52" visualizzazioni="17" nome_file_img="img/proj/img_proj_65c112628ed70.webp" difficolta="medio" clearance="2" sospeso="false">
     <titolo>Raspberry Pi per Emulazione di Giochi Retro</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -36,6 +36,32 @@
     <reports_progetti/>
     <discussioni/>
     <tutorial_progetto id_tutorial="3"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="4" username_creator="utentestd1" id_creator="4" tempo_medio="300" data_pubblicazione="2024-02-05 18:31:03" visualizzazioni="6" nome_file_img="img/proj/img_proj_65c11a0f9d3d1.webp" difficolta="facile" clearance="1" sospeso="false">
+    <titolo>Mensola Sospesa Fai Da Te</titolo>
+    <categorie>
+      <categoria id_categoria="6"/>
+    </categorie>
+    <descrizione>Il progetto della mensola sospesa in stile rustico fai da te è un'ottima aggiunta per qualsiasi ambiente, combinando funzionalità e estetica con un tocco di calore casalingo. Partendo dalla raccolta di materiali semplici come legno riciclato e corde, il progetto procede attraverso varie fasi di creazione. Inizialmente, si taglia e si assembla il legno per formare la base della mensola, garantendo che ogni pezzo sia levigato per una finitura liscia e sicura al tatto. Successivamente, si procede con la foratura del legno per inserire le corde, che serviranno per sospenderla in modo elegante.&lt;br /&gt;&#13;Una volta assemblata la struttura base, si applica una vernice o un impregnante per proteggere il legno e migliorarne l'aspetto, enfatizzando la texture naturale e aggiungendo un livello di durabilità. L'ultimo passo vede l'installazione delle corde e il montaggio della mensola, con un'attenzione particolare all'equilibrio e alla sicurezza, assicurando che sia ben ancorata e pronta per sostenere oggetti decorativi o di uso quotidiano.&lt;br /&gt;&#13;Questo progetto non solo offre uno spazio aggiuntivo per organizzare e esporre oggetti, ma diventa anche un punto focale di stile nell'arredamento, riflettendo la passione per il fai da te e l'amore per i materiali naturali.</descrizione>
+    <categoriaProposta>Bricolage</categoriaProposta>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="4"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="5" username_creator="utentestd3" id_creator="6" tempo_medio="430" data_pubblicazione="2024-02-05 18:42:57" visualizzazioni="0" nome_file_img="img/proj/img_proj_65c11c16d8bf1.webp" difficolta="difficile" clearance="2" sospeso="false">
+    <titolo>Robot Seguilinea</titolo>
+    <categorie>
+      <categoria id_categoria="1"/>
+      <categoria id_categoria="2"/>
+      <categoria id_categoria="3"/>
+    </categorie>
+    <descrizione>Un robot seguilinea completamente assemblato, posizionato su un percorso a contrasto elevato, pronto a dimostrare la sua capacità di seguire la linea tracciata sul pavimento.</descrizione>
+    <categoriaProposta/>
+    <reports_progetti/>
+    <discussioni/>
+    <tutorial_progetto id_tutorial="5"/>
     <valutazioni/>
   </progetto>
 </progetti>
