@@ -346,7 +346,6 @@
                 echo "            </form>\n";
                 echo "          </div>\n";
                 }
-              }
 
               if($reported_project){
                 echo "  <div class=\"votato\">Contributo segnalato</div>\n";
@@ -364,8 +363,9 @@
                 echo "                <button type=\"submit\">SEGNALA</button>\n";
                 echo "            </form>\n"; 
                 echo "          </div>\n";
-
               }
+              echo "          </div>\n";
+            }
 
 ?>
 <?php

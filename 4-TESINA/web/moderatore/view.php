@@ -351,7 +351,7 @@
                 echo "            </form>\n";
                 echo "          </div>\n";
                 }
-              }
+              
 
               if($reported_project){
                 echo "  <div class=\"votato\">Contributo segnalato</div>\n";
@@ -370,6 +370,8 @@
                 echo "            </form>\n"; 
                 echo "          </div>\n";
               }
+              echo "          </div>\n";
+            }
 ?>
 <?php
           echo "    <div class=\"review-box\">\n";
