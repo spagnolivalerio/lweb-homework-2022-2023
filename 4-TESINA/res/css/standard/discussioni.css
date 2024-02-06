@@ -179,12 +179,6 @@
     margin-inline: 15px;
 }
 
-.form-segnalazione{
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
 .form-segnalazione select{
     text-align: center;
 }
@@ -201,6 +195,7 @@
 .commenti-span{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .elimina-progetto{
@@ -212,11 +207,7 @@
 
 
 .submit-delete{
-    position: relative;
-    left: 50%;
-    top: 50%;
     border: none;
-    text-align: center;
     background-color: transparent;
    
 }
@@ -232,7 +223,7 @@
     border-radius: 10px;
 }
 
-#Rating{
+.rr select{
     height: fit-content;
     margin: auto;
 }
@@ -275,4 +266,14 @@
     border-radius: 5px;
     height: 28px;
     transition: background-color 0.2s ease;
+}
+
+.segnalazione-div{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.select-box select{
+    height: 100%;
 }
