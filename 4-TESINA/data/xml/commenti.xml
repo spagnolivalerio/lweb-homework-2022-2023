@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="40" xsi:noNamespaceSchemaLocation="../../structures/commenti.xsd">
+<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="40" xsi:noNamespaceSchemaLocation="../../structures/xsd/commenti.xsd">
   <commento id="1" id_discussione="1" id_commentatore="7" data_ora="2024-02-05 22:15:04" commentatore="utentestd4">
     <testo>Ho provato a fare una lampada usando una bottiglia di vino verde. Il colore aggiunge un'atmosfera molto calda alla stanza. Qualcuno ha consigli su come evitare la rottura della bottiglia durante il taglio?</testo>
     <voti/>

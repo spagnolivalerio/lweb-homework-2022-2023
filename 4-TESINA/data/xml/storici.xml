@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<storici xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="8" xsi:noNamespaceSchemaLocation="../../structures/storici.xsd">
+<storici xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="8" xsi:noNamespaceSchemaLocation="../../structures/xsd/storici.xsd">
   <storico id_utente="1">
     <progetti/>
     <richieste/>

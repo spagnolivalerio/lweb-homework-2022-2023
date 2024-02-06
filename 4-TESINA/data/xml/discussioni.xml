@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="12" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="12" xsi:noNamespaceSchemaLocation="../../structures/xsd/discussioni.xsd">
   <discussione titolo="&quot;Riciclo Creativo: Trasformare una Bottiglia in Lampada da Tavolo&quot;" id_poster="7" risolta="false" id="1" id_progetto="1" data_ora="2024-02-05 22:14:20" autore="utentestd4">
     <commenti>
       <commento id_commento="1"/>
