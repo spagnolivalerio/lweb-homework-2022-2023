@@ -164,7 +164,8 @@
 .form-box{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin-top: 10px;
 }
 
 .valuta{
@@ -181,11 +182,15 @@
 .form-segnalazione{
     margin-top: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .form-segnalazione select{
     text-align: center;
+}
+
+.form-segnalazione input[type="text"]{
+    width: 312px;
 }
 
 .content {
@@ -225,4 +230,49 @@
     margin-right: 5px;
     position: relative;
     border-radius: 10px;
+}
+
+#Rating{
+    height: fit-content;
+    margin: auto;
+}
+
+.valuta{
+    margin: 10px 0;
+}
+
+.form-accesso button{
+    border: transparent;
+    background-color: #4A90E2;
+    color: white;
+    border-radius: 5px;
+    height: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.form-accesso button:hover, .comment-form button:hover,
+.valuta:hover {
+    background-color: #357ABD;
+}
+
+.form-segnalazione .segnala{
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 28px;
+    transition: background-color 0.2s ease;
+}
+
+.form-segnalazione .segnala:hover {
+    background-color: darkred;
+}
+
+.comment-form button, .valuta{
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 28px;
+    transition: background-color 0.2s ease;
 }
