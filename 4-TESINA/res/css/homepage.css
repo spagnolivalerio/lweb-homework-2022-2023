@@ -8,6 +8,10 @@ body{
     background-color: #f4f4f4;
 }
 
+.nascondi{
+    display: none;
+}
+
 .homepage{
     display: flex;
     min-height: 100vh;

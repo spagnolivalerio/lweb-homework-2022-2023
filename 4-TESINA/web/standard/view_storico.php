@@ -30,10 +30,10 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/storico.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/storico.css"></link>
 
   </head>
 
@@ -317,7 +317,7 @@
             echo "  <ul>\n";
             foreach ($eventi as $evento) {
                 if ($evento['tipo_evento'] === 'report_commento') {
-                    echo "    <li class='evento report'> Hai effettuato un report per " . $evento['tipo'] . " nei confronti dell'utente: " . $evento['commentatore'] . " in merito al contenuto del seguente <a href='view.php?id_progetto=" . $evento['id_progetto'] . "#" . $evento['id_commento'] . "'>commento</a> \n";
+                    echo "    <li class='evento report'> Hai effettuato un report per " . $evento['tipo'] . " nei confronti dell'utente: " . $evento['commentatore'] . " in merito al contenuto del seguente <a href='view.php?id_progetto=" . $evento['id_progetto'] . "#com_" . $evento['id_commento'] . "'>commento</a> \n";
                     echo "      <span class=\"data\">" . $evento['data'] . "</span>\n";
                     echo "    </li>\n";
                 }elseif ($evento['tipo_evento'] === 'report_commento_eliminato') {
@@ -325,7 +325,7 @@
                     echo "      <span class=\"data\">" . $evento['data'] . "</span>\n";
                     echo "    </li>\n";
                 }elseif ($evento['tipo_evento'] === 'report_progetto') {
-                    echo "    <li class='evento report'> Hai effettuato un report per ". $evento['tipo'] ." nei confronti dell'utente: ". $evento['publisher'] ." in merito al contenuto del <a href='homepage.php?#" . $evento['id_progetto'] . "'>progetto</a> intitolato: " . $evento['titolo'] . " \n";
+                    echo "    <li class='evento report'> Hai effettuato un report per ". $evento['tipo'] ." nei confronti dell'utente: ". $evento['publisher'] ." in merito al contenuto del <a href='view.php?id_progetto=" . $evento['id_progetto'] . "'>progetto</a> intitolato: " . $evento['titolo'] . " \n";
                     echo "      <span class=\"data\">". $evento['data'] ."</span>\n";
                     echo "    </li>\n";
                 }elseif ($evento['tipo_evento'] === 'report_progetto_eliminato') {
@@ -333,7 +333,7 @@
                     echo "      <span class=\"data\">". $evento['data'] ."</span>\n";
                     echo "    </li>\n";
                 }elseif ($evento['tipo_evento'] === 'discussioni_aperte') {
-                    echo "    <li class='evento report'> Hai aggiunto una <a href='view.php?id_progetto=" . $evento['id_progetto'] . "#" . $evento['id_discussione'] . "'>discussione</a> intitolata: " . $evento['titolo'] . " \n";
+                    echo "    <li class='evento report'> Hai aggiunto una <a href='view.php?id_progetto=" . $evento['id_progetto'] . "#disc_" . $evento['id_discussione'] . "'>discussione</a> intitolata: " . $evento['titolo'] . " \n";
                     echo "      <span class=\"data\">". $evento['data'] ."</span>\n";
                     echo "    </li>\n";
                 }elseif ($evento['tipo_evento'] === 'discussioni_aperte_eliminato') {
@@ -341,7 +341,7 @@
                     echo "      <span class=\"data\">". $evento['data'] ."</span>\n";
                     echo "    </li>\n";
                 }elseif ($evento['tipo_evento'] === 'richieste') {
-                    echo "    <li class='evento report'> Hai richiesto accesso alla <a href='view.php?id_progetto=" . $evento['id_progetto'] . "#" . $evento['id_discussione'] . "'>discussione</a> intitolata: " . $evento['titolo'] . " \n";
+                    echo "    <li class='evento report'> Hai richiesto accesso alla <a href='view.php?id_progetto=" . $evento['id_progetto'] . "#disc_" . $evento['id_discussione'] . "'>discussione</a> intitolata: " . $evento['titolo'] . " \n";
                     echo "      <span class=\"data\">". $evento['data'] ."</span>\n";
                     echo "    </li>\n";
                 }elseif ($evento['tipo_evento'] === 'richieste_eliminato') {
@@ -349,7 +349,7 @@
                     echo "      <span class=\"data\">". $evento['data'] ."</span>\n";
                     echo "    </li>\n";
                 }elseif ($evento['tipo_evento'] === 'progetti') {
-                    echo "    <li class='evento report'> Hai pubblicato un <a href='homepage.php?id_progetto=#" . $evento['id_progetto'] . "'>progetto</a> intitolato: " . $evento['titolo'] . " \n";
+                    echo "    <li class='evento report'> Hai pubblicato un <a href='view.php?id_progetto=" . $evento['id_progetto'] . "'>progetto</a> intitolato: " . $evento['titolo'] . " \n";
                     echo "      <span class=\"data\">". $evento['data'] ."</span>\n";
                     echo "    </li>\n";
                 }elseif ($evento['tipo_evento'] === 'progetti_eliminato') {
@@ -357,7 +357,7 @@
                     echo "      <span class=\"data\">". $evento['data'] ."</span>\n";
                     echo "    </li>\n";
                 }elseif ($evento['tipo_evento'] === 'commenti') {
-                    echo "    <li class='evento report'> Hai pubblicato il seguente <a href='view.php?id_progetto=" . $evento['id_progetto'] . "#" . $evento['id_commento'] . "'>commento</a>\n";
+                    echo "    <li class='evento report'> Hai pubblicato il seguente <a href='view.php?id_progetto=" . $evento['id_progetto'] . "#com_" . $evento['id_commento'] . "'>commento</a>\n";
                     echo "      <span class=\"data\">". $evento['data'] ."</span>\n";
                     echo "    </li>\n";
                 }elseif ($evento['tipo_evento'] === 'commenti_eliminato') {
@@ -387,6 +387,8 @@
             ?>
 
                     
+        </div>
+        </div>
 
   </body>
 

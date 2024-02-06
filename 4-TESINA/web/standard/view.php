@@ -61,12 +61,12 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/valutazione_progetto.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/recensioni_progetto.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/valutazione_progetto.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/recensioni_progetto.css"></link>
 
 
   </head>
@@ -101,11 +101,11 @@
               echo "            </div>\n";
               echo "        </div>\n";
               echo "        <form action=\"" . $root . "lib/forward_numstep.php\" method=\"post\">\n";
-              echo "        <input type=\"hidden\" value=\"$num_step\" name=\"num_step\"></input>\n";
-              echo "        <input type=\"hidden\" value=\"$id_progetto\" name=\"id_progetto\"></input>\n";
+              echo "        <div class=\"nascondi\"><input type=\"hidden\" value=\"$num_step\" name=\"num_step\"></input></div>\n";
+              echo "        <div class=\"nascondi\"><input type=\"hidden\" value=\"$id_progetto\" name=\"id_progetto\"></input></div>\n";
               echo "        <div class=\"move-button\">\n";
               if($num_step === 0){
-                  echo "            <div class=\"left\" type=\"submit\"></div>\n";
+                  echo "            <div class=\"left\"></div>\n";
               } else{
                   echo "            <button class=\"left l\" name=\"action\" value=\"prev\" type=\"submit\">&#129184; Prev</button>\n";
               }
@@ -113,7 +113,7 @@
               if($step->nextSibling){
                   echo "            <button class=\"right r\" name=\"action\" value=\"next\" type=\"submit\">Next &#129185;</button>\n";
               } else{
-                  echo "            <div class=\"right\" type=\"submit\"></div>\n";
+                  echo "            <div class=\"right\"></div>\n";
               }
               echo "        </div>\n";
               echo "        </form>\n";
@@ -135,11 +135,11 @@
             <div class = "aprire-discussione">
               <div class="label-form">Apri discussione</div>
                 <form class="form-aprire-discussione" action="../../lib/aprire_discussione.php" method="post">
-                  <label for="titolo">Titolo</label></br>
+                  <label for="titolo">Titolo</label><br />
                   <input type="text" name="titolo" id="titolo"></input>
-                  <label for="descrizione">Descrizione</label></br>
+                  <label for="descrizione">Descrizione</label><br />
                   <textarea type="text" name="descrizione" id="descrizione"></textarea>
-                  <input type="hidden" name="id_progetto"<?php echo "value=\"$id_progetto\"";?>></input>
+                  <div class="nascondi"><input type="hidden" name="id_progetto"<?php echo "value=\"$id_progetto\"";?>></input></div>
                   <button type="submit">Apri Discussione</button>
                 </form>
             </div>
@@ -174,15 +174,15 @@
 
 
                 echo "<div class=\"discussion-container\">\n";
-                echo "    <div class=\"discussion-header\" id=\"" . $id_discussione . "\">\n";
+                echo "    <div class=\"discussion-header\" id=\"disc_" . $id_discussione . "\">\n";
                 echo "        <h1 class=\"discussion-title\">$titolo</h1>\n";
 
                 //DA POSIZIONARE
                 if($risolta == "false"){
                   if($id_autore === $id_utente){
                     echo "      <form class=\"\" action=\"../../lib/chiudi_discussione.php\" method=\"post\">\n";
-                    echo "        <input class=\"\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
-                    echo "        <input class=\"\" name=\"id_discussione\" type=\"hidden\" value=\"$id_discussione\">\n";
+                    echo "        <div class=\"nascondi\"><input class=\"\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\"></input></div>\n";
+                    echo "        <div class=\"nascondi\"><input class=\"\" name=\"id_discussione\" type=\"hidden\" value=\"$id_discussione\"></input></div>\n";
                     echo "        <button type=\"submit\" name=\"risolta\" value=\"true\">Contrassegna come risolta</button>\n";
                     echo "      </form>\n";
                   }
@@ -208,8 +208,8 @@
                   if(!$sended ){
                     echo "  <div class=\"accesso\">\n";
                     echo "  <form class=\"form-accesso\" action=\"../../lib/richiedere_accesso_discussione.php\" method=\"post\">\n";
-                    echo "            <input type=\"hidden\" name=\"id_discussione\" value=\"$id_discussione\"></input>\n";
-                    echo "            <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
+                    echo "            <div class=\"nascondi\"><input type=\"hidden\" name=\"id_discussione\" value=\"$id_discussione\"></input></div>\n";
+                    echo "            <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input></div>\n";
                     echo "            <button type=\"submit\">Richiedi Accesso</button>\n";
                     echo "     </form>\n";
                     echo "  </div>\n";
@@ -222,8 +222,8 @@
 
                 echo "        <form class=\"comment-form\" action =\"../../lib/commentare.php\" method=\"post\">\n";
                 echo "            <input type=\"text\" name=\"testo\" placeholder=\"Aggiungi un commento alla discussione\"></input>\n";
-                echo "            <input type=\"hidden\" name=\"id_discussione\" value=\"$id_discussione\"></input>\n";
-                echo "            <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
+                echo "            <div class=\"nascondi\"><input type=\"hidden\" name=\"id_discussione\" value=\"$id_discussione\"></input></div>\n";
+                echo "            <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input></div>\n";
                 echo "            <button type=\"submit\">Commenta</button>\n";
                 echo "        </form>\n";
                 }
@@ -246,7 +246,7 @@
                   $row = mysqli_fetch_array($res); 
                   $avatar = $row['avatar']; 
 
-                echo "        <div class=\"comment\" id=\"" . $id_commento . "\">\n";
+                echo "        <div class=\"comment\" id=\"com_" . $id_commento . "\">\n";
                 echo "            <div class=\"comment-info\">\n";
                 echo "              <div class=\"top-info\">\n";
                 echo "                <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
@@ -256,9 +256,9 @@
                 if($id_commentatore === $id_utente){
                   echo "      <form  action=\"../../lib/rimuovere_commento.php\" method=\"post\">\n";
                   echo "        <input class=\"submit-delete\" type=\"submit\" value=\"🗑️\">\n";
-                  echo "        <input class=\"hidden\" name=\"id_commento\" type=\"hidden\" value=\"$id_commento\">\n";
-                  echo "        <input class=\"hidden\" name=\"id_discussione\" type=\"hidden\" value=\"$id_discussione\">\n";
-                  echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
+                  echo "        <div class=\"nascondi\"><input class=\"hidden\" name=\"id_commento\" type=\"hidden\" value=\"$id_commento\"></input></div>\n";
+                  echo "        <div class=\"nascondi\"><input class=\"hidden\" name=\"id_discussione\" type=\"hidden\" value=\"$id_discussione\"></input></div>\n";
+                  echo "        <div class=\"nascondi\"><input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\"></input></div>\n";
                   echo "      </form>\n";
                 }
 
@@ -299,8 +299,8 @@
                   echo "                    </select>\n";
                   echo "                    <span class=\"type-rating\">Accordo</span>\n";
                   echo "                </div>\n";
-                  echo "                <input type=\"hidden\" name=\"id_commento\" value=\"$id_commento\"></input>\n";
-                  echo "                <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
+                  echo "                <div class=\"nascondi\"><input type=\"hidden\" name=\"id_commento\" value=\"$id_commento\"></input></div>\n";
+                  echo "                <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input></div>\n";
                   echo "                <button type=\"submit\" class=\"valuta\">VALUTA</button>\n";
                   echo "            </form>\n";
                 }
@@ -316,8 +316,8 @@
                   echo "                    <option value=\"Contenuti inesatti\">Contenuti inesatti</option>\n";
                   echo "                    <option value=\"Contenuti inappropriati\">Contenuti inappropriati</option>\n";
                   echo "                </select>\n";
-                  echo "                <input type=\"hidden\" name=\"id_commento\" value=\"$id_commento\"></input>\n";
-                  echo "                <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
+                  echo "                <div class=\"nascondi\"><input type=\"hidden\" name=\"id_commento\" value=\"$id_commento\"></input></div>\n";
+                  echo "                <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input></div>\n";
                   echo "                <button type=\"submit\" class=\"segnala\">segnala</button>\n";
                   echo "            </form>\n"; 
                 }
@@ -364,7 +364,7 @@
                 echo "                    <input type=\"radio\" name=\"rating\" value=\"1\" id=\"1_$id_progetto\">\n";
                 echo "                    <label for=\"1_$id_progetto\">&#9734;</label>\n";
                 echo "                </div>\n";
-                echo "                <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
+                echo "                <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input></div>\n";
                 echo "                <button type=\"submit\">VALUTA</button>\n";
                 echo "            </form>\n";
                 echo "          </div>\n";
@@ -382,7 +382,7 @@
                 echo "                    <option value=\"Contenuti inappropriati\">Contenuti inappropriati</option>\n";
                 echo "                </select>\n";
                 echo "                <textarea type=\"text\" name=\"testo\" placeholder=\"Fornisci maggiori dettagli\"></textarea>\n";
-                echo "                <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>\n";
+                echo "                <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input></div>\n";
                 echo "                <button type=\"submit\">SEGNALA</button>\n";
                 echo "            </form>\n"; 
                 echo "          </div>\n";

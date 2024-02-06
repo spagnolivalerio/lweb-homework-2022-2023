@@ -103,27 +103,27 @@
 
                 <div class="container">
                     <div class="form-item">
-                        <p class="label">Nome</p></br>
+                        <p class="label">Nome</p><br />
                         <input name="nome" type="text" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$nome\""; }?>></input>
                     </div>
                     <div class="form-item">
-                        <p class="label">Cognome</p></br>
+                        <p class="label">Cognome</p><br />
                         <input name="cognome" type="text" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$cognome\""; }?>></input>
                     </div>
         		    <div class="form-item">
-        			    <p class="label">e-mail</p></br>
+        			    <p class="label">e-mail</p><br />
         			    <input name="e-mail" type="text" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$email\""; }?>></input>
         		    </div>
         		    <div class="form-item">
-        		        <p class="label">Indirizzo</p></br>
+        		        <p class="label">Indirizzo</p><br />
         			    <input type="text" name="indirizzo" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$indirizzo\""; }?>></input>
         		    </div>
                     <div class="form-item">
-                        <p class="label">Username</p></br>
+                        <p class="label">Username</p><br />
                         <input type="text" name="username" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$username\""; }?>></input>
                     </div>
                     <div class="form-item">
-                        <p class="label">password</p></br>
+                        <p class="label">password</p><br />
                         <input type="password" name="password" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$password\""; }?>></input>
                     </div>
 
@@ -153,7 +153,7 @@
                     </div>
                 </div>
         		<div class="form-item submit">
-        			<button type="subimt" name="submit">REGISTRATI</button></br>
+        			<button type="subimt" name="submit">REGISTRATI</button><br />
         			<div><p class="signup"><a href="login.php">ho già un account</a></p></div>
         		</div>
         	</form>

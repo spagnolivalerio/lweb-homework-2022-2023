@@ -30,9 +30,9 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/control/storico.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/storico.css"></link>
 
   </head>
 
@@ -63,7 +63,7 @@
             <!-- Parte Sinistra - Informazioni Utente -->
             <div class="users-section">
                 <div class="filtro">
-                    <input type="text" id="searchInput" placeholder="&#x1F50D; Cerca per nome">
+                    <input type="text" id="searchInput" placeholder="&#x1F50D; Cerca per nome"></input>
                 </div>
 
                 <?php
@@ -185,7 +185,7 @@
                         $id_progetto = $discussione->getAttribute('id_progetto');
 
                         echo "                        <tr>\n";
-                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#" . $id_discussione . "'>" . $id_commento . "</a></td>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#com_" . $id_commento . "'>" . $id_commento . "</a></td>\n";
                         echo "                            <td>" . $testo . "</td>\n";
                         echo "                            <td>" . $data . "</td>\n";
                         echo "                        </tr>\n";
@@ -218,7 +218,7 @@
                         $id_progetto = $discussione->getAttribute('id_progetto');                  
                     
                         echo "                        <tr>\n";
-                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#" . $id_discussione . "'>" . $id_discussione . "</a></td>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#disc_" . $id_discussione . "'>" . $id_discussione . "</a></td>\n";
                         echo "                            <td>" . $titolo . "</td>\n";
                         echo "                            <td>" . $data . "</td>\n";
                         echo "                        </tr>\n";
@@ -287,7 +287,7 @@
 
                     if($commento !== null){
                         echo "                        <tr>\n";
-                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_commento . "</a></td>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#com_" . $id_commento . "'>" . $id_commento . "</a></td>\n";
                         echo "                            <td>" . $utilità . "</td>\n";
                         echo "                            <td>" . $accordo . "</td>\n";
                         echo "                            <td>" . $data . "</td>\n";
@@ -330,7 +330,7 @@
                         $id_progetto = $discussione->getAttribute('id_progetto');
 
                         echo "                        <tr>\n";
-                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_commento . "</a></td>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#com_" . $id_commento . "'>" . $id_commento . "</a></td>\n";
                         echo "                            <td>" . $tipo . "</td>\n";
                         echo "                            <td>" . $commentatore . "</td>\n";
                         echo "                            <td>" . $data . "</td>\n";
@@ -404,7 +404,7 @@
                         $id_progetto = $discussione->getAttribute('id_progetto');
 
                         echo "                        <tr>\n";
-                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_discussione . "</a></td>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#disc_" . $id_discussione . "'>" . $id_discussione . "</a></td>\n";
                         echo "                            <td>" . $titolo . "</td>\n";
                         echo "                            <td>" . $data . "</td>\n";
                         echo "                        </tr>\n";

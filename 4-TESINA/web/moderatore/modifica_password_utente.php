@@ -36,9 +36,9 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/edit-info.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/edit-info.css"></link>
 
 
   </head>
@@ -120,8 +120,8 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
         $row = $result->fetch_assoc();
 
         echo " <form class=\"form-container\" action=\"../../lib/modifica_password_utente.php\" method=\"post\">\n";
-        echo "    <input type=\"hidden\" name=\"id_utente\" value=\"" . $id_utente . "\"></input>\n";
-        echo "    <input type=\"hidden\" name=\"username\" value=\"" . $row['username'] . "\"></input>\n";
+        echo "    <div class=\"nascondi\"><input type=\"hidden\" name=\"id_utente\" value=\"" . $id_utente . "\"></input></div>\n";
+        echo "    <div class=\"nascondi\"><input type=\"hidden\" name=\"username\" value=\"" . $row['username'] . "\"></input></div>\n";
         echo "    <label class=\"form-label\" for=\"vecchia_password\">Vecchia Password</label>\n";
         echo "    <input class=\"form-input\" type=\"password\" name=\"vecchia_password\"></input>\n";
         echo "    <label class=\"form-label\" for=\"nuova_password\">Nuova Password</label>\n";

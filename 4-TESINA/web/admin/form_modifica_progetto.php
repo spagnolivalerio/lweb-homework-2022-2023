@@ -39,9 +39,9 @@ if (!isset($_POST['id_progetto']) && (isset($_GET['id_progetto']) ) ) {
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/edit-info.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/edit-info.css"></link>
 
   </head>
 
@@ -107,9 +107,9 @@ if (!isset($_POST['id_progetto']) && (isset($_GET['id_progetto']) ) ) {
 
 echo "<div class=\"form-container\">";
 echo "<form action=\"../../lib/modifica_specifiche_progetto.php\" method=\"post\">\n";
-echo "    <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\">\n";
+echo "    <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\"></input></div>\n";
 echo "    <label class=\"form-label\" for=\"clearance\">Clearance</label>\n"; 
-echo "    <input class=\"form-input\" type=\"number\" name=\"clearance\" min=\"1\" max=\"5\" value=\"" . $clearance . "\">\n";
+echo "    <input class=\"form-input\" type=\"number\" name=\"clearance\" min=\"1\" max=\"5\" value=\"" . $clearance . "\"></input>\n";
 echo "    <label class=\"form-label\" for=\"durata\">Durata (min)</label>\n"; 
 echo "    <input class=\"form-input\" type=\"number\" name=\"durata\" value=\"" . $durata . "\">\n";
 echo "    <label class=\"form-label\" for=\"difficoltà\">Difficoltà: </label>\n";
@@ -122,7 +122,7 @@ echo "    <br>\n";
 echo "    <button class=\"form-button\" type=\"submit\">Modifica</button>\n";
 echo " </form>\n";
 echo " <form  action=\"../../lib/rimuovere_progetto.php?goto=homepage\" method=\"post\">\n";
-echo "    <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input>";
+echo "    <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input></div>";
 echo "    <button class=\"form-button bg-red\" type=\"submit\">Elimina</button>\n";
 echo " </form>\n";
 echo " </div>\n";

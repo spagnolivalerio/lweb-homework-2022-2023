@@ -22,8 +22,8 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css"></link>
 
   </head>
 
@@ -89,7 +89,7 @@
                     echo "              <td>". $data ."</td>\n";
                     echo "              <td>\n";
                     echo "                <form action=\"../../lib/gestisci_richiesta.php\" method=\"post\">\n";
-                    echo "                  <input type=\"hidden\" name=\"id_richiesta\" value=\"" . $id_richiesta . "\">\n";
+                    echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_richiesta\" value=\"" . $id_richiesta . "\"></input></div>\n";
                     echo "                  <button class=\"green\" type=\"submit\" name=\"esito\" value=\"accettata\">&#10004;</button>\n";
                     echo "                  <button class=\"red\" type=\"submit\" name=\"esito\" value=\"rifiutata\">&#10008;</button>\n";
                     echo "                </form>\n";

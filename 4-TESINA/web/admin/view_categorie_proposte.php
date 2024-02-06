@@ -22,8 +22,8 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css"></link>
 
   </head>
 
@@ -86,12 +86,12 @@
                 echo "              <td>". $user ."</td>\n";
                 echo "              <td class=\"interagisci\">\n";
                 echo "                <form action=\"../../lib/modifica_sospensione_progetto.php\" method=\"post\">\n";
-                echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\">\n";
-                echo "                  <input type=\"hidden\" name=\"nomeCategoria\" value=\"" . $nomeCategoria . "\">\n";
+                echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\"></div>\n";
+                echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"nomeCategoria\" value=\"" . $nomeCategoria . "\"></div>\n";
                 echo "                  <button class=\"green\" type=\"submit\">&#10004;</button>\n";
                 echo "                </form>\n";
                 echo "                <form action=\"../../lib/rimuovere_progetto.php\" method=\"post\">\n";
-                echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\">\n";
+                echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\"></input></div>\n";
                 echo "                  <button class=\"red\" type=\"submit\">&#10008;</button>\n";
                 echo "                </form>\n";
                 echo "              </td>\n";

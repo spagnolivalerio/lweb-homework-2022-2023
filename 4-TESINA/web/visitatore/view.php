@@ -52,10 +52,10 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/visitatore/visitatore.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/discussioni.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/visitatore/visitatore.css"></link>
 
 
   </head>
@@ -91,11 +91,11 @@
               echo "            </div>\n";
               echo "        </div>\n";
               echo "        <form action=\"" . $root . "lib/forward_numstep.php\" method=\"post\">\n";
-              echo "        <input type=\"hidden\" value=\"$num_step\" name=\"num_step\"></input>\n";
-              echo "        <input type=\"hidden\" value=\"$id_progetto\" name=\"id_progetto\"></input>\n";
+              echo "        <div class=\"nascondi\"><input type=\"hidden\" value=\"$num_step\" name=\"num_step\"></input></div>\n";
+              echo "        <div class=\"nascondi\"><input type=\"hidden\" value=\"$id_progetto\" name=\"id_progetto\"></input></div>\n";
               echo "        <div class=\"move-button\">\n";
               if($num_step === 0){
-                  echo "            <div class=\"left\" type=\"submit\"></div>\n";
+                  echo "            <div class=\"left\"></div>\n";
               } else{
                   echo "            <button class=\"left l\" name=\"action\" value=\"prev\" type=\"submit\">&#129184; Prev</button>\n";
               }
@@ -103,7 +103,7 @@
               if($step->nextSibling){
                   echo "            <button class=\"right r\" name=\"action\" value=\"next\" type=\"submit\">Next &#129185;</button>\n";
               } else{
-                  echo "            <div class=\"right\" type=\"submit\"></div>\n";
+                  echo "            <div class=\"right\"></div>\n";
               }
               echo "        </div>\n";
               echo "        </form>\n";

@@ -20,11 +20,10 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/visitatore/visitatore.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
-
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" ></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" ></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/visitatore/visitatore.css" ></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" ></link>
 
   </head>
 
@@ -48,7 +47,7 @@
         <div class="toolbar">
           <div class="login"><a href="../login.php">Accedi</a></div>
           <div class="searchbar">
-            <input type="text" id="searchInput" placeholder="Cerca per titolo...">
+            <input type="text" id="searchInput" placeholder="Cerca per titolo..."></input>
             <select id="categoriaSelect">
               <option value="tutte">Tutte le categorie</option>
           <?php
@@ -123,7 +122,7 @@
                 echo "      <form class=\"card-commenta\" action=\"view.php\" method=\"post\">\n";
                   echo "        <div class=\"animation\"></div>\n";
                   echo "        <button class=\"submit\" type=\"submit\">Dettagli</button>\n";
-                  echo "        <input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\">\n";
+                  echo "        <div class=\"nascondi\"><input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\"></input></div>\n";
                 echo "      </form>\n";
               }else{
                 echo "    <div>Effettua l'accesso per i dettagli</div>\n";
@@ -142,51 +141,49 @@
 
   </body>
 
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-       // Quando il documento è pronto
-        $(document).ready(function() {
-            // Associa un'azione all'evento di input sulla barra di ricerca
-            $('#searchInput').on('input', function() {
-                // Ottieni il testo inserito nella barra di ricerca
-                var searchText = $(this).val().toLowerCase();
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script>
+        // Quando il documento è pronto
+          $(document).ready(function() {
+              // Associa un'azione all'evento di input sulla barra di ricerca
+              $('#searchInput').on('input', function() {
+                  // Ottieni il testo inserito nella barra di ricerca
+                  var searchText = $(this).val().toLowerCase();
 
-                // Per ogni elemento con classe "card-container"
-                $('.card-container').each(function() {
-                    // Ottieni il titolo del progetto
-                    var titolo = $(this).find('.card-titolo').text().toLowerCase();
+                  // Per ogni elemento con classe "card-container"
+                  $('.card-container').each(function() {
+                      // Ottieni il titolo del progetto
+                      var titolo = $(this).find('.card-titolo').text().toLowerCase();
 
-                    // Controlla se il titolo contiene il testo di ricerca
-                    if (titolo.includes(searchText)) {
-                        $(this).show();  // Mostra l'elemento
-                    } else {
-                        $(this).hide();  // Nascondi l'elemento
-                    }
-                });
-            });
-        });
+                      // Controlla se il titolo contiene il testo di ricerca
+                      if (titolo.includes(searchText)) {
+                          $(this).show();  // Mostra l'elemento
+                      } else {
+                          $(this).hide();  // Nascondi l'elemento
+                      }
+                  });
+              });
+          });
 
-        $('#categoriaSelect').on('change', function() {
-            var selectedCategoria = $(this).val();
+          $('#categoriaSelect').on('change', function() {
+              var selectedCategoria = $(this).val();
 
-            // Per ogni elemento con classe "card-container"
-            $('.card-container').each(function() {
-                // Ottieni le categorie del progetto
-                var categorie = $(this).find('.card-categorie').map(function() {
-                    return $(this).text().toLowerCase();
-                }).get();
+              // Per ogni elemento con classe "card-container"
+              $('.card-container').each(function() {
+                  // Ottieni le categorie del progetto
+                  var categorie = $(this).find('.card-categorie').map(function() {
+                      return $(this).text().toLowerCase();
+                  }).get();
 
-                // Controlla se la categoria selezionata è tra le categorie del progetto
-                if (selectedCategoria === 'tutte' || categorie.includes(selectedCategoria)) {
-                    $(this).show();  // Mostra l'elemento
-                } else {
-                    $(this).hide();  // Nascondi l'elemento
-                }
-            });
-        });
+                  // Controlla se la categoria selezionata è tra le categorie del progetto
+                  if (selectedCategoria === 'tutte' || categorie.includes(selectedCategoria)) {
+                      $(this).show();  // Mostra l'elemento
+                  } else {
+                      $(this).hide();  // Nascondi l'elemento
+                  }
+              });
+          });
 
-    </script>
-
-
+      </script>
 
 </html>

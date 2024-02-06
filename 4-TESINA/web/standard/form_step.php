@@ -27,9 +27,9 @@ if(isset($_POST['num_step'])){
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/form_step.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/form_step.css"></link>
 
   </head>
 
@@ -84,12 +84,12 @@ if(isset($_POST['num_step'])){
     <label for="descrizione" class="form-label">Descrizione:</label>
     <textarea name="descrizione" class="form-textarea"></textarea><br>
 
-    <input name="num_step" type="hidden" value="<?php echo"$num_step"; ?>"></input><br>
+    <div class="nascondi"><input name="num_step" type="hidden" value="<?php echo"$num_step"; ?>"></input></div><br>
 
     <label for="img" class="form-label">Immagine</label>
     <input type="file" name="img" accept="image/*" class="form-file-input"></input><br>
 
-    <input type="submit" value="Aggiungi step" class="form-submit">
+    <input type="submit" value="Aggiungi step" class="form-submit"></input>
 
 </form>
 

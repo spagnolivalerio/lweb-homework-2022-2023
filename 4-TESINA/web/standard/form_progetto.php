@@ -85,9 +85,9 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/form-aggiungi-progetto.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/form-aggiungi-progetto.css"></link>
 
 
   </head>
@@ -165,12 +165,12 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
 
   <div class="form-group">
     <label for="categoriaProposta">Proponi una categoria:</label>
-    <input type="text" name="categoriaProposta" <?php if (isset($flag)) { echo "value=\"$categoriaProposta\""; } ?>>
+    <input type="text" name="categoriaProposta" <?php if (isset($flag)) { echo "value=\"$categoriaProposta\""; } ?>></input>
   </div>
 
   <div class="form-group">
     <label for="titolo">Titolo:</label>
-    <input type="text" name="titolo" <?php if (isset($flag)) { echo "value=\"$titolo\""; } ?>>
+    <input type="text" name="titolo" <?php if (isset($flag)) { echo "value=\"$titolo\""; } ?>></input>
   </div>
 
   <div class="form-group">
@@ -180,17 +180,17 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
 
   <div class="form-group">
     <label for="tempo_medio">Tempo Medio (in minuti):</label>
-    <input type="number" name="tempo_medio" min="1" <?php if (isset($flag)) { echo "value=\"$tempo_medio\""; } ?>>
+    <input type="number" name="tempo_medio" min="1" <?php if (isset($flag)) { echo "value=\"$tempo_medio\""; } ?>></input>
   </div>
 
   <div class="form-group">
     <label for="clearance">Livello di clearance (da 1 a 5):</label>
-    <input type="number" name="clearance" min="1" max="5" <?php if (isset($flag)) { echo "value=\"$clearance\""; } ?>>
+    <input type="number" name="clearance" min="1" max="5" <?php if (isset($flag)) { echo "value=\"$clearance\""; } ?>></input>
   </div>
 
   <?php 
     if (isset($_GET['modifica']) && isset($id_bozza)) {
-      echo "<input type=\"hidden\" value=\"$id_bozza\" name=\"id_vecchia_bozza\">";
+      echo "<div class=\"nascondi\"><input type=\"hidden\" value=\"$id_bozza\" name=\"id_vecchia_bozza\"></input></div>";
     }
   ?>
 
@@ -216,11 +216,11 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
 
   <div class="form-group">
     <label for="img">Immagine:</label>
-    <input type="file" name="img" accept="image/*">
+    <input type="file" name="img" accept="image/*"></input>
   </div>
 
   <div class="form-group">
-    <input type="submit" name="bottone" value="CONTINUA">
+    <input type="submit" name="bottone" value="CONTINUA"></input>
   </div>
 </form>
 

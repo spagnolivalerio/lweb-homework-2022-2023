@@ -24,8 +24,8 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/bozze.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/bozze.css"></link>
 
   </head>
 
@@ -86,11 +86,11 @@
 
                 echo "          <td class=\"tools\">\n";
                 echo "          <form class=\"ricarica-bozza\" action=\"../../lib/ricarica_bozza.php\" method=\"post\">\n";
-                echo "                   <input type=\"hidden\" name=\"id_bozza\" value=" . $id_bozza . "></input>\n";
+                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_bozza\" value=" . $id_bozza . "></input></div>\n";
                 echo "                   <button type=\"submit\">Ricarica</button>\n";
                 echo "          </form>\n";
                 echo "          <form class=\"ricarica-bozza\" action=\"../../lib/rimuovere_bozza.php\" method=\"post\">\n";
-                echo "                   <input type=\"hidden\" name=\"id_bozza\" value=" . $id_bozza . "></input>\n";
+                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_bozza\" value=" . $id_bozza . "></input></div>\n";
                 echo "                   <button type=\"submit\">&#10008;</button>\n";
                 echo "          </form>\n";
                 echo "          </td>\n";

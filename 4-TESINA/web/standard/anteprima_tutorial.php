@@ -39,9 +39,9 @@ addressing($_SESSION['ban'], 0, $logout);
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/anteprima_tutorial.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" ></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" ></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/anteprima_tutorial.css" ></link>
 
 
   </head>
@@ -65,7 +65,7 @@ addressing($_SESSION['ban'], 0, $logout);
       <div class="dashboard">
         <div class="toolbar"></div>
 
-        <div class="title-add-tutorial"><h2>AGGIUNGI TUTORIAL<h2></div>
+        <div class="title-add-tutorial"><h2>AGGIUNGI TUTORIAL</h2></div>
         <div id="error">
                 <?php 
                     if(isset($_SESSION['empty_form']) && $_SESSION['empty_form'] === "true" ){
@@ -97,7 +97,7 @@ addressing($_SESSION['ban'], 0, $logout);
           
                   echo"<div class=\"insert_before\">";
                       echo "<form class=\"insert_form\" method=\"post\" action=\"form_step.php\">";
-                        echo "<input type=\"hidden\" name=\"num_step\" value=\"$num_step\"></input>";
+                        echo "<div class=\"nascondi\"><input type=\"hidden\" name=\"num_step\" value=\"$num_step\"></input></div>";
                         echo "<button type=\"submit\">AGGIUNGI PRIMA</button>";
                       echo "</form>";
                   echo"</div>"; //chiusura insert_before
@@ -112,11 +112,11 @@ addressing($_SESSION['ban'], 0, $logout);
                   echo "            </div>\n";
                   echo "        </div>\n";
                   echo "        <form action=\"" . $tps_root . "lib/forward_numstep.php?anteprima=true\" method=\"post\">\n";
-                  echo "        <input type=\"hidden\" value=\"$num_step\" name=\"num_step\"></input>\n";
+                  echo "        <div class=\"nascondi\"><input type=\"hidden\" value=\"$num_step\" name=\"num_step\"></input></div>\n";
                   echo "        <div class=\"move-button\">\n";
 
                   if($num_step == 0){
-                      echo "            <div class=\"left\" type=\"submit\"></div>\n";
+                      echo "            <div class=\"left\"></div>\n";
                   } else{
                       echo "            <button class=\"left l\" name=\"action\" value=\"prev\" type=\"submit\">&#129184; Prev</button>\n";
                   }
@@ -124,7 +124,7 @@ addressing($_SESSION['ban'], 0, $logout);
                   if($step->nextSibling){
                       echo "            <button class=\"right r\" name=\"action\" value=\"next\" type=\"submit\">Next &#129185;</button>\n";
                   } else{
-                      echo "            <div class=\"right\" type=\"submit\"></div>\n";
+                      echo "            <div class=\"right\"></div>\n";
                   }
 
                   echo "        </div>\n";
@@ -134,7 +134,7 @@ addressing($_SESSION['ban'], 0, $logout);
 
                   echo"<div class=\"insert_after\">";
                     echo "<form class=\"insert_form\" method=\"post\" action=\"form_step.php\">";
-                        echo "<input type=\"hidden\" name=\"num_step\" value=\"". $num_step+1 ."\"></input>";
+                        echo "<div class=\"nascondi\"><input type=\"hidden\" name=\"num_step\" value=\"". $num_step+1 ."\"></input></div>";
                         echo "<button type=\"submit\">AGGIUNGI DOPO</button>";
                     echo "</form>";
                   echo"</div>"; //chiisura insert_after
@@ -153,13 +153,15 @@ if($numero_step !== 0){
   echo "    <button type=\"submit\">PUBBLICA PROGETTO</button>\n";
   echo "</form>\n";
   echo " <form class=\"pubblica-form\" action=\"../../lib/elimina_step.php\" method=\"post\">\n";
-  echo "    <input type=\"hidden\" name=\"num_step\" value=\"$num_step\"></input>";
+  echo "    <div class=\"nascondi\"><input type=\"hidden\" name=\"num_step\" value=\"$num_step\"></input></div>";
   echo "    <button class=\"elimina-step\" type=\"submit\">ELIMINA STEP</button>\n";
   echo " </form>\n";
   
 }
 
 ?>
+</div>
+</div>
 </body>
 </html>
 

@@ -55,15 +55,15 @@
         		?>
          		</div>
         		<div class="form-item">
-        			<label for="username">Nome utente</label></br></br>
-        			<input name="username" type="text"></input></br>
+        			<label for="username">Nome utente</label><br /><br />
+        			<input name="username" type="text"></input><br />
         		</div>
         		<div class="form-item">
-        			<label for="password">Password</label></br></br>
-        			<input type="password" name="password"></input></br>
-        		</div></br>
+        			<label for="password">Password</label><br /><br />
+        			<input type="password" name="password"></input><br />
+        		</div><br />
         		<div class="form-item submit">
-        			<button type="subimt" name="submit">ACCEDI</button></br>
+        			<button type="subimt" name="submit">ACCEDI</button><br />
         			<div><p class="signup">oppure <a href="signup.php">registrati</a></p></div>
         		</div>
         	</form>

@@ -28,9 +28,9 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/profilo.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/profilo.css"></link>
 
   </head>
 
@@ -66,7 +66,7 @@
           // Parte Sinistra
           echo "  <div class=\"users-card\">\n";
           echo "    <div class=\"profile-img\">\n";
-          echo "      <img src=\"../../img/avatar/" . $row['avatar'] . "\" alt=\"\">\n";
+          echo "      <img src=\"../../img/avatar/" . $row['avatar'] . "\" alt=\"\"></img>\n";
           echo "    </div>\n";
 
           echo "    <div class=\"profile-name\">\n";
@@ -102,12 +102,12 @@
           echo "    </ul>\n";
 
           echo "    <form class=\"form\" action=\"modifica_profilo_utente.php\" method=\"post\">\n";
-          echo "      <input type=\"hidden\" name=\"id_utente\" value=" . $id_utente . "></input>\n";
+          echo "      <div class=\"nascondi\"><input type=\"hidden\" name=\"id_utente\" value=" . $id_utente . "></input></div>\n";
           echo "      <button class=\"button-stile\" type=\"submit\">Edit Generalità</button>\n";
           echo "    </form>\n";
 
           echo "    <form class=\"form\" action=\"modifica_password_utente.php\" method=\"post\">\n";
-          echo "      <input type=\"hidden\" name=\"id_utente\" value=" . $id_utente . "></input>\n";
+          echo "      <div class=\"nascondi\"><input type=\"hidden\" name=\"id_utente\" value=" . $id_utente . "></input></div>\n";
           echo "      <button class=\"button-stile\" type=\"submit\">Cambia Password</button>\n";
           echo "    </form>\n";
 

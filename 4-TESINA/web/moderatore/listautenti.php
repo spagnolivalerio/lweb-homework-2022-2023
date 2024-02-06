@@ -22,8 +22,8 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/control/listautenti.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/listautenti.css"></link>
       
 
   </head>
@@ -99,8 +99,8 @@
                 echo "          <td>\n";
               if($row['id'] != $id_utente && $row['tipo'] != 'admin'){
                 echo "          <form class=\"form-ban\" action=\"../../lib/ban-sban.php\" method=\"post\">\n";
-                echo "                   <input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input>\n";
-                echo "                   <input type=\"hidden\" name=\"ban\" value=\"sospendi\"></input>\n";
+                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input></div>\n";
+                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"ban\" value=\"sospendi\"></input></div>\n";
                 echo "                   <button class=\"sospendi\" type=\"submit\">Sospendi</button>\n";
                 echo "          </form>\n";       
               }                    
@@ -109,8 +109,8 @@
             }elseif($row['ban'] == 1){
                 echo "          <td>\n";
                 echo "          <form class=\"form-ban\" action=\"../../lib/ban-sban.php\" method=\"post\">\n";
-                echo "                   <input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input>\n";
-                echo "                  <input type=\"hidden\" name=\"ban\" value=\"riabilita\"></input>\n";
+                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input></div>\n";
+                echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"ban\" value=\"riabilita\"></input></div>\n";
                 echo "                   <button class=\"riabilita\" type=\"submit\">Riabilita</button>\n";
                 echo "          </form>\n";
                 echo "          </td>\n";

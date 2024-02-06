@@ -25,8 +25,8 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css"></link>
 
   </head>
 
@@ -96,16 +96,16 @@
                 echo "              <td>". $data ."</td>\n";
                 echo "              <td class=\"tools\">\n";
                 echo "                <form class=\"search\" action=\"view.php\" method=\"get\">\n";
-                echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto ."\">\n";
+                echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto ."\"></input></div>\n";
                 echo "                  <button type=\"submit\">&#128269;</button>\n";
                 echo "                </form>\n";
                 echo "                <form class=\"r-contenuto\" action=\"../../lib/rimuovere_progetto.php?goto=view_segnalazioni\" method=\"post\">\n";
-                echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\">\n";
+                echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\"></input></div>\n";
                 echo "                  <button type=\"submit\">Rimuovi Contenuto</button>\n";
                 echo "                </form>\n";
                 echo "                <form class=\"r-report\" action=\"../../lib/rimuovere_report_progetto.php\" method=\"post\">\n";
-                echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\">\n";
-                echo "                  <input type=\"hidden\" name=\"id_report\" value=\"" . $id_segnalazionep . "\">\n";
+                echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\"></input></div>\n";
+                echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_report\" value=\"" . $id_segnalazionep . "\"></input></div>\n";
                 echo "                  <button type=\"submit\">Elimina il report</button>\n";
                 echo "                </form>\n";
                 echo "              </td>\n";
@@ -138,18 +138,18 @@
                   echo "              <td>". $data ."</td>\n";
                   echo "              <td class=\"tools\">\n";
                   echo "                <form class=\"search\" action=\"view.php\" method=\"get\">\n";
-                  echo "                  <input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\">\n";
+                  echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input></div>\n";
                   echo "                  <button type=\"submit\">&#128269;</button>\n";
                   echo "                </form>\n";
                   echo "                <form class=\"r-contenuto\" action=\"../../lib/rimuovere_commento.php?goto=view_segnalazioni\" method=\"post\">\n";
-                  echo "                  <input type=\"hidden\" name=\"id_commento\" value=\"" . $id_commento . "\">\n";
-                  echo "                  <input type=\"hidden\" name=\"id_discussione\" value=\"" . $id_discussione . "\">\n";
-                  echo "                  <input type=\"hidden\" name=\"id_progetto\"  value=\" . $id_progetto . \">\n";
+                  echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_commento\" value=\"" . $id_commento . "\"></input></div>\n";
+                  echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_discussione\" value=\"" . $id_discussione . "\"></input></div>\n";
+                  echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\"  value=\" . $id_progetto . \"></input></div>\n";
                   echo "                  <button type=\"submit\">Rimuovi Contenuto</button>\n";
                   echo "                </form>\n";
                   echo "                <form class=\"r-report\" action=\"../../lib/rimuovere_report_commento.php\" method=\"post\">\n";
-                  echo "                  <input type=\"hidden\" name=\"id_commento\" value=\"" . $id_commento . "\">\n";
-                  echo "                  <input type=\"hidden\" name=\"id_report\" value=\"" . $id_segnalazionec . "\">\n";
+                  echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_commento\" value=\"" . $id_commento . "\"></input></div>\n";
+                  echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_report\" value=\"" . $id_segnalazionec . "\"></input></div>\n";
                   echo "                  <button type=\"submit\">Elimina il report</button>\n";
                   echo "                </form>\n";
                   echo "              </td>\n";

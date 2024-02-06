@@ -7,7 +7,9 @@
     $adm = "admin";
     $path = "index.php"; 
     addressing($_SESSION['Tipo_utente'], $adm, $path); 
-    echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
+
+    $logout = $root . "lib/logout.php?ban=true";
+    addressing($_SESSION['ban'], 0, $logout);
 
     $id_utente = $_SESSION['id_utente'];
 
@@ -15,7 +17,7 @@
     $query = "SELECT * FROM utente";
     $result = $conn->query($query);
 
-
+    echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 ?>
 
 
@@ -28,9 +30,9 @@
 
       <title>THE PROJECT SOCIETY</title>
 
-      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css" />
-      <link type="text/css" rel="stylesheet" href="../../res/css/control/storico.css" />
+      <link type="text/css" rel="stylesheet" href="../../res/css/homepage.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/standard/card.css"></link>
+      <link type="text/css" rel="stylesheet" href="../../res/css/control/storico.css"></link>
 
   </head>
 
@@ -45,6 +47,7 @@
                 <a class="elem" href="homepage.php">Homepage</a>
                 <a class="elem" href="bacheca.php">Bacheca</a>
                 <a class="elem" href="moderator_dashboard.php">Dashboard</a>
+                <a class="elem" href="view_bozze.php">Bozze</a>
                 <a class="elem" href="view_storico.php">Storico</a>
                 <div class="divisore"></div>
                 <a class="elem" href="../../lib/logout.php">Logout</a>
@@ -60,7 +63,7 @@
             <!-- Parte Sinistra - Informazioni Utente -->
             <div class="users-section">
                 <div class="filtro">
-                    <input type="text" id="searchInput" placeholder="&#x1F50D; Cerca per nome">
+                    <input type="text" id="searchInput" placeholder="&#x1F50D; Cerca per nome"></input>
                 </div>
 
                 <?php
@@ -122,7 +125,6 @@
             echo "                </div>\n";
 
             echo "                <div class=\"activity-type\">\n";
-            echo "                    <h2>Pubblicazione Progetti</h2>\n";
             echo "                    <table class=\"activity-list\">\n";
 
             if($tabella == 1){
@@ -183,7 +185,7 @@
                         $id_progetto = $discussione->getAttribute('id_progetto');
 
                         echo "                        <tr>\n";
-                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#" . $id_discussione . "'>" . $id_commento . "</a></td>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#com_" . $id_commento . "'>" . $id_commento . "</a></td>\n";
                         echo "                            <td>" . $testo . "</td>\n";
                         echo "                            <td>" . $data . "</td>\n";
                         echo "                        </tr>\n";
@@ -216,7 +218,7 @@
                         $id_progetto = $discussione->getAttribute('id_progetto');                  
                     
                         echo "                        <tr>\n";
-                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#" . $id_discussione . "'>" . $id_discussione . "</a></td>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#disc_" . $id_discussione . "'>" . $id_discussione . "</a></td>\n";
                         echo "                            <td>" . $titolo . "</td>\n";
                         echo "                            <td>" . $data . "</td>\n";
                         echo "                        </tr>\n";
@@ -285,7 +287,7 @@
 
                     if($commento !== null){
                         echo "                        <tr>\n";
-                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_commento . "</a></td>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#com_" . $id_commento . "'>" . $id_commento . "</a></td>\n";
                         echo "                            <td>" . $utilità . "</td>\n";
                         echo "                            <td>" . $accordo . "</td>\n";
                         echo "                            <td>" . $data . "</td>\n";
@@ -328,7 +330,7 @@
                         $id_progetto = $discussione->getAttribute('id_progetto');
 
                         echo "                        <tr>\n";
-                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_commento . "</a></td>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#com_" . $id_commento . "'>" . $id_commento . "</a></td>\n";
                         echo "                            <td>" . $tipo . "</td>\n";
                         echo "                            <td>" . $commentatore . "</td>\n";
                         echo "                            <td>" . $data . "</td>\n";
@@ -402,7 +404,7 @@
                         $id_progetto = $discussione->getAttribute('id_progetto');
 
                         echo "                        <tr>\n";
-                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "'>" . $id_discussione . "</a></td>\n";
+                        echo "                            <td><a href='view.php?id_progetto=" . $id_progetto . "#disc_" . $id_discussione . "'>" . $id_discussione . "</a></td>\n";
                         echo "                            <td>" . $titolo . "</td>\n";
                         echo "                            <td>" . $data . "</td>\n";
                         echo "                        </tr>\n";
@@ -459,5 +461,6 @@
         </div>
     </div>
   </body>
+  
 
 </html>
