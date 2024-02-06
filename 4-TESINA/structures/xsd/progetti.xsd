@@ -17,8 +17,8 @@
 			<xsd:sequence>
 				<xsd:element ref="pro:titolo" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:categorie" minOccurs="1" maxOccurs="1" />
-				<xsd:element ref="boz:categoriaProposta" minOccurs="0" maxOccurs="1" />
 				<xsd:element ref="pro:descrizione" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="pro:categoriaProposta" minOccurs="0" maxOccurs="1" />
 				<xsd:element ref="pro:reports_progetti" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:discussioni" minOccurs="1" maxOccurs="1" />
 				<xsd:element ref="pro:tutorial_progetto" minOccurs="0" maxOccurs="1" />
@@ -27,10 +27,10 @@
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
 			<xsd:attribute name="id_creator" type="xsd:positiveInteger" />
 			<xsd:attribute name="tempo_medio" type="xsd:positiveInteger" />
-			<xsd:attribute name="data_pubblicazione" type="xsd:dateTime" />
-			<xsd:attribute name="visualizzazioni" type="xsd:positiveInteger" />
+			<xsd:attribute name="data_pubblicazione" type="xsd:string" />
+			<xsd:attribute name="visualizzazioni" type="xsd:integer" />
 			<xsd:attribute name="nome_file_img" type="xsd:string" />
-			<xsd:attribute name="difficolta" type="pro:tipiDifficolta" />
+			<xsd:attribute name="difficolta" type="pro:tipoDifficolta" />
 			<xsd:attribute name="username_creator" type="xsd:string" />
 			<xsd:attribute name="clearance" type="pro:tipoClearance" />
 			<xsd:attribute name="sospeso" type="xsd:boolean" default="false"/>
@@ -48,7 +48,7 @@
 
 	<xsd:element name="tutorial_progetto">
 		<xsd:complexType>
-			<xsd:attribute name="id_tutorial" type="xsd:positveInteger" />
+			<xsd:attribute name="id_tutorial" type="xsd:positiveInteger" />
 		</xsd:complexType>
 	</xsd:element>
 
@@ -62,7 +62,7 @@
 
 	<xsd:element name="categoria">
 		<xsd:complexType>
-			<xsd:attribute name="id_categoria" type="xsd:ID" />
+			<xsd:attribute name="id_categoria" type="xsd:positiveInteger" />
 		</xsd:complexType>
 	</xsd:element>
 
@@ -87,7 +87,7 @@
 	<xsd:element name="discussioni">
 		<xsd:complexType>
 			<xsd:sequence minOccurs="0" maxOccurs="1">
-				<xsd:element ref="pro:discussione" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="pro:discussione" minOccurs="0" maxOccurs="unbounded" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
