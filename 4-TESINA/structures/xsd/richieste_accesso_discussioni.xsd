@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			xmlns:ric="http://www.tesina/richieste_accesso_discussioni"
-			targetNamespace="http://www.tesina/richieste_accesso_discussioni">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
     <xsd:element name="richieste">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="ric:richiesta" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element ref="richiesta" minOccurs="0" maxOccurs="unbounded" />
             </xsd:sequence>
-            <xsd:attribute name="ultimo_id" type="xsd:positiveInteger" />
+            <xsd:attribute name="ultimo_id" type="xsd:integer" />
         </xsd:complexType>
     </xsd:element>
     
     <xsd:element name="richiesta">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="ric:moderatore" minOccurs="0" maxOccurs="1" />
+                <xsd:element ref="moderatore" minOccurs="0" maxOccurs="1" />
             </xsd:sequence>
                 <xsd:attribute name="id" type="xsd:positiveInteger" />
                 <xsd:attribute name="id_utente" type="xsd:positiveInteger" />
                 <xsd:attribute name="id_discussione" type="xsd:positiveInteger" />
                 <xsd:attribute name="data_ora" type="xsd:string" />
-                <xsd:attribute name="stato" type="ric:tipoStato" />
+                <xsd:attribute name="stato" type="tipoStato" />
         </xsd:complexType>
     </xsd:element>
 

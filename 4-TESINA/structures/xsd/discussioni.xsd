@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			xmlns:disc="http://www.tesina/discussioni"
-			targetNamespace="http://www.tesina/discussioni">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 	<xsd:element name="discussioni">
 		<xsd:complexType>
 			<xsd:sequence minOccurs="0" maxOccurs="unbounded">
 				<xsd:element ref="discussione" minOccurs="0" maxOccurs="unbounded" />
 			</xsd:sequence>
-			<xsd:attribute name="ultimo_id" type="xsd:positiveInteger" />
+			<xsd:attribute name="ultimo_id" type="xsd:integer" />
 		</xsd:complexType>
 	</xsd:element>
 
 	<xsd:element name="discussione">
 		<xsd:complexType>
 			<xsd:sequence minOccurs="0" maxOccurs="1">
-				<xsd:element ref="disc:commenti" minOccurs="1" maxOccurs="1" />
-				<xsd:element ref="disc:descrizione" minOccurs="1" maxOccurs="1" />
-				<xsd:element ref="disc:partecipanti" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="commenti" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="descrizione" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="partecipanti" minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="titolo" type="xsd:string" />
 			<xsd:attribute name="id_poster" type="xsd:positiveInteger" />
@@ -31,8 +29,8 @@
 
 	<xsd:element name="commenti">
 		<xsd:complexType>
-			<xsd:sequence minOccurs="0" maxOccurs="1">
-				<xsd:element ref="disc:commento" minOccurs="0" maxOccurs="1" />
+			<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="commento" minOccurs="0" maxOccurs="1" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
@@ -46,7 +44,7 @@
 	<xsd:element name="partecipanti">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="disc:partecipante" minOccurs="1" maxOccurs="1" />
+				<xsd:element name="partecipante" minOccurs="0" maxOccurs="unbounded" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>

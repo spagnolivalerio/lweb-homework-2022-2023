@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valutazioni_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/xsd/valutazioni_commenti.xsd"/>
+<valutazioni_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/xsd/valutazioni_commenti.xsd">
+  <valutazione_commento id="1" data_ora="2024-02-06 14:27:20" id_votante="4" id_commento="5">
+    <utilita>5</utilita>
+    <livello_di_accordo>3</livello_di_accordo>
+  </valutazione_commento>
+</valutazioni_commenti>

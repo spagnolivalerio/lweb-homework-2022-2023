@@ -6,7 +6,9 @@
     <commenti/>
     <valutazioni_progetti/>
     <reports_progetti/>
-    <reports_commenti/>
+    <reports_commenti>
+      <report_commento id_report="2" tipo="Contenuti inappropriati" data_ora="2024-02-06 14:43:09" id_commento="40" commentatore="utentestd4"/>
+    </reports_commenti>
     <discussioni/>
     <valutazioni_commenti/>
   </storico>
@@ -103,13 +105,20 @@
         <testo>Per rendere il percorso più impegnativo, ho usato nastro adesivo di colori diversi per indicare diverse velocità. Il robot deve quindi adeguare la sua velocità in base al colore della linea che sta seguendo.</testo>
       </commento>
     </commenti>
-    <valutazioni_progetti/>
+    <valutazioni_progetti>
+      <valutazione_progetto id_valutazione="1" id_progetto="1" data_ora="2024-02-06 15:38:21" value="5"/>
+    </valutazioni_progetti>
     <reports_progetti/>
     <reports_commenti/>
     <discussioni>
       <discussione id_discussione="8" data_ora="2024-02-06 08:58:18" titolo=" Manutenzione e Aggiornamenti del Sistema"/>
     </discussioni>
-    <valutazioni_commenti/>
+    <valutazioni_commenti>
+      <valutazione_commento id_valutazione="1" data_ora="2024-02-06 14:27:20" id_commento="5" id_progetto="1">
+        <utilita>5</utilita>
+        <livello_di_accordo>3</livello_di_accordo>
+      </valutazione_commento>
+    </valutazioni_commenti>
   </storico>
   <storico id_utente="5">
     <progetti>

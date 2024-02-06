@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			xmlns:repcom="http://www.tesina/reports_commenti"
-			targetNamespace="http://www.tesina/reports_commenti">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 	<xsd:element name="reports_commenti">
 		<xsd:complexType>
 			<xsd:sequence minOccurs="0" maxOccurs="1">
-				<xsd:element ref="repcom:report_commento" minOccurs="0" maxOccurs="unbounded" /> 
+				<xsd:element ref="report_commento" minOccurs="0" maxOccurs="unbounded" /> 
 			</xsd:sequence>
-			<xsd:attribute name="ultimo_id" type="xsd:positiveInteger" />
+			<xsd:attribute name="ultimo_id" type="xsd:integer" />
 		</xsd:complexType>
 	</xsd:element>
 
 	<xsd:element name="report_commento">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element ref="repcom:tipo" minOccurs="1" maxOccurs="1" />
-				<xsd:element ref="repcom:testo" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="tipo" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="testo" minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
 			<xsd:attribute name="id_utente" type="xsd:positiveInteger" />
@@ -29,8 +27,8 @@
 		<xsd:simpleType>
 			<xsd:restriction base="xsd:string">
 				<xsd:enumeration value="spam" />
-				<xsd:enumeration value="contenuti inappropriati" />
-				<xsd:enumeration value="contenuti inesatti" />
+				<xsd:enumeration value="Contenuti inappropriati" />
+				<xsd:enumeration value="Contenuti inesatti" />
 			</xsd:restriction>
 		</xsd:simpleType>
 	</xsd:element>

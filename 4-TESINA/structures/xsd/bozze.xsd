@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			xmlns:boz="http://www.tesina/bozze"
-			targetNamespace="http://www.tesina/bozze">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
     <xsd:element name="bozze">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="boz:bozza" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element ref="bozza" minOccurs="0" maxOccurs="unbounded" />
             </xsd:sequence>
-			<xsd:attribute name="ultimo_id" type="xsd:positiveInteger" />
+			<xsd:attribute name="ultimo_id" type="xsd:integer" />
         </xsd:complexType>
     </xsd:element>
 
     <xsd:element name="bozza">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element ref="boz:categorie" minOccurs="0" maxOccurs="1" />
-				<xsd:element ref="boz:categoriaProposta" minOccurs="0" maxOccurs="1" />
-				<xsd:element ref="boz:descrizione" minOccurs="0" maxOccurs="1" />
-				<xsd:element ref="boz:tutorial_bozza" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="categorie" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="categoriaProposta" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="descrizione" minOccurs="0" maxOccurs="1" />
+				<xsd:element ref="tutorial_bozza" minOccurs="0" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="titolo" type="xsd:string" />
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
 			<xsd:attribute name="id_creator" type="xsd:positiveInteger" />
 			<xsd:attribute name="tempo_medio" type="xsd:positiveInteger" />
 			<xsd:attribute name="nome_file_img" type="xsd:string" />
-			<xsd:attribute name="data_pubblicazione" type="xsd:dateTime" />
-			<xsd:attribute name="visualizzazioni" type="xsd:positiveInteger" />
-			<xsd:attribute name="difficolta" type="boz:tipoDifficolta" />
-			<xsd:attribute name="clearance" type="pro:tipoClearance" />
+			<xsd:attribute name="data_pubblicazione" type="xsd:string" />
+			<xsd:attribute name="visualizzazioni" type="xsd:integer" />
+			<xsd:attribute name="difficolta" type="tipoDifficolta" />
+			<xsd:attribute name="clearance" type="tipoClearance" />
 			<xsd:attribute name="sospeso" type="xsd:boolean" default="false"/>
 		</xsd:complexType>
 	</xsd:element>
@@ -43,7 +41,7 @@
 	<xsd:element name="categorie">
 		<xsd:complexType>
 			<xsd:sequence minOccurs="0" maxOccurs="1">
-				<xsd:element ref="boz:categoria" minOccurs="1" maxOccurs="unbounded" />
+				<xsd:element ref="categoria" minOccurs="1" maxOccurs="unbounded" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
@@ -56,12 +54,10 @@
 
 	<xsd:element name="categoriaProposta" type="xsd:string" />
 
-	<xsd:element name="descrizione" type="xsd:string" />
-
 	<xsd:element name="reports_progetti">
 		<xsd:complexType>
 			<xsd:sequence minOccurs="0" maxOccurs="1">
-				<xsd:element ref="boz:report_progetto" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="report_progetto" minOccurs="0" maxOccurs="unbounded" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
@@ -75,7 +71,7 @@
 	<xsd:element name="tutorial_bozza">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element ref="boz:step" minOccurs="1" maxOccurs="unbounded" />
+				<xsd:element ref="step" minOccurs="0" maxOccurs="unbounded" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
@@ -83,7 +79,7 @@
 	<xsd:element name="step">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element ref="boz:descrizione" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="descrizione" minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="titolo_step" type="xsd:string" />
 			<xsd:attribute name="nome_file_img" type="xsd:string"/>

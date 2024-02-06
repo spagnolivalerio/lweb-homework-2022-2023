@@ -50,12 +50,10 @@ $newCommento->setAttribute('data_ora', $data_ora);
 $newCommento->setAttribute('commentatore', $commentatore);
 
 $newTesto = $doc->createElement('testo', $newTestoValue);
-$newVoti = $doc->createElement('voti');
 $newReports = $doc->createElement('reports_commento');
 $newValutazioni = $doc->createElement('valutazioni_commento');
 
 $newCommento->appendChild($newTesto);
-$newCommento->appendChild($newVoti);
 $newCommento->appendChild($newReports);
 $newCommento->appendChild($newValutazioni);
 

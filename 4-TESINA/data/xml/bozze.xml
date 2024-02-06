@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="27" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
-  <bozza sospeso="false" id="24" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-06 10:04:55" difficolta="facile" clearance="" nome_file_img="">
+  <bozza sospeso="false" id="24" titolo="" id_creator="3" tempo_medio="1" data_pubblicazione="2024-02-06 10:04:55" difficolta="facile" clearance="1" nome_file_img="">
     <categorie/>
     <categoriaProposta/>
     <descrizione/>

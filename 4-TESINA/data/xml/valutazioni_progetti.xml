@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<valutazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../xsd/structures/valutazioni_progetti.xsd"/>
+<valutazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../xsd/structures/valutazioni_progetti.xsd">
+  <valutazione_progetto id="1" id_progetto="1" value="5" id_votante="4" data_ora="2024-02-06 15:38:21">
+    <testo>"Realizzare la lampada da tavolo riciclata è stata un'esperienza eccezionale, che unisce creatività e sostenibilità. Il processo, dalla preparazione della bottiglia alla verniciatura e all'installazione elettrica, è stato chiaro e gratificante. Il risultato finale è una lampada unica che non solo illumina lo spazio con eleganza ma serve anche come conversazione stimolante sull'upcycling. Questo progetto fai-da-te è altamente raccomandato per chiunque voglia aggiungere un tocco personale e verde alla propria casa. 5 stelle senza dubbio!"</testo>
+  </valutazione_progetto>
+</valutazioni>

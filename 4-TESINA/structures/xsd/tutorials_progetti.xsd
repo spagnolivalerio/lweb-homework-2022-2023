@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			xmlns:tut="http://www.tesina/richieste_accesso_discussioni"
-			targetNamespace="http://www.tesina/tutorial">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
     <xsd:element name="tutorials_progetti">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element ref="tut:tutorial_progetto" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="tutorial_progetto" minOccurs="1" maxOccurs="unbounded" />
 			</xsd:sequence>
+			<xsd:attribute name="ultimo_id" type="xsd:integer" />
 		</xsd:complexType>
 	</xsd:element>
 
     <xsd:element name="tutorial_progetto">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element ref="tut:step" minOccurs="1" maxOccurs="unbounded" />
+				<xsd:element ref="step" minOccurs="1" maxOccurs="unbounded" />
 			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:positiveInteger" />
             <xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
 		</xsd:complexType>
 	</xsd:element>
@@ -23,7 +23,7 @@
 	<xsd:element name="step">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element ref="tut:descrizione" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="descrizione" minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="titolo_step" type="xsd:string" />
 			<xsd:attribute name="num_step" type="xsd:positiveInteger" />

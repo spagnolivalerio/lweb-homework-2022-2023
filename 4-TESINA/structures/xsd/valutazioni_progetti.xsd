@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			xmlns:valpro="http://www.tesina/valutazioni"
-			targetNamespace="http://www.tesina/valutazioni_progetti">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 	<xsd:element name="valutazioni">
 		<xsd:complexType>
 			<xsd:sequence minOccurs="0" maxOccurs="1">
-				<xsd:element ref="valpro:valutazione_progetto" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="valutazione_progetto" minOccurs="0" maxOccurs="unbounded" />
 			</xsd:sequence>
-			<xsd:attribute name="ultimo_id" type="xsd:positiveInteger" />
+			<xsd:attribute name="ultimo_id" type="xsd:integer" />
 		</xsd:complexType>
 	</xsd:element>
 
 	<xsd:element name="valutazione_progetto">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element ref="valpro:testo" use="required" />
+				<xsd:element ref="testo"  minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 			<xsd:attribute name="id" type="xsd:positiveInteger" />
 			<xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
-			<xsd:attribute name="value" type="val:valutazioneType" />
+			<xsd:attribute name="value" type="valutazioneType" />
 			<xsd:attribute name="id_votante" type="xsd:positiveInteger" />
 			<xsd:attribute name="data_ora" type="xsd:string" />
 		</xsd:complexType>

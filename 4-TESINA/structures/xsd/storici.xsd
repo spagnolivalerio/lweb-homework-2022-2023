@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			xmlns:sto="http://www.tesina/storici"
-			targetNamespace="http://www.tesina/storici">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
     <xsd:element name="storici">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="sto:storico" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="storico" minOccurs="0" maxOccurs="unbounded"/>
             </xsd:sequence>
-            <xsd:attribute name="ultimo_id" type="xsd:positiveInteger" />
+            <xsd:attribute name="ultimo_id" type="xsd:integer" />
         </xsd:complexType>
     </xsd:element>
 
     <xsd:element name="storico">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="sto:progetti" minOccurs="1" maxOccurs="1" /> 
-                <xsd:element ref="sto:richieste" minOccurs="1" maxOccurs="1" />
-                <xsd:element ref="sto:commenti" minOccurs="1" maxOccurs="1" />
-                <xsd:element ref="sto:valutazioni_progetti" minOccurs="1" maxOccurs="1" />
-                <xsd:element ref="sto:reports_progetti" minOccurs="1" maxOccurs="1" />
-                <xsd:element ref="sto:reports_commenti" minOccurs="1" maxOccurs="1" />
-                <xsd:element ref="sto:discussioni" minOccurs="1" maxOccurs="1" />
-                <xsd:element ref="sto:valutazioni_commenti" minOccurs="1" maxOccurs="1" />
+                <xsd:element ref="progetti" minOccurs="1" maxOccurs="1" /> 
+                <xsd:element ref="richieste" minOccurs="1" maxOccurs="1" />
+                <xsd:element ref="commenti" minOccurs="1" maxOccurs="1" />
+                <xsd:element ref="valutazioni_progetti" minOccurs="1" maxOccurs="1" />
+                <xsd:element ref="reports_progetti" minOccurs="1" maxOccurs="1" />
+                <xsd:element ref="reports_commenti" minOccurs="1" maxOccurs="1" />
+                <xsd:element ref="discussioni" minOccurs="1" maxOccurs="1" />
+                <xsd:element ref="valutazioni_commenti" minOccurs="1" maxOccurs="1" />
             </xsd:sequence>
             <xsd:attribute name="id_utente" type="xsd:positiveInteger" />
         </xsd:complexType>
@@ -31,7 +29,7 @@
     <xsd:element name="progetti">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="sto:progetto" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="progetto" minOccurs="0" maxOccurs="unbounded"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -47,7 +45,7 @@
     <xsd:element name="richieste">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="sto:richiesta" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="richiesta" minOccurs="0" maxOccurs="unbounded"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -64,7 +62,7 @@
     <xsd:element name="commenti">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="sto:commento" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="commento" minOccurs="0" maxOccurs="unbounded"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -72,7 +70,7 @@
     <xsd:element name="commento">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="sto:testo" minOccurs="1" maxOccurs="1" />
+                <xsd:element ref="testo" minOccurs="1" maxOccurs="1" />
             </xsd:sequence>
             <xsd:attribute name="id_commento" type="xsd:positiveInteger" />
             <xsd:attribute name="id_discussione" type="xsd:positiveInteger" />
@@ -85,7 +83,7 @@
     <xsd:element name="valutazioni_progetti">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="sto:valutazione_progetto" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="valutazione_progetto" minOccurs="0" maxOccurs="unbounded"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -99,51 +97,10 @@
         </xsd:complexType>
     </xsd:element>
 
-       <xsd:element name="valutazioni_commenti">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element ref="sto:valutazione_progetto" minOccurs="0" maxOccurs="unbounded">
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
-
-    <xsd:element name="valutazione_commento">
-        <xsd:complexType>
-            <xsd:sequence minOccurs="0" maxOccurs="1">
-                <xsd:element ref="sto:utilita" minOccurs="0" maxOccurs="unbounded" />
-                <xsd:element ref="sto:livello_di_accordo" minOccurs="0" maxOccurs="unbounded" />
-            </xsd:sequence>
-            <xsd:attribute name="id_valutazione" type="xsd:positiveInteger" /> 
-            <xsd:attribute name="data_ora" type="xsd:string" />  
-            <xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
-            <xsd:attribute name="id_commento" type="xsd:positiveInteger" />
-        </xsd:complexType>
-    </xsd:element> 
-
-    <xsd:element name="utilita" type="sto:tipoUtilita" />
-
-    <xsd:simpleType name="tipoUtilita">
-        <xsd:restriction base="xsd:positiveInteger">
-            <xsd:minInclusive value="1" />
-            <xsd:maxInclusive value="5" />
-        </xsd:restriction>
-    </xsd:simpleType>
-
-    <xsd:element name="livello_di_accordo" type="sto:tipoAccordo" />
-
-    <xsd:simpleType name="tipoAccordo">
-        <xsd:restriction base="xsd:positiveInteger">
-            <xsd:minInclusive value="1" />
-            <xsd:maxInclusive value="3" />
-        </xsd:restriction>
-    </xsd:simpleType>
-
- 
-
     <xsd:element name="reports_progetti">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="sto:report_progetto" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="report_progetto" minOccurs="0" maxOccurs="unbounded"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -162,7 +119,7 @@
         <xsd:element name="reports_commenti">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="sto:report_commento" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="report_commento" minOccurs="0" maxOccurs="unbounded"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -180,7 +137,7 @@
     <xsd:element name="discussioni">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="sto:discussione" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element ref="discussione" minOccurs="0" maxOccurs="unbounded" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -192,5 +149,44 @@
             <xsd:attribute name="titolo" type="xsd:string" />
         </xsd:complexType>
     </xsd:element>
+
+    <xsd:element name="valutazioni_commenti">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="valutazione_commento" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="valutazione_commento">
+        <xsd:complexType>
+            <xsd:sequence minOccurs="0" maxOccurs="1">
+                <xsd:element ref="utilita" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element ref="livello_di_accordo" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+            <xsd:attribute name="id_valutazione" type="xsd:positiveInteger" /> 
+            <xsd:attribute name="data_ora" type="xsd:string" />  
+            <xsd:attribute name="id_progetto" type="xsd:positiveInteger" />
+            <xsd:attribute name="id_commento" type="xsd:positiveInteger" />
+        </xsd:complexType>
+    </xsd:element> 
+
+    <xsd:element name="utilita" type="tipoUtilita" />
+
+    <xsd:simpleType name="tipoUtilita">
+        <xsd:restriction base="xsd:positiveInteger">
+            <xsd:minInclusive value="1" />
+            <xsd:maxInclusive value="5" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:element name="livello_di_accordo" type="tipoAccordo" />
+
+    <xsd:simpleType name="tipoAccordo">
+        <xsd:restriction base="xsd:positiveInteger">
+            <xsd:minInclusive value="1" />
+            <xsd:maxInclusive value="3" />
+        </xsd:restriction>
+    </xsd:simpleType>
 
 </xsd:schema>
