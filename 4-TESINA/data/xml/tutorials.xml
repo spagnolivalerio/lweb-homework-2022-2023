@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="5">
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/tutorials_progetti.xsd" ultimo_id="9">
   <tutorial_progetto id="1" id_progetto="1">
     <step titolo_step="Raccolta dei Materiali" num_step="1" nome_file_img="img/steps/img_step_65c110512fc3c.webp">
       <descrizione>Vecchie bottiglie di vetro, un kit per cablaggio elettrico per lampade, una lampadina a LED, carta vetrata, e vernice spray.</descrizione>
@@ -48,38 +48,60 @@
       <descrizione>Testare il ventilatore smart per assicurarsi che possa essere controllato correttamente tramite l'applicazione smartphone.</descrizione>
     </step>
   </tutorial_progetto>
-  <tutorial_progetto id="4" id_progetto="4">
-    <step titolo_step="Raccolta dei Materiali" num_step="1" nome_file_img="img/steps/img_step_65c11a8d0a530.webp">
-      <descrizione>Un pezzo di legno massello, corde spesse, trapano, viti a gancio, livella, carta vetrata, vernice o impregnante per legno.</descrizione>
+  <tutorial_progetto id="6" id_progetto="6">
+    <step titolo_step="Raccolta dei Componenti" num_step="1" nome_file_img="img/steps/img_step_65c14590c7d0e.webp">
+      <descrizione>Il primo step consiste nel raccogliere tutti i componenti necessari per costruire il sistema. Questi includono:&lt;br /&gt;&#13;&lt;br /&gt;&#13;Un microcontrollore (Arduino o Raspberry Pi)&lt;br /&gt;&#13;Sensori di umidità del terreno&lt;br /&gt;&#13;Una pompa d'acqua&lt;br /&gt;&#13;Tubi per l'acqua&lt;br /&gt;&#13;Cavi di connessione&lt;br /&gt;&#13;Una breadboard o una PCB (scheda a circuito stampato) per collegare i componenti</descrizione>
     </step>
-    <step titolo_step="Preparazione e Taglio del Legno" num_step="2" nome_file_img="img/steps/img_step_65c11ac57650d.webp">
-      <descrizione>Segnare e tagliare il legno nelle dimensioni desiderate, quindi levigare i bordi con la carta vetrata per una finitura liscia.</descrizione>
+    <step titolo_step="Assemblaggio dei Componenti sulla Breadboard" num_step="2" nome_file_img="img/steps/img_step_65c145d337f15.webp">
+      <descrizione>Nel secondo step, inizieremo l'assemblaggio dei componenti sulla breadboard. Questo passaggio include:&lt;br /&gt;&#13;&lt;br /&gt;&#13;Collegare i sensori di umidità del terreno al microcontrollore tramite i cavi.&lt;br /&gt;&#13;Collegare la pompa d'acqua al microcontrollore, assicurandosi che sia alimentata adeguatamente.&lt;br /&gt;&#13;Utilizzare la breadboard per facilitare i collegamenti temporanei e testare il circuito.</descrizione>
     </step>
-    <step titolo_step=" Foratura del Legno" num_step="3" nome_file_img="img/steps/img_step_65c11af115f2e.webp">
-      <descrizione>Forare i fori agli angoli del pezzo di legno per le corde, assicurandosi che siano della dimensione giusta per consentire un passaggio facile ma sicuro delle corde.</descrizione>
+    <step titolo_step="Programmazione del Microcontrollore" num_step="3" nome_file_img="img/steps/img_step_65c145f6bc8eb.webp">
+      <descrizione>Il terzo step riguarda la programmazione del microcontrollore. Questo passaggio è fondamentale per definire la logica di funzionamento del sistema di irrigazione, inclusi la lettura dei dati dai sensori di umidità e l'attivazione della pompa d'acqua quando il terreno risulta troppo secco.</descrizione>
     </step>
-    <step titolo_step=" Verniciatura o Impregnazione" num_step="4" nome_file_img="img/steps/img_step_65c11b1af13a5.webp">
-      <descrizione>Applicare una mano di vernice o impregnante per proteggere il legno e dare il colore o la finitura desiderata.</descrizione>
-    </step>
-    <step titolo_step="Installazione delle Corde e Montaggio" num_step="5" nome_file_img="img/steps/img_step_65c11b4ccb732.webp">
-      <descrizione>Inserire le corde nei fori, annodarle con sicurezza e fissare i ganci al soffitto per appenderle. Usare la livella per assicurarsi che la mensola sia perfettamente orizzontale.</descrizione>
+    <step titolo_step="Test Finale e Installazione" num_step="4" nome_file_img="img/steps/img_step_65c1461bc05c2.webp">
+      <descrizione>L'ultimo step del nostro progetto di irrigazione intelligente è il test finale e l'installazione. In questa fase, verifichiamo che il sistema funzioni come previsto, monitorando l'umidità del terreno e attivando la pompa d'acqua quando necessario. Questo step include:&lt;br /&gt;&#13;&lt;br /&gt;&#13;Posizionare i sensori di umidità nel terreno di una pianta in vaso.&lt;br /&gt;&#13;Riempire il serbatoio d'acqua e collegarlo alla pompa.&lt;br /&gt;&#13;Accendere il sistema e monitorare la risposta dei sensori di umidità e l'attivazione della pompa d'acqua.</descrizione>
     </step>
   </tutorial_progetto>
-  <tutorial_progetto id="5" id_progetto="5">
-    <step titolo_step=" Raccolta dei Materiali" num_step="1" nome_file_img="img/steps/img_step_65c11c33e7d04.webp">
-      <descrizione>Kit robot seguilinea (include motori DC, ruote, scheda Arduino, sensori di linea infrarossi, batterie), cacciavite, e nastro adesivo per tracciare il percorso.</descrizione>
+  <tutorial_progetto id="7" id_progetto="7">
+    <step titolo_step="Raccolta dei Componenti" num_step="1" nome_file_img="img/steps/img_step_65c148a1075ca.webp">
+      <descrizione>Il primo passo nella realizzazione della nostra stazione meteo Arduino consiste nella raccolta di tutti i componenti necessari. Questi includono il microcontrollore Arduino, sensori per misurare temperatura, umidità e pressione atmosferica, un display LCD per visualizzare i dati, cavi di collegamento e una breadboard.</descrizione>
     </step>
-    <step titolo_step="Assemblaggio della Struttura" num_step="2" nome_file_img="img/steps/img_step_65c11db71de5b.webp">
-      <descrizione>Montare la struttura del robot seguendo le istruzioni, fissando motori, ruote, e la piattaforma di base.</descrizione>
+    <step titolo_step="Assemblaggio sulla Breadboard" num_step="2" nome_file_img="img/steps/img_step_65c148bf9ba55.webp">
+      <descrizione>In questa fase, procediamo con l'assemblaggio dei vari componenti sulla breadboard. Collegando l'Arduino ai sensori e al display LCD mediante i cavi, creiamo la struttura fisica della nostra stazione meteo. Questo step richiede precisione e attenzione nel collegare correttamente ogni elemento per garantire il funzionamento del sistema.</descrizione>
     </step>
-    <step titolo_step="Installazione della Scheda Arduino e dei Sensori" num_step="3" nome_file_img="img/steps/img_step_65c11ddf83d38.webp">
-      <descrizione>Collegare la scheda Arduino al robot e installare i sensori di linea infrarossi, configurando il cablaggio necessario.</descrizione>
+    <step titolo_step="Programmazione del Microcontrollore" num_step="3" nome_file_img="img/steps/img_step_65c148d186b6a.webp">
+      <descrizione>Dopo aver assemblato i componenti, il prossimo passo è programmare il microcontrollore Arduino per leggere i dati dai sensori e visualizzarli sul display LCD. Utilizzando un linguaggio di programmazione accessibile, scriviamo e carichiamo lo sketch che permetterà di monitorare le condizioni ambientali in tempo reale.</descrizione>
     </step>
-    <step titolo_step="Programmazione del Robot" num_step="4" nome_file_img="img/steps/img_step_65c11e017c9cd.webp">
-      <descrizione>Programmare la scheda Arduino con il codice per il riconoscimento e il seguimento della linea.</descrizione>
+    <step titolo_step="Test Finale e Visualizzazione Dati" num_step="4" nome_file_img="img/steps/img_step_65c148fd4be97.webp">
+      <descrizione>L'ultimo step del nostro progetto è il test finale. Accendiamo la stazione meteo e osserviamo i dati raccolti dai sensori visualizzati sul display LCD. Questa fase ci permette di verificare la corretta funzionalità di tutto il sistema e di apportare eventuali aggiustamenti. Con la stazione meteo ora operativa, possiamo monitorare con precisione temperatura, umidità e pressione atmosferica direttamente da casa.</descrizione>
     </step>
-    <step titolo_step="Test del Robot" num_step="5" nome_file_img="img/steps/img_step_65c11e1e925c9.webp">
-      <descrizione>Testare il robot su un percorso preparato con nastro adesivo, regolando i sensori e il codice se necessario.</descrizione>
+  </tutorial_progetto>
+  <tutorial_progetto id="8" id_progetto="8">
+    <step titolo_step="Raccolta dei Componenti" num_step="1" nome_file_img="img/steps/img_step_65c14b16c90f7.webp">
+      <descrizione> Il primo passo nel costruire il nostro robot segui-linea è la raccolta di tutti i componenti necessari, inclusi il microcontrollore Arduino, sensori per il rilevamento della linea, motori, ruote, e una batteria. Questa fase iniziale pone le basi per l'assemblaggio del robot.</descrizione>
+    </step>
+    <step titolo_step="Assemblaggio del Robot Segui-Linea" num_step="2" nome_file_img="img/steps/img_step_65c14b36a151b.webp">
+      <descrizione>Con tutti i componenti a portata di mano, procediamo con l'assemblaggio del robot. I motori vengono fissati alle ruote e collegati all'Arduino, mentre i sensori per il rilevamento della linea vengono montati frontalmente. Questo step richiede attenzione nel posizionare e collegare correttamente ogni parte.</descrizione>
+    </step>
+    <step titolo_step="Programmazione del Microcontrollore" num_step="3" nome_file_img="img/steps/img_step_65c14b5a81dee.webp">
+      <descrizione>Il cuore del nostro robot segui-linea è la programmazione che consente di rilevare e seguire una linea. Utilizzando l'Arduino, scriviamo e carichiamo il codice che interpreta i segnali dei sensori e guida i motori per seguire il percorso designato.</descrizione>
+    </step>
+    <step titolo_step="Test Finale " num_step="4" nome_file_img="img/steps/img_step_65c14b7c1d9a3.webp">
+      <descrizione>L'ultimo step del progetto è il test finale. Posizioniamo il robot su un percorso con una linea nera su sfondo bianco e osserviamo come segue accuratamente il tracciato. Questa fase dimostra il successo del nostro progetto robotico, evidenziando l'integrazione efficace di componenti hardware e software.</descrizione>
+    </step>
+  </tutorial_progetto>
+  <tutorial_progetto id="9" id_progetto="9">
+    <step titolo_step="Preparazione dei Componenti" num_step="1" nome_file_img="img/steps/img_step_65c14dbf09085.webp">
+      <descrizione>Il primo passo nella creazione del nostro gioco di memoria LED è la raccolta di tutti i componenti necessari, inclusi l'Arduino, i LED di vari colori, i pulsanti, e un piccolo altoparlante. Questa fase iniziale è essenziale per assicurare che abbiamo tutto il necessario per costruire il gioco.</descrizione>
+    </step>
+    <step titolo_step="Assemblaggio del Circuito" num_step="2" nome_file_img="img/steps/img_step_65c14df51bad5.webp">
+      <descrizione>Dopo aver raccolto tutti i componenti, procediamo con l'assemblaggio sul breadboard. Collegando l'Arduino ai LED, ai pulsanti, e all'altoparlante, costruiamo il circuito di base del nostro gioco di memoria. Questo step richiede attenzione ai dettagli per garantire che ogni collegamento sia corretto.</descrizione>
+    </step>
+    <step titolo_step="Programmazione del Gioco" num_step="3" nome_file_img="img/steps/img_step_65c14e1598cb3.webp">
+      <descrizione>Con il circuito assemblato, il prossimo passo è programmare l'Arduino per controllare i LED e leggere gli input dai pulsanti. Scriviamo il codice che genera le sequenze di luci e suoni e che verifica le risposte dell'utente, rendendo il gioco interattivo e divertente.</descrizione>
+    </step>
+    <step titolo_step="Test e Gioco" num_step="4" nome_file_img="img/steps/img_step_65c14e2a60e02.webp">
+      <descrizione>L'ultimo step è il test finale del gioco. Accendiamo il sistema e iniziamo a giocare, ripetendo le sequenze di luci e suoni. Questa fase dimostra il successo del nostro progetto, evidenziando come il gioco di memoria LED offra un'esperienza interattiva che mette alla prova la memoria e le abilità di reazione.</descrizione>
     </step>
   </tutorial_progetto>
 </tutorials_progetti>

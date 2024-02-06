@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<reports_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  
+<reports_commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <report_commento id="1" id_commento="40" id_utente="5" data_ora="2024-02-06 10:15:52">
+    <tipo>Contenuti inappropriati</tipo>
+    <testo>Il commento non è pertinente e fa perdere tempo alle persone, questo è un forum serio!</testo>
+  </report_commento>
 </reports_commenti>

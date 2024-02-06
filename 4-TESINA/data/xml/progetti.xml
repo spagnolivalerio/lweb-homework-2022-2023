@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="5" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
-  <progetto id="1" username_creator="utentestd3" id_creator="6" tempo_medio="120" data_pubblicazione="2024-02-05 17:46:04" visualizzazioni="5" nome_file_img="img/proj/img_proj_65c1103dbadd7.webp" difficolta="facile" clearance="1" sospeso="false">
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="9" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd">
+  <progetto id="1" username_creator="utentestd3" id_creator="6" tempo_medio="120" data_pubblicazione="2024-02-05 17:46:04" visualizzazioni="17" nome_file_img="img/proj/img_proj_65c1103dbadd7.webp" difficolta="facile" clearance="1" sospeso="false">
     <titolo>Lampada da Tavolo Riciclata</titolo>
     <categorie>
       <categoria id_categoria="5"/>
@@ -8,11 +8,14 @@
     <descrizione>Il progetto della lampada da tavolo riciclata trasforma una semplice bottiglia di vetro in un elegante oggetto d'arredo. Inizia con la raccolta di materiali quali una bottiglia di vetro, un kit per cablaggio elettrico, una lampadina a LED, carta vetrata e vernice spray. Il processo include il taglio della base della bottiglia per inserirvi il kit elettrico, la verniciatura della bottiglia per un tocco di personalizzazione, e l'assemblaggio finale che culmina con l'aggiunta di una lampadina a LED e un paralume. Questo progetto fai da te non solo promuove il riciclo creativo, ma offre anche l'opportunità di creare un'illuminazione accogliente e personalizzata per qualsiasi ambiente.</descrizione>
     <categoriaProposta>Sostenibilità e Ambiente</categoriaProposta>
     <reports_progetti/>
-    <discussioni/>
+    <discussioni>
+      <discussione id_discussione="1"/>
+      <discussione id_discussione="2"/>
+    </discussioni>
     <tutorial_progetto id_tutorial="1"/>
     <valutazioni/>
   </progetto>
-  <progetto id="2" username_creator="moderatore1" id_creator="3" tempo_medio="180" data_pubblicazione="2024-02-05 17:52:52" visualizzazioni="17" nome_file_img="img/proj/img_proj_65c112628ed70.webp" difficolta="medio" clearance="2" sospeso="false">
+  <progetto id="2" username_creator="moderatore1" id_creator="3" tempo_medio="180" data_pubblicazione="2024-02-05 17:52:52" visualizzazioni="35" nome_file_img="img/proj/img_proj_65c112628ed70.webp" difficolta="medio" clearance="1" sospeso="false">
     <titolo>Raspberry Pi per Emulazione di Giochi Retro</titolo>
     <categorie>
       <categoria id_categoria="1"/>
@@ -21,11 +24,14 @@
     <descrizione>Il progetto di mini computer Raspberry Pi per emulazione di giochi retro combina la nostalgia dei videogiochi classici con la tecnologia moderna in un unico dispositivo compatto e personalizzabile. Utilizzando un Raspberry Pi, una microSD card flashata con software di emulazione come RetroPie o Recalbox, e controller USB in stile retrò, questo progetto permette di rivivere i classici giochi arcade e console direttamente dalla comodità di casa. L'assemblaggio coinvolge l'installazione del sistema operativo sulla microSD, il montaggio del Raspberry Pi nella sua custodia, e la configurazione dei controller per una perfetta esperienza di gioco. Il risultato finale è un sistema di emulazione versatile e interattivo, capace di eseguire migliaia di giochi retro, che rende omaggio alla storia dei videogiochi mantenendo al contempo un occhio al futuro grazie alla sua smart integrabilità e personalizzazione.</descrizione>
     <categoriaProposta/>
     <reports_progetti/>
-    <discussioni/>
+    <discussioni>
+      <discussione id_discussione="3"/>
+      <discussione id_discussione="4"/>
+    </discussioni>
     <tutorial_progetto id_tutorial="2"/>
     <valutazioni/>
   </progetto>
-  <progetto id="3" username_creator="utentestd1" id_creator="4" tempo_medio="360" data_pubblicazione="2024-02-05 18:08:49" visualizzazioni="0" nome_file_img="img/proj/img_proj_65c1155ef10c8.webp" difficolta="facile" clearance="1" sospeso="false">
+  <progetto id="3" username_creator="utentestd1" id_creator="4" tempo_medio="360" data_pubblicazione="2024-02-05 18:08:49" visualizzazioni="10" nome_file_img="img/proj/img_proj_65c1155ef10c8.webp" difficolta="facile" clearance="1" sospeso="false">
     <titolo>Ventilatore Smart Fai Da Te</titolo>
     <categorie>
       <categoria id_categoria="2"/>
@@ -34,34 +40,69 @@
     <descrizione>Il progetto del ventilatore smart fai da te è una perfetta fusione di tecnologia e artigianato, ideale per gli appassionati di elettronica e di fai da te che desiderano aggiungere un tocco di innovazione alla loro casa. Partendo dalla raccolta dei materiali come il motorino del ventilatore, pale, una scheda Arduino o Raspberry Pi e un modulo Bluetooth, il progetto attraversa diverse fasi: l'assemblaggio fisico del ventilatore, l'integrazione dei componenti elettronici per il controllo wireless e la programmazione del microcontrollore. Il risultato è un ventilatore elegante e funzionale, controllabile tramite smartphone, che non solo offre refrigerio nelle giornate calde ma diventa anche un punto focale di conversazione per la sua innovativa combinazione di tecnologia e design fai da te.</descrizione>
     <categoriaProposta/>
     <reports_progetti/>
-    <discussioni/>
+    <discussioni>
+      <discussione id_discussione="5"/>
+      <discussione id_discussione="6"/>
+    </discussioni>
     <tutorial_progetto id_tutorial="3"/>
     <valutazioni/>
   </progetto>
-  <progetto id="4" username_creator="utentestd1" id_creator="4" tempo_medio="300" data_pubblicazione="2024-02-05 18:31:03" visualizzazioni="6" nome_file_img="img/proj/img_proj_65c11a0f9d3d1.webp" difficolta="facile" clearance="1" sospeso="false">
-    <titolo>Mensola Sospesa Fai Da Te</titolo>
+  <progetto id="6" username_creator="moderatore2" id_creator="8" tempo_medio="250" data_pubblicazione="2024-02-05 21:33:38" visualizzazioni="16" nome_file_img="img/proj/img_proj_65c1455c6ea8d.webp" difficolta="medio" clearance="1" sospeso="false">
+    <titolo>sistema di irrigazione intelligente</titolo>
     <categorie>
-      <categoria id_categoria="6"/>
+      <categoria id_categoria="4"/>
+      <categoria id_categoria="5"/>
     </categorie>
-    <descrizione>Il progetto della mensola sospesa in stile rustico fai da te è un'ottima aggiunta per qualsiasi ambiente, combinando funzionalità e estetica con un tocco di calore casalingo. Partendo dalla raccolta di materiali semplici come legno riciclato e corde, il progetto procede attraverso varie fasi di creazione. Inizialmente, si taglia e si assembla il legno per formare la base della mensola, garantendo che ogni pezzo sia levigato per una finitura liscia e sicura al tatto. Successivamente, si procede con la foratura del legno per inserire le corde, che serviranno per sospenderla in modo elegante.&lt;br /&gt;&#13;Una volta assemblata la struttura base, si applica una vernice o un impregnante per proteggere il legno e migliorarne l'aspetto, enfatizzando la texture naturale e aggiungendo un livello di durabilità. L'ultimo passo vede l'installazione delle corde e il montaggio della mensola, con un'attenzione particolare all'equilibrio e alla sicurezza, assicurando che sia ben ancorata e pronta per sostenere oggetti decorativi o di uso quotidiano.&lt;br /&gt;&#13;Questo progetto non solo offre uno spazio aggiuntivo per organizzare e esporre oggetti, ma diventa anche un punto focale di stile nell'arredamento, riflettendo la passione per il fai da te e l'amore per i materiali naturali.</descrizione>
-    <categoriaProposta>Bricolage</categoriaProposta>
+    <descrizione>Il nostro sistema di irrigazione intelligente permette di mantenere le piante adeguatamente idratate, adattandosi alle loro specifiche esigenze di irrigazione. Utilizzando un microcontrollore (come Arduino o Raspberry Pi), sensori di umidità del terreno, e una pompa d'acqua, il sistema monitora costantemente il livello di umidità del terreno e attiva l'irrigazione quando necessario. È una soluzione perfetta per chi dimentica di annaffiare le piante o per chi è spesso fuori casa. Oltre a garantire l'idratazione ottimale delle piante, il progetto introduce ai principi base della programmazione, dell'elettronica, e della gestione dei dati attraverso sensori.</descrizione>
+    <categoriaProposta/>
     <reports_progetti/>
-    <discussioni/>
-    <tutorial_progetto id_tutorial="4"/>
+    <discussioni>
+      <discussione id_discussione="7"/>
+      <discussione id_discussione="8"/>
+    </discussioni>
+    <tutorial_progetto id_tutorial="6"/>
     <valutazioni/>
   </progetto>
-  <progetto id="5" username_creator="utentestd3" id_creator="6" tempo_medio="430" data_pubblicazione="2024-02-05 18:42:57" visualizzazioni="0" nome_file_img="img/proj/img_proj_65c11c16d8bf1.webp" difficolta="difficile" clearance="2" sospeso="false">
-    <titolo>Robot Seguilinea</titolo>
+  <progetto id="7" username_creator="utentestd2" id_creator="5" tempo_medio="120" data_pubblicazione="2024-02-05 21:45:56" visualizzazioni="11" nome_file_img="img/proj/img_proj_65c14857bbb93.webp" difficolta="facile" clearance="1" sospeso="false">
+    <titolo> Stazione meteo domestica con Arduino</titolo>
     <categorie>
       <categoria id_categoria="1"/>
       <categoria id_categoria="2"/>
-      <categoria id_categoria="3"/>
+      <categoria id_categoria="4"/>
     </categorie>
-    <descrizione>Un robot seguilinea completamente assemblato, posizionato su un percorso a contrasto elevato, pronto a dimostrare la sua capacità di seguire la linea tracciata sul pavimento.</descrizione>
+    <descrizione>Il nostro progetto consiste in una stazione meteo Arduino fai-da-te che raccoglie dati ambientali come temperatura, umidità, e pressione atmosferica usando sensori specifici. I dati raccolti possono essere visualizzati su un piccolo display LCD collegato al sistema o inviati a un computer per un'analisi più dettagliata. Questo progetto offre un'introduzione pratica alla sensoristica, alla programmazione di Arduino e alla gestione dei dati, rendendolo ideale per hobbisti, studenti e chiunque sia interessato alla tecnologia e all'ambiente.</descrizione>
     <categoriaProposta/>
     <reports_progetti/>
+    <discussioni>
+      <discussione id_discussione="9"/>
+      <discussione id_discussione="10"/>
+    </discussioni>
+    <tutorial_progetto id_tutorial="7"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="8" username_creator="moderatore1" id_creator="3" tempo_medio="150" data_pubblicazione="2024-02-05 21:56:36" visualizzazioni="3" nome_file_img="img/proj/img_proj_65c14af28d02d.webp" difficolta="facile" clearance="1" sospeso="false">
+    <titolo>Robot segui-linea </titolo>
+    <categorie>
+      <categoria id_categoria="3"/>
+    </categorie>
+    <descrizione>Il nostro robot segui-linea utilizza un microcontrollore Arduino, motori, ruote, una batteria, e sensori di rilevamento linea per navigare autonomamente seguendo un percorso prestabilito. Questo progetto non solo introduce alle basi della robotica e dell'automazione ma offre anche una piattaforma per esplorare algoritmi di controllo e sensoristica avanzata. È perfetto per appassionati di tutte le età interessati a costruire il loro primo robot.</descrizione>
+    <categoriaProposta/>
+    <reports_progetti/>
+    <discussioni>
+      <discussione id_discussione="11"/>
+      <discussione id_discussione="12"/>
+    </discussioni>
+    <tutorial_progetto id_tutorial="8"/>
+    <valutazioni/>
+  </progetto>
+  <progetto id="9" username_creator="utentestd4" id_creator="7" tempo_medio="330" data_pubblicazione="2024-02-05 22:08:04" visualizzazioni="0" nome_file_img="img/proj/img_proj_65c14d932714d.webp" difficolta="medio" clearance="1" sospeso="true">
+    <titolo>Gioco di memoria LED con Arduino</titolo>
+    <categorie/>
+    <descrizione>Il nostro gioco di memoria LED utilizza un Arduino per controllare una serie di LED e un altoparlante per generare suoni. L'utente deve osservare la sequenza di luci e suoni prodotti dal sistema e quindi ripeterla utilizzando un set di pulsanti. Con ogni round, la sequenza diventa progressivamente più complicata. Questo gioco non solo offre un'esperienza interattiva divertente ma insegna anche le basi della programmazione e del circuito elettronico.</descrizione>
+    <categoriaProposta>Giochi interattivi</categoriaProposta>
+    <reports_progetti/>
     <discussioni/>
-    <tutorial_progetto id_tutorial="5"/>
+    <tutorial_progetto id_tutorial="9"/>
     <valutazioni/>
   </progetto>
 </progetti>

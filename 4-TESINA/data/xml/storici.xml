@@ -23,45 +23,163 @@
   <storico id_utente="3">
     <progetti>
       <progetto titolo="Mini Computer Raspberry Pi per Emulazione di Giochi Retro" data_ora="2024-02-05 17:52:52" id_progetto="2"/>
+      <progetto titolo="Robot segui-linea " data_ora="2024-02-05 21:56:36" id_progetto="8"/>
     </progetti>
     <richieste/>
-    <commenti/>
+    <commenti>
+      <commento id_commento="2" data_ora="2024-02-05 22:16:43" id_discussione="1">
+        <testo>@utentestd4, ho trovato che l'uso di un tagliabottiglie con una rotella di diamante e molta pazienza dà i migliori risultati. Assicurati di girare la bottiglia lentamente e di applicare una pressione costante.</testo>
+      </commento>
+      <commento id_commento="6" data_ora="2024-02-05 22:22:57" id_discussione="2">
+        <testo> Qualcuno ha esperienza con l'integrazione di dimmer nelle lampade fai da te? Vorrei poter regolare l'intensità della luce nelle mie creazioni.</testo>
+      </commento>
+      <commento id_commento="7" data_ora="2024-02-05 22:24:45" id_discussione="2">
+        <testo>@moderatore1, ci sono molti kit dimmer compatibili con le lampade fai da te che puoi facilmente integrare. Assicurati solo che il carico elettrico sia compatibile con la tua lampadina e il tuo impianto.</testo>
+      </commento>
+      <commento id_commento="8" data_ora="2024-02-06 08:32:13" id_discussione="3">
+        <testo>Ho recentemente completato un progetto simile con il Raspberry Pi e devo dire che è incredibile quanto sia divertente emulare giochi retro su di esso. Ho installato RetroPie e ho accesso a una vasta libreria di giochi classici. Quali sono i vostri giochi retro preferiti da emulare?</testo>
+      </commento>
+      <commento id_commento="15" data_ora="2024-02-06 08:41:12" id_discussione="4">
+        <testo>Quando configurate i controller, assicuratevi di eseguire l'assegnazione dei pulsanti in modo accurato. In questo modo, i giochi risponderanno correttamente ai tuoi comandi. E non dimenticate di aggiornare i driver se necessario!</testo>
+      </commento>
+      <commento id_commento="21" data_ora="2024-02-06 08:50:13" id_discussione="6">
+        <testo>Ho riscontrato alcuni problemi durante l'installazione del modulo Bluetooth. Quali sono i passaggi chiave da seguire per garantire una connessione stabile?</testo>
+      </commento>
+      <commento id_commento="26" data_ora="2024-02-06 08:58:45" id_discussione="8">
+        <testo>Io faccio un controllo periodico dei sensori di umidità e pulisco i filtri della pompa d'acqua ogni mese. Aiuta a mantenere il sistema efficiente e a prevenire malfunzionamenti.</testo>
+      </commento>
+      <commento id_commento="27" data_ora="2024-02-06 08:59:08" id_discussione="8">
+        <testo>Inoltre per evitare problemi, ho impostato delle notifiche via email che mi avvisano in caso di errori di lettura dai sensori o problemi con la pompa. Così posso intervenire rapidamente prima che le mie piante ne risentano.</testo>
+      </commento>
+      <commento id_commento="35" data_ora="2024-02-06 09:08:46" id_discussione="12">
+        <testo>Un'idea che mi è piaciuta molto è stata quella di creare un percorso con intersezioni, dove ogni direzione porta a sfide diverse, come linee interrotte o curve strette.</testo>
+      </commento>
+      <commento id_commento="36" data_ora="2024-02-06 09:09:18" id_discussione="11">
+        <testo>Fantastico progetto! Io ho aggiunto un sensore ultrasonico frontale per permettere al robot di rilevare ostacoli sulla linea e fermarsi o deviare temporaneamente.</testo>
+      </commento>
+    </commenti>
     <valutazioni_progetti/>
     <reports_progetti/>
     <reports_commenti/>
-    <discussioni/>
+    <discussioni>
+      <discussione id_discussione="3" data_ora="2024-02-06 08:31:53" titolo="Esperienze di Emulazione di Giochi Retro con Raspberry Pi"/>
+      <discussione id_discussione="5" data_ora="2024-02-06 08:43:37" titolo="Creazione di un Ventilatore Smart Fai Da Te"/>
+      <discussione id_discussione="6" data_ora="2024-02-06 08:44:42" titolo="Consigli per un Ventilatore Smart di Successo"/>
+      <discussione id_discussione="7" data_ora="2024-02-06 08:54:33" titolo="Installazione del Sistema di Irrigazione Intelligente"/>
+      <discussione id_discussione="9" data_ora="2024-02-06 09:00:50" titolo="Ottimizzare la Precisione della Stazione Meteo Arduino"/>
+      <discussione id_discussione="10" data_ora="2024-02-06 09:01:17" titolo="Condivisione dei Dati Rilevati dalla Stazione Meteo"/>
+    </discussioni>
     <valutazioni_commenti/>
   </storico>
   <storico id_utente="4">
     <progetti>
       <progetto titolo="Ventilatore Smart Fai Da Te" data_ora="2024-02-05 18:08:49" id_progetto="3"/>
-      <progetto titolo="Mensola Sospesa Fai Da Te" data_ora="2024-02-05 18:31:03" id_progetto="4"/>
     </progetti>
-    <richieste/>
-    <commenti/>
+    <richieste>
+      <richiesta id_richiesta="2" data_ora="2024-02-05 22:23:19" id_discussione="2" titolo="&quot;Illuminazione Fai Da Te: Idee e Ispirazioni per Lampade Uniche&quot;"/>
+      <richiesta id_richiesta="3" data_ora="2024-02-06 08:33:20" id_discussione="3" titolo="Esperienze di Emulazione di Giochi Retro con Raspberry Pi"/>
+      <richiesta id_richiesta="10" data_ora="2024-02-06 08:56:22" id_discussione="7" titolo="Installazione del Sistema di Irrigazione Intelligente"/>
+      <richiesta id_richiesta="18" data_ora="2024-02-06 09:08:05" id_discussione="11" titolo="Miglioramenti al Robot Segui-linea"/>
+      <richiesta id_richiesta="19" data_ora="2024-02-06 09:08:06" id_discussione="12" titolo="Idee per Percorsi Complicati"/>
+      <richiesta id_richiesta="20" data_ora="2024-02-06 09:38:55" id_discussione="1" titolo="&quot;Riciclo Creativo: Trasformare una Bottiglia in Lampada da Tavolo&quot;"/>
+    </richieste>
+    <commenti>
+      <commento id_commento="9" data_ora="2024-02-06 08:34:35" id_discussione="3">
+        <testo> Sono d'accordo! Ho passato ore a giocare ai miei giochi NES preferiti sul Raspberry Pi. È sorprendente come un mini computer possa ricreare l'esperienza di gioco di un'intera console.</testo>
+      </commento>
+      <commento id_commento="10" data_ora="2024-02-06 08:34:55" id_discussione="3">
+        <testo> Sto pensando di avviare un progetto simile e sono curioso riguardo alle prestazioni del Raspberry Pi. È in grado di emulare giochi più recenti, come quelli per PlayStation o Nintendo 64?</testo>
+      </commento>
+      <commento id_commento="24" data_ora="2024-02-06 08:57:27" id_discussione="7">
+        <testo>Una cosa che ho trovato utile è stata l'integrazione con un'app di previsioni meteo. Il sistema salta l'irrigazione nei giorni previsti pioggia, risparmiando acqua in modo proattivo</testo>
+      </commento>
+      <commento id_commento="25" data_ora="2024-02-06 08:57:47" id_discussione="7">
+        <testo>Potresti anche esplorare l'aggiunta di una funzionalità di apprendimento automatico. Il mio sistema, dopo alcuni mesi, ha iniziato a capire i migliori orari per l'irrigazione, ottimizzando ulteriormente il consumo di acqua.</testo>
+      </commento>
+      <commento id_commento="38" data_ora="2024-02-06 09:10:24" id_discussione="11">
+        <testo>Mi sono concentrato sull'ottimizzazione del codice per ridurre il ritardo nella lettura dei sensori. Incrementando la frequenza di campionamento, il mio robot è diventato molto più reattivo ai cambiamenti improvvisi della linea.</testo>
+      </commento>
+      <commento id_commento="39" data_ora="2024-02-06 09:10:50" id_discussione="12">
+        <testo>Per rendere il percorso più impegnativo, ho usato nastro adesivo di colori diversi per indicare diverse velocità. Il robot deve quindi adeguare la sua velocità in base al colore della linea che sta seguendo.</testo>
+      </commento>
+    </commenti>
     <valutazioni_progetti/>
     <reports_progetti/>
     <reports_commenti/>
-    <discussioni/>
+    <discussioni>
+      <discussione id_discussione="8" data_ora="2024-02-06 08:58:18" titolo=" Manutenzione e Aggiornamenti del Sistema"/>
+    </discussioni>
     <valutazioni_commenti/>
   </storico>
   <storico id_utente="5">
-    <progetti/>
-    <richieste/>
-    <commenti/>
+    <progetti>
+      <progetto titolo=" Stazione meteo domestica con Arduino" data_ora="2024-02-05 21:45:56" id_progetto="7"/>
+    </progetti>
+    <richieste>
+      <richiesta id_richiesta="1" data_ora="2024-02-05 22:18:53" id_discussione="1" titolo="&quot;Riciclo Creativo: Trasformare una Bottiglia in Lampada da Tavolo&quot;"/>
+      <richiesta id_richiesta="4" data_ora="2024-02-06 08:37:50" id_discussione="4" titolo="Consigli per l'Assemblaggio del Raspberry Pi per l'Emulazione"/>
+      <richiesta id_richiesta="11" data_ora="2024-02-06 09:01:33" id_discussione="9" titolo="Ottimizzare la Precisione della Stazione Meteo Arduino"/>
+      <richiesta id_richiesta="12" data_ora="2024-02-06 09:01:35" id_discussione="10" titolo="Condivisione dei Dati Rilevati dalla Stazione Meteo"/>
+      <richiesta id_richiesta="17" data_ora="2024-02-06 09:07:22" id_discussione="11" titolo="Miglioramenti al Robot Segui-linea"/>
+    </richieste>
+    <commenti>
+      <commento id_commento="4" data_ora="2024-02-05 22:20:00" id_discussione="1">
+        <testo>@moderatore2, le lampadine LED sono sicuramente la scelta più sostenibile. Durano più a lungo e consumano meno energia. Inoltre, non emettono troppo calore, il che è ottimo per una lampada in bottiglia di vetro.</testo>
+      </commento>
+      <commento id_commento="5" data_ora="2024-02-05 22:21:49" id_discussione="2">
+        <testo>Ho costruito una lampada usando legno di deriva e una vecchia lampada da ufficio. Il mix tra moderno e rustico è sorprendente. Consiglio vivamente di esplorare materiali non convenzionali.</testo>
+      </commento>
+      <commento id_commento="13" data_ora="2024-02-06 08:39:14" id_discussione="4">
+        <testo>Assicurati di leggere attentamente le istruzioni di montaggio della custodia e segui passo dopo passo. La connessione corretta di tutti i cavi è fondamentale!</testo>
+      </commento>
+      <commento id_commento="28" data_ora="2024-02-06 09:02:58" id_discussione="9">
+        <testo>Complimenti per il tuo progetto! Per migliorare la precisione, assicurati che i sensori non siano esposti direttamente al sole o a fonti di calore. Un piccolo riparo ventilato può fare la differenza.</testo>
+      </commento>
+      <commento id_commento="29" data_ora="2024-02-06 09:03:10" id_discussione="10">
+        <testo>Potresti configurare un piccolo server web su Raspberry Pi per ospitare i dati in tempo reale, permettendo a chiunque di consultarli tramite browser.</testo>
+      </commento>
+      <commento id_commento="37" data_ora="2024-02-06 09:09:53" id_discussione="11">
+        <testo>Per migliorare le prestazioni, ho sostituito i motori standard con alcuni più potenti e ho aggiunto una batteria con maggiore capacità. Ciò ha aumentato sia la velocità che il tempo di funzionamento del mio robot.</testo>
+      </commento>
+    </commenti>
     <valutazioni_progetti/>
     <reports_progetti/>
-    <reports_commenti/>
-    <discussioni/>
+    <reports_commenti>
+      <report_commento id_report="1" tipo="Contenuti inappropriati" data_ora="2024-02-06 10:15:52" id_commento="40" commentatore="utentestd4"/>
+    </reports_commenti>
+    <discussioni>
+      <discussione id_discussione="2" data_ora="2024-02-05 22:21:13" titolo="&quot;Illuminazione Fai Da Te: Idee e Ispirazioni per Lampade Uniche&quot;"/>
+      <discussione id_discussione="12" data_ora="2024-02-06 09:07:40" titolo="Idee per Percorsi Complicati"/>
+    </discussioni>
     <valutazioni_commenti/>
   </storico>
   <storico id_utente="6">
     <progetti>
       <progetto titolo="Lampada da Tavolo Riciclata" data_ora="2024-02-05 17:46:04" id_progetto="1"/>
-      <progetto titolo="Robot Seguilinea" data_ora="2024-02-05 18:42:57" id_progetto="5"/>
     </progetti>
-    <richieste/>
-    <commenti/>
+    <richieste>
+      <richiesta id_richiesta="6" data_ora="2024-02-06 08:44:57" id_discussione="5" titolo="Creazione di un Ventilatore Smart Fai Da Te"/>
+      <richiesta id_richiesta="7" data_ora="2024-02-06 08:44:58" id_discussione="6" titolo="Consigli per un Ventilatore Smart di Successo"/>
+      <richiesta id_richiesta="13" data_ora="2024-02-06 09:01:49" id_discussione="9" titolo="Ottimizzare la Precisione della Stazione Meteo Arduino"/>
+      <richiesta id_richiesta="14" data_ora="2024-02-06 09:01:50" id_discussione="10" titolo="Condivisione dei Dati Rilevati dalla Stazione Meteo"/>
+    </richieste>
+    <commenti>
+      <commento id_commento="16" data_ora="2024-02-06 08:46:02" id_discussione="5">
+        <testo>Ho appena iniziato il mio progetto di ventilatore smart e sto cercando consigli su quale tipo di motorino per ventilatore sia il migliore da utilizzare. Quali motorini avete scelto per i vostri progetti?</testo>
+      </commento>
+      <commento id_commento="17" data_ora="2024-02-06 08:46:19" id_discussione="6">
+        <testo>Sto cercando suggerimenti su come assicurarmi che le pale del mio ventilatore siano ben bilanciate. Quali sono i trucchi per evitare vibrazioni indesiderate?</testo>
+      </commento>
+      <commento id_commento="30" data_ora="2024-02-06 09:04:06" id_discussione="9">
+        <testo>Ho notato che l'aggiunta di un sensore di qualità dell'aria ha arricchito i dati raccolti dalla mia stazione meteo, permettendomi di avere un quadro più completo delle condizioni ambientali esterne.</testo>
+      </commento>
+      <commento id_commento="31" data_ora="2024-02-06 09:04:20" id_discussione="10">
+        <testo>"Esistono diverse piattaforme online che consentono di caricare i dati della stazione meteo. Io uso Weather Underground per condividere le mie informazioni con la comunità meteo globale</testo>
+      </commento>
+      <commento id_commento="32" data_ora="2024-02-06 09:04:36" id_discussione="10">
+        <testo>Esistono diverse piattaforme online che consentono di caricare i dati della stazione meteo. Io uso Weather Underground per condividere le mie informazioni con la comunità meteo globale</testo>
+      </commento>
+    </commenti>
     <valutazioni_progetti/>
     <reports_progetti/>
     <reports_commenti/>
@@ -69,23 +187,81 @@
     <valutazioni_commenti/>
   </storico>
   <storico id_utente="7">
-    <progetti/>
-    <richieste/>
-    <commenti/>
+    <progetti>
+      <progetto titolo="Gioco di memoria LED con Arduino" data_ora="2024-02-05 22:08:04" id_progetto="9"/>
+    </progetti>
+    <richieste>
+      <richiesta id_richiesta="5" data_ora="2024-02-06 08:39:40" id_discussione="4" titolo="Consigli per l'Assemblaggio del Raspberry Pi per l'Emulazione"/>
+      <richiesta id_richiesta="8" data_ora="2024-02-06 08:45:14" id_discussione="5" titolo="Creazione di un Ventilatore Smart Fai Da Te"/>
+      <richiesta id_richiesta="9" data_ora="2024-02-06 08:45:16" id_discussione="6" titolo="Consigli per un Ventilatore Smart di Successo"/>
+      <richiesta id_richiesta="15" data_ora="2024-02-06 09:02:03" id_discussione="9" titolo="Ottimizzare la Precisione della Stazione Meteo Arduino"/>
+      <richiesta id_richiesta="16" data_ora="2024-02-06 09:02:04" id_discussione="10" titolo="Condivisione dei Dati Rilevati dalla Stazione Meteo"/>
+    </richieste>
+    <commenti>
+      <commento id_commento="1" data_ora="2024-02-05 22:15:04" id_discussione="1">
+        <testo>Ho provato a fare una lampada usando una bottiglia di vino verde. Il colore aggiunge un'atmosfera molto calda alla stanza. Qualcuno ha consigli su come evitare la rottura della bottiglia durante il taglio?</testo>
+      </commento>
+      <commento id_commento="14" data_ora="2024-02-06 08:40:32" id_discussione="4">
+        <testo>Ho avuto alcuni problemi con la configurazione del controller. Quali sono le migliori pratiche per far funzionare i controller USB in RetroPie?</testo>
+      </commento>
+      <commento id_commento="18" data_ora="2024-02-06 08:48:22" id_discussione="5">
+        <testo>Ciao utentestd3, è fantastico che tu stia lavorando su un progetto di ventilatore smart! Per quanto riguarda il motorino, molte persone preferiscono motori brushless a basso consumo energetico, ma la scelta dipende anche dalla potenza desiderata e dal design complessivo del ventilatore. Considera anche la compatibilità con il controller e il modulo Bluetooth.</testo>
+      </commento>
+      <commento id_commento="19" data_ora="2024-02-06 08:48:51" id_discussione="5">
+        <testo>Ho completato il mio ventilatore smart la scorsa settimana e l'applicazione per il controllo funziona alla perfezione. È fantastico poter cambiare la velocità e spegnere il ventilatore senza dover alzarsi dal divano!</testo>
+      </commento>
+      <commento id_commento="20" data_ora="2024-02-06 08:49:15" id_discussione="6">
+        <testo> Ciao utentestd3 il bilanciamento delle pale è cruciale per evitare vibrazioni indesiderate. Assicurati che ciascuna pala sia della stessa lunghezza e peso. Puoi anche utilizzare un livello laser per verificare l'equilibrio e aggiungere piccoli pesi alle pale se necessario.</testo>
+      </commento>
+      <commento id_commento="33" data_ora="2024-02-06 09:05:26" id_discussione="10">
+        <testo>Per un progetto scolastico, abbiamo collegato la nostra stazione meteo a un display pubblico nella hall della scuola, mostrando le previsioni del tempo e le letture attuali. È stato un grande successo!</testo>
+      </commento>
+      <commento id_commento="34" data_ora="2024-02-06 09:05:41" id_discussione="9">
+        <testo>Per la pressione atmosferica, ho implementato un algoritmo di correzione basato sull'altitudine della mia località. Questo ha significativamente migliorato l'accuratezza delle letture.</testo>
+      </commento>
+      <commento id_commento="40" data_ora="2024-02-06 10:14:39" id_discussione="1">
+        <testo>Bla Bla Bla, quante chiacchiere inutili!!</testo>
+      </commento>
+    </commenti>
     <valutazioni_progetti/>
     <reports_progetti/>
     <reports_commenti/>
-    <discussioni/>
+    <discussioni>
+      <discussione id_discussione="1" data_ora="2024-02-05 22:14:20" titolo="&quot;Riciclo Creativo: Trasformare una Bottiglia in Lampada da Tavolo&quot;"/>
+      <discussione id_discussione="11" data_ora="2024-02-06 09:06:59" titolo="Miglioramenti al Robot Segui-linea"/>
+    </discussioni>
     <valutazioni_commenti/>
   </storico>
   <storico id_utente="8">
-    <progetti/>
+    <progetti>
+      <progetto titolo="Robot Seguilinea" data_ora="2024-02-05 20:34:00" id_progetto="4"/>
+      <progetto titolo="asdasd" data_ora="2024-02-05 20:52:46" id_progetto="5"/>
+      <progetto titolo="sistema di irrigazione intelligente" data_ora="2024-02-05 21:33:38" id_progetto="6"/>
+    </progetti>
     <richieste/>
-    <commenti/>
+    <commenti>
+      <commento id_commento="3" data_ora="2024-02-05 22:18:09" id_discussione="1">
+        <testo>Qualcuno ha suggerimenti su quale tipo di lampadina usare? LED, alogena, o tradizionale? Sto cercando l'opzione più ecologica.</testo>
+      </commento>
+      <commento id_commento="11" data_ora="2024-02-06 08:35:57" id_discussione="3">
+        <testo>Sì, il Raspberry Pi è fantastico per i giochi retro, ma può avere qualche difficoltà con i giochi più recenti. Per i giochi PS1 e Nintendo64, potresti dover fare alcune regolazioni per ottenere prestazioni migliori.</testo>
+      </commento>
+      <commento id_commento="12" data_ora="2024-02-06 08:37:06" id_discussione="4">
+        <testo>Ho appena iniziato a raccogliere i materiali per il mio progetto di Raspberry Pi per l'emulazione. Quali sono i vostri consigli per un assemblaggio senza problemi?</testo>
+      </commento>
+      <commento id_commento="22" data_ora="2024-02-06 08:50:48" id_discussione="6">
+        <testo>Ciao moderatore1, l'installazione del modulo Bluetooth può essere un po' complessa. Assicurati di seguire attentamente le istruzioni del produttore e di verificare che il collegamento tra il modulo e il tuo microcontrollore (Arduino o Raspberry Pi) sia stabile. Potrebbe essere utile testare la connessione con un'app di prova Bluetooth sullo smartphone.</testo>
+      </commento>
+      <commento id_commento="23" data_ora="2024-02-06 08:56:06" id_discussione="7">
+        <testo>Complimenti per l'installazione! Hai considerato l'uso di sensori di umidità multipli per aree diverse del tuo giardino? Potrebbe aiutarti a personalizzare l'irrigazione in base alle specifiche esigenze di umidità di ogni zona.</testo>
+      </commento>
+    </commenti>
     <valutazioni_progetti/>
     <reports_progetti/>
     <reports_commenti/>
-    <discussioni/>
+    <discussioni>
+      <discussione id_discussione="4" data_ora="2024-02-06 08:36:29" titolo="Consigli per l'Assemblaggio del Raspberry Pi per l'Emulazione"/>
+    </discussioni>
     <valutazioni_commenti/>
   </storico>
 </storici>

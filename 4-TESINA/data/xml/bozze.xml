@@ -1,2 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="13" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd"/>
+<bozze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="25" xsi:noNamespaceSchemaLocation="../../structures/xsd/bozze.xsd">
+  <bozza sospeso="false" id="24" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-06 10:04:55" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza/>
+  </bozza>
+  <bozza sospeso="false" id="25" titolo="" id_creator="3" tempo_medio="" data_pubblicazione="2024-02-06 10:05:02" difficolta="facile" clearance="" nome_file_img="">
+    <categorie/>
+    <categoriaProposta/>
+    <descrizione/>
+    <tutorial_bozza>
+      <step titolo_step="asdasd" nome_file_img="img/steps/img_step_65c1f6f098f5a.png" num_step="1">
+        <descrizione>asdas</descrizione>
+      </step>
+      <step titolo_step="Raccolta dei Materiali" num_step="2" nome_file_img="img/steps/img_step_65c1f55840196.webp">
+        <descrizione>Il primo passo nella realizzazione della nostra stazione meteo Arduino consiste nella raccolta di tutti i componenti necessari. Questi includono il microcontrollore Arduino, sensori per misurare temperatura, umidità e pressione atmosferica, un display LCD per visualizzare i dati, cavi di collegamento e una breadboard.</descrizione>
+      </step>
+      <step titolo_step="asdasd" nome_file_img="img/steps/img_step_65c1f6dddc613.webp" num_step="3">
+        <descrizione>asdad</descrizione>
+      </step>
+    </tutorial_bozza>
+  </bozza>
+</bozze>

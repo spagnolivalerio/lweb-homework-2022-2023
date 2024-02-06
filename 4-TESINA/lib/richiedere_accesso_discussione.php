@@ -57,7 +57,7 @@ $stoRichiesta = $doc->createElement('richiesta');
 $stoRichiesta->setAttribute('id_richiesta', $id_richiesta);
 $stoRichiesta->setAttribute('data_ora', $data_ora);
 $stoRichiesta->setAttribute('id_discussione', $id_discussione);
-$stoRichiesta->setAttribute('testo', $testo);
+$stoRichiesta->setAttribute('titolo', $titolo);
 
 $storico = $xpath->query("/storici/storico[@id_utente = '$id_utente']")->item(0);
 $stoRichieste = $storico->getElementsByTagName('richieste')->item(0);

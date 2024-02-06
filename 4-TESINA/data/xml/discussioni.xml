@@ -1,4 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
-  
+<discussioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="12" xsi:noNamespaceSchemaLocation="../../structures/discussioni.xsd">
+  <discussione titolo="&quot;Riciclo Creativo: Trasformare una Bottiglia in Lampada da Tavolo&quot;" id_poster="7" risolta="false" id="1" id_progetto="1" data_ora="2024-02-05 22:14:20" autore="utentestd4">
+    <commenti>
+      <commento id_commento="1"/>
+      <commento id_commento="2"/>
+      <commento id_commento="3"/>
+      <commento id_commento="4"/>
+      <commento id_commento="40"/>
+    </commenti>
+    <descrizione>In questa discussione, condividiamo idee, tecniche e consigli su come trasformare una vecchia bottiglia di vetro in una lampada da tavolo fai da te. Che si tratti di scegliere il tipo di bottiglia, di decidere il metodo di taglio, o di discutere le migliori pratiche per l'installazione elettrica, questo è il posto giusto per esplorare il potenziale artistico del riciclo creativo.</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="7"/>
+      <partecipante id_partecipante="5"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="&quot;Illuminazione Fai Da Te: Idee e Ispirazioni per Lampade Uniche&quot;" id_poster="5" risolta="false" id="2" id_progetto="1" data_ora="2024-02-05 22:21:13" autore="utentestd2">
+    <commenti>
+      <commento id_commento="5"/>
+      <commento id_commento="6"/>
+      <commento id_commento="7"/>
+    </commenti>
+    <descrizione>Questa discussione è dedicata a chi ama l'illuminazione fai da te e cerca ispirazione per progetti unici. Che tu abbia trasformato bottiglie, legno, o altri materiali riciclati in lampade, condividi le tue creazioni, le sfide che hai affrontato e come le hai superate. Parliamo di design, sicurezza elettrica e tutto ciò che riguarda la creazione di lampade personalizzate.</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="5"/>
+      <partecipante id_partecipante="4"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="Esperienze di Emulazione di Giochi Retro con Raspberry Pi" id_poster="3" risolta="false" id="3" id_progetto="2" data_ora="2024-02-06 08:31:53" autore="moderatore1">
+    <commenti>
+      <commento id_commento="8"/>
+      <commento id_commento="9"/>
+      <commento id_commento="10"/>
+      <commento id_commento="11"/>
+    </commenti>
+    <descrizione>Unisciti a noi per condividere le tue esperienze nell'emulare giochi retro utilizzando il Raspberry Pi. Scopri come installare il software di emulazione, configura i controller e condividi i tuoi giochi retro preferiti. Scambiamo consigli e trucchi per un'esperienza di gioco nostalgica e divertente.</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="3"/>
+      <partecipante id_partecipante="4"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="Consigli per l'Assemblaggio del Raspberry Pi per l'Emulazione" id_poster="8" risolta="false" id="4" id_progetto="2" data_ora="2024-02-06 08:36:29" autore="moderatore2">
+    <commenti>
+      <commento id_commento="12"/>
+      <commento id_commento="13"/>
+      <commento id_commento="14"/>
+      <commento id_commento="15"/>
+    </commenti>
+    <descrizione> Se stai pianificando di realizzare il tuo mini computer Raspberry Pi per l'emulazione, questa discussione è per te. Condividi e scopri consigli utili per l'assemblaggio senza problemi, inclusi dettagli su come montare la custodia, collegare i cavi e configurare i controller USB. Troverai preziose informazioni per avviare il tuo progetto con successo.</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="8"/>
+      <partecipante id_partecipante="5"/>
+      <partecipante id_partecipante="7"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="Creazione di un Ventilatore Smart Fai Da Te" id_poster="3" risolta="false" id="5" id_progetto="3" data_ora="2024-02-06 08:43:37" autore="moderatore1">
+    <commenti>
+      <commento id_commento="16"/>
+      <commento id_commento="18"/>
+      <commento id_commento="19"/>
+    </commenti>
+    <descrizione> Entra a far parte della discussione sulla creazione di un ventilatore smart fai da te! Condividi le tue esperienze nel montaggio del ventilatore, l'installazione dei componenti e la programmazione del controller per il controllo tramite smartphone. Scambiamo idee e consigli su come realizzare un ventilatore smart personalizzato.</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="3"/>
+      <partecipante id_partecipante="6"/>
+      <partecipante id_partecipante="7"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="Consigli per un Ventilatore Smart di Successo" id_poster="3" risolta="false" id="6" id_progetto="3" data_ora="2024-02-06 08:44:42" autore="moderatore1">
+    <commenti>
+      <commento id_commento="17"/>
+      <commento id_commento="20"/>
+      <commento id_commento="21"/>
+      <commento id_commento="22"/>
+    </commenti>
+    <descrizione>Se stai pianificando di costruire il tuo ventilatore smart fai da te, questa discussione è il luogo ideale per ottenere consigli utili. Condividi e scopri le migliori pratiche per il montaggio, l'installazione dei componenti e la programmazione del controller. Troverai preziose informazioni per completare il tuo progetto con successo.</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="3"/>
+      <partecipante id_partecipante="6"/>
+      <partecipante id_partecipante="7"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="Installazione del Sistema di Irrigazione Intelligente" id_poster="3" risolta="false" id="7" id_progetto="6" data_ora="2024-02-06 08:54:33" autore="moderatore1">
+    <commenti>
+      <commento id_commento="23"/>
+      <commento id_commento="24"/>
+      <commento id_commento="25"/>
+    </commenti>
+    <descrizione>"Salve a tutti! Ho appena finito di installare il mio sistema di irrigazione intelligente seguendo il progetto proposto. È stato sorprendentemente semplice da mettere insieme e ora le mie piante sembrano più felici che mai. Qualcuno ha dei consigli su come ottimizzare l'uso dell'acqua e rendere il sistema ancora più efficiente?"</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="3"/>
+      <partecipante id_partecipante="4"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo=" Manutenzione e Aggiornamenti del Sistema" id_poster="4" risolta="false" id="8" id_progetto="6" data_ora="2024-02-06 08:58:18" autore="utentestd1">
+    <commenti>
+      <commento id_commento="26"/>
+      <commento id_commento="27"/>
+    </commenti>
+    <descrizione>"Recentemente ho iniziato a esplorare modi per mantenere e aggiornare il mio sistema di irrigazione intelligente. Quali sono le vostre strategie per assicurare che il sistema continui a funzionare al meglio nel tempo?"</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="4"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="Ottimizzare la Precisione della Stazione Meteo Arduino" id_poster="3" risolta="false" id="9" id_progetto="7" data_ora="2024-02-06 09:00:50" autore="moderatore1">
+    <commenti>
+      <commento id_commento="28"/>
+      <commento id_commento="30"/>
+      <commento id_commento="34"/>
+    </commenti>
+    <descrizione>"Salve a tutti! Ho recentemente completato il mio progetto di stazione meteo domestica con Arduino. Funziona bene, ma vorrei sapere se avete dei consigli su come aumentare la precisione delle misurazioni di temperatura, umidità e pressione atmosferica. Grazie!"</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="3"/>
+      <partecipante id_partecipante="5"/>
+      <partecipante id_partecipante="6"/>
+      <partecipante id_partecipante="7"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="Condivisione dei Dati Rilevati dalla Stazione Meteo" id_poster="3" risolta="false" id="10" id_progetto="7" data_ora="2024-02-06 09:01:17" autore="moderatore1">
+    <commenti>
+      <commento id_commento="29"/>
+      <commento id_commento="32"/>
+      <commento id_commento="33"/>
+    </commenti>
+    <descrizione>"Ciao community! Ho appena finito di costruire la mia stazione meteo Arduino e sto cercando modi interessanti per condividere i dati raccolti con amici e familiari. Qualche idea?"</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="3"/>
+      <partecipante id_partecipante="5"/>
+      <partecipante id_partecipante="6"/>
+      <partecipante id_partecipante="7"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="Miglioramenti al Robot Segui-linea" id_poster="7" risolta="false" id="11" id_progetto="8" data_ora="2024-02-06 09:06:59" autore="utentestd4">
+    <commenti>
+      <commento id_commento="36"/>
+      <commento id_commento="37"/>
+      <commento id_commento="38"/>
+    </commenti>
+    <descrizione>"Ciao a tutti! Ho appena terminato la costruzione del mio robot segui-linea Arduino e funziona alla grande. Tuttavia, sono curioso di sapere se ci sono modi per migliorarlo ulteriormente. Qualcuno ha sperimentato con sensori aggiuntivi o modifiche al codice?"</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="7"/>
+      <partecipante id_partecipante="5"/>
+      <partecipante id_partecipante="4"/>
+    </partecipanti>
+  </discussione>
+  <discussione titolo="Idee per Percorsi Complicati" id_poster="5" risolta="false" id="12" id_progetto="8" data_ora="2024-02-06 09:07:40" autore="utentestd2">
+    <commenti>
+      <commento id_commento="35"/>
+      <commento id_commento="39"/>
+    </commenti>
+    <descrizione>"Salve, comunità! Dopo aver costruito il mio robot segui-linea, sto cercando idee per creare percorsi più complicati e testare le sue capacità. Qualcuno ha creato percorsi unici o ha suggerimenti su come rendere la sfida più interessante?"</descrizione>
+    <partecipanti>
+      <partecipante id_partecipante="5"/>
+      <partecipante id_partecipante="4"/>
+    </partecipanti>
+  </discussione>
 </discussioni>

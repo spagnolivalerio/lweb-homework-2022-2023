@@ -1,4 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<richieste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/richieste_accesso_discussioni.xsd">
-  
+<richieste xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="20" xsi:noNamespaceSchemaLocation="../../structures/richieste_accesso_discussioni.xsd">
+  <richiesta id="1" id_discussione="1" id_utente="5" data_ora="2024-02-05 22:19:07" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="2" id_discussione="2" id_utente="4" data_ora="2024-02-05 22:24:01" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="3" id_discussione="3" id_utente="4" data_ora="2024-02-06 08:33:47" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="4" id_discussione="4" id_utente="5" data_ora="2024-02-06 08:38:21" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="5" id_discussione="4" id_utente="7" data_ora="2024-02-06 08:39:58" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="6" id_discussione="5" id_utente="6" data_ora="2024-02-06 08:45:29" stato="accettata">
+    <moderatore id_mod="8" username="moderatore2"/>
+  </richiesta>
+  <richiesta id="7" id_discussione="6" id_utente="6" data_ora="2024-02-06 08:45:29" stato="accettata">
+    <moderatore id_mod="8" username="moderatore2"/>
+  </richiesta>
+  <richiesta id="8" id_discussione="5" id_utente="7" data_ora="2024-02-06 08:45:30" stato="accettata">
+    <moderatore id_mod="8" username="moderatore2"/>
+  </richiesta>
+  <richiesta id="9" id_discussione="6" id_utente="7" data_ora="2024-02-06 08:45:30" stato="accettata">
+    <moderatore id_mod="8" username="moderatore2"/>
+  </richiesta>
+  <richiesta id="10" id_discussione="7" id_utente="4" data_ora="2024-02-06 08:56:40" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="11" id_discussione="9" id_utente="5" data_ora="2024-02-06 09:02:22" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="12" id_discussione="10" id_utente="5" data_ora="2024-02-06 09:02:22" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="13" id_discussione="9" id_utente="6" data_ora="2024-02-06 09:02:22" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="14" id_discussione="10" id_utente="6" data_ora="2024-02-06 09:02:22" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="15" id_discussione="9" id_utente="7" data_ora="2024-02-06 09:02:23" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="16" id_discussione="10" id_utente="7" data_ora="2024-02-06 09:02:23" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="17" id_discussione="11" id_utente="5" data_ora="2024-02-06 09:08:18" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="18" id_discussione="11" id_utente="4" data_ora="2024-02-06 09:08:19" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="19" id_discussione="12" id_utente="4" data_ora="2024-02-06 09:08:19" stato="accettata">
+    <moderatore id_mod="3" username="moderatore1"/>
+  </richiesta>
+  <richiesta id="20" id_discussione="1" id_utente="4" data_ora="2024-02-06 09:38:55" stato="in lavorazione"/>
 </richieste>
