@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/xsd/tutorials_progetti.xsd" ultimo_id="10">
+<tutorials_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/xsd/tutorials_progetti.xsd" ultimo_id="9">
   <tutorial_progetto id="1" id_progetto="1">
     <step titolo_step="Raccolta dei Materiali" num_step="1" nome_file_img="img/steps/img_step_65c110512fc3c.webp">
       <descrizione>Vecchie bottiglie di vetro, un kit per cablaggio elettrico per lampade, una lampadina a LED, carta vetrata, e vernice spray.</descrizione>
