@@ -97,7 +97,6 @@
                         'tipo_evento' => 'report_commento_eliminato',
                         'data' => $data,
                         'commentatore' => $commentatore,
-                        'id_commento' => $id_commento,
                         'tipo' => $tipo
                     ];
                 }
@@ -130,7 +129,6 @@
                         'data' => $data,
                         'publisher' => $publisher,
                         'titolo' => $titolo,
-                        'id_progetto' => $id_progetto,
                         'tipo' => $tipo
                     ];
                 }
@@ -161,9 +159,7 @@
                     $eventi[] = [
                         'tipo_evento' => 'discussioni_aperte_eliminato',
                         'data' => $data,
-                        'id_discussione' => $id_discussione,
-                        'titolo' => $titolo,
-                        'id_progetto' => $id_progetto
+                        'titolo' => $titolo
                     ];
                 }
             }
@@ -192,8 +188,7 @@
                     $eventi[] = [
                         'tipo_evento' => 'richieste_eliminato',
                         'data' => $data,
-                        'id_discussione' => $id_discussione,
-                        'titolo' => $titolo,
+                        'titolo' => $titolo
                     ]; 
                 }
             }
