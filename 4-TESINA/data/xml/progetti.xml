@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd" ultimo_id="10">
   <progetto id="1" username_creator="utentestd3" id_creator="6" tempo_medio="120" data_pubblicazione="2024-02-05 17:46:04" visualizzazioni="570" nome_file_img="img/proj/img_proj_65c1103dbadd7.webp" difficolta="facile" clearance="1" sospeso="false">
+=======
+<progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../structures/xsd/progetti.xsd" ultimo_id="9">
+  <progetto id="1" username_creator="utentestd3" id_creator="6" tempo_medio="120" data_pubblicazione="2024-02-05 17:46:04" visualizzazioni="569" nome_file_img="img/proj/img_proj_65c1103dbadd7.webp" difficolta="facile" clearance="1" sospeso="false">
+>>>>>>> c07b0dae38fdcaff4200fac67fc4129b74fcbfe8
     <titolo>Lampada da Tavolo Riciclata</titolo>
     <categorie>
       <categoria id_categoria="5"/>

@@ -301,7 +301,7 @@
                 }elseif($id_commentatore !== $id_utente){
                   echo "            <form class=\"form-segnalazione\" action=\"../../lib/aggiungere_report_commento.php\" method=\"post\">\n";
                   echo "              <div class=\"segnalazione-div\">\n";
-                  echo "                <label for=\"testo\">Dettagli</label>\n";
+                  echo "                <p>Dettagli</p>\n";
                   echo "                <input type=\"text\" name=\"testo\"></input>\n";
                   echo "                <div class=\"select-box\"><select name=\"tipo\">\n";
                   echo "                    <option value=\"spam\">spam</option>\n";
