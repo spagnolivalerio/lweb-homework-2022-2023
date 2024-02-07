@@ -89,6 +89,16 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
       <link type="text/css" rel="stylesheet" href="../../res/css/control/view-dashboard.css"></link>
       <link type="text/css" rel="stylesheet" href="../../res/css/form-aggiungi-progetto.css"></link>
 
+      <script type="text/javascript">
+        function scomparsa() {
+            var error = document.getElementById('error');
+            if (error) {
+                error.style.display = "none";
+            }
+        }
+        setTimeout(scomparsa, 4000);
+       </script>
+
 
   </head>
 
@@ -164,27 +174,27 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
   </div>
 
   <div class="form-group">
-    <label for="categoriaProposta">Proponi una categoria:</label>
+    <label>Proponi una categoria:</label>
     <input type="text" name="categoriaProposta" <?php if (isset($flag)) { echo "value=\"$categoriaProposta\""; } ?>></input>
   </div>
 
   <div class="form-group">
-    <label for="titolo">Titolo:</label>
+    <label>Titolo:</label>
     <input type="text" name="titolo" <?php if (isset($flag)) { echo "value=\"$titolo\""; } ?>></input>
   </div>
 
   <div class="form-group">
-    <label for="descrizione">Descrizione:</label>
+    <label>Descrizione:</label>
     <textarea name="descrizione" rows="4" cols="50"><?php if (isset($flag)) { echo $descrizione_progetto; } ?></textarea>
   </div>
 
   <div class="form-group">
-    <label for="tempo_medio">Tempo Medio (in minuti):</label>
+    <label>Tempo Medio (in minuti):</label>
     <input type="number" name="tempo_medio" min="1" <?php if (isset($flag)) { echo "value=\"$tempo_medio\""; } ?>></input>
   </div>
 
   <div class="form-group">
-    <label for="clearance">Livello di clearance (da 1 a 5):</label>
+    <label>Livello di clearance (da 1 a 5):</label>
     <input type="number" name="clearance" min="1" max="5" <?php if (isset($flag)) { echo "value=\"$clearance\""; } ?>></input>
   </div>
 
@@ -198,14 +208,14 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
     <?php
       if (isset($difficolta)) {
         echo '<label for="difficolta">Difficoltà:</label>';
-        echo '<select id="difficolta" name="difficolta" required>';
+        echo '<select id="difficolta" name="difficolta">';
         echo '<option value="facile">' . ($difficolta == 'facile' ? 'Facile' : '') . '</option>';
         echo '<option value="medio">' . ($difficolta == 'medio' ? 'Medio' : '') . '</option>';
         echo '<option value="difficile">' . ($difficolta == 'difficile' ? 'Difficile' : '') . '</option>';
         echo '</select>';
       } else {
         echo '<label for="difficolta">Difficoltà:</label>';
-        echo '<select id="difficolta" name="difficolta" required>';
+        echo '<select id="difficolta" name="difficolta">';
         echo '<option value="facile">Facile</option>';
         echo '<option value="medio">Medio</option>';
         echo '<option value="difficile">Difficile</option>';
@@ -215,7 +225,7 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
   </div>
 
   <div class="form-group">
-    <label for="img">Immagine:</label>
+    <label>Immagine:</label>
     <input type="file" name="img" accept="image/*"></input>
   </div>
 
@@ -224,18 +234,10 @@ if(isset($_SESSION['id_bozza']) && isset($_GET['modifica'])){
   </div>
 </form>
 
+</div>
+</div>
 
 </body>
 
-<script>
-        function scomparsa() {
-            var error = document.getElementById('error');
-            if (error) {
-                error.style.display = "none";
-            }
-        }
-        setTimeout(scomparsa, 4000);
-    </script>
-</html>
 
 </html>

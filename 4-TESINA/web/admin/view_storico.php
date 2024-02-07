@@ -72,7 +72,7 @@
                     
                 echo "          <div class=\"user-info\" onclick=\"redirectToUserPage('view_storico.php?id_utente=" . $row['id'] . "')\">\n";
                 echo "              <div class=\"details-storico\">\n";
-                echo "                  <img src=\"../../img/avatar/" . $row['avatar'] . "\" alt=\"\">\n";
+                echo "                  <img src=\"../../img/avatar/" . $row['avatar'] . "\" alt=\"\"></img>\n";
                 echo "                  <p class=\"card-titolo\">" . $row['username'] . "</p>\n";
                 echo "              </div>\n";
                 echo "              <p class=\"user-type\">" . $row['tipo'] . "</p>\n";
@@ -108,18 +108,18 @@
 
             echo "                <div class=\"profile\">\n";
             echo "                    <div class=\"profile-info\">\n";
-            echo "                        <img src=\"../../img/avatar/" . $row['avatar'] . "\" alt=\"\">\n";
+            echo "                        <img src=\"../../img/avatar/" . $row['avatar'] . "\" alt=\"\"></img>\n";
             echo "                        <p>" . $row['username'] . "</p>\n";
             echo "                    </div>\n";
             echo "                    <div class=\"table-ref\">\n";
-            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=1\">PROGETTI PUBBLICATI</a>\n";
-            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=2\">COMMENTI PUBBLICATI</a>\n";
-            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=3\">DISCUSSIONI APERTE</a>\n";
-            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=4\">VALUTAZIONI PROGETTI</a>\n";
-            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=5\">VALUTAZIONI COMMENTI</a>\n";
-            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=6\">REPORT COMMENTI</a>\n";
-            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=7\">REPORT PROGETTI</a>\n";
-            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&tipo_tabella=8\">RICHIESTE ACCESSO</a>\n";
+            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&amp;tipo_tabella=1\">PROGETTI PUBBLICATI</a>\n";
+            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&amp;tipo_tabella=2\">COMMENTI PUBBLICATI</a>\n";
+            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&amp;tipo_tabella=3\">DISCUSSIONI APERTE</a>\n";
+            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&amp;tipo_tabella=4\">VALUTAZIONI PROGETTI</a>\n";
+            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&amp;tipo_tabella=5\">VALUTAZIONI COMMENTI</a>\n";
+            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&amp;tipo_tabella=6\">REPORT COMMENTI</a>\n";
+            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&amp;tipo_tabella=7\">REPORT PROGETTI</a>\n";
+            echo "                            <a href=\"view_storico.php?id_utente=" . $utente_id . "&amp;tipo_tabella=8\">RICHIESTE ACCESSO</a>\n";
             
             echo "                    </div>\n";
             echo "                </div>\n";
@@ -425,14 +425,14 @@
 
 
 
-        <script>
+        <script type="text/javascript">
             function redirectToUserPage(url) {
                 window.location.href = url;
             }
         </script>
 
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-            <script>
+        <script  type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+            <script type="text/javascript">
             // Quando il documento è pronto
                 $(document).ready(function() {
                     // Associa un'azione all'evento di input sulla barra di ricerca
@@ -455,10 +455,6 @@
                     });
                 });
             </script>
-
-        
-          </div>
-        </div>
     </div>
   </body>
   

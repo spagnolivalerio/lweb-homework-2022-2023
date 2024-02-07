@@ -68,6 +68,16 @@
       <link type="text/css" rel="stylesheet" href="../../res/css/valutazione_progetto.css"></link>
       <link type="text/css" rel="stylesheet" href="../../res/css/recensioni_progetto.css"></link>
 
+      <script type="text/javascript">
+        function scomparsa() {
+            var error = document.getElementById('error');
+            if (error) {
+                error.style.display = "none";
+            }
+        }
+        setTimeout(scomparsa, 4000);
+      </script>
+
 
   </head>
 
@@ -483,15 +493,7 @@
           </div>
   </body>
 
-    <script>
-        function scomparsa() {
-            var error = document.getElementById('error');
-            if (error) {
-                error.style.display = "none";
-            }
-        }
-        setTimeout(scomparsa, 4000);
-    </script>
+
 
 </html>
 

@@ -25,6 +25,32 @@
       <link type="text/css" rel="stylesheet" href="../../res/css/visitatore/visitatore.css" ></link>
       <link type="text/css" rel="stylesheet" href="../../res/css/standard/progetti.css" ></link>
 
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+      <script type="text/javascript">
+        // Quando il documento è pronto
+          $(document).ready(function() {
+              // Associa un'azione all'evento di input sulla barra di ricerca
+              $('#searchInput').on('input', function() {
+                  // Ottieni il testo inserito nella barra di ricerca
+                  var searchText = $(this).val().toLowerCase();
+
+                  // Per ogni elemento con classe "card-container"
+                  $('.card-container').each(function() {
+                      // Ottieni il titolo del progetto
+                      var titolo = $(this).find('.card-titolo').text().toLowerCase();
+
+                      // Controlla se il titolo contiene il testo di ricerca
+                      if (titolo.includes(searchText)) {
+                          $(this).show();  // Mostra l'elemento
+                      } else {
+                          $(this).hide();  // Nascondi l'elemento
+                      }
+                  });
+              });
+          });
+        </script>
+
   </head>
 
   <body>
@@ -114,6 +140,10 @@
               echo "<div class=\"flexbox1\">\n";
               echo "<div class=\"card-titolo\">$titolo</div>\n";
               echo "<div class=\"card-rating\">rating</div>\n";
+              foreach($categorie->getElementsByTagName('categoria') as $categoria){
+                $id_categoria = $categoria->getAttribute('id_categoria');
+                echo "      <div class=\"card-categorie\">$id_categoria</div>\n";
+              }
               echo "</div>\n";
               echo "    <div class=\"flexbox2\">\n";
               echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
@@ -121,7 +151,7 @@
               if($clearance == 1){
                 echo "      <form class=\"card-commenta\" action=\"view.php\" method=\"post\">\n";
                   echo "        <div class=\"animation\"></div>\n";
-                  echo "        <button class=\"submit\" type=\"submit\">Dettagli</button>\n";
+                  echo "        <div class=\"dettagli-button\"><button class=\"submit\" type=\"submit\">Dettagli</button></div>\n";
                   echo "        <div class=\"nascondi\"><input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\"></input></div>\n";
                 echo "      </form>\n";
               }else{
@@ -136,54 +166,31 @@
 
       ?>
       </div>
+      </div>
+      </div>
+      <script type="text/javascript">
+                  $('#categoriaSelect').on('change', function() {
+                      var selectedCategoria = $(this).val();
 
-    <div class="footer"></div>
+                      // Per ogni elemento con classe "card-container"
+                      $('.card-container').each(function() {
+                          // Ottieni le categorie del progetto
+                          var categorie = $(this).find('.card-categorie').map(function() {
+                              return $(this).text().toLowerCase();
+                          }).get();
 
+                          // Controlla se la categoria selezionata è tra le categorie del progetto
+                          if (selectedCategoria === 'tutte' || categorie.includes(selectedCategoria)) {
+                              $(this).show();  // Mostra l'elemento
+                          } else {
+                              $(this).hide();  // Nascondi l'elemento
+                          }
+                      });
+                  });
+
+              </script>
   </body>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-      <script>
-        // Quando il documento è pronto
-          $(document).ready(function() {
-              // Associa un'azione all'evento di input sulla barra di ricerca
-              $('#searchInput').on('input', function() {
-                  // Ottieni il testo inserito nella barra di ricerca
-                  var searchText = $(this).val().toLowerCase();
 
-                  // Per ogni elemento con classe "card-container"
-                  $('.card-container').each(function() {
-                      // Ottieni il titolo del progetto
-                      var titolo = $(this).find('.card-titolo').text().toLowerCase();
-
-                      // Controlla se il titolo contiene il testo di ricerca
-                      if (titolo.includes(searchText)) {
-                          $(this).show();  // Mostra l'elemento
-                      } else {
-                          $(this).hide();  // Nascondi l'elemento
-                      }
-                  });
-              });
-          });
-
-          $('#categoriaSelect').on('change', function() {
-              var selectedCategoria = $(this).val();
-
-              // Per ogni elemento con classe "card-container"
-              $('.card-container').each(function() {
-                  // Ottieni le categorie del progetto
-                  var categorie = $(this).find('.card-categorie').map(function() {
-                      return $(this).text().toLowerCase();
-                  }).get();
-
-                  // Controlla se la categoria selezionata è tra le categorie del progetto
-                  if (selectedCategoria === 'tutte' || categorie.includes(selectedCategoria)) {
-                      $(this).show();  // Mostra l'elemento
-                  } else {
-                      $(this).hide();  // Nascondi l'elemento
-                  }
-              });
-          });
-
-      </script>
 
 </html>

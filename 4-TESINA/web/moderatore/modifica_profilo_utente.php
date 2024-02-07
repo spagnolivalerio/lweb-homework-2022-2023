@@ -81,7 +81,7 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
                     } 
                 ?>
             </div>
-            <script>
+            <script type="text/javascript">
                 function scomparsa() {
                     var error = document.getElementById('error');
                     if (error) {
@@ -98,7 +98,7 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
                     } 
                 ?>
             </div>
-            <script>
+            <script type="text/javascript">
                 function scomparsa() {
                     var error = document.getElementById('success');
                     if (error) {
@@ -120,19 +120,24 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
 
         echo " <form class=\"form-container\" action=\"../../lib/modifica_profilo_utente.php\" method=\"post\">\n";
         echo "    <div class=\"nascondi\"><input type=\"hidden\" name=\"id_utente\" value=\"" . $id_utente . "\"></input></div>\n";
-        echo "    <label class=\"form-label\" for=\"nome\">Nome</label>\n";
-        echo "    <input class=\"form-input\" type=\"text\" name=\"nome\" value=\"" . $row['nome'] . "\"></input>\n";
-        echo "    <label class=\"form-label\" for=\"cognome\">Cognome</label>\n";
-        echo "    <input class=\"form-input\" type=\"text\" name=\"cognome\" value=\"" . $row['cognome'] . "\"></input>\n";
-        echo "    <label class=\"form-label\" for=\"email\">E-mail</label>\n";
-        echo "    <input class=\"form-input\" type=\"text\" name=\"email\" value=\"" . $row['email'] . "\"></input>\n";
+        echo "    <p class=\"form-label\">Nome <br />\n";
+        echo "    <input class=\"form-input\" type=\"text\" name=\"nome\" value=\"" . $row['nome'] . "\"></input></p>\n";
+        echo "    <p class=\"form-label\">Cognome<br />\n";
+        echo "    <input class=\"form-input\" type=\"text\" name=\"cognome\" value=\"" . $row['cognome'] . "\"></input></p>\n";
+        echo "    <p class=\"form-label\">E-mail<br />\n";
+        echo "    <input class=\"form-input\" type=\"text\" name=\"email\" value=\"" . $row['email'] . "\"></input></p>\n";
         echo "    <div class=\"nascondi\"><input type=\"hidden\" name=\"old_email\" value=\"" . $row['email'] . "\"></input></div>\n";
-        echo "    <label class=\"form-label\" for=\"username\">Username</label>\n";
-        echo "    <input class=\"form-input\" type=\"text\" name=\"username\" value=\"" . $row['username'] . "\"></input>\n";
+        echo "    <p class=\"form-label\">Username<br />\n";
+        echo "    <input class=\"form-input\" type=\"text\" name=\"username\" value=\"" . $row['username'] . "\"></input></p>\n";
         echo "    <div class=\"nascondi\"><input type=\"hidden\" name=\"old_username\" value=\"" . $row['username'] . "\"></input></div>\n";
-        echo "    <label class=\"form-label\" for=\"indirizzo\">Indirizzo</label>\n";
-        echo "    <input class=\"form-input\" type=\"text\" name=\"indirizzo\" value=\"" . $row['indirizzo'] . "\"></input>\n";
-        echo "    <button class=\"form-button\" type=\"submit\">Modifica</button>\n";
+        echo "    <p class=\"form-label\" >Indirizzo<br />\n";
+        echo "    <input class=\"form-input\" type=\"text\" name=\"indirizzo\" value=\"" . $row['indirizzo'] . "\"></input></p>\n";
+        echo "    <div><button class=\"form-button\" type=\"submit\">Modifica</button></div>\n";
         echo " </form>\n";
 
 ?>
+
+       </div>
+      </div>
+    </body>
+</html>

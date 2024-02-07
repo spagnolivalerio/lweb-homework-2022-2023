@@ -86,12 +86,12 @@
 
                 echo "          <td class=\"tools\">\n";
                 echo "          <form class=\"ricarica-bozza\" action=\"../../lib/ricarica_bozza.php\" method=\"post\">\n";
-                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_bozza\" value=" . $id_bozza . "></input></div>\n";
-                echo "                   <button type=\"submit\">Ricarica</button>\n";
+                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_bozza\" value=\"" . $id_bozza . "\"></input></div>\n";
+                echo "                   <div><button type=\"submit\">Ricarica</button></div>\n";
                 echo "          </form>\n";
                 echo "          <form class=\"ricarica-bozza\" action=\"../../lib/rimuovere_bozza.php\" method=\"post\">\n";
-                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_bozza\" value=" . $id_bozza . "></input></div>\n";
-                echo "                   <button type=\"submit\">&#10008;</button>\n";
+                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_bozza\" value=\"" . $id_bozza . "\"></input></div>\n";
+                echo "                   <div><button type=\"submit\">&#10008;</button></div>\n";
                 echo "          </form>\n";
                 echo "          </td>\n";
 
@@ -103,7 +103,7 @@
         </table>       
         
 
-
+        </div>
         </div>
       </div>
     </div>

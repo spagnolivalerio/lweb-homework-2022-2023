@@ -101,14 +101,19 @@
 
           echo "    </ul>\n";
 
+          
           echo "    <form class=\"form\" action=\"modifica_profilo_utente.php\" method=\"post\">\n";
-          echo "      <div class=\"nascondi\"><input type=\"hidden\" name=\"id_utente\" value=" . $id_utente . "></input></div>\n";
+          echo "    <div class=\"bacheca-box\">\n";
+          echo "      <div class=\"nascondi\"><input type=\"hidden\" name=\"id_utente\" value=\"" . $id_utente . "\"></input></div>\n";
           echo "      <button class=\"button-stile\" type=\"submit\">Edit Generalità</button>\n";
+          echo "    </div>\n";
           echo "    </form>\n";
 
           echo "    <form class=\"form\" action=\"modifica_password_utente.php\" method=\"post\">\n";
-          echo "      <div class=\"nascondi\"><input type=\"hidden\" name=\"id_utente\" value=" . $id_utente . "></input></div>\n";
+          echo "    <div class=\"bacheca-box\">\n";
+          echo "      <div class=\"nascondi\"><input type=\"hidden\" name=\"id_utente\" value=\"" . $id_utente . "\"></input></div>\n";
           echo "      <button class=\"button-stile\" type=\"submit\">Cambia Password</button>\n";
+          echo "    </div>\n";
           echo "    </form>\n";
 
           echo "  </div>\n";
@@ -119,7 +124,6 @@
 
          </div>
       </div>
-    </div>
     
   </body>
 

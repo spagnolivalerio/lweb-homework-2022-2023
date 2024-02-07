@@ -105,18 +105,24 @@
           echo "    </ul>\n";
 
           echo "    <form class=\"form\" action=\"modifica_profilo_utente.php\" method=\"post\">\n";
-          echo "      <div class=\"nascondi\"><input type=\"hidden\" name=\"id_utente\" value=" . $id_utente . "></input></div>\n";
+          echo "    <div class=\"bacheca-box\">\n";
+          echo "      <div class=\"nascondi\"><input type=\"hidden\" name=\"id_utente\" value=\"" . $id_utente . "\"></input></div>\n";
           echo "      <button class=\"button-stile\" type=\"submit\">Edit Generalità</button>\n";
+          echo "    </div>\n";
           echo "    </form>\n";
 
           echo "    <form class=\"form\" action=\"modifica_password_utente.php\" method=\"post\">\n";
-          echo "      <div class=\"nascondi\"><input type=\"hidden\" name=\"id_utente\" value=" . $id_utente . "></input></div>\n";
+          echo "    <div class=\"bacheca-box\">\n";
+          echo "      <div class=\"nascondi\"><input type=\"hidden\" name=\"id_utente\" value=\"" . $id_utente . "\"></input></div>\n";
           echo "      <button class=\"button-stile\" type=\"submit\">Cambia Password</button>\n";
+          echo "    </div>\n";
           echo "    </form>\n";
 
-          echo "      <form class=\"form\" action=\"form_progetto.php\" method=\"post\">\n";
-          echo "        <button class=\"button-stile\" type=\"submit\">Aggiungi un Progetto</button>\n";
-          echo "      </form>\n";
+          echo "    <form class=\"form\" action=\"form_progetto.php\" method=\"post\">\n";
+          echo "    <div class=\"bacheca-box\">\n";
+          echo "       <button class=\"button-stile\" type=\"submit\">Aggiungi un Progetto</button>\n";
+          echo "    </div>\n";
+          echo "    </form>\n";
 
           echo "  </div>\n";
 
@@ -159,7 +165,7 @@
             echo "        <div class=\"card-user\">$username</div>\n";
             echo "      </div>\n";
             echo "     <form class=\"elimina-progetto\" action=\"../../lib/rimuovere_progetto.php\" method=\"post\">\n";
-            echo "       <input class=\"cestino\" type=\"submit\" value=\"&#10005;\"></input>\n";
+            echo "       <div><input class=\"cestino\" type=\"submit\" value=\"&#10005;\"></input></div>\n";
             echo "       <div class=\"nascondi\"><input class=\"\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\"></input></div>\n";
             echo "     </form>\n";
             echo "   </div>\n";
@@ -178,7 +184,7 @@
             echo "      <div class=\"card-descrizione\">$descrizione</div>\n";
             echo "      <form class=\"card-commenta\" action=\"view.php\" method=\"post\">\n";
             echo "        <div class=\"animation\"></div>\n";
-            echo "        <button class=\"submit\" type=\"submit\">Dettagli</button>\n";
+            echo "        <div class=\"dettagli-button\"><button class=\"submit\" type=\"submit\">Dettagli</button></div>\n";
             echo "        <div class=\"nascondi\"><input class=\"hidden\" name=\"id_progetto\" type=\"hidden\" value=\"$id_progetto\"></input></div>\n";
             echo "      </form>\n";
             echo "    </div>\n";
@@ -195,8 +201,7 @@
 
          </div>
       </div>
-    </div>
-    
+
   </body>
 
 

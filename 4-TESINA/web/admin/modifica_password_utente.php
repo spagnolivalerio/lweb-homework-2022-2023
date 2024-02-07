@@ -79,7 +79,7 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
 
                 ?>
             </div>
-            <script>
+            <script type="text/javascript">
                 function scomparsa() {
                     var error = document.getElementById('error');
                     if (error) {
@@ -96,7 +96,7 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
                     } 
                 ?>
             </div>
-            <script>
+            <script type="text/javascript">
                 function scomparsa() {
                     var error = document.getElementById('success');
                     if (error) {
@@ -117,12 +117,13 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
         echo " <form class=\"form-container\" action=\"../../lib/modifica_password_utente.php\" method=\"post\">\n";
         echo "    <div class=\"nascondi\"><input type=\"hidden\" name=\"id_utente\" value=\"" . $id_utente . "\"></input></div>\n";
         echo "    <div class=\"nascondi\"><input type=\"hidden\" name=\"username\" value=\"" . $row['username'] . "\"></input></div>\n";
-        echo "    <label class=\"form-label\" for=\"vecchia_password\">Vecchia Password</label>\n";
-        echo "    <input class=\"form-input\" type=\"password\" name=\"vecchia_password\"></input>\n";
-        echo "    <label class=\"form-label\" for=\"nuova_password\">Nuova Password</label>\n";
-        echo "    <input class=\"form-input\" type=\"password\" name=\"nuova_password\"></input>\n";
-        echo "    <button class=\"form-button\" type=\"submit\">Modifica</button>\n";
+        echo "    <p class=\"form-label\">Vecchia Password<br />\n";
+        echo "    <input class=\"form-input\" type=\"password\" name=\"vecchia_password\"></input></p>\n";
+        echo "    <p class=\"form-label\">Nuova Password<br />\n";
+        echo "    <input class=\"form-input\" type=\"password\" name=\"nuova_password\"></input></p>\n";
+        echo "    <div><button class=\"form-button\" type=\"submit\">Modifica</button></div>\n";
         echo " </form>\n";
+
 
         ?>
 

@@ -77,7 +77,7 @@ $durata = $progetto->getAttribute('tempo_medio');
                         unset($_SESSION['empty_form']);
                     } 
                 ?>
-            <script>
+            <script type="text/javascript">
                 function scomparsa() {
                     var error = document.getElementById('error');
                     if (error) {
@@ -94,7 +94,7 @@ $durata = $progetto->getAttribute('tempo_medio');
                         unset($_SESSION['esito']);
                     } 
                 ?>
-            <script>
+            <script type="text/javascript">
                 function scomparsa() {
                     var error = document.getElementById('success');
                     if (error) {
@@ -110,24 +110,28 @@ $durata = $progetto->getAttribute('tempo_medio');
 echo "<div class=\"form-container\">";
 echo "<form action=\"../../lib/modifica_specifiche_progetto.php\" method=\"post\">\n";
 echo "    <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"" . $id_progetto . "\"></input></div>\n";
-echo "    <label class=\"form-label\" for=\"clearance\">Clearance</label>\n"; 
-echo "    <input class=\"form-input\" type=\"number\" name=\"clearance\" min=\"1\" max=\"5\" value=\"" . $clearance . "\"></input>\n";
-echo "    <label class=\"form-label\" for=\"durata\">Durata (min)</label>\n"; 
-echo "    <input class=\"form-input\" type=\"number\" name=\"durata\" value=\"" . $durata . "\"></input>\n";
-echo "    <label class=\"form-label\" for=\"difficoltà\">Difficoltà: </label>\n";
-echo "    <select class=\"form-input\" id=\"difficoltà\" name=\"difficoltà\" required>\n";
-echo "        <option value=\"facile\"" . ($difficoltà == 'facile' ? ' selected' : '') . ">Facile</option>\n";
-echo "        <option value=\"medio\"" . ($difficoltà == 'medio' ? ' selected' : '') . ">Medio</option>\n";
-echo "        <option value=\"difficile\"" . ($difficoltà == 'difficile' ? ' selected' : '') . ">Difficile</option>\n";
-echo "    </select>\n";
-echo "    <br>\n";
-echo "    <button class=\"form-button\" type=\"submit\">Modifica</button>\n";
+echo "    <p class=\"form-label\" >Clearance<br />\n"; 
+echo "    <input class=\"form-input\" type=\"number\" name=\"clearance\" min=\"1\" max=\"5\" value=\"" . $clearance . "\"></input></p>\n";
+echo "    <p class=\"form-label\">Durata (min)<br />\n"; 
+echo "    <input class=\"form-input\" type=\"number\" name=\"durata\" value=\"" . $durata . "\"></input></p>\n";
+echo "    <p class=\"form-label\">Difficoltà: <br />\n";
+echo "    <select class=\"form-input\" id=\"difficoltà\" name=\"difficoltà\">\n";
+echo "        <option value=\"facile\"" . ($difficoltà == 'facile' ? ' selected="selected"' : '') . ">Facile</option>\n";
+echo "        <option value=\"medio\"" . ($difficoltà == 'medio' ? ' selected="selected"' : '') . ">Medio</option>\n";
+echo "        <option value=\"difficile\"" . ($difficoltà == 'difficile' ? ' selected="selected"' : '') . ">Difficile</option>\n";
+echo "    </select></p>\n";
+echo "    <div><button class=\"form-button\" type=\"submit\">Modifica</button></div>\n";
 echo " </form>\n";
 echo " <form  action=\"../../lib/rimuovere_progetto.php?goto=homepage\" method=\"post\">\n";
 echo "    <div class=\"nascondi\"><input type=\"hidden\" name=\"id_progetto\" value=\"$id_progetto\"></input></div>";
-echo "    <button class=\"form-button bg-red\" type=\"submit\">Elimina</button>\n";
+echo "    <div><button class=\"form-button bg-red\" type=\"submit\">Elimina</button></div>\n";
 echo " </form>\n";
 echo " </div>\n";
 
 ?>
+        </div>
+      </div>
 
+
+    </body>
+    </html>

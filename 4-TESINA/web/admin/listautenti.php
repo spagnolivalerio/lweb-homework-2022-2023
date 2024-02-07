@@ -68,7 +68,7 @@
             echo "            <tr>\n";
             echo "                <td>\n";
             echo "                    <div class=\"container-user-info\">\n";
-            echo "                        <img src=\"../../img/avatar/" . $row['avatar'] . "\" alt=\"\">\n";
+            echo "                        <img src=\"../../img/avatar/" . $row['avatar'] . "\" alt=\"\"></img>\n";
             echo "                        <a href=\"#\" class=\"user-link\">" . $row['username'] . "</a>\n";
             echo "                        <span class=\"user-type\">" . $row['tipo'] . "</span>\n";
             echo "                    </div>\n";
@@ -94,25 +94,25 @@
                 echo "          <td>\n";
                 if($row['id'] != $id_utente && $row['tipo'] != 'admin'){                  
                   echo "          <form class=\"form-ban\" action=\"../../lib/ban-sban.php\" method=\"post\">\n";
-                  echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input></div>\n";
+                  echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=\"" . $row['id'] . "\"></input></div>\n";
                   echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"ban\" value=\"sospendi\"></input></div>\n";
-                  echo "                   <button class=\"sospendi\" type=\"submit\">Sospendi</button>\n";
+                  echo "                   <div><button class=\"sospendi\" type=\"submit\">Sospendi</button></div>\n";
                   echo "          </form>\n";
                 }
 
                 if($row['tipo'] == 'standard'){
                   echo "          <form class=\"form-ban\" action=\"../../lib/upgrade-downgrade.php\" method=\"post\">\n";
-                  echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></div></input>\n";
-                  echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"Tipo_utente\" value=" . $row['tipo'] . "></div></input>\n";
+                  echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=\"" . $row['id'] . "\"></input></div>\n";
+                  echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"Tipo_utente\" value=\"" . $row['tipo'] . "\"></input></div>\n";
                   echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"upgrade\" value=\"upgrade\"></input></div>\n";
-                  echo "                   <button class=\"up\" type=\"submit\">&#9650;</button>\n";
+                  echo "                   <div><button class=\"up\" type=\"submit\">&#9650;</button></div>\n";
                   echo "          </form>\n";
                 }elseif($row['tipo'] == 'moderatore'){
                   echo "          <form class=\"form-ban\" action=\"../../lib/upgrade-downgrade.php\" method=\"post\">\n";
-                  echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input></div>\n";
-                  echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"Tipo_utente\" value=" . $row['tipo'] . "></input></div>\n";
+                  echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=\"" . $row['id'] . "\"></input></div>\n";
+                  echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"Tipo_utente\" value=\"" . $row['tipo'] . "\"></input></div>\n";
                   echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"downgrade\" value=\"downgrade\"></input></div>\n";
-                  echo "                   <button class=\"down\" type=\"submit\">&#9660;</button>\n";
+                  echo "                   <div><button class=\"down\" type=\"submit\">&#9660;</button></div>\n";
                   echo "          </form>\n";
                 }
 
@@ -120,7 +120,7 @@
             }elseif($row['ban'] == 1){
                 echo "          <td>\n";
                 echo "          <form class=\"form-ban\" action=\"../../lib/ban-sban.php\" method=\"post\">\n";
-                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input></div>\n";
+                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=\"" . $row['id'] . "\"></input></div>\n";
                 echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"ban\" value=\"riabilita\"></input></div>\n";
                 echo "                   <button class=\"riabilita\" type=\"submit\">Riabilita</button>\n";
                 echo "          </form>\n";
@@ -135,6 +135,7 @@
             
         </div>
       </div>
+    </div>
     </div>
   </body>
                 

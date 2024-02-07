@@ -72,7 +72,7 @@
             echo "            <tr>\n";
             echo "                <td>\n";
             echo "                    <div class=\"container-user-info\">\n";
-            echo "                        <img src=\"../../img/avatar/" . $row['avatar'] . "\" alt=\"\">\n";
+            echo "                        <img src=\"../../img/avatar/" . $row['avatar'] . "\" alt=\"\"></img>\n";
             echo "                        <a href=\"#\" class=\"user-link\">" . $row['username'] . "</a>\n";
             echo "                        <span class=\"user-type\">" . $row['tipo'] . "</span>\n";
             echo "                    </div>\n";
@@ -99,9 +99,9 @@
                 echo "          <td>\n";
               if($row['id'] != $id_utente && $row['tipo'] != 'admin'){
                 echo "          <form class=\"form-ban\" action=\"../../lib/ban-sban.php\" method=\"post\">\n";
-                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input></div>\n";
+                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=\"" . $row['id'] . "\"></input></div>\n";
                 echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"ban\" value=\"sospendi\"></input></div>\n";
-                echo "                   <button class=\"sospendi\" type=\"submit\">Sospendi</button>\n";
+                echo "                   <div><button class=\"sospendi\" type=\"submit\">Sospendi</button></div>\n";
                 echo "          </form>\n";       
               }                    
                 echo "          </td>\n";
@@ -109,9 +109,9 @@
             }elseif($row['ban'] == 1){
                 echo "          <td>\n";
                 echo "          <form class=\"form-ban\" action=\"../../lib/ban-sban.php\" method=\"post\">\n";
-                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=" . $row['id'] . "></input></div>\n";
+                echo "                   <div class=\"nascondi\"><input type=\"hidden\" name=\"id_profilo\" value=\"" . $row['id'] . "\"></input></div>\n";
                 echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"ban\" value=\"riabilita\"></input></div>\n";
-                echo "                   <button class=\"riabilita\" type=\"submit\">Riabilita</button>\n";
+                echo "                   <div><button class=\"riabilita\" type=\"submit\">Riabilita</button></div>\n";
                 echo "          </form>\n";
                 echo "          </td>\n";
             }
@@ -121,7 +121,8 @@
             }
         ?>
         </table>
-            
+        
+        </div>   
         </div>
       </div>
     </div>

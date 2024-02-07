@@ -66,7 +66,7 @@ if(isset($_POST['num_step'])){
 
                 ?>
             </div>
-            <script>
+            <script type="text/javascript">
                 function scomparsa() {
                     var error = document.getElementById('error');
                     if (error) {
@@ -78,18 +78,21 @@ if(isset($_POST['num_step'])){
 
 <form action="../../lib/step.php" method="post" enctype="multipart/form-data" class="form-container">
 
-    <label for="titolo" class="form-label">Titolo:</label>
-    <input name="titolo" class="form-text"></input><br>
+    <p class="form-label">Titolo:<br />
+    <input name="titolo" class="form-text"></input><br /></p>
 
-    <label for="descrizione" class="form-label">Descrizione:</label>
-    <textarea name="descrizione" class="form-textarea"></textarea><br>
+    <p class="form-label">Descrizione:<br />
+    <textarea name="descrizione" class="form-textarea" rows="1" cols="50"></textarea><br /></p>
 
-    <div class="nascondi"><input name="num_step" type="hidden" value="<?php echo"$num_step"; ?>"></input></div><br>
+    <div class="nascondi"><input name="num_step" type="hidden" value="<?php echo"$num_step"; ?>"></input></div>
 
-    <label for="img" class="form-label">Immagine</label>
-    <input type="file" name="img" accept="image/*" class="form-file-input"></input><br>
+    <p class="form-label">Immagine<br />
+    <input type="file" name="img" accept="image/*" class="form-file-input"></input><br /></p>
 
-    <input type="submit" value="Aggiungi step" class="form-submit"></input>
+    <div><input type="submit" value="Aggiungi step" class="form-submit"></input></div>
 
 </form>
-
+</div>
+</div>
+</body>
+</html>

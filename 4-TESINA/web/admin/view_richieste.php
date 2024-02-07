@@ -90,8 +90,8 @@
                     echo "              <td>\n";
                     echo "                <form action=\"../../lib/gestisci_richiesta.php\" method=\"post\">\n";
                     echo "                  <div class=\"nascondi\"><input type=\"hidden\" name=\"id_richiesta\" value=\"" . $id_richiesta . "\"></input></div>\n";
-                    echo "                  <button class=\"green\" type=\"submit\" name=\"esito\" value=\"accettata\">&#10004;</button>\n";
-                    echo "                  <button class=\"red\" type=\"submit\" name=\"esito\" value=\"rifiutata\">&#10008;</button>\n";
+                    echo "                  <div><button class=\"green\" type=\"submit\" name=\"esito\" value=\"accettata\">&#10004;</button>\n";
+                    echo "                  <button class=\"red\" type=\"submit\" name=\"esito\" value=\"rifiutata\">&#10008;</button></div>\n";
                     echo "                </form>\n";
                     echo "              </td>\n";
 
