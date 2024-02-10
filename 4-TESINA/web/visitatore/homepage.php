@@ -66,6 +66,7 @@
           <a class="elem blur">Bozze</a>
           <a class="elem blur">Storico</a>
           <div class="divisore"></div>
+          <p class="p-20 align-c">Esegui l'accesso o registrati per sbloccare tutte le funzionalit&agrave;</p>
         </div>
       </div>
       <div class="dashboard">

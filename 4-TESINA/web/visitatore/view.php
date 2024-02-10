@@ -73,6 +73,7 @@
               <a class="elem blur">Bozze</a>
               <a class="elem blur">Storico</a>
               <div class="divisore"></div>
+              <p class="p-20 align-c">Esegui l'accesso o registrati per sbloccare tutte le funzionalit&agrave;</p>
           </div>
           </div>
           <div class="dashboard">
@@ -146,7 +147,7 @@
 
 
                 echo "<div class=\"discussion-container\">\n";
-                echo "    <div class=\"discussion-header\" id=\"" . $id_discussione . "\">\n";
+                echo "    <div class=\"discussion-header\">\n";
                 echo "        <h1 class=\"discussion-title\">$titolo</h1>\n";
 
                 
@@ -167,7 +168,7 @@
 
                 } 
 
-                echo "        <span class=\"commenti-span\"><h2>COMMENTI</h2></span>\n";
+                echo "        <div class=\"commenti-span\"><h2>COMMENTI</h2></div>\n";
 
                 foreach($commenti as $commento){
                   $commentatore = $commento->getAttribute('commentatore');
@@ -181,7 +182,7 @@
                   $row = mysqli_fetch_array($res); 
                   $avatar = $row['avatar']; 
 
-                echo "        <div class=\"comment\" id=\"" . $id_commento . "\">\n";
+                echo "        <div class=\"comment\">\n";
                 echo "            <div class=\"comment-info\">\n";
                 echo "              <div class=\"top-info\">\n";
                 echo "                <img src=\"$root/img/avatar/$avatar\" alt=\"&#x1F464;\" style=\"width: 20px; height: 20px;\"></img>\n";
