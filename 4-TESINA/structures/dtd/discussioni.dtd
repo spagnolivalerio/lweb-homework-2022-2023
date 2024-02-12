@@ -5,19 +5,19 @@
 <!ELEMENT discussione (commenti, descrizione, partecipanti)>
 <!ATTLIST discussione 
           titolo CDATA #REQUIRED
-          id ID #REQUIRED
-          id_poster ID #REQUIRED
+          id CDATA #REQUIRED
+          id_poster CDATA #REQUIRED
           risolta (true|false) #REQUIRED
-          id_progetto ID #REQUIRED
+          id_progetto CDATA #REQUIRED
           data_ora CDATA #REQUIRED
           autore CDATA #REQUIRED>
 
-<!ELEMENT commenti (commento?)>
+<!ELEMENT commenti (commento*)>
 <!ELEMENT commento EMPTY>
-<!ATTLIST commento id_commento ID #REQUIRED>
+<!ATTLIST commento id_commento CDATA #REQUIRED>
 
-<!ELEMENT partecipanti (partecipante)>
+<!ELEMENT partecipanti (partecipante*)>
 <!ELEMENT partecipante EMPTY>
-<!ATTLIST partecipante id_partecipante ID #REQUIRED>
+<!ATTLIST partecipante id_partecipante CDATA #REQUIRED>
 
 <!ELEMENT descrizione (#PCDATA)>

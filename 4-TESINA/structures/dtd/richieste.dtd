@@ -4,13 +4,13 @@
 
 <!ELEMENT richiesta (moderatore?)>
 <!ATTLIST richiesta
-          id ID #REQUIRED
-          id_utente ID #REQUIRED
-          id_discussione ID #REQUIRED
+          id CDATA #REQUIRED
+          id_utente CDATA #REQUIRED
+          id_discussione CDATA #REQUIRED
           data_ora CDATA #REQUIRED
-          stato (accettata|rifiutata|in lavorazione) #REQUIRED>
+          stato CDATA #REQUIRED>
 
 <!ELEMENT moderatore EMPTY>
 <!ATTLIST moderatore
           username CDATA #REQUIRED
-          id_mod ID #REQUIRED>
+          id_mod CDATA #REQUIRED>

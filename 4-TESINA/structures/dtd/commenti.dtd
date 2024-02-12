@@ -4,18 +4,18 @@
 
 <!ELEMENT commento (testo, reports_commento, valutazioni_commento)>
 <!ATTLIST commento 
-          id ID #REQUIRED
-          id_commentatore ID #REQUIRED
+          id CDATA #REQUIRED
+          id_commentatore CDATA #REQUIRED
           commentatore CDATA #REQUIRED
-          id_discussione ID #REQUIRED
+          id_discussione CDATA #REQUIRED
           data_ora CDATA #REQUIRED>
 
 <!ELEMENT testo (#PCDATA)>
 
 <!ELEMENT reports_commento (report_commento*)>
 <!ELEMENT report_commento EMPTY>
-<!ATTLIST report_commento id_report ID #REQUIRED>
+<!ATTLIST report_commento id_report CDATA #REQUIRED>
 
 <!ELEMENT valutazioni_commento (valutazione_commento*)>
 <!ELEMENT valutazione_commento EMPTY>
-<!ATTLIST valutazione_commento id_valutazione_commento ID #REQUIRED>
+<!ATTLIST valutazione_commento id_valutazione_commento CDATA #REQUIRED>

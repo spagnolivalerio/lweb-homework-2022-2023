@@ -24,7 +24,6 @@
 			<xsd:attribute name="tempo_medio" type="xsd:positiveInteger" />
 			<xsd:attribute name="nome_file_img" type="xsd:string" />
 			<xsd:attribute name="data_pubblicazione" type="xsd:string" />
-			<xsd:attribute name="visualizzazioni" type="xsd:integer" />
 			<xsd:attribute name="difficolta" type="tipoDifficolta" />
 			<xsd:attribute name="clearance" type="tipoClearance" />
 			<xsd:attribute name="sospeso" type="xsd:boolean" default="false"/>
@@ -41,7 +40,7 @@
 	<xsd:element name="categorie">
 		<xsd:complexType>
 			<xsd:sequence minOccurs="0" maxOccurs="1">
-				<xsd:element ref="categoria" minOccurs="1" maxOccurs="unbounded" />
+				<xsd:element ref="categoria" minOccurs="0" maxOccurs="unbounded" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>

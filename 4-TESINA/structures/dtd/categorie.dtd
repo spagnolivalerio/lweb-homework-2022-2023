@@ -3,6 +3,6 @@
 <!ATTLIST categorie ultimo_id CDATA #REQUIRED>
 
 <!ELEMENT categoria (nomeCategoria)>
-<!ATTLIST categoria id ID #REQUIRED>
+<!ATTLIST categoria id CDATA #REQUIRED>
 
 <!ELEMENT nomeCategoria (#PCDATA)>

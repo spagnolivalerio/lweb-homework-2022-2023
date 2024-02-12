@@ -4,9 +4,9 @@
 
 <!ELEMENT report_progetto (tipo, testo)>
 <!ATTLIST report_progetto
-          id ID #REQUIRED
-          id_utente ID #REQUIRED
-          id_progetto ID #REQUIRED
+          id CDATA #REQUIRED
+          id_utente CDATA #REQUIRED
+          id_progetto CDATA #REQUIRED
           data_ora CDATA #REQUIRED>
 
 <!ELEMENT tipo (#PCDATA)>

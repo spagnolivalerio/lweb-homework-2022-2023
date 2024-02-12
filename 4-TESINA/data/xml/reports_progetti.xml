@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<reports_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="0" xsi:noNamespaceSchemaLocation="../../structures/xsd/discussioni.xsd"/>
+<reports_progetti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ultimo_id="1" xsi:noNamespaceSchemaLocation="../../structures/xsd/discussioni.xsd">
+  <report_progetto id="1" id_progetto="1" id_utente="5" data_ora="2024-02-12 10:36:27">
+    <tipo>Contenuti inappropriati</tipo>
+    <testo>Il progetto risulta essere non adatto alle persone di tutte le età: tagliare una bottiglia di vetro può essere pericoloso!</testo>
+  </report_progetto>
+</reports_progetti>

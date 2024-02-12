@@ -157,7 +157,9 @@
       </commento>
     </commenti>
     <valutazioni_progetti/>
-    <reports_progetti/>
+    <reports_progetti>
+      <report_progetto id_report="1" tipo="Contenuti inappropriati" data_ora="2024-02-12 10:36:27" id_progetto="1" publisher="utentestd3" titolo="Lampada da Tavolo Riciclata"/>
+    </reports_progetti>
     <reports_commenti>
       <report_commento id_report="1" tipo="Contenuti inappropriati" data_ora="2024-02-06 10:15:52" id_commento="40" commentatore="utentestd4"/>
     </reports_commenti>

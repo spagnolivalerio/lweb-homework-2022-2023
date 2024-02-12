@@ -2,7 +2,7 @@
 <!ELEMENT progetti (progetto*)>
 <!ATTLIST progetti ultimo_id CDATA #REQUIRED>
 
-<!ELEMENT progetto (titolo, categorie, categoriaProposta?, descrizione, reports_progetti, discussioni, tutorial_progetto?, valutazioni)>
+<!ELEMENT progetto (titolo, categorie, descrizione, categoriaProposta?, reports_progetti, discussioni, tutorial_progetto?, valutazioni)>
 <!ATTLIST progetto 
           id CDATA #REQUIRED
           id_creator CDATA #REQUIRED
@@ -21,15 +21,15 @@
 <!ELEMENT tutorial_progetto EMPTY>
 <!ATTLIST tutorial_progetto id_tutorial CDATA #REQUIRED>
 
-<!ELEMENT categorie (categoria+)>
+<!ELEMENT categorie (categoria*)>
 <!ELEMENT categoria EMPTY>
-<!ATTLIST categoria id_categoria ID #REQUIRED>
+<!ATTLIST categoria id_categoria CDATA #REQUIRED>
 
 <!ELEMENT reports_progetti (report_progetto*)>
 <!ELEMENT report_progetto EMPTY>
 <!ATTLIST report_progetto id_report CDATA #REQUIRED>
 
-<!ELEMENT discussioni (discussione?)>
+<!ELEMENT discussioni (discussione*)>
 <!ELEMENT discussione EMPTY>
 <!ATTLIST discussione id_discussione CDATA #REQUIRED>
 

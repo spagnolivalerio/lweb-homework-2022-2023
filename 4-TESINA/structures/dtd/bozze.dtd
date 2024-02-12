@@ -5,23 +5,22 @@
 <!ELEMENT bozza (categorie?, categoriaProposta?, descrizione?, tutorial_bozza?)>
 <!ATTLIST bozza 
           titolo CDATA #REQUIRED
-          id ID #REQUIRED
-          id_creator ID #REQUIRED
+          id CDATA #REQUIRED
+          id_creator CDATA #REQUIRED
           tempo_medio CDATA #REQUIRED
           nome_file_img CDATA #REQUIRED
           data_pubblicazione CDATA #REQUIRED
-          visualizzazioni CDATA #REQUIRED
           difficolta (facile|medio|difficile) #REQUIRED
           clearance CDATA #REQUIRED
           sospeso (true|false) "false">
 
-<!ELEMENT categorie (categoria+)>
+<!ELEMENT categorie (categoria*)>
 <!ELEMENT categoria EMPTY>
-<!ATTLIST categoria id_categoria ID #REQUIRED>
+<!ATTLIST categoria id_categoria CDATA #REQUIRED>
 
 <!ELEMENT categoriaProposta (#PCDATA)>
 <!ELEMENT descrizione (#PCDATA)>
-<!ELEMENT tutorial_bozza (step+)>
+<!ELEMENT tutorial_bozza (step*)>
 <!ELEMENT step (descrizione)>
 <!ATTLIST step 
           titolo_step CDATA #REQUIRED
@@ -30,4 +29,4 @@
 
 <!ELEMENT reports_progetti (report_progetto*)>
 <!ELEMENT report_progetto EMPTY>
-<!ATTLIST report_progetto id_report ID #REQUIRED>
+<!ATTLIST report_progetto id_report CDATA #REQUIRED>

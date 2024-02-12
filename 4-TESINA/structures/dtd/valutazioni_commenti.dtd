@@ -4,9 +4,9 @@
 
 <!ELEMENT valutazione_commento (utilita*, livello_di_accordo*)>
 <!ATTLIST valutazione_commento
-          id ID #REQUIRED
-          id_votante ID #REQUIRED
-          id_commento ID #REQUIRED
+          id CDATA #REQUIRED
+          id_votante CDATA #REQUIRED
+          id_commento CDATA #REQUIRED
           data_ora CDATA #REQUIRED>
 
 <!ELEMENT utilita (#PCDATA)>

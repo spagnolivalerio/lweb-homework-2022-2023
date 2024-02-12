@@ -157,7 +157,7 @@
         		</div>
                 <p class="signup"><a href="login.php">ho già un account</a></p>
                 <div class="info">
-                    <p>&ast;Nota bene: La password deve avere almeno 8 caratteri di cui una lettera maiuscola e un carattere speciale (&excl;&commat;&num;&dollar;&percnt;&Hat;&amp;&ast;)</p>
+                    <p>&ast;La password deve avere almeno 8 caratteri di cui una lettera maiuscola e un carattere speciale (&excl;&commat;&num;&dollar;&percnt;&Hat;&amp;&ast;)</p>
                     <p>&ast;&ast;La mail deve rispettare il formato xxxxxxxxxx@xxxx.xx</p>
                 </div>
         	</form>

@@ -4,10 +4,10 @@
 
 <!ELEMENT valutazione_progetto (testo)>
 <!ATTLIST valutazione_progetto
-          id ID #REQUIRED
-          id_progetto ID #REQUIRED
+          id CDATA #REQUIRED
+          id_progetto CDATA #REQUIRED
           value CDATA #REQUIRED
-          id_votante ID #REQUIRED
+          id_votante CDATA #REQUIRED
           data_ora CDATA #REQUIRED>
 
 <!ELEMENT testo (#PCDATA)>

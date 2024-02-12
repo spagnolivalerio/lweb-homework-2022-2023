@@ -3,13 +3,13 @@
 <!ATTLIST storici ultimo_id CDATA #REQUIRED>
 
 <!ELEMENT storico (progetti, richieste, commenti, valutazioni_progetti, reports_progetti, reports_commenti, discussioni, valutazioni_commenti)>
-<!ATTLIST storico id_utente ID #REQUIRED>
+<!ATTLIST storico id_utente CDATA #REQUIRED>
 
 <!ELEMENT progetti (progetto*)>
 
 <!ELEMENT progetto EMPTY>
 <!ATTLIST progetto 
-          id_progetto ID #REQUIRED
+          id_progetto CDATA #REQUIRED
           titolo CDATA #REQUIRED
           data_ora CDATA #REQUIRED>
 
@@ -17,36 +17,38 @@
 
 <!ELEMENT richiesta EMPTY>
 <!ATTLIST richiesta 
-          id_richiesta ID #REQUIRED
-          id_discussione ID #REQUIRED
+          id_richiesta CDATA #REQUIRED
+          id_discussione CDATA #REQUIRED
           data_ora CDATA #REQUIRED
           titolo CDATA #REQUIRED>
 
 <!ELEMENT commenti (commento*)>
 
-<!ELEMENT commento EMPTY>
+<!ELEMENT commento (testo)>
 <!ATTLIST commento 
-          id_commento ID #REQUIRED
-          id_discussione ID #REQUIRED
+          id_commento CDATA #REQUIRED
+          id_discussione CDATA #REQUIRED
           data_ora CDATA #REQUIRED>
+
+<!ELEMENT testo (#PCDATA)>
 
 <!ELEMENT valutazioni_progetti (valutazione_progetto*)>
 
 <!ELEMENT valutazione_progetto EMPTY>
 <!ATTLIST valutazione_progetto 
-          id_valutazione ID #REQUIRED
+          id_valutazione CDATA #REQUIRED
           data_ora CDATA #REQUIRED
-          id_progetto ID #REQUIRED
+          id_progetto CDATA #REQUIRED
           value CDATA #REQUIRED>
 
 <!ELEMENT valutazioni_commenti (valutazione_commento*)>
 
 <!ELEMENT valutazione_commento (utilita?, livello_di_accordo?)>
 <!ATTLIST valutazione_commento 
-          id_valutazione ID #REQUIRED
+          id_valutazione CDATA #REQUIRED
           data_ora CDATA #REQUIRED
-          id_progetto ID #REQUIRED
-          id_commento ID #REQUIRED>
+          id_progetto CDATA #REQUIRED
+          id_commento CDATA #REQUIRED>
 
 <!ELEMENT utilita (#PCDATA)>
 <!ELEMENT livello_di_accordo (#PCDATA)>
@@ -55,8 +57,8 @@
 
 <!ELEMENT report_progetto EMPTY>
 <!ATTLIST report_progetto 
-          id_report ID #REQUIRED
-          id_progetto ID #REQUIRED
+          id_report CDATA #REQUIRED
+          id_progetto CDATA #REQUIRED
           data_ora CDATA #REQUIRED
           tipo CDATA #REQUIRED
           publisher CDATA #REQUIRED
@@ -66,8 +68,8 @@
 
 <!ELEMENT report_commento EMPTY>
 <!ATTLIST report_commento 
-          id_report ID #REQUIRED
-          id_commento ID #REQUIRED
+          id_report CDATA #REQUIRED
+          id_commento CDATA #REQUIRED
           data_ora CDATA #REQUIRED
           tipo CDATA #REQUIRED
           commentatore CDATA #REQUIRED>
@@ -76,6 +78,6 @@
 
 <!ELEMENT discussione EMPTY>
 <!ATTLIST discussione 
-          id_discussione ID #REQUIRED
+          id_discussione CDATA #REQUIRED
           data_ora CDATA #REQUIRED
           titolo CDATA #REQUIRED>
