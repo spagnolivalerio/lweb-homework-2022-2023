@@ -111,7 +111,7 @@
                         <input name="cognome" type="text" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$cognome\""; }?>></input>
                     </div>
         		    <div class="form-item">
-        			    <p class="label">e-mail</p><br />
+        			    <p class="label">e-mail&ast;&ast;</p><br />
         			    <input name="e-mail" type="text" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$email\""; }?>></input>
         		    </div>
         		    <div class="form-item">
@@ -123,7 +123,7 @@
                         <input type="text" name="username" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$username\""; }?>></input>
                     </div>
                     <div class="form-item">
-                        <p class="label">password</p><br />
+                        <p class="label">password&ast;</p><br />
                         <input type="password" name="password" <?php if(isset($_SESSION['credenziali']) && $_SESSION['credenziali'] == 'false') {echo "value=\"$password\""; }?>></input>
                     </div>
 
@@ -154,8 +154,12 @@
                 </div>
         		<div class="form-item submit">
         			<button type="subimt" name="submit">REGISTRATI</button><br />
-        			<div><p class="signup"><a href="login.php">ho già un account</a></p></div>
         		</div>
+                <p class="signup"><a href="login.php">ho già un account</a></p>
+                <div class="info">
+                    <p>&ast;Nota bene: La password deve avere almeno 8 caratteri di cui una lettera maiuscola e un carattere speciale (&excl;&commat;&num;&dollar;&percnt;&Hat;&amp;&ast;)</p>
+                    <p>&ast;&ast;La mail deve rispettare il formato xxxxxxxxxx@xxxx.xx</p>
+                </div>
         	</form>
 		</div>
 	</body>
