@@ -46,7 +46,7 @@ if (!isset($_POST['id_utente']) && (isset($_GET['id_utente']) ) ) {
         </div>
         <div class="homepage-sidebar-list">
           <a class="elem" href="homepage.php">Homepage</a>
-          <a class="elem" href="bacheca.php">Bacheca</a>
+          <a class="elem" href="bacheca.php">Profilo</a>
           <a class="elem" href="moderator_dashboard.php">Dashboard</a>
           <a class="elem" href="view_storico.php">Storico</a>
           <div class="divisore"></div>

@@ -69,7 +69,7 @@
             </div>
             <div class="homepage-sidebar-list">
               <a class="elem" href="homepage.php">Homepage</a>
-              <a class="elem blur">Bacheca</a>
+              <a class="elem blur">Profilo</a>
               <a class="elem blur">Bozze</a>
               <a class="elem blur">Storico</a>
               <div class="divisore"></div>

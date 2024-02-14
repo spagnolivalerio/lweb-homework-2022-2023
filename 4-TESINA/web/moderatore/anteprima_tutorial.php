@@ -55,7 +55,7 @@ addressing($_SESSION['ban'], 0, $logout);
         </div>
         <div class="homepage-sidebar-list">
           <a class="elem" href="homepage.php">Homepage</a>
-          <a class="elem" href="bacheca.php">Bacheca</a>
+          <a class="elem" href="bacheca.php">Profilo</a>
           <a class="elem" href="moderator_dashboard.php">Dashboard</a>
           <a class="elem" href="view_bozze.php">Bozze</a>
           <a class="elem" href="view_storico.php">Storico</a>
@@ -155,6 +155,9 @@ if($numero_step !== 0){
   echo " <form class=\"pubblica-form\" action=\"../../lib/elimina_step.php\" method=\"post\">\n";
   echo "    <div class=\"nascondi\"><input type=\"hidden\" name=\"num_step\" value=\"$num_step\"></input></div>";
   echo "    <div class=\"ante-box\"><button class=\"elimina-step\" type=\"submit\">ELIMINA STEP</button></div>\n";
+  echo " </form>\n";
+  echo " <form class=\"salva-form\" action=\"view_bozze.php\" method=\"post\">\n";
+  echo "    <div class=\"ante-box\"><button class=\"salva-in-bozza\" type=\"submit\">SALVA IL PROGETTO COME BOZZA</button></div>\n";
   echo " </form>\n";
   
 }
